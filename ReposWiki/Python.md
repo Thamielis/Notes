@@ -3,6 +3,7 @@
 ## Repositories:
 ### Classes
 - [python-recipes](https://github.com/Thamielis/python-recipes)
+	> :clock10: 16.01.2021
 	> :memo: A set of various classes, modules, templates... like a bunch of recipes or ingredients to cook bigger python apps. 
 ### Main:
 - [cpython](https://github.com/Thamielis/cpython)
@@ -15,6 +16,8 @@
 	> :memo: Analysis of financial portfolios using Python, across the metrics of volatility, returns, risk and Sharpe ratios.
 - [Python-Programming-Blueprints](https://github.com/Thamielis/Python-Programming-Blueprints)
 	> :memo: Python Programming Blueprints, published by Packt
+- [python-recipes](https://github.com/Thamielis/python-recipes)
+	> :memo: A set of various classes, modules, templates... like a bunch of recipes or ingredients to cook bigger python apps. 
 - [PyU4V](https://github.com/Thamielis/PyU4V)
 	> :memo: A Python library for Unisphere for VMAX's RestAPI.
 - [sample-python-package](https://github.com/Thamielis/sample-python-package)

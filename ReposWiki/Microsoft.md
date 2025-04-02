@@ -1,7 +1,24 @@
 # Microsoft
 
 ## Repositories:
-### Forks
+### Windows
+- [Downloads](https://github.com/Thamielis/Downloads)
+	> :clock10: 23.10.2020
+	> :memo: AD Health Check, Send HTML Email,  Ping machines, Encrypt Password,Bulk Password,Microsoft Teams,Monitor Certificate expiry, Monitor cert expiry, AD attributes, IP to Hostname, Export AD group, CSV to
+- [LatestUpdate](https://github.com/Thamielis/LatestUpdate)
+	> :clock10: 15.02.2023
+	> :memo: A module to retrieve and download Windows 10 current updates from the Microsoft Update Catalog
+- [SDN](https://github.com/Thamielis/SDN)
+	> :clock10: 21.04.2021
+	> :memo: This repo includes PowerShell scripts and VMM service templates for setting up the Microsoft Software Defined Networking (SDN) Stack using Windows Server 2016
+### Network
+- [Downloads](https://github.com/Thamielis/Downloads)
+	> :clock10: 23.10.2020
+	> :memo: AD Health Check, Send HTML Email,  Ping machines, Encrypt Password,Bulk Password,Microsoft Teams,Monitor Certificate expiry, Monitor cert expiry, AD attributes, IP to Hostname, Export AD group, CSV to
+- [SDN](https://github.com/Thamielis/SDN)
+	> :clock10: 21.04.2021
+	> :memo: This repo includes PowerShell scripts and VMM service templates for setting up the Microsoft Software Defined Networking (SDN) Stack using Windows Server 2016
+### Main:
 - [Activate-MicrosoftOffice](https://github.com/Thamielis/Activate-MicrosoftOffice)
 	> :memo: PowerShell tool to activate Microsoft Office Professional Plus 2016 - 2021 via KMS client keys.
 - [BadBlood](https://github.com/Thamielis/BadBlood)
@@ -44,7 +61,6 @@
 	> :memo: Automate Microsoft Visio with .NET
 
 ## Unterkategorien:
-- [Forks](Forks.md)
 - [Windows](Windows.md)
 - [Network](Network.md)
 

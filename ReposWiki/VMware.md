@@ -1,7 +1,11 @@
 # VMware
 
 ## Repositories:
-### Forks
+### PowerShell
+- [vghetto-vsphere-automated-lab-deployment](https://github.com/Thamielis/vghetto-vsphere-automated-lab-deployment)
+	> :clock10: 29.03.2020
+	> :memo: vGhetto vSphere Automated Lab Deployment (VVLD) for vSphere 6.x (6.0, 6.5 & 6.7)
+### Main:
 - [PowerNSX-DFW2Excel](https://github.com/Thamielis/PowerNSX-DFW2Excel)
 	> :memo: Export the NSX for vSphere Distributed Firewall to MS Excel
 - [vc-advanced-settings](https://github.com/Thamielis/vc-advanced-settings)
@@ -34,6 +38,5 @@
 	> :memo: Automated vSphere with Tanzu and HAProxy Lab Deployment
 
 ## Unterkategorien:
-- [Forks](Forks.md)
 - [PowerShell](PowerShell.md)
 

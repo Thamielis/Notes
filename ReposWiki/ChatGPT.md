@@ -3,8 +3,11 @@
 ## Repositories:
 ### PowerShell
 - [Auto-GPT-Powershell](https://github.com/Thamielis/Auto-GPT-Powershell)
+	> :clock10: 20.04.2023
 	> :memo: AutoGPT is a compact, modular, and user-friendly PowerShell interface for text generation with GPT-4 language models or OpenAI's API. It supports offline usage with GPT4All and offers customizable plu
 ### Main:
+- [Auto-GPT-Powershell](https://github.com/Thamielis/Auto-GPT-Powershell)
+	> :memo: AutoGPT is a compact, modular, and user-friendly PowerShell interface for text generation with GPT-4 language models or OpenAI's API. It supports offline usage with GPT4All and offers customizable plu
 - [ChatGPT_CodeInterpreter_Sample_Prompts_DataAnylsis](https://github.com/Thamielis/ChatGPT_CodeInterpreter_Sample_Prompts_DataAnylsis)
 	> :memo: Interactive Data Analysis: A collection of intuitive prompts for data exploration using ChatGPT CodeInterpreter.
 - [Instructgpt-prompts](https://github.com/Thamielis/Instructgpt-prompts)
