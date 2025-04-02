@@ -27,7 +27,7 @@
 
 ##  2. <a name='Links'></a>Links
 
-- [Links](<Links/LinksWiki>)
+- [Links](<Links/LinksWiki.md>)
   > :memo: Links zu meinen Themen
 
 ##  3. <a name='ToDo'></a>ToDo
