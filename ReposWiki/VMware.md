@@ -1,0 +1,37 @@
+# VMware
+
+## Repositories:
+- [PowerNSX-DFW2Excel]()
+	> :memo: Export the NSX for vSphere Distributed Firewall to MS Excel
+- [vc-advanced-settings]()
+	> :memo: vCenter Server Advanced Settings
+- [vcenter-event-mapping]()
+	> :memo: No Description
+- [vCenterRest]()
+	> :memo: Python REST API for managing VMWARE vCenter REST API.  Forked from PyU4V
+- [vcf-automated-lab-deployment]()
+	> :memo: Automated VMware Cloud Foundation Lab Deployment
+- [vCheck-vSphere]()
+	> :memo: vCheck Daily Report for vSphere
+- [vDocumentation]()
+	> :memo: vDocumentation provides a community-created set of PowerCLI scripts that produce infrastructure documentation of vSphere environments in CSV or Excel file format.
+- [Veeam-vSphere-Tagging-Excel-Tool]()
+	> :memo: An excel tool to tag your VMs with a vSphere Tag out of a dropdown menu
+- [vFlux-Stats-Kit]()
+	> :memo: PowerCLI scripts to gather VMware performance stats and write them to InfluxDB
+- [vghetto-scripts]()
+	> :memo: Various virtuallyGhetto scripts for VMware based solutions
+- [vghetto-vsphere-automated-lab-deployment]()
+	> :memo: vGhetto vSphere Automated Lab Deployment (VVLD) for vSphere 6.x (6.0, 6.5 & 6.7)
+- [vghetto-vsphere-with-kubernetes-external-nsxt-automated-lab-deployment]()
+	> :memo: vGhetto vSphere with Kubernetes External NSX-T Automated Lab Deployment for vSphere 7.0
+- [VMwarePowerCLI]()
+	> :memo: VMware vSphere PowerCLI scripts for administrative tasks
+- [vsphere-automation-sdk-python]()
+	> :memo: Python samples, language bindings, and API reference documentation for vSphere, VMC, and NSX-T using the VMware REST API
+- [vsphere-with-tanzu-basic-automated-lab-deployment]()
+	> :memo: Automated vSphere with Tanzu and HAProxy Lab Deployment
+
+## Unterkategorien:
+- [PowerShell](PowerShell)
+
