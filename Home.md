@@ -1,6 +1,6 @@
 
 > [!IMPORTANT]
-><img src="../images/PowerShell.png" width="auto" height="25" style="vertical-align: bottom;">  ***PowerShell***
+><img src="images/PowerShell.png" width="auto" height="25" style="vertical-align: bottom;">  ***PowerShell***
 >
 >>**gMSA**
 >>>[:bangbang: Using gMSA for Remoting](Knowledge/PowerShell/gMSA/Using%20Group%20Managed%20Service%20Accounts%20(gMSAs)%20for%20PowerShell%20Remoting.md)
@@ -8,7 +8,7 @@
 >>***Runspace***
 >>>[:exclamation: Invoke-ProducerConsumer](Scripts/Invoke-ProducerConsumer.ps1)
 >>
-><img src="../images/GitHub.png" width="auto" height="25" style="vertical-align: middle;">  ***GitHub***
+><img src="images/GitHub.png" width="auto" height="25" style="vertical-align: middle;">  ***GitHub***
 >>[:bulb: Mein Repo to Wiki Script](Scripts/GithubRepoWiki/Get-MyGithub.ps1)
 >
 >**Veeam**
