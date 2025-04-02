@@ -1,14 +1,14 @@
 # Devolutions
 
 ## Repositories:
-- [devolutions-labs]()
+- [devolutions-labs](https://github.com/Thamielis/devolutions-labs)
 	> :memo: Self-contained Hyper-V Active Directory Lab Environment
-- [devolutions-server]()
+- [devolutions-server](https://github.com/Thamielis/devolutions-server)
 	> :memo: Devolutions Server REST Services
-- [DevolutionsScriptLibrary]()
+- [DevolutionsScriptLibrary](https://github.com/Thamielis/DevolutionsScriptLibrary)
 	> :memo: ScriptLibrary offers a suite of PowerShell scripts for the IT administrator seeking to automate routine tasks and optimize operational workflows.
-- [DevolutionsSecretManagement.DevolutionsHub]()
+- [DevolutionsSecretManagement.DevolutionsHub](https://github.com/Thamielis/DevolutionsSecretManagement.DevolutionsHub)
 	> :memo: No Description
-- [RDMSamples-ps]()
+- [RDMSamples-ps](https://github.com/Thamielis/RDMSamples-ps)
 	> :memo: Remote Desktop Manager (RDM) samples of powershell code
 

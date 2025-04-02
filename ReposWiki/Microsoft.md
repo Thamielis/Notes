@@ -1,48 +1,116 @@
 # Microsoft
 
 ## Repositories:
-- [Activate-MicrosoftOffice]()
-	> :memo: PowerShell tool to activate Microsoft Office Professional Plus 2016 - 2021 via KMS client keys.
-- [BadBlood]()
-	> :memo: BadBlood by @davidprowe, Secframe.com, fills a Microsoft Active Directory Domain with a structure and thousands of objects. The output of the tool is a domain similar to a domain in the real world.  A
-- [Downloads]()
+### Windows
+- [BatUtil](https://github.com/Thamielis/BatUtil)
+	> :memo: Collection of batch scripts utilities for Windows
+- [bootstrap-fluent-design](https://github.com/Thamielis/bootstrap-fluent-design)
+	> :memo: Fluent Design Theme for Bootstrap - inspired by Windows style and based on the latest Bootstrap 5.
+- [Downloads](https://github.com/Thamielis/Downloads)
 	> :memo: AD Health Check, Send HTML Email,  Ping machines, Encrypt Password,Bulk Password,Microsoft Teams,Monitor Certificate expiry, Monitor cert expiry, AD attributes, IP to Hostname, Export AD group, CSV to
-- [EnhancedAuditStatusMsgQueries]()
-	> :memo: Enhanced Status Message Queries for Microsoft Configuration Manager (ConfigMgr)
-- [Get-UptimeHistory]()
-	> :memo: This is a Powershell module meant to replicate the functionality of the very old Microsoft executable, uptime.exe.
-- [iconssccm]()
-	> :memo: Icons for use with applications deployed via Microsoft Intune / MDM / ConfigMgr etc.
-- [Integrate-ChatGPT-in-Excel-using-VBA]()
-	> :memo: Revolutionize your spreadsheet game with OpenAI's ChatGPT in Microsoft Excel using my custom VBA code. Automate tedious tasks and add a new level of intelligence to your data analysis. The code is ava
-- [LatestUpdate]()
+- [Event-Forwarding-Guidance](https://github.com/Thamielis/Event-Forwarding-Guidance)
+	> :memo: Configuration guidance for implementing collection of security relevant Windows Event Log events by using Windows Event Forwarding. #nsacyber
+- [LanguagePx](https://github.com/Thamielis/LanguagePx)
+	> :memo: Easily Create Domain-Specific Languages (DSLs) in Windows PowerShell
+- [LatestUpdate](https://github.com/Thamielis/LatestUpdate)
 	> :memo: A module to retrieve and download Windows 10 current updates from the Microsoft Update Catalog
-- [M365Documentation]()
-	> :memo: Automatic Microsoft 365 Documentation to simplify the life of admins and consultants.
-- [Microsoft]()
-	> :memo: Scripts and tools for use with Microsoft products/technologies
-- [MicrosoftC2R]()
-	> :memo: No Description
-- [PoShConfigManAuditReport]()
-	> :memo: PowerShell script that generates an example audit report for a Microsoft Configuration Manager environment. It retrieves various audit data, including collections, applications, packages, deployments,
-- [PSWriteOffice]()
-	> :memo: Experimental PowerShell Module to create and edit Microsoft Word, Microsoft Excel, and Microsoft PowerPoint documents without having Microsoft Office installed.
-- [quickstart-microsoft-activedirectory]()
-	> :memo: AWS Quick Start Team
-- [quickstart-microsoft-sharepoint]()
-	> :memo: AWS Quick Start Team
-- [SDN]()
+- [MakeWindowsGreatAgain](https://github.com/Thamielis/MakeWindowsGreatAgain)
+	> :memo: The project aims to debloat Windows (from 10 1607 i guess to 11 22H2) and make it great again, by uninstalling bloat apps, disabling unuseful services and optimizing task scheduler. The name of the re
+- [Message-From-Error-Code](https://github.com/Thamielis/Message-From-Error-Code)
+	> :memo: PowerShell GUI to get the message text belonging to a Windows error code.
+- [MSLab](https://github.com/Thamielis/MSLab)
+	> :memo: Azure Stack HCI, Windows 10 and Windows Server rapid lab deployment scripts
+- [PoSh-EasyWin](https://github.com/Thamielis/PoSh-EasyWin)
+	> :memo: PowerShell - Endpoint Analysis Solution Your Windows Intranet Needs
+- [powershell_ui_samples](https://github.com/Thamielis/powershell_ui_samples)
+	> :memo: Powershell / Windows Forms and WPF integration
+- [Project-Sauron](https://github.com/Thamielis/Project-Sauron)
+	> :memo: Tools to create a Native Windows Audit Collection Platform. Active Directory example provided
+- [SDN](https://github.com/Thamielis/SDN)
 	> :memo: This repo includes PowerShell scripts and VMM service templates for setting up the Microsoft Software Defined Networking (SDN) Stack using Windows Server 2016
-- [Server-Help]()
+- [ServiceAccountHandler](https://github.com/Thamielis/ServiceAccountHandler)
+	> :memo: Handle change of windows service account passwords. Highly adapteble.
+- [Toast-Notification-Script](https://github.com/Thamielis/Toast-Notification-Script)
+	> :memo: My Windows Toast Notification Script explained in details here: https://imab.dk/windows-10-toast-notification-script/
+- [Windows](https://github.com/Thamielis/Windows)
+	> :memo: All kind of scripts for Windows management in Enterprises
+- [windows-containers-AD](https://github.com/Thamielis/windows-containers-AD)
+	> :memo: Working with AD and Windows Containers
+- [Windows-playbook](https://github.com/Thamielis/Windows-playbook)
+	> :memo: A lightweight, stable, and performance-focused customized version of Windows that enhances privacy and compatibility
+- [Windows-RemoteShadow](https://github.com/Thamielis/Windows-RemoteShadow)
+	> :memo: Remote Shadow Using Windows built in software
+- [windowsserverdocs.de-de](https://github.com/Thamielis/windowsserverdocs.de-de)
+	> :memo: Windows Server
+- [winfetch](https://github.com/Thamielis/winfetch)
+	> :memo: 🛠 A command-line system information utility written in PowerShell. Like Neofetch, but for Windows.
+- [winget-install](https://github.com/Thamielis/winget-install)
+	> :memo: Install winget tool using PowerShell! Prerequisites automatically installed. Works on Windows 10/11 and Server 2022.
+- [winutil](https://github.com/Thamielis/winutil)
+	> :memo: Chris Titus Tech's Windows Utility - Install Programs, Tweaks, Fixes, and Updates
+- [Win10-Initial-Setup-Script](https://github.com/In-Pro-Org/Win10-Initial-Setup-Script)
+	> :memo: PowerShell script for automation of routine tasks done after fresh installations of Windows 10 / Server 2016 / Server 2019
+### Network
+- [Downloads](https://github.com/Thamielis/Downloads)
+	> :memo: AD Health Check, Send HTML Email,  Ping machines, Encrypt Password,Bulk Password,Microsoft Teams,Monitor Certificate expiry, Monitor cert expiry, AD attributes, IP to Hostname, Export AD group, CSV to
+- [netdevops-lab-as-code](https://github.com/Thamielis/netdevops-lab-as-code)
+	> :memo: Sample scripts and examples for deploying network devices and other lab elements.
+- [netprog_basics](https://github.com/Thamielis/netprog_basics)
+	> :memo: Code, Examples, and Resources for the Network Programmability Basics Video Course
+- [Network-Documentation-Automation](https://github.com/Thamielis/Network-Documentation-Automation)
+	> :memo: Configuration, Health, and Testing Script
+- [network-handbook](https://github.com/Thamielis/network-handbook)
+	> :memo: Study tool for CompTIA Network+ exam
+- [Network-Plugins](https://github.com/Thamielis/Network-Plugins)
+	> :memo: Network-Plugins
+- [oxidized](https://github.com/Thamielis/oxidized)
+	> :memo: Oxidized is a network device configuration backup tool. It's a RANCID replacement!
+- [rconfig](https://github.com/Thamielis/rconfig)
+	> :memo: rConfig - Network Configuration Management
+- [rpi-networklab](https://github.com/Thamielis/rpi-networklab)
+	> :memo: No Description
+- [SDN](https://github.com/Thamielis/SDN)
+	> :memo: This repo includes PowerShell scripts and VMM service templates for setting up the Microsoft Software Defined Networking (SDN) Stack using Windows Server 2016
+- [snmlipv6utf8snmptelnetsshweb](https://github.com/Thamielis/snmlipv6utf8snmptelnetsshweb)
+	> :memo: Simple Network Management Language (SNML) is a scripting language similar to natural language. It uses snmp, telnet, ping, dns, arp, ssh, tcp, udp, web and other protocols to access network devices. T
+- [sshautomator](https://github.com/Thamielis/sshautomator)
+	> :memo: Automate the execution of SSH commands for network devices via spreadsheet.  Saved output to local machine.
+- [Activate-MicrosoftOffice](https://github.com/Thamielis/Activate-MicrosoftOffice)
+	> :memo: PowerShell tool to activate Microsoft Office Professional Plus 2016 - 2021 via KMS client keys.
+- [BadBlood](https://github.com/Thamielis/BadBlood)
+	> :memo: BadBlood by @davidprowe, Secframe.com, fills a Microsoft Active Directory Domain with a structure and thousands of objects. The output of the tool is a domain similar to a domain in the real world.  A
+- [EnhancedAuditStatusMsgQueries](https://github.com/Thamielis/EnhancedAuditStatusMsgQueries)
+	> :memo: Enhanced Status Message Queries for Microsoft Configuration Manager (ConfigMgr)
+- [Get-UptimeHistory](https://github.com/Thamielis/Get-UptimeHistory)
+	> :memo: This is a Powershell module meant to replicate the functionality of the very old Microsoft executable, uptime.exe.
+- [iconssccm](https://github.com/Thamielis/iconssccm)
+	> :memo: Icons for use with applications deployed via Microsoft Intune / MDM / ConfigMgr etc.
+- [Integrate-ChatGPT-in-Excel-using-VBA](https://github.com/Thamielis/Integrate-ChatGPT-in-Excel-using-VBA)
+	> :memo: Revolutionize your spreadsheet game with OpenAI's ChatGPT in Microsoft Excel using my custom VBA code. Automate tedious tasks and add a new level of intelligence to your data analysis. The code is ava
+- [M365Documentation](https://github.com/Thamielis/M365Documentation)
+	> :memo: Automatic Microsoft 365 Documentation to simplify the life of admins and consultants.
+- [Microsoft](https://github.com/Thamielis/Microsoft)
+	> :memo: Scripts and tools for use with Microsoft products/technologies
+- [MicrosoftC2R](https://github.com/Thamielis/MicrosoftC2R)
+	> :memo: No Description
+- [PoShConfigManAuditReport](https://github.com/Thamielis/PoShConfigManAuditReport)
+	> :memo: PowerShell script that generates an example audit report for a Microsoft Configuration Manager environment. It retrieves various audit data, including collections, applications, packages, deployments,
+- [PSWriteOffice](https://github.com/Thamielis/PSWriteOffice)
+	> :memo: Experimental PowerShell Module to create and edit Microsoft Word, Microsoft Excel, and Microsoft PowerPoint documents without having Microsoft Office installed.
+- [quickstart-microsoft-activedirectory](https://github.com/Thamielis/quickstart-microsoft-activedirectory)
+	> :memo: AWS Quick Start Team
+- [quickstart-microsoft-sharepoint](https://github.com/Thamielis/quickstart-microsoft-sharepoint)
+	> :memo: AWS Quick Start Team
+- [Server-Help](https://github.com/Thamielis/Server-Help)
 	> :memo: :computer: This VSTO Add-In allows the user to ping a list of servers and creates a file for Microsoft Remote Desktop Manager an Excel table. This is used for quickly determining which servers are off
-- [skyscape-powershell-vcloud-to-visio]()
+- [skyscape-powershell-vcloud-to-visio](https://github.com/Thamielis/skyscape-powershell-vcloud-to-visio)
 	> :memo: Draws a vCloud Organisation in Microsoft Visio
-- [sql-docs]()
+- [sql-docs](https://github.com/Thamielis/sql-docs)
 	> :memo: Technical documentation for Microsoft SQL Server, tools such as SQL Server Management Studio (SSMS) ,  SQL Server Data Tools (SSDT) etc.
-- [VisioAutomation]()
+- [VisioAutomation](https://github.com/Thamielis/VisioAutomation)
 	> :memo: Automate Microsoft Visio with .NET
 
 ## Unterkategorien:
-- [Windows](Windows)
-- [Network](Network)
+- [Windows](Windows.md)
+- [Network](Network.md)
 
