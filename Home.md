@@ -33,8 +33,8 @@
   > :memo: Links zu meinen Themen
 
 ##  3. ToDo
-  > [ ] :memo: PSModulesHelp hinzufügen
-  > [ ] :memo: KnowledgeBase hinzufügen
+  > [-] :memo: PSModulesHelp hinzufügen
+  > [-] :memo: KnowledgeBase hinzufügen
 
 ## 4. Wikies
   > - [Notes](https://github.com/thamielis/Notes)
