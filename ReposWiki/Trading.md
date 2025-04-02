@@ -1,6 +1,7 @@
 # Trading
 
 ## Repositories:
+### Main:
 - [Algorithmic-Trading-Plugins](https://github.com/Thamielis/Algorithmic-Trading-Plugins)
 	> :memo: Algorithmic-Trading-Plugins
 - [awesome-pinescript](https://github.com/Thamielis/awesome-pinescript)

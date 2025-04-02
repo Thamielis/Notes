@@ -1,12 +1,16 @@
 # Windows
 
 ## Repositories:
+### Network
+- [Downloads](https://github.com/Thamielis/Downloads)
+	> :memo: AD Health Check, Send HTML Email,  Ping machines, Encrypt Password,Bulk Password,Microsoft Teams,Monitor Certificate expiry, Monitor cert expiry, AD attributes, IP to Hostname, Export AD group, CSV to
+- [SDN](https://github.com/Thamielis/SDN)
+	> :memo: This repo includes PowerShell scripts and VMM service templates for setting up the Microsoft Software Defined Networking (SDN) Stack using Windows Server 2016
+### Main:
 - [BatUtil](https://github.com/Thamielis/BatUtil)
 	> :memo: Collection of batch scripts utilities for Windows
 - [bootstrap-fluent-design](https://github.com/Thamielis/bootstrap-fluent-design)
 	> :memo: Fluent Design Theme for Bootstrap - inspired by Windows style and based on the latest Bootstrap 5.
-- [Downloads](https://github.com/Thamielis/Downloads)
-	> :memo: AD Health Check, Send HTML Email,  Ping machines, Encrypt Password,Bulk Password,Microsoft Teams,Monitor Certificate expiry, Monitor cert expiry, AD attributes, IP to Hostname, Export AD group, CSV to
 - [Event-Forwarding-Guidance](https://github.com/Thamielis/Event-Forwarding-Guidance)
 	> :memo: Configuration guidance for implementing collection of security relevant Windows Event Log events by using Windows Event Forwarding. #nsacyber
 - [LanguagePx](https://github.com/Thamielis/LanguagePx)
@@ -25,8 +29,6 @@
 	> :memo: Powershell / Windows Forms and WPF integration
 - [Project-Sauron](https://github.com/Thamielis/Project-Sauron)
 	> :memo: Tools to create a Native Windows Audit Collection Platform. Active Directory example provided
-- [SDN](https://github.com/Thamielis/SDN)
-	> :memo: This repo includes PowerShell scripts and VMM service templates for setting up the Microsoft Software Defined Networking (SDN) Stack using Windows Server 2016
 - [ServiceAccountHandler](https://github.com/Thamielis/ServiceAccountHandler)
 	> :memo: Handle change of windows service account passwords. Highly adapteble.
 - [Toast-Notification-Script](https://github.com/Thamielis/Toast-Notification-Script)

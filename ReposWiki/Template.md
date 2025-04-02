@@ -1,6 +1,7 @@
 # Template
 
 ## Repositories:
+### Main:
 - [azure-quickstart-templates](https://github.com/Thamielis/azure-quickstart-templates)
 	> :memo: Azure Quickstart Templates
 - [coreui-free-bootstrap-admin-template](https://github.com/Thamielis/coreui-free-bootstrap-admin-template)

@@ -2,8 +2,9 @@
 
 ## Repositories:
 ### PowerShell
-- [SnapCenter](https://github.com/Thamielis/SnapCenter)
-	> :memo: PowerShell Function Library for NetApp SnapCenter REST API's
+- [vghetto-vsphere-automated-lab-deployment](https://github.com/Thamielis/vghetto-vsphere-automated-lab-deployment)
+	> :memo: vGhetto vSphere Automated Lab Deployment (VVLD) for vSphere 6.x (6.0, 6.5 & 6.7)
+### Main:
 - [PowerNSX-DFW2Excel](https://github.com/Thamielis/PowerNSX-DFW2Excel)
 	> :memo: Export the NSX for vSphere Distributed Firewall to MS Excel
 - [vc-advanced-settings](https://github.com/Thamielis/vc-advanced-settings)
@@ -24,8 +25,6 @@
 	> :memo: PowerCLI scripts to gather VMware performance stats and write them to InfluxDB
 - [vghetto-scripts](https://github.com/Thamielis/vghetto-scripts)
 	> :memo: Various virtuallyGhetto scripts for VMware based solutions
-- [vghetto-vsphere-automated-lab-deployment](https://github.com/Thamielis/vghetto-vsphere-automated-lab-deployment)
-	> :memo: vGhetto vSphere Automated Lab Deployment (VVLD) for vSphere 6.x (6.0, 6.5 & 6.7)
 - [vghetto-vsphere-with-kubernetes-external-nsxt-automated-lab-deployment](https://github.com/Thamielis/vghetto-vsphere-with-kubernetes-external-nsxt-automated-lab-deployment)
 	> :memo: vGhetto vSphere with Kubernetes External NSX-T Automated Lab Deployment for vSphere 7.0
 - [VMwarePowerCLI](https://github.com/Thamielis/VMwarePowerCLI)
