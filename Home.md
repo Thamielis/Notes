@@ -24,6 +24,8 @@
 
 ## 4. GitHub
   > - [GitHub Actions PowerShell](https://github.com/marketplace/actions/powershell-script)
+  > - [Building and testing PowerShell](https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-powershell)
+  >   :memo: You can create a continuous integration (CI) workflow to build and test your PowerShell project.
 
 ## 5. Wikies
   > - [Notes](https://github.com/thamielis/Notes)
