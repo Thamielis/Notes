@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Retrieves information about Windows updates installed on specified computers.",
+  "Description": "This function retrieves details about Windows updates installed on one or more computers specified by the ComputerName parameter.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This function uses the Get-HotFix cmdlet to gather information about Windows updates."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-ComputerWindowsUpdates -ComputerName \"EVOWIN\", \"AD1\"\r\nRetrieves Windows update information for computers named \"EVOWIN\" and \"AD1\"."
+    }
+  ]
+}

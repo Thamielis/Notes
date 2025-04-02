@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Invoke a GraphQL query against the GitHub GraphQL API",
+  "Description": "Use this function to invoke a GraphQL query against the GitHub GraphQL API.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[GitHub GraphQL API documentation](https://docs.github.com/graphql)"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Invoke-GitHubGraphQLQuery -Query $query -Variables $Variables"
+    }
+  ]
+}

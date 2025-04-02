@@ -1,0 +1,54 @@
+{
+  "Synopsis": "Sets current minimum level of logger configuration",
+  "Description": "Sets current minimum level of logger configuration, below which no events should be generated.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "Instance of LoggerConfiguration"
+  ],
+  "Outputs": [
+    "Instance of LoggerConfiguration object allowing method chaining with altered minumum logging level"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-Logger | Set-MinimumLevel -Value Verbose | Add-SinkConsole | Start-Logger"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-Logger | Set-MinimumLevel -Value Verbose -ToPreference | Add-SinkConsole | Start-Logger"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "New-Logger | Set-MinimumLevel -ControlledBy $levelSwitch | Add-SinkConsole | Start-Logger"
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "New-Logger | Set-MinimumLevel -FromPreference | Add-SinkConsole | Start-Logger"
+    }
+  ]
+}

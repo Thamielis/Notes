@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Generates a random file name with a specified length and extension.",
+  "Description": "This function generates a random file name with a specified length and extension. The file name is created using random letters only.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-RandomFileName -Length 8 -Extension \"txt\"\r\nGenerates a random file name with a length of 8 characters and appends the extension \".txt\"."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-RandomFileName -Extension \"docx\"\r\nGenerates a random file name with a default length of 16 characters and appends the extension \".docx\"."
+    }
+  ]
+}

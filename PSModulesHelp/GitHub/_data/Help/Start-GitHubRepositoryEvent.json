@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Create a repository dispatch event",
+  "Description": "You can use this endpoint to trigger a webhook event called `repository_dispatch` when you want activity\nthat happens outside of GitHub to trigger a GitHub Actions workflow or GitHub App webhook. You must configure\nyour GitHub Actions workflow or GitHub App to run when the `repository_dispatch`\nevent occurs. For an example `repository_dispatch` webhook payload, see\n\"[RepositoryDispatchEvent](https://docs.github.com/webhooks/event-payloads/#repository_dispatch).\"\n\nThe `client_payload` parameter is available for any extra information that your workflow might need.\nThis parameter is a JSON payload that will be passed on when the webhook event is dispatched. For example,\nthe `client_payload` can include a message that a user would like to send using a GitHub Actions workflow.\nOr the `client_payload` can be used as a test to debug your workflow.\n\nThis endpoint requires write access to the repository by providing either:\n\n- Personal access tokens with `repo` scope. For more information, see\n\"[Creating a personal access token for the command line](https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line)\"\nin the GitHub Help documentation.\n- GitHub Apps with both `metadata:read` and `contents:read&write` permissions.\n\nThis input example shows how you can use the `client_payload` as a test to debug your workflow.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Create a repository dispatch event](https://docs.github.com/rest/repos/repos#create-a-repository-dispatch-event)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$params = @{\r\n    EventType = 'on-demand-test'\r\n    ClientPayload = @{\r\n        unit = false\r\n        integration = true\r\n    }\r\n}\r\nStart-GitHubRepositoryEvent @params\r\nStarts a repository event with the name `on-demand-test` and a `client_payload` that includes `unit` and `integration`."
+    }
+  ]
+}

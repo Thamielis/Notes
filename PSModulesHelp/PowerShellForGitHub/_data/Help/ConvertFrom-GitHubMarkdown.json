@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Converts arbitrary Markdown into HTML.",
+  "Description": "Converts arbitrary Markdown into HTML.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "[String]"
+  ],
+  "Outputs": [
+    "[String] The HTML version of the Markdown content."
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "ConvertFrom-GitHubMarkdown -Content '**Bolded Text**' -Mode Markdown\r\nReturns back '<p><strong>Bolded Text</strong></p>'"
+    }
+  ]
+}

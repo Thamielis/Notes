@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Retrieves details of a specified GitHub environment or lists all environments for a repository.",
+  "Description": "This function retrieves details of a specific environment in a GitHub repository when the `-Name` parameter\nis provided. Otherwise, it lists all available environments for the specified repository.\n\nAnyone with read access to the repository can use this function.\nOAuth app tokens and personal access tokens (classic) need the `repo` scope\nto use this function with a private repository.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Returns details of a GitHub environment or a list of environments for a repository."
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "PSCustomObject"
+  ],
+  "Links": [
+    "https://psmodule.io/GitHub/Functions/Environments/Get-GitHubEnvironment/"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubEnvironment -Owner 'PSModule' -Repository 'EnvironmentTest' -Name 'test'\r\nOutput:\r\n```pwsh\r\nid                       : 5944178128\r\nnode_id                  : EN_kwDOOJqfM88AAAABYkz10A\r\nname                     : test\r\nurl                      : https://api.github.com/repos/PSModule/EnvironmentTest/environments/test\r\nhtml_url                 : https://github.com/PSModule/EnvironmentTest/deployments/activity_log?environments_filter=test\r\ncreated_at               : 3/16/2025 11:17:52 PM\r\nupdated_at               : 3/16/2025 11:17:52 PM\r\ncan_admins_bypass        : True\r\nprotection_rules         : {@{id=30352888; node_id=GA_kwDOOJqfM84BzyX4; type=required_reviewers; prevent_self_review=False;\r\n                           reviewers=System.Object[]}, @{id=30352889; node_id=GA_kwDOOJqfM84BzyX5; type=wait_timer; wait_timer=100},\r\n                           @{id=30352890; node_id=GA_kwDOOJqfM84BzyX6; type=branch_policy}}\r\ndeployment_branch_policy : @{protected_branches=False; custom_branch_policies=True}\r\n```\r\n\r\nRetrieves details of the \"test\" environment in the specified repository."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GitHubEnvironment -Owner 'PSModule' -Repository 'EnvironmentTest'\r\nOutput:\r\n```pwsh\r\nid                       : 5944178128\r\nnode_id                  : EN_kwDOOJqfM88AAAABYkz10A\r\nname                     : test\r\nurl                      : https://api.github.com/repos/PSModule/EnvironmentTest/environments/test\r\nhtml_url                 : https://github.com/PSModule/EnvironmentTest/deployments/activity_log?environments_filter=test\r\ncreated_at               : 3/16/2025 11:17:52 PM\r\nupdated_at               : 3/16/2025 11:17:52 PM\r\ncan_admins_bypass        : True\r\nprotection_rules         : {@{id=30352888; node_id=GA_kwDOOJqfM84BzyX4; type=required_reviewers; prevent_self_review=False;\r\n                           reviewers=System.Object[]}, @{id=30352889; node_id=GA_kwDOOJqfM84BzyX5; type=wait_timer; wait_timer=100},\r\n                           @{id=30352890; node_id=GA_kwDOOJqfM84BzyX6; type=branch_policy}}\r\ndeployment_branch_policy : @{protected_branches=False; custom_branch_policies=True}\r\n```\r\n\r\nLists all environments available in the \"EnvironmentTest\" repository owned by \"PSModule\"."
+    }
+  ]
+}

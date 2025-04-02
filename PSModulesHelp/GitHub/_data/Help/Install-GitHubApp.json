@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Install an app",
+  "Description": "Installs the provided GitHub App on the specified target.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Install-GitHubApp -Enterprise 'msx' -Organization 'org' -ClientID '123456' -RepositorySelection 'selected' -Repositories 'repo1', 'repo2'\r\nInstall the GitHub App with\r\n- the client ID '123456'\r\n- the repository selection 'selected'\r\n- the repositories 'repo1' and 'repo2'\r\non the organization 'org' in the enterprise 'msx'."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Install-GitHubApp -Enterprise 'msx' -Organization 'org' -ClientID '123456' -RepositorySelection 'all'\r\nInstall the GitHub App with\r\n- the client ID '123456'\r\n- the repository selection 'all'\r\non the organization 'org' in the enterprise 'msx'."
+    }
+  ]
+}

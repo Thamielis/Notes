@@ -1,0 +1,66 @@
+{
+  "Synopsis": "Gets the snippets that are available on the local computer.",
+  "Description": "The Get-Snippet cmdlet gets the snippets that are available on the local computer.\r\n\r\n\r\nBy default, Get-Snippet returns all snippets that are available on the local computer. To return a filtered list of snippets, you can use the Name parameter to specify the name of the snippets you want to see.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "When retrieving snippets, it is best to provide a module name in the ModuleName parameter whenever possible. This will result in the fastest possible performance. You can further improve performance by using the NoHelp switch parameter to skip the lookup of the snippet help information.\r\n",
+    "When you use wildcards in the Name or ModuleName parameters, when no ModuleName parameter is provided, or when no parameters are provided, the Get-Snippet command looks for matching snippets in the following folders in the order in which they are listed:\r\n",
+    "- the current user snippets folder (Documents\\WindowsPowerShell\\snippets);\r\n",
+    "- the all users snippets folder (Program Files\\WindowsPowerShell\\snippets);\r\n",
+    "- the snippets folder in the module that is currently loading (if a module is loading);\r\n",
+    "- the snippets folder in the module where the cmdlet was invoked (if it was invoked from a module);\r\n",
+    "- the snippets folder in the SnippetPx module (SnippetPx\\snippets);\r\n",
+    "- the snippets folder in all other loaded modules;\r\n",
+    "- the snippets folder in all unloaded modules, in the order in which they are discovered according to the PSModulePath environment variable;\r\n",
+    "To guarantee uniqueness of snippets across modules, snippets specific to a module should use a snippet name prefixed with the module name. For example, a snippet to provision AD users in an ActiveDirectory module could use the filename ActiveDirectory.User.Provision.ps1.\r\n",
+    "Using spaces in snippet filenames is supported, but discouraged."
+  ],
+  "CommandType": "Cmdlet",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "SnippetPx.Snippet"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-Snippet\r\nThis command gets all snippets that are available on the local system, and outputs them in the order in which they are discovered."
+    },
+    {
+      "Title": "Example 2",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-Snippet -Name Module.Initialize -ModuleName SnippetPx\r\nThis command gets the Module.Initialize snippet from the SnippetPx module."
+    },
+    {
+      "Title": "Example 3",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-Snippet -Name ProxyFunction*\r\nThis command gets all snippets on the local system whose name starts with \"ProxyFunction\"."
+    },
+    {
+      "Title": "Example 4",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-Snippet -ModuleName SnippetPx\r\nThis command gets all snippets that are included in the SnippetPx module."
+    }
+  ]
+}

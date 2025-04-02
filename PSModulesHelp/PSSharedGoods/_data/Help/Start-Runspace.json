@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Starts a new runspace with the provided script block, parameters, and runspace pool.",
+  "Description": "This function creates a new runspace using the specified script block, parameters, and runspace pool. It then starts the runspace and returns an object containing the runspace and its status.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$scriptBlock = {\r\n    Get-Process\r\n}\r\n$parameters = @{\r\n    Name = 'explorer.exe'\r\n}\r\n$runspacePool = [RunspaceFactory]::CreateRunspacePool(1, 5)\r\n$runspacePool.Open()\r\n$result = Start-Runspace -ScriptBlock $scriptBlock -Parameters $parameters -RunspacePool $runspacePool\r\n$result.Pipe | Receive-Job -Wait\r\nThis example starts a new runspace that retrieves information about the 'explorer.exe' process."
+    }
+  ]
+}

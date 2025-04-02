@@ -1,0 +1,40 @@
+{
+  "Synopsis": "Converts the issue form content into a hashtable or object.",
+  "Description": "Aligns with the issue form content structure and converts it into a hashtable or object.\nSection titles become keys and their content becomes values.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject",
+    "System.Collections.Hashtable"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "@'\r\n### Section 1\r\nContent 1\r\nContent 2\r\n### Section 2\r\n- [ ] Item 1\r\n- [x] Item 2\r\n'@ | ConvertFrom-IssueForm\r\nSection 1            Section 2\r\n---------            ---------\r\nContent 1…           {[Item 2, True], [Item 1, False]}\r\n\r\nConverts the issue form content into a hashtable."
+    }
+  ]
+}

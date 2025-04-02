@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Retrieves gist information from GitHub.",
+  "Description": "Retrieves gist information from GitHub.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Gist\nGitHub.GistComment\nGitHub.GistCommit\nGitHub.GistFork\nGitHub.GistSummary"
+  ],
+  "Outputs": [
+    "GitHub.Gist\nGitHub.GistCommit\nGitHub.GistFork\nGitHub.GistSummary"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubGist -Starred\r\nGets all starred gists for the current authenticated user."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GitHubGist -Public -Since ((Get-Date).AddDays(-2))\r\nGets all public gists that have been updated within the past two days."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-GitHubGist -Gist 6cad326836d38bd3a7ae\r\nGets octocat's \"hello_world.rb\" gist."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieves CPU information from specified computers.",
+  "Description": "This function retrieves CPU information from the specified computers. It provides details such as Name, DeviceID, Caption, SystemName, CurrentClockSpeed, MaxClockSpeed, ProcessorID, ThreadCount, Architecture, Status, LoadPercentage, L3CacheSize, Manufacturer, NumberOfCores, NumberOfEnabledCore, and NumberOfLogicalProcessors.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-ComputerCPU -ComputerName Server01, Server02 -Protocol Wsman -All\r\nRetrieves all available CPU information from remote computers Server01 and Server02 using Wsman protocol."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-ComputerCPU -ComputerName \"Workstation01\" -Protocol Default\r\nRetrieves CPU information from a single remote computer named Workstation01 using the default protocol."
+    }
+  ]
+}

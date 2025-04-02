@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Checks if a user has permission to be assigned to an issue in this repository.",
+  "Description": "Checks if a user has permission to be assigned to an issue in this repository.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Branch\nGitHub.Content\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Reaction\nGitHub.Release\nGitHub.ReleaseAsset\nGitHub.Repository\nGitHub.User"
+  ],
+  "Outputs": [
+    "[bool]\nIf the assignee can be assigned to issues in the repository."
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Test-GitHubAssignee -OwnerName microsoft -RepositoryName PowerShellForGitHub -Assignee \"LoginID123\"\r\nChecks if a user has permission to be assigned to an issue\r\nfrom the microsoft\\PowerShellForGitHub project."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$repo = Get-GitHubRepository -OwnerName microsoft -RepositoryName PowerShellForGitHub\r\n$repo | Test-GitHubAssignee -Assignee 'octocat'\r\nChecks if a user has permission to be assigned to an issue\r\nfrom the microsoft\\PowerShellForGitHub project."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "$octocat = Get-GitHubUser -UserName 'octocat'\r\n$repo = $octocat | Test-GitHubAssignee -OwnerName microsoft -RepositoryName PowerShellForGitHub\r\nChecks if a user has permission to be assigned to an issue\r\nfrom the microsoft\\PowerShellForGitHub project."
+    }
+  ]
+}

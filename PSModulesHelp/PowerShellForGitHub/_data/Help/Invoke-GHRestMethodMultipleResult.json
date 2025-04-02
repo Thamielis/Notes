@@ -1,0 +1,39 @@
+{
+  "Synopsis": "A special-case wrapper around Invoke-GHRestMethod that understands GET URI's\nwhich support the 'top' and 'max' parameters.",
+  "Description": "A special-case wrapper around Invoke-GHRestMethod that understands GET URI's\nwhich support the 'top' and 'max' parameters.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "[PSCustomObject[]] - The result of the REST operation, in whatever form it comes in."
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Invoke-GHRestMethodMultipleResult -UriFragment \"repos/PowerShell/PowerShellForGitHub/issues?state=all\" -Description \"Get all issues\"\r\nGets the first set of issues associated with this project,\r\nwith the console window showing progress while awaiting the response\r\nfrom the REST request."
+    }
+  ]
+}

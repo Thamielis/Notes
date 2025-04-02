@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieves OEM information from a specified computer.",
+  "Description": "This function retrieves OEM information such as Model, Manufacturer, Logo, Support Phone, Support URL, and Support Hours from the specified computer.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-ComputerOemInformation\r\nRetrieves OEM information from the local computer."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-ComputerOemInformation -ComputerName \"Computer01\"\r\nRetrieves OEM information from a remote computer named \"Computer01\"."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "Synopsis": "Generate reference library style C# code of a member's metadata.",
+  "Description": "The Format-MemberSignature cmdlet uses the input reflection objects to generate reference library style C# pseudo code. Use this cmdlet to get a more in depth look at specific member including attribute decorations, generic type constraints, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Cmdlet",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.Reflection.MemberInfo"
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [
+    "https://github.com/SeeminglyScience/ClassExplorer/blob/master/docs/en-US/Format-MemberSignature.md",
+    null,
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "[datetime] | Format-MemberSignature\r\n\r\n# [Serializable]\r\n# [NullableContext(1)]\r\n# [Nullable(0)]\r\n# [TypeForwardedFrom(\"mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\")]\r\n# [StructLayout(LayoutKind.Auto)]\r\n# public readonly struct DateTime : IComparable, ISpanFormattable, IFormattable, IConvertible, IComparable<DateTime>, IEquatable<DateTime>, ISerializable;\r\nFormat the signature for the type `datetime`."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "[Reflection.Metadata.ReservedBlob`1] | Format-MemberSignature -Recurse\r\n\r\n# public readonly struct ReservedBlob<THandle>\r\n#     where THandle : struct\r\n# {\r\n#     public THandle Handle { get; }\r\n#\r\n#     public Blob Content { get; }\r\n#\r\n#     public BlobWriter CreateWriter();\r\n#\r\n#     [UnconditionalSuppressMessage(\"ReflectionAnalysis\", \"IL2075:UnrecognizedReflectionPattern\", Justification = \"Trimmed fields don't make a difference for equality\")]\r\n#     public override bool Equals([NotNullWhen(true)] object obj);\r\n#\r\n#     [MethodImpl(MethodImplOptions.InternalCall)]\r\n#     public override int GetHashCode();\r\n#\r\n#     public override string ToString();\r\n#\r\n#     [NullableContext(1)]\r\n#     [Intrinsic]\r\n#     [MethodImpl(MethodImplOptions.InternalCall)]\r\n#     public Type GetType();\r\n# }\r\nFormat the signature for the type `PowerShell`."
+    }
+  ]
+}

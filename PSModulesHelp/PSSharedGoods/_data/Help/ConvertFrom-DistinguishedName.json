@@ -1,0 +1,33 @@
+{
+  "Synopsis": "\r\nConvertFrom-DistinguishedName [-DistinguishedName <string[]>] [<CommonParameters>]\r\n\r\nConvertFrom-DistinguishedName [-DistinguishedName <string[]>] [-ToFQDN] [<CommonParameters>]\r\n\r\nConvertFrom-DistinguishedName [-DistinguishedName <string[]>] [-ToCanonicalName] [<CommonParameters>]\r\n\r\nConvertFrom-DistinguishedName [-DistinguishedName <string[]>] [-ToLastName] [<CommonParameters>]\r\n\r\nConvertFrom-DistinguishedName [-DistinguishedName <string[]>] [-ToDomainCN] [<CommonParameters>]\r\n\r\nConvertFrom-DistinguishedName [-DistinguishedName <string[]>] [-ToDC] [<CommonParameters>]\r\n\r\nConvertFrom-DistinguishedName [-DistinguishedName <string[]>] [-ToMultipleOrganizationalUnit] [-IncludeParent] [<CommonParameters>]\r\n\r\nConvertFrom-DistinguishedName [-DistinguishedName <string[]>] [-ToOrganizationalUnit] [<CommonParameters>]\r\n",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.String[]\r\n"
+  ],
+  "Outputs": [
+    "System.Object"
+  ],
+  "Links": [],
+  "Examples": []
+}

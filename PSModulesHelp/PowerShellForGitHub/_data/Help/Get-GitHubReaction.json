@@ -1,0 +1,54 @@
+{
+  "Synopsis": "Retrieve reactions of a given GitHub Issue or Pull Request.",
+  "Description": "Retrieve reactions of a given GitHub Issue or Pull Request.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Currently, issue comments, pull request comments and commit comments are not supported."
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Branch\nGitHub.Content\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Reaction\nGitHub.Release\nGitHub.Repository"
+  ],
+  "Outputs": [
+    "GitHub.Reaction"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubReaction -OwnerName Microsoft -RepositoryName PowerShellForGitHub -Issue 157\r\nGets the reactions for issue 157 from the Microsoft\\PowerShellForGitHub\r\nproject."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GitHubReaction -OwnerName Microsoft -RepositoryName PowerShellForGitHub -Issue 157 -ReactionType eyes\r\nGets the 'eyes' reactions for issue 157 from the Microsoft\\PowerShellForGitHub\r\nproject."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-GitHubIssue -OwnerName Microsoft -RepositoryName PowerShellForGitHub -Issue 157 | Get-GitHubReaction\r\nGets a GitHub issue and pipe it into Get-GitHubReaction to get all\r\nthe reactions for that issue."
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "Get-GitHubPullRequest -Uri https://github.com/microsoft/PowerShellForGitHub -PullRequest 193 | Get-GitHubReaction\r\nGets a GitHub pull request and pipes it into Get-GitHubReaction\r\nto get all the reactions for that pull request."
+    }
+  ]
+}

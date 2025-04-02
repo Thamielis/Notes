@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Gets the list of available .gitignore templates, or their content, from GitHub.",
+  "Description": "Gets the list of available .gitignore templates, or their content, from GitHub.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "[String]"
+  ],
+  "Outputs": [
+    "GitHub.Gitignore"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubGitIgnore\r\nReturns the list of all available .gitignore templates."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GitHubGitIgnore -Name VisualStudio\r\nReturns the content of the VisualStudio.gitignore template."
+    }
+  ]
+}

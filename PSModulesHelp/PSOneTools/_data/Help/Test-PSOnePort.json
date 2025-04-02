@@ -1,0 +1,51 @@
+{
+  "Synopsis": "Tests a network port on a remote computer",
+  "Description": "Tests whether a port on a remote computer is responding.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://powershell.one/tricks/network/porttest"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Test-PSOnePort -ComputerName 127.0.0.1 -Port 4000 -Timeout 1000 \r\nTests whether port 4000 on the local computer is responding, \r\nand waits a maximum of 1000 milliseconds"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Test-PSOnePort -ComputerName 127.0.0.1 -Port 4000 -Timeout 1000 -Count 30 -Delay 2000\r\nTests 30 times whether port 4000 on the local computer is responding, \r\nand waits a maximum of 1000 milliseconds inbetween each test"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Test-PSOnePort -ComputerName 127.0.0.1 -Port 4000 -Timeout 1000 -Count 0 -Delay 2000 -ExitOnSuccess\r\nContinuously tests whether port 4000 on the local computer is responding, \r\nwaits a maximum of 1000 milliseconds inbetween each test, \r\nand exits as soon as the port is responding"
+    }
+  ]
+}

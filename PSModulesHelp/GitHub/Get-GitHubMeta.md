@@ -1,0 +1,55 @@
+Get-GitHubMeta
+--------------
+
+### Synopsis
+Get GitHub meta information.
+
+---
+
+### Description
+
+Returns meta information about GitHub, including a list of GitHub's IP addresses. For more information, see
+"[About GitHub's IP addresses](https://docs.github.com/articles/about-github-s-ip-addresses/)."
+
+The API's response also includes a list of GitHub's domain names.
+
+The values shown in the documentation's response are example values. You must always query the API directly to get the latest values.
+
+**Note:** This endpoint returns both IPv4 and IPv6 addresses. However, not all features support IPv6. You should refer to the specific
+documentation for each feature to determine if IPv6 is supported.
+
+---
+
+### Examples
+> EXAMPLE 1
+
+Get-GitHubMeta
+Returns meta information about GitHub, including a list of GitHub's IP addresses.
+
+---
+
+### Parameters
+#### **Context**
+The context to run the command in. Used to get the details for the API call.
+Can be either a string or a GitHubContext object.
+
+|Type      |Required|Position|PipelineInput|
+|----------|--------|--------|-------------|
+|`[Object]`|false   |1       |false        |
+
+---
+
+### Outputs
+* [Object](https://learn.microsoft.com/en-us/dotnet/api/System.Object)
+
+---
+
+### Notes
+[Get GitHub meta information](https://docs.github.com/rest/meta/meta#get-apiname-meta-information)
+
+---
+
+### Syntax
+```PowerShell
+Get-GitHubMeta [[-Context] <Object>] [<CommonParameters>]
+```

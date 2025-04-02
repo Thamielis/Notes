@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieve label(s) of a given GitHub repository.",
+  "Description": "Retrieve label(s) of a given GitHub repository.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "There were a lot of complications with the ParameterSets with this function due to pipeline\ninput.  For the time being, the ParameterSets have been simplified and the validation of\nparameter combinations is happening within the function itself."
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Branch\nGitHub.Content\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Reaction\nGitHub.Release\nGitHub.ReleaseAsset\nGitHub.Repository"
+  ],
+  "Outputs": [
+    "GitHub.Label"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubLabel -OwnerName microsoft -RepositoryName PowerShellForGitHub\r\nGets the information for every label from the microsoft\\PowerShellForGitHub project."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GitHubLabel -OwnerName microsoft -RepositoryName PowerShellForGitHub -Label TestLabel\r\nGets the information for the label named \"TestLabel\" from the microsoft\\PowerShellForGitHub\r\nproject."
+    }
+  ]
+}

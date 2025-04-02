@@ -1,0 +1,49 @@
+{
+  "Synopsis": "List user(s)",
+  "Description": "Get the authenticated user - if no parameters are provided.\nGet a given user - if a username is provided.\nLists all users, in the order that they signed up on GitHub - if '-All' is provided.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Get the authenticated user](https://docs.github.com/rest/users/users)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubUser\r\nGet the authenticated user."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GitHubUser -Username 'octocat'\r\nGet the 'octocat' user."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-GitHubUser -All -Since 17722253\r\nGet a list of users, starting with the user 'MariusStorhaug'."
+    }
+  ]
+}

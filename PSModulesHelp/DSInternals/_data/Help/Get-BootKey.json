@@ -1,0 +1,51 @@
+{
+  "Synopsis": "Reads the Boot Key (AKA SysKey or System Key) from an online or offline SYSTEM registry hive.",
+  "Description": "The BootKey/SysKey is an encryption key that is stored in the Windows SYSTEM registry hive. This key is used by several Windows components to encrypt sensitive information like the AD database, machine account password or system certificates etc.\r\n\r\n\r\nThe Boot Key is returned in hexadecimal format.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Cmdlet",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [
+    "https://github.com/MichaelGrafnetter/DSInternals/blob/master/Documentation/PowerShell/Get-BootKey.md",
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-BootKey -Online\r\n0be7a2afe1713642182e9b96f73a75da\r\nRetrieves the BootKey from the currently running OS."
+    },
+    {
+      "Title": "Example 2",
+      "Markdown": "",
+      "Code": "PS C:\\> reg.exe SAVE HKLM\\SYSTEM C:\\RegBackup\\SYSTEM.hiv\r\nPS C:\\> $key = Get-BootKey -SystemHiveFilePath C:\\RegBackup\\SYSTEM.hiv\r\nCreates a backup of the SYSTEM registry hive and then retrieves the BootKey from this backup."
+    }
+  ]
+}

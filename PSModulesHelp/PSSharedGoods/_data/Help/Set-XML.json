@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Sets a specific node value in an XML file.",
+  "Description": "This function sets the value of a specified node in an XML file at the given path.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "File encoding is assumed to be UTF-8."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-XML -FilePath \"C:\\example.xml\" -Paths \"Root\", \"Child\" -Node \"Value\" -Value \"NewValue\"\r\nSets the value of the \"Value\" node under \"Root/Child\" path in the XML file to \"NewValue\"."
+    }
+  ]
+}

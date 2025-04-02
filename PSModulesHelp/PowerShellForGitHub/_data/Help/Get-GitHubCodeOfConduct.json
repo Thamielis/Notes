@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Gets Codes of Conduct or a specific Code of Conduct from GitHub.",
+  "Description": "Gets Codes of Conduct or a specific Code of Conduct from GitHub.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "[String]\nGitHub.Branch\nGitHub.Content\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Reaction\nGitHub.Release\nGitHub.ReleaseAsset\nGitHub.Repository"
+  ],
+  "Outputs": [
+    "GitHub.CodeOfConduct"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubCodeOfConduct\r\nReturns metadata about popular Codes of Conduct"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GitHubCodeOfConduct -Key citizen_code_of_conduct\r\nGets the content of the 'Citizen Code of Conduct'"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-GitHubCodeOfConduct -OwnerName microsoft -RepositoryName PowerShellForGitHub\r\nGets the content of the Code of Conduct file for the microsoft\\PowerShellForGitHub repository\r\nif one is detected.\r\n\r\nIt may be necessary to convert the content of the file.  Check the 'encoding' property of\r\nthe result to know how 'content' is encoded.  As an example, to convert from Base64, do\r\nthe following:\r\n\r\n[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($result.content))"
+    }
+  ]
+}

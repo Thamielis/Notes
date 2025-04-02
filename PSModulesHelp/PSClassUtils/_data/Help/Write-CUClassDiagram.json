@@ -1,0 +1,51 @@
+{
+  "Synopsis": "This script allows to document automatically existing script(s)/module(s) containing classes by generating the corresponding UML Diagram.",
+  "Description": "Automatically generate a UML diagram of scripts/Modules that contain powershell classes.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Author: Stephanevg / LxLeChat\nwww: https://github.com/Stephanevg  https://github.com/LxLeChat\nReport bugs or ask for feature requests here:\nhttps://github.com/Stephanevg/PsClassUtils"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://github.com/Stephanevg/PsClassUtils"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "Generate a UML diagram of the classes located in MyClass.Ps1\r\nThe diagram will be automatically created in the same folder as the file that contains the classes (C:\\Classes).",
+      "Code": "Write-CUClassDiagram.ps1 -File C:\\Classes\\MyClass.ps1"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "Various output formats are available using the parameter \"OutPutFormat\"",
+      "Code": "Write-CUClassDiagram.ps1 -File C:\\Classes\\Logging.psm1 -ExportFolder C:\\admin\\ -OutputFormat gif\r\nDirectory: C:\\admin\r\nMode                LastWriteTime         Length Name\r\n----                -------------         ------ ----\r\n-a----       12.06.2018     07:47          58293 Logging.gif"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Write-CUClassDiagram -Path \"C:\\Modules\\PSClassUtils\\Classes\\Private\\\" -Show\r\nWill generate a diagram of all the private classes available in the Path specified, and immediatley show the diagram."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "Synopsis": "Get the projects for a given GitHub user, repository or organization.",
+  "Description": "Get the projects for a given GitHub user, repository or organization.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Branch\nGitHub.Content\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Reaction\nGitHub.Release\nGitHub.ReleaseAsset\nGitHub.Repository"
+  ],
+  "Outputs": [
+    "GitHub.Project"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubProject -OwnerName microsoft -RepositoryName PowerShellForGitHub\r\nGet the projects for the microsoft\\PowerShellForGitHub repository."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GitHubProject -OrganizationName Microsoft\r\nGet the projects for the Microsoft organization."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-GitHubProject -Uri https://github.com/Microsoft/PowerShellForGitHub\r\nGet the projects for the microsoft\\PowerShellForGitHub repository using the Uri."
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "Get-GitHubProject -UserName GitHubUser\r\nGet the projects for the user GitHubUser."
+    },
+    {
+      "Title": "EXAMPLE 5",
+      "Markdown": "",
+      "Code": "Get-GitHubProject -OwnerName microsoft -RepositoryName PowerShellForGitHub -State Closed\r\nGet closed projects from the microsoft\\PowerShellForGitHub repo."
+    },
+    {
+      "Title": "EXAMPLE 6",
+      "Markdown": "",
+      "Code": "Get-GitHubProject -Project 4378613\r\nGet a project by id, with this parameter you don't need any other information."
+    }
+  ]
+}

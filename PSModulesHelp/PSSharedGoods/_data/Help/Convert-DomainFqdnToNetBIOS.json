@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Converts FQDN to NetBIOS name for Active Directory Domain",
+  "Description": "Converts FQDN to NetBIOS name for Active Directory Domain",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Convert-DomainFqdnToNetBIOS -Domain 'ad.evotec.xyz'"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Convert-DomainFqdnToNetBIOS -Domain 'ad.evotec.pl'"
+    }
+  ]
+}

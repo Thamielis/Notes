@@ -1,0 +1,64 @@
+{
+  "Synopsis": "Retrieves information about a release or list of releases on GitHub.",
+  "Description": "Retrieves information about a release or list of releases on GitHub.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Information about published releases are available to everyone. Only users with push\naccess will receive listings for draft releases."
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Branch\nGitHub.Content\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Reaction\nGitHub.Release\nGitHub.ReleaseAsset\nGitHub.Repository"
+  ],
+  "Outputs": [
+    "GitHub.Release"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubRelease\r\nGets all releases for the default configured owner/repository."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GitHubRelease -Release 12345\r\nGet a specific release for the default configured owner/repository"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-GitHubRelease -OwnerName dotnet -RepositoryName core\r\nGets all releases from the dotnet\\core repository."
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "Get-GitHubRelease -Uri https://github.com/microsoft/PowerShellForGitHub\r\nGets all releases from the microsoft/PowerShellForGitHub repository."
+    },
+    {
+      "Title": "EXAMPLE 5",
+      "Markdown": "",
+      "Code": "Get-GitHubRelease -OwnerName dotnet -RepositoryName core -Latest\r\nGets the latest release from the dotnet\\core repository."
+    },
+    {
+      "Title": "EXAMPLE 6",
+      "Markdown": "",
+      "Code": "Get-GitHubRelease -Uri https://github.com/microsoft/PowerShellForGitHub -Tag 0.8.0\r\nGets the release tagged with 0.8.0 from the microsoft/PowerShellForGitHub repository."
+    }
+  ]
+}

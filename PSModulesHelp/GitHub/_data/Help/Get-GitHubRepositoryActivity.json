@@ -1,0 +1,79 @@
+{
+  "Synopsis": "List repository activities",
+  "Description": "Lists a detailed history of changes to a repository, such as pushes, merges, force pushes, and branch changes,\nand associates these changes with commits and users.\n\nFor more information about viewing repository activity,\nsee \"[Viewing activity and data for your repository](https://docs.github.com/repositories/viewing-activity-and-data-for-your-repository).\"",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[List repository activities](https://docs.github.com/rest/repos/repos#list-repository-activities)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubRepositoryActivity -Owner 'PSModule' -Repository 'GitHub'"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GitHubRepositoryActivity -Owner 'PSModule' -Repository 'GitHub' -Direction 'asc'"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-GitHubRepositoryActivity -Owner 'PSModule' -Repository 'GitHub' -PerPage 100"
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "Get-GitHubRepositoryActivity -Owner 'PSModule' -Repository 'GitHub' -Before '2021-01-01T00:00:00Z'"
+    },
+    {
+      "Title": "EXAMPLE 5",
+      "Markdown": "",
+      "Code": "Get-GitHubRepositoryActivity -Owner 'PSModule' -Repository 'GitHub' -After '2021-01-01T00:00:00Z'"
+    },
+    {
+      "Title": "EXAMPLE 6",
+      "Markdown": "",
+      "Code": "Get-GitHubRepositoryActivity -Owner 'PSModule' -Repository 'GitHub' -Ref 'refs/heads/main'"
+    },
+    {
+      "Title": "EXAMPLE 7",
+      "Markdown": "",
+      "Code": "Get-GitHubRepositoryActivity -Owner 'PSModule' -Repository 'GitHub' -Actor 'octocat'"
+    },
+    {
+      "Title": "EXAMPLE 8",
+      "Markdown": "",
+      "Code": "$params = @{\r\n    Owner       = 'PSModule'\r\n    Repo        = 'GitHub'\r\n    TimePeriod  = 'day'\r\n}\r\nGet-GitHubRepositoryActivity @params |\r\n    Select-Object -Property @{n='actor';e={$_.actor.login}},activity_type,ref,timestamp\r\nGets the activity for the past 24 hours and selects the actor, activity type, ref, and timestamp."
+    },
+    {
+      "Title": "EXAMPLE 9",
+      "Markdown": "",
+      "Code": "Get-GitHubRepositoryActivity -Owner 'PSModule' -Repository 'GitHub' -ActivityType 'push','force_push'"
+    }
+  ]
+}

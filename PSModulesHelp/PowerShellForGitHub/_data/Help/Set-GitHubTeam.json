@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Updates a team within an organization on GitHub.",
+  "Description": "Updates a team within an organization on GitHub.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Organization\nGitHub.Team"
+  ],
+  "Outputs": [
+    "GitHub.Team"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-GitHubTeam -OrganizationName PowerShell -TeamName Developers -Description 'New Description'\r\nUpdates the description for the 'Developers' GitHub team in the 'PowerShell' organization."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$team = Get-GitHubTeam -OrganizationName PowerShell -TeamName Developers\r\n$team | Set-GitHubTeam -Description 'New Description'\r\nYou can also pipe in a GitHub team that was returned from a previous command."
+    }
+  ]
+}

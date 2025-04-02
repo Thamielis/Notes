@@ -1,0 +1,33 @@
+{
+  "Synopsis": "\r\nNew-RunspacePool [[-InitialSessionState] <initialsessionstate>] [[-Host] <PSHost>] [[-ConnectionInfo] <RunspaceConnectionInfo>] [<CommonParameters>]\r\n",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.Int32\r\nSystem.Management.Automation.Runspaces.InitialSessionState\r\nSystem.Management.Automation.Host.PSHost\r\nSystem.Management.Automation.Runspaces.RunspaceConnectionInfo\r\n"
+  ],
+  "Outputs": [
+    "System.Object"
+  ],
+  "Links": [],
+  "Examples": []
+}

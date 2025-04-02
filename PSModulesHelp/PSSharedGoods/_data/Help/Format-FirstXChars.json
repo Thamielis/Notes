@@ -1,0 +1,39 @@
+{
+  "Synopsis": "This function returns the first X characters of a given text string.",
+  "Description": "The Format-FirstXChars function takes a text string and a number of characters as input and returns the first X characters of the text string.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This function is useful for truncating long text strings to a specific length."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Format-FirstXChars -Text \"VERBOSE: Loading module from path 'C:\\Users\\pklys\\.vscode\\extensions\\ms-vs\" -NumberChars 15\r\n# Returns: VERBOSE: Loading"
+    }
+  ]
+}

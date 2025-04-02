@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Resets Logger to the default and disposes the original if possible.",
+  "Description": "Resets Logger to the default and disposes the original if possible.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "Instance of Serilog.Logger"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Close-Logger"
+    }
+  ]
+}

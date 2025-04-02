@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieves and interprets Active Directory trust attributes based on the provided value.",
+  "Description": "This function retrieves and interprets Active Directory trust attributes based on the provided value. It decodes the binary value into human-readable trust attributes.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This function provides a convenient way to decode Active Directory trust attributes."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-ADTrustAttributes -Value 1\r\nRetrieves and interprets the trust attributes for the value 1."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "1, 2, 4 | Get-ADTrustAttributes\r\nRetrieves and interprets the trust attributes for the values 1, 2, and 4."
+    }
+  ]
+}

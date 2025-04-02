@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Delete a release",
+  "Description": "Users with push access to the repository can delete a release.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Delete a release](https://docs.github.com/rest/releases/releases#delete-a-release)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-GitHubRelease -Owner 'octocat' -Repository 'hello-world' -ID '1234567'\r\nDeletes the release with the ID '1234567' for the repository 'octocat/hello-world'."
+    }
+  ]
+}

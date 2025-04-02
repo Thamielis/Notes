@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Delete a public SSH key for the authenticated user",
+  "Description": "Removes a public SSH key from the authenticated user's GitHub account.\nRequires that you are authenticated via Basic Auth or via OAuth with at least `admin:public_key`\n[scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Delete a public SSH key for the authenticated user](https://docs.github.com/rest/users/keys#delete-a-public-ssh-key-for-the-authenticated-user)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-GitHubUserKey -ID '1234567'\r\nDeletes the public SSH key with ID '1234567' from the authenticated user's GitHub account."
+    }
+  ]
+}

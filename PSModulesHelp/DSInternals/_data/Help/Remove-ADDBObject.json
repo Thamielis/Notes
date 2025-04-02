@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Physically removes specified object from a ntds.dit file, making it semantically inconsistent. Highly experimental!",
+  "Description": "{{Fill in the Description}}",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Cmdlet",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.String",
+    "System.Guid"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [
+    "https://github.com/MichaelGrafnetter/DSInternals/blob/master/Documentation/PowerShell/Remove-ADDBObject.md"
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> {{ Add example code here }}\r\n{{ Add example description here }}"
+    }
+  ]
+}

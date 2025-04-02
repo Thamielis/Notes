@@ -1,0 +1,33 @@
+{
+  "Synopsis": "Disables a PSAdapter Module",
+  "Description": "Disables a module written in .cdxml format.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "One of the advantages of using .cdxml and .psd1 modules is that they can be cleanly loaded and unloaded from memory.\n\nThis enables you to enable and disable a large number of commands as needed, without loading all of them into memory when a module first loads."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": []
+}

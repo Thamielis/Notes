@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieve list of contributors for a given repository.",
+  "Description": "Retrieve list of contributors for a given repository.\n\nGitHub identifies contributors by author email address.\nThis groups contribution counts by GitHub user, which includes all associated email addresses.\nTo improve performance, only the first 500 author email addresses in the repository link to\nGitHub users. The rest will appear as anonymous contributors without associated GitHub user\ninformation.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Branch\nGitHub.Content\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Reaction\nGitHub.Release\nGitHub.ReleaseAsset\nGitHub.Repository"
+  ],
+  "Outputs": [
+    "GitHub.Contributor\nGitHub.RepositoryContributorStatistics"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubRepositoryContributor -OwnerName microsoft -RepositoryName PowerShellForGitHub\r\nGets a list of contributors for the PowerShellForGithub repository."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GitHubRepositoryContributor -Uri 'https://github.com/PowerShell/PowerShellForGitHub' -IncludeStatistics\r\nGets a list of contributors for the PowerShellForGithub repository including statistics."
+    }
+  ]
+}

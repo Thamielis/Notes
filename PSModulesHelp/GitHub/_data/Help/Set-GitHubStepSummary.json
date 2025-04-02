@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Set a summary for the step in GitHub Actions",
+  "Description": "You can set some custom Markdown for each job so that it will be displayed on the summary page of a workflow run.\nYou can use job summaries to display and group unique content, such as test result summaries, so that someone viewing\nthe result of a workflow run doesn't need to go into the logs to see important information related to the run, such as failures.\n\nJob summaries support GitHub flavored Markdown, and you can add your Markdown content for a step to the `GITHUB_STEP_SUMMARY`\nenvironment file. `GITHUB_STEP_SUMMARY` is unique for each step in a job. For more information about the per-step file that\n`GITHUB_STEP_SUMMARY` references, see [Environment files](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/workflow-commands-for-github-actions?utm_source=chatgpt.com#environment-files).\n\nWhen a job finishes, the summaries for all steps in a job are grouped together into a single job summary and are shown on the\nworkflow run summary page. If multiple jobs generate summaries, the job summaries are ordered by job completion time.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Adding a job summary](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/workflow-commands-for-github-actions?utm_source=chatgpt.com#adding-a-job-summary)"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Void"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-GitHubStepSummary -Summary 'Hello, World!'"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Creates a new card for a GitHub project.",
+  "Description": "Creates a new card for a GitHub project.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.IssueComment\nGitHub.Issue\nGitHub.PullRequest\nGitHub.ProjectCard\nGitHub.ProjectColumn"
+  ],
+  "Outputs": [
+    "GitHub.ProjectCard"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-GitHubProjectCard -Column 999999 -Note 'Note on card'\r\nCreates a card on column 999999 with the note 'Note on card'."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-GitHubProjectCard -Column 999999 -IssueId 888888\r\nCreates a card on column 999999 for the issue with ID 888888."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "New-GitHubProjectCard -Column 999999 -PullRequestId 888888\r\nCreates a card on column 999999 for the pull request with ID 888888."
+    }
+  ]
+}

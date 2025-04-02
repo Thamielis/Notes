@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Sets up reporting capabilities by managing report files.",
+  "Description": "This function sets up reporting capabilities by creating the necessary directories and managing the number of report files based on the specified maximum.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This function is used in:\n- CleanupMonster\n- PasswordSolution\n- SharePointEssentials\n\nAnd many other scripts."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-ReportingCapabilities -ReportPath \"C:\\Reports\\report.log\" -ScriptPath \"C:\\Scripts\\script.ps1\" -ReportMaximum 10"
+    }
+  ]
+}

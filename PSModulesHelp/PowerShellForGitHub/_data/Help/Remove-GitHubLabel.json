@@ -1,0 +1,54 @@
+{
+  "Synopsis": "Deletes a label from a given GitHub repository.",
+  "Description": "Deletes a label from a given GitHub repository.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Branch\nGitHub.Content\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Reaction\nGitHub.Release\nGitHub.ReleaseAsset\nGitHub.Repository"
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-GitHubLabel -OwnerName microsoft -RepositoryName PowerShellForGitHub -Label TestLabel\r\nRemoves the label called \"TestLabel\" from the PowerShellForGitHub project."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$label = $repo | Get-GitHubLabel -Label 'Test Label' -Color '#AAAAAA'\r\n$label | Remove-GitHubLabel\r\nRemoves the label we just created using the pipeline, but will prompt for confirmation\r\nbecause neither -Confirm:$false nor -Force was specified."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Remove-GitHubLabel -OwnerName microsoft -RepositoryName PowerShellForGitHub -Label TestLabel -Confirm:$false\r\nRemoves the label called \"TestLabel\" from the PowerShellForGitHub project.\r\nWill not prompt for confirmation, as -Confirm:$false was specified."
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "Remove-GitHubLabel -OwnerName microsoft -RepositoryName PowerShellForGitHub -Label TestLabel -Force\r\nRemoves the label called \"TestLabel\" from the PowerShellForGitHub project.\r\nWill not prompt for confirmation, as -Force was specified."
+    }
+  ]
+}

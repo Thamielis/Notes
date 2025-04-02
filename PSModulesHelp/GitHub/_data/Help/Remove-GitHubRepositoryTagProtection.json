@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Delete a tag protection state for a repository",
+  "Description": "This deletes a tag protection state for a repository.\nThis endpoint is only available to repository administrators.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Delete a tag protection state for a repository](https://docs.github.com/rest/repos/tags#delete-a-tag-protection-state-for-a-repository)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-GitHubRepositoryTagProtection -Owner 'octocat' -Repository 'hello-world' -TagProtectionId 1\r\nDeletes the tag protection state with the ID 1 for the 'hello-world' repository."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "Synopsis": "This function installs the prerequisites for PSClassUtils.",
+  "Description": "Installation of PSGraph",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Author: Stephanevg\nVersion: 2.0"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Install-CUDiagramPrerequisites"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Install-CUDiagramPrerequisites -proxy \"10.10.10.10\" -Scope CurrentUser"
+    }
+  ]
+}

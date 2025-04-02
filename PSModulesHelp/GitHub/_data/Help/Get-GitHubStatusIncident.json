@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Gets the status of GitHub incidents",
+  "Description": "Incidents are the cornerstone of any status page, being composed of many incident updates.\nEach incident usually goes through a progression of statuses listed below, with an impact\ncalculated from a blend of component statuses (or an optional override).\n\nStatus: Investigating, Identified, Monitoring, Resolved, or Postmortem\nImpact: None (black), Minor (yellow), Major (orange), or Critical (red)",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Incidents](https://www.githubstatus.com/api#incidents)"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject[]"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubStatusIncident\r\nGets the status of GitHub incidents"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GitHubStatusIncident -Unresolved\r\nGets the status of GitHub incidents that are unresolved"
+    }
+  ]
+}

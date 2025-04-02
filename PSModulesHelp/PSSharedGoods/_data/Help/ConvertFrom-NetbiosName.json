@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Converts a NetBIOS name to its corresponding domain name and object name.",
+  "Description": "This function takes a NetBIOS name in the format 'Domain\\Object' and converts it to the corresponding domain name and object name.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "'TEST\\Domain Admins', 'EVOTEC\\Domain Admins', 'EVOTECPL\\Domain Admins' | ConvertFrom-NetbiosName\r\nConverts the NetBIOS names 'TEST\\Domain Admins', 'EVOTEC\\Domain Admins', and 'EVOTECPL\\Domain Admins' to their corresponding domain names and object names."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "ConvertFrom-NetbiosName -Identity 'TEST\\Domain Admins', 'EVOTEC\\Domain Admins', 'EVOTECPL\\Domain Admins'\r\nConverts the NetBIOS names 'TEST\\Domain Admins', 'EVOTEC\\Domain Admins', and 'EVOTECPL\\Domain Admins' to their corresponding domain names and object names."
+    }
+  ]
+}

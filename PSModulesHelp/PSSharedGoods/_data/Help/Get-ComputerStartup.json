@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieves information about startup programs on a remote computer.",
+  "Description": "The Get-ComputerStartup function retrieves information about startup programs on a specified computer using CIM/WMI.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-ComputerStartup -ComputerName \"RemoteComputer\" -Protocol Wsman\r\nRetrieves startup program information from a remote computer using the Wsman protocol."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-ComputerStartup -All\r\nRetrieves all startup program information from the local computer."
+    }
+  ]
+}

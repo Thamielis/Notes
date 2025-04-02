@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Get the encoding of a file (ASCII, UTF8, UTF8BOM, Unicode, BigEndianUnicode, UTF7)",
+  "Description": "Get the encoding of a file (ASCII, UTF8, UTF8BOM, Unicode, BigEndianUnicode, UTF7).\nEncoding is determined by the first few bytes of the file or by the presence of non-ASCII characters.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-FileEncoding -Path 'C:\\Users\\pklys\\Desktop\\test.txt'"
+    }
+  ]
+}

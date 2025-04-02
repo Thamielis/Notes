@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Return the raw content of a ps1 or psm1 file as a AST scriptblock type.",
+  "Description": "Return the raw content of a ps1 or psm1 file as a AST scriptblock type.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Ref: https://mikefrobbins.com/2018/09/28/learning-about-the-powershell-abstract-syntax-tree-ast/ for implementing -raw AST"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "Path of a ps1 or psm1 file"
+  ],
+  "Outputs": [
+    "ScriptBlockAST"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-CURaw -Path .\\Classes\\Private\\01_ClassProperty.ps1\r\nAttributes         : {}\r\nUsingStatements    : {}\r\nParamBlock         :\r\nBeginBlock         :\r\nProcessBlock       :\r\nEndBlock           : Class ClassProperty {\r\n                        [String]$Name\r\n                        [String]$Type\r\nClassProperty([String]$Name,[String]$Type){\r\n\r\n                            $this.Name = $Name\r\n                            $This.Type = $Type\r\n\r\n                        }\r\n                    }\r\nDynamicParamBlock  :\r\nScriptRequirements :\r\nExtent             : Class ClassProperty {\r\n                        [String]$Name\r\n                        [String]$Type\r\n\r\n                        ClassProperty([String]$Name,[String]$Type){\r\n\r\n                            $this.Name = $Name\r\n                            $This.Type = $Type\r\n\r\n                        }\r\n                    }\r\nParent             :\r\n\r\nThe cmdlet return an AST type representing the content of the 01_ClassProperty.ps1 file"
+    }
+  ]
+}

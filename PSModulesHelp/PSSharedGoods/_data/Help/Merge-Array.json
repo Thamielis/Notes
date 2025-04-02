@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Merge-Array allows to merge two or more arrays together.",
+  "Description": "Merge-Array allows to merge two or more arrays together. It copies headers from each Array and merges them together allowing for fulll output. \nWhen used with Prescan parameter it actually is able to show headers from all arrays",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$Array1 = @(\r\n    [PSCustomObject] @{ Name = 'Company1'; Count = 259  }\r\n    [PSCustomObject] @{ Name = 'Company2'; Count = 300 }\r\n)\r\n$Array2 = @(\r\n    [PSCustomObject] @{ Name = 'Company1'; Count = 25 }\r\n    [PSCustomObject] @{ Name = 'Company2'; Count = 100 }\r\n)\r\n$Array3 = @(\r\n    [PSCustomObject] @{ Name1 = 'Company1'; Count3 = 25 }\r\n    [PSCustomObject] @{ Name1 = 'Company2'; Count3 = 100 }\r\n    [PSCustomObject] @{ Name2 = 'Company2'; Count3 = 100 }\r\n)\r\n$Array1 | Format-Table -AutoSize\r\n$Array2 | Format-Table -AutoSize\r\n$Array3 | Format-Table -AutoSize\r\n\r\nMerge-Array -Array $Array1, $Array2, $Array3 | Format-Table -AutoSize\r\nMerge-Array -Array $Array1, $Array2, $Array3 -Prescan | Format-Table -AutoSize"
+    }
+  ]
+}

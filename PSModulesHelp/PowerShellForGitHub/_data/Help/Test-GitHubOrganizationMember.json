@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Check to see if a user is a member of an organization.",
+  "Description": "Check to see if a user is a member of an organization.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "[String]"
+  ],
+  "Outputs": [
+    "[Bool]"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Test-GitHubOrganizationMember -OrganizationName PowerShell -UserName Octocat"
+    }
+  ]
+}

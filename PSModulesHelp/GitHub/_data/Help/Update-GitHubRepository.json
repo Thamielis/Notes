@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Update a repository",
+  "Description": "**Note**: To edit a repository's topics, use the\n[Replace all repository topics](https://docs.github.com/rest/repos/repos#replace-all-repository-topics) endpoint.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Update a repository](https://docs.github.com/rest/repos/repos#update-a-repository)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Update-GitHubRepository -Name 'octocat' -Description 'Hello-World' -Homepage 'https://github.com'"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$params = @{\r\n    Owner       = 'octocat'\r\n    Repo        = 'Hello-World'\r\n    name        = 'Hello-World-Repository\r\n    description = 'This is your first repository'\r\n    homepage    = 'https://github.com'\r\n}\r\nUpdate-GitHubRepository @params"
+    }
+  ]
+}

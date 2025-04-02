@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Finds specific data within a given array of strings.",
+  "Description": "This function searches for a specific text within an array of strings and returns the second element of the string that matches the search criteria.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Find-MyProgramData -Data @(\"Program A 123\", \"Program B 456\", \"Program C 789\") -FindText \"B\"\r\nThis example will return \"456\" as it finds the string containing \"B\" and returns the second element of that string."
+    }
+  ]
+}

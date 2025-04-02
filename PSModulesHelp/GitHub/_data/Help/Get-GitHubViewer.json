@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Gets the currently authenticated user.",
+  "Description": "Gets the currently authenticated user.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[GraphQL API - Queries - Viewer](https://docs.github.com/en/graphql/reference/queries#viewer)"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GithubViewer\r\nGets the currently authenticated user."
+    }
+  ]
+}

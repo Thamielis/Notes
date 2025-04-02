@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Get emojis",
+  "Description": "Lists all the emojis available to use on GitHub.\nIf you pass the `Path` parameter, the emojis will be downloaded to the specified destination.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Get emojis](https://docs.github.com/rest/reference/emojis#get-emojis)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubEmoji\r\nGets all the emojis available to use on GitHub."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GitHubEmoji -Path 'C:\\Users\\user\\Documents\\GitHub\\Emojis'\r\nDownloads all the emojis available to use on GitHub to the specified destination."
+    }
+  ]
+}

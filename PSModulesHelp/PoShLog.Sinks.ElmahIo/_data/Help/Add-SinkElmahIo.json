@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Writes log events into elmah.io",
+  "Description": "Writes log events into elmah.io server",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "Instance of LoggerConfiguration"
+  ],
+  "Outputs": [
+    "LoggerConfiguration object allowing method chaining"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-Logger | Add-SinkElmahIo -ApiKey 'API_KEY' -LogId 'LOG_ID' | Start-Logger"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Groups the provided pull requests based on the specified grouping criteria.",
+  "Description": "Groups the provided pull requests based on the specified grouping criteria.\n\nCurrently able to group Pull Requests by week.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.PullRequest"
+  ],
+  "Outputs": [
+    "[PSCustomObject[]] Collection of pull requests and counts, by week, along with the\ntotal count of pull requests."
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$pullRequests = @()\r\n$pullRequests += Get-GitHubPullRequest -Uri 'https://github.com/powershell/xpsdesiredstateconfiguration'\r\n$pullRequests += Get-GitHubPullRequest -Uri 'https://github.com/powershell/xactivedirectory'\r\n$pullRequests | Group-GitHubPullRequest -Weeks 12 -DateType Closed"
+    }
+  ]
+}

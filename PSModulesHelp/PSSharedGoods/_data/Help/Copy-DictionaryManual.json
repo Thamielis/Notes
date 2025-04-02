@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Copies a dictionary recursively, handling nested dictionaries and lists.",
+  "Description": "This function copies a dictionary recursively, handling nested dictionaries and lists. It creates a deep copy of the input dictionary, ensuring that modifications to the copied dictionary do not affect the original dictionary.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$originalDictionary = @{\r\n    'Key1' = 'Value1'\r\n    'Key2' = @{\r\n        'NestedKey1' = 'NestedValue1'\r\n    }\r\n}\r\n$copiedDictionary = Copy-DictionaryManual -Dictionary $originalDictionary\r\nThis example demonstrates how to copy a dictionary with nested values."
+    }
+  ]
+}

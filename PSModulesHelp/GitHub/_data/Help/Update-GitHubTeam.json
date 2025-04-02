@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Update a team",
+  "Description": "To edit a team, the authenticated user must either be an organization owner or a team maintainer.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Update a team](https://docs.github.com/en/rest/teams/teams?apiVersion=2022-11-28#update-a-team)"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "GitHubTeam"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$params = @{\r\n    Organization  = 'github'\r\n    Slug          = 'team-name'\r\n    NewName       = 'new team name'\r\n    Description   = 'A new team'\r\n    Visible       = $true\r\n    Notifications = $true\r\n    Permission    = 'pull'\r\n    ParentTeamID  = 123456\r\n}\r\nUpdate-GitHubTeam @params\r\nUpdates the team with the slug 'team-name' in the `github` organization with the new name 'new team name', description 'A new team',\r\nvisibility set to 'closed', notifications enabled, permission set to 'pull', and the parent team ID set to 123456."
+    }
+  ]
+}

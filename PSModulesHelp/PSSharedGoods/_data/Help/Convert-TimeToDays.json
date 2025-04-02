@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Converts the time span between two dates into the number of days.",
+  "Description": "This function calculates the number of days between two given dates. It allows for flexibility in handling different date formats and provides an option to ignore specific dates.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Convert-TimeToDays -StartTime (Get-Date).AddDays(-5) -EndTime (Get-Date)\r\n# Calculates the number of days between 5 days ago and today."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Convert-TimeToDays -StartTime '2022-01-01' -EndTime '2022-01-10' -Ignore '*2022*'\r\n# Calculates the number of days between January 1, 2022, and January 10, 2022, ignoring any dates containing '2022'."
+    }
+  ]
+}

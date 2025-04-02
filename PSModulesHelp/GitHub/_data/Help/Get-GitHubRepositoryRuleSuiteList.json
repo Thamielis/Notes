@@ -1,0 +1,39 @@
+{
+  "Synopsis": "List repository rule suites",
+  "Description": "Lists suites of rule evaluations at the repository level.\nFor more information, see\"[Managing rulesets for a repository](https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/managing-rulesets-for-a-repository#viewing-insights-for-rulesets).\"",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[List repository rule suites](https://docs.github.com/rest/repos/rule-suites#list-repository-rule-suites)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$params = @{\r\n    Owner           = 'octocat'\r\n    Repo            = 'hello-world'\r\n    Ref             = 'main'\r\n    TimePeriod      = 'day'\r\n    ActorName       = 'octocat'\r\n    RuleSuiteResult = 'all'\r\n}\r\nGet-GitHubRepositoryRuleSuiteList @params\r\nGets a list of rule suites for the main branch of the hello-world repository owned by octocat."
+    }
+  ]
+}

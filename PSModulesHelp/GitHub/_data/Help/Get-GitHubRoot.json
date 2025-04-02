@@ -1,0 +1,39 @@
+{
+  "Synopsis": "GitHub API Root.",
+  "Description": "Get Hypermedia links to resources accessible in GitHub's REST API.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[GitHub API Root](https://docs.github.com/rest/meta/meta#github-api-root)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubRoot\r\nGet the root endpoint for the GitHub API."
+    }
+  ]
+}

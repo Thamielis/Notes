@@ -374,7 +374,7 @@
 	> :clock10: 09.02.2021
 	> :memo: Modular-Programming-with-Python Code
 - [<span style="color:cyan">ModuleBuilder</span>](https://github.com/Thamielis/ModuleBuilder)
-	> :clock10: 11.10.2023
+	> :clock10: 01.04.2025
 	> :memo: A PowerShell Module to help scripters write, version, sign, package, and publish.
 - [<span style="color:cyan">module_utility_Dell_Command_Update</span>](https://github.com/Thamielis/module_utility_Dell_Command_Update)
 	> :clock10: 21.02.2024
@@ -1012,4 +1012,7 @@
 - [<span style="color:cyan">PSFLowChart</span>](https://github.com/In-Pro-Org/PSFLowChart)
 	> :clock10: 20.03.2025
 	> :memo: Create a PS1 script FlowChart
+- [<span style="color:cyan">pwsh-github-actions</span>](https://github.com/In-Pro-Org/pwsh-github-actions)
+	> :clock10: 02.04.2025
+	> :memo: Examples of using PowerShell in GitHub actions
 

@@ -1,0 +1,33 @@
+{
+  "Synopsis": "\r\nGet-Assembly [-InputObject <PSObject#System.AppDomain[]>] [-PassThru] [<CommonParameters>]\r\n",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.Management.Automation.PSObject[]\r\n"
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject\r\nSystem.Management.Automation.PSObject#System.AppDomain\r\n"
+  ],
+  "Links": [],
+  "Examples": []
+}

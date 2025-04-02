@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Configures AD-related Local Security Authority Policies of the local computer or a remote one.",
+  "Description": "Configures AD-related Local Security Authority (LSA) Policies of the local or a remote computer. This functionality is helpful when restoring Active Directory domain controllers (DC) from IFM backups. Note that running this command against a DC with parameters that do not match the information stored in its local AD database might prevent the target DC from booting ever again.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Cmdlet",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [
+    "https://github.com/MichaelGrafnetter/DSInternals/blob/master/Documentation/PowerShell/Set-LsaPolicyInformation.md",
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Set-LsaPolicyInformation -DomainName 'ADATUM' `\r\n                                 -DnsDomainName 'Adatum.com' `\r\n                                 -DnsForestName 'Adatum.com' `\r\n                                 -DomainGuid 279b615e-ae79-4c86-a61a-50f687b9f7b8 `\r\n                                 -DomainSid S-1-5-21-1817670852-3242289776-1304069626\r\nConfigures AD-related LSA Policy Information of the local computer."
+    }
+  ]
+}

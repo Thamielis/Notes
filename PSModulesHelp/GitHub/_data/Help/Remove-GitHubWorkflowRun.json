@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Delete a workflow run",
+  "Description": "Delete a specific workflow run. Anyone with write access to the repository can use this endpoint. If the repository is\nprivate you must use an access token with the `repo` scope. GitHub Apps must have the `actions:write` permission to use\nthis endpoint.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Delete a workflow run](https://docs.github.com/rest/actions/workflow-runs#delete-a-workflow-run)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-GitHubWorkflowRun -Owner 'octocat' -Repository 'Hello-World' -ID 123456789\r\nDeletes the workflow run with the ID 123456789 from the 'Hello-World' repository owned by 'octocat'"
+    }
+  ]
+}

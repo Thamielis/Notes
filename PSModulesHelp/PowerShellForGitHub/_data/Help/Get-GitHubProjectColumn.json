@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Get the columns for a given GitHub Project.",
+  "Description": "Get the columns for a given GitHub Project.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn"
+  ],
+  "Outputs": [
+    "GitHub.ProjectColumn"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubProjectColumn -Project 999999\r\nGet the columns for project 999999."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GitHubProjectColumn -Column 999999\r\nGet the column with ID 999999."
+    }
+  ]
+}

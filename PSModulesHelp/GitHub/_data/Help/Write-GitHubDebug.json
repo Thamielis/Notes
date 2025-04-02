@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Write a debug message in GitHub Actions",
+  "Description": "Write a debug message in GitHub Actions. The message will only be displayed if the action is running in debug mode.\nTo run in debug mode, you must create a secret or variable named ACTIONS_STEP_DEBUG with the value `true` to see the debug messages set by\nthis command in the log. For more information, see [Enabling debug logging](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/troubleshooting-workflows/enabling-debug-logging).\n\nIf both the secret and variable are set, the value of the secret takes precedence over the variable.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Enabling debug logging](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/workflow-commands-for-github-actions#setting-a-debug-message)"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Void"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Write-GitHubDebug -Message 'Hello, World!'\r\nWrites a debug message 'Hello, World!'."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Brings main application window to the front (top most position on screen)",
+  "Description": "Uses a number of strategies to force an application window to the top.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://powershell.one/powershell-internals/extending-powershell/vbscript-and-csharp"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Show-PSOneApplicationWindow -Id $pid -Maximize \r\nBrings current PowerShell window to the top and maximizes the window"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-Process -Name Notepad | Show-PSOneApplicationWindow -Maximize\r\nBrings notepad editor window to the top and maximizes it. \r\nIf there is no notepad application running, an exception is thrown.\r\nIf there is more than one instance of notepad running, only the last instance is affected"
+    }
+  ]
+}

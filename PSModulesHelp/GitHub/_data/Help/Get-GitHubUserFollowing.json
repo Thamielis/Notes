@@ -1,0 +1,44 @@
+{
+  "Synopsis": "List the people a given user or the authenticated user follows",
+  "Description": "Lists the people who a given user or the authenticated user follows.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[List the people the authenticated user follows](https://docs.github.com/rest/users/followers#list-the-people-the-authenticated-user-follows)\n[List the people a user follows](https://docs.github.com/rest/users/followers#list-the-people-a-user-follows)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubUserFollowing\r\nGets all people the authenticated user follows."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GitHubUserFollowing -Username 'octocat'\r\nGets all people that 'octocat' follows."
+    }
+  ]
+}

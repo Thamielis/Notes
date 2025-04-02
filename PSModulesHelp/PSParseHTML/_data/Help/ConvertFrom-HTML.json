@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Converts HTML to PowerShell object that can be further digested in PowerShell",
+  "Description": "Converts HTML to PowerShell object that can be further digested in PowerShell.\nTo be used if ConvertTo-HTMLAttributes or ConvertTo-HTMLTable are not enough.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "Option 1 - uses Agility Pack",
+      "Code": "$PageHTML = ConvertFrom-HTML -URL \"https://www.evotec.xyz\"\r\n$PageHTML"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "Option 2 - uses AngleSharp",
+      "Code": "$PageHTML = ConvertFrom-HTML -URL \"https://www.evotec.xyz\" -Engine AngleSharp\r\n$PageHTML"
+    }
+  ]
+}

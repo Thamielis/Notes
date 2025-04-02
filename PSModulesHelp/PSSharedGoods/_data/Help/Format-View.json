@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Formats and displays objects in a customizable view.",
+  "Description": "The Format-View function formats and displays objects in a customizable view. It allows you to specify properties to include or exclude, control output streams, and customize the display format.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Format-View -InputObject $object -Property Name, Age -Stream Verbose\r\nFormats the object with only the 'Name' and 'Age' properties and outputs to the verbose stream."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-Process | Format-View -Property Name, CPU -Stream Host\r\nFormats the process objects with only the 'Name' and 'CPU' properties and outputs to the host."
+    }
+  ]
+}

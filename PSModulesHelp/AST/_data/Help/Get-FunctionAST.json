@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Retrieves the abstract syntax tree (AST) of function definitions from a PowerShell script.",
+  "Description": "Parses a specified PowerShell script file and extracts function definitions matching the given name.\nBy default, it returns all function definitions if no specific name is provided.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://psmodule.io/AST/Functions/Core/Get-FunctionAST/"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-FunctionAST -Path \"C:\\Scripts\\MyScript.ps1\"\r\nRetrieves all function definitions from \"MyScript.ps1\"."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-FunctionAST -Name \"Get-Data\" -Path \"C:\\Scripts\\MyScript.ps1\"\r\nRetrieves only the function definition named \"Get-Data\" from \"MyScript.ps1\"."
+    }
+  ]
+}

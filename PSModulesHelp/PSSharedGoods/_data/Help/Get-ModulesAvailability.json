@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Checks the availability of a specified module and imports it if available.",
+  "Description": "This function checks if a specified module is available. If the module is not loaded, it attempts to import it. Returns $true if the module is successfully loaded, otherwise $false.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-ModulesAvailability -Name \"AzureRM\"\r\nChecks if the \"AzureRM\" module is available and imports it if not already loaded."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-ModulesAvailability -Name \"ActiveDirectory\"\r\nChecks the availability of the \"ActiveDirectory\" module and imports it if necessary."
+    }
+  ]
+}

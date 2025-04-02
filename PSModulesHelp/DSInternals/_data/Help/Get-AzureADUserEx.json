@@ -1,0 +1,63 @@
+{
+  "Synopsis": "Gets a user from Azure AD, including the associated FIDO and NGC keys.",
+  "Description": "The Get-AzureADUserEx cmdlet uses an undocumented Azure AD Graph API endpoint to retrieve the normally hidden searchableDeviceKeys attribute of user accounts. This attribute holds different types of key credentials, including the FIDO2 and NGC keys that are used by Windows Hello for Business.\r\n\r\n\r\nThis cmdlet is not intended to replace the Get-AzureADUser cmdlet from Microsoft's AzureAD module. Only a handful of attributes are retrieved from Azure Active Directory and authentication fully relies on the Connect-AzureAD cmdlet.\r\n\r\n\r\nNo administrative role is required to perform this operation. The cmdlet was tested on a tenant with 150,000 user accounts and ran under 5 minutes.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Cmdlet",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "DSInternals.Common.AzureAD.AzureADUser"
+  ],
+  "Links": [
+    "https://github.com/MichaelGrafnetter/DSInternals/blob/master/Documentation/PowerShell/Get-AzureADUserEx.md",
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Install-Module -Name AzureAD,DSInternals -Force\r\nPS C:\\> Connect-AzureAD\r\nPS C:\\> $token = [Microsoft.Open.Azure.AD.CommonLibrary.AzureSession]::AccessTokens['AccessToken'].AccessToken\r\nPS C:\\> Get-AzureADUserEx -All -Token $token | Where-Object KeyCredentials -ne $null\r\n<# Sample Output:\r\n\r\nObjectId: af4cf208-16e0-429d-b574-2a09c5f30dea\r\nUserPrincipalName: john@contoso.com\r\nEnabled: True\r\nDisplayName: John Doe\r\nKey Credentials:\r\n  Usage=FIDO, Source=AzureAD, Device=00000000-0000-0000-0000-000000000000, Created=12/12/2019 9:42:21 AM\r\n  Usage=NGC, Source=AzureAD, Device=cbad3c94-b480-4fa6-9187-ff1ed42c4479, Created=11/17/2015 8:17:13 AM\r\n\r\nObjectId: 5dd9c7f0-9441-4c5a-b2df-ca7b889d8c4c\r\nUserPrincipalName: peter@contoso.com\r\nEnabled: True\r\nDisplayName: Peter Smith\r\nKey Credentials:\r\n  Usage=NGC, Source=AzureAD, Device=21c915a8-0326-47c4-8985-2aceda00eaee, Created=12/26/2019 1:22:17 PM\r\n  Usage=NGC, Source=AzureAD, Device=ec45d71b-b5dd-45dc-beaf-e248cbcb2bd3, Created=12/24/2019 9:44:56 AM\r\n\r\n#>\r\nDisplays info about Azure AD users with key credentials. Authentication is handled by the AzureAD module."
+    },
+    {
+      "Title": "Example 2",
+      "Markdown": "",
+      "Code": "PS C:\\> Install-Module -Name AzureAD,DSInternals -Force\r\nPS C:\\> Connect-AzureAD\r\nPS C:\\> $token = [Microsoft.Open.Azure.AD.CommonLibrary.AzureSession]::AccessTokens['AccessToken'].AccessToken\r\nPS C:\\> Get-AzureADUserEx -All -Token $token |\r\n            Where-Object Enabled -eq $true |\r\n            Select-Object -ExpandProperty KeyCredentials |\r\n            Where-Object Usage -eq FIDO |\r\n            Format-Table -View FIDO\r\n<# Sample Output:\r\n\r\nDisplayName               AAGUID                               Alg   Counter Created    Owner\r\n-----------               ------                               ---   ------- -------    -----\r\nSoloKeys Tap              8876631b-d4a0-427f-5773-0ec71c9e0279 ES256     274 2019-08-29 james@contoso.com\r\nSoloKeys Solo             8876631b-d4a0-427f-5773-0ec71c9e0279 ES256     281 2019-08-29 thomas@contoso.com\r\neWBM Goldengate G320      87dbc5a1-4c94-4dc8-8a47-97d800fd1f3c ES256      83 2019-08-29 jane@contoso.com\r\neWBM Goldengate G310      95442b2e-f15e-4def-b270-efb106facb4e ES256       4 2019-08-29 mary@contoso.com\r\nFeitian BioPass FIDO2     77010bd7-212a-4fc9-b236-d2ca5e9d4084 ES256     261 2019-08-26 george@contoso.com\r\nYubico Security Key FIDO2 f8a011f3-8c0a-4d15-8006-17111f9edc7d ES256     257 2019-08-26 matt@contoso.com\r\nFeitian AllinPass FIDO2   12ded745-4bed-47d4-abaa-e713f51d6393 ES256     231 2019-08-26 jenny@contoso.com\r\nYubiKey 5                 fa2b99dc-9e39-4257-8f92-4a30d23c4118 ES256     229 2019-08-26 jill@contoso.com\r\nYubiKey 5                 cb69481e-8ff7-4039-93ec-0a2729a154a8 ES256      25 2019-12-12 john@contoso.com\r\nFeitian All-In-Pass       12ded745-4bed-47d4-abaa-e713f51d6393 ES256    1398 2020-03-31 peter@contoso.com\r\neWBM Goldengate G320      87dbc5a1-4c94-4dc8-8a47-97d800fd1f3c ES256      37 2019-08-29 joe@contoso.com\r\neWBM Goldengate G310      95442b2e-f15e-4def-b270-efb106facb4e ES256      48 2019-08-29 joe@contoso.com\r\n\r\n#>\r\nLists all FIDO2 tokens registered in an Azure AD tenant, but only on accounts that are enabled."
+    },
+    {
+      "Title": "Example 3",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-AzureADUserEx -All -Token $token |\r\n            Where-Object Enabled -eq $true |\r\n            Select-Object -ExpandProperty KeyCredentials |\r\n            Where-Object Usage -eq NGC |\r\n            Format-Table -View ROCA\r\n<# Sample Output:\r\n\r\nUsage IsWeak Source  DeviceId                             Created    Owner\r\n----- ------ ------  --------                             -------    -----\r\nNGC   True   AzureAD fd591087-245c-4ff5-a5ea-c14de5e2b32d 2017-07-19 joe@contoso.com\r\nNGC   False  AzureAD 1966d4da-14da-4581-a7a7-5e8e07e93ad9 2019-08-01 peter@contoso.com\r\n\r\n#>\r\nLists weak public keys registered in Azure Active Directory that were generated on ROCA-vulnerable TPMs."
+    },
+    {
+      "Title": "Example 4",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-AzureADTenantDetail | Out-Null\r\nPS C:\\> $token = [Microsoft.Open.Azure.AD.CommonLibrary.AzureSession]::AccessTokens['AccessToken'].AccessToken\r\nPS C:\\> Get-AzureADUserEx -UserPrincipalName 'john@contoso.com' -Token $token\r\n\r\n<# Sample Output:\r\n\r\nObjectId: af4cf208-16e0-429d-b574-2a09c5f30dea\r\nUserPrincipalName: john@contoso.com\r\nEnabled: True\r\nDisplayName: John Doe\r\nKey Credentials:\r\n  Usage=FIDO, Source=AzureAD, Device=00000000-0000-0000-0000-000000000000, Created=12/12/2019 9:42:21 AM\r\n  Usage=NGC, Source=AzureAD, Device=cbad3c94-b480-4fa6-9187-ff1ed42c4479, Created=11/17/2015 8:17:13 AM\r\n\r\n#>\r\nGets information about a single Azure Active Directory user. If necessary, the access token is automatically refreshed by the standard Get-AzureADTenantDetail cmdlet."
+    },
+    {
+      "Title": "Example 5",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-AzureADUserEx -UserPrincipalName 'john@contoso.com' -AccessToken $token |\r\n            ForEach-Object { $PSItem.KeyCredentials.FidoKeyMaterial }\r\n\r\n<# Sample Output:\r\n\r\nVersion: 1\r\nDisplayName: SoloKeys Tap\r\nAttestationCertificates\r\n  E=hello@solokeys.com, CN=solokeys.com, OU=Authenticator Attestation, O=Solo Keys, S=Maryland, C=US\r\nAuthenticatorData\r\n  RelyingPartyIdHash: 356c9ed4a09321b9695f1eaf918203f1b55f689da61fbc96184c157dda680c81\r\n  Flags: UserPresent, UserVerified, AttestationData, ExtensionData\r\n  SignatureCount: 274\r\n  AttestedCredentialData\r\n    AAGUID: 8876631b-d4a0-427f-5773-0ec71c9e0279\r\n    CredentialID: 9d0c595c03cd6c9dd22b0b8f852585302c2d5a13f77669251406c390de6ba42a63f3ea6632a39cd8bc505184352541367725a5283689d825f4355fe2016af2f0008112010000\r\n    PublicKeyAlgorithm: ES256\r\n  Extensions: {\"hmac-secret\": true}\r\n\r\nVersion: 1\r\nDisplayName: SoloKeys Solo\r\nAttestationCertificates\r\n  E=hello@solokeys.com, CN=solokeys.com, OU=Authenticator Attestation, O=Solo Keys, S=Maryland, C=US\r\nAuthenticatorData\r\n  RelyingPartyIdHash: 356c9ed4a09321b9695f1eaf918203f1b55f689da61fbc96184c157dda680c81\r\n  Flags: UserPresent, UserVerified, AttestationData, ExtensionData\r\n  SignatureCount: 281\r\n  AttestedCredentialData\r\n    AAGUID: 8876631b-d4a0-427f-5773-0ec71c9e0279\r\n    CredentialID: ac5373c1eaa6722c351db6554715fd534906f5c98f4548b8390fe11b97325a943f0905d0a9de19765385f9bce512673128a95e3fea15f53ee46dbe307d0f94c84d8119010000\r\n    PublicKeyAlgorithm: ES256\r\n  Extensions: {\"hmac-secret\": true}\r\n\r\nVersion: 1\r\nDisplayName: eWBM Goldengate G320\r\nAttestationCertificates\r\n  E=info@ewbm.com, CN=eWBM FIDO2 Certificate, OU=Authenticator Attestation, O=\"eWBM Co., Ltd.\", L=Gangnam-Gu, S=Seoul-Si, C=KR\r\nAuthenticatorData\r\n  RelyingPartyIdHash: 356c9ed4a09321b9695f1eaf918203f1b55f689da61fbc96184c157dda680c81\r\n  Flags: UserPresent, UserVerified, AttestationData, ExtensionData\r\n  SignatureCount: 83\r\n  AttestedCredentialData\r\n    AAGUID: 87dbc5a1-4c94-4dc8-8a47-97d800fd1f3c\r\n    CredentialID: fb64eb483921507239317b6f5f1d7a0b9499afd4dd0698eaa55ad8871fe1c25a\r\n    PublicKeyAlgorithm: ES256\r\n  Extensions: {\"hmac-secret\": true}\r\n\r\nVersion: 1\r\nDisplayName: eWBM Goldengate G310\r\nAttestationCertificates\r\n  E=info@ewbm.com, CN=eWBM FIDO2 Certificate, OU=Authenticator Attestation, O=\"eWBM Co., Ltd.\", L=Gangnam-Gu, S=Seoul-Si, C=KR\r\nAuthenticatorData\r\n  RelyingPartyIdHash: 356c9ed4a09321b9695f1eaf918203f1b55f689da61fbc96184c157dda680c81\r\n  Flags: UserPresent, UserVerified, AttestationData, ExtensionData\r\n  SignatureCount: 4\r\n  AttestedCredentialData\r\n    AAGUID: 95442b2e-f15e-4def-b270-efb106facb4e\r\n    CredentialID: 4dd34d8760bc0e92fcb53b64cc1c354ac7112931bd6f53c0a6aabba7c813c36d\r\n    PublicKeyAlgorithm: ES256\r\n  Extensions: {\"hmac-secret\": true}\r\n\r\nVersion: 1\r\nDisplayName: Feitian BioPass FIDO2\r\nAttestationCertificates\r\n  CN=FT BioPass FIDO2 USB, OU=Authenticator Attestation, O=Feitian Technologies, C=US\r\nAuthenticatorData\r\n  RelyingPartyIdHash: 356c9ed4a09321b9695f1eaf918203f1b55f689da61fbc96184c157dda680c81\r\n  Flags: UserPresent, UserVerified, AttestationData, ExtensionData\r\n  SignatureCount: 261\r\n  AttestedCredentialData\r\n    AAGUID: 77010bd7-212a-4fc9-b236-d2ca5e9d4084\r\n    CredentialID: db2baabf8450f6af3b931b35acc7d5f77ebe4ed98cf0b55c0513cff31e18520d\r\n    PublicKeyAlgorithm: ES256\r\n  Extensions: {\"hmac-secret\": true}\r\n\r\nVersion: 1\r\nDisplayName: Yubico Security Key FIDO2\r\nAttestationCertificates\r\n  CN=Yubico U2F EE Serial 8513128192, OU=Authenticator Attestation, O=Yubico AB, C=SE\r\nAuthenticatorData\r\n  RelyingPartyIdHash: 356c9ed4a09321b9695f1eaf918203f1b55f689da61fbc96184c157dda680c81\r\n  Flags: UserPresent, UserVerified, AttestationData, ExtensionData\r\n  SignatureCount: 257\r\n  AttestedCredentialData\r\n    AAGUID: f8a011f3-8c0a-4d15-8006-17111f9edc7d\r\n    CredentialID: 09956acca523d532e04c647a4a158664\r\n    PublicKeyAlgorithm: ES256\r\n  Extensions: {\"hmac-secret\": true}\r\n\r\nVersion: 1\r\nDisplayName: Feitian AllinPass FIDO2\r\nAttestationCertificates\r\n  CN=FT BioPass FIDO2 0470, OU=Authenticator Attestation, O=Feitian Technologies, C=US\r\nAuthenticatorData\r\n  RelyingPartyIdHash: 356c9ed4a09321b9695f1eaf918203f1b55f689da61fbc96184c157dda680c81\r\n  Flags: UserPresent, UserVerified, AttestationData, ExtensionData\r\n  SignatureCount: 231\r\n  AttestedCredentialData\r\n    AAGUID: 12ded745-4bed-47d4-abaa-e713f51d6393\r\n    CredentialID: 59dc5439faef677d7e81688a27604a205dab922978372062c5c10206639c3c00\r\n    PublicKeyAlgorithm: ES256\r\n  Extensions: {\"hmac-secret\": true}\r\n\r\nVersion: 1\r\nDisplayName: YubiKey 5\r\nAttestationCertificates\r\n  CN=Yubico U2F EE Serial 14818162, OU=Authenticator Attestation, O=Yubico AB, C=SE\r\nAuthenticatorData\r\n  RelyingPartyIdHash: 356c9ed4a09321b9695f1eaf918203f1b55f689da61fbc96184c157dda680c81\r\n  Flags: UserPresent, UserVerified, AttestationData, ExtensionData\r\n  SignatureCount: 229\r\n  AttestedCredentialData\r\n    AAGUID: fa2b99dc-9e39-4257-8f92-4a30d23c4118\r\n    CredentialID: bc879d1e8da27d5f29a66d9a457ac1d8\r\n    PublicKeyAlgorithm: ES256\r\n  Extensions: {\"hmac-secret\": true}\r\n\r\n#>\r\nDisplays details about FIDO2 keys registered in Azure Active Directory by a specific user."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Retrieves and displays file permissions for the specified file or folder.",
+  "Description": "This function retrieves and displays the file permissions for the specified file or folder. It provides options to filter permissions based on inheritance, resolve access control types, and include extended information.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This function supports various options to customize the output and handle different permission scenarios."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-FilePermission -Path \"C:\\Example\\File.txt\"\r\nDescription:\r\nRetrieves and displays the permissions for the \"File.txt\" file."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-FilePermission -Path \"D:\\Folder\" -Inherited\r\nDescription:\r\nRetrieves and displays only the inherited permissions for the \"Folder\" directory."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-FilePermission -Path \"E:\\Document.docx\" -ResolveTypes -Extended\r\nDescription:\r\nRetrieves and displays the resolved access control types and extended information for the \"Document.docx\" file."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Converts nested hashtable into flat hashtable using delimiter",
+  "Description": "Converts nested hashtable into flat hashtable using delimiter",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "ConvertTo-FlatHashTable -InputObject ([ordered] @{\r\n    RootEntry       = 'OK1'\r\n    Parent          = @{\r\n        Child1 = 'OK2'\r\n        Child2 = 'Ok3'\r\n    }\r\n    ParentDifferent = @{\r\n        Child7 = 'NotOk'\r\n        Child8 = @{\r\n            Child10 = 'OKLetsSee'\r\n            Child11 = @{\r\n                SpecialCase = 'Oooop'\r\n            }\r\n        }\r\n    }\r\n}) | Format-Table *"
+    }
+  ]
+}

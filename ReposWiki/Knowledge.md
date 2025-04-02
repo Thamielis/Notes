@@ -4,6 +4,9 @@
 - [<span style="color:cyan">dash-contrib-docset-feeds</span>](https://github.com/Thamielis/dash-contrib-docset-feeds)
 	> :clock10: 04.03.2025
 	> :memo: A collection of Dash's user contributed docset feed for using with Zeal
+- [<span style="color:cyan">docs</span>](https://github.com/Thamielis/docs)
+	> :clock10: 01.04.2025
+	> :memo: docs
 - [<span style="color:cyan">docsearch-configs</span>](https://github.com/Thamielis/docsearch-configs)
 	> :clock10: 24.05.2023
 	> :memo: DocSearch - Configurations
@@ -32,7 +35,7 @@
 	> :clock10: 06.06.2023
 	> :memo: No Description
 - [<span style="color:cyan">PSModulesDoku</span>](https://github.com/Thamielis/PSModulesDoku)
-	> :clock10: 06.06.2023
+	> :clock10: 01.04.2025
 	> :memo: No Description
 - [<span style="color:cyan">sql-docs</span>](https://github.com/Thamielis/sql-docs)
 	> :clock10: 30.07.2024

@@ -1,0 +1,48 @@
+{
+  "Synopsis": "Generates a new About Topic MD file from template.",
+  "Description": "The New-MarkdownAboutHelp cmdlet generates a Markdown file that is prepopulated with the standard elements of an About Topic. The cmdlet copies the template MD, renames headers and file name according to the AboutName parameter, and deposits the file in the directory designated by the OutputFoler parameter.\r\n\r\n\r\nThe About Topic can be converted to Txt format. About topics must be in txt format or the PowerShell Help engine will not be able to parse the document. Use the New-ExternalHelp (New-ExternalHelp.md)cmdlet to convert About Topic markdown files into About Topic txt files.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "The about topics will need to be added to a cab file to leverage updatable help."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "System.Object"
+  ],
+  "Links": [
+    "https://github.com/PowerShell/platyPS/blob/master/docs/New-MarkdownAboutHelp.md",
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> New-MarkdownAboutHelp -OutputFolder C:\\Test -AboutName\r\nPS C:\\> Get-ChildItem C:\\Test\r\n\r\n    Directory: C:\\Test\r\n\r\n\r\nMode                LastWriteTime         Length Name\r\n----                -------------         ------ ----\r\n-a----        7/13/2016   2:12 PM           1491 TestAboutTopic.md\r\nCreate and display file info for PowerShell About Topic Markdown File."
+    },
+    {
+      "Title": "Example 2",
+      "Markdown": "",
+      "Code": "PS C:\\> New-ExternalHelp -Path C:\\Test\\ -OutputPath C:\\Test\r\n\r\n\r\n    Directory: C:\\Test\r\n\r\n\r\nMode                LastWriteTime         Length Name\r\n----                -------------         ------ ----\r\n-a----        7/13/2016   2:15 PM           1550 TestAboutTopic.txt\r\nCreate PowerShell About Topic Txt file from existing Markdown About file."
+    }
+  ]
+}

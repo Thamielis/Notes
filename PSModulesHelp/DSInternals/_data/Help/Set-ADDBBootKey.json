@@ -1,0 +1,43 @@
+{
+  "Synopsis": "Re-encrypts a ntds.dit file with a new BootKey/SysKey.",
+  "Description": "Decrypts the password encryption key list from the pekList domain attribute using the current/old boot key and re-encrypts it using a new one. This might be useful during some DC restore operations. Note that this procedure is highly unsupported by Microsoft.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Cmdlet",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [
+    "https://github.com/MichaelGrafnetter/DSInternals/blob/master/Documentation/PowerShell/Set-ADDBBootKey.md",
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Set-ADDBBootKey -DatabasePath 'C:\\Backup\\Active Directory\\ntds.dit' `\r\n                        -LogPath 'C:\\Backup\\Active Directory' `\r\n                        -OldBootKey 610bc29e6f62ca7004e9872cd51a0116 `\r\n                        -NewBootKey 6ffec6b70dc863db1906a5507c0576ee\r\nRe-encrypts the ntds.dit file with a new boot key."
+    }
+  ]
+}

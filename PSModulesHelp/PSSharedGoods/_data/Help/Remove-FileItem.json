@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Removes one or more files and/or folders using one of three methods:\nRemove-Item, .NET Delete(), or move to Recycle Bin.",
+  "Description": "- If the path is a file, removes it in one shot.\n- If the path is a folder and -SkipFolder is NOT used, removes that folder\n  in one shot (recursively if -Recursive is specified).\n- If -SkipFolder is used (and the path is a folder), calls Remove-ChildItems\n  to remove only the folder's contents, leaving the folder itself.\n\nSupports:\n - RemoveItem, DotNetDelete, RecycleBin\n - Retries\n - WhatIf/Confirm\n - Passthru (detailed objects)\n - SimpleReturn (boolean overall result)",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-FileItem -Paths \"C:\\SomeFolder\" -DeleteMethod RemoveItem -Recursive -WhatIf\r\nShows which items would be removed, but doesn't actually remove them,\r\nbecause -WhatIf is in effect."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Remove-FileItem -Paths \"C:\\SomeFolder\", \"C:\\SomeFile.txt\" -Passthru -DeleteMethod DotNetDelete\r\nRemoves both the folder (and everything in it) and the file, then returns details on each removal attempt."
+    }
+  ]
+}

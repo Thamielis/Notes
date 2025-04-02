@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Faster Where-Object",
+  "Description": "Where-ObjectFast can replace the built-in Where-Object and improves pipeline speed considerably.\nWhere-ObjectFast supports only the scriptblock version of Where-Object, so you can replace\n\nGet-Service | Where-Object { $_.Status -eq 'Running' }\n\nwith\n\nGet-Service | Where-ObjectFast { $_.Status -eq 'Running' }\n\nbut you cannot currently replace the short form of Where-Object:\n\nGet-Service | Where-Object Status -eq Running\n\nWhere-ObjectFast has a performance benefit per iteration, so the more objects\nyou send through the pipeline, the more significant performace benefits you will see.\n\nWhere-ObjectFast is using a steppable pipeline internally which performs better.\nHowever because of this, the debugging experience will be different, and internal\nvariables such as $MyInvocation may yield different results. For most every-day tasks,\nthese changes are not important.\n\nA complete explanation of what Where-ObjectFast does can be found here:\nhttps://powershell.one/tricks/performance/pipeline",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://powershell.one/tricks/performance/pipeline\nhttps://github.com/TobiasPSP/Modules.PSOneTools/blob/master/PSOneTools/1.2/Where-ObjectFast.ps1",
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$stopwatch = [System.Diagnostics.Stopwatch]::StartNew()\r\n$result = 1..1000000 | Where-ObjectFast -FilterScript {\r\n$_ % 5\r\n}\r\n\r\n$report = '{0} elements in {1:n2} seconds' \r\n$report -f $result.Count, $stopwatch.Elapsed.TotalSeconds\r\n\r\nDemos the speed improvements. Run this script to see how well it performs,\r\nthen replace Where-ObjectFast with the default Where-Object, and check out\r\nthe performace difference. $result is the same in both cases."
+    }
+  ]
+}

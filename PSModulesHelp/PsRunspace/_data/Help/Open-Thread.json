@@ -1,0 +1,33 @@
+{
+  "Synopsis": "Prepares each thread so it is ready to execute a command and capture the output streams",
+  "Description": "Used by Split-Thread\n\nFor each InputObject an instance will be created of [System.Management.Automation.PowerShell]\nThen a series of commands will be run to enable the specified output streams (all by default)",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": []
+}

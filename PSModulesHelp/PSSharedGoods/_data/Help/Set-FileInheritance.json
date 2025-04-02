@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Sets or removes inheritance for a specified directory.",
+  "Description": "This function allows you to set or remove inheritance for a specified directory. You can choose to disable inheritance and optionally keep the inherited ACL.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-FileInheritance -StartingDir \"C:\\Example\" -DisableInheritance\r\nDisables inheritance for the directory \"C:\\Example\"."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Set-FileInheritance -StartingDir \"D:\\Data\" -DisableInheritance -KeepInheritedAcl\r\nDisables inheritance for the directory \"D:\\Data\" and keeps the inherited ACL."
+    }
+  ]
+}

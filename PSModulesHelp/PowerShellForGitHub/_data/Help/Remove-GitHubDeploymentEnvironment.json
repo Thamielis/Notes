@@ -1,0 +1,59 @@
+{
+  "Synopsis": "Removes a deployment environment from a GitHub repository.",
+  "Description": "Removes a deployment environment from a GitHub repository.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Branch\nGitHub.Content\nGitHub.DeploymentEnvironment\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Reaction\nGitHub.Release\nGitHub.ReleaseAsset\nGitHub.Repository"
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-GitHubDeploymentEnvironment -OwnerName You -RepositoryName RepoName -EnvironmentName EnvToDelete"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Remove-GitHubDeploymentEnvironment -Uri https://github.com/You/YourRepo -EnvironmentName EnvToDelete"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Remove-GitHubDeploymentEnvironment -Uri https://github.com/You/YourRepo -EnvironmentName EnvToDelete -Confirm:$false\r\nRemove the deployment environment from the repository without prompting for confirmation."
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "Remove-GitHubDeploymentEnvironment -Uri https://github.com/You/YourRepo -EnvironmentName EnvToDelete -Force\r\nRemove the deployment environment from the repository without prompting for confirmation."
+    },
+    {
+      "Title": "EXAMPLE 5",
+      "Markdown": "",
+      "Code": "$repo = Get-GitHubRepository -Uri https://github.com/You/YourRepo\r\n$repo | Remove-GitHubDeploymentEnvironment -EnvironmentName EnvToDelete -Force\r\nYou can also pipe in a repo that was returned from a previous command."
+    }
+  ]
+}

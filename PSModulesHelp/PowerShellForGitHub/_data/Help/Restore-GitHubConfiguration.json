@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Sets the specified file to be the user's configuration file.",
+  "Description": "Sets the specified file to be the user's configuration file.\n\nThis is primarily used for unit testing scenarios.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Restore-GitHubConfiguration -Path 'c:\\foo\\config.json'\r\nMakes the contents of c:\\foo\\config.json be the user's configuration for the module."
+    }
+  ]
+}

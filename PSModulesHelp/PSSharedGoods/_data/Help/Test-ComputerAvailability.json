@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Tests the availability of specified servers using various methods.",
+  "Description": "This function tests the availability of specified servers by performing ping, WinRM, and port open tests. It provides detailed information about the availability status of each server.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Test-ComputerAvailability -Servers \"Server1\", \"Server2\" -Test Ping+WinRM\r\nTests the availability of Server1 and Server2 using both ping and WinRM methods."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Test-ComputerAvailability -Servers \"Server3\" -Test PortOpen -Ports 80,443 -PortsTimeout 200\r\nTests the availability of Server3 by checking if ports 80 and 443 are open within a timeout of 200 milliseconds."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Set a GitHub module configuration.",
+  "Description": "Set a GitHub module configuration.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-GitHubConfig -Name DefaultUser -Value 'Octocat'\r\nSets the value of DefaultUser to 'Octocat' in the GitHub module configuration."
+    }
+  ]
+}

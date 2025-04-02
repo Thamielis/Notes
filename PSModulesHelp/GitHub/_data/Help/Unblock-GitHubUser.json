@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Unblock a user",
+  "Description": "Unblocks the given user and returns true.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Unblock a user](https://docs.github.com/rest/users/blocking#unblock-a-user)\n[Unblock a user from an organization](https://docs.github.com/rest/orgs/blocking#unblock-a-user-from-an-organization)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Boolean"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Unblock-GitHubUser -Username 'octocat'\r\nUnblocks the user 'octocat' for the authenticated user.\r\nReturns $true if successful."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Unblock-GitHubUser -Organization 'GitHub' -Username 'octocat'\r\nUnblocks the user 'octocat' from the organization 'GitHub'.\r\nReturns $true if successful."
+    }
+  ]
+}

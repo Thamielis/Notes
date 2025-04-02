@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Allows for easy selecting property names from one or multiple objects",
+  "Description": "Allows for easy selecting property names from one or multiple objects. This is especially useful with using AllProperties parameter where we want to make sure to get all properties from all objects.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$Object1 = [PSCustomobject] @{\r\n    Name1 = '1'\r\n    Name2 = '3'\r\n    Name3 = '5'\r\n}\r\n$Object2 = [PSCustomobject] @{\r\n    Name4 = '2'\r\n    Name5 = '6'\r\n    Name6 = '7'\r\n}\r\nSelect-Properties -Objects $Object1, $Object2 -AllProperties\r\n\r\n#OR:\r\n\r\n$Object1, $Object2 | Select-Properties -AllProperties -ExcludeProperty Name6 -Property Name3"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$Object3 = [Ordered] @{\r\n    Name1 = '1'\r\n    Name2 = '3'\r\n    Name3 = '5'\r\n}\r\n$Object4 = [Ordered] @{\r\n    Name4 = '2'\r\n    Name5 = '6'\r\n    Name6 = '7'\r\n}\r\nSelect-Properties -Objects $Object3, $Object4 -AllProperties\r\n\r\n$Object3, $Object4 | Select-Properties -AllProperties"
+    }
+  ]
+}

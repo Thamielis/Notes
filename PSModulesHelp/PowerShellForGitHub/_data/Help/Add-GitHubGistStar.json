@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Star a gist from GitHub.",
+  "Description": "Star a gist from GitHub.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Gist\nGitHub.GistComment\nGitHub.GistCommit\nGitHub.GistFork\nGitHub.GistSummary"
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Add-GitHubGistStar -Gist 6cad326836d38bd3a7ae\r\nStars octocat's \"hello_world.rb\" gist."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Star-GitHubGist -Gist 6cad326836d38bd3a7ae\r\nStars octocat's \"hello_world.rb\" gist.  This is using the alias for the command.\r\nThe result is the same whether you use Add-GitHubGistStar or Star-GitHubGist."
+    }
+  ]
+}

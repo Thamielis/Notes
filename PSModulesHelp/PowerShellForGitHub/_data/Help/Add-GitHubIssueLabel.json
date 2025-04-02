@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Adds a label to an issue in the given GitHub repository.",
+  "Description": "Adds a label to an issue in the given GitHub repository.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This is implemented as a function rather than a filter because the ValueFromPipeline\nparameter (Name) is itself an array which we want to ensure is processed only a single time.\nThis API endpoint doesn't add labels to a repository, it replaces the existing labels with\nthe new set provided, so we need to make sure that we have all the requested labels available\nto us at the time that the API endpoint is called."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Branch\nGitHub.Content\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Reaction\nGitHub.Release\nGitHub.ReleaseAsset\nGitHub.Repository"
+  ],
+  "Outputs": [
+    "GitHub.Label"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Add-GitHubIssueLabel -OwnerName microsoft -RepositoryName PowerShellForGitHub -Issue 1 -Label $labels\r\nAdds labels to an issue in the PowerShellForGitHub project."
+    }
+  ]
+}

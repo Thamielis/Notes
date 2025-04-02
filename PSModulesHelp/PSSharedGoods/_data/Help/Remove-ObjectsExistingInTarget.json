@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Removes objects from the source list that exist in the target list based on specified properties.",
+  "Description": "This function compares two lists of objects and removes objects from the source list that have matching properties in the target list. It returns either the objects that do not exist in the target list or only the objects that exist in the target list based on the specified properties.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$sourceList = @(\r\n    [PSCustomObject]@{Id = 1; Name = \"A\"},\r\n    [PSCustomObject]@{Id = 2; Name = \"B\"},\r\n    [PSCustomObject]@{Id = 3; Name = \"C\"}\r\n)\r\n$targetList = @(\r\n    [PSCustomObject]@{Id = 2; Name = \"B\"},\r\n    [PSCustomObject]@{Id = 3; Name = \"C\"}\r\n)\r\n\r\nRemove-ObjectsExistingInTarget -ObjectSource $sourceList -ObjectTarget $targetList -ComparePropertySource \"Id\" -ComparePropertyTarget \"Id\"\r\n# Output: Id Name\r\n#        -- ----\r\n#         1 A"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$sourceList = @(\r\n    [PSCustomObject]@{Id = 1; Name = \"A\"},\r\n    [PSCustomObject]@{Id = 2; Name = \"B\"},\r\n    [PSCustomObject]@{Id = 3; Name = \"C\"}\r\n)\r\n$targetList = @(\r\n    [PSCustomObject]@{Id = 2; Name = \"B\"},\r\n    [PSCustomObject]@{Id = 3; Name = \"C\"}\r\n)\r\n\r\nRemove-ObjectsExistingInTarget -ObjectSource $sourceList -ObjectTarget $targetList -ComparePropertySource \"Id\" -ComparePropertyTarget \"Id\" -Reverse\r\n# Output: Id Name\r\n#        -- ----\r\n#         2 B\r\n#         3 C"
+    }
+  ]
+}

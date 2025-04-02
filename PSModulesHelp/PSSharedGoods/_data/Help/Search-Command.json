@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Searches for a specific command by name.",
+  "Description": "This function checks if a command with the specified name exists in the current session.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Search-Command -CommandName \"Get-Process\"\r\nReturns $true if the command \"Get-Process\" exists, otherwise $false."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Search-Command -CommandName \"UnknownCommand\"\r\nReturns $false as \"UnknownCommand\" does not exist as a command."
+    }
+  ]
+}

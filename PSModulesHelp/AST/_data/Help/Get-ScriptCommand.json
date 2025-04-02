@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Retrieves the commands used within a specified PowerShell script.",
+  "Description": "Analyzes a given PowerShell script and extracts all command invocations.\nOptionally includes call operators (& and .) in the results.\nReturns details such as command name, position, and file reference.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://psmodule.io/AST/Functions/Scripts/Get-ScriptCommand/"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-ScriptCommand -Path \"C:\\Scripts\\example.ps1\"\r\nExtracts and lists all commands found in the specified PowerShell script."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-ScriptCommand -Path \"C:\\Scripts\\example.ps1\" -IncludeCallOperators\r\nExtracts all commands, including those executed with call operators (& and .)."
+    }
+  ]
+}

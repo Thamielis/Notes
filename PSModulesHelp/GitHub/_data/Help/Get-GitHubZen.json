@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Get the Zen of GitHub.",
+  "Description": "Get a random sentence from the Zen of GitHub.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Get the Zen of GitHub](https://docs.github.com/rest/meta/meta#get-the-zen-of-github)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubZen\r\nGet a random sentence from the Zen of GitHub."
+    }
+  ]
+}

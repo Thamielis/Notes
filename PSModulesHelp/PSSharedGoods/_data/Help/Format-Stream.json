@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Formats input objects for display in a stream-oriented manner.",
+  "Description": "The Format-Stream function formats input objects for display in a stream-oriented manner. It provides flexibility in displaying data in various streams such as Output, Host, Warning, Verbose, Debug, and Information.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-Process | Format-Stream -Property Name, Id -Stream Host\r\nDisplays the Name and Id properties of the processes in the Host stream."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-Service | Format-Stream -ExcludeProperty Status -List\r\nDisplays all service properties except Status as a list."
+    }
+  ]
+}

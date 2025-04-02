@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieves data information based on specified criteria.",
+  "Description": "This function retrieves data information based on the specified criteria. It checks for required types, availability of commands, and executes content if provided.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-DataInformation -Content { Get-Process } -Text \"Gathering process information\" -TypesRequired @(\"System.Diagnostics.Process\") -TypesNeeded @(\"System.Diagnostics.Process\") -Commands @(\"Get-Process\")\r\nDescription:\r\nRetrieves process information using the Get-Process command."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-DataInformation -Content { Get-Service } -Text \"Gathering service information\" -TypesRequired @(\"System.ServiceProcess.ServiceController\") -TypesNeeded @(\"System.ServiceProcess.ServiceController\") -Commands @(\"Get-Service\")\r\nDescription:\r\nRetrieves service information using the Get-Service command."
+    }
+  ]
+}

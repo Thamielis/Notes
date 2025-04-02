@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieves various information about a computer or server based on specified types.",
+  "Description": "This function retrieves information about a computer or server based on the specified types. It can gather details about applications, BIOS, CPU, RAM, Disk, Logical Disk, Network, Network Firewall, Operating System, Services, System, Startup, Time, and Windows Updates.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-Computer -ComputerName \"Server01\" -Type \"CPU\", \"RAM\"\r\nRetrieves CPU and RAM information from a remote server named Server01."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-Computer -ComputerName \"Workstation01\" -Type \"Application\" -AsHashtable\r\nRetrieves application information from a workstation named Workstation01 and returns the output as a hashtable."
+    }
+  ]
+}

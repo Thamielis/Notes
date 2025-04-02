@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Retrieves TCP connection information from a specified computer.",
+  "Description": "The Get-ComputerPorts function retrieves information about TCP connections on a specified computer.\nIt can filter connections based on state, local address, remote address, applied setting, local port, and remote port.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This function requires administrative privileges to retrieve process information."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-ComputerPorts -ComputerName 'AD1' -LocalPort 389, 636, 88, 53, 3268, 3269, 445, 135 | Sort-Object RemotePort | Format-Table -AutoSize *\r\nRetrieves and displays TCP connection information from the computer 'AD1' for the specified local ports."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-ComputerPorts -ComputerName 'AD1' -State 'Established' | Sort-Object RemotePort | Format-Table -AutoSize *\r\nRetrieves and displays TCP connection information from the computer 'AD1' for connections in the 'Established' state."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-ComputerPorts -ComputerName 'AD1' | ft -AutoSize\r\nRetrieves and displays all TCP connection information from the computer 'AD1'."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "Synopsis": "Retrieve branches for a given GitHub repository.",
+  "Description": "Retrieve branches for a given GitHub repository.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Branch\nGitHub.Content\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Reaction\nGitHub.Release\nGitHub.ReleaseAsset\nGitHub.Repository"
+  ],
+  "Outputs": [
+    "GitHub.Branch\nList of branches within the given repository."
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubRepositoryBranch -OwnerName microsoft -RepositoryName PowerShellForGitHub\r\nGets all branches for the specified repository."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$repo = Get-GitHubRepository -OwnerName microsoft -RepositoryName PowerShellForGitHub\r\n$repo | Get-GitHubRepositoryBranch\r\nGets all branches for the specified repository."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-GitHubRepositoryBranch -Uri 'https://github.com/PowerShell/PowerShellForGitHub' -BranchName master\r\nGets information only on the master branch for the specified repository."
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "$repo = Get-GitHubRepository -OwnerName microsoft -RepositoryName PowerShellForGitHub\r\n$repo | Get-GitHubRepositoryBranch -BranchName master\r\nGets information only on the master branch for the specified repository."
+    },
+    {
+      "Title": "EXAMPLE 5",
+      "Markdown": "",
+      "Code": "$repo = Get-GitHubRepository -OwnerName microsoft -RepositoryName PowerShellForGitHub\r\n$branch = $repo | Get-GitHubRepositoryBranch -BranchName master\r\n$branch | Get-GitHubRepositoryBranch\r\nGets information only on the master branch for the specified repository, and then does it\r\nagain.  This tries to show some of the different types of objects you can pipe into this\r\nfunction."
+    }
+  ]
+}

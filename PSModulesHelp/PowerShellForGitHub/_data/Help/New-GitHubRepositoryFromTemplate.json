@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new repository on GitHub from a template repository.",
+  "Description": "Creates a new repository on GitHub from a template repository.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "The authenticated user must own or be a member of an organization that owns the repository.\n\nTo check if a repository is available to use as a template, call `Get-GitHubRepository` on the\nrepository in question and check that the is_template property is $true."
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Branch\nGitHub.Content\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Release\nGitHub.Repository"
+  ],
+  "Outputs": [
+    "GitHub.Repository"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-GitHubRepositoryFromTemplate -OwnerName MyOrg -RepositoryName MyTemplateRepo -TargetRepositoryName MyNewRepo -TargetOwnerName Me\r\nCreates a new GitHub repository from the specified template repository."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$repo = Get-GitHubRepository -OwnerName MyOrg -RepositoryName MyTemplateRepo\r\n$repo | New-GitHubRepositoryFromTemplate -TargetRepositoryName MyNewRepo -TargetOwnerName Me\r\nYou can also pipe in a repo that was returned from a previous command."
+    }
+  ]
+}
