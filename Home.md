@@ -13,7 +13,6 @@
 >
 >**Veeam**
 >>[Veeam](Links/Veeam.md)
->>
 >>[:bangbang: Backup Infra erstellen](<https://jorgedelacruz.uk/2020/03/09/veeam-how-to-design-and-implement-a-backup-system-based-on-sla-policies-part-i-design-architecture-and-tagging-in-vsphere>)
 >
 
@@ -23,18 +22,18 @@
 - [4. Wikies](#4-wikies)
 
 ##  1. Repos
-- [ReposWiki](<ReposWiki/ReposWiki.md>)
+- [<span style="color:yellow">ReposWiki</span>](<ReposWiki/ReposWiki.md>)
   > :memo: Alle GitHub Repositories
-- [MeineRepos](ReposWiki/Repositories.md)
-  > <span style="color:yellow">*Meine Repos*</span>
+- [<span style="color:yellow">Meine Repos</span>](ReposWiki/Repositories.md)
+  > <span style="color:cyan">*Meine Programmierungen*</span>
 
 ##  2. Links
 - [Links](<Links/LinksWiki.md>)
   > :memo: Links zu meinen Themen
 
 ##  3. ToDo
-  > [-] :memo: PSModulesHelp hinzufügen
-  > [-] :memo: KnowledgeBase hinzufügen
+  > - [ ] :memo: PSModulesHelp hinzufügen
+  > - [ ] :memo: KnowledgeBase hinzufügen
 
 ## 4. Wikies
   > - [Notes](https://github.com/thamielis/Notes)
