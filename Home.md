@@ -37,7 +37,8 @@
   > :memo: KnowledgeBase hinzufügen
 
 ## 4. Wikies
-  > - [PSMosulesDoku](https://thamielis.github.io/PSModulesDoku/)
+  > - [Notes](https://github.com/thamielis/Notes)
+  > - [PSModulesDoku](https://thamielis.github.io/PSModulesDoku/)
   > - [PSKnowledge](https://thamielis.github.io/PSKnowledge/ClassExplorer/gasm.html)
   > - [Mein Netlify Blog](<https://blog.in-pro.org>)
   > - [Thamielis Pages](<https://thamielis.github.io>)
