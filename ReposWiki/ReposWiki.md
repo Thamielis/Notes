@@ -1,7 +1,7 @@
 # Kategorien Übersicht
 
 - [Repositories](Repositories)
-- [PowerShell](PowerShell)
+- [PowerShell](PowerShell.md)
 - [Python](Python)
 - [Veeam](Veeam)
 - [MECM](MECM)
