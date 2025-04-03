@@ -5,7 +5,7 @@ NotesHub Notebook
 ```mermaid
 graph TD
 %% Adding a title to the flowchart using the SubGraph feature
-subgraph Title ["WHAT IS THE ROOT CAUSE OF THE PROBLEM? ____"]
+subgraph SGTitle ["WHAT IS THE ROOT CAUSE OF THE PROBLEM? ____"]
 
 %% Nodes
     0[Key Variable<br>Target: 100, Actual: 80]
