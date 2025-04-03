@@ -2,10 +2,8 @@
 
 - [Repositories](Repositories.md)
 - [PowerShell](PowerShell.md)
-- [dotNET](dotNET.md)
 - [Python](Python.md)
 - [Veeam](Veeam.md)
-- [Excel](Excel.md)
 - [MECM](MECM.md)
 - [Knowledge](Knowledge.md)
 - [Microsoft](Microsoft.md)
