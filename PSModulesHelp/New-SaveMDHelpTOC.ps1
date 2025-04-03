@@ -38,17 +38,17 @@ foreach ($dir in $dirs) {
     
     $markdown += @"
 <details>
-<summary> $(New-MDParagraph -Lines $($Description)) </summary>`n
+<summary> $(New-MDParagraph -Lines $($Description) -NoNewLine) </summary>`n`n
 "@
     
     foreach ($file in $filesInDir) {
-        $toc += "- [$($file.BaseName)]($($file.Directory.Name)/$($file.Name))`n"
+        $toc += "`t- [$($file.BaseName)]($($file.Directory.Name)/$($file.Name))`n"
         #$markdown += New-MDLink -Text $file.BaseName -Link $($RelativePath/$file.Name)
         
-        $markdown += "- [$($file.BaseName)](<$($RelativePath)/$($file.Name)>)`n"
+        $markdown += "`t- [$($file.BaseName)](<$($RelativePath)/$($file.Name)>)`n"
     }
     
-    $markdown += "</details>"
+    $markdown += "</details>`n`n"
 }
 
 $tocName = "ModuleDoku"
