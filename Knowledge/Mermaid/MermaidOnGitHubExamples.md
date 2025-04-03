@@ -665,7 +665,7 @@ This does not seem to be documented, see [https://github.com/mermaid-js/mermaid/
 gitGraph:
 options
 {
-    "nodeSpacing": 150,
+    "nodeSpacing": 150
     "nodeRadius": 10
 }
 end

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Create a custom XML for Multi-App Kiosk Mode in Microsoft Intune.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/*!
+  Theme: GitHub Dark
+  Description: Dark theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-dark
+  Current colors taken from GitHub's CSS
+*/
+
+.hljs {
+  color: #c9d1d9;
+  background: #0d1117;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: #ff7b72;
+}
+
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: #d2a8ff;
+}
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: #79c0ff;
+}
+
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: #a5d6ff;
+}
+
+.hljs-built_in,
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: #ffa657;
+}
+
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: #8b949e;
+}
+
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: #7ee787;
+}
+
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: #c9d1d9;
+}
+
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: #1f6feb;
+  font-weight: bold;
+}
+
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: #f2cc60;
+}
+
+.hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: #c9d1d9;
+  font-style: italic;
+}
+
+.hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: #c9d1d9;
+  font-weight: bold;
+}
+
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: #aff5b4;
+  background-color: #033a16;
+}
+
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: #ffdcd7;
+  background-color: #67060c;
+}
+
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+}
+
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+<link rel="stylesheet" href="file://term08/c%24/ProgramData/UniversalAutomation/Repository/KnowledgeBase/styles/github-markdown.css" type="text/css"><link rel="stylesheet" href="file://term08/c%24/ProgramData/UniversalAutomation/Repository/KnowledgeBase/styles/markdown.css" type="text/css">
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body class="vscode-body vscode-dark">
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+  <div class="github-markdown-body github-markdown-auto">
+    <div class="github-markdown-content">
+      <h1 id="create-a-custom-xml-for-multi-app-kiosk-mode-in-microsoft-intune">Create a custom XML for Multi-App Kiosk Mode in Microsoft Intune</h1>
+<!-- vscode-markdown-toc -->
+<ul>
+<li>
+<ol>
+<li><a href="#AssignedAccessConfiguration"><strong>Assigned Access Configuration</strong></a></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li><a href="#Profiles"><strong>Profiles</strong></a></li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li><a href="#AppsList"><strong>Apps List</strong></a></li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li><a href="#FileExplorerNamespaceRestrictions"><strong>File Explorer Namespace Restrictions</strong></a></li>
+</ol>
+</li>
+<li>
+<ol start="5">
+<li><a href="#Allowremovablemedia"><strong>Allow removable media</strong></a></li>
+</ol>
+</li>
+<li>
+<ol start="6">
+<li><a href="#StartLayout"><strong>Start Layout</strong></a></li>
+</ol>
+</li>
+<li>
+<ol start="7">
+<li><a href="#Taskbar"><strong>Taskbar</strong></a></li>
+</ol>
+</li>
+<li>
+<ol start="8">
+<li><a href="#Assignment"><strong>Assignment</strong></a></li>
+</ol>
+</li>
+<li>
+<ol start="9">
+<li><a href="#DefaultProfile"><strong>Default Profile</strong></a></li>
+</ol>
+</li>
+<li>
+<ol start="10">
+<li><a href="#Bringingitalltogether"><strong>Bringing it all together</strong></a></li>
+</ol>
+</li>
+<li>
+<ol start="11">
+<li><a href="#ConfigureinIntune"><strong>Configure in Intune</strong></a></li>
+</ol>
+</li>
+<li>
+<ol start="12">
+<li><a href="#AdditionalSupport"><strong>Additional Support</strong></a></li>
+</ol>
+</li>
+</ul>
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<h2 id="vscode-markdown-toc"><!-- /vscode-markdown-toc --></h2>
+<p>The following guide will assist with creating a custom XML for Multi-App Kiosk Mode in Microsoft Intune. A <a href="https://learn.microsoft.com/en-us/windows/configuration/kiosk-single-app">kiosk device</a> typically runs a single app, and users are prevented from accessing any features or functions on the device outside of the kiosk app. The <a href="https://learn.microsoft.com/en-us/windows/client-management/mdm/assignedaccess-csp">AssignedAccess configuration service provider (CSP)</a> was expanded to make it easy for admins to create kiosks that run more than one app.</p>
+<p>Microsoft Intune provides a configuration profile for admins to create Single App Kiosk Mode or Multi-App Kiosk Mode, however, some management options aren't available e.g. allow removable media.</p>
+<p><a href="https://learn.microsoft.com/en-us/mem/intune/configuration/kiosk-settings-windows">Kiosk settings for Windows 10/11 in Microsoft Intune | Microsoft Learn</a></p>
+<p>For this particular requirement, the Multi-App Kiosk mode device must allow removable storage for a particular task. The inbuilt configuration profile in Microsoft Intune does not support this particular option, so a custom XML file is required to add this setting.</p>
+<p>Now, Microsoft's documentation for Multi App Kiosk mode can be a little confusing, and it took me a while to figure out what schemas were required in the XML. So here is a breakdown of what will be required and what settings must be in the XML for this to work.</p>
+<h3 id="1-a-nameassignedaccessconfigurationaassigned-access-configuration">1. <a name='AssignedAccessConfiguration'></a><strong>Assigned Access Configuration</strong></h3>
+<p>An Assigned Access Configuration section is required where you reference the schemas required for your profile. So if you require e.g. Folder Access settings, you reference the schema that supports that particular setting.</p>
+<p><a href="https://learn.microsoft.com/en-us/windows/configuration/kiosk-xml?source=recommendations#folder-access-sample-xml">Assigned Access configuration kiosk XML reference (Windows 10/11) - Configure Windows | Microsoft Learn</a></p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="utf-8" ?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">AssignedAccessConfiguration</span>
+    <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://schemas.microsoft.com/AssignedAccess/2017/config"</span>
+    <span class="hljs-attr">xmlns:v2</span>=<span class="hljs-string">"http://schemas.microsoft.com/AssignedAccess/201810/config"</span>
+    <span class="hljs-attr">xmlns:v3</span>=<span class="hljs-string">"http://schemas.microsoft.com/AssignedAccess/2020/config"</span>
+&gt;</span>
+</div></code></pre>
+<p>Microsoft tend to update what you can do with the schemas depending on the version of Windows you are using, so from my perspective, to get the most out of the configurable options, upgrade your Windows device to the latest feature version if possible.</p>
+<h3 id="2-a-nameprofilesaprofiles">2. <a name='Profiles'></a><strong>Profiles</strong></h3>
+<p>Depending on your requirements, you can create multiple profiles in one XML and assign it to different groups of users. Each profile will require the settings noted in this document but to keep it simple, I'm writing this blog specific to one profile. If you require multiple profiles, you can use <a href="https://learn.microsoft.com/en-us/windows/configuration/kiosk-xml?source=recommendations#full-xml-sample">Microsoft's guide for formatting examples</a></p>
+<p>Each profile must have a unique profile GUID. You can use a <a href="https://guidgenerator.com/online-guid-generator.aspx">GUID generator</a> to generate GUIDs for your profile.</p>
+<p><strong>Note:</strong> Any time the XML is updated in Microsoft Intune, a new GUID is required for each profile where the settings have been adjusted.</p>
+<pre class="hljs"><code><div>    <span class="hljs-tag">&lt;<span class="hljs-name">Profiles</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Profile</span> <span class="hljs-attr">Id</span>=<span class="hljs-string">"{75076b41-9f9m-4b8r-accb-75kc6bce20a6}"</span>&gt;</span>
+</div></code></pre>
+<h3 id="3-a-nameappslistaapps-list">3. <a name='AppsList'></a><strong>Apps List</strong></h3>
+<p>Next you will create a list of approved apps that are allowed to be used on the device. Applications can be either Win32 apps or UWP apps. For UWP apps, you must provide the App User Model ID (AUMID), for Win32 apps, the full path of the executable file must be given in your allowed apps list.</p>
+<p>To find the AUMID of an application you can use:</p>
+<pre class="hljs"><code><div> <span class="hljs-built_in">Get-StartApps</span>
+</div></code></pre>
+<p>Or use Windows Explorer. Microsoft provide some information on how to do this: <a href="https://learn.microsoft.com/en-us/windows/configuration/find-the-application-user-model-id-of-an-installed-app">Find the Application User Model ID of an installed app - Configure Windows | Microsoft Learn</a></p>
+<p>Once you have your application list, you must then add this to your XML. For my example, we will use Quick Assist, Explorer and Edge.</p>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">Profiles</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Profile</span> <span class="hljs-attr">Id</span>=<span class="hljs-string">"{75076b41-9f9m-4b8r-accb-75kc6bce20a6}"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">AllAppsList</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">AllowedApps</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">App</span> <span class="hljs-attr">DesktopAppPath</span>=<span class="hljs-string">"%windir%\explorer.exe"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">App</span> <span class="hljs-attr">AppUserModelId</span>=<span class="hljs-string">"MicrosoftCorporationII.QuickAssist_8wekyb3d8bbwe!App"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">App</span> <span class="hljs-attr">DesktopAppPath</span>=<span class="hljs-string">"C:\Program Files\WindowsApps\MicrosoftCorporationII.QuickAssist_2.0.6.0_x64__8wekyb3d8bbwe\QuickAssist.exe"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">App</span> <span class="hljs-attr">DesktopAppPath</span>=<span class="hljs-string">"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">App</span> <span class="hljs-attr">DesktopAppPath</span>=<span class="hljs-string">"C:\Program Files (x86)\Microsoft\EdgeWebView\Application\106.0.1370.52\msedgewebview2.exe"</span> /&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">AllowedApps</span>&gt;</span>
+</div></code></pre>
+<p><strong>Note:</strong> any application dependencies must also be added to the application list, for example, Quick Assist relies on Edge WebView.</p>
+<p><strong>Note:</strong> i've included Quick Assist twice in my example because i can't remember which one worked during testing.</p>
+<h3 id="4-a-namefileexplorernamespacerestrictionsafile-explorer-namespace-restrictions">4. <a name='FileExplorerNamespaceRestrictions'></a><strong>File Explorer Namespace Restrictions</strong></h3>
+<p>For this particularly requirement, we wanted to allow access to the Downloads folder on the Kiosk device.</p>
+<pre class="hljs"><code><div>            <span class="hljs-tag">&lt;<span class="hljs-name">v2:FileExplorerNamespaceRestrictions</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">v2:AllowedNamespace</span> <span class="hljs-attr">Name</span>=<span class="hljs-string">"Downloads"</span>/&gt;</span>
+</div></code></pre>
+<h3 id="5-a-nameallowremovablemediaaallow-removable-media">5. <a name='Allowremovablemedia'></a><strong>Allow removable media</strong></h3>
+<p>Again, for this particular requirement, we wanted to allow removal media on the Kiosk device.</p>
+<pre class="hljs"><code><div>                <span class="hljs-tag">&lt;<span class="hljs-name">v3:AllowRemovableDrives</span>/&gt;</span>
+</div></code></pre>
+<h3 id="6-a-namestartlayoutastart-layout">6. <a name='StartLayout'></a><strong>Start Layout</strong></h3>
+<p>A Start Layout is a required parameter in the XML. You can create your own layout by running:</p>
+<pre class="hljs"><code><div><span class="hljs-built_in">Export-StartLayout</span> <span class="hljs-literal">-UseDesktopApplicationID</span> <span class="hljs-literal">-Path</span> layout.xml
+</div></code></pre>
+<p>Then paste the code into the XML. My full example will show you the correct format further down.</p>
+<h3 id="7-a-nametaskbarataskbar">7. <a name='Taskbar'></a><strong>Taskbar</strong></h3>
+<p>Allow or deny access to the task bar. For this particular requirement we allowed it.</p>
+<pre class="hljs"><code><div>            <span class="hljs-tag">&lt;<span class="hljs-name">Taskbar</span> <span class="hljs-attr">ShowTaskbar</span>=<span class="hljs-string">"true"</span>/&gt;</span>
+</div></code></pre>
+<h3 id="8-a-nameassignmentaassignment">8. <a name='Assignment'></a><strong>Assignment</strong></h3>
+<p>Each profile you create can be assigned to local users, domain users or an Azure AD Group. For my example, we wanted the profile assigning to a specific group of users in Azure AD as this was an Azure AD Joined device.</p>
+<pre class="hljs"><code><div>    <span class="hljs-tag">&lt;<span class="hljs-name">Configs</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Config</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UserGroup</span> <span class="hljs-attr">Type</span>=<span class="hljs-string">"AzureActiveDirectoryGroup"</span> <span class="hljs-attr">Name</span>=<span class="hljs-string">"b823d189-65b2-42bc-8275-ceg28c53a28d"</span> /&gt;</span>
+</div></code></pre>
+<p>The Name reference is the Object ID for the group in Azure AD.</p>
+<h3 id="9-a-namedefaultprofileadefault-profile">9. <a name='DefaultProfile'></a><strong>Default Profile</strong></h3>
+<p>The default profile is the profile ID you are assigning your group to. This must match your profile GUID you created at the start.</p>
+<pre class="hljs"><code><div>            <span class="hljs-tag">&lt;<span class="hljs-name">DefaultProfile</span> <span class="hljs-attr">Id</span>=<span class="hljs-string">"{75076b41-9f9m-4b8r-accb-75kc6bce20a6}"</span>/&gt;</span>
+</div></code></pre>
+<h3 id="10-a-namebringingitalltogetherabringing-it-all-together">10. <a name='Bringingitalltogether'></a><strong>Bringing it all together</strong></h3>
+<p>The following XML can be used as a reference based on the information I've provided in this blog post:</p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?xml version="1.0" encoding="utf-8" ?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">AssignedAccessConfiguration</span>
+    <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://schemas.microsoft.com/AssignedAccess/2017/config"</span>
+    <span class="hljs-attr">xmlns:v2</span>=<span class="hljs-string">"http://schemas.microsoft.com/AssignedAccess/201810/config"</span>
+    <span class="hljs-attr">xmlns:v3</span>=<span class="hljs-string">"http://schemas.microsoft.com/AssignedAccess/2020/config"</span>
+&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Profiles</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Profile</span> <span class="hljs-attr">Id</span>=<span class="hljs-string">"{75076b41-9f9m-4b8r-accb-75kc6bce20a6}"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">AllAppsList</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">AllowedApps</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">App</span> <span class="hljs-attr">DesktopAppPath</span>=<span class="hljs-string">"%windir%\explorer.exe"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">App</span> <span class="hljs-attr">AppUserModelId</span>=<span class="hljs-string">"MicrosoftCorporationII.QuickAssist_8wekyb3d8bbwe!App"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">App</span> <span class="hljs-attr">DesktopAppPath</span>=<span class="hljs-string">"C:\Program Files\WindowsApps\MicrosoftCorporationII.QuickAssist_2.0.6.0_x64__8wekyb3d8bbwe\QuickAssist.exe"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">App</span> <span class="hljs-attr">DesktopAppPath</span>=<span class="hljs-string">"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">App</span> <span class="hljs-attr">DesktopAppPath</span>=<span class="hljs-string">"C:\Program Files (x86)\Microsoft\EdgeWebView\Application\106.0.1370.52\msedgewebview2.exe"</span> /&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">AllowedApps</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">AllAppsList</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">v2:FileExplorerNamespaceRestrictions</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">v2:AllowedNamespace</span> <span class="hljs-attr">Name</span>=<span class="hljs-string">"Downloads"</span>/&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">v3:AllowRemovableDrives</span>/&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">v2:FileExplorerNamespaceRestrictions</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">StartLayout</span>&gt;</span>
+                &lt;![CDATA[&lt;LayoutModificationTemplate xmlns:defaultlayout="http://schemas.microsoft.com/Start/2014/FullDefaultLayout" xmlns:start="http://schemas.microsoft.com/Start/2014/StartLayout" Version="1" xmlns="http://schemas.microsoft.com/Start/2014/LayoutModification"&gt;
+                      &lt;LayoutOptions StartTileGroupCellWidth="6" /&gt;
+                      &lt;DefaultLayoutOverride&gt;
+                        &lt;StartLayoutCollection&gt;
+                          &lt;defaultlayout:StartLayout GroupCellWidth="6"&gt;
+                            &lt;start:Group Name="Applications"&gt;
+                              &lt;start:DesktopApplicationTile Size="2x2" Column="4" Row="0" DesktopApplicationID="Microsoft.Windows.Explorer" /&gt;
+                              &lt;start:DesktopApplicationTile Size="2x2" Column="2" Row="0" DesktopApplicationID="MSEdge" /&gt;
+                            &lt;/start:Group&gt;
+                            &lt;start:Group Name="Support"&gt;
+                                &lt;start:Tile Size="2x2" Column="0" Row="0" AppUserModelID="MicrosoftCorporationII.QuickAssist_8wekyb3d8bbwe!App" /&gt;
+                            &lt;/start:Group&gt;
+                          &lt;/defaultlayout:StartLayout&gt;
+                        &lt;/StartLayoutCollection&gt;
+                      &lt;/DefaultLayoutOverride&gt;
+                    &lt;/LayoutModificationTemplate&gt;
+                ]]&gt;
+            <span class="hljs-tag">&lt;/<span class="hljs-name">StartLayout</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Taskbar</span> <span class="hljs-attr">ShowTaskbar</span>=<span class="hljs-string">"true"</span>/&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">Profile</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Profiles</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Configs</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Config</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">UserGroup</span> <span class="hljs-attr">Type</span>=<span class="hljs-string">"AzureActiveDirectoryGroup"</span> <span class="hljs-attr">Name</span>=<span class="hljs-string">"b823d189-65b2-42bc-8275-ceg28c53a28d"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">DefaultProfile</span> <span class="hljs-attr">Id</span>=<span class="hljs-string">"{75076b41-9f9m-4b8r-accb-75kc6bce20a6}"</span>/&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">Config</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Configs</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">AssignedAccessConfiguration</span>&gt;</span>
+</div></code></pre>
+<h3 id="11-a-nameconfigureinintuneaconfigure-in-intune">11. <a name='ConfigureinIntune'></a><strong>Configure in Intune</strong></h3>
+<p>To deploy the XML, we need to create a <a href="https://learn.microsoft.com/en-us/mem/intune/configuration/custom-settings-windows-10">custom configuration profile</a>.</p>
+<p>The OMA-URI for Multi-App Kiosk Mode policy is: ./Device/Vendor/MSFT/AssignedAccess/Configuration</p>
+<p>Value: String (XML file)</p>
+<p>Paste your XML file into the profile.</p>
+<h3 id="12-a-nameadditionalsupportaadditional-support">12. <a name='AdditionalSupport'></a><strong>Additional Support</strong></h3>
+<p>Whilst figuring this all out, i noted an Event ID error i received on a test device.</p>
+<p>![[images/c48429_d1c62d9f36ec44bf89a7eb2154f3f7b5~mv2.jpg]]</p>
+<p>This was because i was missing required schema information under Access Configuration and left Start Layout information blank in the XML.</p>
+
+    </div>
+  </div>
+</body>
+</html>

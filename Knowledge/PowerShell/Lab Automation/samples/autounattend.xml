@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unattend xmlns="urn:schemas-microsoft-com:unattend">
+	<settings pass="windowsPE">
+		<component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-International-Core-WinPE" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+			<SetupUILanguage>
+				<UILanguage>en-US</UILanguage>
+			</SetupUILanguage>
+			<InputLocale>en-US</InputLocale>
+			<SystemLocale>en-US</SystemLocale>
+			<UILanguage>en-US</UILanguage>
+			<UserLocale>en-US</UserLocale>
+		</component>
+		<component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+			<ImageInstall>
+				<OSImage>
+					<InstallFrom>
+						<MetaData wcm:action="add">
+							<Key>/IMAGE/NAME</Key>
+							<Value>Windows Server 2016 SERVERDATACENTER</Value>
+						</MetaData>
+					</InstallFrom>
+					<InstallTo>
+						<DiskID>0</DiskID>
+						<PartitionID>4</PartitionID>
+					</InstallTo>
+				</OSImage>
+			</ImageInstall>
+			<UserData>
+				<ProductKey>
+					<Key>
+						<!--REPLACE WITH PRODUCTKEY-->
+					</Key>
+					<WillShowUI>Never</WillShowUI>
+				</ProductKey>
+				<AcceptEula>true</AcceptEula>
+			</UserData>
+			<DiskConfiguration>
+				<WillShowUI>OnError</WillShowUI>
+				<Disk wcm:action="add">
+					<DiskID>0</DiskID>
+					<WillWipeDisk>true</WillWipeDisk>
+					<CreatePartitions>
+						<CreatePartition wcm:action="add">
+							<Order>1</Order>
+							<Size>500</Size>
+							<Type>Primary</Type>
+						</CreatePartition>
+						<CreatePartition wcm:action="add">
+							<Order>2</Order>
+							<Size>100</Size>
+							<Type>EFI</Type>
+						</CreatePartition>
+						<CreatePartition wcm:action="add">
+							<Order>3</Order>
+							<Size>16</Size>
+							<Type>MSR</Type>
+						</CreatePartition>
+						<CreatePartition wcm:action="add">
+							<Order>4</Order>
+							<Extend>true</Extend>
+							<Type>Primary</Type>
+						</CreatePartition>
+					</CreatePartitions>
+					<ModifyPartitions>
+						<ModifyPartition wcm:action="add">
+							<Order>1</Order>
+							<PartitionID>1</PartitionID>
+							<Label>WinRE</Label>
+							<Format>NTFS</Format>
+							<TypeID>de94bba4-06d1-4d40-a16a-bfd50179d6ac</TypeID>
+						</ModifyPartition>
+						<ModifyPartition wcm:action="add">
+							<Order>2</Order>
+							<PartitionID>2</PartitionID>
+							<Label>System</Label>
+							<Format>FAT32</Format>
+						</ModifyPartition>
+						<ModifyPartition wcm:action="add">
+							<Order>3</Order>
+							<PartitionID>3</PartitionID>
+						</ModifyPartition>
+						<ModifyPartition wcm:action="add">
+							<Order>4</Order>
+							<PartitionID>4</PartitionID>
+							<Label>Windows</Label>
+							<Format>NTFS</Format>
+						</ModifyPartition>
+					</ModifyPartitions>
+				</Disk>
+			</DiskConfiguration>
+		</component>
+	</settings>
+	<settings pass="offlineServicing">
+		<component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+			<ComputerName>
+				<!--REPLACE WITH MACHINENAME-->
+			</ComputerName>
+		</component>
+	</settings>
+	<settings pass="specialize">
+		<component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-TCPIP" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+			<Interfaces>
+				<Interface wcm:action="add">
+					<Ipv4Settings>
+						<DhcpEnabled>false</DhcpEnabled>
+					</Ipv4Settings>
+					<Ipv6Settings>
+						<DhcpEnabled>false</DhcpEnabled>
+					</Ipv6Settings>
+					<Identifier>Ethernet0</Identifier>
+					<UnicastIpAddresses>
+						<IpAddress wcm:action="add" wcm:keyValue="1">
+							<!--REPLACE WITH IPCIDR-->
+						</IpAddress>
+					</UnicastIpAddresses>
+					<Routes>
+						<Route wcm:action="add">
+							<Identifier>1</Identifier>
+							<Prefix>0.0.0.0/0</Prefix>
+							<NextHopAddress>
+								<!--REPLACE WITH GATEWAY-->
+							</NextHopAddress>
+						</Route>
+					</Routes>
+				</Interface>
+			</Interfaces>
+		</component>
+		<component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State Jump " xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance Jump " name="Microsoft-Windows-DNS-Client" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+			<DNSDomain>
+				<!--REPLACE WITH CHILD DOMAIN-->
+			</DNSDomain>
+			<DNSSuffixSearchOrder>
+				<DomainName wcm:action="add" wcm:keyValue="1">
+					<!--REPLACE WITH CHILD DOMAIN-->
+				</DomainName>
+				<DomainName wcm:action="add" wcm:keyValue="2">
+					<!--REPLACE WITH ROOT DOMAIN-->
+				</DomainName>
+			</DNSSuffixSearchOrder>
+			<UseDomainNameDevolution>true</UseDomainNameDevolution>
+		</component>
+		<component name="Networking-MPSSVC-Svc" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			<DomainProfile_EnableFirewall>false</DomainProfile_EnableFirewall>
+			<PrivateProfile_EnableFirewall>false</PrivateProfile_EnableFirewall>
+			<PublicProfile_EnableFirewall>false</PublicProfile_EnableFirewall>
+		</component>
+		<component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-Deployment" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+			<RunSynchronous>
+				<RunSynchronousCommand wcm:action="add">
+					<Path>D:\Software\setup64.exe /s /v"/qn REBOOT=R"</Path>
+					<Order>1</Order>
+				</RunSynchronousCommand>
+			</RunSynchronous>
+		</component>
+	</settings>
+	<settings pass="oobeSystem">
+		<component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+			<UserAccounts>
+				<AdministratorPassword>
+					<Value>
+						<!--REPLACE WITH ADMINISTRATOR PASSWORD-->
+					</Value>
+					<PlainText>true</PlainText>
+				</AdministratorPassword>
+			</UserAccounts>
+			<FirstLogonCommands>
+				<SynchronousCommand wcm:action="add">
+					<Order>1</Order>
+					<CommandLine>REG ADD &quot;HKLM\System\CurrentControlSet\Control\Network\NewNetworkWindowOff&quot; /F</CommandLine>
+					<Description>No New Network Block</Description>
+					<RequiresUserInput>true</RequiresUserInput>
+				</SynchronousCommand>
+			</FirstLogonCommands>
+		</component>
+	</settings>
+	<cpi:offlineImage xmlns:cpi="urn:schemas-microsoft-com:cpi" cpi:source="wim:c:/temp/2016/sources/install.wim#Windows Server 2016 SERVERDATACENTER"/>
+</unattend>

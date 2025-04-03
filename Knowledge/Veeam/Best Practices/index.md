@@ -1,0 +1,80 @@
+# Veeam Backup & Replication Best Practices
+
+- English
+  - [Welcome](<English/Welcome.md>)
+  - [1. Assess](<English/Assess.md>)
+    - [1.1. Data gathering](<English/Data gathering.md>)
+    - [1.2. SLA definition](<English/SLA definition.md>)
+    - [1.3. Physical System Data gathering](<English/Physical System Data Gathering.md>)
+    - [1.4. Infrastructure overview](<English/Infrastructure overview.md>)
+  - [2. Design](<English/Design.md>)
+    - [2.1. Backup server](<English/Backup server.md>)
+    - [2.2. VBR Database](<English/VBR Database.md>)
+    - [2.3. Proxy Design](<English/Proxy Design.md>)
+      - [2.3.1. vSphere Proxy](<English/vSphere Proxy.md>)
+      - [2.3.2. Hyper-V Proxy]
+      - [2.3.3. File Backup Proxy](<English/File Backup Proxy.md>)
+    - [2.4. Repository Design](<English/Repository Design.md>)
+      - [2.4.1. Scale-Out Repos](<English/Scale-Out Repos.md>)
+      - [2.4.2. Repository Storage](<English/Repository Storage.md>)
+      - [2.4.3. NAS Backup Repository](<English/NAS Backup Repository.md>)
+      - [2.4.4. NAS Cache Repository](<English/NAS cache repository.md>)
+      - [2.4.5. Block Storage (DAS/SAN)](<English/Block Storage (DASSAN).md>)
+      - [2.4.6. Data Domain](<English/Data Domain.md>)
+      - [2.4.7. Dedup Appliances](<English/Dedup Appliances.md>)
+      - [2.4.8. Exagrid](English/Exagrid.md)
+      - [2.4.9. StoreOnce](English/StoreOnce.md)
+      - [2.4.10. Gateway Server](<English/Gateway Server.md>)
+      - [2.4.11. Object Repository](<English/Object Repository.md>)
+      - [2.4.12. Veeam Ready](<English/Veeam Ready.md>)
+  - [4. Operate](<English/Operate.md>)
+    - [4.1. Backup jobs](<English/Backup jobs.md>)
+      - [4.1.1. Backup job general](<English/Backup job general.md>)
+      - [4.1.2. Backup job methods](<English/Backup job methods.md>)
+      - [4.1.3. Backup job storage](<English/Backup job storage.md>)
+      - [4.1.4. Guest processing](<English/Guest processing.md>)
+      - [4.1.5. Backup job automation](<English/Backup job automation.md>)
+    - [4.7. Tape Operations](<English/Tape Operations.md>)
+
+---
+
+- Deutsch
+  - [Willkommen](<Deutsch/Willkommen.md>)
+  - [1. Bewertung](<Deutsch/Bewertung.md>)
+    - [1.1. Datenerfassung](<Deutsch/Datenerfassung.md>)
+    - [1.2. SLA Definition](<Deutsch/SLA-Definition.md>)
+    - [1.3. Datenerfassung physischer Systeme](<Deutsch/Datenerfassung-physischer-Systeme.md>)
+    - [1.4. Infrastrukturübersicht](<Deutsch/Infrastrukturübersicht.md>)
+  - [2. Design](<Deutsch/Design_de.md>)
+    - [2.1. Backup Server](<Deutsch/Backup-Server.md>)
+    - [2.2. VBR Datenbank](<Deutsch/VBR-Datenbank.md>)
+    - [2.3. Proxy Design](<Deutsch/Proxy-Design.md>)
+      - [2.3.1. vSphere Proxy](<Deutsch/vSphere-Proxy.md>)
+      - [2.3.2. Hyper-V Proxy]
+      - [2.3.3. File Backup Proxy](<Deutsch/Datei-Backup-Proxy.md>)
+    - [2.4. Repository Design](<Deutsch/Repository-Design.md>)
+      - [2.4.1. Scale-Out Repos]
+      - [2.4.2. Repository Storage](<Deutsch/Repository-Speicher.md>)
+      - [2.4.3. NAS Backup Repository]
+      - [2.4.4. NAS Cache Repository]
+      - [2.4.5. Block Storage (DAS/SAN)]
+      - [2.4.6. Data Domain]
+      - [2.4.7. Dedup Appliances]
+      - [2.4.8. Exagrid]
+      - [2.4.9. StoreOnce]
+      - [2.4.10. Gateway Server](<Deutsch/Gateway-Server.md>)
+      - [2.4.11. Object Repository]
+      - [2.4.12. Veeam Ready]
+  - [4. Betrieb](<Deutsch/Betrieb.md>)
+    - [4.1. Backup Jobs](<Deutsch/Backup-Jobs.md>)
+      - [4.1.1. Backup Job Allgemein](<Deutsch/Backup-Job-Allgemein.md>)
+      - [4.1.2. Backup Job Methoden](<Deutsch/Backup-Job-Methoden.md>)
+      - [4.1.3. Backup Job Storage](<Deutsch/Backup-Job-Storage.md>)
+      - [4.1.4. Guest processing]()
+      - [4.1.5. Backup Job Automatisierung](<Deutsch/Backup-Job-Automatisierung.md>)
+    - [4.7. Tape Operations]
+  - [6. Ergänzungen]
+    - [6.1. VMware vSphere]
+      - [6.1.1. VMware Backups](<Deutsch/VMware Backups.md>)
+      - [6.1.3. Interaktion mit vSphere](<Deutsch/Interaction with vSphere.md>)
+      - [6.1.6. VM Wiederhersellung](<Deutsch/VirtualMachine Restore.md>)
