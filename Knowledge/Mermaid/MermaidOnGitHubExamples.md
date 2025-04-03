@@ -33,6 +33,7 @@
   - [User Journey Diagram](#user-journey-diagram)
   - [Pie Chart Diagram](#pie-chart-diagram)
   - [Requirement diagram](#requirement-diagram)
+  - [Architecture](#architecture)
   - [GitGraph](#gitgraph)
 
 All of these diagrams are dynamically rendered during html display by Github, the images generated from text inside the Github-Flavored Markdown. None are static images. Mermaid support was released for Github on [2022-02-14](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/)
@@ -530,6 +531,49 @@ stateDiagram-v2
         note left of State2 : This is the note to the left.
 ```
 
+```mermaid
+   stateDiagram
+   direction TB
+
+   accTitle: This is the accessible title
+   accDescr: This is an accessible description
+
+   classDef notMoving fill:white
+   classDef movement font-style:italic
+   classDef badBadEvent fill:#f00,color:white,font-weight:bold,stroke-width:2px,stroke:yellow
+
+   [*]--> Still
+   Still --> [*]
+   Still --> Moving
+   Moving --> Still
+   Moving --> Crash
+   Crash --> [*]
+
+   class Still notMoving
+   class Moving, Crash movement
+   class Crash badBadEvent
+   class end badBadEvent
+```
+
+```mermaid
+stateDiagram-v2
+    [*] --> Active
+
+    state Active {
+        [*] --> NumLockOff
+        NumLockOff --> NumLockOn : EvNumLockPressed
+        NumLockOn --> NumLockOff : EvNumLockPressed
+        --
+        [*] --> CapsLockOff
+        CapsLockOff --> CapsLockOn : EvCapsLockPressed
+        CapsLockOn --> CapsLockOff : EvCapsLockPressed
+        --
+        [*] --> ScrollLockOff
+        ScrollLockOff --> ScrollLockOn : EvScrollLockPressed
+        ScrollLockOn --> ScrollLockOff : EvScrollLockPressed
+    }
+```
+
 ## Shipment Status
 ```mermaid
 stateDiagram-v2 
@@ -655,6 +699,35 @@ requirementDiagram
     }
 
     test_entity - satisfies -> test_req
+```
+
+## Architecture
+```mermaid
+architecture-beta
+    group api(logos:aws-lambda)[API]
+
+    service db(logos:aws-aurora)[Database] in api
+    service disk1(logos:aws-glacier)[Storage] in api
+    service disk2(logos:aws-s3)[Storage] in api
+    service server(logos:aws-ec2)[Server] in api
+
+    db:L -- R:server
+    disk1:T -- B:server
+    disk2:T -- B:db
+```
+
+```mermaid
+architecture-beta
+    group api(cloud)[API]
+
+    service db(database)[Database] in api
+    service disk1(disk)[Storage] in api
+    service disk2(disk)[Storage] in api
+    service server(server)[Server] in api
+
+    db:L -- R:server
+    disk1:T -- B:server
+    disk2:T -- B:db
 ```
 
 ## GitGraph 

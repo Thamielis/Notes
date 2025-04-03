@@ -12,9 +12,11 @@
 
 ## 2. Knowledge
 - [<span style="color:green">Knowledge</span>](<Knowledge/Knowledge.md>)
-    - [<span style="color:cyan">PowerShell</span>](<Knowledge/PowerShell/PowerShell.md>)
-    - [<span style="color:cyan">Mermaid</span>](<Knowledge/Mermaid/Mermaid.md>)
-      - [<span style="color:cyan">Examples</span>](<Knowledge/Mermaid/MermaidOnGitHubExamples.md>)
+  - [ML](<Knowledge/ML/ML.md>)
+    - [<span style="color:green">Build KnowledgeBase</span>](<Knowledge/ML/How I Turned My Companys Docs into a Searchable Database with OpenAI.md>)
+  - [<span style="color:cyan">PowerShell</span>](<Knowledge/PowerShell/PowerShell.md>)
+  - [<span style="color:cyan">Mermaid</span>](<Knowledge/Mermaid/Mermaid.md>)
+    - [<span style="color:cyan">Examples</span>](<Knowledge/Mermaid/MermaidOnGitHubExamples.md>)
 
 ##  2. Links
 - [<span style="color:magenta">Links</span>](<Links/LinksWiki.md>): Links zu meinen Themen
