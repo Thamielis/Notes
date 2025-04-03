@@ -19,22 +19,22 @@
   - [<span style="color:cyan">Mermaid</span>](<Knowledge/Mermaid/Mermaid.md>)
     - [<span style="color:cyan">Examples</span>](<Knowledge/Mermaid/MermaidOnGitHubExamples.md>)
 
-##  2. Links
+##  3. Links
 - [<span style="color:magenta">Links</span>](<Links/LinksWiki.md>): Links zu meinen Themen
 - [<span style="color:cyan">PSModulesHelp</span>](<PSModulesHelp/ModuleDoku.md>): :information_source: Help für PowerShell Module
 
-##  3. ToDo
+##  4. ToDo
   > - [ ] :memo: PSModulesHelp hinzufügen
   > - [ ] :memo: KnowledgeBase hinzufügen
 
-## 4. Wikies
+## 5. Wikies
   > - [Notes](https://github.com/thamielis/Notes)
   > - [PSModulesDoku](https://thamielis.github.io/PSModulesDoku/)
   > - [PSKnowledge](https://thamielis.github.io/PSKnowledge/ClassExplorer/gasm.html)
   > - [Mein Netlify Blog](<https://blog.in-pro.org>)
   > - [Thamielis Pages](<https://thamielis.github.io>)
 
-## 5. Wichtig
+## 6. Wichtig
 >[!warning]
 >***PowerShell***
 >[PowerShell](Links/PowerShell%20Links.md)
