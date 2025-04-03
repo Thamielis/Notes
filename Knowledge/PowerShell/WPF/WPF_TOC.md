@@ -1,3 +1,0 @@
-# Inhaltsverzeichnis für PowerShell\WPF
-
-
