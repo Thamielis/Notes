@@ -1,31 +1,41 @@
+<details>
+<summary>Inhaltsverzeichnis</summary>
 
-- [1. Repos](#1-repos)
-- [2. Knowledge](#2-knowledge)
-- [2. Links](#2-links)
-- [3. ToDo](#3-todo)
-- [4. Wikies](#4-wikies)
-- [5. Wichtig](#5-wichtig)
+- [1. ToDo](#1-todo)
+  - [1.1. RepoOverview](#11-repooverview)
+  - [1.2. Notes Repo](#12-notes-repo)
+- [2. Repos](#2-repos)
+- [3. Knowledge](#3-knowledge)
+- [4. Links](#4-links)
+- [5. Wikies](#5-wikies)
+- [6. Wichtig](#6-wichtig)
 
-##  1. Repos
+</details>
+
+##  1. ToDo
+### 1.1. RepoOverview
+  > - [ ] :bangbang: Anzahl der Files per Repo hinzufügen
+  > - [ ] :bangbang: Branches und Unterschiede hinzufügen
+### 1.2. Notes Repo
+  > - [ ] :memo: PSModulesHelp hinzufügen
+  > - [ ] :memo: KnowledgeBase hinzufügen
+
+##  2. Repos
 - [<span style="color:yellow">ReposWiki</span>](<ReposWiki/ReposWiki.md>): Alle GitHub Repositories
 - [<span style="color:yellow">Meine Repos</span>](ReposWiki/Repositories.md): <span style="color:cyan">*Meine Programmierungen*</span>
 
-## 2. Knowledge
+## 3. Knowledge
 - [<span style="color:yellow">Knowledge</span>](<Knowledge/Knowledge.md>)
-  - [Algorithmen](/%2F/Algorithmen.md)
-  - [ML](<Knowledge/ML/ML.md>)
+  - [<span style="color:rgb(241, 82, 220)">Algorithmen</span>](/%2F/Algorithmen.md)
+  - [<span style="color:red">ML</span>](<Knowledge/ML/ML.md>)
     - [<span style="color:green">Build KnowledgeBase</span>](<Knowledge/ML/How I Turned My Companys Docs into a Searchable Database with OpenAI.md>)
   - [<span style="color:cyan">PowerShell</span>](<Knowledge/PowerShell/PowerShell.md>)
   - [<span style="color:cyan">Mermaid</span>](<Knowledge/Mermaid/Mermaid.md>)
     - [<span style="color:cyan">Examples</span>](<Knowledge/Mermaid/MermaidOnGitHubExamples.md>)
 
-##  3. Links
+##  4. Links
 - [<span style="color:magenta">Links</span>](<Links/LinksWiki.md>): Links zu meinen Themen
 - [<span style="color:cyan">PSModulesHelp</span>](<PSModulesHelp/ModuleDoku.md>): :information_source: Help für PowerShell Module
-
-##  4. ToDo
-  > - [ ] :memo: PSModulesHelp hinzufügen
-  > - [ ] :memo: KnowledgeBase hinzufügen
 
 ## 5. Wikies
   > - [Notes](https://github.com/thamielis/Notes)
