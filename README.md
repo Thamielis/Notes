@@ -45,4 +45,5 @@ end
 %% Styling the title subgraph
 
     classDef Title fill:#FF99FF00, stroke-width:0, color:grey, font-weight:bold, font-size: 17px;
-    class SGTitle Title;```
+    class SGTitle Title;
+```
