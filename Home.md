@@ -1,5 +1,6 @@
 
 - [1. Repos](#1-repos)
+- [2. Knowledge](#2-knowledge)
 - [2. Links](#2-links)
 - [3. ToDo](#3-todo)
 - [4. GitHub](#4-github)
@@ -7,16 +8,18 @@
 - [6. Wichtig](#6-wichtig)
 
 ##  1. Repos
-- [<span style="color:yellow">ReposWiki</span>](<ReposWiki/ReposWiki.md>)
-  > :memo: Alle GitHub Repositories
-- [<span style="color:yellow">Meine Repos</span>](ReposWiki/Repositories.md)
-  > <span style="color:cyan">*Meine Programmierungen*</span>
+- [<span style="color:yellow">ReposWiki</span>](<ReposWiki/ReposWiki.md>): Alle GitHub Repositories
+- [<span style="color:yellow">Meine Repos</span>](ReposWiki/Repositories.md): <span style="color:cyan">*Meine Programmierungen*</span>
+
+## 2. Knowledge
+- [<span style="color:green">Knowledge</span>](<Knowledge/Knowledge.md>)
+    - [<span style="color:cyan">PowerShell</span>](<Knowledge/PowerShell/PowerShell.md>)
+    - [<span style="color:cyan">Mermaid</span>](<Knowledge/Mermaid/Mermaid.md>)
+      - [<span style="color:cyan">Examples</span>](<Knowledge/Mermaid/MermaidOnGitHubExamples.md>)
 
 ##  2. Links
-- [<span style="color:magenta">Links</span>](<Links/LinksWiki.md>)
-  > :memo: Links zu meinen Themen
-- [<span style="color:cyan">PSModulesHelp</span>](<PSModulesHelp/ModuleDoku.md>)
-  > :information_source: Help für PowerShell Module
+- [<span style="color:magenta">Links</span>](<Links/LinksWiki.md>): Links zu meinen Themen
+- [<span style="color:cyan">PSModulesHelp</span>](<PSModulesHelp/ModuleDoku.md>): :information_source: Help für PowerShell Module
 
 ##  3. ToDo
   > - [ ] :memo: PSModulesHelp hinzufügen
