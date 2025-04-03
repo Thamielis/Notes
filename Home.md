@@ -3,9 +3,8 @@
 - [2. Knowledge](#2-knowledge)
 - [2. Links](#2-links)
 - [3. ToDo](#3-todo)
-- [4. GitHub](#4-github)
-- [5. Wikies](#5-wikies)
-- [6. Wichtig](#6-wichtig)
+- [4. Wikies](#4-wikies)
+- [5. Wichtig](#5-wichtig)
 
 ##  1. Repos
 - [<span style="color:yellow">ReposWiki</span>](<ReposWiki/ReposWiki.md>): Alle GitHub Repositories
@@ -25,19 +24,14 @@
   > - [ ] :memo: PSModulesHelp hinzufügen
   > - [ ] :memo: KnowledgeBase hinzufügen
 
-## 4. GitHub
-- [GitHub Actions PowerShell](https://github.com/marketplace/actions/powershell-script)
-- [Building and testing PowerShell](https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-powershell)
-  >   :memo: You can create a continuous integration (CI) workflow to build and test your PowerShell project.
-
-## 5. Wikies
+## 4. Wikies
   > - [Notes](https://github.com/thamielis/Notes)
   > - [PSModulesDoku](https://thamielis.github.io/PSModulesDoku/)
   > - [PSKnowledge](https://thamielis.github.io/PSKnowledge/ClassExplorer/gasm.html)
   > - [Mein Netlify Blog](<https://blog.in-pro.org>)
   > - [Thamielis Pages](<https://thamielis.github.io>)
 
-## 6. Wichtig
+## 5. Wichtig
 >[!warning]
 >***PowerShell***
 >[PowerShell](Links/PowerShell%20Links.md)
