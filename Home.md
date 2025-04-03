@@ -16,6 +16,7 @@
 ### 1.1. RepoOverview
   > - [ ] :bangbang: Anzahl der Files per Repo hinzufügen
   > - [ ] :bangbang: Branches und Unterschiede hinzufügen
+  > - [ ] :bangbang: [MarkMap.js](<https://markmap.js.org>) Integrieren
 ### 1.2. Notes Repo
   > - [ ] :memo: PSModulesHelp hinzufügen
   > - [ ] :memo: KnowledgeBase hinzufügen
