@@ -10,6 +10,7 @@
 - [3. Knowledge](#3-knowledge)
   - [3.1 Algorithmen](#31-algorithmen)
   - [3.2 CheatSheets](#32-cheatsheets)
+  - [3.3 Programming Books](#33-programming-books)
 - [4. Links](#4-links)
 - [5. Wikies](#5-wikies)
 - [6. Wichtig](#6-wichtig)
@@ -37,7 +38,6 @@
 
 ## 3. Knowledge
 - [<span style="color:yellow">Knowledge</span>](<Knowledge/Knowledge.md>)
-  - [<span style="color:yellow">Free Programming Books</span>](<https://github.com/EbookFoundation/free-programming-books>)
   - [<span style="color:red">ML</span>](<Knowledge/ML/ML.md>)
     - [<span style="color:green">Build KnowledgeBase</span>](<Knowledge/ML/How I Turned My Companys Docs into a Searchable Database with OpenAI.md>)
   - [<span style="color:cyan">PowerShell</span>](<Knowledge/PowerShell/PowerShell.md>)
@@ -53,6 +53,12 @@
 
 ### 3.2 CheatSheets
 - [Programming CheatSheets](https://github.com/EbookFoundation/free-programming-books/blob/8366c91ffb66e43471ef26b578c03dff0fe8a4ef/more/free-programming-cheatsheets.md)
+
+### 3.3 Programming Books
+- [<span style="color:yellow">Free Programming Books</span>](<https://github.com/EbookFoundation/free-programming-books>)
+  - [<span style="color:yellow">By Subjects</span>](<https://github.com/EbookFoundation/free-programming-books/blob/8366c91ffb66e43471ef26b578c03dff0fe8a4ef/books/free-programming-books-subjects.md>)
+  - [<span style="color:yellow">By Language</span>](<https://github.com/EbookFoundation/free-programming-books/blob/8366c91ffb66e43471ef26b578c03dff0fe8a4ef/books/free-programming-books-langs.md>)
+    - [<span style="color:yellow">PowerShell</span>](<https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#powershell>)
 
 ##  4. Links
 - [<span style="color:magenta">Links</span>](<Links/LinksWiki.md>): Links zu meinen Themen
