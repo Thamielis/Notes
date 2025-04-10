@@ -60,6 +60,10 @@
   - [<span style="color:yellow">By Language</span>](<https://github.com/EbookFoundation/free-programming-books/blob/8366c91ffb66e43471ef26b578c03dff0fe8a4ef/books/free-programming-books-langs.md>)
     - [<span style="color:yellow">PowerShell</span>](<https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#powershell>)
 
+### 3.3 Build your own VR Headset
+[Relativty](<https://github.com/relativty/Relativty>)
+[HadesVR](<https://github.com/HadesVR/HadesVR>)
+
 ##  4. Links
 - [<span style="color:magenta">Links</span>](<Links/LinksWiki.md>): Links zu meinen Themen
 - [<span style="color:cyan">PSModulesHelp</span>](<PSModulesHelp/ModuleDoku.md>): :information_source: Help für PowerShell Module
