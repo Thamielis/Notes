@@ -11,6 +11,7 @@
   - [3.1 Algorithmen](#31-algorithmen)
   - [3.2 CheatSheets](#32-cheatsheets)
   - [3.3 Programming Books](#33-programming-books)
+  - [3.3 Build your own VR Headset](#33-build-your-own-vr-headset)
 - [4. Links](#4-links)
 - [5. Wikies](#5-wikies)
 - [6. Wichtig](#6-wichtig)
@@ -61,8 +62,8 @@
     - [<span style="color:yellow">PowerShell</span>](<https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#powershell>)
 
 ### 3.3 Build your own VR Headset
-[Relativty](<https://github.com/relativty/Relativty>)
-[HadesVR](<https://github.com/HadesVR/HadesVR>)
+- [Relativty](<https://github.com/relativty/Relativty>)
+- [HadesVR](<https://github.com/HadesVR/HadesVR>)
 
 ##  4. Links
 - [<span style="color:magenta">Links</span>](<Links/LinksWiki.md>): Links zu meinen Themen
