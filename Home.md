@@ -5,8 +5,11 @@
   - [1.1. RepoOverview](#11-repooverview)
   - [1.2. Notes Repo](#12-notes-repo)
 - [2. Repos](#2-repos)
-  - [2.1 Kostwein](#21-kostwein)
-    - [2.1.1 Veeam](#211-veeam)
+  - [2.1. Kostwein](#21-kostwein)
+    - [2.1.1. Veeam](#211-veeam)
+    - [2.1.2. ActiveDirectory](#212-activedirectory)
+    - [2.1.3. ConfigurationManager](#213-configurationmanager)
+  - [2.2. Analyse/Visualize](#22-analysevisualize)
 - [3. Knowledge](#3-knowledge)
   - [3.1 Algorithmen](#31-algorithmen)
   - [3.2 CheatSheets](#32-cheatsheets)
@@ -31,11 +34,23 @@
 - [<span style="color:yellow">ReposWiki</span>](<ReposWiki/ReposWiki.md>): Alle GitHub Repositories
 - [<span style="color:yellow">Meine Repos</span>](ReposWiki/Repositories.md): <span style="color:cyan">*Meine Programmierungen*</span>
 
-### 2.1 Kostwein
+### 2.1. Kostwein
 
-#### 2.1.1 Veeam
+#### 2.1.1. Veeam
+- [PSVeeamDashboard](<https://github.com/KOWThamielis/KOWVeeamDashboard>)
+  > Mit PowerShell erstellte Veeam Dashboards
 - [PSVeeamKOW](<https://github.com/Thamielis/PSVeeamKOW>)
   > Veeam Module import und Credentials
+
+#### 2.1.2. ActiveDirectory
+- [Sync-Sage2AD](<https://github.com/KOWThamielis/Sync-Sage2AD>)
+  > Synchronisation der Sage Daten zu ActiveDirectory
+
+#### 2.1.3. ConfigurationManager
+
+### 2.2. Analyse/Visualize
+- [PSVisualizer](<https://github.com/In-Pro-Org/PSVisualizer>)
+  > Erstellen eines Mermaid Diagramms vom Ablauf eines PowerShell Scripts
 
 ## 3. Knowledge
 - [<span style="color:yellow">Knowledge</span>](<Knowledge/Knowledge.md>)
