@@ -67,9 +67,11 @@
 - [<span style="color:yellow">Knowledge</span>](<Knowledge/Knowledge.md>)
   - [<span style="color:red">ML</span>](<Knowledge/ML/ML.md>)
     - [<span style="color:green">Build KnowledgeBase</span>](<Knowledge/ML/How I Turned My Companys Docs into a Searchable Database with OpenAI.md>)
-  - [<span style="color:cyan">PowerShell</span>](<Knowledge/PowerShell/PowerShell.md>)
-    - [<span style="color:cyan">PowerShell</span>](<Knowledge/PowerShell/PowerShell.md>)
+  - [<span style="color:#4da6ff">PowerShell</span>](<Knowledge/PowerShell/PowerShell.md>)
     - [<span style="color:#7d7dff">Fast FileContent Search</span>](https://www.leeholmes.com/scour-fast-personal-local-content-searches/)
+    - [<span style="color:#ff8040">PSWriteHTML</span>](Knowledge/PowerShell/PSWriteHTML/)
+      - [<span style="color:cyan">Nested Tabs</span>](<Knowledge/PowerShell/PSWriteHTML/Nested Tabs, Diagram Updates, Diagram Events, Calendar Object and more in PSWriteHTML.md>)
+    
   - [<span style="color:cyan">Mermaid</span>](<Knowledge/Mermaid/Mermaid.md>)
     - [<span style="color:cyan">Examples</span>](<Knowledge/Mermaid/MermaidOnGitHubExamples.md>)
 
