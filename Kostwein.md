@@ -1,6 +1,6 @@
 ![](<https://raw.githubusercontent.com/Thamielis/Notes/refs/heads/main/images/KostweinLogo.ico?token=GHSAT0AAAAAAC5C4AUNV6ZFLZNDZWL36R7A2AAVKLA>)
 # Kostwein
-<span style=“width:25px“>
+<span style=“width:50px“>
   
   ![](<https://raw.githubusercontent.com/Thamielis/Notes/refs/heads/main/images/PowerShell.png>)
 </span>
