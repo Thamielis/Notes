@@ -1,3 +1,4 @@
+![](https://raw.githubusercontent.com/Thamielis/Notes/refs/heads/main/images/KostweinLogo.ico?token=GHSAT0AAAAAAC5C4AUNV6ZFLZNDZWL36R7A2AAVKLA)
 # Kostwein
 
 ## Veeam
