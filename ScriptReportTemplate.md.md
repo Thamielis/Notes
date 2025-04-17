@@ -1,4 +1,4 @@
-# Scriptname
+# <Scriptname>
 
 ##  Dependend Scripts/Modules
 
