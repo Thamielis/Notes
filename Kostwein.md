@@ -5,7 +5,7 @@
   ![](<https://raw.githubusercontent.com/Thamielis/Notes/refs/heads/main/images/PowerShell.png>)
 </span>
 
-  ![](<https://raw.githubusercontent.com/Thamielis/Notes/refs/heads/main/images/PowerShell.png>)
+![](https://raw.githubusercontent.com/Thamielis/Notes/refs/heads/main/images/PowerShell.png?token=GHSAT0AAAAAAC5C4AUNXXWQAMEOST3NGVDY2AAVYHA)
 
 ## Veeam
 
