@@ -5,6 +5,8 @@
   ![](<https://raw.githubusercontent.com/Thamielis/Notes/refs/heads/main/images/PowerShell.png>)
 </span>
 
+  ![](<https://raw.githubusercontent.com/Thamielis/Notes/refs/heads/main/images/PowerShell.png>)
+
 ## Veeam
 
 - [PSVeeamDashboard](<https://github.com/KOWThamielis/KOWVeeamDashboard>)
