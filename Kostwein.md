@@ -1,5 +1,8 @@
 ![](https://raw.githubusercontent.com/Thamielis/Notes/refs/heads/main/images/KostweinLogo.ico?token=GHSAT0AAAAAAC5C4AUNV6ZFLZNDZWL36R7A2AAVKLA)
 # Kostwein
+<span width=25px>
+  ![](https://raw.githubusercontent.com/Thamielis/Notes/refs/heads/main/images/PowerShell.png?token=GHSAT0AAAAAAC5C4AUMW3Y2PYOQQRUXFBSG2AAVNFQ)
+</span>
 
 ## Veeam
 
