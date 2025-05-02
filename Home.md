@@ -11,8 +11,11 @@
 - [3. Knowledge](#3-knowledge)
   - [3.1 Dokuments](#31-dokuments)
     - [3.1.1 PowerShell](#311-powershell)
+      - [3.1.1.1 PowerShell References](#3111-powershell-references)
     - [3.1.2 Veeam](#312-veeam)
       - [3.1.2.1 Best Practices](#3121-best-practices)
+      - [3.1.2.2 NAS Backup - GFS To Tape](#3122-nas-backup---gfs-to-tape)
+      - [3.1.2.3 How to Design and Implement a Backup System Based on SLA Policies](#3123-how-to-design-and-implement-a-backup-system-based-on-sla-policies)
     - [3.1.3 ML](#313-ml)
   - [3.2 Algorithmen](#32-algorithmen)
   - [3.3 CheatSheets](#33-cheatsheets)
@@ -71,9 +74,15 @@
 
 #### 3.1.1 PowerShell
 
-#### 3.1.2 Veeam
+##### 3.1.1.1 [PowerShell References](<PowerShell-References.md>)
+
+#### 3.1.2 <span style="color:green">Veeam</span>
 
 ##### 3.1.2.1 [Best Practices](<Knowledge\Veeam\Best Practices\index.md>)
+
+##### 3.1.2.2 [NAS Backup - GFS To Tape](<Knowledge\Veeam\NAS backup - GFS To Tape\NAS backup - GFS to Tape - Part I.md>)
+
+##### 3.1.2.3 [How to Design and Implement a Backup System Based on SLA Policies](<Knowledge\Veeam\How to Design and Implement a Backup System\Veeam How to Design and Implement a Backup System Based on SLA Policies - Part I - Design, Architecture, and Tagging in vSphere.md>)
 
 #### 3.1.3 ML
 

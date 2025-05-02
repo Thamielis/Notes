@@ -67,7 +67,8 @@ Es werden **keine Funktionen** im Skript `joboverview.ps1` definiert. Die gesamt
 ## Error Handling
 
 - **Directory-Check & Erstellung**:  
-  ```powershell
+
+```powershell
   if (-not (Test-Path -Path $OutputDirectory)) {
       try {
           New-Item ... -Force | Out-Null
@@ -75,7 +76,8 @@ Es werden **keine Funktionen** im Skript `joboverview.ps1` definiert. Die gesamt
           Write-Error ... ; exit 1
       }
   }
-  ```
+```
+
 - Kein globales `$ErrorActionPreference` gesetzt  
 - Kein zentraler Fehler-Logger, aber manuelle Fehlerbehandlung im Verzeichnis-Check
 
