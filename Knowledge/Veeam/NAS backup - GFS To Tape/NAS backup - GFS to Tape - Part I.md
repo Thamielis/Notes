@@ -5,12 +5,12 @@ source: https://www.gable.it/nas-backup-gfs-to-tape/?lang=en
 author: gabriele pelizzari
 ---
 
-# NAS backup - GFS to Tape - Part I — Gabriele Pelizzari
+# NAS backup - GFS to Tape - Part I
 
 ---
 Many customers and partners ask whether it is possible to implement a [GFS (Grandfather – Father – Son)](https://helpcenter.veeam.com/docs/backup/vsphere/backup_copy_gfs.html?ver=120) type of protection policy when the data to be protected pertains to a NAS (Network network-attached storage) and the destination is a tape library.
 
-Such automation with the current version of Veeam Backup & Replication**(VBR**) 12.1 is not yet available, something that is already possible when the data source is a backup of VMs and Physical Servers.
+Such automation with the current version of Veeam Backup & Replication (**VBR**) 12.1 is not yet available, something that is already possible when the data source is a backup of VMs and Physical Servers.
 
 In this first article, I will help you achieve that goal by taking advantage of **VBR** ‘s great flexibility in creating backup jobs.
 
