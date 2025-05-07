@@ -11,6 +11,7 @@
 - [3. Knowledge](#3-knowledge)
   - [3.1 Dokuments](#31-dokuments)
     - [3.1.1 PowerShell](#311-powershell)
+    - [3.1.1.0 Snippets to use with PSStringTemplate](#3110-snippets-to-use-with-psstringtemplate)
       - [3.1.1.1 Explore .NET Assemblies](#3111-explore-net-assemblies)
       - [3.1.1.2 PowerShell References](#3112-powershell-references)
       - [3.1.1.3 Active Directory Reports](#3113-active-directory-reports)
@@ -99,11 +100,25 @@
 - [ ] HtmlToMarkdown
 - [ ] MarkdownEx
 
+- [ ] [ReportHTMLv2](<https://www.powershellgallery.com/packages/ReportHTMLV2/2.1>)
+
+- [ ] [DisplayConfig](<https://github.com/MartinGC94/DisplayConfig>)
+- [ ] [MonitorConfig](<https://github.com/MartinGC94/MonitorConfig>)
+- [ ] [MouseSettings](<https://github.com/MartinGC94/MouseSettings>)
+- [ ] [Registry](<https://github.com/MartinGC94/PSRegistry>)
+- [ ] [Split Collection](<https://github.com/MartinGC94/SplitCollection>)
+
+- [<span style="color:#00ff00">PSGalleryArgumentCompleter</span>](<https://github.com/MartinGC94/UsefulArgumentCompleters>)
+
+#### 3.1.1.0 Snippets to use with PSStringTemplate
+
+- [ ] [Snippets](<https://github.com/MartinGC94/Snippets>)
+
 ##### 3.1.1.1 [<span style="color:#ff8040">Explore .NET Assemblies</span>](<Explore_dotNETAssemblies.md>)
 
 ##### 3.1.1.2 [PowerShell References](<PowerShell-References.md>)
 
-##### 3.1.1.3 Active Directory Reports
+##### 3.1.1.3 [Active Directory Reports](<https://github.com/jdhitsolutions/ADReportingTools>)
 
 ###### 3.1.1.3.1 ADGroups
 
