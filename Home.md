@@ -12,6 +12,8 @@
   - [3.1 Dokuments](#31-dokuments)
     - [3.1.1 PowerShell](#311-powershell)
       - [3.1.1.1 PowerShell References](#3111-powershell-references)
+      - [3.1.1.2 Active Directory Reports](#3112-active-directory-reports)
+        - [3.1.1.2.1 ADGroups](#31121-adgroups)
     - [3.1.2 Veeam](#312-veeam)
       - [3.1.2.1 Best Practices](#3121-best-practices)
       - [3.1.2.2 NAS Backup - GFS To Tape](#3122-nas-backup---gfs-to-tape)
@@ -75,6 +77,14 @@
 #### 3.1.1 PowerShell
 
 ##### 3.1.1.1 [PowerShell References](<PowerShell-References.md>)
+
+##### 3.1.1.2 Active Directory Reports
+
+###### 3.1.1.2.1 ADGroups
+
+```powershell
+New-ADGroupReport -Name 'PaloAlto*' -ReportTitle 'PaloAlto_Internet ADGroups' -EmbedCSS -FilePath C:\Temp\ADPaloAlto_Internet.html -CSSUri "A:\PowerShell\PSTaskSequenceReport\IIS\css\ADReports.css"
+```
 
 #### 3.1.2 <span style="color:green">Veeam</span>
 
