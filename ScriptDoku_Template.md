@@ -20,6 +20,7 @@ List all modules or scripts that this script depends on, categorized by type:
 -   Built-in Modules/Cmdlets:  
 -   {Built-in module/cmdlet name} – {optional description/purpose}
 -   (Include any PowerShell modules/cmdlets that come with PowerShell and are crucial to this script’s functionality).
+
 -   Third-Party Modules:  
 -   {Module Name (Version)} – {description of use in script}
 -   (Modules from PSGallery or other sources that need to be installed for this script. Include version numbers if applicable.)
