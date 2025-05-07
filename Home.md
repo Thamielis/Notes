@@ -6,15 +6,22 @@
   - [1.2. Notes Repo](#12-notes-repo)
 - [2. Repos](#2-repos)
   - [2.1. Kostwein](#21-kostwein)
-    - [2.1.1. Veeam](#211-veeam)
-    - [2.1.2. ActiveDirectory](#212-activedirectory)
     - [2.1.3. ConfigurationManager](#213-configurationmanager)
   - [2.2. Analyse/Visualize](#22-analysevisualize)
 - [3. Knowledge](#3-knowledge)
-  - [3.1 Algorithmen](#31-algorithmen)
-  - [3.2 CheatSheets](#32-cheatsheets)
-  - [3.3 Programming Books](#33-programming-books)
-  - [3.3 Build your own VR Headset](#33-build-your-own-vr-headset)
+  - [3.1 Dokuments](#31-dokuments)
+    - [3.1.1 PowerShell](#311-powershell)
+      - [3.1.1.1 PowerShell References](#3111-powershell-references)
+    - [3.1.2 Veeam](#312-veeam)
+      - [3.1.2.1 Best Practices](#3121-best-practices)
+      - [3.1.2.2 NAS Backup - GFS To Tape](#3122-nas-backup---gfs-to-tape)
+      - [3.1.2.3 How to Design and Implement a Backup System Based on SLA Policies](#3123-how-to-design-and-implement-a-backup-system-based-on-sla-policies)
+    - [3.1.3 ML](#313-ml)
+  - [3.2 Algorithmen](#32-algorithmen)
+  - [3.3 CheatSheets](#33-cheatsheets)
+  - [3.4 Programming Books](#34-programming-books)
+  - [3.5 Regex](#35-regex)
+  - [3.6 Build your own VR Headset](#36-build-your-own-vr-headset)
 - [4. Links](#4-links)
 - [5. Wikies](#5-wikies)
 - [6. Wichtig](#6-wichtig)
@@ -63,27 +70,43 @@
   - [<span style="color:cyan">Mermaid</span>](<Knowledge/Mermaid/Mermaid.md>)
     - [<span style="color:cyan">Examples</span>](<Knowledge/Mermaid/MermaidOnGitHubExamples.md>)
 
-### 3.1 Algorithmen
+### 3.1 Dokuments
+
+#### 3.1.1 PowerShell
+
+##### 3.1.1.1 [PowerShell References](<PowerShell-References.md>)
+
+#### 3.1.2 <span style="color:green">Veeam</span>
+
+##### 3.1.2.1 [Best Practices](<Knowledge\Veeam\Best Practices\index.md>)
+
+##### 3.1.2.2 [NAS Backup - GFS To Tape](<Knowledge\Veeam\NAS backup - GFS To Tape\NAS backup - GFS to Tape - Part I.md>)
+
+##### 3.1.2.3 [How to Design and Implement a Backup System Based on SLA Policies](<Knowledge\Veeam\How to Design and Implement a Backup System\Veeam How to Design and Implement a Backup System Based on SLA Policies - Part I - Design, Architecture, and Tagging in vSphere.md>)
+
+#### 3.1.3 ML
+
+### 3.2 Algorithmen
 
 - [<span style="color:rgb(241, 82, 220)">Algorithmen</span>](/%2F/Algorithmen.md)
   - [<span style="color:rgb(241, 82, 220)">Awesome Algorithms</span>](<https://github.com/tayllan/awesome-algorithms>)
   - [<span style="color:rgb(241, 82, 220)">The Ultimate Topic List(with Tutorials, Problems, and Templates)</span>](<https://blog.shahjalalshohag.com/topic-list/>)
 
-### 3.2 CheatSheets
+### 3.3 CheatSheets
 
 - [Programming CheatSheets](https://github.com/EbookFoundation/free-programming-books/blob/8366c91ffb66e43471ef26b578c03dff0fe8a4ef/more/free-programming-cheatsheets.md)
 
-### 3.3 Programming Books
+### 3.4 Programming Books
 
 - [<span style="color:yellow">Free Programming Books</span>](<https://github.com/EbookFoundation/free-programming-books>)
   - [<span style="color:yellow">By Subjects</span>](<https://github.com/EbookFoundation/free-programming-books/blob/8366c91ffb66e43471ef26b578c03dff0fe8a4ef/books/free-programming-books-subjects.md>)
   - [<span style="color:yellow">By Language</span>](<https://github.com/EbookFoundation/free-programming-books/blob/8366c91ffb66e43471ef26b578c03dff0fe8a4ef/books/free-programming-books-langs.md>)
     - [<span style="color:yellow">PowerShell</span>](<https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#powershell>)
 
-### 3.4 Regex
+### 3.5 Regex
 - [Reference](https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference)
 
-### 3.5 Build your own VR Headset
+### 3.6 Build your own VR Headset
 
 - [Relativty](<https://github.com/relativty/Relativty>)
 - [HadesVR](<https://github.com/HadesVR/HadesVR>)
