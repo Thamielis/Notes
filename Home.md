@@ -76,6 +76,27 @@
 
 #### 3.1.1 PowerShell
 
+- [ ] ChangelogManagement
+- [ ] Configuration
+- [ ] MarkdownLinkCheck
+- [ ] Metadata
+- [ ] Pester
+- [ ] Plaster
+- [ ] PSDepend
+- [ ] PSCodeHealth
+- [ ] PSCoverage
+- [ ] PSFunctionExplorer
+- [ ] ClassExplorer
+- [ ] PSClassUtils
+- [ ] EventLogConverter
+- [ ] FindFunctionCalls
+- [ ] Format-Markdown
+- [ ] GitHub
+- [ ] GitHubProvider
+- [ ] GitHubActions
+- [ ] HtmlToMarkdown
+- [ ] MarkdownEx
+
 ##### 3.1.1.1 [PowerShell References](<PowerShell-References.md>)
 
 ##### 3.1.1.2 Active Directory Reports

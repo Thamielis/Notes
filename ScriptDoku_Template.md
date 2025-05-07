@@ -1,26 +1,10 @@
-  
-
 {Script Name} Documentation
-
-  
-
-  
 
 Note: Replace placeholders (in curly braces) with actual values for your script.
 
-  
-
-  
-
 Overview
 
-  
-
-  
-
 This section provides a high-level overview of the script, including its purpose and requirements. It’s good practice to include basic metadata (script name, description, author, version, etc.) at the top of the script for consistency . Also note any prerequisites needed to run the script (e.g. required PowerShell version, modules, or system requirements) .
-
-  
 
 -   Script Name: {Script Name}
 -   Description: {Brief description of what the script does}
@@ -28,48 +12,19 @@ This section provides a high-level overview of the script, including its purpose
 -   Version: {Version (e.g., 1.0.0)}
 -   Last Modified: {Date of last update}
 -   Prerequisites:  
-    
-
 -   {Any prerequisites, e.g. PowerShell 7.0+, required software, permissions, etc.}
-
--     
-    
-
-  
-
-  
-
-  
-
-Dependencies
-
-  
-
-  
+-   Dependencies    
 
 List all modules or scripts that this script depends on, categorized by type:
 
-  
-
 -   Built-in Modules/Cmdlets:  
-    
-
 -   {Built-in module/cmdlet name} – {optional description/purpose}
 -   (Include any PowerShell modules/cmdlets that come with PowerShell and are crucial to this script’s functionality).
-
--     
-    
 -   Third-Party Modules:  
-    
-
 -   {Module Name (Version)} – {description of use in script}
 -   (Modules from PSGallery or other sources that need to be installed for this script. Include version numbers if applicable.)
-
--     
     
 -   Custom Scripts/Modules:  
-    
-
 -   {Path\To\Dependency.ps1} – {Description of what this script/module provides}
 -   (Any custom script or module (with relative path) that is required. Describe its purpose.)
 
