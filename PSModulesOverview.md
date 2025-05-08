@@ -57,42 +57,19 @@ A PowerShell module for managing SQL Server Compact Edition databases.
     🔗 [PowerShell Gallery](https://www.powershellgallery.com/packages/AxSQLServerCe)  
     🕒 Last Updated: 2020-02-14 
 
-## Configuration Management
+### Configuration Management
 
-  
-
-  
-
--   Carbon  
-    A PowerShell module for automating the configuration and setup of Windows workstations and servers.  
+#### Carbon
+A PowerShell module for automating the configuration and setup of Windows workstations and servers.  
     🔗 [GitHub Repository](https://github.com/webmd-health-services/Carbon)  
     🔗 [PowerShell Gallery](https://www.powershellgallery.com/packages/Carbon)  
     🕒 Last Updated: 2021-08-30 
 
-  
+### Text Processing
 
-  
-
-  
-
-Text Processing
-
-  
-
-  
-
--   CasingStyle  
-    Provides functions for detecting, converting, and splitting different casing styles in strings.  
+#### CasingStyle
+Provides functions for detecting, converting, and splitting different casing styles in strings.  
     🔗 [GitHub Repository](https://github.com/PSModule/CasingStyle)  
     🔗 [PowerShell Gallery](https://www.powershellgallery.com/packages/CasingStyle)  
     🕒 Last Updated: 2025-01-15 
 
-  
-
-  
-
-  
-
-  
-
-If you’d like me to continue compiling information for the remaining modules, please let me know!
