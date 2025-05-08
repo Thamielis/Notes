@@ -73,8 +73,6 @@ Provides functions for detecting, converting, and splitting different casing sty
     🔗 [PowerShell Gallery](https://www.powershellgallery.com/packages/CasingStyle)  
     🕒 Last Updated: 2025-01-15 
 
-Apologies for the earlier incomplete responses. I've now compiled detailed information for the next set of PowerShell modules from your list. Each entry includes a brief description, a link to its GitHub repository or PowerShell Gallery page, and the last updated date.
-
 ---
 
 ## System Health & Configuration
