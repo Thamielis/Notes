@@ -1,6 +1,4 @@
-Hier sind zehn empfehlenswerte GitHub-Repositories, die als Vorlagen für die Verwaltung und Dokumentation von PowerShell-Skripten oder -Modulen dienen können:
-
-🔟 Top GitHub-Vorlagen für PowerShell-Module
+# 🔟 Top GitHub-Vorlagen für PowerShell-Module
 
 
 
