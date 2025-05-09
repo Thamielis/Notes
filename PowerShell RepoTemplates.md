@@ -15,27 +15,27 @@
     - Modulvorlage mit integrierter Build- und Deploy-Pipeline-Automatisierung.
     - Unterstützt PowerShell DSC, Klassen, CI/CD und plattformübergreifende Builds.  
 
-11. [ili101/Module.Template](https://github.com/ili101/Module.Template)  
+5. [ili101/Module.Template](https://github.com/ili101/Module.Template)  
     - Vorlage mit Integration in GitHub, PowerShell Gallery, AppVeyor und Azure DevOps Pipelines.
     - Enthält Beispielbefehle, Tests und CI-Konfigurationen.
 
-12. [rokett/Powershell-Module-Template](https://github.com/rokett/Powershell-Module-Template)  
+6. [rokett/Powershell-Module-Template](https://github.com/rokett/Powershell-Module-Template)  
     - Einfache Vorlage mit Skript zur Erstellung neuer Module.
     - Beinhaltet eine Beispielstruktur und ein Skript zur Modulinitialisierung.  
 
-13. [Sarafian/PowerShellTemplate](https://github.com/Sarafian/PowerShellTemplate)  
+7. [Sarafian/PowerShellTemplate](https://github.com/Sarafian/PowerShellTemplate)  
     - Vorlage für Module und Skripte mit Pester-Tests und Veröffentlichungsmechanismen.
     - Unterstützt Modul- und Skriptverzeichnisse sowie CI-Konfigurationen.  
 
-14. [BornToBeRoot/PowerShell](https://github.com/BornToBeRoot/PowerShell)  
+8. [BornToBeRoot/PowerShell](https://github.com/BornToBeRoot/PowerShell)  
     - Sammlung nützlicher Funktionen, Skripte, Snippets und Vorlagen.
     - Beinhaltet Templates für neue Skripte und Dokumentationen.  
 
-15. [avaines/Powershell-Template-Modules](https://github.com/avaines/Powershell-Template-Modules)  
+9. [avaines/Powershell-Template-Modules](https://github.com/avaines/Powershell-Template-Modules)  
     - Module für das Powershell-Template-Skript.
     - Beinhaltet Module wie Connect-AD, Connect-Office365 und HTML-Report-Generator.  
 
-16. [fleschutz/PowerShell](https://github.com/fleschutz/PowerShell)  
+10. [fleschutz/PowerShell](https://github.com/fleschutz/PowerShell)  
     - Über 500 kostenlose PowerShell-Skripte für Linux, Mac OS und Windows.
     - Nützlich für CLI, Remote-Steuerung, Automatisierung und Lernzwecke.
 
