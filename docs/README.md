@@ -47,21 +47,25 @@
 
 ## 2. Repos
 
-### [<span style ="color:cyan">2.1 PSModulesHelp</span>](PSModulesHelp/ModuleDoku.md)
+### [<span style ="color:cyan">2.1. PSModulesHelp</span>](PSModulesHelp/ModuleDoku.md)
 
-- [<span style="color:yellow">ReposWiki</span>](ReposWiki/ReposWiki.md): Alle GitHub Repositories
-- [<span style="color:yellow">Meine Repos</span>](ReposWiki/Repositories.md): <span style="color:cyan">*Meine Programmierungen*</span>
+### [<span style="color:yellow">2.2. ReposWiki</span>](ReposWiki/ReposWiki.md)
+  Alle GitHub Repositories
 
-### 2.2. Kostwein
+#### [<span style="color:yellow">2.2.1. Meine Repos</span>](ReposWiki/Repositories.md)
+  <span style="color:cyan">*Meine Programmierungen*</span>
+
+#### 2.2.2. Analyse/Visualize
+
+- [PSVisualizer](<https://github.com/In-Pro-Org/PSVisualizer>)
+  > Erstellen eines Mermaid Diagramms vom Ablauf eines PowerShell Scripts
+
+### 2.3. Kostwein
 
 - [Kostwein](/%2F/Kostwein.md)
 
 #### 2.1.3. ConfigurationManager
 
-### 2.2. Analyse/Visualize
-
-- [PSVisualizer](<https://github.com/In-Pro-Org/PSVisualizer>)
-  > Erstellen eines Mermaid Diagramms vom Ablauf eines PowerShell Scripts
 
 ## 3. Knowledge
 
