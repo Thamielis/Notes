@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Starts a lightweight local server",
+  "Description": "Starts a lightweight local server that uses the HttpListener class to create a simple server.  \n\nThis server is unlike the Pipeworks in ASP.NET in many interesting ways:\n\n- Unlike Pipeworks within ASP.NET which lets each user have their own runspace, PSNode puts all users in the same runspace.  \nThis makes it faster, and means all people connected share a lot of the same information (for better and worse).  \nAdditionally, this runspace does not contain any modules, but can load any modules you have.\n- Unlike Pipeworks within ASP.NET, which runs in an Application Pool as the context of that restricted user, PSNode is always running as you and under and administrative account.\nThis means a lot.  On the good side, it means you can do things ASP.NET cannot, like popping up a window on the desktop.  On the darker side, it means that if you allow arbitrary code execution in what you put up on PSNode, you have an endpoint that can do anything to a box in the context of the current user.\n- Unlike Pipeworks within ASP.NET, PSNode runs in any .exe\nThis also means a lot.  \nPSNode may run within any process, and, because it is running in a process, certain components that require a permission associated with an interactive process will execute in PSNode and not in Pipeworks under ASP.NET    \n\n\nPSNode was inspired by a presentation from Bruce Payette at the PowerShell Deep Dive @ TEC2011 in Frankfurt, Germany",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.Job"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Start-PSNode -Server http://localhost:9097/ -Command {\r\n    \"Hello World\"\r\n}"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Start-PSNode -Server http://localhost:9092/ -AuthenticationType IntegratedWindowsAuthentication -Command {\r\n    \"Hello $($User.Identity.Name)\"\r\n}"
+    }
+  ]
+}

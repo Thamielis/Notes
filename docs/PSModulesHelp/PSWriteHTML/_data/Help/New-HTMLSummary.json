@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new HTML summary section with customizable content.",
+  "Description": "The New-HTMLSummary function creates an HTML summary section with customizable content. It allows you to display a summary with a title, additional information, and summary items.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Based on https://codepen.io/banik/pen/exjLzB by Tony Banik"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLSummary -SummaryItems {\r\n    \"Summary Item 1\"\r\n    \"Summary Item 2\"\r\n} -Title \"Summary Title\" -TitleRight \"Additional Info\"\r\nCreates a new HTML summary section with the title \"Summary Title\", displaying \"Summary Item 1\" and \"Summary Item 2\" as summary items, and additional information \"Additional Info\" on the right side of the title."
+    }
+  ]
+}

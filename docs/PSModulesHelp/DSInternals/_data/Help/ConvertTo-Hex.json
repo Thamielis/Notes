@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Helper cmdlet that converts binary input to a hexadecimal string.",
+  "Description": "Converts a byte array to its hexadecimal representation.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Cmdlet",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.Byte[]"
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [
+    "https://github.com/MichaelGrafnetter/DSInternals/blob/master/Documentation/PowerShell/ConvertTo-Hex.md"
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> ConvertTo-Hex -Input 0,255,32\r\n00ff20\r\nConverts the byte array to its hexadecimal representation, using lowercase characters."
+    },
+    {
+      "Title": "Example 2",
+      "Markdown": "",
+      "Code": "PS C:\\> ConvertTo-Hex -Input 0,255,32 -UpperCase\r\n00FF20\r\nConverts the byte array to its hexadecimal representation, using uppercase characters."
+    }
+  ]
+}

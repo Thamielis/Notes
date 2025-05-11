@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Confirms that the person actually exists",
+  "Description": "Confirms that a person actually exists and modifies users records.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String",
+    "System.Management.Automation.PSObject"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "Confirm-Person is automatically called within a web site in the following manner",
+      "Code": "Confirm-Person -WebsiteUrl 'http://MyPipeworksSite.com/'"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Allows to inline other HTML files into the current HTML file.",
+  "Description": "Allows to inline other HTML files into the current HTML file. This can be useful if we want to display content from another file.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTML {\r\n    New-HTMLSection {\r\n        New-HTMLFrame -SourcePath \"$PSSCriptRoot\\GPOZaurr.html\" -Scrolling Auto\r\n    } -HeaderText 'Test'\r\n    New-HTMLSection {\r\n        New-HTMLFrame -SourcePath \"$PSSCriptRoot\\GPOZaurr.html\" -Scrolling Auto -Height 1500px\r\n    } -HeaderText 'Test'\r\n    New-HTMLSection {\r\n        New-HTMLFrame -SourcePath \"C:\\Support\\GitHub\\PSWriteHTML\\Examples\\Example-Maps\\Example-Maps.html\"\r\n    } -HeaderText 'Test' -Height 100vh\r\n} -Online -TitleText 'Test Inline' -ShowHTML -FilePath \"$PSScriptRoot\\Example-InlineHTML01.html\" -AddComment"
+    }
+  ]
+}

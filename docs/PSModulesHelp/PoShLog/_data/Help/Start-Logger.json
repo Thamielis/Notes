@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Starts logging",
+  "Description": "Creates new instance of logger, that writes to configured sinks.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "Instance of LoggerConfiguration"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-Logger | Add-SinkConsole | Start-Logger"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Start-Logger"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Start-Logger -MinimumLevel Verbose -Console -FilePath 'C:\\Data\\test.log' -FileRollingInterval Day"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Replaces text in a string based on named replacement tags",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Format-String \"Hello {NAME}\" @{ NAME = 'PowerShell' }\r\nHello PowerShell"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Format-String \"Your score is {SCORE:P}\" @{ SCORE = 0.85 }\r\nYour score is 85.00 %"
+    }
+  ]
+}

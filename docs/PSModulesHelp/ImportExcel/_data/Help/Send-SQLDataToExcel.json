@@ -1,0 +1,67 @@
+{
+  "Synopsis": "Inserts a DataTable - returned by a SQL query - into an ExcelSheet",
+  "Description": "This command takes a SQL statement and run it against a database connection; for the connection it accepts either\r\n\r\n\r\n* an object representing a session with a SQL server or ODBC database, or\r\n\r\n\r\n* a connection string to make a session (if -MSSQLServer is specified it uses the SQL Native client,\r\n\r\n\r\n\r\n\r\nand -Connection can be a server name instead of a detailed connection string. Without this switch it uses ODBC)\r\n\r\nThe command takes all the parameters of Export-Excel, except for -InputObject (alias TargetData); after fetching the data it calls Export-Excel with the data as the value of InputParameter and whichever of Export-Excel's parameters it was passed; for details of these parameters see the help for Export-Excel.\r\n",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS\\> Send-SQLDataToExcel -MsSQLserver -Connection localhost -SQL  \"select name,type,type_desc from [master].[sys].[all_objects]\" -Path .\\temp.xlsx -WorkSheetname master -AutoSize -FreezeTopRow -AutoFilter -BoldTopRow\r\nConnects to the local SQL server and selects 3 columns from [Sys].[all_objects] and exports then to a sheet named master with some basic header management"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "PS\\> $dbPath = 'C:\\Users\\James\\Documents\\Database1.accdb'\r\nPS\\> $Connection = \"Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=$dbPath;\"\r\nPS\\> $SQL=\"SELECT top 25 Name,Length  From TestData ORDER BY Length DESC\"\r\nPS\\> Send-SQLDataToExcel -Connection  $connection -SQL $sql -path .\\demo1.xlsx -WorkSheetname \"Sizes\" -AutoSize\r\nThis creates an ODBC connection string to read from an Access file and a SQL Statement to extracts data from it, and sends the resulting data to a new worksheet"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "PS\\> $dbPath = 'C:\\users\\James\\Documents\\f1Results.xlsx'\r\n\r\nPS\\> $Connection = \"Driver={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};Dbq=$dbPath;\"\r\nPS\\> $SQL=\"SELECT top 25 DriverName, Count(RaceDate) as Races, Count(Win) as Wins, Count(Pole) as Poles, Count(FastestLap) as Fastlaps \" +\r\n           \" FROM Results  GROUP BY DriverName ORDER BY (count(win)) DESC\"\r\n\r\nPS\\>Send-SQLDataToExcel -Connection  $connection -SQL $sql -path .\\demo2.xlsx -WorkSheetname \"Winners\" -AutoSize -AutoNameRange -ConditionalFormat @{DataBarColor=\"Blue\"; Range=\"Wins\"}\r\nSimilar to the previous example, this creates a connection string, this time for an Excel file, and runs a SQL statement to get a list of motor-racing results, outputting the resulting data to a new spreadsheet. The spreadsheet is formatted and a data bar added to show make the drivers' wins clearer. (The F1 results database is available from https://1drv.ms/x/s!AhfYu7-CJv4ehNdZWxJE9LMAX\\_N5sg (https://1drv.ms/x/s!AhfYu7-CJv4ehNdZWxJE9LMAX_N5sg) \\)"
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "PS\\> $dbPath = 'C:\\users\\James\\Documents\\f1Results.xlsx'\r\n\r\nPS\\> $SQL = \"SELECT top 25 DriverName, Count(RaceDate) as Races, Count(Win) as Wins, Count(Pole) as Poles, Count(FastestLap) as Fastlaps \" +\r\n             \" FROM Results GROUP BY DriverName ORDER BY (count(win)) DESC\"\r\nPS\\> $null = Get-SQL -Session F1 -excel -Connection $dbPath -sql $sql -OutputVariable Table\r\n\r\nPS\\> Send-SQLDataToExcel -DataTable $Table -Path \".\\demo3.xlsx\" -WorkSheetname Gpwinners -autosize  -TableName winners -TableStyle Light6 -show\r\nThis uses Get-SQL (at least V1.1 - download from the PowerShell gallery with Install-Module -Name GetSQL - (note the function is Get-SQL the module is GetSQL without the \"-\" )\r\n\r\nGet-SQL simplifies making database connections and building /submitting SQL statements. Here Get-SQL uses the same SQL statement as before; -OutputVariable leaves a System.Data.DataTable object in $table and Send-SQLDataToExcel puts $table into the worksheet and sets it as an Excel table. The command is equivalent to running\r\n\r\nPS&gt; Export-Excel -inputObject $Table -Path \".\\demo3.xlsx\" -WorkSheetname Gpwinners -autosize -TableName winners -TableStyle Light6 -show\r\n\r\nThis is quicker than using PS&gt; Get-SQL \\ \\| export-excel -ExcludeProperty rowerror,rowstate,table,itemarray,haserrors \\\r\n\r\n(the F1 results database is available from https://1drv.ms/x/s!AhfYu7-CJv4ehNdZWxJE9LMAX\\_N5sg (https://1drv.ms/x/s!AhfYu7-CJv4ehNdZWxJE9LMAX_N5sg) \\)"
+    },
+    {
+      "Title": "EXAMPLE 5",
+      "Markdown": "",
+      "Code": "PS\\>$SQL = \"SELECT top 25 DriverName,  Count(Win) as Wins FROM Results GROUP BY DriverName ORDER BY (count(win)) DESC\"\r\nPS\\> Send-SQLDataToExcel -Session $DbSessions\\[\"f1\"\\] -SQL $sql -Path  \".\\demo3.xlsx\" -WorkSheetname Gpwinners  -ClearSheet -autosize -ColumnChart\r\nLike the previous example, this uses Get-SQL (download from the gallery with Install-Module -Name GetSQL). It uses the database session which Get-SQL created, rather than an ODBC connection string. The Session parameter can either be a object (as shown here), or the name used by Get-SQL (\"F1\" in this case).\r\n\r\nHere the data is presented as a quick chart."
+    },
+    {
+      "Title": "EXAMPLE 6",
+      "Markdown": "",
+      "Code": "Send-SQLDataToExcel -path .\\demo4.xlsx -WorkSheetname \"LR\" -Connection \"DSN=LR\" -sql \"SELECT name AS CollectionName FROM AgLibraryCollection Collection ORDER BY CollectionName\"\r\nThis example uses an Existing ODBC datasource name \"LR\" which maps to an adobe lightroom database and gets a list of collection names into a worksheet"
+    }
+  ]
+}

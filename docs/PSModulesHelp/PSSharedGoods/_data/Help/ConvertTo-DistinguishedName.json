@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Converts CanonicalName to DistinguishedName",
+  "Description": "Converts CanonicalName to DistinguishedName for 3 different options",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$CanonicalObjects = @(\r\n'ad.evotec.xyz/Production/Groups/Security/ITR03_AD Admins'\r\n'ad.evotec.xyz/Production/Accounts/Special/SADM Testing 2'\r\n)\r\n$CanonicalOU = @(\r\n    'ad.evotec.xyz/Production/Groups/Security/NetworkAdministration'\r\n    'ad.evotec.xyz/Production'\r\n)\r\n$CanonicalDomain = @(\r\n    'ad.evotec.xyz/Production/Groups/Security/ITR03_AD Admins'\r\n    'ad.evotec.pl'\r\n    'ad.evotec.xyz'\r\n    'test.evotec.pl'\r\n    'ad.evotec.xyz/Production'\r\n)\r\n$CanonicalObjects | ConvertTo-DistinguishedName -ToObject\r\n$CanonicalOU | ConvertTo-DistinguishedName -ToOU\r\n$CanonicalDomain | ConvertTo-DistinguishedName -ToDomain\r\n\r\nOutput:\r\nCN=ITR03_AD Admins,OU=Security,OU=Groups,OU=Production,DC=ad,DC=evotec,DC=xyz\r\nCN=SADM Testing 2,OU=Special,OU=Accounts,OU=Production,DC=ad,DC=evotec,DC=xyz\r\nOutput2:\r\nOU=NetworkAdministration,OU=Security,OU=Groups,OU=Production,DC=ad,DC=evotec,DC=xyz\r\nOU=Production,DC=ad,DC=evotec,DC=xyz\r\nOutput3:\r\nDC=ad,DC=evotec,DC=xyz\r\nDC=ad,DC=evotec,DC=pl\r\nDC=ad,DC=evotec,DC=xyz\r\nDC=test,DC=evotec,DC=pl\r\nDC=ad,DC=evotec,DC=xyz"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Gets the functions declared within a script block or a file",
+  "Description": "Gets the functions exactly as they are written within a script or file",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.ScriptBlock",
+    "System.Management.Automation.PSObject"
+  ],
+  "Links": [
+    "http://powershellpipeworks.com/"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-FunctionFromScript {\r\n    function foo() {\r\n        \"foo\"\r\n    }\r\n    function bar() {\r\n        \"bar\"\r\n    }\r\n}"
+    }
+  ]
+}

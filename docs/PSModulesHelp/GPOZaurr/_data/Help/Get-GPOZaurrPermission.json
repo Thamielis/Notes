@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieves permissions for a Group Policy Object (GPO) based on specified criteria.",
+  "Description": "This function retrieves permissions for a specified GPO based on various criteria such as GPO name, GUID, principal, permission type, etc.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrPermission -GPOName \"TestGPO\" -Principal \"Domain Admins\" -PermitType \"Allow\"\r\nRetrieves permissions for the GPO named \"TestGPO\" for the principal \"Domain Admins\" with permission type \"Allow\"."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrPermission -GPOGuid \"12345678-1234-1234-1234-1234567890AB\" -Type \"Administrative\" -PermitType \"Deny\"\r\nRetrieves administrative permissions for the GPO with GUID \"12345678-1234-1234-1234-1234567890AB\" with permission type \"Deny\"."
+    }
+  ]
+}

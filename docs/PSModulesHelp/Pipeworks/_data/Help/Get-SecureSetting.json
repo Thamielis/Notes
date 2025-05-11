@@ -1,0 +1,60 @@
+{
+  "Synopsis": "Gets encrypted settings stored in the registry",
+  "Description": "Gets secured user settings stored in the registry",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "SecureSetting"
+  ],
+  "Links": [
+    "https://www.youtube.com/watch?v=0haXavQU_nY",
+    null,
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-SecureSetting"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-SecureSetting MySetting"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-SecureSetting MySetting -Decrypt"
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "Get-SecureSetting MySetting -ValueOnly"
+    }
+  ]
+}

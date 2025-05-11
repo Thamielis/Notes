@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Replace all repository topics",
+  "Description": "Replace all repository topics",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Replace all repository topics](https://docs.github.com/rest/repos/repos#replace-all-repository-topics)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-GitHubRepositoryTopic -Owner 'octocat' -Repository 'hello-world' -Names 'octocat', 'octo', 'octocat/hello-world'\r\nReplaces all topics for the repository 'octocat/hello-world' with the topics 'octocat', 'octo', 'octocat/hello-world'."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Searches Stack Overflow for PowerShell questions that relate to your\nsearch term, and provides the link to the accepted answer.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Search-StackOverflow upload ftp\r\nSearches StackOverflow for questions about how to upload FTP files"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$answers = Search-StackOverflow.ps1 upload ftp\r\nPS > $answers | Out-GridView -PassThru | Foreach-Object { start $_ }\r\nLaunches Out-GridView with the answers from a search. Select the URLs\r\nthat you want to launch, and then press OK. PowerShell then launches\r\nyour default web brower for those URLs."
+    }
+  ]
+}

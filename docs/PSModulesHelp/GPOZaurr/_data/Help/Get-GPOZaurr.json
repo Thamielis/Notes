@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Gets information about all Group Policies. Similar to what Get-GPO provides by default.",
+  "Description": "Gets information about all Group Policies. Similar to what Get-GPO provides by default.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$GPOs = Get-GPOZaurr\r\n$GPOs | Format-Table DisplayName, Owner, OwnerSID, OwnerType"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$GPO = Get-GPOZaurr -GPOName 'ALL | Allow use of biometrics'\r\n$GPO | Format-List *"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "$GPOS = Get-GPOZaurr -ExcludeGroupPolicies {\r\n    Skip-GroupPolicy -Name 'de14_usr_std'\r\n    Skip-GroupPolicy -Name 'de14_usr_std' -DomaiName 'ad.evotec.xyz'\r\n    Skip-GroupPolicy -Name 'All | Trusted Websites' #-DomaiName 'ad.evotec.xyz'\r\n    '{D39BF08A-87BF-4662-BFA0-E56240EBD5A2}'\r\n    'COMPUTERS | Enable Sets'\r\n}\r\n$GPOS | Format-Table -AutoSize *"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new GitHub milestone for the given repository.",
+  "Description": "Creates a new GitHub milestone for the given repository.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "For more information on how GitHub handles the dates specified in DueOn, please refer to\nthis support forum post:\nhttps://github.community/t5/How-to-use-Git-and-GitHub/Milestone-quot-Due-On-quot-field-defaults-to-7-00-when-set-by-v3/m-p/6901\n\nPlease note that due to artifacts of how GitHub was originally designed, all timestamps\nin the GitHub database are normalized to Pacific Time.  This means that any dates specified\nthat occur before 7am UTC will be considered timestamps for the _previous_ day.\n\nGiven that GitHub drops the _time_ aspect of this DateTime, this function will ensure that\nthe requested DueOn date specified is honored by manipulating the time as needed."
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Branch\nGitHub.Content\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Reaction\nGitHub.Release\nGitHub.ReleaseAsset\nGitHub.Repository"
+  ],
+  "Outputs": [
+    "GitHub.Milestone"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-GitHubMilestone -OwnerName microsoft -RepositoryName PowerShellForGitHub -Title \"Testing this API\"\r\nCreates a new GitHub milestone for the microsoft\\PowerShellForGitHub project."
+    }
+  ]
+}

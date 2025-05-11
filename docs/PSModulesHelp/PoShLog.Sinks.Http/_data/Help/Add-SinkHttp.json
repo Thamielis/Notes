@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Writes log events into given server over the network using HTTP",
+  "Description": "Adds a non-durable sink that sends log events using HTTP POST over the network.\r\n\r\n\r\nA non-durable sink will lose data after a system or process restart.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Cmdlet",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "Serilog.LoggerConfiguration"
+  ],
+  "Outputs": [
+    "Serilog.LoggerConfiguration"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS> New-Logger | Add-SinkHttp -RequestUri 'https://requestbin.net/r/6y06j5z8' | Start-Logger"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a hierarchical tree structure in HTML using D3.js.",
+  "Description": "This function generates an HTML hierarchical tree structure based on the provided tree view data using D3.js library.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLHierarchicalTree -TreeView {\r\n    @{\r\n        Type = 'TreeNode'\r\n        Settings = @{\r\n            id = 1\r\n            parentId = 0\r\n            name = 'Root'\r\n            description = 'Root Node'\r\n        }\r\n    }\r\n} -Autosize\r\n# Generates a hierarchical tree with a root node."
+    }
+  ]
+}

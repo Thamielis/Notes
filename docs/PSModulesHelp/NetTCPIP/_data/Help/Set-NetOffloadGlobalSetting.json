@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Modifies the global TCP/IP offload settings.",
+  "Description": "The Set-NetOffloadGlobalSetting cmdlet modifies the global TCP/IP offload settings. The global settings include Receive Side Scaling, Receive Segment Coalescing, task offload, and NetworkDirect properties.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetOffloadGlobalSetting"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkId=289170",
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Enable Receive Segment Coalescing",
+      "Markdown": "",
+      "Code": "PS C:\\>Set-NetOffloadGlobalSetting –ReceiveSegmentCoalescing Enabled\r\nThis command enables Receive Segment Coalescing on the computer."
+    }
+  ]
+}

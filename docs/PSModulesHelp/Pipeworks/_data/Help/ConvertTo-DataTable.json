@@ -1,0 +1,43 @@
+{
+  "Synopsis": "Creates a DataTable from an object",
+  "Description": "Creates a DataTable from an object, containing all properties (except built-in properties from a database)",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Data.DataTable"
+  ],
+  "Links": [
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-ChildItem| Select Name, LastWriteTime | ConvertTo-DataTable"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Creates a Pipeworks manifest for a module, so it can become a site.",
+  "Description": "Creates a Pipeworks manifest for a module, so that it can become a pipeworks site.\n\n\nThe Pipeworks manifest is at the heart of how you publish your PowerShell as a web site or software service.\n\n\nNew-PipeworksManifest is designed to help you create Pipeworks manifests for most common cases.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "Creates a quick site to download the ScriptCoverage module",
+      "Code": "New-PipeworksManifest -Name ScriptCoverage -Domain ScriptCoverage.Start-Automating.com, ScriptCoverasge.StartAutomating.com -AllowDownload"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Updates your prompt to display the values of information you want to track.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Watch-DebugExpression { (Get-History).Count }\r\nExpression          Value\r\n----------          -----\r\n(Get-History).Count     3\r\n\r\nPS > Watch-DebugExpression { $count }\r\n\r\nExpression          Value\r\n----------          -----\r\n(Get-History).Count     4\r\n$count\r\n\r\nPS > $count = 100\r\n\r\nExpression          Value\r\n----------          -----\r\n(Get-History).Count     5\r\n$count                100\r\n\r\nPS > Watch-DebugExpression -Reset\r\nPS >"
+    }
+  ]
+}

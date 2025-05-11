@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Used within Invoke-GPOZaurrPermission only. Set new group policy owner.",
+  "Description": "Used within Invoke-GPOZaurrPermission only. Set new group policy owner.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Invoke-GPOZaurrPermission -Verbose -SearchBase 'OU=Computers,OU=Production,DC=ad,DC=evotec,DC=xyz' {\r\n    Set-GPOOwner -Type Administrative\r\n    Remove-GPOPermission -Type NotAdministrative, NotWellKnownAdministrative -IncludePermissionType GpoEdit, GpoEditDeleteModifySecurity\r\n    Add-GPOPermission -Type Administrative -IncludePermissionType GpoEditDeleteModifySecurity\r\n    Add-GPOPermission -Type WellKnownAdministrative -IncludePermissionType GpoEditDeleteModifySecurity\r\n} -WhatIf"
+    }
+  ]
+}

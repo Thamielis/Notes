@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new diagram options interaction object with customizable options.",
+  "Description": "This function defines a diagram options interaction object with various interactive features such as dragging nodes, dragging view, hiding edges on drag, hiding edges on zoom, hiding nodes on drag, hover effects, keyboard navigation, multiselect, navigation buttons, and selection options.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Based on options https://visjs.github.io/vis-network/docs/network/interaction.html#"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-DiagramOptionsInteraction -DragNodes -DragView -HideEdgesOnDrag -HideNodesOnDrag -Hover -KeyboardEnabled -Multiselect -Selectable -SelectConnectedEdges\r\nCreates a new diagram options interaction object with basic interactive features enabled."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-DiagramOptionsInteraction -DragNodes -DragView -HideEdgesOnDrag -HideNodesOnDrag -Hover -KeyboardEnabled -Multiselect -Selectable -SelectConnectedEdges -NavigationButtons\r\nCreates a new diagram options interaction object with navigation buttons added."
+    }
+  ]
+}

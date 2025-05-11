@@ -1,0 +1,64 @@
+{
+  "Synopsis": "Convert a simple string into a custom PowerShell object.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "\"Hello World\" | Convert-TextObject\r\nGenerates an Object with \"P1=Hello\" and \"P2=World\""
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "\"Hello World\" | Convert-TextObject -Delimiter \"ll\"\r\nGenerates an Object with \"P1=He\" and \"P2=o World\""
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "\"Hello World\" | Convert-TextObject -Pattern \"He(ll.*o)r(ld)\"\r\nGenerates an Object with \"P1=llo Wo\" and \"P2=ld\""
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "\"Hello World\" | Convert-TextObject -PropertyName FirstWord,SecondWord\r\nGenerates an Object with \"FirstWord=Hello\" and \"SecondWord=World"
+    },
+    {
+      "Title": "EXAMPLE 5",
+      "Markdown": "",
+      "Code": "\"123 456\" | Convert-TextObject -PropertyType $([string],[int])\r\nGenerates an Object with \"Property1=123\" and \"Property2=456\"\r\nThe second property is an integer, as opposed to a string"
+    },
+    {
+      "Title": "EXAMPLE 6",
+      "Markdown": "",
+      "Code": "$ipAddress = (ipconfig | Convert-TextObject -Delim \": \")[2].P2\r\nPS > $ipAddress\r\n192.168.1.104"
+    }
+  ]
+}

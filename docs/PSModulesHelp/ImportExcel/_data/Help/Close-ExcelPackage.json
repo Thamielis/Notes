@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Closes an Excel Package, saving, saving under a new name or abandoning changes and opening the file in Excel as required.",
+  "Description": "When working with an ExcelPackage object, the Workbook is held in memory and not saved until the .Save() method of the package is called.\r\n\r\n\r\nClose-ExcelPackage saves and disposes of the Package object.\r\n\r\n\r\nIt can be called with -NoSave to abandon the file without saving, with a new \"SaveAs\" filename, and/or with a password to protect the file. And -Show will open the file in Excel; -Calculate will try to update the workbook, although not everything can be recalculated",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Close-ExcelPackage -show $excel\r\n$excel holds a package object, this saves the workbook and loads it into Excel."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Close-ExcelPackage -NoSave $excel\r\n$excel holds a package object, this disposes of it without writing it to disk."
+    }
+  ]
+}

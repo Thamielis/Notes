@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Removes transport filters.",
+  "Description": "The Remove-NetTransportFilter cmdlet removes transport filters.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetTransportFilter"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkID=288401",
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Remove transport filters for a setting name",
+      "Markdown": "",
+      "Code": "PS C:\\>Remove-NetTransportFilter –SettingName Custom\r\nThis command removes all of the transport filters on the server that have the setting name of Custom."
+    },
+    {
+      "Title": "Example 2: Remove transit filters for objects with a specified congestion window",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetTCPSetting –InitialCongestionWindowMss 4 | Remove-NetTransportFilter\r\nThis command uses the Get-NetTCPSetting cmdlet to get all of the NetTcpSetting objects that have an initial congestion window of 4 maximum segment size (MSS) units, and then passes them to the current cmdlet by using the pipeline operator. The command removes transport filters for these settings."
+    }
+  ]
+}

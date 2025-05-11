@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new radial chart object.",
+  "Description": "This function creates a new radial chart object with the specified Name, Value, and Color.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-ChartRadial -Name \"Chart1\" -Value 75 -Color \"Blue\"\r\nCreates a new radial chart object named \"Chart1\" with a value of 75 and a blue color."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-ChartRadial -Name \"Chart2\" -Value 50\r\nCreates a new radial chart object named \"Chart2\" with a value of 50 using the default color."
+    }
+  ]
+}

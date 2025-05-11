@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Get the total number of clones and breakdown per day or week for the last 14 days for the\ngiven GitHub Repository.",
+  "Description": "Get the total number of clones and breakdown per day or week for the last 14 days.\nTimestamps are aligned to UTC midnight of the beginning of the day or week.\nWeek begins on Monday.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Branch\nGitHub.Content\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Reaction\nGitHub.Release\nGitHub.ReleaseAsset\nGitHub.Repository"
+  ],
+  "Outputs": [
+    "GitHub.CloneTraffic"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubCloneTraffic -OwnerName microsoft -RepositoryName PowerShellForGitHub\r\nGet the total number of clones and breakdown per day or week for the last 14 days\r\nfrom the microsoft\\PowerShellForGitHub project."
+    }
+  ]
+}

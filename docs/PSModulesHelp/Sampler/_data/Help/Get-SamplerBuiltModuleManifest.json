@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Get the module manifest from a module built by Sampler.",
+  "Description": "Based on a project's OutputDirectory, BuiltModuleSubdirectory,\nModuleName and whether the built module is within a VersionedOutputDirectory;\nthis function will resolve the expected ModuleManifest of that Module.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "See Get-SamplerBuiltModuleBase as this command only extrapolates the Manifest file from the\nBuild module base, using the ModuleName parameter."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-SamplerBuiltModuleManifest -OutputDirectory C:\\src\\output -BuiltModuleSubdirectory 'Module' -ModuleName 'stuff' -ModuleVersion 3.1.2-preview001\r\n# C:\\src\\output\\Module\\stuff\\3.1.2\\stuff.psd1"
+    }
+  ]
+}

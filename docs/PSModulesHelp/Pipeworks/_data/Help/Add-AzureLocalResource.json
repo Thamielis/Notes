@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Adds an Azure local storage resource to a service definition",
+  "Description": "Adds an Azure local storage resource to a service definition.  \n\nAzure local storage can create well-known directories on the host machine",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Xml.XmlDocument",
+    "System.String"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-AzureServiceDefinition -ServiceName \"foo\" |\r\n    Add-AzureLocalResource -ServiceDefinition"
+    }
+  ]
+}

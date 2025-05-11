@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Retrieves legacy Group Policy Object (GPO) files from the SYSVOL directory of specified domains within a forest.",
+  "Description": "The Get-GPOZaurrLegacyFiles function retrieves legacy GPO files, such as '*.adm' and 'admfiles.ini', from the SYSVOL directory of specified domains within a forest. It provides detailed information about these files including their name, full path, creation time, last write time, attributes, associated domain name, and directory name.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrLegacyFiles -Forest \"contoso.com\" -IncludeDomains \"domain1\", \"domain2\" -ExcludeDomains \"domain3\" -ExtendedForestInformation $additionalInfo\r\nRetrieves legacy GPO files from the \"contoso.com\" forest for \"domain1\" and \"domain2\" domains while excluding \"domain3\", using additional forest information."
+    }
+  ]
+}

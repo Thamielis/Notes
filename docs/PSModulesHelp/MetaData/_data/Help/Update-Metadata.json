@@ -1,0 +1,54 @@
+{
+  "Synopsis": "Update a single value in a PowerShell metadata file",
+  "Description": "By default Update-Metadata increments \"ModuleVersion\"\nbecause my primary use of it is during builds,\nbut you can pass the PropertyName and Value for any key in a module Manifest, its PrivateData, or the PSData in PrivateData.\n\nNOTE: This will not currently create new keys, or uncomment keys.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Update-Metadata .\\Configuration.psd1\r\nIncrements the Build part of the ModuleVersion in the Configuration.psd1 file"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Update-Metadata .\\Configuration.psd1 -Increment Major\r\nIncrements the Major version part of the ModuleVersion in the Configuration.psd1 file"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Update-Metadata .\\Configuration.psd1 -Value '0.4'\r\nSets the ModuleVersion in the Configuration.psd1 file to 0.4"
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "Update-Metadata .\\Configuration.psd1 -Property ReleaseNotes -Value 'Add the awesome Update-Metadata function!'\r\nSets the PrivateData.PSData.ReleaseNotes value in the Configuration.psd1 file!"
+    }
+  ]
+}

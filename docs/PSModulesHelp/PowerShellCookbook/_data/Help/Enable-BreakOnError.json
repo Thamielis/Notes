@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a breakpoint that only fires when PowerShell encounters an error",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Enable-BreakOnError\r\nID Script           Line Command         Variable        Action\r\n-- ------           ---- -------         --------        ------\r\n 0                       Out-Default                     ...\r\n\r\nPS > 1/0\r\nEntering debug mode. Use h or ? for help.\r\n\r\nHit Command breakpoint on 'Out-Default'\r\n\r\n\r\nPS > $error\r\nAttempted to divide by zero."
+    }
+  ]
+}

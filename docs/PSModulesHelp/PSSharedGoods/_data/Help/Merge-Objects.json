@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Merges two objects into a single object.",
+  "Description": "This function merges two objects into a single object by combining their properties. If there are duplicate properties, the values from Object2 will overwrite the values from Object1.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$Object1 = [pscustomobject] @{\r\n    'Name' = 'John Doe'\r\n    'Age'  = 30\r\n}\r\n$Object2 = [pscustomobject] @{\r\n    'Age'  = 31\r\n    'City' = 'New York'\r\n}\r\n\r\nMerge-Objects -Object1 $Object1 -Object2 $Object2\r\n\r\nDescription\r\n-----------\r\nMerges $Object1 and $Object2 into a single object. The resulting object will have properties 'Name', 'Age', and 'City' with values 'John Doe', 31, and 'New York' respectively."
+    }
+  ]
+}

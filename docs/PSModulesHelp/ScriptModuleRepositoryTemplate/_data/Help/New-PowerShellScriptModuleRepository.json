@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Creates a new PowerShell script module repository directory with boilerplate files and CI/CD workflows already defined.",
+  "Description": "This function creates a new PowerShell script module repository with boilerplate files and CI/CD workflows already defined. This allows you to create new PowerShell script modules quickly and easily.\n\nOnce the directory is created, you can run `git init` in it to initialize it as a git repository, and then push it to your own git server.\n\nYou will then need to follow the instructions in the ReadMe.md file to finish setting up the repository.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None. You cannot pipe objects to New-PowerShellScriptModuleRepository."
+  ],
+  "Outputs": [
+    "None. New-PowerShellScriptModuleRepository does not return any output.\nIt creates a new directory with the module repository files."
+  ],
+  "Links": [
+    "https://github.com/deadlydog/PowerShell.ScriptModuleRepositoryTemplate"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-PowerShellScriptModuleRepository -RepositoryDirectoryPath 'C:\\MyNewModule' -ModuleName 'MyNewModule' -OrganizationName 'My Name'\r\nCreates a new module repository at 'C:\\MyNewModule' with the module name 'MyNewModule' and the organization name 'My Name'."
+    }
+  ]
+}

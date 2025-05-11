@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Read a dependency psd1 file",
+  "Description": "Read a dependency psd1 file\n\nThe resulting object contains these properties\n    DependencyFile : Path to psd1 file this dependency is defined in\n    DependencyName : Unique dependency name (the key in the psd1 file).  We reserve PSDependOptions for global options.\n    DependencyType : Type of dependency.  See Get-PSDependType\n    Name           : Name for the dependency\n    Version        : Version for the dependency\n    Parameters     : Hash table of parameters to pass to dependency script\n    Source         : Source for the dependency\n    Target         : Target for the dependency\n    AddToPath      : If specified and dependency type supports it, add dependency to path (e.g. a module is added to PSModulePath)\n    Tags           : One or more tags to categorize or filter dependencies\n    DependsOn      : Dependency that must be installed before this\n    PreScripts     : One or more paths to PowerShell scripts to run before the dependency\n    PostScripts    : One or more paths to PowerShell scripts to run after the dependency\n    PSDependOptions: Hash table of global PSDepend options\n    Raw            : Raw output for this dependency from the PSD1. May include data outside of standard items above.\n\nThese are parsed from dependency PSD1 files as follows:\n\nSimple syntax, intepreted:\n    @{\n        DependencyName = 'Version'\n    }\n\n    With the simple syntax using interpretation:\n       * The DependencyName (key) is used as the Name\n       * If no DependencyType is specified, we parse the DependencyName to pick a default:\n         * We default to GitHub if the DependencyName has a single / (e.g. aaa/bbb)\n         * We default to git if the DependencyName has more than one / (e.g. https://gitlab.fqdn/org/some.git)\n         * We default to PSGalleryModule in all other cases\n       * The Version (value) is a string, and is used as the Version\n       * Other properties are set to $null\n\nSimple syntax, with helpers:\n    @{\n        DependencyType::DependencyName = 'Version'\n    }\n\n    With the simple syntax using helpers:\n       * The dependency type and dependency name are included in the key (DependencyType::DependencyName, e.g. PSGalleryModule::Pester)\n       * The version (value) is a string, and is used as the Version\n       * Other properties are set to $null\n\nAdvanced syntax:\n    @{\n        DependencyName = @{\n            DependencyType = 'TypeOfDependency'.  # See Get-PSDependType\n            Name = 'NameForThisDependency'\n            Version = '0.1.0'\n            Parameters = @{ Example = 'Value' }  # Optional parameters for the dependency script.\n            Source = 'Some source' # Usually optional\n            Target = 'Some target' # Usually optional\n            AddToPath = $True # Whether to add new dependency to path, if dependency type supports it.\n            Tags = 'prod', 'local' # One or more tags to categorize or filter dependencies\n            DependsOn = 'Some_Other_DependencyName' # DependencyName that must run before this\n            PreScripts = 'C:\\script.ps1' # Script(s) to run before this dependency\n            PostScripts = 'C:\\script2.ps1' # Script(s) to run after this dependency\n        }\n    }\n\nWe use the same default DependencyTypes for this advanced syntax\n\nGlobal options:\n   @{\n       PSDependOptions = @{\n           Target = 'C:\\temp'\n       }\n       # Supported for:\n       #    Parameters\n       #    Source\n       #    Target\n       #    AddToPath\n       #    Tags\n       #    DependsOn\n       #    PreScripts\n       #    PostScripts\n\n       # Dependencies use these values as a default, unless you specify them explicitly for a dependency\n   }\n\nNote that you can mix these syntax together in the same psd1.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    "https://github.com/RamblingCookieMonster/PSDepend"
+  ],
+  "Examples": []
+}

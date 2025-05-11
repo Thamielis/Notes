@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Creates small services that run PowerShell",
+  "Description": "Creates small services that run PowerShell on a regular basis",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Nullable"
+  ],
+  "Links": [
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Out-Daemon -ScriptBlock {    \r\n    Write-Warning \"Warning\"\r\n    Write-Error \"Error\"\r\n    $VerbosePreference = 'continue'\r\n    Write-Verbose \"Verbose\"\r\n    $debugPreference = 'continue'\r\n    Write-Debug \"Debug\"\r\n    Write-Progress \"a\" \"b\" -PercentComplete 1\r\n    1\r\n    New-Object PSObject -Property @{\"A\" = \"b\";\"c\" = \"d\" }\r\n} -Interval \"00:00:15\" -Name streamtest"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Invoke a PowerShell expression on a remote machine. Requires PsExec from\nhttp://live.sysinternals.com/tools/psexec.exe. If the remote machine\nsupports PowerShell version two, use PowerShell remoting instead.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Invoke-RemoteExpression LEE-DESK { Get-Process }\r\nRetrieves the output of a simple command from a remote machine"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "(Invoke-RemoteExpression LEE-DESK { Get-Date }).AddDays(1)\r\nInvokes a command on a remote machine. Since the command returns one of\r\nPowerShell's primitive types (a DateTime object,) you can manipulate\r\nits output as an object afterward."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Invoke-RemoteExpression LEE-DESK { Get-Process } | Sort Handles\r\nInvokes a command on a remote machine. The command does not return one of\r\nPowerShell's primitive types, but you can still use PowerShell's filtering\r\ncmdlets to work with its structured output."
+    }
+  ]
+}

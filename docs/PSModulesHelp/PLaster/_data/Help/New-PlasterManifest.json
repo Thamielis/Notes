@@ -1,0 +1,53 @@
+{
+  "Synopsis": "Creates a new Plaster template manifest file.",
+  "Description": "The New-PlasterManifest command creates a new Plaster manifest file, populates its values, and saves the manifest file in the specified path.\r\n\r\n\r\nTemplate authors can use this command to create a manifest for their template. A template manifest is a file named plasterManifest.xml or plasterManifest_<culture-name>.xml. The information stored in the manifest is used to scaffold files and folders.\r\n\r\n\r\nThe metadata section of the manifest is used to supply information about the template e.g. a unique id, name, version, title, author and tags.\r\n\r\n\r\nThe parameters section of the manifest is used to describe choices the template user can choose from. Those choices are then used to conditionally create files and folders and modify existing files under the specified destination path.\r\n\r\n\r\nThe content section is used to specify what actions the template will perform under the user's chosen destination directory. This includes copying files to the destination, copy & expanding template files, modifying files, verifying required modules are installed and displaying messages to the user.\r\n\r\n\r\nSee the help topic about_Plaster_CreatingAManifest for more details on authoring a Plaster manifest file.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [
+    "https://github.com/PowerShell/Plaster/blob/master/docs/en-US/New-PlasterManifest.md",
+    "https://github.com/PowerShell/Plaster/blob/master/docs/en-US/Invoke-Plaster.md",
+    "https://github.com/PowerShell/Plaster/blob/master/docs/en-US/Test-PlasterManifest.md"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-PlasterManifest -TemplateName NewPowerShellItem -TemplateType Item\r\nCreates a basic plasterManifest.xml file in the current directory."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-PlasterManifest -TemplateName NewPowerShellItem -TemplateType Item -TemplateVersion 0.1.0 -Description \"Some description.\" -Tags Module, Publish,Build\r\nCreates a plasterManifest.xml file in the current directory with the version set to 0.1.0 and with the Description and Tags elements populated."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "New-PlasterManifest -TemplateName NewPowerShellItem -TemplateType Item -AddContent\r\nCreates a plasterManifest.xml file in the current directory with the content element filled in with all the files (except for any plasterManifest files) in and below the specified directory which defaults to the current directory."
+    }
+  ]
+}

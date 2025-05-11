@@ -1,0 +1,93 @@
+Set-VBRViApplicationGroup
+-------------------------
+
+### Synopsis
+Modifies settings of application groups.
+
+---
+
+### Description
+
+This cmdlet modifies settings of application groups.
+
+---
+
+### Related Links
+* [Get-VBRApplicationGroup](Get-VBRApplicationGroup)
+
+---
+
+### Examples
+> Example 1. Modifying VMs Added to Application Group
+
+$job = Get-VBRJob -Name "Exchange backup"
+$backupobject = Get-VBRJobObject -Job $job
+$vm = New-VBRSureBackupVM -VM $backupobject
+$appgroup = Get-VBRApplicationGroup
+Set-VBRViApplicationGroup -ApplicationGroup $appgroup -VM $vm
+This example shows how to add new VMs to the existing application group.
+
+Perform the following steps:
+
+1. Run the Get-VBRJob cmdlet. Specify the Name parameter value. Save the result to the $job variable.   2. Run the Get-VBRJobObject cmdlet. Set the $job variable as the Job parameter value. Save the result to the $job variable.   3. Run the New-VBRSureBackupVM cmdlet. Set the $backupobject variable as the VM parameter value. Save the result to the $vm variable.    4. Run the Get-VBRApplicationGroup cmdlet. Save the result to the $appgroup variable.   5. Run the Set-VBRViApplicationGroup cmdlet. Set the $appgroup variable as the ApplicationGroup parameter value. Set the $vm variable as the VM parameter value.
+> Example 2. Modifying Name of Application Group
+
+$appgroup = Get-VBRApplicationGroup
+Set-VBRViApplicationGroup -ApplicationGroup $appgroup -Name "Additional Application Group"
+This example shows how to modify a name of the application group added to the Veeam Backup & Replication infrastructure.
+
+Perform the following steps:
+
+1. Run the Get-VBRApplicationGroup cmdlet. Save the result to the $appgroup variable.   2. Run the Set-VBRViApplicationGroup cmdlet. Set the $appgroup variable as the ApplicationGroup parameter value. Specify the Name parameter value.
+
+---
+
+### Parameters
+#### **ApplicationGroup**
+Specifies an application group. The cmdlet will modify this application group. Accepts the VBRApplicationGroup object. To get this object, run the Get-VBRApplicationGroup cmdlet.
+
+|Type                   |Required|Position|PipelineInput                 |
+|-----------------------|--------|--------|------------------------------|
+|`[VBRApplicationGroup]`|false   |named   |True (ByPropertyName, ByValue)|
+
+#### **Description**
+Specifies a description of an application group. The cmdlet will create the application group with this description.
+
+|Type      |Required|Position|PipelineInput|
+|----------|--------|--------|-------------|
+|`[String]`|false   |named   |False        |
+
+#### **Name**
+Specifies a name of an application group. The cmdlet will create the application group with this name.
+
+|Type      |Required|Position|PipelineInput|
+|----------|--------|--------|-------------|
+|`[String]`|false   |named   |False        |
+
+#### **VM**
+Specifies an array of VMs. The cmdlet will add these VMs to the application group. Accepts the VBRSureBackupVM[] object. To get this object, run the New-VBRSureBackupVM cmdlet.
+
+|Type                 |Required|Position|PipelineInput|
+|---------------------|--------|--------|-------------|
+|`[VBRSureBackupVM[]]`|false   |named   |False        |
+
+---
+
+### Inputs
+Veeam.Backup.PowerShell.Infos.VBRApplicationGroup
+
+---
+
+### Outputs
+* [Object](https://learn.microsoft.com/en-us/dotnet/api/System.Object)
+
+---
+
+### Notes
+
+---
+
+### Syntax
+```PowerShell
+Set-VBRViApplicationGroup [-ApplicationGroup <VBRApplicationGroup>] [-Description <String>] [-Name <String>] [-VM <VBRSureBackupVM[]>] [<CommonParameters>]
+```

@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Get worksheet names and their indices of an Excel workbook.",
+  "Description": "The Get-ExcelSheetInfo cmdlet gets worksheet names and their indices of an Excel workbook.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "CHANGELOG 2016/01/07 Added Created by Johan Akerstrom ( https://github.com/CosmosKey (https://github.com/CosmosKey)\\)"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null,
+    "https://github.com/dfinke/ImportExcel"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-ExcelSheetInfo .\\Test.xlsx"
+    }
+  ]
+}

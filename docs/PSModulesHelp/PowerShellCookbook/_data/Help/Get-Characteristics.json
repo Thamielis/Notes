@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Get the file characteristics of a file in the PE Executable File Format.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-Characteristics $env:WINDIR\\notepad.exe\r\nIMAGE_FILE_LOCAL_SYMS_STRIPPED\r\nIMAGE_FILE_RELOCS_STRIPPED\r\nIMAGE_FILE_EXECUTABLE_IMAGE\r\nIMAGE_FILE_32BIT_MACHINE\r\nIMAGE_FILE_LINE_NUMS_STRIPPED"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "Synopsis": "Retrieves a list of available Plaster templates that can be used with the Invoke-Plaster cmdlet.",
+  "Description": "Retrieves a list of available Plaster templates from the specified path or from the set of templates that are shipped with Plaster.  Specifying no arguments will cause only the built-in Plaster templates to be returned.  Using the -IncludeInstalledModules switch will also search the PSModulePath for PowerShell modules that advertise Plaster templates that they include. By default, this retrieves the latest version available for each module. Using the -ListAvailable parameter will return all templates from all module versions installed on this computer. Using the -Name parameter limits the results based on name. Using the -Tag parameter limits the results based on the template tags.\r\n\r\n\r\n\r\n\r\nThe objects returned from this cmdlet will provide details about each individual template that was retrieved.  Use the TemplatePath property of a template object as the input to Invoke-Plaster's -TemplatePath parameter.\r\n",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.String"
+  ],
+  "Outputs": [
+    "System.Object"
+  ],
+  "Links": [
+    "https://github.com/PowerShell/Plaster/blob/master/docs/en-US/Get-PlasterTemplate.md",
+    "https://github.com/PowerShell/Plaster/blob/master/docs/en-US/Invoke-Plaster.md"
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> $templates = Get-PlasterTemplate\r\n\r\nPS C:\\> Invoke-Plaster -TemplatePath $templates[0].TemplatePath -DestinationPath ~\\GitHub\\NewModule\r\nThis will get the list of built-in Plaster templates.  The first template returned is then used to create a new module at the specifed path."
+    },
+    {
+      "Title": "Example 2",
+      "Markdown": "",
+      "Code": "PS C:\\> $templates = Get-PlasterTemplate -IncludeInstalledModules\r\n\r\nPS C:\\> Invoke-Plaster -TemplatePath $templates[0].TemplatePath -DestinationPath ~\\GitHub\\NewModule\r\nThis will get a list of Plaster templates, both built-in and included with installed modules.  The first template returned is then used to create a new module at the specifed path."
+    },
+    {
+      "Title": "Example 3",
+      "Markdown": "",
+      "Code": "PS C:\\> $templates = Get-PlasterTemplate -Path c:\\MyPlasterTemplates -Recurse\r\n\r\nPS C:\\> Invoke-Plaster -TemplatePath $templates[0].TemplatePath -DestinationPath ~\\GitHub\\NewModule\r\nThis will get a list of Plaster templates found recursively under c:\\MyPlasterTemplates The first template returned is then used to create a new module at the specifed path."
+    },
+    {
+      "Title": "Example 4",
+      "Markdown": "",
+      "Code": "PS C:\\> $template = Get-PlasterTemplate -Name NewPowerShellScriptModule\r\n\r\nPS C:\\> Invoke-Plaster -TemplatePath $template.TemplatePath -DestinationPath ~\\GitHub\\NewModule\r\nThis will get the built-in Plaster template with the name NewPowerShellScriptModule. It will then use that template to create a new module at the specified path."
+    },
+    {
+      "Title": "Example 5",
+      "Markdown": "",
+      "Code": "PS C:\\> $templates = Get-PlasterTemplate -IncludeInstalledModules -Name new*\r\n\r\nPS C:\\> Invoke-Plaster -TemplatePath $templates[0].TemplatePath -DestinationPath ~\\GitHub\\NewModule\r\nThis will get a list of Plaster templates, both built-in and included with installed modules, where the name matches 'new*'. It will then use the first template found to create a new module at the specified path."
+    },
+    {
+      "Title": "Example 6",
+      "Markdown": "",
+      "Code": "PS C:\\> $templates = Get-PlasterTemplate -IncludeInstalledModules -tag module*\r\n\r\nPS C:\\> $templates[0].InvokePlaster()\r\nThis will get a list of Plaster templates, both built-in and included with installed modules, where the name matches 'module*'. It will then use the first template found to create a new module at the specified path using the InvokePlaster script method that is available on the returned object."
+    }
+  ]
+}

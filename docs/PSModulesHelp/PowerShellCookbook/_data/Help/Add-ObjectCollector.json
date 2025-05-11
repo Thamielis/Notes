@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Adds a new Out-Default command wrapper to store up to 500 elements from\nthe previous command. This wrapper stores output in the $ll variable.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This command builds on New-CommandWrapper, also included in the Windows\nPowerShell Cookbook."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-Command $pshome\\powershell.exe\r\nCommandType     Name                          Definition\r\n-----------     ----                          ----------\r\nApplication     powershell.exe                C:\\Windows\\System32\\Windo...\r\n\r\nPS > $ll.Definition\r\nC:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    }
+  ]
+}

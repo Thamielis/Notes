@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Parse a SemVer2 Version string.",
+  "Description": "This function parses a SemVer (semver.org) version string into an object\nwith the following properties:\n- Version: The version without tag or metadata, as used by folder versioning in PowerShell modules.\n- PreReleaseString: A Publish-Module compliant prerelease tag (see below).\n- ModuleVersion: The Version and Prerelease tag compliant with Publish-Module.\n\nFor instance, this is a valid SemVer: `1.15.0-pr0224-0022+Sha.47ae45eb2cfed02b249f239a7c55e5c71b26ab76.Date.2020-01-07`\nThe Metadata is stripped: `1.15.0-pr0224-0022`\nThe Version is `1.15.0`.\nThe prerelease tag is `-pr0224-0022`\nHowever, Publish-Module (or NuGet/PSGallery) does not support such pre-release,\nso this function only keep the first part `-pr0224`",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSCustomObject"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Split-ModuleVersion -ModuleVersion '1.15.0-pr0224-0022+Sha.47ae45eb2cfed02b249f239a7c55e5c71b26ab76.Date.2020-01-07'\r\n# Version PreReleaseString ModuleVersion\r\n# ------- ---------------- -------------\r\n# 1.15.0  pr0224           1.15.0-pr0224"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Delete an SSH signing key for the authenticated user",
+  "Description": "Deletes an SSH signing key from the authenticated user's GitHub account.\nYou must authenticate with Basic Authentication, or you must authenticate with OAuth with at least\n`admin:ssh_signing_key` scope. For more information, see\n\"[Understanding scopes for OAuth apps](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).\"",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Delete an SSH signing key for the authenticated user](https://docs.github.com/rest/users/ssh-signing-keys#delete-an-ssh-signing-key-for-the-authenticated-user)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-GitHubUserSigningKey -ID '1234567'\r\nRemoves the SSH signing key with the ID of `1234567` from the authenticated user's GitHub account."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Grants full control access to a user for the specified registry key.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$registryPath = \"HKLM:\\Software\\MyProgram\"\r\nPS > Grant-RegistryAccessFullControl \"LEE-DESK\\LEE\" $registryPath"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "Synopsis": "Defines the layout structure for a column in an email content.",
+  "Description": "This function defines the layout structure for a column in an email content using specified parameters. It allows customization of column layout properties such as width, alignment, padding, and borders.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": []
+}

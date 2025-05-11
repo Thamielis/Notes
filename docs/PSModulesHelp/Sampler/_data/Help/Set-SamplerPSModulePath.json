@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Sets the PSModulePath for the build environment.",
+  "Description": "This command let you define the PSModulePath for the build environment. This could\nbe important for DSC related builds when there are conflicts with modules in the\nProgram Files folder.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String[]"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-SamplerPSModulePath -PSModulePath \"C:\\Modules\" -RemovePersonal -RemoveProgramFiles"
+    }
+  ]
+}

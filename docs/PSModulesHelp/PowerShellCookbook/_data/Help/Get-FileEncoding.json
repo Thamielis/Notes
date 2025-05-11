@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Gets the encoding of a file",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-FileEncoding.ps1 .\\UnicodeScript.ps1\r\nBodyName          : unicodeFFFE\r\nEncodingName      : Unicode (Big-Endian)\r\nHeaderName        : unicodeFFFE\r\nWebName           : unicodeFFFE\r\nWindowsCodePage   : 1200\r\nIsBrowserDisplay  : False\r\nIsBrowserSave     : False\r\nIsMailNewsDisplay : False\r\nIsMailNewsSave    : False\r\nIsSingleByte      : False\r\nEncoderFallback   : System.Text.EncoderReplacementFallback\r\nDecoderFallback   : System.Text.DecoderReplacementFallback\r\nIsReadOnly        : True\r\nCodePage          : 1201"
+    }
+  ]
+}

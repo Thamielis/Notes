@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new table header with specified styling options.",
+  "Description": "The New-TableHeader function creates a new table header with customizable styling options such as font size, color, alignment, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-TableHeader -Names \"Name\", \"Age\", \"Email\" -Title \"Employee Information\" -Color \"black\" -BackGroundColor \"lightgray\" -FontSize 14 -FontWeight \"bold\" -FontStyle \"normal\" -FontVariant \"normal\" -FontFamily \"Arial\" -Alignment \"center\" -TextDecoration \"none\" -TextTransform \"uppercase\" -Direction \"ltr\" -AddRow -ColumnCount 3 -Display \"all\"\r\nCreates a table header with specified column names, title, and styling options."
+    }
+  ]
+}

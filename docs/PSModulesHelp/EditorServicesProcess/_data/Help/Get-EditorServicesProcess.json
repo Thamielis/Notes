@@ -1,0 +1,52 @@
+{
+  "Synopsis": "Gets processes running PowerShell EditorServices.",
+  "Description": "The Get-EditorServicesProcess function gets processes currently running on the system that are hosted within the PowerShell Editor Services Integrated Terminal. The returned object contains the process ID, AppDomain name, and current workspace path.  This object can also be used with other functions in this module to manipulate the processes.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "PSCustomObject"
+  ],
+  "Links": [
+    "https://github.com/SeeminglyScience/EditorServicesProcess/blob/master/docs/en-US/Get-EditorServicesProcess.md",
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-EditorServicesProcess\r\nReturns all current instances of the integrated terminal."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-EditorServicesProcess -Workspace *Projects*MyProject*\r\nReturns only instances that are open to a workspace that matches the specified pattern."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-EditorServicesProcess -ProcessId 23145 | Enter-EditorServicesProcess\r\nEnters the process with an ID of 23145 if it is within the integrated terminal."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Convert a source file path and line number to the line number in the built output",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "ConvertFrom-SourceLineNumber -Module ~\\2.0.0\\ModuleBuilder.psm1 -SourceFile ~\\Source\\Public\\Build-Module.ps1 -Line 27"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Gets an storage path for configuration files and data",
+  "Description": "Gets an AppData (or roaming profile) or ProgramData path for configuration and data storage. The folder returned is guaranteed to exist (which means calling this function actually creates folders).\n\nGet-ConfigurationPath is designed to be called from inside a module function WITHOUT any parameters.\n\nIf you need to call Get-ConfigurationPath from outside a module, you should pipe the ModuleInfo to it, like:\nGet-Module Powerline | Get-ConfigurationPath\n\nAs a general rule, there are three scopes which result in three different root folders\n    User:       $Env:LocalAppData\n    Machine:    $Env:ProgramData\n    Enterprise: $Env:AppData (which is the \"roaming\" folder of AppData)",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "1.  This command is primarily meant to be used in modules, to find a place where they can serialize data for storage.\n2.  It's techincally possible for more than one module to exist with the same name.\n    The command uses the Author or Company as a distinguishing name."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$CacheFile = Join-Path (Get-ConfigurationPath) Data.clixml\r\n$Data | Export-CliXML -Path $CacheFile\r\nThis example shows how to use Get-ConfigurationPath with Export-CliXML to cache data as clixml from inside a module."
+    }
+  ]
+}

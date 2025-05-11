@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Takes all unreleased changes listed in changelog, adds them to a new version,\nand makes a new, blank Unreleased section.",
+  "Description": "This cmdlet automates the updating of changelogs in Keep a Changelog 1.0.0 format at release time. It\ntakes all changes in the Unreleased section, adds them to a new section with a version number you specify,\nthen makes a new, blank Unreleased section.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "This cmdlet does not accept pipeline input."
+  ],
+  "Outputs": [
+    "This cmdlet does not generate output except in the event of an error or notice."
+  ],
+  "Links": [
+    "https://github.com/natescherer/ChangelogManagement"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Update-Changelog -ReleaseVersion 1.1.1 -LinkMode Automatic -LinkPattern @{FirstRelease=\"https://github.com/testuser/testrepo/tree/v{CUR}\";NormalRelease=\"https://github.com/testuser/testrepo/compare/v{PREV}..v{CUR}\";Unreleased=\"https://github.com/testuser/testrepo/compare/v{CUR}..HEAD\"}\r\nDoes not generate output, but:\r\n1. Takes all Unreleased changes in .\\CHANGELOG.md and adds them to a new release tagged with ReleaseVersion and today's date.\r\n2. Updates links according to LinkPattern.\r\n3. Creates a new, blank Unreleased section"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new table percentage bar object with specified attributes.",
+  "Description": "This function creates a new table percentage bar object with the provided attributes. It allows customization of the appearance of the percentage bar within a table.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Additional notes about the function."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-TablePercentageBar -ColumnID 1 -ColumnName \"Progress\" -Type 'round' -TextColor \"#ffffff\" -BorderColor \"#000000\" -BorderStyle 'solid' -BarColor \"#00ff00\" -BackgroundColor \"#ffffff\" -RoundValue 2\r\nDescription:\r\nCreates a new table percentage bar object for the column \"Progress\" with specified attributes."
+    }
+  ]
+}

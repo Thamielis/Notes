@@ -1,0 +1,47 @@
+{
+  "Synopsis": "Fills values into a [new] row in an Excel spreadsheet, and sets row formats.",
+  "Description": "Set-ExcelRow accepts either a Worksheet object or an ExcelPackage object returned by Export-Excel and the name of a sheet, and inserts the chosen contents into a row of the sheet.\r\n\r\n\r\nThe contents can be a constant, like \"42\", a formula or a script block which is converted into a constant or a formula.\r\n\r\n\r\nThe first cell of the row can optionally be given a heading.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "OfficeOpenXml.ExcelRow",
+    "System.String"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS\\> Set-ExcelRow -Worksheet $ws -Heading Total -Value {\"=sum($columnName`2:$columnName$endrow)\" }\r\n$Ws contains a worksheet object, and no Row number is specified so Set-ExcelRow will select the next row after the end of the data in the sheet.\r\n\r\nThe first cell in the row will contain \"Total\", and each of the other cells will contain =Sum(xx2:xx99) where xx is the column name, and 99 is the last row of data.\r\n\r\nNote the use of the backtick in the script block (`2) to Prevent 2 becoming part of the variable \"ColumnName\"\r\n\r\nThe script block can use $Worksheet, $Row, $Column (number), $ColumnName (letter), $StartRow/Column and $EndRow/Column."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "PS\\> Set-ExcelRow -Worksheet $ws -Heading Total -HeadingBold -Value {\"=sum($columnName`2:$columnName$endrow)\" } -NumberFormat 'Currency' -StartColumn 2 -Bold -BorderTop Double -BorderBottom Thin\r\nThis builds on the previous example, but this time the label \"Total\" appears in column 2 and the formula fills from column 3 onwards.\r\n\r\nThe formula and heading are set in bold face, and the formula is formatted for the local currency, and given a double line border above and single line border below."
+    }
+  ]
+}

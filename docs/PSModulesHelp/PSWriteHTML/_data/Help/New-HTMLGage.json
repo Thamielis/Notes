@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new HTML gauge with customizable options.",
+  "Description": "This function creates a new HTML gauge with various customizable options such as type, colors, fonts, values, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLGage -Value 75 -Label \"Progress\" -Type \"Donut\" -MinValue 0 -MaxValue 100 -SectorColors @(\"red\", \"yellow\", \"green\")\r\nCreates a new donut gauge with a value of 75, labeled as \"Progress\", with a range from 0 to 100, and sector colors red, yellow, and green."
+    }
+  ]
+}

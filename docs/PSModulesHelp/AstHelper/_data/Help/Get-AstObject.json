@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Returns all the AST objects in a script that are of a specified type.",
+  "Description": "Takes the content of a script, parses it, and returns all the objects in a script that are of that type.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Author: Thomas Rayner (@MrThomasRayner), workingsysadmin.com"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject[]"
+  ],
+  "Links": [
+    "http://workingsysadmin.com"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-AstObject -ScriptPath .\\MyScript.ps1 -Type CommandAst"
+    }
+  ]
+}

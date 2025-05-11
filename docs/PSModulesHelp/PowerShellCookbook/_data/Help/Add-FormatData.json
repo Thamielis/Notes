@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Adds a table formatting definition for the specified type name.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$r = [PSCustomObject] @{\r\n    Name = \"Lee\";\r\n    Phone = \"555-1212\";\r\n    SSN = \"123-12-1212\"\r\n}\r\nPS > $r.PSTypeNames.Add(\"AddressRecord\")\r\nPS > Add-FormatData -TypeName AddressRecord -TableColumns Name, Phone\r\nPS > $r\r\nName Phone\r\n---- -----\r\nLee  555-1212"
+    }
+  ]
+}

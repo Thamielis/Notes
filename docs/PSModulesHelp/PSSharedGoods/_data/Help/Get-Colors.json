@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieves RGB color values based on the provided color names.",
+  "Description": "The Get-Colors function retrieves RGB color values from a predefined list based on the color names provided as input. If no color names are specified, it returns all available RGB color values.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-Colors -Color \"Red\", \"Green\"\r\nRetrieves the RGB values for the colors Red and Green."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-Colors\r\nRetrieves all available RGB color values."
+    }
+  ]
+}

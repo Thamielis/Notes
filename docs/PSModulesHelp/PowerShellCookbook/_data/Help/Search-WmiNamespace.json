@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Search the WMI classes installed on the system for the provided match text.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Search-WmiNamespace Registry\r\nSearches WMI for any classes or descriptions that mention \"Registry\""
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Search-WmiNamespace Process ClassName,PropertyName\r\nSearchs WMI for any classes or properties that mention \"Process\""
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Search-WmiNamespace CPU -Detailed\r\nSearches WMI for any class names, descriptions, or properties that mention\r\n\"CPU\""
+    }
+  ]
+}

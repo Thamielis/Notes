@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Gets a list of files in the current directory, but with their owner added\nto the resulting objects.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-OwnerReport | Format-Table Name,LastWriteTime,Owner\r\nRetrieves all files in the current directory, and displays the\r\nName, LastWriteTime, and Owner"
+    }
+  ]
+}

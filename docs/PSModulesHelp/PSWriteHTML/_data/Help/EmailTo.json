@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Defines the email addresses to which the email should be sent.",
+  "Description": "This function sets the email addresses to which the email should be sent.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "EmailTo -Addresses \"user1@example.com\", \"user2@example.com\"\r\nSets the email addresses to which the email should be sent to \"user1@example.com\" and \"user2@example.com\"."
+    }
+  ]
+}

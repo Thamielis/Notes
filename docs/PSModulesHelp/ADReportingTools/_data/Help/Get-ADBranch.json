@@ -1,0 +1,47 @@
+{
+  "Synopsis": "Get a listing of members in an AD branch.",
+  "Description": "This command will get all users, groups, and computers from a given Active Directory organizational unit or container and display a hierarchical report. The search is recursive from the starting search base.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "ADBranchMember"
+  ],
+  "Links": [
+    "http://bit.ly/3tbCeDc",
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADBranch \"OU=IT,DC=company,DC=pri\"\r\n\r\nDistinguishedName                           Name            Description\r\n-----------------                           ----            -----------\r\nCN=AprilS,OU=IT,DC=Company,DC=Pri           AprilS          PowerShell Guru\r\n\r\n\r\n   Branch: OU=It,DC=Company,DC=Pri [User]\r\n\r\nDistinguishedName                           Name            Description\r\n-----------------                           ----            -----------\r\nCN=ArtD,OU=IT,DC=Company,DC=Pri             ArtD            PowerShell Engineer\r\nCN=GladysK,OU=IT,DC=Company,DC=Pri          GladysK         Senior AD and Ide...\r\nCN=MaryL,OU=IT,DC=Company,DC=Pri            MaryL           Main IT\r\nCN=MikeS,OU=IT,DC=Company,DC=Pri            MikeS           Backup IT\r\n\r\n\r\n   Branch: OU=It,DC=Company,DC=Pri [Group]\r\n\r\nDistinguishedName                           Name            Description\r\n-----------------                           ----            -----------\r\nCN=IT,OU=IT,DC=Company,DC=Pri               IT\r\nCN=Web Servers,OU=IT,DC=Company,DC=Pri      Web Servers\r\n...\r\nGet members of the IT organizational unit. There is a formatting bug where the first item isn't properly grouped."
+    },
+    {
+      "Title": "Example 2",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADBranch \"Ou=accounting,Dc=company,dc=pri\" -objectclass group\r\n\r\nDistinguishedName                           Name            Description\r\n-----------------                           ----            -----------\r\nCN=Accounting,OU=Accounting,              Accounting        Company Accounting DC=Company,DC=Pri\r\n\r\n\r\n   Branch: OU=Corp Investment,OU=Finance,OU=Accounting,DC=Company,DC=Pri [Group]\r\n\r\nDistinguishedName                           Name            Description\r\n-----------------                           ----            -----------\r\nCN=StrategyDL,OU=Corp                       StrategyDL      Strategic plann... Investment,OU=Finance,OU=Accounting,\r\nDC=Company,DC=Pri\r\n\r\n\r\n   Branch: OU=Payroll,OU=Accounting,DC=Company,DC=Pri [Group]\r\n\r\nDistinguishedName                           Name            Description\r\n-----------------                           ----            -----------\r\nCN=Payroll Managers,OU=Payroll,             Payroll Managers\r\nOU=Accounting,DC=Company,DC=Pri\r\nGet only groups in the Accounting OU tree."
+    }
+  ]
+}

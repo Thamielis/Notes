@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Takes a changelog in Keep a Changelog 1.0.0 format and parses the data into a PowerShell object.",
+  "Description": "Takes a changelog in Keep a Changelog 1.0.0 format and parses the data into a PowerShell object.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "This cmdlet does not accept pipeline input."
+  ],
+  "Outputs": [
+    "This cmdlet outputs a PSCustomObject containing the changelog data."
+  ],
+  "Links": [
+    "https://github.com/natescherer/ChangelogManagement"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-ChangelogData\r\nReturns an object containing Header, Unreleased, Released, Footer, and LastVersion properties."
+    }
+  ]
+}

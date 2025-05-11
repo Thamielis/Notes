@@ -1,0 +1,48 @@
+{
+  "Synopsis": "Calculates NT hash of a given password.",
+  "Description": "Applies the NT one-way function (NT OWF) to a given cleartext password and returns the resulting hash, which is just the MD4 hash function applied to the UTF-16 encoded input.\r\n\r\n\r\nThis hash is sometimes called NTLM hash, because it is mainly used in the NTLM(v2) network authentication protocol.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Cmdlet",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.Security.SecureString"
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [
+    "https://github.com/MichaelGrafnetter/DSInternals/blob/master/Documentation/PowerShell/ConvertTo-NTHash.md",
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> ConvertTo-NTHash\r\n\r\ncmdlet ConvertTo-NTHash at command pipeline position 1\r\nSupply values for the following parameters:\r\n(Type !? for Help.)\r\nPassword: ********\r\n92937945b518814341de3f726500d4ff\r\nReads a password from the command line and calculates its NT hash."
+    },
+    {
+      "Title": "Example 2",
+      "Markdown": "",
+      "Code": "PS C:\\> $pwd = ConvertTo-SecureString -String 'Pa$$w0rd' -AsPlainText -Force\r\nPS C:\\> ConvertTo-NTHash -Password $pwd\r\n92937945b518814341de3f726500d4ff\r\nCalculates the NT hash of password Pa$$w0rd ."
+    }
+  ]
+}

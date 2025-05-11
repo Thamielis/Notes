@@ -1,0 +1,47 @@
+{
+  "Synopsis": "Lists the content of a folder and supports long path names (>256 characters)",
+  "Description": "Uses the Microsoft.Experimental.IO assembly to list folder contents without\npath name length limitations. You can use this function to search for and identify \nfiles and folders that use long path names.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://powershell.one/tricks/assemblies/load-from-memory\nhttps://github.com/TobiasPSP/Modules.PSOneTools/blob/master/PSOneTools/1.5/Get-PSOneDirectory.ps1\nhttps://github.com/TobiasPSP/Modules.PSOneTools/blob/master/PSOneTools/1.5/Internal/Install-LongPathSupport.ps1",
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-PSOneDirectory -Path C:\\Windows -ErrorAction SilentlyContinue\r\nDumps the entire content of the windows folder and reports all files\r\nand folders and their path length. Error messages due to folders\r\nwhere you have no access permissions are suppressed."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-PSOneDirectory -Path C:\\Windows -ErrorAction SilentlyContinue |\r\n  Where-Object PathLength -gt 200\r\nLists files and folders with a path length of greater than 200 characters. \r\nError messages due to folders where you have no access permissions are suppressed."
+    }
+  ]
+}

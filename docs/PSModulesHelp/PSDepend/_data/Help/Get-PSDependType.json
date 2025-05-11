@@ -1,0 +1,57 @@
+{
+  "Synopsis": "Get dependency types and related information",
+  "Description": "Get dependency types and related information\n\nChecks PSDependMap.psd1 for dependency types,\nverifies dependency scripts exist,\ngets help content for dependency scripts,\nreturns various info on each dependency type",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    "https://github.com/RamblingCookieMonster/PSDepend"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-PSDependType -DependencyType PSGalleryModule -ShowHelp\r\nShow help for the PSGalleryModule dependency type."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-PSDependType\r\n# List dependency types defined in PSDependMap.psd1 in the root of your PSDepend module folder"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-PSDependType -Path \\\\Path\\To\\Central.DependencyMap.psd1\r\n# List dependency types defined in a centralized dependency map"
+    }
+  ]
+}

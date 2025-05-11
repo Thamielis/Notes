@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Removes specified GPOZaurr folders and backs them up to a specified path.",
+  "Description": "This function removes specified GPOZaurr folders based on the provided criteria and backs them up to a specified path. It allows for filtering by folder type, domain, and other parameters.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-GPOZaurrFolders -BackupPath \"C:\\Backups\" -BackupDated -Type 'All' -FolderType 'NTFRS' -FolderName \"Folder1\" -LimitProcessing 10 -Forest \"ExampleForest\" -ExcludeDomains \"Domain1\" -IncludeDomains \"Domain2\" -ExtendedForestInformation $info\r\nRemoves GPOZaurr folders of type 'NTFRS' named \"Folder1\" from all domains in the forest \"ExampleForest\", backs them up to \"C:\\Backups\" with a timestamp, and limits processing to 10 folders."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "Synopsis": "Generates a random string of specified length with various options.",
+  "Description": "This function generates a random string of specified length with options to convert the case and include only letters.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-RandomStringName -Size 10\r\nGenerates a random string of length 10."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-RandomStringName -Size 8 -ToLower\r\nGenerates a random string of length 8 and converts it to lowercase."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-RandomStringName -Size 12 -ToUpper\r\nGenerates a random string of length 12 and converts it to uppercase."
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "Get-RandomStringName -Size 15 -LettersOnly\r\nGenerates a random string of length 15 with only letters."
+    }
+  ]
+}

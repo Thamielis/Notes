@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Executes git with the provided arguments.",
+  "Description": "This command executes git with the provided arguments and throws an error\nif the call failed.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Git does not throw an error that can be caught by the pipeline. For example\nthis git command error but does not throw 'hello' as one would expect.\n```\nPS> try { git describe --contains } catch { throw 'hello' }\nfatal: cannot describe '144e0422398e89cc8451ebba738c0a410b628302'\n```\nSo we have to determine if git worked or not by checking the last exit code\nand then throw an error to stop the pipeline."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Invoke-SamplerGit -Argument @('config', 'user.name', 'MyName')\r\nCalls git to set user name in the git config."
+    }
+  ]
+}

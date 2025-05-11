@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Creates a transport filter.",
+  "Description": "The New-NetTransportFilter cmdlet creates a transport filter. A transport filter specifies the TCP settings, as a NetTcpSetting object, to apply to an IP address prefix or a TCP port range. Specify the setting to apply by name. You can use the Set-NetTCPSetting cmdlet to modify a setting.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetTransportFilter"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkID=288397",
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Create a transport filter",
+      "Markdown": "",
+      "Code": "PS C:\\>New-NetTransportFilter –SettingName Datacenter –DestinationPrefix 192.168.0.0/16\r\nThis command creates a transport filter for the 192.168.0.0/16 network. The data center TCP settings applies to all TCP connections between the computer and other computers in this network."
+    },
+    {
+      "Title": "Example 2: Create a transport filter for an app",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetTransportFilter –SettingName Compat –LocalPortStart 5000 –LocalPortEnd 5000 –RemotePortStart 6000 –RemotePortEnd 6000\r\nThis command creates a transport filter for a compatibility setting. The command specifies port ranges for both local and remote computers."
+    }
+  ]
+}

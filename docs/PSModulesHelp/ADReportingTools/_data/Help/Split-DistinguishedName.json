@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Split a distinguished name into its components.",
+  "Description": "Split-DistinguishedName will take a disdinguishedname and break it down to its component elements. The command does not verify the name or any of its elements.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.String"
+  ],
+  "Outputs": [
+    "ADDistinguishedNameInfo"
+  ],
+  "Links": [
+    "https://bit.ly/3uyBoRt"
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-ADGroup supporttech | Split-Distinguishedname\r\n\r\n\r\nName      : SupportTech\r\nBranch    : Help Desk\r\nBranchDN  : OU=Help Desk,OU=IT,DC=Company,DC=Pri\r\nDomain    : Company\r\nDomainDN  : DC=Company,DC=Pri\r\nDomainDNS : Company.Pri"
+    },
+    {
+      "Title": "Example 2",
+      "Markdown": "",
+      "Code": "PS C:\\> Split-DistinguishedName \"CN=Foo,OU=Bar,OU=Oz,DC=Research,DC=Globomantics,DC=com\"\r\n\r\n\r\nName      : Foo\r\nBranch    : Bar\r\nBranchDN  : OU=Bar,OU=Oz,DC=Research,DC=Globomantics,DC=com\r\nDomain    : Research\r\nDomainDN  : DC=Research,DC=Globomantics,DC=com\r\nDomainDNS : Research.Globomantics.com"
+    }
+  ]
+}

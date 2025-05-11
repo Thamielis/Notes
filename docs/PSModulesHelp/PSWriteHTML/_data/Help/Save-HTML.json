@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Saves HTML (text) to a file. Can be used with conjucncton with New-HTML.",
+  "Description": "Saves HTML (text) to a file. Can be used with conjucncton with New-HTML, although New-HTML has Save-HTML built-in already when providing FilePath parameter.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$Company = 'Evotec'\r\n$Text = @\"\r\nThis email is from Evotec. It may contain confidential information. It is intended for the addressee only and may not be copied or disclosed to any third party without our permission. If you are not the intended recipient please contact the sender as soon as possible and delete the material from any computer. If this email has been sent as a personal message to the addressee, the sender is not acting in his/her capacity as an employee or officer of $Company Limited and no liability is accepted for the content of any such email. Outgoing email may be monitored for the purpose of ensuring compliance with our email policy and relevant laws\r\n\"@\r\n\r\n$HTML = New-HTMLText -FontSize 10 -FontFamily 'Source Sans Pro' -Text $Text\r\nSave-HTML -FilePath $PSScriptRoot\\Disclaimer.html -HTML $HTML -ShowHTML"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$Test = EmailBody {\r\n    EmailText -LineBreak\r\n    EmailText -Text 'Z poważaniem' -FontSize 8pt -FontFamily 'Verdana,sans-serif' -Color Gray -LineBreak\r\n    EmailText -Text $DisplayName -FontSize 8pt -FontFamily 'Verdana,sans-serif' -Color Gray\r\n    EmailText -Text $Title -FontSize 8pt -FontFamily 'Verdana,sans-serif' -Color Gray\r\n    EmailText -Text $Department -FontSize 8pt -FontFamily 'Verdana,sans-serif' -Color Gray\r\n    EmailText -LineBreak\r\n    if ($Mobile) {\r\n        EmailText -Text \"m: $Mobile\" -FontSize 8pt -FontFamily 'Verdana,sans-serif' -Color Gray\r\n    }\r\n    EmailText -Text \"e: $Email\" -FontSize 8pt -FontFamily 'Verdana,sans-serif' -Color Gray\r\n    EmailText -LineBreak\r\n    EmailText -Text $CompanyName -FontSize 8pt -FontFamily 'Verdana,sans-serif' -Color Gray\r\n    EmailText -Text $StreetAddress -FontSize 8pt -FontFamily 'Verdana,sans-serif' -Color Gray\r\n    EmailText -Text \"$PostalCode $City\" -FontSize 8pt -FontFamily 'Verdana,sans-serif' -Color Gray\r\n    EmailText -LineBreak\r\n    EmailText -Text \"[www.aliorleasing.pl](https://www.aliorleasing.pl)\" -FontSize 8pt -FontFamily 'Verdana,sans-serif' -Color Gray\r\n    EmailText -LineBreak\r\n    EmailLayoutRow {\r\n        EmailLayoutColumn {\r\n            EmailImage -Source 'https://aliorleasing.pl/images/logoAL2.jpg' -UrlLink '' -AlternativeText 'Alior Leasing Logo' -Width '134' -Inline -Height '90'\r\n        }\r\n        EmailLayoutColumn {\r\n}\r\n        EmailLayoutColumn {\r\n            EmailImage -Source 'https://aliorleasing.pl/images/akcia-nnw.jpg' -UrlLink '' -AlternativeText 'Alior Leasing Logo' -Width '300' -Inline -Height '90'\r\n        }\r\n    }\r\n    EmailText -LineBreak\r\n    EmailText -FontWeight bold, normal -FontSize 8pt -FontFamily 'Verdana,sans-serif' -Color Gray -Text \"Alior Leasing\", `\r\n        \" Spółka z ograniczoną odpowiedzialnością z siedzibą w Warszawie, ul. Łopuszańska 38D, 02-232 Warszawa, wpisana do rejestru przedsiębiorców Krajowego Rejestru Sądowego pod numerem KRS: 0000554171, której dokumentacja przechowywana jest w Sądzie Rejonowym dla M. St. Warszawy w Warszawie, XIV Wydział Gospodarczy Krajowego Rejestru Sądowego, NIP: 5223027866, REGON: 361335353, o kapitale zakładowym i wpłaconym: 15 009 000,00 PLN.\"\r\n    EmailText -LineBreak\r\n}\r\n\r\nSave-HTML -FilePath $PSScriptRoot\\Output\\TestBody2.html -ShowHTML -HTML $Test"
+    }
+  ]
+}

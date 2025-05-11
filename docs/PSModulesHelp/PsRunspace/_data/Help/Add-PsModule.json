@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Import a Module in a [System.Management.Automation.Runspaces.InitialSessionState] instance",
+  "Description": "Used by Add-PsCommand\nUses ImportPSModule() or ImportPSModulesFromPath() depending on the module",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$InitialSessionState = [system.management.automation.runspaces.initialsessionstate]::CreateDefault()\r\nAdd-PsModule -InitialSessionState $InitialSessionState -ModuleInfo $ModuleInfo"
+    }
+  ]
+}

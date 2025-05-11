@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Update the installation repository access between all repositories and selected repositories.",
+  "Description": "Update repository access for a GitHub App installation between all repositories and selected repositories.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Update-GitHubAppInstallationRepositoryAccess -Enterprise 'msx' -Organization 'PSModule' -InstallationID 12345678 -RepositorySelection 'all'\r\nUpdate the repository access for the GitHub App installation with the ID '12345678'\r\nto all repositories on the organization 'PSModule' in the enterprise 'msx'."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$params = @{\r\n    Enterprise          = 'msx'\r\n    Organization        = 'PSModule'\r\n    InstallationID      = 12345678\r\n    RepositorySelection = 'selected'\r\n    Repositories        = 'repo1', 'repo2'\r\n}\r\nUpdate-GitHubAppInstallationRepositoryAccess @params\r\nUpdate the repository access for the GitHub App installation with the ID '12345678'\r\nto the repositories 'repo1' and 'repo2' on the organization 'PSModule' in the enterprise 'msx'."
+    }
+  ]
+}

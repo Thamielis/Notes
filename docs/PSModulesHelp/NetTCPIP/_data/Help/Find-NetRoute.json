@@ -1,0 +1,45 @@
+{
+  "Synopsis": "Finds the best local IP address and the best route to reach a remote address.",
+  "Description": "The Find-NetRoute cmdlet finds the best local IP address and the best route to reach a remote address. Specify the remote address to reach. You can also specify an interface and a local address to use to reach the remote address.\r\n\r\n\r\nFor more information about routing, see Chapter 5 - IP Routing (http://technet.microsoft.com/library/bb727001.aspx) in the TechNet library.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "NetIPAddress, NetRoute"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkID=313144",
+    null,
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Find a local address and route",
+      "Markdown": "",
+      "Code": "PS C:\\>Find-NetRoute -RemoteIPAddress \"10.79.197.200\"\r\nIPAddress         : 172.31.234.140\r\nInterfaceIndex    : 3\r\nInterfaceAlias    : Ethernet\r\nAddressFamily     : IPv4\r\nType              : Unicast\r\nPrefixLength      : 21\r\nPrefixOrigin      : Dhcp\r\nSuffixOrigin      : Dhcp\r\nAddressState      : Preferred\r\nValidLifetime     : 6.00:10:40\r\nPreferredLifetime : 6.00:10:40\r\nSkipAsSource      : False\r\nPolicyStore       : ActiveStore\r\n\r\n\r\nCaption            : \r\nDescription        : \r\nElementName        : \r\nInstanceID         : :8:8:8:9:55=55;A<8=;8<=<8;55; \r\nAdminDistance      : \r\nDestinationAddress :\r\nIsStatic           : \r\nRouteMetric        : 0\r\nTypeOfRoute        : 3\r\nAddressFamily      : IPv4\r\nDestinationPrefix  : 0.0.0.0/0\r\nInterfaceAlias     : Ethernet\r\nInterfaceIndex     : 3\r\nNextHop            : 172.31.232.1\r\nPreferredLifetime  : 8.00:00:00\r\nProtocol           : NetMgmt\r\nPublish            : No\r\nStore              : ActiveStore\r\nValidLifetime      : 8.00:00:00\r\nPSComputerName     : \r\nifIndex            : 3\r\nThis command finds a NetIPAddress object and NetRoute object to use to access the IP address 10.79.197.200. The command returns two objects. The first object is the local IP address. The second object is the local route that includes the selected connectivity path and next hop."
+    }
+  ]
+}

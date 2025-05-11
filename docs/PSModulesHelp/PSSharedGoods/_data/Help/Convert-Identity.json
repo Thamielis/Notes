@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Small command that tries to resolve any given object",
+  "Description": "Small command that tries to resolve any given object - be it SID, DN, FSP or Netbiosname",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$Identity = @(\r\n    'S-1-5-4'\r\n    'S-1-5-4'\r\n    'S-1-5-11'\r\n    'S-1-5-32-549'\r\n    'S-1-5-32-550'\r\n    'S-1-5-32-548'\r\n    'S-1-5-64-10'\r\n    'S-1-5-64-14'\r\n    'S-1-5-64-21'\r\n    'S-1-5-18'\r\n    'S-1-5-19'\r\n    'S-1-5-32-544'\r\n    'S-1-5-20-20-10-51' # Wrong SID\r\n    'S-1-5-21-853615985-2870445339-3163598659-512'\r\n    'S-1-5-21-3661168273-3802070955-2987026695-512'\r\n    'S-1-5-21-1928204107-2710010574-1926425344-512'\r\n    'CN=Test Test 2,OU=Users,OU=Production,DC=ad,DC=evotec,DC=pl'\r\n    'Test Local Group'\r\n    'przemyslaw.klys@evotec.pl'\r\n    'test2'\r\n    'NT AUTHORITY\\NETWORK'\r\n    'NT AUTHORITY\\SYSTEM'\r\n    'S-1-5-21-853615985-2870445339-3163598659-519'\r\n    'TEST\\some'\r\n    'EVOTECPL\\Domain Admins'\r\n    'NT AUTHORITY\\INTERACTIVE'\r\n    'INTERACTIVE'\r\n    'EVOTEC\\Domain Admins'\r\n    'EVOTECPL\\Domain Admins'\r\n    'Test\\Domain Admins'\r\n    'CN=S-1-5-21-1928204107-2710010574-1926425344-512,CN=ForeignSecurityPrincipals,DC=ad,DC=evotec,DC=xyz' # Valid\r\n    'CN=S-1-5-21-1928204107-2710010574-512,CN=ForeignSecurityPrincipals,DC=ad,DC=evotec,DC=xyz' # not valid\r\n    'CN=S-1-5-21-1928204107-2710010574-1926425344-512,CN=ForeignSecurityPrincipals,DC=ad,DC=evotec,DC=xyz' # cached\r\n)\r\n$TestOutput = Convert-Identity -Identity $Identity -Verbose\r\n\r\nOutput:\r\n\r\nName                                 SID                                            DomainName     Type                    Error\r\n----                                 ---                                            ----------     ----                    -----\r\nNT AUTHORITY\\INTERACTIVE             S-1-5-4                                                       WellKnownGroup\r\nNT AUTHORITY\\INTERACTIVE             S-1-5-4                                                       WellKnownGroup\r\nNT AUTHORITY\\Authenticated Users     S-1-5-11                                                      WellKnownGroup\r\nBUILTIN\\Server Operators             S-1-5-32-549                                                  WellKnownGroup\r\nBUILTIN\\Print Operators              S-1-5-32-550                                                  WellKnownGroup\r\nBUILTIN\\Account Operators            S-1-5-32-548                                                  WellKnownGroup\r\nNT AUTHORITY\\NTLM Authentication     S-1-5-64-10                                                   WellKnownGroup\r\nNT AUTHORITY\\SChannel Authentication S-1-5-64-14                                                   WellKnownGroup\r\nNT AUTHORITY\\Digest Authentication   S-1-5-64-21                                                   WellKnownGroup\r\nNT AUTHORITY\\SYSTEM                  S-1-5-18                                                      WellKnownAdministrative\r\nNT AUTHORITY\\NETWORK SERVICE         S-1-5-19                                                      WellKnownGroup\r\nBUILTIN\\Administrators               S-1-5-32-544                                                  WellKnownAdministrative\r\nS-1-5-20-20-10-51                    S-1-5-20-20-10-51                                             Unknown                 Exception calling \"Translate\" with \"1\" argument(s): \"Some or all identity references could not be translated.\"\r\nEVOTEC\\Domain Admins                 S-1-5-21-853615985-2870445339-3163598659-512   ad.evotec.xyz  Administrative\r\nEVOTECPL\\Domain Admins               S-1-5-21-3661168273-3802070955-2987026695-512  ad.evotec.pl   Administrative\r\nTEST\\Domain Admins                   S-1-5-21-1928204107-2710010574-1926425344-512  test.evotec.pl Administrative\r\nEVOTECPL\\TestingAD                   S-1-5-21-3661168273-3802070955-2987026695-1111 ad.evotec.pl   NotAdministrative\r\nEVOTEC\\Test Local Group              S-1-5-21-853615985-2870445339-3163598659-3610  ad.evotec.xyz  NotAdministrative\r\nEVOTEC\\przemyslaw.klys               S-1-5-21-853615985-2870445339-3163598659-1105  ad.evotec.xyz  NotAdministrative\r\ntest2                                                                                              Unknown                 Exception calling \"Translate\" with \"1\" argument(s): \"Some or all identity references could not be translated.\"\r\nNT AUTHORITY\\NETWORK                 S-1-5-2                                                       WellKnownGroup\r\nNT AUTHORITY\\SYSTEM                  S-1-5-18                                                      WellKnownAdministrative\r\nEVOTEC\\Enterprise Admins             S-1-5-21-853615985-2870445339-3163598659-519   ad.evotec.xyz  Administrative\r\nTEST\\some                            S-1-5-21-1928204107-2710010574-1926425344-1106 test.evotec.pl NotAdministrative\r\nEVOTECPL\\Domain Admins               S-1-5-21-3661168273-3802070955-2987026695-512  ad.evotec.pl   Administrative\r\nNT AUTHORITY\\INTERACTIVE             S-1-5-4                                                       WellKnownGroup\r\nNT AUTHORITY\\INTERACTIVE             S-1-5-4                                                       WellKnownGroup\r\nEVOTEC\\Domain Admins                 S-1-5-21-853615985-2870445339-3163598659-512   ad.evotec.xyz  Administrative\r\nEVOTECPL\\Domain Admins               S-1-5-21-3661168273-3802070955-2987026695-512  ad.evotec.pl   Administrative\r\nTEST\\Domain Admins                   S-1-5-21-1928204107-2710010574-1926425344-512  test.evotec.pl Administrative\r\nTEST\\Domain Admins                   S-1-5-21-1928204107-2710010574-1926425344-512  test.evotec.pl Administrative\r\nS-1-5-21-1928204107-2710010574-512   S-1-5-21-1928204107-2710010574-512                            Unknown                 Exception calling \"Translate\" with \"1\" argument(s): \"Some or all identity references could not be translated.\"\r\nTEST\\Domain Admins                   S-1-5-21-1928204107-2710010574-1926425344-512  test.evotec.pl Administrative"
+    }
+  ]
+}

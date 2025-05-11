@@ -1,0 +1,56 @@
+{
+  "Synopsis": "Copies a worksheet between workbooks or within the same workbook.",
+  "Description": "Copy-ExcelWorkSheet takes a Source object which is either a worksheet, or a package, Workbook or path, in which case the source worksheet can be specified by name or number (starting from 1). The destination worksheet can be explicitly named, or will follow the name of the source if no name is specified. The Destination workbook can be given as the path to an XLSx file, an ExcelPackage object or an ExcelWorkbook object.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Copy-ExcelWorkSheet -SourceWorkbook Test1.xlsx  -DestinationWorkbook Test2.xlsx\r\nThis is the simplest version of the command: no source worksheet is specified so Copy-ExcelWorksheet uses the first sheet in the workbook No Destination sheet is specified so the new worksheet will be the same as the one which is being copied."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Copy-ExcelWorkSheet -SourceWorkbook Server1.xlsx -sourceWorksheet \"Settings\" -DestinationWorkbook Settings.xlsx -DestinationWorksheet \"Server1\"\r\nHere the Settings page from Server1's workbook is copied to the 'Server1\" page of a \"Settings\" workbook."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "$excel = Open-ExcelPackage   .\\test.xlsx\r\nC:\\&gt; Copy-ExcelWorkSheet -SourceWorkbook $excel -SourceWorkSheet \"first\" -DestinationWorkbook $excel -Show -DestinationWorksheet Duplicate This opens the workbook test.xlsx and copies the worksheet named \"first\" to a new worksheet named \"Duplicate\", because -Show is specified the file is saved and opened in Excel"
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "$excel = Open-ExcelPackage .\\test.xlsx\r\nC:\\&gt; Copy-ExcelWorkSheet -SourceWorkbook $excel -SourceWorkSheet 1 -DestinationWorkbook $excel -DestinationWorksheet Duplicate C:\\&gt; Close-ExcelPackage $excel This is almost the same as the previous example, except source sheet is specified by position rather than name and because -Show is not specified, so other steps can be carried using the package object, at the end the file is saved by Close-ExcelPackage"
+    }
+  ]
+}

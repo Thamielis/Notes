@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Adds a named-range to an existing Excel worksheet.",
+  "Description": "It is often helpful to be able to refer to sets of cells with a name rather than using their co-ordinates; Add-ExcelName sets up these names.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS\\> Add-ExcelName -Range $ws.Cells[$dataRange] -RangeName $rangeName\r\n$WS is a worksheet, and $dataRange is a string describing a range of cells - for example \"A1:Z10\" - which will become a named range, using the name in $rangeName."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieves information about Group Policy Objects (GPOs) and checks permission consistency across domains.",
+  "Description": "The Get-GPOZaurrPermissionConsistency function retrieves information about GPOs and checks permission consistency across domains. It can filter by GPO name, GPO GUID, or type of consistency. It also provides options to include/exclude specific domains and verify inheritance.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrPermissionConsistency -GPOName \"TestGPO\" -Forest \"Contoso\" -IncludeDomains @(\"DomainA\", \"DomainB\") -Type \"Consistent\"\r\nRetrieves permission consistency information for the GPO named \"TestGPO\" in the forest \"Contoso\" for domains \"DomainA\" and \"DomainB\" with consistent permissions."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrPermissionConsistency -GPOGuid \"12345678-1234-1234-1234-1234567890AB\" -Forest \"Fabrikam\" -Type \"Inconsistent\" -VerifyInheritance\r\nRetrieves permission consistency information for the GPO with GUID \"12345678-1234-1234-1234-1234567890AB\" in the forest \"Fabrikam\" for all domains with inconsistent permissions and verifies inheritance."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Enable automated security fixes",
+  "Description": "Enables automated security fixes for a repository. The authenticated user must have admin access to the repository.\nFor more information, see\n\"[Configuring automated security fixes](https://docs.github.com/articles/configuring-automated-security-fixes)\".",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Enable automated security fixes](https://docs.github.com/rest/repos/repos#enable-automated-security-fixes)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Enable-GitHubRepositorySecurityFix -Owner 'PSModule' -Repository 'GitHub'\r\nEnables automated security fixes for the repository."
+    }
+  ]
+}

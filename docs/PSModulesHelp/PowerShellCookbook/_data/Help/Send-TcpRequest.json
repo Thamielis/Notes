@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Send a TCP request to a remote computer, and return the response.\nIf you do not supply input to this script (via either the pipeline, or the\n-InputObject parameter,) the script operates in interactive mode.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$http = @\"\r\n  GET / HTTP/1.1\r\n  Host:bing.com\r\n  `n`n\r\n\"@\r\n$http | Send-TcpRequest bing.com 80"
+    }
+  ]
+}

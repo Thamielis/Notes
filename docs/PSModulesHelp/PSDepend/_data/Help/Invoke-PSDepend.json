@@ -1,0 +1,55 @@
+{
+  "Synopsis": "Invoke PSDepend",
+  "Description": "Invoke PSDepend\n\nSearches for and runs *.depend.psd1 and requirements.psd1 files in the current and nested paths\n\nSee Get-Help about_PSDepend for more information.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null,
+    null,
+    null,
+    null,
+    "https://github.com/RamblingCookieMonster/PSDepend"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Invoke-PSDepend\r\n# Search for and run *.deploy.psd1 and requirements.psd1 files under the current path"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Invoke-PSDepend -Path C:\\Path\\To\\require.psd1\r\n# Install dependencies from require.psd1"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Invoke-PSDepend -Path C:\\Requirements -Recurse $False\r\n# Find and run *.depend.psd1 and requirements.psd1 files under C\\Requirements (but not subfolders)"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Reads information about the originating DC from a ntds.dit file, including domain name, domain SID, DC name and DC site.",
+  "Description": "Reads domain controller (DC) infromation from a ntds.dit file that is either retrieved from an offline DC or from an (IFM) backup.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Cmdlet",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "DSInternals.PowerShell.DomainController"
+  ],
+  "Links": [
+    "https://github.com/MichaelGrafnetter/DSInternals/blob/master/Documentation/PowerShell/Get-ADDBDomainController.md",
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADDBDomainController -DatabasePath .\\ntds.dit\r\n<# Sample Output:\r\nName                       : LON-DC1\r\nDNSHostName                : LON-DC1.contoso.com\r\nServerReference            : CN=LON-DC1,OU=Domain Controllers,DC=contoso,DC=com\r\nDomainName                 : contoso.com\r\nForestName                 : contoso.com\r\nNetBIOSDomainName          : contoso\r\nDomainSid                  : S-1-5-21-1236425271-2880748467-2592687428\r\nDomainGuid                 : 262d915a-3c58-4614-86c0-f9fb3f1aa1cd\r\nGuid                       : 71ccee43-1c03-4ab1-910c-ed4168df5a33\r\nSid                        : S-1-5-21-1236425271-2880748467-2592687428-1111\r\nDomainMode                 : WinThreshold\r\nForestMode                 : WinThreshold\r\nSiteName                   : Default-First-Site-Name\r\nDsaGuid                    : 0a8574e2-9361-4f3c-8528-ca73d7534f4b\r\nInvocationId               : 14a1b16d-591c-45bc-a342-153090027bbc\r\nIsADAM                     : False\r\nIsGlobalCatalog            : True\r\nOptions                    : GlobalCatalog\r\nOSName                     : Windows Server 2019 Datacenter\r\nOSVersion                  : 10.0\r\nOSVersionMajor             : 10\r\nOSVersionMinor             : 0\r\nDomainNamingContext        : DC=contoso,DC=com\r\nConfigurationNamingContext : CN=Configuration,DC=contoso,DC=com\r\nSchemaNamingContext        : CN=Schema,CN=Configuration,DC=contoso,DC=com\r\nWritablePartitions         : {DC=contoso,DC=com, CN=Configuration,DC=contoso,DC=com, CN=Schema,CN=Configuration,DC=contoso,DC=com, DC=DomainDnsZones,DC=contoso,DC=com...}\r\nState                      : BackedUp\r\nHighestCommittedUsn        : 69642\r\nUsnAtIfm                   :\r\nBackupUsn                  : 65812\r\nBackupExpiration           : 2/4/2020 6:32:27 AM\r\nEpoch                      : 961\r\n#>\r\nReads DC information from a ntds.dit file located in the working directory."
+    }
+  ]
+}

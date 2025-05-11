@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Converts an IP address to a PTR record",
+  "Description": "This function takes an IP address as input and converts it to a PTR record.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Convert-IpAddressToPtr -IPAddress \"10.1.2.3\""
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Convert-IpAddressToPtr -IPAddress \"10.1.2.3\", \"8.8.8.8\" -AsObject"
+    }
+  ]
+}

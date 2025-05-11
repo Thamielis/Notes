@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new HTML logo with specified parameters.",
+  "Description": "This function creates a new HTML logo using the provided parameters. It allows customization of the left and right logo names, strings, and the option to hide logos.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLLogo -LogoPath \"C:\\Logos\\logo.png\" -LeftLogoName \"CompanyA\" -RightLogoName \"CompanyB\" -LeftLogoString \"Company A Logo\" -RightLogoString \"Company B Logo\"\r\nCreates a new HTML logo with custom left and right logo names and strings."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-HTMLLogo -LogoPath \"C:\\Logos\\logo.png\" -HideLogos\r\nCreates a new HTML logo with logos hidden."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Get FSMO holders.",
+  "Description": "This command will display all FSMO role holders for the forest and domain at a glance.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "ADFSMORole"
+  ],
+  "Links": [
+    "https://bit.ly/3ctNioz",
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> PS C:\\> Get-ADFSMO\r\n\r\n\r\n   Domain: Company.Pri\r\n   Forest: Company.Pri\r\n\r\n\r\nPDCEmulator          : DOM1.Company.Pri\r\nRIDMaster            : DOM1.Company.Pri\r\nInfrastructureMaster : DOM1.Company.Pri\r\nSchemaMaster         : DOM1.Company.Pri\r\nDomainNamingMaster   : DOM1.Company.Pri\r\nGet the FSMO holders for the current domain and forest."
+    }
+  ]
+}

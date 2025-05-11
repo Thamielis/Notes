@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Deserializes objects from PowerShell Data language (PSD1)",
+  "Description": "Converts psd1 notation to actual objects, and supports passing in additional converters\nin addition to using the built-in registered converters (see Add-MetadataConverter).\n\nNOTE: Any Converters that are passed in are temporarily added as though passed Add-MetadataConverter",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "ConvertFrom-Metadata 'PSObject @{ Name = PSObject @{ First = \"Joel\"; Last = \"Bennett\" }; Id = 1; }'\r\nId Name\r\n-- ----\r\n1 @{Last=Bennett; First=Joel}\r\n\r\nConvert the example string into a real PSObject using the built-in object serializer."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$data = ConvertFrom-Metadata .\\Configuration.psd1 -Ordered\r\nConvert a module manifest into a hashtable of properties for introspection, preserving the order in the file"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "ConvertFrom-Metadata (\"DateTimeOffset 635968680686066846 -05:00:00\") -Converters @{\r\n\"DateTimeOffset\" = {\r\n    param($ticks,$offset)\r\n    [DateTimeOffset]::new( $ticks, $offset )\r\n}\r\n}\r\nShows how to temporarily add a \"ValidCommand\" called \"DateTimeOffset\" to support extra data types in the metadata.\r\n\r\nSee also the third example on ConvertTo-Metadata and Add-MetadataConverter"
+    }
+  ]
+}

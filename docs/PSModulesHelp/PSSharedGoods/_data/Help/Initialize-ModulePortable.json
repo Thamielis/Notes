@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Initializes a portable module by downloading or importing it along with its required modules.",
+  "Description": "This function initializes a portable module by either downloading it from the PowerShell Gallery or importing it from a specified path. It also recursively loads any required modules for the primary module.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Initialize-ModulePortable -Name \"MyModule\" -Download\r\nDownloads the module named \"MyModule\" from the PowerShell Gallery."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Initialize-ModulePortable -Name \"MyModule\" -Path \"C:\\Modules\" -Import\r\nImports the module named \"MyModule\" from the specified path \"C:\\Modules\"."
+    }
+  ]
+}

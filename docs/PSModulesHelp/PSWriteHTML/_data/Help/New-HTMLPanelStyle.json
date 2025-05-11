@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new HTML panel style with customizable options.",
+  "Description": "This function creates a new HTML panel style with the ability to set the border radius, remove shadow, and request configuration settings.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "File Name      : New-HTMLPanelStyle.ps1\nPrerequisite   : This function requires the Get-ConfigurationCss and related functions."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLPanelStyle -BorderRadius '10px' -RemoveShadow\r\nCreates a new HTML panel style with a border radius of 10px and removes the shadow."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-HTMLPanelStyle -BorderRadius '15px' -RequestConfiguration\r\nCreates a new HTML panel style with a border radius of 15px and requests the configuration settings."
+    }
+  ]
+}

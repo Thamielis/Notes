@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates an email object for blind carbon copy (BCC) recipients.",
+  "Description": "This function creates an email object specifically for blind carbon copy (BCC) recipients. It takes an array of email addresses and returns a custom object representing the BCC recipients.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$BCCRecipients = EmailBCC -Addresses 'bcc1@example.com', 'bcc2@example.com'\r\nCreates an email object with two BCC recipients."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$BCCList = 'bcc1@example.com', 'bcc2@example.com'\r\n$BCCRecipients = EmailBCC -Addresses $BCCList\r\nCreates an email object with multiple BCC recipients."
+    }
+  ]
+}

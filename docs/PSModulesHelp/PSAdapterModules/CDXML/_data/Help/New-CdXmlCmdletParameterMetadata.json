@@ -1,0 +1,33 @@
+{
+  "Synopsis": "\r\nNew-CdXmlCmdletParameterMetadata [-ValueFromPipelineByPropertyName] [-ValueFromPipeline] [-IsMandatory] [-Position <int>] [-Aliases <string[]>] [-CmdletParameterSets <string[]>] [-ConfirmImpact <ConfirmImpact>] [-HelpUri <uri>] [-ValidateNotNull] [-ValidateNotNullOrEmpty] [-AllowEmptyString] [-AllowNull] [<CommonParameters>]\r\n",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.Management.Automation.SwitchParameter\r\nSystem.Int32\r\nSystem.String[]\r\nSystem.Management.Automation.ConfirmImpact\r\nSystem.Uri\r\n"
+  ],
+  "Outputs": [
+    "System.Object"
+  ],
+  "Links": [],
+  "Examples": []
+}

@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new HTML map with specified settings.",
+  "Description": "This function creates a new HTML map with customizable settings such as map type, legend options, colors, and titles.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLMap -Map 'World_Countries' -AnchorName 'Map1' -ShowAreaLegend -AreaTitle 'Country Population' -PlotTitle 'Population Density' -FillColor 'blue' -StrokeColor 'black' -StrokeWidth 2\r\nCreates a new HTML map displaying world countries with area legend showing country population and plot legend showing population density. The map areas are filled with blue color, have black borders, and a border width of 2."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$CustomSettings = {\r\n    # Custom map settings here\r\n}\r\nNew-HTMLMap -Map 'Usa_States' -AnchorName 'Map2' -ShowPlotLegend -PlotTitle 'Economic Data' -FillColor 'green' -StrokeColor 'gray' -StrokeWidth 1 -MapSettings $CustomSettings\r\nCreates a new HTML map displaying USA states with plot legend showing economic data. The map areas are filled with green color, have gray borders, and a border width of 1. Custom map settings are applied using the script block $CustomSettings."
+    }
+  ]
+}

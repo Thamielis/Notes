@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Finds and removes broken Group Policies from SYSVOL or AD or both.",
+  "Description": "Finds and removes broken Group Policies from SYSVOL or AD or both. Assesment is based on Get-GPOZaurrBroken and there are 3 supported types:\n- AD - meaning GPOs which have no SYSVOL content will be deleted from AD\n- SYSVOL - meaning GPOs which have no AD content will be deleted from SYSVOL\n- ObjectClass - meaning GPOs which have ObjectClass category of Container rather than groupPolicyContainer will be deleted from AD & SYSVOL",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-GPOZaurrBroken -Verbose -WhatIf -Type AD, SYSVOL"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Remove-GPOZaurrBroken -Verbose -WhatIf -Type AD, SYSVOL -IncludeDomains 'ad.evotec.pl' -LimitProcessing 2"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Remove-GPOZaurrBroken -Verbose -IncludeDomains 'ad.evotec.xyz' -BackupPath $Env:UserProfile\\Desktop\\MyBackup1 -WhatIf -Type AD, SYSVOL"
+    }
+  ]
+}

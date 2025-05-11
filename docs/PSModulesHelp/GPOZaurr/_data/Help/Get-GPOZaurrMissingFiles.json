@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieves information about missing files in Group Policy Objects (GPOs) within a specified forest.",
+  "Description": "This function queries Active Directory for GPOs and checks for missing files within them. It provides detailed information about any errors found.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrMissingFiles -Forest \"example.com\" -IncludeDomains \"domain1\", \"domain2\" -ExcludeDomains \"domain3\" -GPOName \"GPO1\"\r\nRetrieves information about missing files in the GPO named \"GPO1\" within the \"example.com\" forest, including only domains \"domain1\" and \"domain2\" while excluding \"domain3\"."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrMissingFiles -Forest \"example.com\" -IncludeDomains \"domain1\", \"domain2\" -GPOGUID \"12345678-1234-1234-1234-1234567890AB\" -BrokenOnly\r\nRetrieves information about GPOs with missing files in the \"example.com\" forest, including only domains \"domain1\" and \"domain2\" for the GPO with the specified GUID, displaying only GPOs with missing files."
+    }
+  ]
+}

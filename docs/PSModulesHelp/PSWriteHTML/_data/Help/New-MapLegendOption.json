@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new map legend option with specified parameters.",
+  "Description": "This function creates a new map legend option with the provided parameters. It allows customization of the legend title, redraw behavior on resize, and display mode.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-MapLegendOption -Type \"area\" -Title \"Area Legend\" -RedrawOnResize $true -Mode \"horizontal\"\r\nCreates a new map legend option for an area with the title \"Area Legend\", redraws on resize, and displays horizontally."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-MapLegendOption -Type \"plot\" -Title \"Plot Legend\" -Mode \"vertical\"\r\nCreates a new map legend option for a plot with the title \"Plot Legend\" and displays vertically."
+    }
+  ]
+}

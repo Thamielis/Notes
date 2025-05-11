@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Get information about the NTDS.dit and related files.",
+  "Description": "Get-NTDSInfo will query a domain controller using PowerShell remoting to get information about the NTDS.dit and related files. You might use this to track the size of the file or to check on backups. A high log count might indicate a backup is needed.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.String[]"
+  ],
+  "Outputs": [
+    "NTDSInfo"
+  ],
+  "Links": [
+    "https://bit.ly/3dFy3ta",
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-NTDSInfo -computername dom1 | format-list\r\n\r\nDomainController : DOM1.Company.Pri\r\nPath             : C:\\NTDS\\ntds.dit\r\nSize             : 16777216\r\nFileDate         : 3/26/2021 1:13:26 PM\r\nLogCount         : 34\r\nDate             : 3/26/2021 4:15:00 PM\r\nThe default display is a table. The LogCount is the number of temp edb files in the NTDS folder. The FileDate is the timestamp of ntds.dit, and the Date property reflects when you ran the command."
+    }
+  ]
+}

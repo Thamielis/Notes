@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Returns the Configured encoding for Pester code coverage file from BuildInfo.",
+  "Description": "This function returns the CodeCoverageOutputFileEncoding (Pester v5+) as\nconfigured in the BuildInfo (build.yml).",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-SamplerCodeCoverageOutputFileEncoding -BuildInfo $buildInfo"
+    }
+  ]
+}

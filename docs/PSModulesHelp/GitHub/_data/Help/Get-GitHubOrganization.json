@@ -1,0 +1,54 @@
+{
+  "Synopsis": "List organization",
+  "Description": "List organizations for the authenticated user - if no parameters are provided.\nList organizations for a user - if a username is provided.\nLists all organizations, in the order that they were created on GitHub - if '-All' is provided.\nGet an organization - if a organization name is provided.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[List organizations](https://docs.github.com/rest/orgs/orgs)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubOrganization\r\nList organizations for the authenticated user."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GitHubOrganization -Username 'octocat'\r\nList public organizations for the user 'octocat'."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-GitHubOrganization -All -Since 142951047\r\nList organizations, starting with PSModule."
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "Get-GitHubOrganization -Name 'PSModule'\r\nGet the organization 'PSModule'."
+    }
+  ]
+}

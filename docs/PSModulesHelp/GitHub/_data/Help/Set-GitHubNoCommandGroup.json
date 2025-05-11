@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Disables workflow commands for a block of code.",
+  "Description": "DSL approach for GitHub Action commands.\nAllows for colapsing of code in IDE for code that belong together.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Stopping and starting workflow commands](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/workflow-commands-for-github-actions#stopping-and-starting-workflow-commands)"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-GitHubNoCommandGroup {\r\n    Write-Host 'Hello, World!'\r\n    Write-GithubError 'This is an error'\r\n}\r\nGroups commands where no workflow commands are run."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "NoLogGroup 'MyGroup' {\r\n    Write-Host 'Hello, World!'\r\n    Write-GithubError 'This is an error'\r\n}\r\nGroups commands where no workflow commands are run, using an alias and DSL approach."
+    }
+  ]
+}

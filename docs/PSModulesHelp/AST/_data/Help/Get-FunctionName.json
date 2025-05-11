@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Extracts function names from a specified PowerShell script.",
+  "Description": "Parses the given PowerShell script file and retrieves all function names\ndefined within it. This function utilizes the PowerShell Abstract Syntax Tree (AST)\nto analyze the script and extract function definitions.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Uses PowerShell's AST to analyze script structure."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://psmodule.io/AST/Functions/Functions/Get-FunctionName/"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-FunctionName -Path \"C:\\Scripts\\MyScript.ps1\"\r\nRetrieves all function names defined in the specified script file."
+    }
+  ]
+}

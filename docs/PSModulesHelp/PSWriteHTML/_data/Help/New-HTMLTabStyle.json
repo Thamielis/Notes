@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new HTML tab style with customizable options.",
+  "Description": "This function allows you to define various styling options for HTML tabs, such as font size, color, weight, style, background color, border properties, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLTabStyle -FontSize \"14px\" -FontSizeActive \"16px\" -TextColor \"black\" -TextColorActive \"blue\" -FontWeight \"normal\" -FontWeightActive \"bold\" -FontStyle \"normal\" -FontStyleActive \"italic\" -FontVariant \"normal\" -FontVariantActive \"small-caps\" -FontFamily \"Arial\" -FontFamilyActive \"Verdana\" -TextDecoration \"none\" -TextDecorationActive \"underline\" -BackgroundColor \"#f0f0f0\" -BackgroundColorActive \"#e0e0e0\" -BackgroundColorActiveTarget \"#d0d0d0\" -BorderRadius \"5px\" -TextTransform \"uppercase\" -TextTransformActive \"lowercase\" -SlimTabs -Transition -LinearGradient -RemoveShadow -BorderStyle \"solid\" -BorderColor \"gray\" -BorderBottomWidth \"1px\" -BorderBottomStyle \"solid\" -BorderBottomColor \"gray\" -BorderBottomWidthActive \"2px\" -BorderBottomStyleActive \"dashed\" -BorderBottomColorActive \"blue\" -Style \"custom\" -Align \"center\" -Wrap \"wrap\" -Direction \"row\"\r\nCreates a new HTML tab style with specified options."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-HTMLTabStyle -FontSize \"12px\" -FontSizeActive \"14px\" -TextColor \"gray\" -TextColorActive \"black\" -FontWeight \"bold\" -FontWeightActive \"bolder\" -FontStyle \"italic\" -FontStyleActive \"oblique\" -FontVariant \"small-caps\" -FontVariantActive \"normal\" -FontFamily \"Verdana\" -FontFamilyActive \"Arial\" -TextDecoration \"underline\" -TextDecorationActive \"none\" -BackgroundColor \"#e0e0e0\" -BackgroundColorActive \"#f0f0f0\" -BackgroundColorActiveTarget \"#d0d0d0\" -BorderRadius \"10px\" -TextTransform \"capitalize\" -TextTransformActive \"uppercase\" -SlimTabs -Transition -LinearGradient -RemoveShadow -BorderStyle \"dotted\" -BorderColor \"black\" -BorderBottomWidth \"2px\" -BorderBottomStyle \"dashed\" -BorderBottomColor \"blue\" -BorderBottomWidthActive \"1px\" -BorderBottomStyleActive \"solid\" -BorderBottomColorActive \"gray\" -Style \"default\" -Align \"left\" -Wrap \"nowrap\" -Direction \"column\"\r\nCreates another HTML tab style with different options."
+    }
+  ]
+}

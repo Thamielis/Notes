@@ -1,0 +1,47 @@
+{
+  "Synopsis": "Creates a new SQL database",
+  "Description": "Creates a database in SQL server, SQL azure, SQLCompact, or Sqlite",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Nullable"
+  ],
+  "Links": [
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-SqlDatabase \"Test DB\""
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-SqlDatabase \"Test DB\" -ComputerName TheSqlServer"
+    }
+  ]
+}

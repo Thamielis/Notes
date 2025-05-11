@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new HTML heading with customizable options.",
+  "Description": "This function generates an HTML heading based on the provided parameters such as heading level, text content, underline option, and color.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLHeading -Heading 'h1' -HeadingText 'Main Title' -Underline -Color 'blue'\r\nGenerates an HTML heading of level h1 with the text 'Main Title', underlined, and in blue color."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-HTMLHeading -Heading 'h3' -HeadingText 'Sub Title' -Color 'green'\r\nGenerates an HTML heading of level h3 with the text 'Sub Title' in green color."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Compare the property you provide against the input supplied to the script.\nThis provides the functionality of simple Where-Object comparisons without\nthe syntax required for that cmdlet.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS Get-Process | Compare-Property Handles gt 1000"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Set-Alias ?? Compare-Property\r\nPS > dir | ?? PsIsContainer"
+    }
+  ]
+}

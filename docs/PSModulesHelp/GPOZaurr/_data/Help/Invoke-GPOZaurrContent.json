@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Invokes GPOZaurrContent function to retrieve Group Policy Objects information.",
+  "Description": "This function retrieves Group Policy Objects information based on the specified parameters. It can search for GPOs in a forest, exclude specific domains, include specific domains, and provide extended forest information.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Invoke-GPOZaurrContent -Forest \"Contoso\" -IncludeDomains \"Domain1\", \"Domain2\" -Type \"Security\" -OutputType \"HTML\" -OutputPath \"C:\\Reports\\GPOReport.html\"\r\nRetrieves security-related Group Policy Objects information for the specified domains and saves the output as an HTML file."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Invoke-GPOZaurrContent -GPOPath \"CN={31B2F340-016D-11D2-945F-00C04FB984F9},CN=Policies,CN=System,DC=Contoso,DC=com\" -Type \"All\" -OutputType \"Object\"\r\nRetrieves all information for a specific Group Policy Object and outputs the result as an object."
+    }
+  ]
+}

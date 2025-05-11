@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Building block for creating HTML elements. A starting point for all other cmdlets in PSWriteHTML except Out-HtmlView.",
+  "Description": "Building block for creating HTML elements. A starting point for all other cmdlets in PSWriteHTML except Out-HtmlView.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTML {\r\n    New-HTMLSection -HeaderText 'Donut Charts - Defaults' -CanCollapse {\r\n        New-HTMLPanel {\r\n            New-HTMLChart {\r\n                New-ChartToolbar -Download\r\n                #New-ChartBarOptions -Gradient\r\n                New-ChartLegend -Name 'Time', 'Money', 'Taxes', 'test'\r\n                New-ChartBar -Name 'Test' -Value 1, 2, 3, 0\r\n                New-ChartBar -Name 'Test1' -Value 2, 5, 7, 0\r\n                New-ChartBar -Name 'Test2' -Value 3, 1, 50, 5\r\n            }\r\n        }\r\n        New-HTMLPanel {\r\n            New-HTMLChart {\r\n                New-ChartToolbar -Download\r\n                #New-ChartBarOptions -Gradient\r\n                New-ChartLegend -Name 'Time', 'Money', 'Taxes' -Color Red, Yellow, Green\r\n                New-ChartBar -Name 'Test' -Value 1, 2, 3\r\n                New-ChartBar -Name 'Test1' -Value 2, 5, 7\r\n                New-ChartBar -Name 'Test2' -Value 3, 1, 2\r\n            }\r\n        }\r\n        New-HTMLPanel {\r\n            New-HTMLChart {\r\n                New-ChartToolbar -Download\r\n                New-ChartBarOptions -Type barStacked\r\n                New-ChartLegend -Name 'Time', 'Money', 'Taxes' -Color Red, Yellow, Green\r\n                New-ChartBar -Name 'Test' -Value 1, 2, 3\r\n                New-ChartBar -Name 'Test1' -Value 2, 5, 7\r\n                New-ChartBar -Name 'Test2' -Value 3, 1, 2\r\n            }\r\n        }\r\n    }\r\n} -ShowHTML -FilePath $PSScriptRoot\\Example-ChartBarNext.html -Online -Format"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-HTML -TitleText \"Testing HideButtons\" -Online -FilePath \"$PSScriptRoot\\Example7_06.html\" {\r\n    # Hide Buttons\r\n    New-HTMLSection -HeaderText \"Hide Buttons\" -Content {\r\n        New-HTMLTable -DataTable $Table -HideButtons\r\n    }\r\n    New-HTMLSection -Invisible {\r\n        New-HTMLSection -HeaderText \"Hide Buttons\" -Content {\r\n            New-HTMLTable -DataTable $Table -HideButtons -Transpose\r\n        }\r\n        New-HTMLSection -HeaderText 'Some chart' {\r\n            New-HTMLChart {\r\n                New-ChartPie -Name 'Passed' -Value 5 -Color $ColorPassed\r\n                New-ChartPie -Name 'Failed' -Value 10 -Color $ColorFailed\r\n                New-ChartPie -Name 'Skipped' -Value 15 -Color $ColorSkipped\r\n            }\r\n        }\r\n    }\r\n    New-HTMLSection -HeaderText \"Code used to generate above tables\" -Content {\r\n        New-HTMLCodeBlock {\r\n            New-HTMLSection -HeaderText \"Hide Buttons\" -Content {\r\n                New-HTMLTable -DataTable $Table -HideButtons\r\n            }\r\nNew-HTMLSection -Invisible {\r\n                New-HTMLSection -HeaderText \"Hide Buttons\" -Content {\r\n                    New-HTMLTable -DataTable $Table -HideButtons -Transpose\r\n                }\r\n                New-HTMLSection -HeaderText 'Some chart' {\r\n                    New-HTMLChart {\r\n                        New-ChartPie -Name 'Passed' -Value 5 -Color $ColorPassed\r\n                        New-ChartPie -Name 'Failed' -Value 10 -Color $ColorFailed\r\n                        New-ChartPie -Name 'Skipped' -Value 15 -Color $ColorSkipped\r\n                    }\r\n                }\r\n            }\r\n        }\r\n    }\r\n} -ShowHTML"
+    }
+  ]
+}

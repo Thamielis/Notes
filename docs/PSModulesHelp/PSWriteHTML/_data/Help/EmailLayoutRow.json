@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Defines the layout structure for a row in an email content.",
+  "Description": "This function defines the layout structure for a row in an email content using a ScriptBlock. It generates an HTML table row layout for the email content.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$RowLayout = {\r\n    'Column 1 content'\r\n    'Column 2 content'\r\n}\r\n$Row = EmailLayoutRow -RowLayout $RowLayout -Height '50px' -BorderTopStyle 'solid' -BorderTopColor 'black' -BorderTopWidthSize '1px' -BorderBottomStyle 'dotted' -BorderBottomColor 'gray' -BorderBottomWidthSize '2px' -BorderLeftStyle 'dashed' -BorderLeftColor 'blue' -BorderLeftWidthSize '1px' -BorderRightStyle 'dotted' -BorderRightColor 'green' -BorderRightWidthSize '1px'\r\nGenerates an HTML table row layout with specified content and border styles."
+    }
+  ]
+}

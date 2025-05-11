@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Removes a project card.",
+  "Description": "Removes a project card.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.ProjectCard"
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-GitHubProjectCard -Card 999999\r\nRemove project card with ID 999999."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Remove-GitHubProjectCard -Card 999999 -Confirm:$False\r\nRemove project card with ID 999999 without prompting for confirmation."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Remove-GitHubProjectCard -Card 999999 -Force\r\nRemove project card with ID 999999 without prompting for confirmation."
+    }
+  ]
+}

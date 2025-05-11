@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Create or update an environment.",
+  "Description": "Create or update an environment with protection rules, such as required reviewers. For more information about\nenvironment protection rules, see \"[Environments](https://docs.github.com/en/actions/reference/environments#environment-protection-rules).\"\n\nTo create or update name patterns that branches must match in order to deploy to this environment, see\n\"[Deployment branch policies](https://docs.github.com/en/rest/deployments/branch-policies).\"\n\nTo create or update secrets for an environment, see \"[GitHub Actions secrets](https://docs.github.com/en/rest/actions/secrets).\"\n\nOAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Returns the response object from the GitHub API call."
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "PSCustomObject"
+  ],
+  "Links": [
+    "https://psmodule.io/GitHub/Functions/Environments/Set-GitHubEnvironment/"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$params = @{\r\n    Owner                  = \"my-org\"\r\n    Repository             = \"my-repo\"\r\n    Name                   = \"staging\"\r\n    WaitTimer              = 30\r\n    Reviewers              = @{ type = $user.Type; id = $user.id }, @{ type = 'team'; id = $team.DatabaseID }\r\n    DeploymentBranchPolicy = 'CustomBranchPolicies'\r\nSet-GitHubEnvironment @params\r\nOutput:\r\n```powershell\r\nid                       : 5944178128\r\nnode_id                  : EN_kwDOOJqfM88AAAABYkz10A\r\nname                     : test\r\nurl                      : https://api.github.com/repos/PSModule/EnvironmentTest/environments/test\r\nhtml_url                 : https://github.com/PSModule/EnvironmentTest/deployments/activity_log?environments_filter=test\r\ncreated_at               : 3/16/2025 11:17:52 PM\r\nupdated_at               : 3/16/2025 11:17:52 PM\r\ncan_admins_bypass        : True\r\nprotection_rules         : {@{id=30352888; node_id=GA_kwDOOJqfM84BzyX4; type=required_reviewers; prevent_self_review=False;\r\n                           reviewers=System.Object[]},@{id=30352889; node_id=GA_kwDOOJqfM84BzyX5; type=wait_timer; wait_timer=100},\r\n                           @{id=30352890; node_id=GA_kwDOOJqfM84BzyX6; type=branch_policy}}\r\ndeployment_branch_policy : @{protected_branches=False; custom_branch_policies=True}\r\n```\r\n\r\nCreates or updates the \"staging\" environment with a 30-minute wait timer."
+    }
+  ]
+}

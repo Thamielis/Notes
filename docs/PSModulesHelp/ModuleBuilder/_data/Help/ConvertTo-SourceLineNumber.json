@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Convert the line number in a built module to a file and line number in source",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "ConvertTo-SourceLineNumber -SourceFile ~\\ErrorMaker.psm1 -SourceLineNumber 27"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "ConvertTo-SourceLineNumber -PositionMessage \"At C:\\Users\\Joel\\OneDrive\\Documents\\PowerShell\\Modules\\ErrorMaker\\ErrorMaker.psm1:27 char:4\""
+    }
+  ]
+}

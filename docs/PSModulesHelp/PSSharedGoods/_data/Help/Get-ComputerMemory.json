@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieves memory information from specified computers.",
+  "Description": "This function retrieves memory information from specified computers, including details about physical memory usage, virtual memory usage, and memory percentages.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-ComputerMemory -ComputerName \"Server01\"\r\nRetrieves memory information from a remote computer named Server01."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-ComputerMemory -ComputerName \"WorkstationA\", \"WorkstationB\" -Protocol Wsman -All\r\nRetrieves all available memory properties from multiple remote computers using the Wsman protocol."
+    }
+  ]
+}

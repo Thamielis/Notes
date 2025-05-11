@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new HTML tag with specified attributes and content.",
+  "Description": "The New-HTMLTag function creates a new HTML tag with the specified tag name, attributes, and content. It supports self-closing tags, custom attributes, and new line formatting.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLTag -Tag \"div\" -Attributes @{ class = \"container\" } -Value { \"Hello, World!\" }\r\nCreates a <div> tag with the class attribute set to \"container\" and the content \"Hello, World!\"."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-HTMLTag -Tag \"img\" -Attributes @{ src = \"image.jpg\"; alt = \"Image\" } -SelfClosing\r\nCreates an <img> tag with the src and alt attributes set and is self-closing."
+    }
+  ]
+}

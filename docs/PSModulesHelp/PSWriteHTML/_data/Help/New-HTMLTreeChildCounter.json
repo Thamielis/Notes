@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new HTML tree child counter object with specified options.",
+  "Description": "This function creates a new HTML tree child counter object with the ability to customize its behavior using the provided parameters.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLTreeChildCounter -Deep\r\nCreates a new HTML tree child counter object that counts child elements recursively."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-HTMLTreeChildCounter -HideZero -HideExpanded\r\nCreates a new HTML tree child counter object that hides counters for child elements with a count of zero and expanded child elements."
+    }
+  ]
+}

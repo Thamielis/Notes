@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Import the full, layered configuration for the module.",
+  "Description": "Imports the DefaultPath Configuration file, and then imports the Machine, Roaming (enterprise), and local config files, if they exist.\nEach configuration file is layered on top of the one before (so only needs to set values which are different)",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$Configuration = Import-Configuration\r\nThis example shows how to use Import-Configuration in your module to load the cached data"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$Configuration = Get-Module Configuration | Import-Configuration\r\nThis example shows how to use Import-Configuration in your module to load data cached for another module"
+    }
+  ]
+}

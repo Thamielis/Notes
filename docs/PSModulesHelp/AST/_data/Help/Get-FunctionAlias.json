@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Retrieves function aliases from a PowerShell script file.",
+  "Description": "Parses a specified PowerShell script file to identify function definitions and extract their associated aliases.\nReturns a custom object containing function names and their corresponding aliases.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://psmodule.io/AST/Functions/Functions/Get-FunctionAlias/"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-FunctionAlias -Path \"C:\\Scripts\\MyScript.ps1\"\r\nRetrieves all function aliases defined in the specified script file."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-FunctionAlias -Name \"Get-Data\" -Path \"C:\\Scripts\\MyScript.ps1\"\r\nRetrieves the alias information for the function named \"Get-Data\" from the specified script file."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Gets you paid",
+  "Description": "Handles getting payments or payment confirmation information.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject"
+  ],
+  "Links": [
+    "https://www.youtube.com/watch?v=XPS60qPh3vc"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "A Sample Charge with the Stripe API",
+      "Code": "Get-Paid -StripeKey sk_test_aElHsSizhc8XC0uESpNC1t64 -Currency usd -Amount 400 -CardNumber 4242424242424242 -ExpirationMonth 12 -ExpirationYear 2014 -CardVerficationCode 123"
+    }
+  ]
+}

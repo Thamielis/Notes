@@ -1,0 +1,54 @@
+{
+  "Synopsis": "Copy selected commands from the history buffer into the clipboard as a script.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Copy-History\r\nCopies the entire contents of the history buffer into the clipboard."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Copy-History -5\r\nCopies the last five commands into the clipboard."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Copy-History 2,5,8,4\r\nCopies commands 2,5,8, and 4."
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "Copy-History (1..10+5+6)\r\nCopies commands 1 through 10, then 5, then 6, using PowerShell's array\r\nslicing syntax."
+    }
+  ]
+}

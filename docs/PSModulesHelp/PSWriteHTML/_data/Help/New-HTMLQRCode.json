@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates an HTML QR code with specified parameters.",
+  "Description": "This function generates an HTML QR code based on the provided parameters. It allows customization of the QR code appearance and content.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLQRCode -Link \"https://example.com\" -Width 200 -Height 200 -Title \"Example QR Code\" -TitleColor \"black\" -Logo \"C:\\logo.png\" -LogoWidth 50 -LogoHeight 50 -LogoInline\r\nCreates a QR code with a specified link, dimensions, title, color, and logo embedded inline."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-HTMLQRCode -Link \"tel:1234567890\" -Width 150 -Height 150 -Title \"Contact Number\" -TitleColor \"blue\" -Logo \"C:\\company_logo.png\" -LogoWidth 30 -LogoHeight 30\r\nGenerates a QR code for a phone number with custom dimensions, title, color, and logo."
+    }
+  ]
+}

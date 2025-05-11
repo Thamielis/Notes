@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Delete a team",
+  "Description": "To delete a team, the authenticated user must be an organization owner or team maintainer.\nIf you are an organization owner, deleting a parent team will delete all of its child teams as well.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Delete a team](https://docs.github.com/en/rest/teams/teams?apiVersion=2022-11-28#delete-a-team)"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Void"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-GitHubTeam -Organization 'github' -Name 'team-name'"
+    }
+  ]
+}

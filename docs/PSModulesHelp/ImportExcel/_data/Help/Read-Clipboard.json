@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Read text from clipboard and pass to either ConvertFrom-Csv or ConvertFrom-Json.\nCheck out the how to video - https://youtu.be/dv2GOH5sbpA",
+  "Description": "Read text from clipboard. It can read CSV or JSON. Plus, you can specify the delimiter and headers.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Read-Clipboard # Detects if the clipboard contains CSV, JSON, or Tab delimited data."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Read-Clipboard -Delimiter '|' # Converts data using a pipe delimiter"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Read-Clipboard -Header 'P1', 'P2', 'P3' # Specify the header columns to be used"
+    }
+  ]
+}

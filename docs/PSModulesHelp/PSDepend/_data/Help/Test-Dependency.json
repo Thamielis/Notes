@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Test a specific dependency",
+  "Description": "Test a specific dependency.  Validates whether a dependency exists\n\nTakes output from Get-Dependency\n\n  * Runs dependency scripts depending on each dependencies type.\n  * Appends a 'DependencyExists' property indicating whether the dependency exists; alternatively\n  * Returns $True or $False if the -Quiet switch is used\n\nSee Get-Help about_PSDepend for more information.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    "https://github.com/RamblingCookieMonster/PSDepend"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-Dependency -Path C:\\requirements.psd1 | Test-Dependency\r\nGet dependencies from C:\\requirements.psd1 and test whether they exist"
+    }
+  ]
+}

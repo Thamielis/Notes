@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new HTML section with customizable styling options.",
+  "Description": "The New-HTMLSection function creates a new HTML section with various customizable styling options such as text alignment, background color, flexbox properties, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLSection -Content { \"This is the content of the section.\" } -HeaderText \"Section Title\" -HeaderTextColor \"blue\" -HeaderTextSize \"20px\" -HeaderTextAlignment \"center\" -HeaderBackGroundColor \"lightgray\" -BackgroundColor \"white\" -CanCollapse -Height \"200px\" -Width \"50%\" -Wrap \"wrap\" -Direction \"row\" -AlignContent \"center\" -AlignItems \"center\" -JustifyContent \"flex-start\" -BorderRadius \"10px\" -AnchorName \"section1\" -StyleSheetsConfiguration @{ Section = 'customSection'; SectionText = 'customSectionText' }"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$content = {\r\n    \"This is a sample content.\"\r\n}\r\nNew-HTMLSection -Content $content -HeaderText \"Sample Section\" -HeaderTextColor \"red\" -HeaderTextSize \"18px\" -HeaderTextAlignment \"left\" -HeaderBackGroundColor \"lightblue\" -BackgroundColor \"lightyellow\" -Height \"150px\" -Wrap \"nowrap\" -Direction \"column\" -AlignContent \"flex-start\" -AlignItems \"flex-start\" -JustifyContent \"center\" -BorderRadius \"5px\" -AnchorName \"sampleSection\" -StyleSheetsConfiguration @{ Section = 'customSection'; SectionText = 'customSectionText' }"
+    }
+  ]
+}

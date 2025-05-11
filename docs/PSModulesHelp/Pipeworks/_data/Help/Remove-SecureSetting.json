@@ -1,0 +1,50 @@
+{
+  "Synopsis": "Removes an encrypted setting from the registry",
+  "Description": "Removes a stored secured user settings in the registry",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Nullable"
+  ],
+  "Links": [
+    "https://www.youtube.com/watch?v=0haXavQU_nY",
+    null,
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-SecureSetting"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Remove-SecureSetting AStringSetting"
+    }
+  ]
+}

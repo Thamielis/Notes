@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates email headers based on the provided ScriptBlock.",
+  "Description": "This function creates email headers using the specified ScriptBlock. It allows customization of email headers before sending an email.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$EmailHeader = {\r\n    'From: sender@example.com'\r\n    'To: recipient@example.com'\r\n    'Subject: Hello World'\r\n}\r\n$Headers = EmailHeader -EmailHeader $EmailHeader\r\nCreates email headers with sender, recipient, and subject information."
+    }
+  ]
+}

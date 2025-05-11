@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Gets information from a file as a walkthru",
+  "Description": "Parses walkthru steps from a walkthru file.  \nWalkthru files contain step-by-step examples for using PowerShell.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-Walkthru -Text {\r\n# Walkthrus are just scripts with comments that start at column 0.\r\n# Step 1:\r\nGet-Process        \r\n\r\n#Step 2:\r\nGet-Command\r\n}"
+    }
+  ]
+}

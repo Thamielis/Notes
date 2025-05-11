@@ -1,0 +1,33 @@
+{
+  "Synopsis": "\r\nNew-ExcelStyle [[-Range] <Object>] [[-NumberFormat] <Object>] [[-BorderAround] <ExcelBorderStyle>] [[-BorderColor] <Object>] [[-BorderBottom] <ExcelBorderStyle>] [[-BorderTop] <ExcelBorderStyle>] [[-BorderLeft] <ExcelBorderStyle>] [[-BorderRight] <ExcelBorderStyle>] [[-FontColor] <Object>] [[-Value] <Object>] [[-Formula] <Object>] [[-UnderLineType] <ExcelUnderLineType>] [[-FontShift] <ExcelVerticalAlignmentFont>] [[-FontName] <string>] [[-FontSize] <float>] [[-BackgroundColor] <Object>] [[-BackgroundPattern] <ExcelFillStyle>] [[-PatternColor] <Object>] [[-HorizontalAlignment] <ExcelHorizontalAlignment>] [[-VerticalAlignment] <ExcelVerticalAlignment>] [[-TextRotation] <int>] [[-Width] <float>] [[-Height] <float>] [-ArrayFormula] [-ResetFont] [-Bold] [-Italic] [-Underline] [-StrikeThru] [-WrapText] [-AutoSize] [-Hidden] [-Locked] [-Merge] [<CommonParameters>]\r\n",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None\r\n"
+  ],
+  "Outputs": [
+    "System.Object"
+  ],
+  "Links": [],
+  "Examples": []
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Runs the provided script block under an elevated instance of PowerShell as\nthrough it were a member of a regular pipeline.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-Process | Invoke-ElevatedCommand.ps1 {\r\n    $input | Where-Object { $_.Handles -gt 500 } } | Sort Handles"
+    }
+  ]
+}

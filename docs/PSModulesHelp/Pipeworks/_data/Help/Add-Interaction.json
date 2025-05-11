@@ -1,0 +1,43 @@
+{
+  "Synopsis": "Adds a user interaction to user storage",
+  "Description": "Adds a user interaction to user storage.  \n        \nInteractions are things a user has done within a service.  \n        \nFor instance, you might Add-Interaction \"VoteCount\" 1 when someone votes on a video.\n\n\nYou can use interactions for personalized statistical tracking, and you can also use interactions to control if someone can use a command.        \n\n\nInteractions may only contain numbers.  Interactions can only be used within a Pipeworks web site",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Nullable",
+    "System.Management.Automation.PSObject"
+  ],
+  "Links": [
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$session[\"User\"] | \r\n    Add-Interaction \"VoteCount\" 1"
+    }
+  ]
+}

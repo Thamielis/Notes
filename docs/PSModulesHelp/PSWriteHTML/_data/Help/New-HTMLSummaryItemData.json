@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new HTML summary item data with specified text and information.",
+  "Description": "This function creates a new HTML summary item data with the provided text and information. It formats the output using New-HTMLText cmdlet.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLSummaryItemData -Text \"Total Sales\" -Information \"$1000\"\r\nCreates a new HTML summary item with the text \"Total Sales\" and information \"$1000\"."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-HTMLSummaryItemData -Text \"Total Orders\" -Information \"50\" -Icon \"order.png\"\r\nCreates a new HTML summary item with the text \"Total Orders\", information \"50\", and icon \"order.png\"."
+    }
+  ]
+}

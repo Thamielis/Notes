@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Removes legacy Group Policy Objects (GPO) files from specified domains.",
+  "Description": "The Remove-GPOZaurrLegacyFiles function removes legacy GPO files from specified domains. It can back up the files before removal and optionally remove empty folders.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-GPOZaurrLegacyFiles -BackupPath \"C:\\GPOBackups\" -BackupDated -RemoveEmptyFolders -Forest \"Contoso\" -IncludeDomains \"Domain1\", \"Domain2\" -ExcludeDomains \"Domain3\" -LimitProcessing 100\r\nRemoves legacy GPO files from the \"Contoso\" forest for \"Domain1\" and \"Domain2\", excluding \"Domain3\". Backs up files to \"C:\\GPOBackups\" with timestamps and removes empty folders after deletion."
+    }
+  ]
+}

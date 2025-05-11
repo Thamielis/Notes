@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new bar chart object with specified name, value, and color.",
+  "Description": "This function creates a new bar chart object with the provided name, value, and color. The name is used as the identifier for the bar, the value represents the data to be displayed, and the color determines the color of the bar.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-ChartBar -Name 'Sales' -Value 1000 -Color 'blue'\r\nCreates a new bar chart object named 'Sales' with a value of 1000 and a blue color."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-ChartBar -Name 'Expenses' -Value 750 -Color 'red'\r\nCreates a new bar chart object named 'Expenses' with a value of 750 and a red color."
+    }
+  ]
+}

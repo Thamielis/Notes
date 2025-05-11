@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Gets all network compartments in the protocol stack.",
+  "Description": "The Get-NetCompartment cmdlet gets network compartments in the protocol stack. You can specify the ID of a compartment to get. If you do not specify the CompartmentId parameter, the cmdlet gets all compartments in the protocol stack.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    ""
+  ],
+  "Outputs": [
+    ""
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkId=313145",
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Get a network compartment on the local host",
+      "Markdown": "",
+      "Code": "PS C:\\>Find-NetCompartment -CompartmentId 1\r\nCompartmentId          : 1\r\nCompartmentDescription : Default Compartment\r\nCompartmentGuid        : {b1062982-2b18-4b4f-b3d5-a78ddb9cdd49}\r\nThis command gets the network compartment that has the ID 1."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a configuration object for a table button search builder.",
+  "Description": "This function creates a configuration object for a table button search builder with customizable options.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-TableButtonSearchBuilder -ButtonName \"Search\" -DepthLimit 3 -DefaultLogic \"AND\" -GreyScale\r\nCreates a search builder button named \"Search\" with a depth limit of 3, default logic set to \"AND\", and displayed in greyscale."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-TableButtonSearchBuilder -ButtonName \"Filter\" -DefaultLogic \"OR\"\r\nCreates a search builder button named \"Filter\" with default logic set to \"OR\"."
+    }
+  ]
+}

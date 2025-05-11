@@ -1,0 +1,48 @@
+{
+  "Synopsis": "Get user members of an AD group.",
+  "Description": "This command will display all users of a given Active Directory group. The search is automatically recursive. The default output is a formatted table that will highlight disabled accounts in red.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.String"
+  ],
+  "Outputs": [
+    "ADGroupUser"
+  ],
+  "Links": [
+    "https://bit.ly/38wecuU",
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADGroupUser sales\r\n\r\n\r\n   DistinguishedName: CN=SamS,OU=Sales,DC=Company,DC=Pri [Sam Smith]\r\n\r\nName            Title              Description                  PasswordLastSet\r\n----            -----             -----------                    --------------\r\nSamS                               Sales Staff             1/25/2021 1:32:36 PM\r\n\r\n\r\n   DistinguishedName: CN=SonyaS,OU=Sales,DC=Company,DC=Pri [Sonya Smith]\r\n\r\nName            Title              Description                  PasswordLastSet\r\n----            -----              -----------                   --------------\r\nSonyaS          Account Executive  Sales                   1/25/2021 1:32:37 PM\r\n\r\n\r\n   DistinguishedName: CN=SamanthaS,OU=Sales,DC=Company,DC=Pri [Samantha Smith]\r\n\r\nName            Title              Description                  PasswordLastSet\r\n----            -----              -----------                   --------------\r\nSamanthaS       Sales Assistant    Sales Staff             1/25/2021 1:32:37 PM\r\nDisabled accounts will have their distinguished name displayed in red."
+    },
+    {
+      "Title": "Example 2",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADGroupUser sales | format-list\r\n\r\n\r\n   Group: CN=Sales,OU=Sales,DC=Company,DC=Pri\r\n\r\n\r\nDistinguishedName : CN=SamS,OU=Sales,DC=Company,DC=Pri\r\nName              : SamS\r\nDisplayname       : Sam Smith\r\nDescription       : Sales Staff\r\nTitle             :\r\nDepartment        : Sales\r\nEnabled           : False\r\nPasswordLastSet   : 3/4/2021 4:03:23 PM\r\n\r\nDistinguishedName : CN=SonyaS,OU=Sales,DC=Company,DC=Pri\r\nName              : SonyaS\r\nDisplayname       : Sonya Smith\r\nDescription       : Sales\r\nTitle             : Account Executive\r\nDepartment        : Sales\r\nEnabled           : True\r\nPasswordLastSet   : 1/25/2021 1:32:37 PM\r\n...\r\nUsing the defined list view."
+    }
+  ]
+}

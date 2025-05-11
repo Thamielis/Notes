@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Retrieves the data of a textfile from github.",
+  "Description": "Retrieves the data of a textfile from github.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GithubTree -Owner FriedrichWeinmann -Repository PowerShellForGithub.Content -BranchName master | Get-GithubFileData\r\nDownload all files from the master branch of the repository PowerShellForGithub.Content"
+    }
+  ]
+}

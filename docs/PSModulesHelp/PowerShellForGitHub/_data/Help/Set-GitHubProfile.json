@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Updates profile information for the current authenticated user on GitHub.",
+  "Description": "Updates profile information for the current authenticated user on GitHub.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "GitHub.User"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-GitHubProfile -Location 'Seattle, WA' -Hireable:$false\r\nUpdates the current user to indicate that their location is \"Seattle, WA\" and that they\r\nare not currently hireable."
+    }
+  ]
+}

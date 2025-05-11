@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Provides ability to overwrite texts available in the table.",
+  "Description": "Provides ability to overwrite texts available in the table. This is useful for translating to different languages or choosing different naming.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTML -TitleText \"Example41 - Table\" -FilePath \"$PSScriptRoot\\Example41.html\" {\r\n    New-HTMLSection -HeaderText \"Testing\" -HeaderTextAlignment center -Content {\r\n        New-HTMLTable -DataTable $Values {\r\n            New-TableLanguage -Search 'Find' -PaginateFirst 'First Option' -EmptyTable 'No data in the table'\r\n            New-HTMLTableConditionGroup {\r\n                New-HTMLTableCondition -Name 'Test1' -Value 1 -ComparisonType number\r\n                New-HTMLTableCondition -Name 'Test2' -Value 2 -ComparisonType number\r\n            } -BackgroundColor Salmon -FailBackgroundColor Goldenrod -Logic OR -HighlightHeaders 'Test1', 'Test2', 'DisplayName', 'DomainName'\r\n        } -DataStore JavaScript\r\n    }\r\n} -ShowHTML -Online"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "Synopsis": "Removes IP routes from the IP routing table.",
+  "Description": "The Remove-NetRoute cmdlet removes IP routes from the IP routing table. Run this cmdlet without any parameters to remove all IP routes from the routing table, including default routes. You can also specify routes to remove by specifying parameters, or by using the Get-NetRoute cmdlet.\r\n\r\n\r\nFor more information about routing, see Chapter 5 - IP Routing (http://technet.microsoft.com/library/bb727001.aspx) in the TechNet library.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#rootStandardCimv2MSFT_NetRoute"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkID=288400",
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Remove all routes",
+      "Markdown": "",
+      "Code": "PS C:\\>Remove-NetRoute\r\nThis command removes all of the IP routes on the computer, including default routes."
+    },
+    {
+      "Title": "Example 2: Remove routes for a specified next hop",
+      "Markdown": "",
+      "Code": "PS C:\\>Remove-NetRoute –NextHop \"192.168.0.1\"\r\nThis command removes all of the IP routes that have a next hop of 192.168.0.1."
+    }
+  ]
+}

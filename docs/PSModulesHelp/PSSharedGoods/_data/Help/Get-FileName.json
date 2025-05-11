@@ -1,0 +1,69 @@
+{
+  "Synopsis": "Generates a temporary file name with the specified extension.",
+  "Description": "This function generates a temporary file name based on the provided extension.\nIt can generate a temporary file name in the system's temporary folder or just the file name itself.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-FileName\r\nGenerates a temporary file name in the system's temporary folder.\r\nExample output: C:\\Users\\przemyslaw.klys\\AppData\\Local\\Temp\\3ymsxvav.tmp"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-FileName -Temporary\r\nGenerates a temporary file name in the system's temporary folder.\r\nExample output: C:\\Users\\przemyslaw.klys\\AppData\\Local\\Temp\\3ymsxvav.tmp"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-FileName -Temporary -Extension 'xlsx'\r\nGenerates a temporary file name with the specified extension in the system's temporary folder.\r\nExample output: C:\\Users\\przemyslaw.klys\\AppData\\Local\\Temp\\3ymsxvav.xlsx"
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "Get-FileName -Name 'MyFile' -Temporary\r\nGenerates a temporary file name with the specified name in the system's temporary folder.\r\nExample output: C:\\Users\\przemyslaw.klys\\AppData\\Local\\Temp\\MyFile_3ymsxvav.xlsx"
+    },
+    {
+      "Title": "EXAMPLE 5",
+      "Markdown": "",
+      "Code": "Get-FileName -Extension 'xlsx' -TemporaryFileOnly\r\nGenerates a temporary file name with the specified extension without the path.\r\nExample output: 3ymsxvav.xlsx"
+    },
+    {
+      "Title": "EXAMPLE 6",
+      "Markdown": "",
+      "Code": "Get-FileName -Name 'MyFile' -TemporaryFileOnly\r\nGenerates a temporary file name with the specified name without the path.\r\nExample output: MyFile_3ymsxvav.xlsx"
+    },
+    {
+      "Title": "EXAMPLE 7",
+      "Markdown": "",
+      "Code": "Get-FileName -Name 'MyFile' -Extension 'xlsx'\r\nGenerates a temporary file name with the specified name and extension.\r\nExample output: C:\\Users\\przemyslaw.klys\\AppData\\Local\\Temp\\MyFile.xlsx"
+    }
+  ]
+}

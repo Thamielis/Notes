@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Install a specific dependency",
+  "Description": "Install a specific dependency.  Typically you would use Invoke-PSDepend rather than this.\n\nTakes output from Get-Dependency\n\n  * Runs dependency scripts depending on each dependencies type.\n  * If a dependency is not found, we continue processing other dependencies.\n\nSee Get-Help about_PSDepend for more information.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    "https://github.com/RamblingCookieMonster/PSDepend"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-Dependency -Path C:\\requirements.psd1 | Install-Dependency\r\nGet dependencies from C:\\requirements.psd1 and install them"
+    }
+  ]
+}

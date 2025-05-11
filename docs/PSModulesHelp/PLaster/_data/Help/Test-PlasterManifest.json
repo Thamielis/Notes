@@ -1,0 +1,48 @@
+{
+  "Synopsis": "Verifies that a plaster manifest file is a valid.",
+  "Description": "Verifies that a plaster manifest file is a valid. If there are any errors, the details of the errors can be viewed by using the Verbose parameter.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.String"
+  ],
+  "Outputs": [
+    "System.Xml.XmlDocument"
+  ],
+  "Links": [
+    "https://github.com/PowerShell/Plaster/blob/master/docs/en-US/Test-PlasterManifest.md",
+    "https://github.com/PowerShell/Plaster/blob/master/docs/en-US/Invoke-Plaster.md",
+    "https://github.com/PowerShell/Plaster/blob/master/docs/en-US/New-PlasterManifest.md"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Test-PlasterManifest MyTemplate\\plasterManifest.xml\r\nVerifies that the plasterManifest.xml file in the MyTemplate sub-directory is valid."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Test-PlasterManifest plasterManifest.xml -Verbose\r\nVerifies that the plasterManifest.xml file in the current directory is valid. If there are any validation errors, using -Verbose will display the details of those errors."
+    }
+  ]
+}

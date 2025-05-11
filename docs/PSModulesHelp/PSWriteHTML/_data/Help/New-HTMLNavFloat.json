@@ -1,0 +1,33 @@
+{
+  "Synopsis": "Creates a new HTML floating navigation menu with customizable options.",
+  "Description": "This function creates a new HTML floating navigation menu with various customization options such as navigation links, title, tagline, colors, and button styling for hover effects.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": []
+}

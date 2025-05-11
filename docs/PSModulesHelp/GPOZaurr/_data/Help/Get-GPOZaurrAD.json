@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Retrieves Group Policy Objects (GPOs) information from Active Directory.",
+  "Description": "This function retrieves information about Group Policy Objects (GPOs) from Active Directory based on specified criteria such as GPO name, GPO GUID, date range, and forest details.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrAD -GPOName \"ExampleGPO\"\r\nDescription:\r\nRetrieves information about a GPO with the name \"ExampleGPO\"."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrAD -GPOGuid \"{12345678-1234-1234-1234-123456789012}\"\r\nDescription:\r\nRetrieves information about a GPO with the specified GUID."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrAD -Forest \"example.com\" -IncludeDomains \"domain1\", \"domain2\" -DateRange \"Last30Days\"\r\nDescription:\r\nRetrieves GPO information from the forest \"example.com\" for domains \"domain1\" and \"domain2\" created or modified in the last 30 days."
+    }
+  ]
+}

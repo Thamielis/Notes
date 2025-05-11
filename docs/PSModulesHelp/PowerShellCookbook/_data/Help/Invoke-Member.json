@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Enables easy access to methods and properties of pipeline objects.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "\"Hello\",\"World\" | .\\Invoke-Member Length\r\n5\r\n5"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "\"Hello\",\"World\" | .\\Invoke-Member -m ToUpper\r\nHELLO\r\nWORLD"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "\"Hello\",\"World\" | .\\Invoke-Member Replace l w\r\nHewwo\r\nWorwd"
+    }
+  ]
+}

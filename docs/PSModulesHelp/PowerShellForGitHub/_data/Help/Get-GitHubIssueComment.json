@@ -1,0 +1,59 @@
+{
+  "Synopsis": "Get the Issue comments for a given GitHub repository.",
+  "Description": "Get the Issue comments for a given GitHub repository.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Branch\nGitHub.Content\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Reaction\nGitHub.Release\nGitHub.ReleaseAsset\nGitHub.Repository"
+  ],
+  "Outputs": [
+    "GitHub.IssueComment"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubIssueComment -OwnerName microsoft -RepositoryName PowerShellForGitHub\r\nGet all of the Issue comments for the microsoft\\PowerShellForGitHub project."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$repo = Get-GitHubRepository -OwnerName microsoft -RepositoryName PowerShellForGitHub\r\n$repo | Get-GitHubIssueComment -Since ([DateTime]::Now).AddDays(-1)\r\nGet all of the Issue comments for the microsoft\\PowerShellForGitHub project since yesterday."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "$issue = $repo | Get-GitHubIssueComment -OwnerName microsoft -RepositoryName PowerShellForGitHub -Issue 1\r\nGet the comments Issue #1 in the microsoft\\PowerShellForGitHub project."
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "$repo = Get-GitHubRepository -OwnerName microsoft -RepositoryName PowerShellForGitHub\r\n$issue = $repo | Get-GitHubIssue -Issue 1\r\n$issue | Get-GitHubIssueComment\r\nGet the comments Issue #1 in the microsoft\\PowerShellForGitHub project."
+    },
+    {
+      "Title": "EXAMPLE 5",
+      "Markdown": "",
+      "Code": "$repo = Get-GitHubRepository -OwnerName microsoft -RepositoryName PowerShellForGitHub\r\n$issue = $repo | Get-GitHubIssue -Issue 1\r\n$comments = $issue | Get-GitHubIssueComment\r\n$comment[0] | Get-GitHubIssueComment\r\nGet the most recent comment on Issue #1 in the microsoft\\PowerShellForGitHub project by\r\npassing it in via the pipeline.  This shows some of the different types of objects you\r\ncan pipe into this function."
+    }
+  ]
+}

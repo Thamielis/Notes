@@ -1,0 +1,39 @@
+{
+  "Synopsis": "List repository teams",
+  "Description": "Lists the teams that have access to the specified repository and that are also visible to the authenticated user.\n\nFor a public repository, a team is listed only if that team added the public repository explicitly.\n\nPersonal access tokens require the following scopes:\n* `public_repo` to call this endpoint on a public repository\n* `repo` to call this endpoint on a private repository (this scope also includes public repositories)\n\nThis endpoint is not compatible with fine-grained personal access tokens.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[List repository teams](https://docs.github.com/rest/repos/repos#list-repository-teams)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubRepositoryTeam -Owner 'PSModule' -Repository 'GitHub'\r\nLists the teams that have access to the specified repository and that are also visible to the authenticated user."
+    }
+  ]
+}

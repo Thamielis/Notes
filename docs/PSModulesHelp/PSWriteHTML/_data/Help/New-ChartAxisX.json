@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new X-axis for a chart with specified parameters.",
+  "Description": "This function creates a new X-axis for a chart with the provided parameters. It allows customization of the axis name, title, type, minimum and maximum values, and timezone offset.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-ChartAxisX -Names @('Jan', 'Feb', 'Mar') -TitleText 'Months' -Type 'category'\r\nCreates a new X-axis with categories 'Jan', 'Feb', 'Mar' and title 'Months'."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-ChartAxisX -Names @('2020-01-01', '2020-02-01', '2020-03-01') -TitleText 'Dates' -Type 'datetime' -MinValue (Get-Date '2020-01-01') -MaxValue (Get-Date '2020-03-01') -TimeZoneOffset '+02:00'\r\nCreates a new X-axis with datetime values, title 'Dates', and timezone offset of +2 hours."
+    }
+  ]
+}

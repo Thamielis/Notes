@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new navigation float item with specified parameters.",
+  "Description": "This function creates a new navigation float item with the provided parameters. It allows customization of the item's name, link, icon, color, and other properties.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-NavFloatWidgetItem -Name \"Home\" -Href \"https://www.example.com\" -IconBrands \"fab fa-home\" -IconColor \"blue\"\r\nCreates a new navigation float item named \"Home\" that links to \"https://www.example.com\" with a blue home icon."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-NavFloatWidgetItem -Name \"About\" -InternalPageID \"about\" -LinkHome\r\nCreates a new navigation float item named \"About\" that links to the internal page with ID \"about\" and links to the home page."
+    }
+  ]
+}

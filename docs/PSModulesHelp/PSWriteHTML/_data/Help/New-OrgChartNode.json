@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new organizational chart node.",
+  "Description": "This function creates a new node for an organizational chart. It allows defining children nodes by specifying nested nodes for self-nesting.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Additional information"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTML {\r\n    New-HTMLOrgChart {\r\n        New-OrgChartNode -Name 'Test' -Title 'Test2' {\r\n            New-OrgChartNode -Name 'Test' -Title 'Test2'\r\n            New-OrgChartNode -Name 'Test' -Title 'Test2'\r\n            New-OrgChartNode -Name 'Test' -Title 'Test2' {\r\n                New-OrgChartNode -Name 'Test' -Title 'Test2'\r\n            }\r\n        }\r\n    } -AllowExport -ExportExtension pdf -Draggable\r\n} -FilePath $PSScriptRoot\\Example-OrgChart01.html -ShowHTML -Online"
+    }
+  ]
+}

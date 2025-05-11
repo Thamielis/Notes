@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Install a PSNode server on the local machine",
+  "Description": "Installs a PSNode server on a local machine",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Nullable"
+  ],
+  "Links": [
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Install-PSNode \"http://*:9090\" -Command { 'hello world' }"
+    }
+  ]
+}

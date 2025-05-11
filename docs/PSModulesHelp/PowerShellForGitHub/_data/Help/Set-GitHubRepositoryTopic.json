@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Replaces all topics for a repository on GitHub.",
+  "Description": "Replaces all topics for a repository on GitHub.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This is implemented as a function rather than a filter because the ValueFromPipeline\nparameter (Topic) is itself an array which we want to ensure is processed only a single time.\nThis API endpoint doesn't add topics to a repository, it replaces the existing topics with\nthe new set provided, so we need to make sure that we have all the requested topics available\nto us at the time that the API endpoint is called."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Branch\nGitHub.Content\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Reaction\nGitHub.Release\nGitHub.ReleaseAsset\nGitHub.Repository"
+  ],
+  "Outputs": [
+    "GitHub.RepositoryTopic"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-GitHubRepositoryTopic -OwnerName microsoft -RepositoryName PowerShellForGitHub -Clear"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Set-GitHubRepositoryTopic -Uri https://github.com/PowerShell/PowerShellForGitHub -Topic ('octocat', 'powershell', 'github')"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "('octocat', 'powershell', 'github') | Set-GitHubRepositoryTopic -Uri https://github.com/PowerShell/PowerShellForGitHub"
+    }
+  ]
+}

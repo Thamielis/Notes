@@ -1,0 +1,52 @@
+{
+  "Synopsis": "Parses a PowerShell Script (*.ps1, *.psm1, *.psd1) and returns the token",
+  "Description": "Invokes the advanced PowerShell Parser and returns tokens and syntax errors",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://powershell.one/powershell-internals/parsing-and-tokenization/advanced-tokenizer\nhttps://github.com/TobiasPSP/Modules.PSOneTools/blob/master/PSOneTools/1.4/Get-PSOneToken.ps1",
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-PSOneToken -Path c:\\test.ps1\r\nParses the content of c:\\test.ps1 and returns tokens and syntax errors"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-ChildItem -Path $home -Recurse -Include *.ps1,*.psm1,*.psd1 -File |\r\nGet-PSOneToken |\r\nOut-GridView\r\nparses all PowerShell files found anywhere in your user profile"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-ChildItem -Path $home -Recurse -Include *.ps1,*.psm1,*.psd1 -File |\r\nGet-PSOneToken |\r\nWhere-Object Errors\r\nparses all PowerShell files found anywhere in your user profile\r\nand returns only those files that contain syntax errors"
+    }
+  ]
+}

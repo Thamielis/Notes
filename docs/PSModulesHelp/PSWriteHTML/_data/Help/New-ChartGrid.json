@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new chart grid with customizable options.",
+  "Description": "This function creates a new chart grid with the provided parameters. It allows customization of the grid visibility, colors, opacity, padding, and other styling options.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-ChartGrid -Show -BorderColor 'black' -StrokeDash 2 -Position 'front' -xAxisLinesShow -yAxisLinesShow -RowColors @('red', 'blue') -RowOpacity 0.7 -ColumnColors @('green', 'yellow') -ColumnOpacity 0.8 -PaddingTop 10 -PaddingRight 5 -PaddingBottom 15 -PaddingLeft 5\r\nCreates a new chart grid with specified options including visible grid, black border color, dashed border style, front position, visible x-axis and y-axis lines, red and blue row colors with 0.7 opacity, green and yellow column colors with 0.8 opacity, and padding values."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-ChartGrid -Show -BorderColor 'gray' -RowColors @('orange', 'purple') -ColumnColors @('pink', 'cyan') -PaddingTop 5 -PaddingRight 5 -PaddingBottom 5 -PaddingLeft 5\r\nCreates a new chart grid with visible grid, gray border color, orange and purple row colors, pink and cyan column colors, and equal padding values."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new HTML table with various customization options.",
+  "Description": "This function generates an HTML table based on the provided data and allows for extensive customization using a wide range of parameters.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This function is designed to create customizable HTML tables for various data representation needs."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$data = @(\r\n    [PSCustomObject]@{ Name = 'John'; Age = 30 },\r\n    [PSCustomObject]@{ Name = 'Jane'; Age = 25 }\r\n)\r\nNew-HTMLTable -DataTable $data -Title 'User Information' -Buttons @('copyHtml5', 'excelHtml5') -PagingStyle 'full_numbers' -PagingOptions @(10, 25, 50) -DefaultSortColumn @('Name') -DefaultSortOrder @('Ascending')"
+    }
+  ]
+}

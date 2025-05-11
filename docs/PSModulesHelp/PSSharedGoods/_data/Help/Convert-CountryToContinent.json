@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Convert country to continent",
+  "Description": "Convert country to continent or return a hashtable of countries and their corresponding continent.\nIf the country is not found (for example empty), it will return \"Unknown\"",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Convert-CountryToContinent -Country \"Poland\""
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Convert-CountryToContinent"
+    }
+  ]
+}

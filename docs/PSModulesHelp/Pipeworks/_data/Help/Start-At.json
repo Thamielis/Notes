@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Starts scripts at a time or event",
+  "Description": "Starts scripts at a time, an event, or a change in a table",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Nullable"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Start-At -Boot -RepeatEvery \"0:30:0\" -Name LogTime -ScriptBlock {         \r\n    \"$(Get-Date)\" | Set-Content \"$($env:Public)\\$(Get-Random).txt\"\r\n}"
+    }
+  ]
+}

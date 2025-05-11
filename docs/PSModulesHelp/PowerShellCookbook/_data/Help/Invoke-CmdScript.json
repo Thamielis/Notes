@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Invoke the specified batch file (and parameters), but also propigate any\nenvironment variable changes back to the PowerShell environment that\ncalled it.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "type foo-that-sets-the-FOO-env-variable.cmd\r\n@set FOO=%*\r\necho FOO set to %FOO%.\r\nPS > $env:FOO\r\nPS > Invoke-CmdScript \"foo-that-sets-the-FOO-env-variable.cmd\" Test\r\n\r\nC:\\Temp>echo FOO set to Test.\r\nFOO set to Test.\r\n\r\nPS > $env:FOO\r\nTest"
+    }
+  ]
+}

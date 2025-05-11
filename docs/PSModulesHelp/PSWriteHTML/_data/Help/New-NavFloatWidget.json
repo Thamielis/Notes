@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Creates a new navigation float widget with customizable options for different types of widgets.",
+  "Description": "The New-NavFloatWidget function creates a new navigation float widget with various customizable options such as Dots, SelectBox, List, Toggle, and Text. Each type of widget has specific styling and functionality.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-NavFloatWidget -Items { New-NavFloatWidgetItem -Name \"Home\" -Href \"/home\" -IconBrands \"fab fa-home\" -IconColor \"blue\" } -Type \"Dots\"\r\nCreates a new navigation float widget with Dots type, displaying a single item named \"Home\" with a home icon in blue color."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-NavFloatWidget -Items { New-NavFloatWidgetItem -Name \"About\" -Href \"/about\" -IconRegular \"far fa-address-card\" -IconColor \"green\" } -Type \"List\" -Title \"About Us\"\r\nCreates a new navigation float widget with List type, displaying a single item named \"About\" with an address card icon in green color and a title \"About Us\"."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "New-NavFloatWidget -Items { New-NavFloatWidgetItem -Name \"Toggle 1\" -Href \"/toggle1\" } -Type \"Toggle\" -Title \"Toggle Items\"\r\nCreates a new navigation float widget with Toggle type, displaying a single item named \"Toggle 1\" linking to \"/toggle1\" and a title \"Toggle Items\"."
+    }
+  ]
+}

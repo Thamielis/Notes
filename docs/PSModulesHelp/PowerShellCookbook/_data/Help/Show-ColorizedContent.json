@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Displays syntax highlighting, line numbering, and range highlighting for\nPowerShell scripts.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Show-ColorizedContent Invoke-MyScript.ps1\r\n001 | function Write-Greeting\r\n002 | {\r\n003 |     param($greeting)\r\n004 |     Write-Host \"$greeting World\"\r\n005 | }\r\n006 |\r\n007 | Write-Greeting \"Hello\""
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Show-ColorizedContent Invoke-MyScript.ps1 -highlightRange (1..3+7)\r\n001 > function Write-Greeting\r\n002 > {\r\n003 >     param($greeting)\r\n004 |     Write-Host \"$greeting World\"\r\n005 | }\r\n006 |\r\n007 > Write-Greeting \"Hello\""
+    }
+  ]
+}

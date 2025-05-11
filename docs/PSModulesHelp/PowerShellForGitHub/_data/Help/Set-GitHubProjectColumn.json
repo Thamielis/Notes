@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Modify a GitHub Project Column.",
+  "Description": "Modify a GitHub Project Column.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.ProjectCard\nGitHub.ProjectColumn"
+  ],
+  "Outputs": [
+    "GitHub.ProjectColumn"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-GitHubProjectColumn -Column 999999 -ColumnName NewColumnName\r\nSet the project column name to 'NewColumnName' with column with ID 999999."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Provides an inteactive window to help you select complex sets of objects.\nTo do this, it takes all the input from the pipeline, and presents it in a\nnotepad window.  Keep any lines that represent objects you want to retain,\ndelete the rest, then save the file and exit notepad.\n\nThe script then passes the original objects that you kept along the\npipeline.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-Process | Select-FilteredObject | Stop-Process -WhatIf\r\nGets all of the processes running on the system, and displays them to you.\r\nAfter you've selected the ones you want to stop, it pipes those into the\r\nStop-Process cmdlet."
+    }
+  ]
+}

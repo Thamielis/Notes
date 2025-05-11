@@ -1,0 +1,54 @@
+{
+  "Synopsis": "Removes an IP address and its configuration.",
+  "Description": "The Remove-NetIPAddress cmdlet removes an IP address and its configuration. To remove a specific IP address object, use the IPv4 Address parameter or IPv6 Address parameter. If you do not specify an IPv4 or IPv6 address, the cmdlet will remove all IP addresses that match.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetIPAddress"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkId=288398",
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Remove an IP address",
+      "Markdown": "",
+      "Code": "PS C:\\>New-NetIPAddress –InterfaceIndex 12 –IPAddress 192.168.0.1\r\n\r\n\r\nThis command removes the IP address created by the previous command.\r\nPS C:\\>Remove-NetIPAddress –IPAddress 192.168.0.1\r\nThis command adds a new IP address."
+    },
+    {
+      "Title": "Example 2: Remove an IP address using a pipeline",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetIPAddress –IPAddress 192.168.0.1 | Remove-NetIPAddress\r\nThis command removes all of the IP addresses with the address 192.168.0.1."
+    },
+    {
+      "Title": "Example 3: Remove IP addresses by prefix origin",
+      "Markdown": "",
+      "Code": "PS C:\\>Remove-NetIPAddress –PrefixOrigin Manual\r\nThis command removes all of the IP addresses that have a manually-configured prefix origin."
+    }
+  ]
+}

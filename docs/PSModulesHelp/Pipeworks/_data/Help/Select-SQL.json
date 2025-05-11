@@ -1,0 +1,59 @@
+{
+  "Synopsis": "Select SQL data",
+  "Description": "Select data from a SQL databsae",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject",
+    "System.Collections.Hashtable",
+    "System.Data.DataRow"
+  ],
+  "Links": [
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Select-Sql -FromTable ATable -Property Name, Day, Month, Year -Where \"Year = 2005\" -ConnectionSetting SqlAzureConnectionString"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Select-Sql -FromTable INFORMATION_SCHEMA.TABLES -ConnectionSetting SqlAzureConnectionString -Property Table_Name -verbose"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Select-Sql -FromTable INFORMATION_SCHEMA.TABLES -ConnectionSetting \"Data Source=$env:ComputerName;Initial Catalog=Master;Integrated Security=SSPI;\" -Property Table_Name -verbose"
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "Select-Sql \"\r\nSELECT  sys.objects.name,\r\n    SUM(row_count) AS 'Row Count',\r\n    SUM(reserved_page_count) * 8.0 / 1024 AS 'Table Size (MB)'\r\nFROM sys.dm_db_partition_stats, sys.objects\r\nWHERE sys.dm_db_partition_stats.object_id = sys.objects.object_id\r\nGROUP BY sys.objects.name\r\nORDER BY [Table Size (MB)] DESC\r\n\""
+    }
+  ]
+}

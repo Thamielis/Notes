@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates an HTML list item with customizable text styling.",
+  "Description": "The EmailListItem function generates an HTML list item with customizable text styling options such as color, font size, font weight, font style, alignment, text decoration, text transformation, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "EmailListItem -Text \"Example Text\" -Color \"red\" -FontSize 14 -FontWeight \"bold\" -Alignment \"center\"\r\nCreates an HTML list item with the text \"Example Text\" in red color, font size 14, bold font weight, and centered alignment."
+    }
+  ]
+}

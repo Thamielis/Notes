@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Loads the PowerShell data file of a module manifest.",
+  "Description": "This function loads a psd1 (usually a module manifest), and return the hashtable.\nThis implementation works around the issue where Windows PowerShell version have issues\nwith the pwsh $Env:PSModulePath such as in vscode with the vscode powershell extension.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Collections.Hashtable"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-SamplerModuleInfo -ModuleManifestPath C:\\src\\MyProject\\output\\MyProject\\MyProject.psd1"
+    }
+  ]
+}

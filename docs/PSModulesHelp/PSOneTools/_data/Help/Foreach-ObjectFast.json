@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Faster Foreach-Object",
+  "Description": "Foreach-ObjectFast can replace the built-in Foreach-Object and improves pipeline speed considerably.\nForeach-ObjectFast supports only the most commonly used parameters -Begin, -Process, and -End, so you can replace\n\n1..100 | Foreach-Object { 'Server{0:d3}' -f $_ }\n\nwith\n\n1..100 | Foreach-ObjectFast { 'Server{0:d3}' -f $_ }\n\nbut you cannot currently replace instances of Foreach-Object that uses the less commonly used parameters, \nlike -RemainingScripts, -MemberNames, and -ArgumentList\n\nForeach-ObjectFast has a performance benefit per iteration, so the more objects\nyou send through the pipeline, the more significant performace benefits you will see.\n\nForeach-ObjectFast is using a steppable pipeline internally which performs better.\nHowever because of this, the debugging experience will be different, and internal\nvariables such as $MyInvocation may yield different results. For most every-day tasks,\nthese changes are not important.\n\nA complete explanation of what Where-ObjectFast does can be found here:\nhttps://powershell.one/tricks/performance/pipeline",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://powershell.one/tricks/performance/pipeline\nhttps://github.com/TobiasPSP/Modules.PSOneTools/blob/master/PSOneTools/1.2/Foreach-ObjectFast.ps1",
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$stopwatch = [System.Diagnostics.Stopwatch]::StartNew()\r\n$result = 1..1000000 | Foreach-ObjectFast -Process {\r\n  \"I am at $_\"\r\n}\r\n\r\n$report = '{0} elements in {1:n2} seconds' \r\n$report -f $result.Count, $stopwatch.Elapsed.TotalSeconds \r\n\r\nDemos the speed improvements. Run this script to see how well it performs,\r\nthen replace Foreach-ObjectFast with the default Foreach-Object, and check out\r\nthe performace difference. $result is the same in both cases."
+    }
+  ]
+}

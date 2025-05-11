@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new table button for column visibility control.",
+  "Description": "This function creates a new table button for controlling the visibility of columns in a table. It allows customization of the button text, layout, and other properties.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-TableButtonColumnVisibility -ButtonName \"Toggle Columns\" -CollectionTitle \"Column Visibility\" -CollectionPosition \"fixed\" -CollectionLayout \"two-column\" -DropUp -Fade 500\r\nCreates a new table button with the specified properties."
+    }
+  ]
+}

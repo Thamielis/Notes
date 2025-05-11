@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Creates a Definition of a chart which can be added using Export-Excel, or Add-PivotTable",
+  "Description": "All the parameters which are passed to Add-ExcelChart can be added to a chart-definition object and passed to Export-Excel with the -ExcelChartDefinition parameter, or to Add-PivotTable with the -PivotChartDefinition parameter. This command sets up those definition objects.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS\\> $cDef = New-ExcelChartDefinition  -ChartType line -XRange \"X\" -YRange \"Sinx\"  -Title \"Graph of Sine X\" -TitleBold -TitleSize 14 -Column 2 -ColumnOffSetPixels 35 -Width 800 -XAxisTitleText \"Degrees\" -XAxisTitleBold -XAxisTitleSize 12 -XMajorUnit 30 -XMinorUnit 10 -XMinValue 0 -XMaxValue 361  -XAxisNumberformat \"000\" -YMinValue -1.25 -YMaxValue 1.25 -YMajorUnit 0.25 -YAxisNumberformat \"0.00\" -YAxisTitleText \"Sine\" -YAxisTitleBold -YAxisTitleSize 12  -SeriesHeader \"Sin(x)\" -LegendSize 8 -legendBold  -LegendPosition Bottom\r\nPS\\> 0..360 | ForEach-Object {[pscustomobject][ordered]@{x = $_; Sinx = \"=Sin(Radians(x)) \"}} | Export-Excel -AutoNameRange -now -WorkSheetname SinX -ExcelChartDefinition $cDef -Show\r\nThis reworks an example from Add-Excel-Chart but here the chart is defined and the defintion stored in $cDef and then Export-Excel uses $cDef ."
+    }
+  ]
+}

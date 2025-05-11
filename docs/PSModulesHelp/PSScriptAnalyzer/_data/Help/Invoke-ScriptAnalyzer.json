@@ -1,0 +1,84 @@
+{
+  "Synopsis": "Evaluates a script or module based on selected best practice rules",
+  "Description": "`Invoke-ScriptAnalyzer` evaluates scripts or module files (`.ps1`, `.psm1`, and `.psd1` files) based on a collection of best practice rules and returns objects that represent rule violations. It also includes special rules to analyze DSC resources.\r\n\r\n\r\n`Invoke-ScriptAnalyzer` comes with a set of built-in rules. By default, it uses all rules. You can use the IncludeRule and ExcludeRule parameters to select the rules you want. You can use the `Get-ScriptAnalyzerRule` cmdlet to examine and select the rules you want to include or exclude from the evaluation.\r\n\r\n\r\nYou can also use customized rules that you write in PowerShell scripts, or compile in assemblies using C#. Custom rules can also be selected using the IncludeRule and ExcludeRule parameters.\r\n\r\n\r\nYou can also include a rule in the analysis, but suppress the output of that rule for selected functions or scripts. This feature should be used only when necessary. To get rules that were suppressed, run `Invoke-ScriptAnalyzer` with the SuppressedOnly parameter.\r\n\r\n\r\nFor usage in CI systems, the EnableExit exits the shell with an exit code equal to the number of error records.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Cmdlet",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "Microsoft.Windows.PowerShell.ScriptAnalyzer.Generic.DiagnosticRecord",
+    "Microsoft.Windows.PowerShell.ScriptAnalyzer.Generic.SuppressedRecord"
+  ],
+  "Links": [
+    "https://learn.microsoft.com/powershell/module/psscriptanalyzer/invoke-scriptanalyzer?view=ps-modules&wt.mc_id=ps-gethelp",
+    null,
+    "https://github.com/PowerShell/PSScriptAnalyzer"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1 - Run all Script Analyzer rules on a script",
+      "Markdown": "",
+      "Code": "Invoke-ScriptAnalyzer -Path C:\\Scripts\\Get-LogData.ps1"
+    },
+    {
+      "Title": "EXAMPLE 2 - Run all Script Analyzer rules on all files in the Modules directory",
+      "Markdown": "",
+      "Code": "Invoke-ScriptAnalyzer -Path $home\\Documents\\WindowsPowerShell\\Modules -Recurse"
+    },
+    {
+      "Title": "EXAMPLE 3 - Run a single rule on a module",
+      "Markdown": "",
+      "Code": "Invoke-ScriptAnalyzer -Path C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\Modules\\PSDiagnostics -IncludeRule PSAvoidUsingPositionalParameters"
+    },
+    {
+      "Title": "EXAMPLE 4 - Run all rules except two on your modules",
+      "Markdown": "",
+      "Code": "Invoke-ScriptAnalyzer -Path C:\\ps-test\\MyModule -Recurse -ExcludeRule PSAvoidUsingCmdletAliases, PSAvoidUsingInternalURLs"
+    },
+    {
+      "Title": "EXAMPLE 5 - Run Script Analyzer with custom rules",
+      "Markdown": "",
+      "Code": "Invoke-ScriptAnalyzer -Path D:\\test_scripts\\Test-Script.ps1 -CustomRulePath C:\\CommunityAnalyzerRules -IncludeDefaultRules"
+    },
+    {
+      "Title": "EXAMPLE 6 - Run only the rules that are Error severity and have the PSDSC source name",
+      "Markdown": "",
+      "Code": "$DSCError = Get-ScriptAnalyzerRule -Severity Error | Where SourceName -eq PSDSC\r\n$Path = \"$home\\Documents\\WindowsPowerShell\\Modules\\MyDSCModule\"\r\nInvoke-ScriptAnalyzerRule -Path $Path -IncludeRule $DSCError -Recurse"
+    },
+    {
+      "Title": "EXAMPLE 7 - Suppressing rule violations",
+      "Markdown": "",
+      "Code": "function Get-Widgets\r\n{\r\n    [CmdletBinding()]\r\n    [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute(\"PSUseSingularNouns\", \"\")]\r\n    [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute(\"PSAvoidUsingCmdletAliases\", \"\", Justification=\"Resolution in progress.\")]\r\n    Param()\r\n\r\n    dir $pshome\r\n    ...\r\n}\r\n\r\nInvoke-ScriptAnalyzer -Path .\\Get-Widgets.ps1\r\n\r\nRuleName                            Severity     FileName   Line  Message\r\n--------                            --------     --------   ----  -------\r\nPSProvideCommentHelp                Information  ManageProf 14    The cmdlet 'Get-Widget' does not have a help comment.\r\n                                                 iles.psm1\r\n\r\nInvoke-ScriptAnalyzer -Path .\\Get-Widgets.ps1 -SuppressedOnly\r\n\r\nRule Name                           Severity     File Name  Line  Justification\r\n---------                           --------     ---------  ----  -------------\r\nPSAvoidUsingCmdletAliases           Warning      ManageProf 21    Resolution in progress.\r\n                                                 iles.psm1\r\nPSUseSingularNouns                  Warning      ManageProf 14\r\n                                                 iles.psm1\r\nThe second command uses the SuppressedOnly parameter to report violations of the rules that are suppressed script file."
+    },
+    {
+      "Title": "EXAMPLE 8 - Analyze script files using a profile definition",
+      "Markdown": "In .\\ScriptAnalyzerProfile.txt",
+      "Code": "@{\r\n    Severity = @('Error', 'Warning')\r\n    IncludeRules = 'PSAvoid*'\r\n    ExcludeRules = '*WriteHost'\r\n}\r\n\r\nInvoke-ScriptAnalyzer -Path $pshome\\Modules\\BitLocker -Profile .\\ScriptAnalyzerProfile.txt\r\nIf you include a conflicting parameter in the `Invoke-ScriptAnalyzer` command, such as `-Severity Error`, the cmdlet uses the profile value and ignores the parameter."
+    },
+    {
+      "Title": "EXAMPLE 9 - Analyze a script stored as a string",
+      "Markdown": "",
+      "Code": "Invoke-ScriptAnalyzer -ScriptDefinition \"function Get-Widgets {Write-Host 'Hello'}\"\r\n\r\nRuleName                            Severity     FileName   Line  Message\r\n--------                            --------     --------   ----  -------\r\nPSAvoidUsingWriteHost               Warning                 1     Script\r\n                                                                  because\r\n                                                                  there i\r\n                                                                  suppres\r\n                                                                  Write-O\r\nPSUseSingularNouns                  Warning                 1     The cmd\r\n                                                                  noun sh\r\nWhen you use the ScriptDefinition parameter, the FileName property of the DiagnosticRecord object is `$null`."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Get a summary list of AD Reporting commands",
+  "Description": "This command will present a summary of commands in the ADReportingTools module grouped by verb. The default output will show the command name, any defined aliases, and the help synopsis.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "ADReportingTool"
+  ],
+  "Links": [
+    "https://bit.ly/3vtugaC",
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADReportingTools"
+    }
+  ]
+}

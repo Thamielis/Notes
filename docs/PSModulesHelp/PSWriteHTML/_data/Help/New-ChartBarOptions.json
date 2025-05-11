@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates options for a bar chart with customizable parameters.",
+  "Description": "This function creates options for a bar chart with the provided parameters. It allows customization of the bar type, data labels, colors, patterns, gradients, and distribution.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-ChartBarOptions -Type 'barStacked' -DataLabelsEnabled $true -DataLabelsOffsetX -6 -DataLabelsFontSize '12px' -DataLabelsColor 'black' -Patterned -Distributed\r\nCreates options for a stacked bar chart with data labels enabled, offset of -6, font size '12px', black data labels, patterned colors, and distributed bars."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-ChartBarOptions -Type 'bar' -DataLabelsEnabled $false -Gradient -Vertical\r\nCreates options for a regular bar chart with data labels disabled, gradient colors, and vertical bars."
+    }
+  ]
+}

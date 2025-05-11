@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new HTML anchor element.",
+  "Description": "This function creates a new HTML anchor element (<a>) with specified attributes.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This function is part of a set of functions for generating HTML elements."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLAnchor -Target _parent\r\nCreates an anchor element with the target attribute set to \"_parent\".\r\nNew-HTMLAnchor -Id \"show_$RandomNumber\" -Href '#' -OnClick \"show('$RandomNumber');\" -Style \"color: #ffffff; display:none;\" -Text 'Show'\r\nCreates an anchor element with specified attributes and text.\r\n\r\nOutput:\r\n<a id=\"show_$RandomNumber\" class=\"\" target=\"_parent\" href=\"#\" onclick=\"show('$RandomNumber');\" style=\"color: #ffffff; display:none;\">Show</a>"
+    }
+  ]
+}

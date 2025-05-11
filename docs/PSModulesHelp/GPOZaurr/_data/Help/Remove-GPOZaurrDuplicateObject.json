@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Removes duplicate Group Policy Objects (GPOs) identified by the Get-GPOZaurrDuplicateObject function.",
+  "Description": "This function removes duplicate GPOs based on the criteria provided. It retrieves duplicate GPO objects using Get-GPOZaurrDuplicateObject and then attempts to remove them from the Active Directory.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-GPOZaurrDuplicateObject -Forest \"contoso.com\" -IncludeDomains \"domain1.com\", \"domain2.com\" -ExcludeDomains \"domain3.com\" -LimitProcessing 5\r\nDescription:\r\nRemoves duplicate GPOs from the forest \"contoso.com\" for domains \"domain1.com\" and \"domain2.com\", excluding \"domain3.com\", processing only the first 5 duplicates."
+    }
+  ]
+}

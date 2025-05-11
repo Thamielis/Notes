@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Create a Sampler scaffolding so you can add samples & build pipeline.",
+  "Description": "New-SamplerPipeline helps you bootstrap your project pipeline, whether it's for a Chocolatey\npackage, Azure Policy Guest Configuration packages or just a pipeline for a CI process.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Other parameters will be displayed based on the Template used for the pipeline.\nSee Add-Sample to add elements such as functions (private or public), tests, DSC Resources to your project."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Void"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-SamplerPipeline -DestinationPath . -Pipeline Build -ProjectName MyBuild -License 'true' -LicenseType MIT -SourceDirectory Source  -MainGitBranch main -ModuleDescription 'some desc' -CustomRepo PSGallery -Features All"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Converts a ScriptBlock into an array of strings, each representing a line of the script block.",
+  "Description": "This function takes a ScriptBlock as input and converts it into an array of strings, where each string represents a line of the script block.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "ConvertFrom-ScriptBlock -ScriptBlock {\r\n    $Variable1 = \"Value1\"\r\n    $Variable2 = \"Value2\"\r\n    Write-Host \"Hello, World!\"\r\n}\r\nThis example will output an array containing the following strings:\r\n$Variable1 = \"Value1\"\r\n$Variable2 = \"Value2\"\r\nWrite-Host \"Hello, World!\""
+    }
+  ]
+}

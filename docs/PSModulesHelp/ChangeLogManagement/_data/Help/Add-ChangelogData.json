@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Adds an item to a changelog file in Keep a Changelog 1.0.0 format.",
+  "Description": "This cmdlet adds new Added/Changed/Deprecated/Removed/Fixed/Security items to the Unreleased section of a\nchangelog in Keep a Changelog 1.0.0 format.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "This cmdlet does not accept pipeline input."
+  ],
+  "Outputs": [
+    "This cmdlet does not generate output."
+  ],
+  "Links": [
+    "https://github.com/natescherer/ChangelogManagement"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Add-ChangelogData -Type \"Added\" -Data \"Spanish language translation\"\r\nDoes not generate output, but adds a new Added change into changelog at  .\\CHANGELOG.md."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Add-ChangelogData -Type \"Removed\" -Data \"TLS 1.0 support\" -Path project\\CHANGELOG.md\r\nDoes not generate output, but adds a new Security change into changelog at project\\CHANGELOG.md."
+    }
+  ]
+}

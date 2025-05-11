@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Create a new settings file for the current workspace.",
+  "Description": "The New-ESCSSettingsFile function creates a settings file in the current workspace. This file contains settings used by this module for determining where to find specific files.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [
+    "https://github.com/SeeminglyScience/EditorServicesCommandSuite/docs/en-US/New-ESCSSettingsFile.md"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-ESCSSettingsFile\r\nCreates the file ESCSSettings.psd1 in the base of the current workspace with default values."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "Synopsis": "Adds a permission to a Group Policy Object (GPO).",
+  "Description": "This function adds a permission to a specified Group Policy Object (GPO) based on the provided parameters.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Add-GPOPermission -Type Default -IncludePermissionType Read -Principal \"Domain Admins\" -PrincipalType DistinguishedName -PermitType Allow\r\nAdds a permission to the GPO with default settings allowing 'Domain Admins' to read."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Add-GPOPermission -Type Administrative -IncludePermissionType Write -Principal \"Finance Group\" -PrincipalType Name -PermitType Allow\r\nAdds a permission to the GPO for the 'Finance Group' allowing write access."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Add-GPOPermission -Type AuthenticatedUsers -IncludePermissionType Modify -PermitType Deny\r\nAdds a permission to the GPO for all authenticated users denying modification."
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "Add-GPOPermission -Type WellKnownAdministrative -IncludePermissionType FullControl -Principal \"Enterprise Admins\" -PrincipalType Sid -PermitType Allow\r\nAdds a permission to the GPO for 'Enterprise Admins' with full control."
+    }
+  ]
+}

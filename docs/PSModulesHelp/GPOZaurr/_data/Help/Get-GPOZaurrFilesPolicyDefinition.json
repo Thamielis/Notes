@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Retrieves policy definitions for Group Policy Objects (GPOs) within specified domains.",
+  "Description": "This function retrieves policy definitions for GPOs within specified domains. It collects information about policy files, including their attributes and digital signatures.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrFilesPolicyDefinition -Forest \"contoso.com\" -IncludeDomains \"domain1\", \"domain2\" -ExcludeDomains \"domain3\" -Signature\r\nRetrieves policy definitions for GPOs within the \"contoso.com\" forest, including domains \"domain1\" and \"domain2\" while excluding \"domain3\". Digital signature information is also retrieved."
+    }
+  ]
+}

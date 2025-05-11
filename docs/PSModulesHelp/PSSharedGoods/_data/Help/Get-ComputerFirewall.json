@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Short description",
+  "Description": "Long description",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$Data = Get-ComputerFirewall\r\n$Data | Format-Table -AutoSize"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$Data = Get-ComputerFirewall\r\n$Data | Out-HtmlView -ScrollX -Filtering -Title \"Firewall Rules\" -DataStore JavaScript"
+    }
+  ]
+}

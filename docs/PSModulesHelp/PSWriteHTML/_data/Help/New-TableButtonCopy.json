@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new table button for copying data with customizable options.",
+  "Description": "This function creates a new table button for copying data with customizable options. It allows users to specify the button title and display text.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-TableButtonCopy -Title \"Copy Data\" -ButtonName \"Copy\"\r\nDescription\r\n-----------\r\nCreates a new table button with the title \"Copy Data\" and button name \"Copy\"."
+    }
+  ]
+}

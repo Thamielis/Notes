@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Defines layout options for hierarchical diagrams.",
+  "Description": "When enabling the hierarchical layout, it overrules some of the other options.\nThe physics is set to the hierarchical repulsion solver and dynamic smooth edges are converted to static smooth edges.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "An example"
+    }
+  ]
+}

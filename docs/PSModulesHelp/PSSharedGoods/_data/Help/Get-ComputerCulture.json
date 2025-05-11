@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieves culture information from a specified computer.",
+  "Description": "This function retrieves culture information from the specified computer. It provides details such as KeyboardLayoutId, DisplayName, and Windows Language.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-ComputerCulture\r\nRetrieves culture information from the local computer."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-ComputerCulture -ComputerName \"Server01\"\r\nRetrieves culture information from a remote computer named Server01."
+    }
+  ]
+}

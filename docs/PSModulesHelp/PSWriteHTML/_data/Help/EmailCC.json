@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates an email object for carbon copy (CC) recipients.",
+  "Description": "This function creates an email object specifically for carbon copy (CC) recipients. It takes an array of email addresses and returns a custom object representing the CC recipients.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$CCRecipients = EmailCC -Addresses 'cc1@example.com', 'cc2@example.com'\r\nCreates an email object with two CC recipients."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$CCList = 'cc1@example.com', 'cc2@example.com'\r\n$CCRecipients = EmailCC -Addresses $CCList\r\nCreates an email object with multiple CC recipients."
+    }
+  ]
+}

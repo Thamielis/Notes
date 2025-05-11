@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new HTML summary item with specified parameters.",
+  "Description": "This function creates a new HTML summary item with customizable text, icons, and other visual properties.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLSummaryItem -Text \"Summary Item 1\" -IconBrands \"fa-windows\" -IconSize 2 -IconColor \"blue\" -Open\r\nCreates a new HTML summary item with the text \"Summary Item 1\", using the Windows icon brand, a size of 2, blue color, and initially open."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-HTMLSummaryItem -Text \"Summary Item 2\" -IconRegular \"fa-address-book\" -IconSize 3 -IconColor \"green\"\r\nCreates a new HTML summary item with the text \"Summary Item 2\", using the address book regular icon, a size of 3, and green color."
+    }
+  ]
+}

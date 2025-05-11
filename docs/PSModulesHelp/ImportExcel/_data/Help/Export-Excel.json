@@ -1,0 +1,117 @@
+{
+  "Synopsis": "Exports data to an Excel worksheet.",
+  "Description": "Exports data to an Excel file and where possible tries to convert numbers in text fields so Excel recognizes them as numbers instead of text. After all: Excel is a spreadsheet program used for number manipulation and calculations. The parameter -NoNumberConversion * can be used if number conversion is not desired.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "OfficeOpenXml.ExcelPackage"
+  ],
+  "Links": [
+    null,
+    "https://github.com/dfinke/ImportExcel"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS\\> Get-Process | Export-Excel .\\Test.xlsx -show\r\nExport all the processes to the Excel file 'Test.xlsx' and open the file immediately."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "PS\\> $ExcelParams = @{\r\n    Path    = $env:TEMP + '\\Excel.xlsx'\r\n    Show    = $true\r\n    Verbose = $true\r\n}\r\nPS\\> Remove-Item -Path $ExcelParams.Path -Force -EA Ignore\r\nPS\\> Write-Output -1 668 34 777 860 -0.5 119 -0.1 234 788 |\r\n        Export-Excel @ExcelParams -NumberFormat ' [Blue$#,##0.00; [Red]-$#,##0.00'\r\nExports all data to the Excel file 'Excel.xslx' and colors the negative values in Red and the positive values in Blue.\r\n\r\nIt will also add a dollar sign in front of the numbers which use a thousand seperator and display to two decimal places."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "PS\\> $ExcelParams = @{\r\n    Path    = $env:TEMP + '\\Excel.xlsx'\r\n    Show    = $true\r\n    Verbose = $true\r\n}\r\nPS\\> Remove-Item -Path $ExcelParams.Path -Force -EA Ignore\r\nPS\\> [PSCustOmobject][Ordered]@{\r\n    Date      = Get-Date\r\n    Formula1  = '=SUM(F2:G2)'\r\n    String1   = 'My String'\r\n    String2   = 'a'\r\n    IPAddress = '10.10.25.5'\r\n    Number1   = '07670'\r\n    Number2   = '0,26'\r\n    Number3   = '1.555,83'\r\n    Number4   = '1.2'\r\n    Number5   = '-31'\r\n    PhoneNr1  = '+32 44'\r\n    PhoneNr2  = '+32 4 4444 444'\r\n    PhoneNr3  =  '+3244444444'\r\n} | Export-Excel @ExcelParams -NoNumberConversion IPAddress, Number1\r\nExports all data to the Excel file \"Excel.xlsx\" and tries to convert all values to numbers where possible except for \"IPAddress\" and \"Number1\", which are stored in the sheet 'as is', without being converted to a number."
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "PS\\> $ExcelParams = @{\r\n    Path    = $env:TEMP + '\\Excel.xlsx'\r\n    Show    = $true\r\n    Verbose = $true\r\n}\r\nPS\\> Remove-Item -Path $ExcelParams.Path -Force -EA Ignore\r\nPS\\> [PSCustOmobject][Ordered]@{\r\n    Date      = Get-Date\r\n    Formula1  = '=SUM(F2:G2)'\r\n    String1   = 'My String'\r\n    String2   = 'a'\r\n    IPAddress = '10.10.25.5'\r\n    Number1   = '07670'\r\n    Number2   = '0,26'\r\n    Number3   = '1.555,83'\r\n    Number4   = '1.2'\r\n    Number5   = '-31'\r\n    PhoneNr1  = '+32 44'\r\n    PhoneNr2  = '+32 4 4444 444'\r\n    PhoneNr3  =  '+3244444444'\r\n} | Export-Excel @ExcelParams -NoNumberConversion *\r\nExports all data to the Excel file 'Excel.xslx' as is, no number conversion will take place. This means that Excel will show the exact same data that you handed over to the 'Export-Excel' function."
+    },
+    {
+      "Title": "EXAMPLE 5",
+      "Markdown": "",
+      "Code": "PS\\> $ExcelParams = @{\r\n        Path    = $env:TEMP + '\\Excel.xlsx'\r\n        Show    = $true\r\n        Verbose = $true\r\n}\r\nPS\\> Remove-Item -Path $ExcelParams.Path -Force -EA Ignore\r\nPS\\> Write-Output 489 668 299 777 860 151 119 497 234 788 |\r\n        Export-Excel @ExcelParams -ConditionalText $(\r\n            New-ConditionalText -ConditionalType GreaterThan 525 -ConditionalTextColor DarkRed -BackgroundColor LightPink\r\n        )\r\nExports data that will have a Conditional Formatting rule in Excel that will show cells with a value is greater than 525, with a background fill color of \"LightPink\" and the text in \"DarkRed\".\r\n\r\nWhere the condition is not met the color will be the default, black text on a white background."
+    },
+    {
+      "Title": "EXAMPLE 6",
+      "Markdown": "",
+      "Code": "PS\\> $ExcelParams = @{\r\n    Path    = $env:TEMP + '\\Excel.xlsx'\r\n    Show    = $true\r\n    Verbose = $true\r\n}\r\nPS\\> Remove-Item -Path $ExcelParams.Path -Force -EA Ignore\r\nPS\\> Get-Service | Select-Object -Property Name, Status, DisplayName, ServiceName |\r\n        Export-Excel @ExcelParams -ConditionalText $(\r\n            New-ConditionalText Stop DarkRed LightPink\r\n            New-ConditionalText Running Blue Cyan\r\n        )\r\nExports all services to an Excel sheet, setting a Conditional formatting rule that will set the background fill color to \"LightPink\" and the text color to \"DarkRed\" when the value contains the word \"Stop\".\r\n\r\nIf the value contains the word \"Running\" it will have a background fill color of \"Cyan\" and text colored 'Blue'.\r\n\r\nIf neither condition is met, the color will be the default, black text on a white background."
+    },
+    {
+      "Title": "EXAMPLE 7",
+      "Markdown": "",
+      "Code": "PS\\> $r = Get-ChildItem C:\\WINDOWS\\system32 -File\r\n\r\nPS\\> $TotalSettings = @{ \r\n         Name = \"Count\"\r\n         Extension = \"=COUNTIF([Extension];`\".exe`\")\"\r\n         Length = @{\r\n             Function = \"=SUMIF([Extension];`\".exe`\";[Length])\"\r\n             Comment = \"Sum of all exe sizes\"\r\n         }\r\n     }\r\n\r\nPS\\> $r | Export-Excel -TableName system32files -TableStyle Medium10 -TableTotalSettings $TotalSettings -Show\r\nExports a list of files with a totals row with three calculated totals:\r\n\r\n- Total count of names\r\n\r\n- Count of files with the extension \".exe\"\r\n\r\n- Total size of all file with extension \".exe\" and add a comment as to not be mistaken that is is the total size of all files"
+    },
+    {
+      "Title": "EXAMPLE 8",
+      "Markdown": "",
+      "Code": "PS\\> $ExcelParams = @{\r\n        Path      = $env:TEMP + '\\Excel.xlsx'\r\n        Show      = $true\r\n        Verbose   = $true\r\n    }\r\nPS\\> Remove-Item -Path $ExcelParams.Path -Force -EA Ignore\r\nPS\\> $Array = @()\r\nPS\\> $Obj1 = [PSCustomObject]@{\r\n    Member1   = 'First'\r\n    Member2   = 'Second'\r\n}\r\n\r\nPS\\> $Obj2 = [PSCustomObject]@{\r\n    Member1   = 'First'\r\n    Member2   = 'Second'\r\n    Member3   = 'Third'\r\n}\r\n\r\n PS\\> $Obj3 = [PSCustomObject]@{\r\n    Member1   = 'First'\r\n    Member2   = 'Second'\r\n    Member3   = 'Third'\r\n    Member4   = 'Fourth'\r\n}\r\n\r\nPS\\> $Array = $Obj1, $Obj2, $Obj3\r\nPS\\> $Array | Out-GridView -Title 'Not showing Member3 and Member4'\r\nPS\\> $Array | Update-FirstObjectProperties | Export-Excel @ExcelParams -WorksheetName Numbers\r\nUpdates the first object of the array by adding property 'Member3' and 'Member4'. Afterwards, all objects are exported to an Excel file and all column headers are visible."
+    },
+    {
+      "Title": "EXAMPLE 9",
+      "Markdown": "",
+      "Code": "PS\\> Get-Process | Export-Excel .\\test.xlsx -WorksheetName Processes -IncludePivotTable -Show -PivotRows Company -PivotData PM"
+    },
+    {
+      "Title": "EXAMPLE 10",
+      "Markdown": "",
+      "Code": "PS\\> Get-Process | Export-Excel .\\test.xlsx -WorksheetName Processes -ChartType PieExploded3D -IncludePivotChart -IncludePivotTable -Show -PivotRows Company -PivotData PM"
+    },
+    {
+      "Title": "EXAMPLE 11",
+      "Markdown": "",
+      "Code": "PS\\> Get-Service | Export-Excel 'c:\\temp\\test.xlsx'  -Show -IncludePivotTable -PivotRows status -PivotData @{status='count'}"
+    },
+    {
+      "Title": "EXAMPLE 12",
+      "Markdown": "",
+      "Code": "PS\\> $pt = [ordered]@{}\r\nPS\\> $pt.pt1=@{\r\n    SourceWorkSheet   = 'Sheet1';\r\n    PivotRows         = 'Status'\r\n    PivotData         = @{'Status'='count'}\r\n    IncludePivotChart = $true\r\n    ChartType         = 'BarClustered3D'\r\n}\r\nPS\\> $pt.pt2=@\r\n    SourceWorkSheet   = 'Sheet2';\r\n    PivotRows         = 'Company'\r\n    PivotData         = @{'Company'='count'}\r\n    IncludePivotChart = $true\r\n    ChartType         = 'PieExploded3D'\r\n}\r\nPS\\> Remove-Item  -Path .\\test.xlsx\r\nPS\\> Get-Service | Select-Object    -Property Status,Name,DisplayName,StartType | Export-Excel -Path .\\test.xlsx -AutoSize\r\nPS\\> Get-Process | Select-Object    -Property Name,Company,Handles,CPU,VM       | Export-Excel -Path .\\test.xlsx -AutoSize -WorksheetName 'sheet2'\r\nPS\\> Export-Excel -Path .\\test.xlsx -PivotTableDefinition $pt -Show\r\nThis example defines two PivotTables.\r\n\r\nThen it puts Service data on Sheet1 with one call to Export-Excel and Process Data on sheet2 with a second call to Export-Excel.\r\n\r\nThe third and final call adds the two PivotTables and opens the spreadsheet in Excel."
+    },
+    {
+      "Title": "EXAMPLE 13",
+      "Markdown": "",
+      "Code": "PS\\> Remove-Item  -Path .\\test.xlsx\r\nPS\\> $excel = Get-Service | Select-Object -Property Status,Name,DisplayName,StartType | Export-Excel -Path .\\test.xlsx -PassThru\r\nPS\\> $excel.Workbook.Worksheets [\"Sheet1\"].Row(1).style.font.bold = $true\r\nPS\\> $excel.Workbook.Worksheets [\"Sheet1\"].Column(3 ).width = 29\r\nPS\\> $excel.Workbook.Worksheets [\"Sheet1\"].Column(3 ).Style.wraptext = $true\r\nPS\\> $excel.Save()\r\nPS\\> $excel.Dispose()\r\nPS\\> Start-Process .\\test.xlsx\r\nThis example uses -PassThru.\r\n\r\nIt puts service information into sheet1 of the workbook and saves the ExcelPackage object in $Excel.\r\n\r\nIt then uses the package object to apply formatting, and then saves the workbook and disposes of the object, before loading the document in Excel.\r\n\r\nNote: Other commands in the module remove the need to work directly with the package object in this way."
+    },
+    {
+      "Title": "EXAMPLE 14",
+      "Markdown": "",
+      "Code": "PS\\> Remove-Item -Path .\\test.xlsx -ErrorAction Ignore\r\nPS\\> $excel = Get-Process | Select-Object -Property Name,Company,Handles,CPU,PM,NPM,WS |\r\n        Export-Excel -Path .\\test.xlsx -ClearSheet -WorksheetName \"Processes\" -PassThru\r\nPS\\> $sheet = $excel.Workbook.Worksheets [\"Processes\"]\r\nPS\\> $sheet.Column(1) | Set-ExcelRange -Bold -AutoFit\r\nPS\\> $sheet.Column(2) | Set-ExcelRange -Width 29 -WrapText\r\nPS\\> $sheet.Column(3) | Set-ExcelRange -HorizontalAlignment Right -NFormat \"#,###\"\r\nPS\\> Set-ExcelRange -Address $sheet.Cells [\"E1:H1048576\"]  -HorizontalAlignment Right -NFormat \"#,###\"\r\nPS\\> Set-ExcelRange -Address $sheet.Column(4)  -HorizontalAlignment Right -NFormat \"#,##0.0\" -Bold\r\nPS\\> Set-ExcelRange -Address $sheet.Row(1) -Bold -HorizontalAlignment Center\r\nPS\\> Add-ConditionalFormatting -WorkSheet $sheet -Range \"D2:D1048576\" -DataBarColor Red\r\nPS\\> Add-ConditionalFormatting -WorkSheet $sheet -Range \"G2:G1048576\" -RuleType GreaterThan -ConditionValue \"104857600\" -ForeGroundColor Red\r\nPS\\> foreach ($c in 5..9) {Set-ExcelRange -Address $sheet.Column($c)  -AutoFit }\r\nPS\\> Export-Excel -ExcelPackage $excel -WorksheetName \"Processes\" -IncludePivotChart -ChartType ColumnClustered -NoLegend -PivotRows company -PivotData @{'Name'='Count'}  -Show\r\nThis a more sophisticated version of the previous example showing different ways of using Set-ExcelRange, and also adding conditional formatting.\r\n\r\nIn the final command a PivotChart is added and the workbook is opened in Excel."
+    },
+    {
+      "Title": "EXAMPLE 15",
+      "Markdown": "",
+      "Code": "PS\\> 0..360 | ForEach-Object {[pscustomobject][ordered]@{X=$_; Sinx=\"=Sin(Radians(x)) \"} } |\r\n        Export-Excel -now -LineChart -AutoNameRange\r\nCreates a line chart showing the value of Sine(x) for values of X between 0 and 360 degrees."
+    },
+    {
+      "Title": "EXAMPLE 16",
+      "Markdown": "",
+      "Code": "PS\\> Invoke-Sqlcmd -ServerInstance localhost\\DEFAULT -Database AdventureWorks2014 -Query \"select *  from sys.tables\" -OutputAs DataRows |\r\n       Export-Excel -Path .\\SysTables_AdventureWorks2014.xlsx -WorksheetName Tables\r\nRuns a query against a SQL Server database and outputs the resulting rows as DataRows using the -OutputAs parameter. The results are then piped to the Export-Excel function.\r\n\r\nNOTE: You need to install the SqlServer module from the PowerShell Gallery in order to get the -OutputAs parameter for the Invoke-Sqlcmd cmdlet."
+    }
+  ]
+}

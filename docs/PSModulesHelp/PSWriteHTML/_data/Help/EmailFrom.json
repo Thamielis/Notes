@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates an email object for the sender address.",
+  "Description": "This function creates an email object specifically for the sender address. It takes a single email address as input and returns a custom object representing the sender address.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$Sender = EmailFrom -Address 'sender@example.com'\r\nCreates an email object with the specified sender address."
+    }
+  ]
+}

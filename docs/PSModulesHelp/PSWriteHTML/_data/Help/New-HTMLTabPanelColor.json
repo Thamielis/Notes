@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new HTML Tab Panel with customizable colors.",
+  "Description": "This function allows you to define colors for various elements of an HTML Tab Panel, such as background color, border color, anchor colors, and loader colors.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This function allows customization of colors for an HTML Tab Panel."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-HTMLTabPanelColor -BackgrounColor '#f0f0f0' -BorderColor '#cccccc' -AnchorDefaultPrimaryColor '#333333'"
+    }
+  ]
+}

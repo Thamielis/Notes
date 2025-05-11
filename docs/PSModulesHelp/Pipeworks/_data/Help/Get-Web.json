@@ -1,0 +1,72 @@
+{
+  "Synopsis": "Gets content from the web, or parses web content.",
+  "Description": "Gets content from the web.  \n\nIf -Tag is passed, extracts out tags from within the document.\n\nIf -AsByte is passed, returns the response bytes",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject",
+    "System.String"
+  ],
+  "Links": [
+    "http://schema.org"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "Download the Microsoft front page and extract out links",
+      "Code": "Get-Web -Url http://microsoft.com/ -Tag a"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "Extract the rows from ConvertTo-HTML",
+      "Code": "$text = Get-ChildItem | Select Name, LastWriteTime | ConvertTo-HTML | Out-String \r\nGet-Web \"tr\" $text"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "Extract all PHP elements from a directory of .php scripts",
+      "Code": "Get-ChildItem -Recurse -Filter *.php | \r\n    Get-Web -Tag .\\?php, \\?"
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "Extract all asp tags from .asp files",
+      "Code": "Get-ChildItem -Recurse | \r\n    Where-Object { '.aspx', '.asp'. '.ashx' -contains $_.Extension } |\r\n    Get-Web -Tag .\\%"
+    },
+    {
+      "Title": "EXAMPLE 5",
+      "Markdown": "Get a list of all schemas from schema.org",
+      "Code": "$schemasList = Get-Web -Url http://schema.org/docs/full.html -Tag a | \r\n    Where-Object { $_.Xml.href -like '/*' } | \r\n    ForEach-Object { \"http://schema.org\" + $_.xml.Href }"
+    },
+    {
+      "Title": "EXAMPLE 6",
+      "Markdown": "Extract out the example of a schema from schema.org",
+      "Code": "$schema = 'http://schema.org/Event'\r\nGet-Web -Url $schema -Tag pre | \r\n    Where-Object { $_.Xml.Class -like '*prettyprint*' }  | \r\n    ForEach-Object {\r\n        Get-Web -Html $_.Xml.InnerText -AsMicrodata -ItemType $schema \r\n    }"
+    },
+    {
+      "Title": "EXAMPLE 7",
+      "Markdown": "List the top 1000 sites on the web:",
+      "Code": "Get-Web \"http://www.google.com/adplanner/static/top1000/\" -Tag 'a' | \r\n    where-Object {$_.Tag -like \"*_blank*\" }  | \r\n    ForEach-Object {\r\n        ([xml]$_.StartTag.Replace('\"t', '\" t')).a.href\r\n    }"
+    }
+  ]
+}

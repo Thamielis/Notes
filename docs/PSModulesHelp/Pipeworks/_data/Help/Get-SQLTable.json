@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Gets SQL table information",
+  "Description": "Gets metadata about a SQL table, including it's columns and their data types",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject"
+  ],
+  "Links": [
+    null,
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-SqlTable \"MySqlTable\" -ConnectionString SqlAzureConnectionString"
+    }
+  ]
+}

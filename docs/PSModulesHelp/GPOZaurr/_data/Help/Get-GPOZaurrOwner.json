@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Gets owners of GPOs from Active Directory and SYSVOL",
+  "Description": "Gets owners of GPOs from Active Directory and SYSVOL",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrOwner -Verbose -IncludeSysvol"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrOwner -Verbose -IncludeSysvol -SkipBroken"
+    }
+  ]
+}

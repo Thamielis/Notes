@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new table button for printing with optional title and button name.",
+  "Description": "This function creates a new table button for printing with optional title and button name. It can be used to add a print button to HTML tables.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-TableButtonPrint -Title \"Print Table\" -ButtonName \"Print\"\r\nDescription\r\n-----------\r\nCreates a new table button with the title \"Print Table\" and button name \"Print\"."
+    }
+  ]
+}

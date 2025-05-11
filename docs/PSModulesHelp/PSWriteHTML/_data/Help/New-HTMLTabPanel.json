@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Flexible and easy to implement Tab Panel with a lot of features, cool animation effects, event support, easy to customize.",
+  "Description": "Flexible and easy to implement Tab Panel with a lot of features, cool animation effects, event support, easy to customize.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Implementation based on: http://techlaboratory.net/jquery-smarttab\nLicense: MIT"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "An example"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Helper method for executing Read-OleDbData with some basic defaults.\n\nFor additional help, see documentation for Read-OleDbData cmdlet.",
+  "Description": "Uses Read-OleDbData to execute a sql statement against a xlsx file. For finer grained control over the interaction, you may use that cmdlet. This cmdlet assumes a file path will be passed in and the connection string will be built with no headers and treating all results as text.\n\nRunning this command is equivalent to running the following:\n\n$FullName = (Get-ChildItem $Path).FullName\nRead-OleDbData `\n    -ConnectionString \"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=$FullName;Extended Properties='Excel 12.0 Xml;HDR=NO;IMEX=1;'\" `\n    -SqlStatement $Query\n\nNote that this command uses the MICROSOFT.ACE.OLEDB provider and will not work without it.\n\nIf needed, please download the appropriate package from https://www.microsoft.com/en-us/download/details.aspx?id=54920.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Invoke-ExcelQuery .\\test.xlsx 'select ROUND(F1) as [A1] from [sheet3$A1:A1]'"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$Path = (Get-ChildItem 'test.xlsx').FullName\r\n$Query = \"select ROUND(F1) as [A] from [sheet1$A1:A1]\"\r\nRead-XlsxUsingOleDb -Path $Path -Query $Query"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "$ReadDataArgs = @{\r\n    Path = .\\test.xlsx\r\n    Query = Get-Content query.sql -Raw\r\n}\r\n$Results = Invoke-ExcelQuery @ReadDataArgs"
+    }
+  ]
+}

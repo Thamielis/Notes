@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Creates an object which describes a conditional formatting rule a for 3,4 or 5 icon set.",
+  "Description": "Export-Excel takes a -ConditionalFormat parameter which can hold one or more descriptions for conditional formats; this command builds the defintion of a Conditional formatting rule for an icon set.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS\\> $cfRange = [OfficeOpenXml.ExcelAddress]::new($topRow, $column, $lastDataRow, $column)\r\nPS\\> $cfdef = New-ConditionalFormattingIconSet -Range $cfrange -ConditionalFormat ThreeIconSet -IconType Arrows\r\nPS\\> Export-Excel -ExcelPackage $excel -ConditionalFormat $cfdef -show\r\nThe first line creates a range - one column wide in the column $column, running from $topRow to $lastDataRow. The second line creates a definition object using this range and the third uses Export-Excel with an open package to apply the format and save and open the file."
+    }
+  ]
+}

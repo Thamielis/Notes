@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Retrieves inheritance information for Group Policy Objects (GPOs) within specified Organizational Units (OUs).",
+  "Description": "This function retrieves and displays inheritance information for GPOs within specified OUs. It provides details on blocked inheritance, excluded objects, and group policies associated with blocked objects.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "These are general notes about the function."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$Objects = Get-GPOZaurrInheritance -IncludeBlockedObjects -IncludeExcludedObjects -OnlyBlockedInheritance -Exclusions $ExcludedOU\r\n$Objects | Format-Table"
+    }
+  ]
+}

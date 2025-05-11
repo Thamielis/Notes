@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Unlocks an Active Directory account in an offline ntds.dit file.",
+  "Description": "Finds an account in Active Directory database file and sets its lockoutTime attribute to 0.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Cmdlet",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.String",
+    "System.Security.Principal.SecurityIdentifier",
+    "System.Guid"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [
+    "https://github.com/MichaelGrafnetter/DSInternals/blob/master/Documentation/PowerShell/Unlock-ADDBAccount.md",
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Unlock-ADDBAccount -SamAccountName john -DatabasePath .\\ntds.dit\r\nFinds an account with name john and unlocks it."
+    }
+  ]
+}

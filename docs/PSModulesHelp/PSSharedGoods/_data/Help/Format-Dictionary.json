@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Sorts dictionary/hashtable keys including nested hashtables and returns ordered dictionary",
+  "Description": "Sorts dictionary/hashtable keys including nested hashtables and returns ordered dictionary",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$Hashtable = [ordered] @{\r\n    ModuleVersion          = '2.0.X'\r\n    #PreReleaseTag          = 'Preview5'\r\n    CompatiblePSEditions   = @('Desktop', 'Core')\r\nRunMe                  = @{\r\n        Name = 'RunMe'\r\n        Type = 'Script'\r\n        Path = 'RunMe.ps1'\r\n    }\r\n    GUID                   = 'eb76426a-1992-40a5-82cd-6480f883ef4d'\r\n    Author                 = 'Przemyslaw Klys'\r\n    CompanyName            = 'Evotec'\r\n    Copyright              = \"(c) 2011 - $((Get-Date).Year) Przemyslaw Klys @ Evotec. All rights reserved.\"\r\n    Description            = 'Simple project allowing preparing, managing, building and publishing modules to PowerShellGallery'\r\n    PowerShellVersion      = '5.1'\r\n    Tags                   = @('Windows', 'MacOS', 'Linux', 'Build', 'Module')\r\n    IconUri                = 'https://evotec.xyz/wp-content/uploads/2019/02/PSPublishModule.png'\r\n    ProjectUri             = 'https://github.com/EvotecIT/PSPublishModule'\r\n    DotNetFrameworkVersion = '4.5.2'\r\n}\r\n$Hashtable = Format-Dictionary -Hashtable $Hashtable\r\n$Hashtable"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$Hashtable = Format-Dictionary -Hashtable $Hashtable -ByValue\r\n$Hashtable"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "$Hashtable = Format-Dictionary -Hashtable $Hashtable -ByValue -Descending\r\n$Hashtable"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates customizable options for a radial chart.",
+  "Description": "This function defines various customizable options for a radial chart, such as circle type, angles, colors, shadows, labels, gradients, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-ChartRadialOptions -CircleType 'FullCircleTop' -StartAngle 0 -EndAngle 180 -HollowBackGroundColor 'white' -HollowMargin '10px' -HollowSize '50%' -TrackDropShadow 'black' -TrackDropShadowTop '2px' -TrackDropShadowLeft '2px' -TrackDropShadowBlur '5px' -TrackDropShadowOpacity '0.5' -DataLabelNameOffsetY '20px' -DataLabelNameColor 'black' -DataLabelNameFontSize '12px' -DataLabelValueShow -DataLabelValueColor 'red' -DataLabelValueFontSize '14px' -FillType 'solid' -GradientShade 'dark' -GradientType 'vertical' -GradientToColors @('red', 'blue') -GraidentStops @('0%', '100%') -StrokeLineCap 'round' -Labels @('Label1', 'Label2')\r\nCreates customizable options for a radial chart with specified parameters."
+    }
+  ]
+}

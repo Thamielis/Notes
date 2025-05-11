@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Imports PSData sections",
+  "Description": "Imports files or strings containing PSData sections, and converts nested hashtables into nested PSObjects.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-Web -Url http://www.youtube.com/watch?v=xPRC3EDR_GU -AsMicrodata -ItemType http://schema.org/VideoObject | \r\n    Export-PSData $home\\PipeworksQuickstart.video.psd1\r\nImport-PSData $home\\PipeworksQuickstart.video.psd1"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "@{a=\"b\";c=@{d=\"E\"}} | \r\n    Import-PSData | \r\n    Select-Object -ExpandProperty c | \r\n    Select-Object -ExpandProperty D"
+    }
+  ]
+}

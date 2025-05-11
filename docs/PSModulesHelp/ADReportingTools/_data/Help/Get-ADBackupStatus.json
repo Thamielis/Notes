@@ -1,0 +1,43 @@
+{
+  "Synopsis": "Get an Active Directory backup status",
+  "Description": "There aren't any explicit PowerShell commands to tell if Active Directory has been backed up. One indirect approach is to use the command-line tool repadmin.exe. This command has a /showbackup parameter which will indicate when the different Active Directory partitions have been backed up. This command is a PowerShell wrapper for repadmin.exe that runs on the specified domain controller in a PowerShell remoting session.\r\n\r\n\r\nIf running in a console host, the date value may be shown in red, if the date is beyond the backup limit of 3 days. This is a user-customizable value in $ADReportingHash.\r\n\r\n\r\n$ADReportinghash.BackupLimit = 5\r\n\r\n\r\nIf you want a limit like this all the time, in your PowerShell profile script import the module and add this line.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "System.Object"
+  ],
+  "Links": [
+    "http://bit.ly/3fPV1AE",
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADBackupStatus dom1\r\n\r\n   DomainController: Dom1.Company.Pri\r\n\r\nPartition                              LocalUSN OriginUSN                 Date\r\n---------                              -------- ---------                 ----\r\nDC=ForestDnsZones,DC=Company,DC=Pri       13777     13777   01/25/2021 14:27:01\r\nDC=DomainDnsZones,DC=Company,DC=Pri       13776     13776   01/25/2021 14:27:01\r\nCN=Schema,CN=Configuration,DC=Comp....    13775     13775   01/25/2021 14:27:01\r\nCN=Configuration,DC=Company,DC=Pri        13774     13774   01/25/2021 14:27:01\r\nDC=Company,DC=Pri                         13773     13773   01/25/2021 14:27:01\r\nAny date that is beyond the number of days that is beyond $ADReportingHash.BackupLimit, will be displaySed in red, if running in a console host."
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "Synopsis": "Adds or modifies a column in an Excel worksheet, filling values, setting formatting and/or creating named ranges.",
+  "Description": "Set-ExcelColumn can take a value which is either a string containing a value or formula or a scriptblock which evaluates to a string, and optionally a column number and fills that value down the column.\r\n\r\n\r\nA column heading can be specified, and the column can be made a named range.\r\n\r\n\r\nThe column can be formatted in the same operation.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "OfficeOpenXml.ExcelColumn",
+    "System.String"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS\\> Set-ExcelColumn -Worksheet $ws -Column 5 -NumberFormat 'Currency'\r\n$ws contains a worksheet object - and column \"E\" is set to use the local currency format.\r\n\r\nIntelisense will complete the names of predefined number formats.\r\n\r\nYou can see how currency is interpreted on the local computer with the command Expand-NumberFormat currency"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "PS\\> Set-ExcelColumn -Worksheet $ws -Heading \"WinsToFastLaps\"  -Value {\"=E$row/C$row\"} -Column 7 -AutoSize -AutoNameRange\r\nHere, $WS already contains a worksheet which holds counts of races won and fastest laps recorded by racing drivers (in columns C and E). Set-ExcelColumn specifies that Column 7 should have a heading of \"WinsToFastLaps\" and the data cells should contain =E2/C2 , =E3/C3 etc the new data cells should become a named range, which will also be named \"WinsToFastLaps\" and the column width will be set automatically.\r\n\r\nWhen a value begins with \"=\", it is treated as a formula.\r\n\r\nIf value is a script block it will be evaluated, so here the string \"=E$row/C$Row\" will have the number of the current row inserted; see the value parameter for a list of variables which can be used.\r\n\r\nNote than when evaluating an expression in a string, it is necessary to wrap it in $() so $row is valid but $($row+1) is needed.\r\n\r\nTo preventVariables merging into other parts of the string, use the back tick \"$columnName`4\" will be \"G4\" - without the backtick the string will look for a variable named \"columnName4\""
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Set-ExcelColumn -Worksheet $ws -Heading \"Link\" -Value {\"https://en.wikipedia.org\" + $worksheet.cells[\"B$Row\"].value  }  -AutoSize\r\nIn this example, the worksheet in $ws has partial links to Wikipedia pages in column B.\r\n\r\nThe -Value parameter is a script block which outputs a string beginning \"https...\" and ending with the value of the cell at column B in the current row.\r\n\r\nWhen given a valid URI, Set-ExcelColumn makes it a hyperlink.\r\n\r\nThe column will be autosized to fit the links."
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "4..6 | Set-ExcelColumn -Worksheet $ws -AutoNameRange\r\nAgain $ws contains a worksheet. Here columns 4 to 6 are made into named ranges, row 1 is used for the range name and the rest of the column becomes the range."
+    }
+  ]
+}

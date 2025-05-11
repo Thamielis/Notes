@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Removes any link to GPO that no longer exists.",
+  "Description": "Removes any link to GPO that no longer exists. It scans all site, organizational unit or domain root making sure every single link that may be linking to GPO that doesn't exists anymore is gone.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Repair-GPOZaurrBrokenLink -Verbose -LimitProcessing 1 -WhatIf"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Repair-GPOZaurrBrokenLink -Verbose -IncludeDomains ad.evotec.pl -LimitProcessing 1 -WhatIf"
+    }
+  ]
+}

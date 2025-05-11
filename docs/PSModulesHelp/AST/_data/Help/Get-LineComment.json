@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Extracts the inline comment from a single line of PowerShell code.",
+  "Description": "Parses a given line of PowerShell code and extracts any inline comment.\nIf an inline comment exists, the function returns the comment text; otherwise, it returns nothing.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [
+    "https://psmodule.io/AST/Functions/Lines/Get-LineComment/"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "'Get-Process # This retrieves all processes' | Get-LineComment\r\nReturns: '# This retrieves all processes'"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "'Write-Host \"Hello World\"' | Get-LineComment\r\nReturns: $null (no comment found)"
+    }
+  ]
+}

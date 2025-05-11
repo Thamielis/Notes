@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Gets the absolute ModuleRoot path (the psm1) of a module.",
+  "Description": "This function reads the module manifest (.psd1) and if the ModuleRoot property\nis defined, it will resolve its absolute path based on the ModuleManifest's Path.\n\nIf no ModuleRoot is defined, then this function will return $null.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-SamplerModuleRootPath -ModuleManifestPath C:\\src\\MyModule\\output\\MyModule\\2.3.4\\MyModule.psd1\r\n# C:\\src\\MyModule\\output\\MyModule\\2.3.4\\MyModule.psm1"
+    }
+  ]
+}

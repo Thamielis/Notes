@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Creates a new repository on GitHub.",
+  "Description": "Creates a new repository on GitHub.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Branch\nGitHub.Content\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Release\nGitHub.ReleaseAsset\nGitHub.Repository"
+  ],
+  "Outputs": [
+    "GitHub.Repository"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-GitHubRepository -RepositoryName MyNewRepo -AutoInit"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "'MyNewRepo' | New-GitHubRepository -AutoInit"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "New-GitHubRepository -RepositoryName MyNewRepo -Organization MyOrg -DisallowRebaseMerge"
+    }
+  ]
+}

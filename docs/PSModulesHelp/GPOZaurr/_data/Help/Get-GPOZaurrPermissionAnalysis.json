@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Analyzes permissions for Group Policy Objects (GPOs) and administrative groups.",
+  "Description": "This function analyzes permissions for Group Policy Objects (GPOs) and identifies administrative groups with specific permissions.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrPermissionAnalysis -Forest \"ContosoForest\" -IncludeDomains @(\"Domain1\", \"Domain2\") -ExcludeDomains @(\"Domain3\") -Permissions $PermissionsArray\r\nAnalyzes permissions for GPOs in the \"ContosoForest\" forest, including \"Domain1\" and \"Domain2\" while excluding \"Domain3\", using the specified permissions array."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "Synopsis": "Adds a worksheet to an existing workbook.",
+  "Description": "If the named worksheet already exists, the -Clearsheet parameter decides whether it should be deleted and a new one returned, or if not specified the existing sheet will be returned.\r\n\r\n\r\nBy default the sheet is created at the end of the work book, the -MoveXXXX switches allow the sheet to be [re]positioned at the start or before or after another sheet.\r\n\r\n\r\nA new sheet will only be made the default sheet when excel opens if -Activate is specified.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "OfficeOpenXml.ExcelWorksheet"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS\\> $WorksheetActors = $ExcelPackage | Add-WorkSheet -WorkSheetname Actors\r\n$ExcelPackage holds an Excel package object (returned by Open-ExcelPackage, or Export-Excel -passthru). This command will add a sheet named 'Actors', or return the sheet if it exists, and the result is stored in $WorkSheetActors."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "PS\\> $WorksheetActors = Add-WorkSheet -ExcelPackage $ExcelPackage -WorkSheetname \"Actors\" -ClearSheet -MoveToStart\r\nThis time the Excel package object is passed as a parameter instead of piped.\r\n\r\nIf the 'Actors' sheet already exists it is deleted and re-created.\r\n\r\nThe new sheet will be created last in the workbook, and -MoveToStart Moves it to the start."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "PS\\> $null = Add-WorkSheet -ExcelWorkbook $wb -WorkSheetname $DestinationName -CopySource $sourceWs -Activate\r\nThis time a workbook is used instead of a package, and a worksheet is copied - $SourceWs is a worksheet object, which can come from the same workbook or a different one.\r\n\r\nHere the new copy of the data is made the active sheet when the workbook is opened."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Removes specific or all access rules for a user or group from a file or folder.",
+  "Description": "This function removes specific or all access rules for a specified user or group from a file or folder. It can be used to manage file permissions effectively.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-FilePermission -Path \"C:\\Example\\File.txt\" -UserOrGroup \"User1\"\r\nRemoves access rules for \"User1\" from the file \"File.txt\"."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Remove-FilePermission -Path \"C:\\Example\\Folder\" -All\r\nRemoves all access rules from the folder \"Folder\"."
+    }
+  ]
+}

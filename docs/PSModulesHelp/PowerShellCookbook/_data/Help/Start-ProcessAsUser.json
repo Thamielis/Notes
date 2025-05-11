@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Launch a process under alternate credentials, providing functionality\nsimilar to runas.exe.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$file = Join-Path ([Environment]::GetFolderPath(\"System\")) certmgr.msc\r\nPS > Start-ProcessAsUser Administrator mmc $file"
+    }
+  ]
+}

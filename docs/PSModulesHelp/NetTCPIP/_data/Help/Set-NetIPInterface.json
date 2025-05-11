@@ -1,0 +1,48 @@
+{
+  "Synopsis": "Modifies an IP interface.",
+  "Description": "The Set-NetIPInterface cmdlet modifies an IP interface, including Dynamic Host Configuration Protocol (DHCP), IPv6 neighbor discovery settings, router settings and Wake On LAN (WOL) settings.\r\n\r\n\r\nIf you do not specify any parameters, this cmdlet sets all of the IP interface properties on the computer, including virtual interfaces and loopback interfaces.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetIPInterface"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkId=289166",
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Modify an interface by the index value",
+      "Markdown": "",
+      "Code": "PS C:\\>Set-NetIPInterface –InterfaceIndex 12 –Dhcp Disabled\r\nThis command modifies an IP interface object by using the interface index value of 12. The command also disables DHCP on the interface."
+    },
+    {
+      "Title": "Example 2: Modify the interface metrics",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetAdapter | Where-Object –FilterScript {$_.LinkSpeed –Eq \"100 Mbps\"} | Set-NetIPInterface –InterfaceMetric 21\r\nThis command modifies all of the network adapters on the computer with a link speed of 100 Mbps and sets the interface metric on them to 21."
+    }
+  ]
+}

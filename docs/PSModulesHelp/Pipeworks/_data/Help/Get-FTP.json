@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Gets files from FTP",
+  "Description": "Lists files on an FTP server, or downloads files",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.IO.FileInfo"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-FTP -FTP \"ftp://edgar.sec.gov/edgar/full-index/1999/\" -Download -Filter \"*.idx\", \"*.xml\""
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-FTP -FTP \"ftp://edgar.sec.gov/edgar/full-index/1999/\" -Download -Filter \"*.idx\", \"*.xml\"  -DownloadAsJob"
+    }
+  ]
+}

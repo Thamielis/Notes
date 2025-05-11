@@ -1,0 +1,48 @@
+{
+  "Synopsis": "Invokes the specified Plaster template which will scaffold out a file or a set of files and directories.",
+  "Description": "Invokes the specified Plaster template which will scaffold out a file or a set of files and directories.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://github.com/PowerShell/Plaster/blob/master/docs/en-US/Invoke-Plaster.md",
+    "https://github.com/PowerShell/Plaster/blob/master/docs/en-US/New-PlasterManifest.md",
+    "https://github.com/PowerShell/Plaster/blob/master/docs/en-US/Test-PlasterManifest.md"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Invoke-Plaster -TemplatePath . -Destination ~\\GitHub\\NewModule\r\nThis will invoke the Plaster template in the current directory. The template will generate any files and directories in the ~\\GitHub\\NewModule directory."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Invoke-Plaster -TemplatePath . -Destination ~\\GitHub\\NewModule -ModuleName Foo -Version 1.0.0\r\nThis will invoke the Plaster template in the current directory using dynamic parameters ModuleName and Version extracted from the parameters section of the manifest file. The template will generate any files and directories in the ~\\GitHub\\NewModule directory.\r\n\r\nNote: The parameters -ModuleName and -Version are dynamically added from the plaster manifest file in the current directory. If you run this command it may fail if the manifest file you are testing with does not contain these parameters."
+    }
+  ]
+}

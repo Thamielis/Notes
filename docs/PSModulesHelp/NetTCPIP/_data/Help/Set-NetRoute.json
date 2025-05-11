@@ -1,0 +1,52 @@
+{
+  "Synopsis": "Modifies an entry or entries in the IP routing table.",
+  "Description": "The Set-NetRoute cmdlet modifies entries in the IP routing table. Specify routes to modify by using the DestinationPrefix parameter or the NextHop parameter. You can also specify routes by using the Get-NetRoute cmdlet. If you do not specify which routes to modify, the cmdlets modifies all of the routes on the computer.\r\n\r\n\r\nIP routing is the process of forwarding a packet based on the destination IP address. Routing occurs at TCP/IP hosts and at IP routers. The sending host or router determines where to forward the packet. To determine where to forward a packet, the host or router consults a routing table that is stored in memory. When TCP/IP starts, it creates entries in the routing table. You can add entries either manually or automatically.\r\n\r\n\r\nFor more information about routing, see Chapter 5 - IP Routing (http://technet.microsoft.com/library/bb727001.aspx) in the TechNet library.\r\n\r\n\r\nAfter you create an entry in the routing table, you cannot modify the destination prefix or the next hop value. If necessary, use the Remove-NetRoute cmdlet to remove the entry, and then recreate it with the desired values by using the New-NetRoute cmdlet.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetPrefixPolicy"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkID=289171",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Change the route metric",
+      "Markdown": "",
+      "Code": "PS C:\\>Set-NetRoute –RouteMetric 257\r\nThis command changes the route metric to 257. This route is less preferred than routes that have the default value of 256."
+    },
+    {
+      "Title": "Example 2: Modify the preferred lifetime",
+      "Markdown": "",
+      "Code": "PS C:\\> $TimeSpan = New-TimeSpan –Days 1\r\nPS C:\\> Set-NetRoute –DestinationPrefix \"192.168.0.0/24\" –PreferredLifetime $TimeSpan\r\nThe first command uses the New-TimeSpan cmdlet to create a time span of one day, and then stores it in the $TimeSpan variable. For more information, type Get-Help New-TimeSpan.\r\n\r\nThe second command changes the lifetime of the IP route that has the destination prefix 192.168.0.0/24. The command specifies the object stored in the $TimeSpan variable as the new preferred lifetime."
+    }
+  ]
+}

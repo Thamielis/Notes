@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Converts Client-side Extension (CSE) GUIDs to their corresponding names.",
+  "Description": "This function takes an array of CSE GUIDs and returns their corresponding names. It can be used to easily identify the purpose of each CSE GUID.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "ConvertFrom-CSExtension -CSE '{35378EAC-683F-11D2-A89A-00C04FBBCFA2}', '{0F6B957E-509E-11D1-A7CC-0000F87571E3}' -Limited\r\nConverts the specified CSE GUIDs to their corresponding names, limited to a predefined set."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "ConvertFrom-CSExtension -CSE '{D02B1F73-3407-48AE-BA88-E8213C6761F1}', '{0ACDD40C-75AC-47ab-BAA0-BF6DE7E7FE63}'\r\nConverts the specified CSE GUIDs to their corresponding names without any limitations."
+    }
+  ]
+}

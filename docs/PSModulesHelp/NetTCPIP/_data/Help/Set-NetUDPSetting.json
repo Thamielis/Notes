@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Modifies UDP settings.",
+  "Description": "The Set-NetUDPSetting cmdlet modifies UDP settings of the IP interface. Use this cmdlet to change the starting port and the number of ports for the dynamic port range. You can use the InputObject parameter to specify a NetUDPSetting object for the input to this cmdlet. Use the Get-NetUDPSetting to get a NetUDPSetting object.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetPrefixPolicy"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkId=289173",
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Modify the dynamic port range for UDP",
+      "Markdown": "",
+      "Code": "PS C:\\>Set-NetUDPSetting –DynamicPortRangeStartPort 49152 –DynamicPortRangeNumberOfPorts 1700\r\nThis command modifies the port range from which applications can send and receive UDP traffic."
+    }
+  ]
+}

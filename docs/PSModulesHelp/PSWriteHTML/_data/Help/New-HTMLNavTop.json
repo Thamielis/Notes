@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a top navigation bar in HTML format with customizable options.",
+  "Description": "This function generates a top navigation bar in HTML format with customizable options such as navigation links, logo, colors, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLNavTop -NavigationLinks { \r\n    \"Link 1\", \"Link 2\", \"Link 3\" \r\n} -Logo \"logo.png\" -LogoLink \"https://example.com\" -LogoLinkHome -MenuItemsWidth '250px' -MenuColor 'Blue' -MenuColorBackground 'White' -HomeColor 'Red' -HomeColorBackground 'White' -HomeLink \"https://example.com/home\" -HomeLinkHome\r\nCreates a top navigation bar with specified navigation links, logo, colors, and home link."
+    }
+  ]
+}

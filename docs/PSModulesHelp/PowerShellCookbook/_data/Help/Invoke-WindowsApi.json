@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Invoke a native Windows API call that takes and returns simple data types.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "# Prepare the parameter types and parameters for the CreateHardLink function",
+      "Code": "PS > $filename = \"c:\\temp\\hardlinked.txt\"\r\nPS > $existingFilename = \"c:\\temp\\link_target.txt\"\r\nPS > Set-Content $existingFilename \"Hard Link target\"\r\nPS > $parameterTypes = [string], [string], [IntPtr]\r\nPS > $parameters = [string] $filename, [string] $existingFilename,\r\n    [IntPtr]::Zero\r\n## Call the CreateHardLink method in the Kernel32 DLL\r\nPS > $result = Invoke-WindowsApi \"kernel32\" ([bool]) \"CreateHardLink\" `\r\n    $parameterTypes $parameters\r\nPS > Get-Content C:\\temp\\hardlinked.txt\r\nHard Link target"
+    }
+  ]
+}

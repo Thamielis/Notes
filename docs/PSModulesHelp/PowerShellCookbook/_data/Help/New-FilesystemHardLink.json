@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Create a new hard link, which allows you to create a new name by which you\ncan access an existing file. Windows only deletes the actual file once\nyou delete all hard links that point to it.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "\"Hello\" > test.txt\r\nPS > dir test* | select name\r\nName\r\n----\r\ntest.txt\r\n\r\nPS > .\\New-FilesystemHardLink.ps1 test.txt test2.txt\r\nPS > type test2.txt\r\nHello\r\nPS > dir test* | select name\r\n\r\nName\r\n----\r\ntest.txt\r\ntest2.txt"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new table button for exporting data to Excel with customizable options.",
+  "Description": "This function creates a new table button for exporting data to Excel with customizable options. It allows users to specify the button title and display text.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-TableButtonExcel -Title \"Export to Excel\" -ButtonName \"Export\"\r\nDescription\r\n-----------\r\nCreates a new table button with the title \"Export to Excel\" and button name \"Export\"."
+    }
+  ]
+}

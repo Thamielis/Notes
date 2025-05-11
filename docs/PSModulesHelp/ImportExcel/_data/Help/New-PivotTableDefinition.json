@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Creates PivotTable definitons for Export-Excel",
+  "Description": "Export-Excel allows a single PivotTable to be defined using the parameters -IncludePivotTable, -PivotColumns, -PivotRows, -PivotData, -PivotFilter, -PivotTotals, -PivotDataToColumn, -IncludePivotChart and -ChartType.\r\n\r\n\r\nIts -PivotTableDefintion paramater allows multiple PivotTables to be defined, with additional parameters. New-PivotTableDefinition is a convenient way to build these definitions.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS\\> $pt = New-PivotTableDefinition -PivotTableName \"PT1\" -SourceWorkSheet \"Sheet1\" -PivotRows \"Status\" -PivotData @{Status='Count'} -PivotFilter 'StartType' -IncludePivotChart -ChartType BarClustered3D\r\nPS\\> $Pt += New-PivotTableDefinition -PivotTableName \"PT2\" -SourceWorkSheet \"Sheet2\" -PivotRows \"Company\" -PivotData @{Company='Count'} -IncludePivotChart -ChartType PieExploded3D -ShowPercent -ChartTitle \"Breakdown of processes by company\"\r\nPS\\> Get-Service | Select-Object -Property Status,Name,DisplayName,StartType | Export-Excel -Path .\\test.xlsx -AutoSize\r\nPS\\> Get-Process | Select-Object -Property Name,Company,Handles,CPU,VM | Export-Excel -Path .\\test.xlsx -AutoSize -WorksheetName 'sheet2'\r\nPS\\> $excel = Export-Excel -Path .\\test.xlsx -PivotTableDefinition $pt -Show\r\nThis is a re-work of one of the examples in Export-Excel - instead of writing out the pivot definition hash-table, it is built by calling New-PivotTableDefinition."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Looks in the session history, and returns any aliases that apply to\nparameters of commands that were used.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "dir -ErrorAction SilentlyContinue\r\nPS > Get-ParameterAlias\r\nAn alias for the 'ErrorAction' parameter of 'dir' is ea"
+    }
+  ]
+}

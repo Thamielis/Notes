@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a variable that supports scripted actions for its getter and setter",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": ".\\New-DynamicVariable GLOBAL:WindowTitle `\r\n     -Getter { $host.UI.RawUI.WindowTitle } `\r\n     -Setter { $host.UI.RawUI.WindowTitle = $args[0] }\r\nPS > $windowTitle\r\nAdministrator: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nPS > $windowTitle = \"Test\"\r\nPS > $windowTitle\r\nTest"
+    }
+  ]
+}

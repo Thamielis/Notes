@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Test the PowerShell Version",
+  "Description": "This function exists so I can do things differently on older versions of PowerShell.\nBut the reason I test in a function is that I can mock the Version to test the alternative code.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Boolean"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "if(Test-PSVersion -ge 3.0) {\r\n   ls | where Length -gt 12mb\r\n} else {\r\n   ls | Where { $_.Length -gt 12mb }\r\n}\r\nThis is just a trivial example to show the usage (you wouldn't really bother for a where-object call)"
+    }
+  ]
+}

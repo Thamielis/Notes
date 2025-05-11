@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Adds an Azure web site to a service definition.",
+  "Description": "Adds an Azure web site to a service definition.  \n\nThe site can bind to multiple host\n\nCreates a web role if one does not exist.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Xml.XmlDocument",
+    "System.String"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-AzureServiceDefinition -ServiceName \"AService\" |\r\n    Add-AzureWebSite -SiteName \"ASite\" -PhysicalDirectory \"C:\\inetpub\\wwwroot\\asite\" -HostHeader a.subdomain.com, nakeddomain.com, www.fulldomain.com -asString"
+    }
+  ]
+}

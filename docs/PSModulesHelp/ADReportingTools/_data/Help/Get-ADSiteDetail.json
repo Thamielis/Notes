@@ -1,0 +1,43 @@
+{
+  "Synopsis": "Get a more detailed AD site report.",
+  "Description": "This command will present a summary report of your Active Directory sites showing a description, associated subnets, and when the site object was created and last modified.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "ADSiteDetail"
+  ],
+  "Links": [
+    "https://bit.ly/38QzYK3",
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADSiteDetail\r\n\r\n\r\n   Name: Default-First-Site-Name\r\n\r\nDescription        Subnets                 Created                Modified\r\n-----------        -------                 -------                --------\r\nHome Office        {192.168.3.0/24, 19... 2/23/2021 3:36:58 PM   2/23/2021...\r\n\r\n\r\n   Name: NoCal\r\n\r\nDescription        Subnets                 Created                Modified\r\n-----------        -------                 -------                --------\r\nBay Area Office    172.17.0.0/16           2/23/2021 3:38:33 PM   2/23/2021..."
+    }
+  ]
+}

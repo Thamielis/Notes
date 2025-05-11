@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Demonstrates the GetNewClosure() method on a script block that pulls variables\nin from the user's session (if they are defined.)",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$name = \"Hello There\"\r\nPS > Invoke-ScriptBlockClosure { $name }\r\nHello There\r\nHello World\r\nHello There"
+    }
+  ]
+}

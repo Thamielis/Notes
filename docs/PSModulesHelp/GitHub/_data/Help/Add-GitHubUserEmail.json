@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Add an email address for the authenticated user",
+  "Description": "This endpoint is accessible with the `user` scope.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Add an email address for the authenticated user](https://docs.github.com/rest/users/emails#add-an-email-address-for-the-authenticated-user)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Add-GitHubUserEmail -Email 'octocat@github.com','firstname.lastname@work.com'\r\nAdds the email addresses `octocat@github.com` and `firstname.lastname@work.com` to the authenticated user's account."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "Synopsis": "Removes one or more worksheets from one or more workbooks",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS\\> Remove-WorkSheet -Path Test1.xlsx -WorksheetName Sheet1\r\nRemoves the worksheet named 'Sheet1' from 'Test1.xlsx'"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "PS\\> Remove-WorkSheet -Path Test1.xlsx -WorksheetName Sheet1,Target1\r\nRemoves the worksheet named 'Sheet1' and 'Target1' from 'Test1.xlsx'"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "PS\\> Remove-WorkSheet -Path Test1.xlsx -WorksheetName Sheet1,Target1 -Show\r\nRemoves the worksheets and then launches the xlsx in Excel"
+    },
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS\\>  dir c:\\reports\\*.xlsx | Remove-WorkSheet\r\nRemoves 'Sheet1' from all the xlsx files in the c:\\reports directory"
+    }
+  ]
+}

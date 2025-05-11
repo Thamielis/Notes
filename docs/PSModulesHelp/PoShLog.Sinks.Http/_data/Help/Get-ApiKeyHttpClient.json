@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Gets instance of ApiKeyHttpClient",
+  "Description": "Gets instance of ApiKeyHttpClient that is then used by Add-SinkHttp cmdlet.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Cmdlet",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "PoShLog.Sinks.Http.HttpClients.ApiKeyHttpClient"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS> New-Logger | Add-SinkHttp -RequestUri 'https://requestbin.net/r/6y06j5z8' -HttpClient (Get-ApiKeyHttpClient -ApiKey '...') | Start-Logger"
+    }
+  ]
+}

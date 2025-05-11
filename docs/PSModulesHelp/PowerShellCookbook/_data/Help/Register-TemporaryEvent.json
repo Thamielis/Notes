@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Registers an event action for an object, and automatically unregisters\nitself afterward. In PowerShell version three, use the -MaxTriggerCount\nparameter of the Register-*Event cmdlets.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$timer = New-Object Timers.Timer\r\nPS > Register-TemporaryEvent $timer Disposed { [Console]::Beep(100,100) }\r\nPS > $timer.Dispose()\r\nPS > Get-EventSubscriber\r\nPS > Get-Job"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new table condition group with specified conditions and styling options.",
+  "Description": "This function creates a new table condition group with the specified conditions and allows customization of the styling options for both pass and fail conditions.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Additional notes about the function."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-TableConditionGroup -Conditions { \r\n    New-HTMLTableCondition -Name 'Test1' -Value 1 -ComparisonType number\r\n    New-HTMLTableCondition -Name 'Test2' -Value 2 -ComparisonType number\r\n} -Logic 'OR' -HighlightHeaders 'Test1', 'Test2', 'DisplayName', 'DomainName' -Color 'Green' -BackgroundColor 'LightGreen' -FontSize 12 -FontWeight 'bold' -Alignment 'center'\r\nDescription:\r\nCreates a new table condition group with specified conditions, logic, highlighted headers, and styling options for pass conditions."
+    }
+  ]
+}

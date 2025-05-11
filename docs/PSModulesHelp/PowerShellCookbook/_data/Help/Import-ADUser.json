@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Create users in Active Directory from the content of a CSV.",
+  "Description": "In the user CSV, One column must be named \"CN\" for the user name.\nAll other columns represent properties in Active Directory for that user.\n\nFor example:\nCN,userPrincipalName,displayName,manager\nMyerKen,Ken.Myer@fabrikam.com,Ken Myer,\nDoeJane,Jane.Doe@fabrikam.com,Jane Doe,\"CN=MyerKen,OU=West,OU=Sales,DC=...\"\nSmithRobin,Robin.Smith@fabrikam.com,Robin Smith,\"CN=MyerKen,OU=West,OU=...\"",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$container = \"LDAP://localhost:389/ou=West,ou=Sales,dc=Fabrikam,dc=COM\"\r\nPS > Import-ADUser.ps1 $container .\\users.csv"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "Synopsis": "Create a custom group report",
+  "Description": "Get-ADGroupReport will create a custom report for a group showing members. Get-ADGroupUser is intended to display group membership details Get-ADGroupReport focuses on the group, although members are also displayed. Members are always gathered recursively. You can filter for specific types of groups. You can also opt to exclude groups under CN=Users and CN=BuiltIn. The groups \"Domain Users\", \"Domain Computers\", and \"Domain Guests\" are always excluded from this command.\r\n\r\n\r\nIf your PowerShell hosts supports it, ANSI color schemes will be used to highlight things such as Distribution groups and disabled user accounts.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "ADGroupReport"
+  ],
+  "Links": [
+    "https://bit.ly/3dBUcZq",
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADGroupReport sales\r\n\r\nName        : CN=Sales,OU=Sales,DC=Company,DC=Pri [Global|Security]\r\nManagedBy   : CN=SamanthaS,OU=Sales,DC=Company,DC=Pri\r\nDescription : Sales Force Resources\r\n________________________________________________________________________________\r\n\r\n\r\nDisplayname    Name      Description DistinguishedName\r\n-----------    ----      ----------- -----------------\r\nSam Smith      SamS      Sales       CN=SamS,OU=Sales,DC=Company,DC=Pri\r\nSonya Smith    SonyaS    Sales       CN=SonyaS,OU=Sales,DC=Company,DC=Pri\r\nSamantha Smith SamanthaS Sales       CN=SamanthaS,OU=Sales,DC=Company,DC=Pri\r\nIf your PowerShell host supports it, Disabled user accounts will display the distinguished name in red."
+    },
+    {
+      "Title": "Example 2",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADGroupReport  -ExcludeBuiltIn | Format-Table -View age\r\n\r\nName       Members Created                 Modified                            Age\r\n----       ------- -------                 --------                            ---\r\nIT               5 1/25/2021 1:32:44 PM    3/15/2021 5:42:50 PM           17:04:02\r\nSales            3 1/25/2021 1:32:44 PM    3/16/2021 9:52:29 AM           00:54:23\r\nMarketing        3 1/25/2021 1:32:44 PM    3/16/2021 9:52:29 AM           00:54:24\r\nAccounting       3 1/25/2021 1:32:44 PM    3/4/2021 9:25:39 AM         12.01:21:14\r\nJEA Operators    4 1/25/2021 1:32:44 PM    1/28/2021 11:34:57 AM       46.23:11:56\r\nWeb Servers      1 1/25/2021 1:32:45 PM    3/15/2021 5:42:33 PM           17:04:20\r\nDevOpsPrimary    0 1/25/2021 4:47:53 PM    1/27/2021 10:35:11 AM       48.00:11:42\r\nDevOpsBackup     3 1/25/2021 4:48:02 PM    3/16/2021 10:12:01 AM          00:34:52\r\n...\r\nIf your console supports it, Distribution Lists will be displayed in green, and a member count of 0 will be displayed in red."
+    },
+    {
+      "Title": "Example 3",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADGroupReport -ExcludeBuiltIn | Format-Table -view summary\r\n\r\n\r\n   DistinguishedName: CN=IT,OU=IT,DC=Company,DC=Pri\r\n\r\nName                              Members Category        Scope       Branch\r\n----                              ------- --------        -----       ------\r\nIT                                      5 Security        Global      OU=IT,DC=Company,DC=Pri\r\n\r\n\r\n   DistinguishedName: CN=Sales,OU=Sales,DC=Company,DC=Pri\r\n\r\nName                              Members Category        Scope       Branch\r\n----                              ------- --------        -----       ------\r\nSales                                   3 Security        Global      OU=Sales,DC=Company,DC=Pri\r\n\r\n\r\n   DistinguishedName: CN=Marketing,OU=Marketing,DC=Company,DC=Pri\r\n\r\nName                              Members Category        Scope       Branch\r\n----                              ------- --------        -----       ------\r\nMarketing                               3 Security        Global      OU=Marketing,DC=Company,DC=Pri\r\n...`\r\nGet groups and format with a custom view. If your console session supports it, some of the output will be color-coded with ANSI sequences."
+    }
+  ]
+}

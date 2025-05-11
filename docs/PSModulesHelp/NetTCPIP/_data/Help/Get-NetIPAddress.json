@@ -1,0 +1,65 @@
+{
+  "Synopsis": "Gets the IP address configuration.",
+  "Description": "The Get-NetIPAddress cmdlet gets the IP address configuration, such as IPv4 addresses, IPv6 addresses and the IP interfaces with which addresses are associated. Without parameters, this cmdlet gets the entire IP address configuration for the computer.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetIPAddress"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkId=288380",
+    null,
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Get IPv6 address configuration",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetIPAddress –AddressFamily IPv6\r\nThis command gets information about IP address configuration for all IPv6 addresses on the computer."
+    },
+    {
+      "Title": "Example 2: Get IP address information and format the output",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetIPAddress | Format-Table\r\nThis command gets information about IP address configuration, and displays that information in a table. The table format provides a convenient overview for computers with many IP addresses."
+    },
+    {
+      "Title": "Example 3: Get IP address information by the interface index",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetIPAddress –InterfaceIndex 12\r\nThis command gets information about IP address configuration for a specific interface index."
+    },
+    {
+      "Title": "Example 4: Get IP address information and sort the output",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetIPAddress | Sort-Object -Property InterfaceIndex | Format-Table\r\nThis command gets information about IP address configuration, sorts them numerically by the interface index in the cmdlet name, and then displays them in a table format. This display can help you find IP address information by interface index."
+    },
+    {
+      "Title": "Example 5: Get IP address information and filter the output",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetIPAddress | Where-Object -FilterScript { $_.ValidLifetime -Lt ([TimeSpan]::FromDays(1)) }\r\n\r\n\r\nSimilarly, this cmdlet can be used to get information about IP address configuration for IP addresses that have an Infinite ValidLifetime.\r\nPS C:\\>Get-NetIPAddress | Where-Object -FilterScript { $_.ValidLifetime -Eq ([TimeSpan]::MaxValue) }\r\nThis command gets IP address configuration for IP addresses that have a ValidLifetime of less than one day."
+    }
+  ]
+}

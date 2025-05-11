@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new MapPlot object with specified latitude, longitude, and other optional parameters.",
+  "Description": "This function creates a new MapPlot object with the provided latitude, longitude, and other optional parameters like href, value, and tooltip content.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-MapPlot -Plot \"Sample Plot\" -Latitude 40.7128 -Longitude -74.0060 -Href \"https://example.com\" -Value \"Sample Value\" -TooltipContent { \"This is a sample tooltip.\" }\r\nCreates a new MapPlot object named \"Sample Plot\" with latitude 40.7128, longitude -74.0060, a hyperlink reference to \"https://example.com\", a value of \"Sample Value\", and a tooltip content of \"This is a sample tooltip.\""
+    }
+  ]
+}

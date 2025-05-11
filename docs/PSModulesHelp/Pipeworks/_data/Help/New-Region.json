@@ -1,0 +1,56 @@
+{
+  "Synopsis": "Creates a new web region.",
+  "Description": "Creates a new web region.  Web regions are lightweight HTML controls that help you create web pages.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "The Parameter set design on New-Region is a little complex.  \n\nThere are two base parameter sets, raw layer content (-Content) and structured layer content (-Layer)\n\nIn each case, parameters named -As* determine how the actual layer will be rendered.\n\nTo make matters more complex, different -As* parameters require different JavaScript frameworks"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "Makes a JQueryUI tab",
+      "Code": "New-Region -Layer @{\r\n    \"Tab1\" = \"Content In Tab One\"\r\n    \"Tab2\" = \"Content in Tab Two\"\r\n} -AsTab"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "Makes a JQueryUI accordian",
+      "Code": "New-Region -Layer @{\r\n    \"Accordian1\" = \"Content In The first Accordian\"\r\n    \"Accordian1\" = \"Content in the second Accordian\"\r\n} -AsAccordian"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "Makes an empty region",
+      "Code": "New-Region -Style @{} -Content \"My Layer\" -LayerID MyId"
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "A Centered Region containing Microdata",
+      "Code": "New-Region -ItemType http://schema.org/Event -Style @{\r\n    'margin-left' = '7.5%'\r\n    'margin-right' = '7.5%'\r\n} -Content '\r\n<a itemprop=\"url\" href=\"nba-miami-philidelphia-game3.html\">\r\nNBA Eastern Conference First Round Playoff Tickets:\r\n<span itemprop=\"name\"> Miami Heat at Philadelphia 76ers - Game 3 (Home Game 1) </span>  </a> \r\n<meta itemprop=\"startDate\" content=\"2016-04-21T20:00\">    Thu, 04/21/16    8:00 p.m.  \r\n<div itemprop=\"location\" itemscope itemtype=\"http://schema.org/Place\">    \r\n<a itemprop=\"url\" href=\"wells-fargo-center.html\">    Wells Fargo Center    </a>    \r\n<div itemprop=\"address\" itemscope itemtype=\"http://schema.org/PostalAddress\">      \r\n<span itemprop=\"addressLocality\">Philadelphia</span>,      <span itemprop=\"addressRegion\">PA</span>    \r\n</div>  \r\n</div>  \r\n<div itemprop=\"offers\" itemscope itemtype=\"http://schema.org/AggregateOffer\">\r\nPriced from: <span itemprop=\"lowPrice\">$35</span>    <span itemprop=\"offerCount\">1938</span> tickets left  \r\n</div>'"
+    }
+  ]
+}

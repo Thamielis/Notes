@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Displays your generated external help as Get-Help output.",
+  "Description": "The Get-HelpPreview cmdlet displays your generated external help as Get-Help output. Specify one or more files in Microsoft Assistance Markup Language (MAML) format.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "String[]"
+  ],
+  "Outputs": [
+    "Help Object"
+  ],
+  "Links": [
+    "https://github.com/PowerShell/platyPS/blob/master/docs/Get-HelpPreview.md"
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Preview the PlatyPS help",
+      "Markdown": "",
+      "Code": "PS C:\\> $Help = Get-HelpPreview -Path \".\\out\\platyPS\\en-US\\PlatyPS-help.xml\"\r\n\r\nPS C:\\> $Help.Name\r\n\r\nGet-HelpPreview\r\nGet-MarkdownMetadata\r\nNew-ExternalHelp\r\nNew-ExternalHelpCab\r\nNew-MarkdownHelp\r\nUpdate-MarkdownHelp\r\nUpdate-MarkdownHelpModule\r\nUpdate-MarkdownHelpSchema\r\nThe first command creates a Help object for the the specified MAML file. The command stores it in the $Help variable.\r\n\r\nThe second command displays the Name property for each of the objects in $Help."
+    }
+  ]
+}

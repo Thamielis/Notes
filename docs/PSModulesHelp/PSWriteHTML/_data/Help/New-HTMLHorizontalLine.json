@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a horizontal line in HTML.",
+  "Description": "The New-HTMLHorizontalLine function generates a horizontal line (<hr>) tag in HTML.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLHorizontalLine\r\nGenerates a horizontal line in HTML."
+    }
+  ]
+}

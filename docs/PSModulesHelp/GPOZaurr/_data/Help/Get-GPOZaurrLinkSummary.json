@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieves a summary of GPO links based on specified criteria.",
+  "Description": "This function retrieves a summary of GPO links based on the provided parameters. It categorizes the links into different types and provides detailed information about each link.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrLinkSummary -Forest \"Contoso\" -IncludeDomains \"Domain1\", \"Domain2\" -Report \"MultipleLinks\"\r\nRetrieves a summary of GPO links for the specified forest and included domains, focusing on multiple links."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrLinkSummary -Forest \"Fabrikam\" -ExcludeDomains \"Domain3\" -Report \"OneLink\"\r\nRetrieves a summary of GPO links for the specified forest excluding Domain3, focusing on a single link."
+    }
+  ]
+}

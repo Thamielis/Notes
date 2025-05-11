@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Loads a metadata file based on the calling command name and combines the values there with the parameter values of the calling function.",
+  "Description": "This function gives command authors and users an easy way to let the default parameter values of the command be set by a configuration file in the folder you call it from.\n\nNormally, you have three places to get parameter values from. In priority order, they are:\n- Parameters passed by the caller always win\n- The PowerShell $PSDefaultParameterValues hashtable appears to the function as if the user passed it\n- Default parameter values (defined in the function)\n\nIf you call this command at the top of a function, it overrides (only) the default parameter values with\n\n- Values from a manifest file in the present working directory ($pwd)",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Given that you've written a script like:\r\nfunction New-User {\r\n    [CmdletBinding()]\r\n    param(\r\n        $FirstName,\r\n        $LastName,\r\n        $UserName,\r\n        $Domain,\r\n        $EMail,\r\n        $Department,\r\n        [hashtable]$Permissions\r\n    )\r\n    Import-ParameterConfiguration -Recurse\r\n    # Possibly calculated based on (default) parameter values\r\n    if (-not $UserName) { $UserName = \"$FirstName.$LastName\" }\r\n    if (-not $EMail)    { $EMail = \"$UserName@$Domain\" }\r\n\r\n    # Lots of work to create the user's AD account, email, set permissions etc.\r\n\r\n    # Output an object:\r\n    [PSCustomObject]@{\r\n        PSTypeName  = \"MagicUser\"\r\n        FirstName   = $FirstName\r\n        LastName    = $LastName\r\n        EMail       = $EMail\r\n        Department  = $Department\r\n        Permissions = $Permissions\r\n    }\r\n}\r\n\r\nYou could create a User.psd1 in a folder with just:\r\n\r\n@{ Domain = \"HuddledMasses.org\" }\r\n\r\nNow the following command would resolve the `User.psd1`\r\nAnd the user would get an appropriate email address automatically:\r\n\r\nPS> New-User Joel Bennett\r\n\r\nFirstName   : Joel\r\nLastName    : Bennett\r\nEMail       : Joel.Bennett@HuddledMasses.org"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Import-ParameterConfiguration works recursively (up through parent folders)\r\nThat means it reads config files in the same way git reads .gitignore,\r\nwith settings in the higher level files (up to the root?) being\r\noverridden by those in lower level files down to the WorkingDirectory\r\n\r\nFollowing the previous example to a ridiculous conclusion,\r\nwe could automate creating users by creating a tree like:\r\n\r\nC:\\HuddledMasses\\Security\\Admins\\ with a User.psd1 in each folder:\r\n\r\n# C:\\HuddledMasses\\User.psd1:\r\n@{\r\n    Domain = \"HuddledMasses.org\"\r\n}\r\n\r\n# C:\\HuddledMasses\\Security\\User.psd1:\r\n@{\r\n    Department = \"Security\"\r\n    Permissions = @{\r\n        Access = \"User\"\r\n    }\r\n}\r\n\r\n# C:\\HuddledMasses\\Security\\Admins\\User.psd1\r\n@{\r\n    Permissions = @{\r\n        Access = \"Administrator\"\r\n    }\r\n}\r\n\r\nAnd then switch to the Admins directory and run:\r\n\r\nPS> New-User Joel Bennett\r\n\r\nFirstName   : Joel\r\nLastName    : Bennett\r\nEMail       : Joel.Bennett@HuddledMasses.org\r\nDepartment  : Security\r\nPermissions : { Access = Administrator }"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Following up on our earlier example, let's look at a way to use that -FileName parameter.\r\nIf you wanted to use a different configuration files than your Noun, you can pass the file name in.\r\nYou could even use one of your parameters to generate the file name. If we modify the function like ...\r\n\r\nfunction New-User {\r\n    [CmdletBinding()]\r\n    param(\r\n        $FirstName,\r\n        $LastName,\r\n        $UserName,\r\n        $Domain,\r\n        $EMail,\r\n        $Department,\r\n        [hashtable]$Permissions\r\n    )\r\n    Import-ParameterConfiguration -FileName \"${Department}User.psd1\"\r\n    # Possibly calculated based on (default) parameter values\r\n    if (-not $UserName) { $UserName = \"$FirstName.$LastName\" }\r\n    if (-not $EMail)    { $EMail = \"$UserName@$Domain\" }\r\n\r\n    # Lots of work to create the user's AD account and email etc.\r\n    [PSCustomObject]@{\r\n        PSTypeName = \"MagicUser\"\r\n        FirstName = $FirstName\r\n        LastName = $LastName\r\n        EMail      = $EMail\r\n        # Passthru for testing\r\n        Permissions = $Permissions\r\n    }\r\n}\r\n\r\nNow you could create a `SecurityUser.psd1`\r\n\r\n@{\r\n    Domain = \"HuddledMasses.org\"\r\n    Permissions = @{\r\n        Access = \"Administrator\"\r\n    }\r\n}\r\n\r\nAnd run:\r\n\r\nPS> New-User Joel Bennett -Department Security"
+    }
+  ]
+}

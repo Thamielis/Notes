@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new object for manipulating diagram options in a network visualization.",
+  "Description": "This function creates a new object that allows manipulation of diagram options in a network visualization. It provides options to control the initial state of manipulation tools and specify which manipulation actions are allowed.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This function is based on the official vis.js documentation for network manipulation: https://visjs.github.io/vis-network/docs/network/manipulation.html\nPlease note that this implementation is incomplete and may require additional customization."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$options = New-DiagramOptionsManipulation -InitiallyActive $true -AddNode $true -AddEdge $true\r\nCreates a new object with manipulation options where adding nodes and edges is allowed and the manipulation tools are initially active."
+    }
+  ]
+}

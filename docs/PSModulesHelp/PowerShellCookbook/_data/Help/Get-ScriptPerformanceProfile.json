@@ -1,0 +1,33 @@
+{
+  "Synopsis": "Computes the performance characteristics of a script, based on the transcript\nof it running at trace level 1.",
+  "Description": "To profile a script:\n\n   1) Turn on script tracing in the window that will run the script:\n      Set-PsDebug -trace 1\n   2) Turn on the transcript for the window that will run the script:\n      Start-Transcript\n      (Note the filename that PowerShell provides as the logging destination.)\n   3) Type in the script name, but don't actually start it.\n   4) Open another PowerShell window, and navigate to the directory holding\n      this script.  Type in '.\\Get-ScriptPerformanceProfile <transcript>',\n      replacing <transcript> with the path given in step 2.  Don't\n      press <Enter> yet.\n   5) Switch to the profiled script window, and start the script.\n      Switch to the window containing this script, and press <Enter>\n   6) Wait until your profiled script exits, or has run long enough to be\n      representative of its work.  To be statistically accurate, your script\n      should run for at least ten seconds.\n   7) Switch to the window running this script, and press a key.\n   8) Switch to the window holding your profiled script, and type:\n      Stop-Transcript\n   9) Delete the transcript.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "You can profile regions of code (ie: functions) rather than just lines\nby placing the following call at the start of the region:\n      Write-Debug \"ENTER <region_name>\"\nand the following call and the end of the region:\n      Write-Debug \"EXIT\"\nThis is implemented to account exclusively for the time spent in that\nregion, and does not include time spent in regions contained within the\nregion.  For example, if FunctionA calls FunctionB, and you've surrounded\neach by region markers, the statistics for FunctionA will not include the\nstatistics for FunctionB."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": []
+}

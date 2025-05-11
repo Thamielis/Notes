@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new chart legend with customizable options.",
+  "Description": "The New-ChartLegend function creates a new chart legend with various customization options such as position, alignment, font settings, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-ChartLegend -Names @('A', 'B', 'C') -Color @('red', 'blue', 'green') -LegendPosition 'top' -HorizontalAlign 'center' -FontSize 12\r\nCreates a new chart legend with three items ('A', 'B', 'C') in red, blue, and green colors positioned at the top with center alignment and font size of 12."
+    }
+  ]
+}

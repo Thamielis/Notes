@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Searches the web, using various engines",
+  "Description": "Searches the web, using Bing or Google.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Using Bing requires you to sign up for the Azure Data Market.  \n\nIt is recommended that you use the default secure setting to store your data market key, AzureDataMarketAccountKey\n\nUsing Google requires you sign up for the custom search api, and providing a custom search id"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Search-Engine \"Start-Automating\""
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Search-Engine \"Start-Automating\" -Google"
+    }
+  ]
+}

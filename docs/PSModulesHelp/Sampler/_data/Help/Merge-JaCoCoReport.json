@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Merge two JaCoCoReports into one.",
+  "Description": "When you run tests independently for the same module, you may want to\nget a unified report of all the code paths that were tested.\nFor instance, you want to get a unified report when the runs\nwhere done on Linux and Windows.\n\nThis function helps merge the results of two runs into one file.\nIf you have more than two reports, keep merging them.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "See also Update-JaCoCoStatistic that will update the counter elements.\nThanks to Yorick (@ykuijs) for this great feature!"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Xml.XmlDocument"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Merge-JaCoCoReport -OriginalDocument 'C:\\src\\MyModule\\Output\\JaCoCoRun_linux.xml' -MergeDocument 'C:\\src\\MyModule\\Output\\JaCoCoRun_windows.xml'"
+    }
+  ]
+}

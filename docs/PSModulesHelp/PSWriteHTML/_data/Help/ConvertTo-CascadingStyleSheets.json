@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Converts a hashtable of CSS properties into Cascading Style Sheets (CSS) format.",
+  "Description": "The ConvertTo-CascadingStyleSheets function takes a hashtable of CSS properties and converts them into a CSS stylesheet format. It organizes the properties into selectors and declarations, ready to be used in styling HTML elements.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$CssProperties = @{\r\n    'color' = 'blue'\r\n    'font-size' = '16px'\r\n    'font-family' = 'Arial'\r\n}\r\nConvertTo-CascadingStyleSheets -Css $CssProperties -Name '.myClass' -Comment 'Custom styles for myClass'\r\n\r\nConverts the hashtable of CSS properties into a CSS stylesheet with the selector '.myClass' and a custom comment."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$CssProperties = @{\r\n    'background-color' = 'lightblue'\r\n    'border' = @{\r\n        'style' = 'solid'\r\n        'width' = '1px'\r\n        'color' = 'black'\r\n    }\r\n}\r\nConvertTo-CascadingStyleSheets -Css $CssProperties -Name '#myDiv' -WithTags\r\n\r\nConverts the CSS properties into a CSS stylesheet with the selector '#myDiv' and includes CSS style tags."
+    }
+  ]
+}

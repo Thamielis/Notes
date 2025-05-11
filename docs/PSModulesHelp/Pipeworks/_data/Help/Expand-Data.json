@@ -1,0 +1,43 @@
+{
+  "Synopsis": "Expands Compressed Data",
+  "Description": "Expands Compressed Data using the .NET GZipStream class",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String",
+    "System.Byte"
+  ],
+  "Links": [
+    null,
+    "http://msdn.microsoft.com/en-us/library/system.io.compression.gzipstream.aspx"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Compress-Data -String (\"abc\" * 1kb) | \r\n    Expand-Data"
+    }
+  ]
+}

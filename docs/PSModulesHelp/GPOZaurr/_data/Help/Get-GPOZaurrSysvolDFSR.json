@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Gets DFSR information from the SYSVOL DFSR",
+  "Description": "Gets DFSR information from the SYSVOL DFSR",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$DFSR = Get-GPOZaurrSysvolDFSR\r\n$DFSR | Format-Table *"
+    }
+  ]
+}

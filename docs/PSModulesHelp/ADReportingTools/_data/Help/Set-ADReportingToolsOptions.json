@@ -1,0 +1,43 @@
+{
+  "Synopsis": "Change an ADReportingToolsOptions setting.",
+  "Description": "Many of the commands in the ADReportingTools module have custom format files that utilize ANSI escape sequences to highlight key elements. The module defaults are stored in a variable called ADReportingToolsOptions. Use this command to modify a current setting.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "An easy way to see ANSI samples is to install the PSScriptTools module from the PowerShell Gallery and use the Show-ANSISequence command.\r\n",
+    "Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [
+    "https://bit.ly/3uuvotg",
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Set-ADReportingToolsOptions DistributionList -ANSI \"$([char]0x1b)[36m\"\r\nThis will change the color value for DistributionList entries. The change is not persistent unless you put it in a PowerShell profile script."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "Synopsis": "Get an AD user account using a canonical name.",
+  "Description": "Often you will find user names in the form domain\\username. This command makes it easier to find the Active Directory user account using this value. If you have enabled the Active Directory Recycle Bin feature, you can use the IncludeDeletedObjects parameter to search for the user account if it can't be found with the initial search.\r\n\r\n\r\nThere is an assumption that you will know the domain controller responsible for the given domain component. Or that all accounts are in your current user domain.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.String"
+  ],
+  "Outputs": [
+    "Microsoft.ActiveDirectory.Management.ADUser"
+  ],
+  "Links": [
+    "https://bit.ly/38yrc2R",
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADCanonicalUser company\\gladysk -Properties title,description,department\r\n\r\n\r\nDepartment        : IT\r\nDescription       : Senior AD and Identity Goddess\r\nDistinguishedName : CN=GladysK,OU=IT,DC=Company,DC=Pri\r\nEnabled           : True\r\nGivenName         : Gladys\r\nName              : GladysK\r\nObjectClass       : user\r\nObjectGUID        : 445c8817-3c53-4861-9221-407b5af8bdc6\r\nSamAccountName    : GladysK\r\nSID               : S-1-5-21-493037332-564925384-1585924867-1105\r\nSurname           : Kravitz\r\nTitle             : AD Operations Lead\r\nUserPrincipalName : gladysk@Company.Pri\r\nGet the Active Directory user account for Company\\Gladysk and some select properties."
+    },
+    {
+      "Title": "Example 2",
+      "Markdown": "",
+      "Code": "PS C:\\> $a = Get-ADUserAudit -Since \"2/1/2021\" -Events Disabled\r\nPS C:\\> $a.targets | Get-Unique | Get-ADCanonicalUser |\r\nSelect-Object DistinguishedName\r\n\r\nDistinguishedName\r\n-----------------\r\nCN=MaryL,OU=IT,DC=Company,DC=Pri\r\nCN=E.Ratti,OU=Employees,DC=Company,DC=Pri\r\nCN=Roy Biv,OU=Accounting,DC=Company,DC=Pri\r\nCN=D.Monroy,OU=Employees,DC=Company,DC=Pri\r\nCN=MaryL,OU=IT,DC=Company,DC=Pri\r\nCN=S.Montbriand,OU=Employees,DC=Company,DC=Pri\r\nCN=R.Freil,OU=Employees,DC=Company,DC=Pri\r\nCN=N.Wobser,OU=Employees,DC=Company,DC=Pri\r\nCN=Y.Graffney,OU=Employees,DC=Company,DC=Pri\r\nCN=D.Waldow,OU=Employees,DC=Company,DC=Pri\r\nThe first command is using the Get-ADUserAudit command to find all user accounts disabled since February 1. The resulting targets in the canonical name format. These values are piped to Get-ADCanonicalUser to retrieve the corresponding distinguished name values."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "Synopsis": "Return the results of a SQL query or operation",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Invoke-SqlCommand.ps1 -Sql \"SELECT TOP 10 * FROM Orders\"\r\nInvokes a command using Windows authentication"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$cred = Get-Credential\r\nPS > Invoke-SqlCommand.ps1 -Sql \"SELECT TOP 10 * FROM Orders\" -Cred $cred\r\nInvokes a command using SQL Authentication"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "$server = \"MYSERVER\"\r\nPS > $database = \"Master\"\r\nPS > $sql = \"UPDATE Orders SET EmployeeID = 6 WHERE OrderID = 10248\"\r\nPS > Invoke-SqlCommand $server $database $sql\r\nInvokes a command that performs an update"
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "$sql = \"EXEC SalesByCategory 'Beverages'\"\r\nPS > Invoke-SqlCommand -Sql $sql\r\nInvokes a stored procedure"
+    },
+    {
+      "Title": "EXAMPLE 5",
+      "Markdown": "",
+      "Code": "Invoke-SqlCommand (Resolve-Path access_test.mdb) -Sql \"SELECT * FROM Users\"\r\nAccess an Access database"
+    },
+    {
+      "Title": "EXAMPLE 6",
+      "Markdown": "",
+      "Code": "Invoke-SqlCommand (Resolve-Path xls_test.xls) -Sql 'SELECT * FROM [Sheet1$]'\r\nAccess an Excel file"
+    }
+  ]
+}

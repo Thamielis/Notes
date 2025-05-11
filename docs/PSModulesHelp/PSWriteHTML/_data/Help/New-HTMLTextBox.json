@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Adds text to HTML where each line in TextBlock is treated as next line (adds BR to each line)",
+  "Description": "Adds text to HTML where each line in TextBlock is treated as next line (adds BR to each line).\nAutomatic line breaks are main feature that differentiate New-HTMLTextBox from New-HTMLText\nwhere TextBlock is treated as single line of text unless LineBreak switch is used.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLTextBox {\r\n    \"Hello $UserNotify,\"\r\n    \"\"\r\n    \"Your password is due to expire in $PasswordExpiryDays days.\"\r\n    \"\"\r\n    'To change your password: '\r\n    '- press CTRL+ALT+DEL -> Change a password...'\r\n    ''\r\n    'If you have forgotten your password and need to reset it, you can do this by clicking here. '\r\n    \"In case of problems please contact the HelpDesk by visiting [Evotec Website](https://evotec.xyz) or by sending an email to Help Desk.\"\r\n    ''\r\n    'Alternatively you can always call Help Desk at +48 22 00 00 00'\r\n    ''\r\n    'Kind regards,'\r\n    'Evotec IT'\r\n}"
+    }
+  ]
+}

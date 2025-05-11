@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates an HTML list with customizable styling options.",
+  "Description": "The New-HTMLList function generates an HTML list with various styling options such as color, font size, font weight, alignment, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLList -ListItems { 'Item 1', 'Item 2', 'Item 3' } -Type Unordered -Color 'blue' -FontSize 12 -FontWeight 'bold' -Alignment 'center'\r\nCreates an unordered HTML list with three items ('Item 1', 'Item 2', 'Item 3') displayed in blue color, font size 12, bold font weight, and centered alignment."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-HTMLList -ListItems { 'Apple', 'Banana', 'Cherry' } -Type Ordered -FontFamily 'Arial' -TextDecoration 'underline' -Direction 'rtl'\r\nCreates an ordered HTML list with three items ('Apple', 'Banana', 'Cherry') using Arial font family, underlined text decoration, and right-to-left text direction."
+    }
+  ]
+}

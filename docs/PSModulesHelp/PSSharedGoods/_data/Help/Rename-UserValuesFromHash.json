@@ -1,0 +1,39 @@
+{
+  "Synopsis": "This function renames user values based on a hash table of match data.",
+  "Description": "The Rename-UserValuesFromHash function takes a list of users, a hash table of match data, and an array of field types. It then renames specific values in the user objects based on the match data provided.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$users = @(\r\n    [PSCustomObject]@{ UserPrincipalName = 'user1@test.com'; License = 'test:license'; ProxyAddress = 'proxy@test.com' }\r\n    [PSCustomObject]@{ UserPrincipalName = 'user2@test.com'; License = 'test:license'; ProxyAddress = 'proxy@test.com' }\r\n)\r\n$matchData = @{\r\n    'test.com' = 'newdomain.com'\r\n    'test:' = 'newdomain:'\r\n}\r\n$fieldTypes = @('UserPrincipalName', 'License')\r\nRename-UserValuesFromHash -Users $users -MatchData $matchData -FieldTypes $fieldTypes"
+    }
+  ]
+}

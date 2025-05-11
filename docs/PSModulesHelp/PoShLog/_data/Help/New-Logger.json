@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates new logger",
+  "Description": "Creates instance of serilog logger configuration",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None. You cannot pipe objects to New-Logger"
+  ],
+  "Outputs": [
+    "Instance of LoggerConfiguration object allowing method chaining"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-Logger"
+    }
+  ]
+}

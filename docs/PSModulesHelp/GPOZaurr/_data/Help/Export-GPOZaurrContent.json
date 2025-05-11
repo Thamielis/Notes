@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Exports Group Policy Objects (GPOs) to XML or HTML files.",
+  "Description": "This function exports GPOs to either XML or HTML files based on the specified parameters.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This function exports GPOs to XML or HTML files for further analysis or backup purposes."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Export-GPOZaurrContent -FolderOutput \"C:\\ExportedGPOs\" -ReportType HTML\r\nExports all GPOs to HTML format and saves them in the \"C:\\ExportedGPOs\" folder."
+    }
+  ]
+}

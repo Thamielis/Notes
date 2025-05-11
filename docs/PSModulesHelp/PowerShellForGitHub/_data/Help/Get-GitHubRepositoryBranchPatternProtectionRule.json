@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieve a branch pattern protection rule for a given GitHub repository.",
+  "Description": "Retrieve a branch pattern protection rule for a given GitHub repository.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Branch\nGitHub.Content\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Release\nGitHub.Repository"
+  ],
+  "Outputs": [
+    "GitHub.BranchPatternProtectionRule"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubRepositoryBranchPatternProtectionRule -OwnerName microsoft -RepositoryName PowerShellForGitHub -BranchPatternName release/**/*\r\nRetrieves branch protection rules for the release/**/* branch pattern of the PowerShellForGithub repository."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GitHubQlRepositoryBranchPatternProtectionRule -Uri 'https://github.com/microsoft/PowerShellForGitHub' -BranchPatternName master\r\nRetrieves branch protection rules for the master branch pattern of the PowerShellForGithub repository."
+    }
+  ]
+}

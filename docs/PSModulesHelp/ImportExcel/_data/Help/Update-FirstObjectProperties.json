@@ -1,0 +1,47 @@
+{
+  "Synopsis": "Updates the first object to contain all the properties of the object with the most properties in the array.",
+  "Description": "Updates the first object to contain all the properties found anywhere in the array.\r\n\r\n\r\nThis is usefull when not all objects have the same quantity of properties and CmdLets like Out-GridView or Export-Excel are not able to show all the properties because the first object doesn't have them all.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "CHANGELOG 2017/06/08 Function born"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null,
+    "https://github.com/dfinke/ImportExcel"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS\\> $Array = @()\r\nPS\\> $Obj1  = [PSCustomObject]@{\r\n    Member1 = 'First'\r\n    Member2 = 'Second'\r\n}\r\nPS\\> $Obj2  = [PSCustomObject]@{\r\n    Member1 = 'First'\r\n    Member2 = 'Second'\r\n    Member3 = 'Third'\r\n}\r\nPS\\> $Obj3  = [PSCustomObject]@{\r\n    Member1 = 'First'\r\n    Member2 = 'Second'\r\n    Member3 = 'Third'\r\n    Member4 = 'Fourth'\r\n}\r\nPS\\> $Array = $Obj1, $Obj2, $Obj3\r\nPS\\> $Array | Out-GridView -Title 'Not showing Member3 and Member4'\r\nPS\\> $Array | Update-FirstObjectProperties | Out-GridView -Title 'All properties are visible'\r\nUpdates the first object of the array by adding Member3 and Member4 and shows before and after in gridviews"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "PS\\>$ExcelParams = @{\r\n       Path      = $env:TEMP + '\\Excel.xlsx'\r\n       Show      = $true\r\n       Verbose   = $true\r\n}\r\nPS\\> Remove-Item -Path $ExcelParams.Path -Force -EA Ignore\r\nPS\\> $Array = @()\r\nPS\\> $Obj1  = [PSCustomObjectable@{\r\n    Member1 = 'First'\r\n    Member2 = 'Second'\r\n}\r\nPS\\> $Obj2  = [PSCustomObject]@{\r\n    Member1 = 'First'\r\n    Member2 = 'Second'\r\n    Member3 = 'Third'\r\n}\r\nPS\\> $Obj3  = [PSCustomObject]@{\r\n    Member1 = 'First'\r\n    Member2 = 'Second'\r\n    Member3 = 'Third'\r\n    Member4 = 'Fourth'\r\n}\r\nPS\\> $Array = $Obj1, $Obj2, $Obj3\r\nPS\\> $Array | Out-GridView -Title 'Not showing Member3 and Member4'\r\nPS\\> $Array | Update-FirstObjectProperties | Export-Excel @ExcelParams -WorkSheetname Numbers\r\nUpdates the first object of the array by adding property 'Member3' and 'Member4'. Afterwards, all objects are exported to an Excel file and all column headers are visible."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "Synopsis": "Converts a string to a normalized string",
+  "Description": "Converts a string to a normalized string",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "ConvertTo-NormalizedString -String \"café\""
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "\"café\" | ConvertTo-NormalizedString"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "ConvertTo-NormalizedString -String \"café\"\r\n\"café\" | ConvertTo-NormalizedString\r\n'Helène' | ConvertTo-NormalizedString\r\n\"Przemysław Kłys and Helène\" | ConvertTo-NormalizedString"
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "\"äöüß\" | ConvertTo-NormalizedString\r\nConvertTo-NormalizedString -String \"café\"\r\n\"café\" | ConvertTo-NormalizedString\r\n'Helène' | ConvertTo-NormalizedString\r\n\"Przemysław Kłys and Helène\" | ConvertTo-NormalizedString\r\n\"kłys\" | ConvertTo-NormalizedString\r\n\"ąęćśł\" | ConvertTo-NormalizedString\r\n\"Michael Roßbach\" | ConvertTo-NormalizedString\r\n\"öüóőúéáűí\" | ConvertTo-NormalizedString\r\n\"ß\" | ConvertTo-NormalizedString\r\n\"Un été de Raphaël\" | ConvertTo-NormalizedString\r\n(\"äâûê\", \"éèà\", \"ùçä\") | ConvertTo-NormalizedString\r\n\"Fore ðære mærðe…\" | ConvertTo-NormalizedString\r\n\"ABC-abc-ČŠŽ-čšž\" | ConvertTo-NormalizedString\r\n\"Æ×Þ°±ß…\" | ConvertTo-NormalizedString"
+    }
+  ]
+}

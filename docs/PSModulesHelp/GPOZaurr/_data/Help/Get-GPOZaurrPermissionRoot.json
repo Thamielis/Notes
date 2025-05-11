@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieves the root permissions of Group Policy Objects (GPOs) based on specified criteria.",
+  "Description": "Retrieves the root permissions of GPOs based on the specified criteria, including filtering by permission types, forest, domains, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrPermissionRoot -IncludePermissionType 'GpoRootCreate' -ExcludePermissionType 'GpoRootOwner' -Forest 'ExampleForest' -IncludeDomains 'Domain1', 'Domain2' -ExtendedForestInformation $ForestInfo -SkipNames"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrPermissionRoot -IncludePermissionType 'GpoRootOwner' -ExcludePermissionType 'GpoRootCreate' -Forest 'AnotherForest' -ExcludeDomains 'Domain3' -SkipNames"
+    }
+  ]
+}

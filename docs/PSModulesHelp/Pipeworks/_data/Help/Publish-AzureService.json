@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Publishes one or more modules as azure services",
+  "Description": "Publishes one or more modules as azure services, according to the DomainSchematic found in the Pipeworks manifest",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.IO.FileInfo"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-Module Pipeworks | \r\n    Publish-AzureService"
+    }
+  ]
+}

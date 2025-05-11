@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Exports a configuration object to a specified path.",
+  "Description": "Exports the configuration object to a file, by default, in the Roaming AppData location\n\nNOTE: this exports the FULL configuration to this file, which will override both defaults and local machine configuration when Import-Configuration is used.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "@{UserName = $Env:UserName; LastUpdate = [DateTimeOffset]::Now } | Export-Configuration\r\nThis example shows how to use Export-Configuration in your module to cache some data."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-Module Configuration | Export-Configuration @{UserName = $Env:UserName; LastUpdate = [DateTimeOffset]::Now }\r\nThis example shows how to use Export-Configuration to export data for use in a specific module.\r\n\r\nPSSCriptAnalyzer team refuses to listen to reason. See bugs:  #194 #283 #521 #608"
+    }
+  ]
+}

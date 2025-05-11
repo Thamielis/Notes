@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Configures email options for sending notifications.",
+  "Description": "This function sets the priority and delivery notifications for email notifications.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "EmailOptions -Priority 'High' -DeliveryNotifications 'OnSuccess'\r\nConfigures email options with High priority and delivery notifications on success."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "EmailOptions\r\nConfigures email options with default settings."
+    }
+  ]
+}

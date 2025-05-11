@@ -1,0 +1,44 @@
+{
+  "Synopsis": "This function provides ability to add new text to the HTML file.",
+  "Description": "This function provides ability to add new text to the HTML file, with colors, fonts and other styling features.\nIt is used to add text to the HTML file with proper styling and formatting.\nPlease keep in mind that if parameter is not provided the defaults will be used.\nThe defaults can be from the body itself, or from section or other parts of HTML depending on where the text is added.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTML -TitleText 'This is a test' -FilePath \"$PSScriptRoot\\Example34_01.html\" {\r\n    New-HTMLHeader {\r\n        New-HTMLText -Text \"Date of this report $(Get-Date)\" -Color Blue -Alignment right\r\n    }\r\n    New-HTMLMain {\r\n        New-HTMLTab -TabName 'Test' {\r\n            New-HTMLSection -HeaderText '0 section' {\r\n                New-HTMLPanel {\r\n                    New-HTMLTable -DataTable $Processes -HideFooter\r\n                }\r\n                New-HTMLPanel {\r\n                    New-HTMLTable -DataTable $Processes -HideFooter\r\n                }\r\n                New-HTMLPanel {\r\n                    New-HTMLTable -DataTable $Processes -HideFooter -Simplify\r\n                }\r\n                New-HTMLPanel {\r\n                    New-HTMLTable -DataTable $Processes -HideFooter\r\n                }\r\n            }\r\n        }\r\n        New-HTMLTab -TabName 'Test5' {\r\n            New-HTMLSection -HeaderText '1 section' {\r\n                New-HTMLPanel {\r\n                    New-HTMLTable -DataTable $Processes -HideFooter\r\n                }\r\n                New-HTMLPanel {\r\n                    New-HTMLTable -DataTable $Processes -HideFooter\r\n                    # New-HTMLTable -DataTable $Processes -HideFooter\r\n                }\r\n                New-HTMLPanel {\r\n                    New-HTMLTable -DataTable $Processes -HideFooter\r\n                }\r\n            }\r\n        }\r\n    }\r\n    New-HTMLFooter {\r\n        New-HTMLText -Text \"Date of this report $(Get-Date)\" -Color Blue -Alignment right\r\n    }\r\n} -Online -ShowHTML"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": ""
+    }
+  ]
+}

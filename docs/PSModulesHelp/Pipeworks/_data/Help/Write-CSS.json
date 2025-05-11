@@ -1,0 +1,58 @@
+{
+  "Synopsis": "Writes CSS styles",
+  "Description": "Writes CSS style tags, CSS attributes, and links to external stylesheets",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "Create a new CSS Style named reallyimportant",
+      "Code": "Write-CSS -Name '#ReallyImportant' -Style @{\r\n    \"font-size\" = \"x-large\"\r\n    \"font-weight\"=\"bold\"\r\n}"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Write-CSS -OutputAttribute -Style @{\r\n    \"font-size\" = \"x-large\"\r\n    \"font-weight\"=\"bold\"\r\n}"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Write-CSS -ExternalStyleSheet MyStyleSheet.css"
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "Write-CSS -Css @{\r\n    \"a\"=@{\r\n        \"font-size\"=\"x-large\"\r\n    }\r\n}"
+    }
+  ]
+}

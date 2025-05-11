@@ -1,0 +1,45 @@
+{
+  "Synopsis": "Gets parameter info from a member.",
+  "Description": "The Get-Parameter cmdlet gets parameter info from a member.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Cmdlet",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.Reflection.MethodBase"
+  ],
+  "Outputs": [
+    "System.Reflection.ParameterInfo"
+  ],
+  "Links": [
+    "https://github.com/SeeminglyScience/ClassExplorer/blob/master/docs/en-US/Get-Parameter.md",
+    null,
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "[powershell] | Find-Member Create | Get-Parameter\r\n\r\n#    Member: public static PowerShell Create(RunspaceMode runspace);\r\n#\r\n# # Type                   Name                       Default      In  Out Opt\r\n# - ----                   ----                       -------      --  --- ---\r\n# 0 RunspaceMode           runspace                                 x   x   x\r\n#\r\n#    Member: public static PowerShell Create(InitialSessionState initialSessionState);\r\n#\r\n# # Type                   Name                       Default      In  Out Opt\r\n# - ----                   ----                       -------      --  --- ---\r\n# 0 InitialSessionState    initialSessionState                      x   x   x\r\n#\r\n#    Member: public static PowerShell Create(Runspace runspace);\r\n#\r\n# # Type                   Name                       Default      In  Out Opt\r\n# - ----                   ----                       -------      --  --- ---\r\n# 0 Runspace               runspace                                 x   x   x\r\nGet parameters for all overloads of the PowerShell.Create method."
+    }
+  ]
+}

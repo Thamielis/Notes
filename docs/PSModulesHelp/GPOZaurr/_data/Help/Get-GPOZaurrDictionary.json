@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieves a dictionary of Group Policy Objects (GPOs) with their associated types and paths.",
+  "Description": "This function retrieves a dictionary of Group Policy Objects (GPOs) along with their associated types and paths. It iterates through the GPOs stored in the $Script:GPODitionary variable and constructs a custom object for each GPO containing its name, types, and path.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrDictionary\r\nRetrieves the dictionary of GPOs with their types and paths using the default newline delimiter."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrDictionary -Splitter \",\"\r\nRetrieves the dictionary of GPOs with their types and paths using a comma as the delimiter."
+    }
+  ]
+}

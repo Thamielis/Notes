@@ -1,0 +1,77 @@
+{
+  "Synopsis": "Gets the IP route information from the IP routing table.",
+  "Description": "The Get-NetRoute cmdlet gets IP route information from the IP routing table, including destination network prefixes, next hop IP addresses, and route metrics. Run this cmdlet without any parameters to get all IP routes from the routing table. Specify parameters to narrow your results. For instance, you can specify a particular interface or an IP address family.\r\n\r\n\r\nFor more information about routing, see Chapter 5 - IP Routing (http://technet.microsoft.com/library/bb727001.aspx) in the TechNet library.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetRoute"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkID=288388",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Get all routes",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetRoute | Format-List –Property *\r\nThis command gets all the routes for the computer, and then passes them to the Format-List cmdlet by using the pipeline operator. The Format-List cmdlet displays all the properties of an object. For more information, type Get-Help Format-List."
+    },
+    {
+      "Title": "Example 2: Get all IPv6 routes",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetRoute –AddressFamily IPv6\r\nThis command gets the routes that belong to the IPv6 address family."
+    },
+    {
+      "Title": "Example 3: Get routes for a specified interface",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetRoute –InterfaceIndex 12\r\nThis command gets the IP routes associated with the interface that has an index of 12."
+    },
+    {
+      "Title": "Example 4: Get the next hop for the default route",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetRoute –DestinationPrefix \"0.0.0.0/0\" | Select-Object –ExpandProperty \"NextHop\"\r\nThis command gets the next hop for the default route. The next hop gateway for the default route is also known as the default gateway. The command gets the default IP routes, and passes them to the Select-Object cmdlet. That cmdlet displays the NextHop property for each default route. For more information about displaying selected properties, type Get-Help Select-Object."
+    },
+    {
+      "Title": "Example 5: Get IP routes to non-local destinations",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetRoute | Where-Object –FilterScript { $_.NextHop -Ne \"::\" } | Where-Object –FilterScript { $_.NextHop -Ne \"0.0.0.0\" } | Where-Object –FilterScript { ($_.NextHop.SubString(0,6) -Ne \"fe80::\") }\r\nThis command gets IP routes that have next hops that are not in the local subnet. The command gets all routes, and then passes them to a series of Where-Object commands by using the pipeline operator. The command uses different filter scripts to discard routes that are the default gateway for the two IP address families and the IPv6 addresses that begin with fe80. For more information about filtering by using Where-Object, type Get-Help Where-Object."
+    },
+    {
+      "Title": "Example 6: Get network adapters that have IP routes to non-local destinations",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetRoute | Where-Object –FilterScript {$_.NextHop -Ne \"::\"} | Where-Object –FilterScript { $_.NextHop -Ne \"0.0.0.0\" } | Where-Object –FilterScript { ($_.NextHop.SubString(0,6) -Ne \"fe80::\") } | Get-NetAdapter\r\nThis command gets network adapters that have IP routes that have next hops that are not in the local subnet. As in the previous example, the command gets the routes that have next hop values by using the Get-NetRoute and the Where-Object cmdlets, and then passes those routes to the Get-NetAdapter cmdlet by using the pipeline operator."
+    },
+    {
+      "Title": "Example 7: Get IP routes that have an infinite valid lifetime",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetRoute | Where-Object –FilterScript { $_.ValidLifetime -Eq ([TimeSpan]::MaxValue) }\r\nThis command gets all IP routes, and then passes them to the Where-Object cmdlet by using the pipeline operator. The command selects those routes that have a valid lifetime of the maximum value."
+    }
+  ]
+}

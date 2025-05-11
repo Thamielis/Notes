@@ -1,0 +1,67 @@
+{
+  "Synopsis": "Displays diagnostic information for a connection.",
+  "Description": "The Test-NetConnection cmdlet displays diagnostic information for a connection. It supports ping test, TCP test, route tracing, and route selection diagnostics. Depending on the input parameters, the output can include the DNS lookup results, a list of IP interfaces, IPsec rules, route/source address selection results, and/or confirmation of connection establishment.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "NetRouteDiagnostics",
+    "NetConnectionResults"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkId=313146"
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Test ping connectivity",
+      "Markdown": "",
+      "Code": "PS C:\\> Test-NetConnection\r\nComputerName           : internetbeacon.msedge.net\r\n\r\nRemoteAddress          : 2a01:111:2003::52\r\n\r\nInterfaceAlias         : Ethernet\r\n\r\nSourceAddress          : 2001:4898:d8:33:81e8:7b49:8bf5:8710\r\n\r\nPingSucceeded          : True\r\n\r\nPingReplyDetails (RTT) : 5 ms\r\nThis command tests ping connectivity to a default server."
+    },
+    {
+      "Title": "Example 2: Test ping connectivity with detailed results",
+      "Markdown": "",
+      "Code": "PS C:\\> Test-NetConnection -InformationLevel \"Detailed\"\r\nComputerName           : internetbeacon.msedge.net\r\n\r\nRemoteAddress          : 2a01:111:2003::52\r\n\r\nNameResolutionResults  : 2a01:111:2003::52\r\n\r\n                         13.107.4.52\r\n\r\nInterfaceAlias         : Ethernet\r\n\r\nSourceAddress          : 2001:4898:d8:33:81e8:7b49:8bf5:8710\r\n\r\nNetRoute (NextHop)     : fe80::200:5eff:fe00:203\r\n\r\nPingSucceeded          : True\r\n\r\nPingReplyDetails (RTT) : 6 ms\r\nThis command tests ping connectivity to a default server and sets the InformationLevel parameter to Detailed."
+    },
+    {
+      "Title": "Example 3: Test TCP connectivity and display detailed results",
+      "Markdown": "",
+      "Code": "PS C:\\> Test-NetConnection -Port 80 -InformationLevel \"Detailed\"\r\nComputerName            : internetbeacon.msedge.net\r\n\r\nRemoteAddress           : 2a01:111:2003::52\r\n\r\nRemotePort              : 80\r\n\r\nNameResolutionResults   : 2a01:111:2003::52\r\n\r\n                          13.107.4.52\r\n\r\nMatchingIPsecRules      : Ipsec/Domain-TrafficFromInternet-v6 \r\n\r\nNetworkIsolationContext : Internet\r\n\r\nIsAdmin                 : False\r\n\r\nInterfaceAlias          : Ethernet\r\n\r\nSourceAddress           : 2001:4898:d8:33:81e8:7b49:8bf5:8710\r\n\r\nNetRoute (NextHop)      : fe80::200:5eff:fe00:203\r\n\r\nTcpTestSucceeded        : True\r\nThis command tests TCP connectivity to a default server and sets the InformationLevel parameter to Detailed."
+    },
+    {
+      "Title": "Example 4: Test a connection to a remote host",
+      "Markdown": "",
+      "Code": "PS C:\\> Test-NetConnection -ComputerName \"www.contoso.com\" -InformationLevel \"Detailed\"\r\nPingReplyDetails (RTT) : 164 ms\r\n\r\nComputerName           : www.contoso.com\r\n\r\nRemoteAddress          : 65.55.39.10\r\n\r\nNameResolutionResults  : 65.55.39.10\r\n\r\n                         64.4.6.100\r\n\r\nInterfaceAlias         : Ethernet\r\n\r\nSourceAddress          : 10.137.193.122\r\n\r\nNetRoute (NextHop)     : 10.137.192.1\r\n\r\nPingSucceeded          : True\r\n\r\nPingReplyDetails (RTT) : 164 ms\r\nThis command tests ping connectivity to a remote host named www.contoso.com."
+    },
+    {
+      "Title": "Example 5: Perform route diagnostics to connect to a remote host",
+      "Markdown": "",
+      "Code": "PS C:\\> Test-NetConnection -ComputerName www.contoso.com -DiagnoseRouting -InformationLevel Detailed\r\nComputerName : www.contoso.com\r\n\r\nRemoteAddress : 2001:428:3805:187::2768\r\n\r\nSelectedSourceAddress : 2001:4898:e0:79:f17c:d212:8743:43c2\r\n\r\nOutgoingInterfaceIndex : 4\r\n\r\nSelectedNetRoute : DestinationPrefix: ::/0 NextHop: fe80::200:5eff:fe00:202\r\n\r\nRouteSelectionEvents : IP: Route [DestinationPrefix: ::/0 NextHop: fe80::200:5eff:fe00:202 InterfaceIndex: 4 InterfaceMetric: 10 RouteMetric: 256] is preferred over \r\n\r\nRoute [DestinationPrefix: ::/0 NextHop: fe80::200:5eff:fe00:202 InterfaceIndex: 5 InterfaceMetric: 10 RouteMetric: 256] for\r\nDestination: 2001:428:3805:187::2768 in Compartment: 1, Reason: RouteOrder. \r\n\r\nSourceAddressSelectionEvents : IP: Source address 2001:4898:e0:79:f17c:d212:8743:43c2 is preferred over fe80::f17c:d212:8743:43c2 for destination 2001:428:3805:187::2768 Rule = 2.0. \r\n\r\nRouteDiagnosticsSucceeded : True\r\nThis command performs route diagnostics to reach a remote host named www.contoso.com."
+    },
+    {
+      "Title": "Example 6: Perform route diagnostics to connect to a remote host with routing constraints",
+      "Markdown": "",
+      "Code": "PS C:\\> Test-NetConnection -ComputerName \"www.contoso.com\" -ConstrainInterface 5 -DiagnoseRouting -InformationLevel \"Detailed\"\r\nComputerName : www.contoso.com\r\n\r\nRemoteAddress : 2600:1409:a:185::2768\r\n\r\nConstrainInterfaceIndex : 5\r\n\r\nSelectedSourceAddress : 2001:4898:e0:79:75dd:64cf:d9ff:f86\r\n\r\nOutgoingInterfaceIndex : 5\r\n\r\nSelectedNetRoute : DestinationPrefix: ::/0\r\n\r\nNextHop: fe80::200:5eff:fe00:202\r\n\r\nRouteSelectionEvents : IP: Route [DestinationPrefix: ::/0 NextHop: fe80::200:5eff:fe00:202 InterfaceIndex: 4\r\n\r\nRouteMetric: 256] is blocked for Destination: 2600:1409:a:185::2768 ConstrainInterfaceIndex: 5 ConstrainScopeZone: 1 in Compartment: 1, Reason: InterfaceConstraint. \r\n\r\nSourceAddressSelectionEvents : IP: Source address 2001:4898:e0:79:75dd:64cf:d9ff:f86 is preferred over fe80::75dd:64cf:d9ff:f86 for destination 2600:1409:a:185::2768 Rule = 2.0. \r\n\r\nIP: Source address 2001:4898:e0:79:75dd:64cf:d9ff:f86 is preferred over fe80::75dd:64cf:d9ff:f86 for destination 2600:1409:a:185::2768 Rule = 2.0. \r\n\r\nRouteDiagnosticsSucceeded : True\r\nThis command performs route diagnostics to reach a remote host named www.contoso.com with routing constraints."
+    }
+  ]
+}

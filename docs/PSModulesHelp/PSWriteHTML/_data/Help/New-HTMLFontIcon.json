@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates an HTML font icon with specified parameters.",
+  "Description": "This function generates an HTML font icon based on the provided parameters such as icon size, color, and specific icon set (e.g., FontAwesomeBrands, FontAwesomeRegular, FontAwesomeSolid, FontMaterial).",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLFontIcon -IconSize 24 -IconColor \"red\" -IconBrands \"fa-github\"\r\nGenerates an HTML font icon with a size of 24, red color, and the GitHub icon from the FontAwesomeBrands set."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-HTMLFontIcon -IconSize 32 -IconColor \"blue\" -IconRegular \"fa-envelope\"\r\nGenerates an HTML font icon with a size of 32, blue color, and the envelope icon from the FontAwesomeRegular set."
+    }
+  ]
+}

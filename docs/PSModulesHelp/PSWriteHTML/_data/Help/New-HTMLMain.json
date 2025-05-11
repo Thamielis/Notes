@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Defines the body HTML content. By default this is not required, but can be useful when header and footer are used to explicitly define the main content.",
+  "Description": "Defines the body HTML content. By default this is not required, but can be useful when header and footer are used to explicitly define the main content.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTML -TitleText 'My title' -Online -FilePath $PSScriptRoot\\Example40-Body.html -Show {\r\n    New-HTMLMain {\r\n        New-HTMLTabStyle -SlimTabs `\r\n            -BorderBottomStyleActive solid -BorderBottomColorActive LightSkyBlue -BackgroundColorActive none `\r\n            -TextColorActive Black -Align left -BorderRadius 0px -RemoveShadow -TextColor Grey -TextTransform capitalize #-FontSize 10pt\r\nNew-HTMLSectionStyle -BorderRadius 0px -HeaderBackGroundColor Grey\r\n        New-HTMLTab -Name 'First Level Tab - Test 1' -IconBrands acquisitions-incorporated {\r\n            New-HTMLTab -Name '2nd Level Tab - Test 4/1' -IconBrands app-store {\r\n                New-HTMLSection -HeaderText 'Default Section Style' {\r\n                    New-HTMLTableStyle -Type Header -TextAlign right -TextColor Blue\r\n                    New-HTMLTableStyle -Type Row -TextAlign left -TextColor Grey\r\n                    New-HTMLTable -DataTable $Test1 {\r\n                        New-HTMLTableHeader -Names 'ID', 'HandleCount'\r\n                    } -Filtering #-HideFooter -FilteringLocation Both\r\n                } -CanCollapse\r\n            }\r\n        }\r\n        New-HTMLTab -Name 'Next' {\r\n\r\n        }\r\n    } -BackgroundColor Yellow -Color Red -FontSize 12px #-FontFamily 'Arial'\r\n}"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-HTML -TitleText 'This is a test' -FilePath \"$PSScriptRoot\\Example34_01.html\" {\r\n    New-HTMLHeader {\r\n        New-HTMLText -Text \"Date of this report $(Get-Date)\" -Color Blue -Alignment right\r\n    }\r\n    New-HTMLMain {\r\n        New-HTMLTab -TabName 'Test' {\r\n            New-HTMLSection -HeaderText '0 section' {\r\n                New-HTMLPanel {\r\n                    New-HTMLTable -DataTable $Processes -HideFooter\r\n                }\r\n                New-HTMLPanel {\r\n                    New-HTMLTable -DataTable $Processes -HideFooter\r\n                }\r\n                New-HTMLPanel {\r\n                    New-HTMLTable -DataTable $Processes -HideFooter -Simplify\r\n                }\r\n                New-HTMLPanel {\r\n                    New-HTMLTable -DataTable $Processes -HideFooter\r\n                }\r\n            }\r\n        }\r\n        New-HTMLTab -TabName 'Test5' {\r\n            New-HTMLSection -HeaderText '1 section' {\r\n                New-HTMLPanel {\r\n                    New-HTMLTable -DataTable $Processes -HideFooter\r\n                }\r\n                New-HTMLPanel {\r\n                    New-HTMLTable -DataTable $Processes -HideFooter\r\n                    # New-HTMLTable -DataTable $Processes -HideFooter\r\n                }\r\n                New-HTMLPanel {\r\n                    New-HTMLTable -DataTable $Processes -HideFooter\r\n                }\r\n            }\r\n        }\r\n    }\r\n    New-HTMLFooter {\r\n        New-HTMLText -Text \"Date of this report $(Get-Date)\" -Color Blue -Alignment right\r\n    }\r\n} -Online -ShowHTML"
+    }
+  ]
+}

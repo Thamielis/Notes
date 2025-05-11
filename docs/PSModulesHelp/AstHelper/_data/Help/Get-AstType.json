@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Returns all of the types of AST objects in a script.",
+  "Description": "Parses the contents of a provided script and gets a list of all the AST object types.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Author: Thomas Rayner (@MrThomasRayner), workingsysadmin.com"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject[]"
+  ],
+  "Links": [
+    "http://workingsysadmin.com"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-AstType -ScriptPath .\\MyScript.ps1"
+    }
+  ]
+}

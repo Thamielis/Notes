@@ -1,0 +1,45 @@
+{
+  "Synopsis": "Publishes a deployment",
+  "Description": "Generates an Azure deployment package from a set of modules that will be deployed.\n\nOR\n\nUploads a set of modules in a deployment to Blob Storage",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.IO.FileInfo",
+    "System.Nullable"
+  ],
+  "Links": [
+    null,
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Publish-Deployment"
+    }
+  ]
+}

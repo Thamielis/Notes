@@ -1,0 +1,50 @@
+{
+  "Synopsis": "Modifies the configuration of an IP address.",
+  "Description": "The Set-NetIPAddress cmdlet modifies IP address configuration properties of an existing IP address.\r\n\r\n\r\nTo create an IPv4 address or IPv6 address, use the New-NetIPAddress cmdlet.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetIPAddress"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkId=289165",
+    null,
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Modify an IP address",
+      "Markdown": "",
+      "Code": "PS C:\\> Set-NetIPAddress –InterfaceIndex 12 –IPAddress 192.168.0.1\r\nPS C:\\> Set-NetIPAddress –InterfaceIndex 12 –IPAddress 192.168.0.1 –PrefixLength 24\r\nThis command adds the IP address 192.168.0.1 to the interface located at index 12.\r\n\r\nThe PrefixLength parameter may also be specified as part of the Set-NetIPAddress cmdlet."
+    },
+    {
+      "Title": "Example 2: Modify an IP address and set the valid lifetime",
+      "Markdown": "",
+      "Code": "PS C:\\> $Timesp = ( New-TimeSpan –Days 1 )\r\nPS C:\\> Set-NetIPAddress –InterfaceIndex 12 –IPAddress 192.168.0.1 –PreferredLifetime $Timesp\r\nThe first command creates a new TimeSpan object of one day, and stores it in the variable named $Timesp.\r\n\r\nThe second command then uses the TimeSpan object to set the preferred lifetime of the IP address located at interface 12 to one day."
+    }
+  ]
+}

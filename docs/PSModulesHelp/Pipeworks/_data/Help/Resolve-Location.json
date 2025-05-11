@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Resolves a location to it's place on Earth",
+  "Description": "Looks up physical addresess (in the US), ip addresses, or hostnames.\n\nReturns results as a [http://schema.org/Place](http://schema.org/Place)",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "http://schema.org/Place"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "Resolve Location by GeoIP",
+      "Code": "Resolve-Location -Address \"69.89.88.122\""
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "Resolve physical locations within the US",
+      "Code": "Resolve-Location -Address \"1600 Pennsylvania Ave, Washington, DC\""
+    }
+  ]
+}

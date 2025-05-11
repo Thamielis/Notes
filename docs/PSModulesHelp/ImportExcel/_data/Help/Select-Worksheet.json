@@ -1,0 +1,51 @@
+{
+  "Synopsis": "Sets the selected tab in an Excel workbook to be the chosen sheet and unselects all the others.",
+  "Description": "Sometimes when a sheet is added we want it to be the active sheet, sometimes we want the active sheet to be left as it was. Select-Worksheet exists to change which sheet is the selected tab when Excel opens the file.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS\\> Select-Worksheet -ExcelWorkbook $ExcelWorkbook -WorksheetName \"NewSheet\"\r\n$ExcelWorkbook holds a workbook object containing a sheet named \"NewSheet\"; This sheet will become the [only] active sheet in the workbook"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "PS\\>  Select-Worksheet -ExcelPackage $Pkg -WorksheetName \"NewSheet2\"\r\n$pkg holds an Excel Package, whose workbook contains a sheet named \"NewSheet2\" This sheet will become the [only] active sheet in the workbook."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "PS\\> Select-Worksheet -ExcelWorksheet $ws\r\n$ws holds an Excel worksheet which will become the [only] active sheet in its workbook."
+    }
+  ]
+}

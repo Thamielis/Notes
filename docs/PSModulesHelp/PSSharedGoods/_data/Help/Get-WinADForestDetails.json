@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Get details about Active Directory Forest, Domains and Domain Controllers in a single query",
+  "Description": "Get details about Active Directory Forest, Domains and Domain Controllers in a single query",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-WinADForestDetails | Format-Table"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-WinADForestDetails -Forest 'ad.evotec.xyz' | Format-Table"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "Synopsis": "Applies number, font, alignment and/or color formatting, values or formulas to a range of Excel cells.",
+  "Description": "Set-ExcelRange was created to set the style elements for a range of cells, this includes auto-sizing and hiding, setting font elements (Name, Size, Bold, Italic, Underline & UnderlineStyle and Subscript & SuperScript), font and background colors, borders, text wrapping, rotation, alignment within cells, and number format.\r\n\r\n\r\nIt was orignally named \"Set-Format\", but it has been extended to set Values, Formulas and ArrayFormulas (sometimes called Ctrl-shift-Enter [CSE] formulas); because of this, the name has become Set-ExcelRange but the old name of Set-Format is preserved as an alias.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS\\> $sheet.Column(3) | Set-ExcelRange -HorizontalAlignment Right -NumberFormat \"#,###\" -AutoFit\r\nSelects column 3 from a sheet object (within a workbook object, which is a child of the ExcelPackage object) and passes it to Set-ExcelRange which formats numbers as a integers with comma-separated groups, aligns it right, and auto-fits the column to the contents."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "PS\\> Set-ExcelRange -Range $sheet.Cells[\"E1:H1048576\"]  -HorizontalAlignment Right -NumberFormat \"#,###\"\r\nInstead of piping the address, this version specifies a block of cells and applies similar formatting."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "PS\\> Set-ExcelRange $excel.Workbook.Worksheets[1].Tables[\"Processes\"] -Italic\r\nThis time instead of specifying a range of cells, a table is selected by name and formatted as italic."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a customizable HTML window box with various options for styling and functionality.",
+  "Description": "This function allows you to create an HTML window box with customizable features such as title, background color, initial position, size, URL content, modal display, theme, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This function provides a flexible way to create interactive and styled window boxes in HTML."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$Data = Get-Process | Select-Object -First 3\r\nNew-HTML -TitleText 'This is a test' -FilePath \"$PSScriptRoot\\Example-WinBox01.html\" {\r\n    New-HTMLWinBox -Title 'This is a test Window' -BackgroundColor Red {\r\n        New-HTMLText -Text 'This is a text within modal dialog'\r\n        New-HTMLTable -DataTable $Data\r\n    } -Width 50% -Height 50% -X center -Y center\r\n} -Online -ShowHTML"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new HTML carousel element with customizable options.",
+  "Description": "This function creates a new HTML carousel element with the specified options such as slide content, mode (Horizontal/Vertical), alignment, number of slides per view, height, margin, looping, pagination, speed, starting slide, autoplay settings, arrow visibility, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLCarousel -Slide { \"Slide Content Here\" } -Mode Horizontal -Align center -PerView 3 -Height adaptive -Margin '10px' -Loop -Pagination -Speed 500 -MoveBy 1 -StartAt 0 -MoveOnClick -AutoPlay -AutoPlayEvery 3000 -AutoPlayRewind -AutoPlayPauseOnFocus -AutoPlayPauseOnHover -AutoPlaySyncID 'carousel1' -DisableArrows -ArrowTemplate @('left-arrow', 'right-arrow') -PaginationTemplate 'index' -Count -CountTemplate 'Slide {index} of {total}'\r\nCreates a new HTML carousel with the specified options."
+    }
+  ]
+}

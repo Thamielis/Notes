@@ -1,0 +1,55 @@
+{
+  "Synopsis": "Writes CRUD commands for a table in Azure",
+  "Description": "Writes PowerShell commands to create a CRUD system around a table and partition in Azure\n\n\nCRUD stands for Create, Read, Update, and Delete\n\n\nWrite-Crud creates the following commands.\n\n* Add-$Noun (aliased to New-$Noun and Create-$Noun)\n* Get-$Noun (aliased to Search-$Noun and Read-$Noun)\n* Update-$noun (aliased to Set-$Noun)\n* Remove-$Noun (aliased to Remove-$Noun)   \n\n\nWrite-Crud can create tables with an arbitrary schema.\n\n\nIt can also use a well-known schemas, found at either [http://schema.org](http://schema.org) or [http://shouldbeonschema.org](http://shouldbeonschema.org)",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    "http://schema.org",
+    "http://shouldbeonschema.org"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Write-CRUD -Table My -Partition CustomItem -TypeName MyCustomCrud -Field @{\r\n    'Name' = 'The Name of the Item'\r\n    'Description' = 'The description of the item'            \r\n}"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Write-Crud -Table My -Partition Blog -Schema http://schema.org/BlogPosting"
+    }
+  ]
+}

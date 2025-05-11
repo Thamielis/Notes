@@ -1,0 +1,50 @@
+{
+  "Synopsis": "Removes neighbor cache entries.",
+  "Description": "The Remove-NetNeighbor cmdlet removes neighbor cache entries. The neighbor cache maintains information for each on-link neighbor, including the IP address and the associated link-layer address.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetNeighbor"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkId=288399",
+    null,
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Remove unreachable neighbor cache entries",
+      "Markdown": "",
+      "Code": "PS C:\\>Remove-NetNeighbor –State Unreachable\r\nThis command removes all neighbor cache entries that are unreachable."
+    },
+    {
+      "Title": "Example 2: Remove neighbor cache entries associated with a network adapter",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetAdapter | Where-Object –FilterScript {$_.LinkSpeed –Eq \"100 Mbps\"} | Remove-NetNeighbor –AddressFamily IPv4\r\nThis command gets a NetAdapter object that contains network adapters, and then passes the NetAdapter object to the Where-Object cmdlet by using the pipeline operator. The Where-Object cmdlet filters the network adapters that have a link speed of 100 Mbps, and then passes the network NetAdapter object to the Remove-NetNeighbor cmdlet. The Remove-NetNeighbor cmdlet  removes all neighbor cache entries that have IPv4 addresses and are associated with a network adapter that has a link speed of 100 Mbps."
+    }
+  ]
+}

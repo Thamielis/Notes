@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieves information about Windows operating systems.",
+  "Description": "This function returns details about various versions of Windows operating systems, including their names, version numbers, code names, marketing names, build numbers, release dates, and support end dates.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-OperatingSystem -Version '10.0 (19042)'\r\nRetrieves information about Windows 10 20H2."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-OperatingSystem\r\nRetrieves information about all available Windows operating systems."
+    }
+  ]
+}

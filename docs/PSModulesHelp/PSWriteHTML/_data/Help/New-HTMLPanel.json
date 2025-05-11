@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new HTML panel with customizable styling options.",
+  "Description": "The New-HTMLPanel function creates a new HTML panel with various styling options such as background color, width, margin, alignment, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLPanel -Content { \"This is the content of the panel\" } -BackgroundColor \"lightblue\" -Width \"50%\" -Margin \"10px\" -AlignContentText \"center\" -BorderRadius \"5px\" -AnchorName \"myPanel\" -StyleSheetsConfiguration @{ Panel = \"customPanel\" }\r\nCreates a new HTML panel with specified content, background color, width, margin, alignment, border radius, anchor name, and custom style sheet configuration."
+    }
+  ]
+}

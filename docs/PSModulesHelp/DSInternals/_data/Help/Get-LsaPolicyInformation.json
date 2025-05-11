@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Retrieves AD-related information from the Local Security Authority Policy of the local computer or a remote one.",
+  "Description": "The Local Security Authority (LSA) is a protected subsystem of Windows that maintains information about all aspects of local security on a system, collectively known as the local security policy of the system.\r\n\r\n\r\nThe local security policy of a system is a set of information about the security of a local computer.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Cmdlet",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "DSInternals.PowerShell.LsaPolicyInformation"
+  ],
+  "Links": [
+    "https://github.com/MichaelGrafnetter/DSInternals/blob/master/Documentation/PowerShell/Get-LsaPolicyInformation.md",
+    null,
+    null,
+    "https://docs.microsoft.com/en-us/windows/desktop/secmgmt/lsa-policy"
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-LSAPolicyInformation\r\n<# Sample Output:\r\nDomain/Workgroup Name : WORKGROUP\r\nAccount Domain Name   : MYPC\r\nAccount Domain SID    : S-1-5-21-2814909047-1086830290-2660982408\r\nLocal Domain Name     : MYPC\r\nLocal Domain SID      : S-1-5-21-2814909047-1086830290-2660982408\r\n#>\r\nRetrieves LSA Policy from the local computer."
+    },
+    {
+      "Title": "Example 2",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-LSAPolicyInformation -ComputerName LON-DC1\r\n<# Sample Output:\r\nDomain/Workgroup Name : ADATUM\r\nForest DNS Name       : Adatum.com\r\nDomain DNS Name       : Adatum.com\r\nDomain GUID           : 281582b4-9d3e-449d-a238-676bd5844f56\r\nDomain SID            : S-1-5-21-3180365339-800773672-3767752645\r\nAccount Domain Name   : ADATUM\r\nAccount Domain SID    : S-1-5-21-3180365339-800773672-3767752645\r\nLocal Domain Name     : LON-DC1\r\nLocal Domain SID      : S-1-5-21-2929860833-2984454239-2848460202\r\n#>\r\nRetrieves LSA Policy from a remote computer called LON-DC1."
+    }
+  ]
+}

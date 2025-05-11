@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieves backup information from GPOZaurr manifest files.",
+  "Description": "This function retrieves backup information from GPOZaurr manifest files located in the specified BackupFolder(s).",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrBackupInformation -BackupFolder \"C:\\Backups\"\r\nDescription:\r\nRetrieves backup information from GPOZaurr manifest files located in the \"C:\\Backups\" folder."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrBackupInformation -BackupFolder \"C:\\Backups\", \"D:\\Archives\"\r\nDescription:\r\nRetrieves backup information from GPOZaurr manifest files located in both \"C:\\Backups\" and \"D:\\Archives\" folders."
+    }
+  ]
+}

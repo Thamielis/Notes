@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Provide a way to style or overwrite the table content with new content or style",
+  "Description": "Provide a way to style or overwrite the table content with new content or style",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTML -TitleText \"Example37 - Word Breaking\" -FilePath \"$PSScriptRoot\\Example37.html\" {\r\n    New-HTMLSection -HeaderText \"Word Break for whole table\" -HeaderTextAlignment center -Content {\r\n        New-HTMLTable -DataTable $(Get-Process | Select-Object -First 5) -WordBreak 'break-word'\r\n    }\r\n    New-HTMLSection -HeaderText \"Word Break per column\" -HeaderTextAlignment center -Content {\r\n        New-HTMLTable -DataTable $(Get-Process | Select-Object -First 5) {\r\n            New-TableContent -WordBreak break-all -ColumnName 'Path'\r\n        }\r\n    }\r\n    New-HTMLSection -HeaderText \"No word break\" -HeaderTextAlignment center -Content {\r\n        New-HTMLTable -DataTable $(Get-Process | Select-Object -First 5)\r\n    }\r\n} -Online -ShowHTML"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$Values = @(\r\n    [PSCustomObject] @{\r\n        Test1 = 1\r\n        Test2 = 2\r\n        Test3 = 3\r\n        Test4 = 1\r\n    }\r\n    [PSCustomObject] @{\r\n        Test1 = 1\r\n        Test2 = 2\r\n        Test3 = 3\r\n        Test4 = 1\r\n    }\r\n    [PSCustomObject] @{\r\n        Test1 = 1\r\n        Test2 = 2\r\n        Test3 = 3\r\n        Test4 = 2\r\n    }\r\n    [PSCustomObject] @{\r\n        Test1 = 1\r\n        Test2 = 2\r\n        Test3 = 3\r\n        Test4 = 1\r\n    }\r\n    [PSCustomObject] @{\r\n        Test1 = 1\r\n        Test2 = 2\r\n        Test3 = 3\r\n        Test4 = 1\r\n    }\r\n    [PSCustomObject] @{\r\n        Test1 = 1\r\n        Test2 = 2\r\n        Test3 = 3\r\n        Test4 = 2\r\n    }\r\n)\r\nNew-HTML -TitleText \"Example41 - Table\" -FilePath \"$PSScriptRoot\\Example41.html\" {\r\n    New-HTMLSection -HeaderText \"Testing\" -HeaderTextAlignment center -Content {\r\n        New-HTMLTable -DataTable $Values {\r\n            for ($i = 0; $i -le $Values.Count; $i++) {\r\n                if ($Values[$i].Test1 -ne $Values[$i].Test4) {\r\n                    New-TableContent -BackGroundColor Red -ColumnName 'Test4' -RowIndex ($i+1)\r\n                }\r\n            }\r\n        }\r\n    }\r\n} -Online -ShowHTML"
+    }
+  ]
+}

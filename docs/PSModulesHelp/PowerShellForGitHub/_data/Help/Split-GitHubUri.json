@@ -1,0 +1,54 @@
+{
+  "Synopsis": "Extracts the relevant elements of a GitHub repository Uri and returns the requested element.",
+  "Description": "Extracts the relevant elements of a GitHub repository Uri and returns the requested element.\n\nCurrently supports retrieving the OwnerName and the RepositoryName, when available.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "[String]"
+  ],
+  "Outputs": [
+    "[PSCustomObject] - The OwnerName and RepositoryName elements from the provided URL"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Split-GitHubUri -Uri 'https://github.com/microsoft/PowerShellForGitHub'\r\nPowerShellForGitHub"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Split-GitHubUri -Uri 'https://github.com/microsoft/PowerShellForGitHub' -RepositoryName\r\nPowerShellForGitHub"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Split-GitHubUri -Uri 'https://github.com/microsoft/PowerShellForGitHub' -OwnerName\r\nmicrosoft"
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "Split-GitHubUri -Uri 'https://github.com/microsoft/PowerShellForGitHub'\r\n@{'ownerName' = 'microsoft'; 'repositoryName' = 'PowerShellForGitHub'}"
+    }
+  ]
+}

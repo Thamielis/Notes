@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Update the authenticated user",
+  "Description": "**Note:** If your email is set to private and you send an `email` parameter as part of this request\nto update your profile, your privacy settings are still enforced: the email address will not be\ndisplayed on your public profile or via the API.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Update the authenticated user](https://docs.github.com/rest/users/users#update-the-authenticated-user)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Void"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Update-GitHubUser -Name 'octocat'\r\nUpdate the authenticated user's name to 'octocat'"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Update-GitHubUser -Location 'San Francisco'\r\nUpdate the authenticated user's location to 'San Francisco'"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Update-GitHubUser -Hireable $true -Bio 'I love programming'\r\nUpdate the authenticated user's hiring availability to 'true' and their biography to 'I love programming'"
+    }
+  ]
+}

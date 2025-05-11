@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new HTML timeline with customizable content.",
+  "Description": "This function creates an HTML timeline with the specified content. The timeline can be used to display a sequence of events or steps in a visually appealing manner.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLTimeline -Content {\r\n    New-HTMLTag -Tag 'div' -Attributes @{ class = 'event' } -Value { \"Event 1\" }\r\n    New-HTMLTag -Tag 'div' -Attributes @{ class = 'event' } -Value { \"Event 2\" }\r\n    New-HTMLTag -Tag 'div' -Attributes @{ class = 'event' } -Value { \"Event 3\" }\r\n}\r\nCreates an HTML timeline with three events."
+    }
+  ]
+}

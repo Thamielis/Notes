@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Generates a form to collect input for a command",
+  "Description": "Generates a form to collect input for a PowerShell command.  \n        \n\nGet-WebInput is designed to handle the information submitted by the user in a form created with Request-CommandInput.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Request-CommandInput -CommandMetaData (Get-Command Get-Command) -DenyParameter ArgumentList"
+    }
+  ]
+}

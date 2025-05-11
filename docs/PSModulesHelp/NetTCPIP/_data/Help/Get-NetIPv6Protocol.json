@@ -1,0 +1,48 @@
+{
+  "Synopsis": "Gets IPv6 protocol configurations.",
+  "Description": "The Get-NetIPv6Protocol cmdlet gets the global IPv6 protocol configurations for the computer. The cmdlet returns IPv6 Protocol settings, such as the Internet Control Message Protocol (ICMP) setting, the default hop limit, the neighbor cache limit, and the multicast configuration. If you do not specify any parameters, the cmdlet gets all the IPv6 Protocol configuration settings.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetIPv6Protocol"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkId=288384",
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Get all IPv6 protocol configurations",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetIPv6Protocol\r\nThis command gets all IPv6 protocol configurations for the IP interface. The default output for the cmdlet does not include all properties of the NetIPv6Protocol object."
+    },
+    {
+      "Title": "Example 2: Output all properties of IPv6 protocol configurations",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetIPv6Protocol | Format-List –Property *\r\nThis command gets all IPv6 protocol configurations for the IP interface. The command uses the Format-List cmdlet to display all the properties in the output in the form of a table. For more information, type Get-Help Format-Table. The command default output omits some properties."
+    }
+  ]
+}

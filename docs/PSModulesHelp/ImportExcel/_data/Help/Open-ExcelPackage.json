@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Returns an ExcelPackage object for the specified XLSX file.",
+  "Description": "Import-Excel and Export-Excel open an Excel file, carry out their tasks and close it again.\r\n\r\n\r\nSometimes it is necessary to open a file and do other work on it. Open-ExcelPackage allows the file to be opened for these tasks.\r\n\r\n\r\nIt takes a -KillExcel switch to make sure Excel is not holding the file open; a -Password parameter for existing protected files, and a -Create switch to set-up a new file if no file already exists.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "OfficeOpenXml.ExcelPackage"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS\\> $excel = Open-ExcelPackage -Path \"$env:TEMP\\test99.xlsx\" -Create\r\nPS\\> $ws = Add-WorkSheet -ExcelPackage $excel\r\nThis will create a new file in the temp folder if it doesn't already exist. It then adds a worksheet - because no name is specified it will use the default name of \"Sheet1\""
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "PS\\> $excel= Open-ExcelPackage -path \"$xlPath\" -Password $password\r\nPS\\> $sheet1 = $excel.Workbook.Worksheets[\"sheet1\"]\r\nPS\\> Set-ExcelRange -Range $sheet1.Cells [\"E1:S1048576\" ], $sheet1.Cells [\"V1:V1048576\" ] -NFormat ( [cultureinfo ]::CurrentCulture.DateTimeFormat.ShortDatePattern)\r\nPS\\> Close-ExcelPackage $excel -Show\r\nThis will open the password protected file at $xlPath using the password stored in $Password. Sheet1 is selected and formatting applied to two blocks of the sheet; then the file is saved and loaded into Excel."
+    }
+  ]
+}

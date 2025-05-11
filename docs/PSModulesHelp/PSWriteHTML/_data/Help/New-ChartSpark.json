@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new spark chart object.",
+  "Description": "This function creates a new spark chart object with the specified Name, Value, and Color.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-ChartSpark -Name \"Spark1\" -Value 100 -Color \"Green\"\r\nCreates a new spark chart object named \"Spark1\" with a value of 100 and a green color."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-ChartSpark -Name \"Spark2\" -Value 50\r\nCreates a new spark chart object named \"Spark2\" with a value of 50 using the default color."
+    }
+  ]
+}

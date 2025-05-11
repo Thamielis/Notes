@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Gets UDP settings.",
+  "Description": "The Get-NetUDPSetting cmdlet gets UDP settings for the IP interface. The cmdlet gets the starting port and the number of ports for a dynamic port range that the IP interface uses to send and receive UDP traffic. Use this cmdlet with the Set-NetUDPSetting to specify a dynamic port range to modify. If you do not specify any parameters, the cmdlet gets all dynamic port ranges for UDP from the IP interface.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetUDPSetting"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkId=288393",
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Get all dynamic port ranges for UDP",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetUDPSetting\r\nThis command gets all UDP settings. The command gets all dynamic port ranges for UDP from the IP interface."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "Synopsis": "Get summary information about AD sites.",
+  "Description": "This command will display a summary report of each Active Directory site.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "ADSiteSummary"
+  ],
+  "Links": [
+    "https://bit.ly/3esumcq",
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADSiteSummary\r\n\r\n\r\n   Site: Default-First-Site-Name\r\n   Description: Home Office\r\n\r\nSubnet             Description                    Location\r\n------             -----------                    --------\r\n192.168.3.0/24     Employees\r\n192.168.99.0/24    Datacenter                     HQDC\r\n\r\n\r\n   Site: NoCal\r\n   Description: Bay Area Office\r\n\r\nSubnet             Description                    Location\r\n------             -----------                    --------\r\n172.17.0.0/16"
+    }
+  ]
+}

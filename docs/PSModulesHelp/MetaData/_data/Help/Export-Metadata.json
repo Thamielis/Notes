@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a metadata file from a simple object",
+  "Description": "Serves as a wrapper for ConvertTo-Metadata to explicitly support exporting to files\n\nNote that exportable data is limited by the rules of data sections (see about_Data_Sections) and the available MetadataSerializers (see Add-MetadataConverter)\n\nThe only things inherently importable in PowerShell metadata files are Strings, Booleans, and Numbers ... and Arrays or Hashtables where the values (and keys) are all strings, booleans, or numbers.\n\nNote: this function and the matching Import-Metadata are extensible, and have included support for PSCustomObject, Guid, Version, etc.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$Configuration | Export-Metadata .\\Configuration.psd1\r\nExport a configuration object (or hashtable) to the default Configuration.psd1 file for a module\r\nthe metadata module uses Configuration.psd1 as it's default config file."
+    }
+  ]
+}

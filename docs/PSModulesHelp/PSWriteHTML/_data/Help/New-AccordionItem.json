@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new accordion item with specified header text and panel text.",
+  "Description": "This function creates a new accordion item with the provided header text and panel text. The header text is displayed as a clickable button to toggle the visibility of the panel text.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-AccordionItem -HeaderText \"Header 1\" -HeaderAlign \"left\" -PanelText \"Panel 1 Text\"\r\nCreates a new accordion item with the header text \"Header 1\" aligned to the left and panel text \"Panel 1 Text\"."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-AccordionItem -HeaderText \"Header 2\" -HeaderAlign \"center\" -PanelText \"Panel 2 Text\"\r\nCreates a new accordion item with the header text \"Header 2\" aligned to the center and panel text \"Panel 2 Text\"."
+    }
+  ]
+}

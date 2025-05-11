@@ -1,0 +1,51 @@
+{
+  "Synopsis": "Gets transport filters.",
+  "Description": "The Get-NetTransportFilter cmdlet gets transport filters. A transport filter specifies the TCP settings, as a NetTcpSetting object, to apply to an IP address prefix or a TCP port range. Use the cmdlet without parameters to get all transport filters for the computer.\r\n\r\n\r\nUse the New-NetTransportFilter cmdlet to create transport filters, and use the Remove-NetTransportFilter cmdlet to remove filters.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetTransportFilter"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkID=288391",
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Get all transport filters",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetTransportFilter\r\nThis command gets all the transport filters on the computer."
+    },
+    {
+      "Title": "Example 2: Get transport filters that apply specified settings",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetTransportFilter –SettingName Internet\r\nThis command gets transport filters that apply Internet settings."
+    }
+  ]
+}

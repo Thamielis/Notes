@@ -1,0 +1,33 @@
+{
+  "Synopsis": "\r\nGet-VEAst -Path <FileInfo> [-AstType <Object>] [-NoRecursion] [<CommonParameters>]\r\n\r\nGet-VEAst -ScriptBlock <scriptblock> [-AstType <Object>] [-NoRecursion] [<CommonParameters>]\r\n\r\nGet-VEAst -Code <string> [-AstType <Object>] [-NoRecursion] [<CommonParameters>]\r\n",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.IO.FileInfo\r\nSystem.Management.Automation.ScriptBlock\r\nSystem.String\r\n"
+  ],
+  "Outputs": [
+    "System.Object"
+  ],
+  "Links": [],
+  "Examples": []
+}

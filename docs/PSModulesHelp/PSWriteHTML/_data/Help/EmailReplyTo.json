@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Defines the email address to which replies should be directed.",
+  "Description": "This function sets the email address to which replies should be directed when receiving notifications.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "EmailReplyTo -Address \"reply@example.com\"\r\nSets the email address to which replies should be directed to \"reply@example.com\"."
+    }
+  ]
+}

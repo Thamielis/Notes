@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Allows to connect Diagrams with Tables using Events.",
+  "Description": "Allows to connect Diagrams with Tables using Events.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$Processes = Get-Process | Select-Object -First 3 -Property Name, ProcessName, Id, FileVersion, WorkingSet\r\n$TableID = 'RandomID'\r\nNew-HTML -TitleText 'My Title' -Online -FilePath $PSScriptRoot\\Example30-LinkedProcesses.html -ShowHTML {\r\n    New-HTMLSection -Invisible {\r\n        New-HTMLPanel {\r\n            New-HTMLTable -DataTable $Processes -DataTableID $TableID\r\n        }\r\n        New-HTMLPanel {\r\n            New-HTMLDiagram {\r\n                New-DiagramEvent -ID $TableID -ColumnID 2\r\n                New-DiagramNode -Label 'Processes' -IconBrands delicious\r\n                foreach ($_ in $Processes) {\r\n                    New-DiagramNode -Label $_.ProcessName -Id $_.Id -To 'Processes'\r\n                }\r\n            }\r\n        }\r\n    }\r\n}"
+    }
+  ]
+}

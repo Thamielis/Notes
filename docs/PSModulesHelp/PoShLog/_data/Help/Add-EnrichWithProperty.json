@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Enriches log events with custom property.",
+  "Description": "Enriches log events with custom property. For example script name.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "LoggerConfiguration object allowing method chaining"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-Logger | Add-EnrichWithProperty -Name ScriptName -Value 'Test' | Add-SinkConsole | Start-Logger"
+    }
+  ]
+}

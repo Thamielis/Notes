@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Converts short names for number formats to the formatting strings used in Excel",
+  "Description": "Where you can type a number format you can write, for example, 'Short-Date' and the module will translate it into the format string used by Excel. Some formats, like Short-Date, change when Excel loads (so date will use the local ordering of year, month and Day). Excel also changes how markers in the are presented different cultures \",\" is used in the format string to mean \"local thousand seperator\" but depending on the country \",\" or \".\" or \" \" may used as the thousand seperator.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Expand-NumberFormat percentage\r\nReturns \"0.00%\""
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Expand-NumberFormat Currency\r\nReturns the currency format specified in the local regional settings, which may not be the same as Excel uses.\r\n\r\nThe regional settings set the currency symbol and then whether it is before or after the number and separated with a space or not; for negative numbers the number may be wrapped in parentheses or a - sign might appear before or after the number and symbol.\r\n\r\nSo this returns $\\#,\\#\\#0.00;($\\#,\\#\\#0.00) for English US, \\#,\\#\\#0.00 €;€\\#,\\#\\#0.00- for French.\r\n\r\nNote some Eurozone countries write €1,23 and others 1,23€. In French the decimal point will be rendered as a \",\" and the thousand separator as a space."
+    }
+  ]
+}

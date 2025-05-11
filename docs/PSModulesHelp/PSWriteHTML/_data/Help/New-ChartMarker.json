@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new chart marker with customizable options.",
+  "Description": "This function defines the properties of a chart marker, such as size, color, shape, and other visual attributes. It allows customization of the marker appearance in the chart.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Based on https://apexcharts.com/docs/options/markers/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLChart -Title 'Incidents Reported vs Solved' -TitleAlignment center {\r\n    New-ChartMarker -Size 30 -Color red -Shape square -StrokeColors yellow\r\n}"
+    }
+  ]
+}

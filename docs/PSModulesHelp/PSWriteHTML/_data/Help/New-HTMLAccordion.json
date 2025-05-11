@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new HTML accordion element with customizable options.",
+  "Description": "This function creates a new HTML accordion element with the specified accordion item content, duration of animation, and option to collapse on click.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLAccordion -AccordionItem { \"Accordion Content Here\" } -Duration 500 -CollapseOnClick\r\nCreates a new HTML accordion with the specified content, animation duration of 500 milliseconds, and collapses on click."
+    }
+  ]
+}

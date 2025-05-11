@@ -1,0 +1,43 @@
+{
+  "Synopsis": "Get ADReportingTools color options",
+  "Description": "Many of the commands in the ADReportingTools module have custom format files that utilize ANSI escape sequences to highlight key elements. The module defaults are stored in a variable called ADReportingToolsOptions. Use this command to view the current settings. If you access the variable directly, you won't see the actual ANSI settings, and you might have to reset your console by typing \"$([char]0x1b)[0m\".\r\n\r\n\r\nThe ANSI sequences use the [char]0x1b escape character because it works in both Windows PowerShell and PowerShell 7.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "An easy way to see ANSI samples is to install the PSScriptTools module from the PowerShell Gallery and use the Show-ANSISequence command.\r\n",
+    "Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "ADReportingToolsOption"
+  ],
+  "Links": [
+    "https://bit.ly/2RiXoln",
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADReportingToolsOptions\r\n\r\nName             Value\r\n----             -----\r\nAlert            $([char]0x1b)[91m\r\nWarning          $([char]0x1b)[38;5;220m\r\nDistributionList $([char]0x1b)[92m\r\nThe actual values will be color-coded with the ANSI sequence."
+    }
+  ]
+}

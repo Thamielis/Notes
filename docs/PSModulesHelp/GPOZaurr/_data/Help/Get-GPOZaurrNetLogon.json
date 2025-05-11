@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Retrieves information about Group Policy Objects (GPO) stored in the Netlogon and SYSVOL directories.",
+  "Description": "The Get-GPOZaurrNetLogon function retrieves details about GPOs stored in the Netlogon and SYSVOL directories of specified domains within a forest. It provides information about file ownership, status, domain, extension, creation time, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrNetLogon -Forest \"contoso.com\" -IncludeDomains \"domain1\", \"domain2\"\r\nRetrieves GPO information for the specified forest and domains."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrNetLogon -OwnerOnly\r\nRetrieves GPO information only for GPOs with identified owners."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrNetLogon -SkipOwner\r\nRetrieves GPO information while skipping the owner check."
+    }
+  ]
+}

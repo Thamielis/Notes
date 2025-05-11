@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Reads a specific value from a PowerShell metadata file (e.g. a module manifest)",
+  "Description": "By default Get-Metadata gets the ModuleVersion, but it can read any key in the metadata file",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-Metadata .\\Configuration.psd1\r\nReturns the module version number (as a string)"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-Metadata .\\Configuration.psd1 ReleaseNotes\r\nReturns the release notes!"
+    }
+  ]
+}

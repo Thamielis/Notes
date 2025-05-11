@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Open a PDF help file.",
+  "Description": "Open-ADReportingToolsHelp will launch a PDF file with all module documentation for the ADReportingTools module. The command should launch the file with whatever application is associated with the .PDF extension.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [
+    "https://bit.ly/3usgsM4",
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Open=ADReportingToolsHelp\r\nLaunch the help PDF file."
+    }
+  ]
+}

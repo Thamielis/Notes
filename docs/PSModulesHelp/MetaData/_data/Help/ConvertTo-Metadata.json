@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Serializes objects to PowerShell Data language (PSD1)",
+  "Description": "Converts objects to a texual representation that is valid in PSD1,\nusing the built-in registered converters (see Add-MetadataConverter).\n\nNOTE: Any Converters that are passed in are temporarily added as though passed Add-MetadataConverter",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$Name = @{ First = \"Joel\"; Last = \"Bennett\" }\r\n@{ Name = $Name; Id = 1; } | ConvertTo-Metadata\r\n@{\r\n  Id = 1\r\n  Name = @{\r\n    Last = 'Bennett'\r\n    First = 'Joel'\r\n  }\r\n}\r\n\r\nConvert input objects into a formatted string suitable for storing in a psd1 file."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-ChildItem -File | Select-Object FullName, *Utc, Length | ConvertTo-Metadata\r\nConvert complex custom types to dynamic PSObjects using Select-Object.\r\n\r\nConvertTo-Metadata understands PSObjects automatically, so this allows us to proceed\r\nwithout a custom serializer for File objects, but the serialized data\r\nwill not be a FileInfo or a DirectoryInfo, just a custom PSObject"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "ConvertTo-Metadata ([DateTimeOffset]::Now) -Converters @{\r\n   [DateTimeOffset] = { \"DateTimeOffset {0} {1}\" -f $_.Ticks, $_.Offset }\r\n}\r\nShows how to temporarily add a MetadataConverter to convert a specific type while serializing the current DateTimeOffset.\r\nNote that this serialization would require a \"DateTimeOffset\" function to exist in order to deserialize properly.\r\n\r\nSee also the third example on ConvertFrom-Metadata and Add-MetadataConverter."
+    }
+  ]
+}

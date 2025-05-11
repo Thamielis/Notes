@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates an email attachment object for header attachments.",
+  "Description": "This function creates an email attachment object specifically for header attachments. It takes an array of file paths and returns a custom object representing the attachment.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$Attachment = EmailAttachment -FilePath 'C:\\Files\\attachment1.txt', 'C:\\Files\\attachment2.pdf'\r\nCreates an email attachment object with two file paths for header attachments."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$Files = 'C:\\Files\\attachment1.txt', 'C:\\Files\\attachment2.pdf'\r\n$Attachment = EmailAttachment -FilePath $Files\r\nCreates an email attachment object with multiple file paths for header attachments."
+    }
+  ]
+}

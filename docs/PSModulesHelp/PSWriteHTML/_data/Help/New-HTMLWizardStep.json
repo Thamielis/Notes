@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new HTML wizard step with customizable options.",
+  "Description": "This function creates a new HTML wizard step with various customization options such as setting the HTML data, tab heading, tab name, and icons.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLWizardStep -HtmlData { Get-Content -Path \"C:\\example.html\" } -Heading \"Step 1\" -Name \"First Tab\" -IconBrands \"fa fa-facebook\"\r\nCreates a new HTML wizard step with the specified HTML data, tab heading, tab name, and FontAwesome Brands icon."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-HTMLWizardStep -HtmlData { Get-Content -Path \"C:\\another.html\" } -Heading \"Step 2\" -Name \"Second Tab\" -IconRegular \"fa fa-github\"\r\nCreates a new HTML wizard step with the specified HTML data, tab heading, tab name, and FontAwesome Regular icon."
+    }
+  ]
+}

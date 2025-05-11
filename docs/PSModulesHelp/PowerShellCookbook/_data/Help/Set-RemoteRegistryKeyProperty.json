@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Set the value of a remote registry key property",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$registryPath =\r\n    \"HKLM:\\software\\Microsoft\\PowerShell\\1\\ShellIds\\Microsoft.PowerShell\"\r\nPS >Set-RemoteRegistryKeyProperty LEE-DESK $registryPath `\r\n      \"ExecutionPolicy\" \"RemoteSigned\""
+    }
+  ]
+}

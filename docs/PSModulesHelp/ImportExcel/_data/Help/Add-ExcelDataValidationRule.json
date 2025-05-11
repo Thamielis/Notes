@@ -1,0 +1,51 @@
+{
+  "Synopsis": "Adds data validation to a range of cells",
+  "Description": "Excel supports the validation of user input, and ranges of cells can be marked to only contain numbers, or date, or Text up to a particular length, or selections from a list. This command adds validation rules to a worksheet.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS\\>Add-ExcelDataValidationRule -WorkSheet $PlanSheet -Range 'E2:E1001' -ValidationType Integer -Operator between -Value 0 -Value2 100 \\`\r\n     -ShowErrorMessage -ErrorStyle stop -ErrorTitle 'Invalid Data' -ErrorBody 'Percentage must be a whole number between 0 and 100'\r\nThis defines a validation rule on cells E2-E1001; it is an integer rule and requires a number between 0 and 100. If a value is input with a fraction, negative number, or positive number &gt; 100 a stop dialog box appears."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "PS\\>Add-ExcelDataValidationRule -WorkSheet $PlanSheet -Range 'B2:B1001' -ValidationType List  -Formula 'values!$a$2:$a$1000'\r\n       -ShowErrorMessage -ErrorStyle stop -ErrorTitle 'Invalid Data' -ErrorBody 'You must select an item from the list'\r\nThis defines a list rule on Cells B2:1001, and the posible values are in a sheet named \"values\" at cells A2 to A1000 Blank cells in this range are ignored.\r\n\r\nIf $ signs were left out of the fomrmula B2 would be checked against A2-A1000, B3, against A3-A1001, B4 against A4-A1002 up to B1001 beng checked against A1001-A1999"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "PS\\>Add-ExcelDataValidationRule -WorkSheet $PlanSheet -Range 'I2:N1001' -ValidationType List    -ValueSet @('yes','YES','Yes')\r\n        -ShowErrorMessage -ErrorStyle stop -ErrorTitle 'Invalid Data' -ErrorBody \"Select Yes or leave blank for no\"\r\nSimilar to the previous example but this time provides a value set; Excel comparisons are case sesnsitive, hence 3 versions of Yes."
+    }
+  ]
+}

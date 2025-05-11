@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new HTML list item with customizable styling options.",
+  "Description": "The New-HTMLListItem function generates an HTML list item with various styling options such as text color, background color, font size, font weight, alignment, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLListItem -Text 'Item 1' -Color 'blue' -FontSize '12px' -FontWeight 'bold' -Alignment 'center'\r\nCreates an HTML list item with the text 'Item 1' in blue color, font size of 12 pixels, bold font weight, and centered alignment."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-HTMLListItem -Text 'Item 2' -FontFamily 'Arial' -TextDecoration 'underline' -Direction 'rtl'\r\nCreates an HTML list item with the text 'Item 2' in Arial font family, underlined text decoration, and right-to-left direction."
+    }
+  ]
+}

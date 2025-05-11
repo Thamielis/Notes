@@ -1,0 +1,43 @@
+{
+  "Synopsis": "Compresses data",
+  "Description": "Compresses data into a GZipStream",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String",
+    "System.Byte"
+  ],
+  "Links": [
+    null,
+    "http://msdn.microsoft.com/en-us/library/system.io.compression.gzipstream.aspx"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$rawData = (Get-Command | Select-Object -ExpandProperty Name | Out-String)\r\n$originalSize = $rawData.Length\r\n$compressed = Compress-Data $rawData -As Byte\r\n\"$($compressed.Length / $originalSize)% Smaller [ Compressed size $($compressed.Length / 1kb)kb : Original Size $($originalSize /1kb)kb] \"\r\nExpand-Data -BinaryData $compressed"
+    }
+  ]
+}

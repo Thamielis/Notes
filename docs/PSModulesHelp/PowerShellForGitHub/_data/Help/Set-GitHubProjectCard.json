@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Modify a GitHub Project Card.",
+  "Description": "Modify a GitHub Project Card.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.ProjectCard"
+  ],
+  "Outputs": [
+    "GitHub.ProjectCard"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-GitHubProjectCard -Card 999999 -Note UpdatedNote\r\nSets the card note to 'UpdatedNote' for the card with ID 999999."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Set-GitHubProjectCard -Card 999999 -Archive\r\nArchives the card with ID 999999."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Set-GitHubProjectCard -Card 999999 -Restore\r\nRestores the card with ID 999999."
+    }
+  ]
+}

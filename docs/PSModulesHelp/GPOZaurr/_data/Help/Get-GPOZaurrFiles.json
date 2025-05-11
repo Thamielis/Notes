@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieves information about Group Policy Objects (GPOs) stored in SYSVOL and NETLOGON folders.",
+  "Description": "This function retrieves information about GPOs stored in SYSVOL and NETLOGON folders of specified domains. It can filter by type of files and hash algorithms used for verification.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrFiles -Type 'All' -HashAlgorithm 'SHA256' -Signature\r\nRetrieves all files from SYSVOL and NETLOGON folders with SHA256 hash algorithm and includes file signatures."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrFiles -Type 'Sysvol' -HashAlgorithm 'MD5' -AsHashTable\r\nRetrieves only SYSVOL files with MD5 hash algorithm and returns the results as a hashtable."
+    }
+  ]
+}

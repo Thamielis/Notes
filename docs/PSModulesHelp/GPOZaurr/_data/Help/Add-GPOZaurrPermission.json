@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Adds permissions to a Group Policy Object (GPO) in Active Directory.",
+  "Description": "This function allows you to add permissions to a specified GPO in Active Directory. You can specify the GPO by name, GUID, or apply permissions to all GPOs. Various parameters allow you to customize the permission settings.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Add-GPOZaurrPermission -GPOName \"TestGPO\" -Principal \"User1\" -PermissionType Read -PermitType Allow\r\nAdds read permission to \"User1\" for the GPO named \"TestGPO\"."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Add-GPOZaurrPermission -GPOGuid \"12345678-1234-1234-1234-1234567890AB\" -Principal \"Group1\" -PermissionType Write -PermitType Deny\r\nDenies write permission to \"Group1\" for the GPO with the specified GUID."
+    }
+  ]
+}

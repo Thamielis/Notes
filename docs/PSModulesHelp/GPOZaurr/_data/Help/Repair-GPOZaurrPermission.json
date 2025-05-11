@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Repairs permissions for Group Policy Objects (GPOs) based on specified criteria.",
+  "Description": "The Repair-GPOZaurrPermission function repairs permissions for GPOs based on the specified criteria. It analyzes the permissions of GPOs and adds necessary permissions if they are missing.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Repair-GPOZaurrPermission -Type 'All' -Forest 'ContosoForest' -IncludeDomains @('Domain1', 'Domain2') -ExcludeDomains @('Domain3') -ExtendedForestInformation $info -LimitProcessing 100\r\nRepairs permissions for all types of users in the 'ContosoForest' forest, including only 'Domain1' and 'Domain2' while excluding 'Domain3', with extended forest information and processing a maximum of 100 GPOs."
+    }
+  ]
+}

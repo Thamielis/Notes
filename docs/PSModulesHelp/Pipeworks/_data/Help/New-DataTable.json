@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Creates a new datatable",
+  "Description": "Creates a new datatable, with optional column information",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Data.DataTable"
+  ],
+  "Links": [
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$dt = New-DataTable -ColumnName Name, Age -ColumnType ([string]), ([int]) -KeyColumn Name\r\nNew-Object PSObject -Property @{\r\n    Name = \"James\"\r\n    Age = 32\r\n} |\r\n    Update-Datatable $dt"
+    }
+  ]
+}

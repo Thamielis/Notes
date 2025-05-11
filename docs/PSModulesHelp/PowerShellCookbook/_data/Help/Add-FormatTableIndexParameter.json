@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Adds a new -IncludeIndex switch parameter to the Format-Table command\nto help with array indexing.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This commands builds on New-CommandWrapper, also included in the Windows\nPowerShell Cookbook."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$items = dir\r\nPS > $items | Format-Table -IncludeIndex\r\nPS > $items[4]"
+    }
+  ]
+}

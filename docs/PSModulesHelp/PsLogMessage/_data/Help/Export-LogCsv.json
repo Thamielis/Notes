@@ -1,0 +1,33 @@
+{
+  "Synopsis": "Export a hashtable of log message objects to a CSV file.",
+  "Description": "Sort the log message objects by their Timestamp property.\nExport the log message objects to a CSV file.\nWrite the file path to the Information stream.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "[System.String]$LogFile parameter"
+  ],
+  "Outputs": [
+    "None.  The value of $LogFile is written to the Information stream."
+  ],
+  "Links": [],
+  "Examples": []
+}

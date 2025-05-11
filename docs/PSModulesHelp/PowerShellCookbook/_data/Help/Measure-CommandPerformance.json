@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Measures the average time of a command, accounting for natural variability by\nautomatically ignoring the top and bottom ten percent.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Measure-CommandPerformance.ps1 { Start-Sleep -m 300 }\r\nCount    : 30\r\nAverage  : 312.10155\r\n(...)"
+    }
+  ]
+}

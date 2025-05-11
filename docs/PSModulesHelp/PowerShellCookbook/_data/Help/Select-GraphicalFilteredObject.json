@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Display a Windows Form to help the user select a list of items piped in.\nAny selected items get passed along the pipeline.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "dir | Select-GraphicalFilteredObject\r\nDirectory: C:\\\r\n\r\nMode                LastWriteTime     Length Name\r\n----                -------------     ------ ----\r\nd----         10/7/2006   4:30 PM            Documents and Settings\r\nd----         3/18/2007   7:56 PM            Windows"
+    }
+  ]
+}

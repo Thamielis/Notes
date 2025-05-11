@@ -1,0 +1,43 @@
+{
+  "Synopsis": "Pushes a deployment to Azure",
+  "Description": "Pushes an existing deployment to an Azure service",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Nullable"
+  ],
+  "Links": [
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Push-Deployment \"StartAutomating\" \".\\startautomating.cspkg\" \".\\startautomating.cscfg\" -FirstLabel Start-Scripting -Second Update-Web"
+    }
+  ]
+}

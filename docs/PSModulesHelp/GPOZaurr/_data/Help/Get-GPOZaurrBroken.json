@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Detects broken or otherwise damaged Group Policies",
+  "Description": "Detects broken or otherwise damaged Group Policies providing insight whether GPO exists in both AD and SYSVOL.\nIt provides few statuses:\n- Permissions issue - means account couldn't read GPO due to permissions\n- ObjectClass issue - means that ObjectClass is of type Container, rather than expected groupPolicyContainer\n- Not available on SYSVOL - means SYSVOL data is missing, yet AD metadata is available\n- Not available in AD - means AD metadata is missing, yet SYSVOL data is available\n- Exists - means AD metadata and SYSVOL data are available",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrBroken -Verbose | Format-Table"
+    }
+  ]
+}

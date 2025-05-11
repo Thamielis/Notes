@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Downloads a bootstrapper theme",
+  "Description": "Downloads a bootstrapper theme via the bootstraper builder hosted on Heroku",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "The bootstrapper builder was replaced by Bootstrap after version 3.  \nIf this function continues to work, it is only because they continued to be nice about hosting the tool.\n\nSince this change was made by Bootstrap, the primary option with a Pipeworks site uses a custom less.css page."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject"
+  ],
+  "Links": [
+    "http://getbootstrap.com"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-Bootstrapped"
+    }
+  ]
+}

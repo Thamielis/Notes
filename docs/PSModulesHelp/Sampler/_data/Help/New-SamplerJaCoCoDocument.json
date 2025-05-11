@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new JaCoCo XML document based on the provided missed and hit\nlines.",
+  "Description": "Creates a new JaCoCo XML document based on the provided missed and hit\nlines. This command is usually used together with the output object from\nPester that also have been passed through ModuleBuilder's Convert-LineNumber.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Xml.XmlDocument"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$pesterObject = Invoke-Pester ./tests/unit -CodeCoverage\r\n$pesterObject.CodeCoverage.MissedCommands |\r\n    Convert-LineNumber -ErrorAction 'Stop' -PassThru | Out-Null\r\n$pesterObject.CodeCoverage.HitCommands |\r\n    Convert-LineNumber -ErrorAction 'Stop' -PassThru | Out-Null\r\nNew-SamplerJaCoCoDocument `\r\n    -MissedCommands $pesterObject.CodeCoverage.MissedCommands `\r\n    -HitCommands $pesterObject.CodeCoverage.HitCommands `\r\n    -PackageName 'source'"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-SamplerJaCoCoDocument `\r\n    -MissedCommands @{\r\n        Class            = 'ResourceBase'\r\n        Function         = 'Compare'\r\n        HitCount         = 0\r\n        SourceFile       = '.\\Classes\\001.ResourceBase.ps1'\r\n        SourceLineNumber = 4\r\n    } `\r\n    -HitCommands @{\r\n        Class            = 'ResourceBase'\r\n        Function         = 'Compare'\r\n        HitCount         = 2\r\n        SourceFile       = '.\\Classes\\001.ResourceBase.ps1'\r\n        SourceLineNumber = 3\r\n    } `\r\n    -PackageName 'source'"
+    }
+  ]
+}

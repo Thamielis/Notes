@@ -1,0 +1,54 @@
+{
+  "Synopsis": "Retrieves information about the specified user on GitHub.",
+  "Description": "Retrieves information about the specified user on GitHub.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "The email key in the following response is the publicly visible email address from the\nuser's GitHub profile page.  You only see publicly visible email addresses when\nauthenticated with GitHub.\n\nWhen setting up your profile, a user can select a primary email address to be public\nwhich provides an email entry for this endpoint.  If the user does not set a public\nemail address for email, then it will have a value of null."
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.User"
+  ],
+  "Outputs": [
+    "GitHub.User"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubUser -UserName octocat\r\nGets information on just the user named 'octocat'"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "'octocat', 'PowerShellForGitHubTeam' | Get-GitHubUser\r\nGets information on the users named 'octocat' and 'PowerShellForGitHubTeam'"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-GitHubUser\r\nGets information on every GitHub user."
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "Get-GitHubUser -Current\r\nGets information on the current authenticated user."
+    }
+  ]
+}

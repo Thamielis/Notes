@@ -1,0 +1,47 @@
+{
+  "Synopsis": "Get members of a department from Active Directory.",
+  "Description": "Use this command to retrieve user account information from Active Directory for members of a specific department. You can specify multiple departments. User information is displayed in a grouped table by default.\r\n\r\n\r\nWhen you import the ADReportingTools module, it will define a global variable called ADReportingHash, which is a hashtable. The variable has a key called Departments. This variable is used in an argument completer for the -Department parameter. This allows you to tab-complete the parameter value. If you add a department after loading the module, you will need to update the variable. You can manually add a department:\r\n\r\n\r\n$ADReportingHash.Departments+='Bottle Washing'\r\n\r\n\r\nOr reload the module:\r\n\r\n\r\nImport-Module ADReportingTools -force",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "ADDeptMember"
+  ],
+  "Links": [
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADDepartment -Department sales -Server dom1 -Credential company\\artd\r\n\r\n   Department: Sales\r\n\r\nName                      Title                          City                 Phone\r\n----                      -----                          ----                 -----\r\nSonya Smith               Account Executive              Omaha                x2345\r\nGarret Guillary           Intern                         Omaha                x8877\r\nSam Smith                 Sales Support                  Omaha                x5678\r\nSamantha Smith            Sales Assistant                Omaha                x9875\r\nGet all members of the Sales department. This example queries a specific domain controller and uses alternate credentials. If your PowerShell session supports it, disabled accounts will be displayed in red."
+    },
+    {
+      "Title": "Example 2",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADDepartment Sales | Format-Table -view manager\r\n\r\n\r\n   Manager: CN=Alfonso Dente,OU=Sales,DC=Company,DC=Pri [Sales]\r\n\r\nName                 Description               Title                City\r\n----                 -----------               -----                ----\r\nSonya Smith          Sales                     Account Executive    Omaha\r\n\r\n\r\n   Manager: CN=SamanthaS,OU=Sales,DC=Company,DC=Pri [Sales]\r\n\r\nName                 Description               Title                City\r\n----                 -----------               -----                ----\r\nGarret Guillary      sales intern              Intern               Omaha\r\n\r\n\r\n   Manager: CN=SonyaS,OU=Sales,DC=Company,DC=Pri [Sales]\r\n\r\nName                 Description               Title                City\r\n----                 -----------               -----                ----\r\nSam Smith            Sales                     Sales Support        Omaha\r\nSamantha Smith       Sales                     Sales Assistant      Omaha\r\nThe command has a corresponding formatting file with a custom view."
+    }
+  ]
+}

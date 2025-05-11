@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Retrieves computer system information from remote computers.",
+  "Description": "This function retrieves computer system information from remote computers using CIM/WMI queries.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This function uses CIM/WMI queries to gather system information from remote computers."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-ComputerSystem -ComputerName AD1, AD2, EVO1, ADFFS | ft -a *\r\nRetrieves computer system information for the specified computers and displays it in a table format."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new HTML status section with customizable content.",
+  "Description": "The New-HTMLStatus function creates an HTML status section with customizable content. It allows you to display status information with flexibility.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLStatus -Content {\r\n    \"Status: OK\"\r\n}\r\nCreates a new HTML status section displaying \"Status: OK\"."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$content = {\r\n    \"Status: Error\"\r\n}\r\nNew-HTMLStatus -Content $content\r\nCreates a new HTML status section displaying \"Status: Error\"."
+    }
+  ]
+}

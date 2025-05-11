@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Get a summary report of your AD domain and forest.",
+  "Description": "This simple command will give you a snapshot-sized summary of your Active Directory domain and forest.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "ADSummary"
+  ],
+  "Links": [
+    "https://bit.ly/38BNf98",
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADSummary\r\n\r\n\r\n   Forest: Company.Pri [Windows2016Forest]\r\n\r\n\r\nRootDomain        : Company.Pri\r\nDomains           : {Company.Pri}\r\nDomain            : Company.Pri\r\nDomainMode        : Windows2016Domain\r\nDomainControllers : {DOM1.Company.Pri, DOM2.Company.Pri}\r\nGlobalCatalogs    : {DOM1.Company.Pri, DOM2.Company.Pri}\r\nSiteCount         : 2"
+    }
+  ]
+}

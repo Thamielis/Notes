@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Clears out the user's configuration file and configures this session with all default\nconfiguration values.",
+  "Description": "Clears out the user's configuration file and configures this session with all default\nconfiguration values.\n\nThis would be the functional equivalent of using this on a completely different computer.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This command will not clear your authentication token.\nPlease use Clear-GitHubAuthentication to accomplish that."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Reset-GitHubConfiguration\r\nDeletes the local configuration file and loads in all default configuration values."
+    }
+  ]
+}

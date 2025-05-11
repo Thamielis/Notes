@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new chart event for a specified DataTable.",
+  "Description": "This function creates a new chart event for a specified DataTable. It allows for defining events like click, data point selection, and marker click for the chart.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-ChartEvent -DataTableID \"table1\" -ColumnID 1 -EscapeRegex\r\nCreates a new chart event for DataTable with ID \"table1\" on column 1 with regular expression escaping enabled."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-ChartEvent -DataTableID \"table2\" -ColumnID 2\r\nCreates a new chart event for DataTable with ID \"table2\" on column 2 without regular expression escaping."
+    }
+  ]
+}

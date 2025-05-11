@@ -1,0 +1,66 @@
+{
+  "Synopsis": "Adds conditional formatting to all or part of a worksheet.",
+  "Description": "Conditional formatting allows Excel to:\r\n\r\n\r\n* Mark cells with icons depending on their value\r\n\r\n\r\n* Show a databar whose length indicates the value or a two or three color scale where the color indicates the relative value\r\n\r\n\r\n* Change the color, font, or number format of cells which meet given criteria\r\n\r\n\r\n\r\n\r\nAdd-ConditionalFormatting allows these parameters to be set; for fine tuning of the rules, the -PassThru switch will return the rule so that you can modify things which are specific to that type of rule, example, the values which correspond to each icon in an Icon-Set.\r\n",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS\\> $excel = $avdata | Export-Excel -Path (Join-path $FilePath \"\\Machines.XLSX\" ) -WorksheetName \"Server Anti-Virus\" -AutoSize -FreezeTopRow -AutoFilter -PassThru\r\n     Add-ConditionalFormatting -WorkSheet $excel.Workbook.Worksheets[1] -Address \"b2:b1048576\" -ForeGroundColor \"RED\"     -RuleType ContainsText -ConditionValue \"2003\"\r\n     Add-ConditionalFormatting -WorkSheet $excel.Workbook.Worksheets[1] -Address \"i2:i1048576\" -ForeGroundColor \"RED\"     -RuleType ContainsText -ConditionValue \"Disabled\"\r\n     $excel.Workbook.Worksheets[1].Cells[\"D1:G1048576\"].Style.Numberformat.Format = [cultureinfo]::CurrentCulture.DateTimeFormat.ShortDatePattern\r\n     $excel.Workbook.Worksheets[1].Row(1).style.font.bold = $true\r\n     $excel.Save() ; $excel.Dispose()\r\nHere Export-Excel is called with the -PassThru parameter, so the ExcelPackage object representing Machines.XLSX is stored in $Excel.The desired worksheet is selected, and then columns\" B\" and \"I\" are conditionally formatted (excluding the top row) to show red text if they contain \"2003\" or \"Disabled\" respectively.\r\n\r\nA fixed date format is then applied to columns D to G, and the top row is formatted.\r\n\r\nFinally the workbook is saved and the Excel package object is closed."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "PS\\> $r = Add-ConditionalFormatting -WorkSheet $excel.Workbook.Worksheets[1] -Range \"B1:B100\" -ThreeIconsSet Flags -Passthru\r\n     $r.Reverse = $true ;   $r.Icon1.Type = \"Num\"; $r.Icon2.Type = \"Num\" ; $r.Icon2.value = 100 ; $r.Icon3.type = \"Num\" ;$r.Icon3.value = 1000\r\nAgain Export-Excel has been called with -PassThru leaving a package object in $Excel.\r\n\r\nThis time B1:B100 has been conditionally formatted with 3 icons, using the \"Flags\" Icon-Set.\r\n\r\nAdd-ConditionalFormatting does not provide accessto every option in the formatting rule, so -PassThru has been used and the rule is modified to apply the flags in reverse order, and transitions between flags are set to 100 and 1000."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "PS\\> Add-ConditionalFormatting -WorkSheet $sheet -Range \"D2:D1048576\" -DataBarColor Red\r\nThis time $sheet holds an ExcelWorkshseet object and databars are added to column D, excluding the top row."
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "PS\\> Add-ConditionalFormatting -Address $worksheet.cells[\"FinishPosition\"] -RuleType Equal -ConditionValue 1 -ForeGroundColor Purple -Bold -Priority 1 -StopIfTrue\r\nIn this example a named range is used to select the cells where the condition should apply, and instead of specifying a sheet and range within the sheet as separate parameters, the cells where the format should apply are specified directly.\r\n\r\nIf a cell in the \"FinishPosition\" range is 1, then the text is turned to Bold & Purple.\r\n\r\nThis rule is moved to first in the priority list, and where cells have a value of 1, no other rules will be processed."
+    },
+    {
+      "Title": "EXAMPLE 5",
+      "Markdown": "",
+      "Code": "PS\\> $excel = Get-ChildItem | Select-Object -Property Name,Length,LastWriteTime,CreationTime | Export-Excel \"$env:temp\\test43.xlsx\" -PassThru -AutoSize\r\n     $ws = $excel.Workbook.Worksheets[\"Sheet1\"]\r\n     $ws.Cells[\"E1\"].Value = \"SavedAt\"\r\n     $ws.Cells[\"F1\"].Value = [datetime]::Now\r\n     $ws.Cells[\"F1\"].Style.Numberformat.Format = (Expand-NumberFormat -NumberFormat 'Date-Time')\r\n     $lastRow = $ws.Dimension.End.Row\r\n     Add-ConditionalFormatting -WorkSheet $ws -address \"A2:A$Lastrow\" -RuleType LessThan    -ConditionValue \"A\"  -ForeGroundColor Gray\r\n     Add-ConditionalFormatting -WorkSheet $ws -address \"B2:B$Lastrow\" -RuleType GreaterThan -ConditionValue  1000000         -NumberFormat '#,###,,.00\"M\"'\r\n     Add-ConditionalFormatting -WorkSheet $ws -address \"C2:C$Lastrow\" -RuleType GreaterThan -ConditionValue \"=INT($F$1-7)\"  -ForeGroundColor Green  -StopIfTrue\r\n     Add-ConditionalFormatting -WorkSheet $ws -address \"D2:D$Lastrow\" -RuleType Equal       -ConditionValue \"=C2\"           -ForeGroundColor Blue   -StopIfTrue\r\n     Close-ExcelPackage -Show $excel\r\nThe first few lines of code export a list of file and directory names, sizes and dates to a spreadsheet.\r\n\r\nIt puts the date of the export in cell F1.\r\n\r\nThe first Conditional format changes the color of files and folders that begin with a \".\", \"_\" or anything else which sorts before \"A\".\r\n\r\nThe second Conditional format changes the Number format of numbers bigger than 1 million, for example 1,234,567,890 will dispay as \"1,234.57M\"\r\n\r\nThe third highlights datestamps of files less than a week old when the export was run; the = is necessary in the condition value otherwise the rule will look for the the text INT($F$1-7), and the cell address for the date is fixed using the standard Excel $ notation.\r\n\r\nThe final Conditional format looks for files which have not changed since they were created. Here the condition value is \"=C2\". The = sign means C2 is treated as a formula, not literal text. Unlike the file age, we want the cell used to change for each cell where the conditional format applies.\r\n\r\nThe first cell in the conditional format range is D2, which is compared against C2, then D3 is compared against C3 and so on. A common mistake is to include the title row in the range and accidentally apply conditional formatting to it, or to begin the range at row 2 but use row 1 as the starting point for comparisons."
+    },
+    {
+      "Title": "EXAMPLE 6",
+      "Markdown": "",
+      "Code": "PS\\> Add-ConditionalFormatting  $ws.Cells[\"B:B\"] GreaterThan 10000000 -Fore  Red -Stop -Pri 1\r\nThis version shows the shortest syntax - the Address, Ruletype, and Conditionvalue can be identified from their position, and ForegroundColor, StopIfTrue and Priority can all be shortend."
+    }
+  ]
+}

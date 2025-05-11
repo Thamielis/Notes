@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new HTML container element with customizable options.",
+  "Description": "This function creates a new HTML container element with the specified options such as content, width, margin, and anchor name.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLContainer -HTML {\r\n    // HTML content here\r\n} -Width '50%' -Margin '10px' -AnchorName 'myAnchor'\r\nCreates a new HTML container with custom HTML content, width of 50%, margin of 10px, and anchor name 'myAnchor'."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-HTMLContainer -HTML {\r\n    // More HTML content\r\n}\r\nCreates a new HTML container with additional HTML content and default width and margin."
+    }
+  ]
+}

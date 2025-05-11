@@ -1,0 +1,35 @@
+{
+  "Synopsis": "Writes AJAX",
+  "Description": "Writes AJAX.  This will execute the URL and replace the contents of\nthe HTML element with the ID $updateId with the contents of the returned document",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": []
+}

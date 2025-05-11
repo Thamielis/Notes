@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Get GitHub meta information.",
+  "Description": "Returns meta information about GitHub, including a list of GitHub's IP addresses. For more information, see\n\"[About GitHub's IP addresses](https://docs.github.com/articles/about-github-s-ip-addresses/).\"\n\nThe API's response also includes a list of GitHub's domain names.\n\nThe values shown in the documentation's response are example values. You must always query the API directly to get the latest values.\n\n**Note:** This endpoint returns both IPv4 and IPv6 addresses. However, not all features support IPv6. You should refer to the specific\ndocumentation for each feature to determine if IPv6 is supported.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Get GitHub meta information](https://docs.github.com/rest/meta/meta#get-apiname-meta-information)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Object"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubMeta\r\nReturns meta information about GitHub, including a list of GitHub's IP addresses."
+    }
+  ]
+}

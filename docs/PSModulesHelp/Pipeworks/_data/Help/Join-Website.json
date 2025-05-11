@@ -1,0 +1,33 @@
+{
+  "Synopsis": "\r\nJoin-Website [[-RequiredInfo] <hashtable>] [[-OptionalInfo] <hashtable>] [[-StorageAccountSetting] <string>] [[-StorageKeySetting] <string>] [[-SmtpServer] <string>] [[-FromEmail] <string>] [[-FromUser] <string>] [[-EmailPasswordSetting] <string>] [[-TermsOfService] <string>] [[-ExchangeServer] <string>] [[-UserTable] <string>] [[-IntroMessage] <string>] [[-ConfirmationMailSentMessage] <string>] [[-userPartition] <string>] [[-FacebookAppId] <string>] [[-InitialBalance] <double>] [[-LockoutBalance] <double>] [[-BlacklistParition] <string>] [[-WhitelistPartition] <string>] [-WebsiteUrl] <string> [-UseSsl] [<CommonParameters>]\r\n",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.Collections.Hashtable\r\nSystem.String\r\nSystem.Management.Automation.SwitchParameter\r\nSystem.Double\r\n"
+  ],
+  "Outputs": [
+    "System.Object"
+  ],
+  "Links": [],
+  "Examples": []
+}

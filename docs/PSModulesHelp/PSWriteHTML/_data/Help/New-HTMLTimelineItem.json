@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new HTML timeline item with specified date, heading text, content text, and color.",
+  "Description": "This function generates an HTML timeline item with the provided information. It allows customization of the date, heading text, content text, and color of the timeline item.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLTimelineItem -Date \"2022-01-01\" -HeadingText \"Project Kickoff\" -Text \"Started the project development phase.\" -Color \"Blue\"\r\nCreates a timeline item with a specific date, heading, content, and color."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-HTMLTimelineItem -HeadingText \"Meeting with Client\" -Text \"Discussed project requirements.\" -Color \"Green\"\r\nCreates a timeline item with the current date, specified heading, content, and color."
+    }
+  ]
+}

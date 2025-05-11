@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Invokes a process that emits or consumes binary data.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Invoke-BinaryProcess binaryProcess.exe -RedirectOutput -ArgumentList \"-Emit\" |\r\n       Invoke-BinaryProcess binaryProcess.exe -RedirectInput -ArgumentList \"-Consume\""
+    }
+  ]
+}

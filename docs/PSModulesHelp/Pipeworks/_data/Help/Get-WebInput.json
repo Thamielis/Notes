@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Get the Web Request parameters for a PowerShell command",
+  "Description": "Get the Web Request parameters for a PowerShell command.  \n\nScript Blocks parameters will automatically be run, and text values will be converted\nto their native types.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Collections.Hashtable"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-WebInput -CommandMetaData (Get-Command Get-Command) -DenyParameter ArgumentList"
+    }
+  ]
+}

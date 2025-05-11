@@ -1,0 +1,48 @@
+{
+  "Synopsis": "Gets current UDP endpoint statistics.",
+  "Description": "The Get-NetUDPEndpoint cmdlet gets current statistics for a UDP endpoint. The cmdlet returns UDP end point properties, such as local and remote UDP ports. If you do not specify any parameters, the cmdlet gets statistics for all UDP end points.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetUDPEndpoint"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkId=288392",
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Get statistics for all UDP endpoints",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetUDPEndpoint\r\nThis example gets current statistics for all UDP endpoints."
+    },
+    {
+      "Title": "Example 2: Get statistics for UDP traffic",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetUDPEndpoint –LocalAddress 127.0.0.1\r\nThis command gets statistics for recent UDP traffic that was sent and received on the IPv4 loopback address."
+    }
+  ]
+}

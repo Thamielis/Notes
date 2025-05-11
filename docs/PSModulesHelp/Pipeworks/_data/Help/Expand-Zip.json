@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Expands the contents of a Zip file",
+  "Description": "Expands the contents of a Zip file that was compressed with Out-Zip.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Nullable"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "dir $home\\Documents\\WindowsPowerShell\\Modules\\Pipeworks -Recurse | \r\n    Out-Zip -ZipFile $home\\Pipeworks.zip        \r\nExpand-Zip $home\\Pipeworks.zip -OutputPath $psHome\\Modules\\Pipeworks"
+    }
+  ]
+}

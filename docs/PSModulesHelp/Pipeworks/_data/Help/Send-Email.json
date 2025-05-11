@@ -1,0 +1,47 @@
+{
+  "Synopsis": "Sends an email.",
+  "Description": "Sends an email, using exchange web services.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Nullable",
+    "System.Management.Automation.Job"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$office365Credential = Get-SecureSetting -Name Office365Cred -Type ([Management.Automation.PSCredential])\r\nSend-Email -To \"someone@somewhere.com\" -Subject \"Hello World\" -Body \"<b>Hello World</b>\" -BodyAsHtml -IsOffice365Account -Credential $office365Credential"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$office365Credential = Get-SecureSetting -Name Office365Cred -Type ([Management.Automation.PSCredential])\r\nSend-Email -To \"someone@somewhere.com\" -Subject \"Dinner:Free at Five?\" -From \"5PM\" -To \"6pm\" -Location \"Machiavelli's\" -IsOffice365Account -Credential $office365Credential"
+    }
+  ]
+}

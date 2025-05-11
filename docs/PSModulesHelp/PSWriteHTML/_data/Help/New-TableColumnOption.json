@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Allows for certain modification of options within DataTable's columnDefs parameter. You can set visibility, searchability, sortability, and width for specific columns",
+  "Description": "Allows for certain modification of options within DataTable's columnDefs parameter.\nSee: https://datatables.net/reference/option/columnDefs\n\nNew-HTMLTable has parameters for -ResponsivePriorityOrder and -ResponsivePriorityOrderIndex and these are set at a higher precedent than options specified here.\nSee the DataTable reference section for conflict resolution.\n\nThe New-TableColumnOption cmdlet will add entries to the columnDefs parameter in the order in which the cmdlets are ordered.\nIf you use 2 or more New-TableColumnOption, the first cmdlet takes priority over the second cmdlet if they specify the same targets or overriding property values\nWith this in mind, you should almost always specify -AllColumns last, since that will take priority over any commands issued later",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "The New-HTMLTable cmdlet has -ResponsivePriorityOrder and -ResponsivePriorityOrderIndex that also modifes the columnDefs option in DataTable"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None. You cannot pipe objects to New-TableColumnOption"
+  ],
+  "Outputs": [
+    "PSCustomObject"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-TableColumnOption -ColumnIndex (0..4) -Width 50\r\nThe first 5 columns with have a width defined as 50, this may not be exact.\r\nSee: https://datatables.net/reference/option/columns.width"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-TableColumnOption -ColumnIndex 0,1,2 -Hidden $false\r\nNew-TableColumnOption -ColumnIndex 1 -Sortable $true\r\nNew-TableColumnOption -AllColumns -Hidden $true -Searchable $false -Sortable $false\r\nAll columns will be hidden, not searchable, and not sortable\r\nHowever, since there is a option specified higher up, the first 3 columns will be visible\r\nAdditionally the 2nd column will be sortable"
+    }
+  ]
+}

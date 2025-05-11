@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new HTML section style with customizable options.",
+  "Description": "This function creates a new HTML section style with various styling options such as border radius, text color, alignment, background color, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "File Name      : New-HTMLSectionStyle.ps1\nPrerequisite   : PowerShell V5"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLSectionStyle -BorderRadius '10px' -HeaderTextColor 'blue' -HeaderTextAlignment 'center' -HeaderBackGroundColor 'lightgray' -Wrap 'wrap' -Direction 'row' -Align 'center' -AlignItems 'flex-start' -Justify 'space-between' -Rotate '90deg' -BackgroundColorContent 'white' -WrapContent 'wrap' -DirectionContent 'column' -AlignContent 'flex-end' -AlignItemsContent 'center' -JustifyContent 'flex-start' -WritingMode 'horizontal-tb' -TextOrientation 'upright' -RequestConfiguration\r\nCreates a new HTML section style with specified options."
+    }
+  ]
+}

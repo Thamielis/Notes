@@ -1,0 +1,53 @@
+{
+  "Synopsis": "Invoke a script block in the default runspace of processes hosted by the PowerShell Editor Services Integrated Console.",
+  "Description": "The Invoke-EditorServicesProcess allows you to invoke a script in the default runspace of any process hosted by the PowerShell Editor Services Integrated Console.\r\n\r\n\r\nThis is similar to the Enter-EditorServicesProcess function, with a few differences.\r\n\r\n\r\n- It can be ran on any number of processes\r\n\r\n\r\n- Invocation will take place in the default runspace of the Integrated Console, instead of a proxy runspace for the process.\r\n\r\n\r\n- It can be ran interactively.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.Int32"
+  ],
+  "Outputs": [
+    "System.Object"
+  ],
+  "Links": [
+    "https://github.com/SeeminglyScience/EditorServicesProcess/docs/en-US/Invoke-EditorServicesProcess.md",
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$processes = Get-EditorServicesProcess\r\n$processes | Invoke-EditorServicesProcess {\r\n    $psEditor.Workspace.ShowInformationMessage('Hey there!')\r\n}\r\nShows a information message on all editor services windows."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-EditorServicesProcess -Workspace '${workspaceRoot}' |\r\n    Invoke-EditorServicesProcess { Invoke-Build -Task Build }\r\nInvoke a VSCode task in the context of the Integrated Console."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "code .\r\nGet-EditorServicesProcess -Workspace $pwd |\r\n    Invoke-EditorServicesProcess { psedit (Get-ChildItem *.ps1) }\r\nStart VSCode in the current directory and open all *.ps1 files."
+    }
+  ]
+}

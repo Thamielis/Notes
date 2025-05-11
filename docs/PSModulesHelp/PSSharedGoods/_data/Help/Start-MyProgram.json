@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Starts a program with specified arguments and logs the output.",
+  "Description": "This function starts a program with the provided arguments and logs the output using a specified logger. If no logger is provided, it returns the output as a string.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Start-MyProgram -Program \"C:\\Program.exe\" -CmdArgList @(\"-arg1\", \"-arg2\") -LoggerParameters @{\"LogPath\"=\"C:\\Logs\"; \"LogLevel\"=\"Info\"}\r\nStarts the program \"C:\\Program.exe\" with arguments \"-arg1\" and \"-arg2\" and logs the output using a logger with log path \"C:\\Logs\" and log level \"Info\"."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Start-MyProgram -Program \"C:\\AnotherProgram.exe\" -CmdArgList @(\"-input\", \"file.txt\")\r\nStarts the program \"C:\\AnotherProgram.exe\" with argument \"-input file.txt\" and returns the output as a string."
+    }
+  ]
+}

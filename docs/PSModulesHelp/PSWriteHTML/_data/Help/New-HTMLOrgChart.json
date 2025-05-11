@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates an HTML organizational chart based on the provided nodes and options.",
+  "Description": "This function generates an interactive HTML organizational chart based on the specified nodes and customization options. Users can define the layout direction, initial visibility level, vertical alignment, and various interactive features like panning, zooming, dragging, and exporting.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This function requires the PSWriteHTML module to be installed. For more information, visit: https://github.com/EvotecIT/PSWriteHTML"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTML {\r\n    New-HTMLOrgChart {\r\n        New-OrgChartNode -Name 'CEO' -Title 'Chief Executive Officer' {\r\n            New-OrgChartNode -Name 'Manager' -Title 'Manager'\r\n            New-OrgChartNode -Name 'Supervisor' -Title 'Supervisor'\r\n            New-OrgChartNode -Name 'Employee' -Title 'Employee' {\r\n                New-OrgChartNode -Name 'Assistant' -Title 'Assistant'\r\n            }\r\n        }\r\n    } -AllowExport -ExportExtension pdf -Draggable\r\n} -FilePath $PSScriptRoot\\OrgChart.html -ShowHTML -Online"
+    }
+  ]
+}

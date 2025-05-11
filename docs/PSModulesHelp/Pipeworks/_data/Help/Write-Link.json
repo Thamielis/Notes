@@ -1,0 +1,66 @@
+{
+  "Synopsis": "Writes links to other web content",
+  "Description": "Writes links to other web content, and makes linking to rich web content easy.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Write-Link -Url \"start-automating.com\""
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Write-Link -Url \"Start-Automating.com\" -Caption \"Save Time, Save Money, Start Automating\""
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "Write links to several subpages",
+      "Code": "Write-Link -Url \"a\",\"b\",\"c\""
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "A link to a twitter page",
+      "Code": "Write-Link \"@jamesbru\""
+    },
+    {
+      "Title": "EXAMPLE 5",
+      "Markdown": "A link to social sites",
+      "Code": "Write-Link \"google:+1\", \"twitter:tweet\""
+    },
+    {
+      "Title": "EXAMPLE 6",
+      "Markdown": "",
+      "Code": "</span>\r\n       <br/>\r\n       <span style='text-align:center'>\r\n       Visit Website\r\n       </span>\""
+    }
+  ]
+}

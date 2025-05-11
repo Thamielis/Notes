@@ -1,0 +1,56 @@
+{
+  "Synopsis": "Finds content on Factual",
+  "Description": "Finds content on Factual's global places API",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Find-Factual Starbucks in Seattle"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$l = Resolve-Location -Address 'Redmond, WA'\r\nFind-Factual -GeoPulse -TypeOfFilter Point -Filter \"$($l.longitude),$($l.Latitude)\" -Verbose"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Find-Factual -InTable vYrq7F -Filter 'Washington' -TypeOfFilter State -Limit 50"
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "Wineries",
+      "Code": "Find-Factual -InTable cQUvfi"
+    }
+  ]
+}

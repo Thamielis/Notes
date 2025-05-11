@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Removes permissions from a Group Policy Object (GPO) for specified principals.",
+  "Description": "The Remove-GPOZaurrPermission function removes permissions from a specified GPO for the specified principals. It allows for fine-grained control over the removal of permissions based on various parameters.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-GPOZaurrPermission -GPOName \"TestGPO\" -Principal \"User1\" -PrincipalType \"Name\" -Type \"Default\" -Forest \"Contoso\" -IncludeDomains \"Domain1\", \"Domain2\"\r\nRemoves default permissions for \"User1\" from the GPO named \"TestGPO\" in the \"Contoso\" forest for domains \"Domain1\" and \"Domain2\"."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Remove-GPOZaurrPermission -GPOGuid \"12345678-1234-1234-1234-1234567890AB\" -Principal \"Group1\" -PrincipalType \"Sid\" -Type \"Unknown\" -Forest \"Fabrikam\" -ExcludeDomains \"Domain3\"\r\nRemoves unknown permissions for \"Group1\" from the GPO with GUID \"12345678-1234-1234-1234-1234567890AB\" in the \"Fabrikam\" forest excluding \"Domain3\"."
+    }
+  ]
+}

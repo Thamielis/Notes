@@ -1,0 +1,52 @@
+{
+  "Synopsis": "Get dependency types and associated scripts",
+  "Description": "Get dependency types and associated scripts\n\nChecks PSDependMap.psd1,\nverifies dependency scripts exist,\nreturns a hashtable of these.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    "https://github.com/RamblingCookieMonster/PSDepend"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-PSDependScript\r\n# List PSDepend scripts available in the PSDependMap.psd1 in the PSDepend module root"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-PSDependScript -Path \\\\Path\\To\\Central.DependencyMap.psd1\r\n# List dependency types defined in a centralized dependency map"
+    }
+  ]
+}

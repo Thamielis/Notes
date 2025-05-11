@@ -1,0 +1,50 @@
+{
+  "Synopsis": "Creates a neighbor cache entry.",
+  "Description": "The New-NetNeighbor cmdlet creates a neighbor cache entry. The neighbor cache maintains information for each on-link neighbor, including the IP address and the associated link-layer address. The address family that you specify for the neighbor cache entry must match the address family of the IP interface.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetNeighbor"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkId=288395",
+    null,
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Create an IPv4 neighbor cache entry",
+      "Markdown": "",
+      "Code": "PS C:\\>New-NetNeighbor –InterfaceIndex 12 –IPAddress \"192.168.0.5\" –LinkLayerAddress \"00-00-12-00-00-ff\"\r\nThis command creates a neighbor cache entry that has the IP address 192.168.0.5. The command specifies that the neighbor is connected to the interface that has the index 12. The command specifies that the link-layer address of the neighbor cache entry is 00-00-12-00-00-ff."
+    },
+    {
+      "Title": "Example 2: Create an IPv6 neighbor cache entry",
+      "Markdown": "",
+      "Code": "PS C:\\>New-NetNeighbor –InterfaceIndex 13 –IPAddress \"fe80::5efe:192.168.0.5\"\r\nThis command creates a neighbor cache entry on a virtual ISATAP interface that has the IP address fe80::5efe:192.168.0.5. The command specifies that the neighbor is connected to the interface that has the index 13."
+    }
+  ]
+}

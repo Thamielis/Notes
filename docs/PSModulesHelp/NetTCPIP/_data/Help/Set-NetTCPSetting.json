@@ -1,0 +1,47 @@
+{
+  "Synopsis": "Modifies a TCP setting.",
+  "Description": "The Set-NetTCPSetting cmdlet modifies a TCP setting. TCP settings are optimized for different network conditions including latency and congestion. To apply a TCP setting to a port number or destination IP address range, create a transport filter by using the New-NetTransportFilter cmdlet.\r\n\r\n\r\nYou can only modify the Custom TCP setting.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetTCPSetting"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkID=289172",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Change the custom TCP setting",
+      "Markdown": "",
+      "Code": "PS C:\\>Set-NetTCPSetting –SettingName \"Custom\" –CongestionProvider CTCP –InitialCongestionWindowMss 6\r\nThis command changes the custom TCP setting to have a value of 6 for the initial congestion window and use compound TCP."
+    }
+  ]
+}

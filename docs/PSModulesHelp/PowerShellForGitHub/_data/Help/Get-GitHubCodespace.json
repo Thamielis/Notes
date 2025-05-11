@@ -1,0 +1,70 @@
+{
+  "Synopsis": "Retrieves information about a Codespace or list of codespaces on GitHub.",
+  "Description": "Retrieves information about a Codespace or list of codespaces on GitHub.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Codespace\nGitHub.Project\nGitHub.Repository\nGitHub.User"
+  ],
+  "Outputs": [
+    "GitHub.Codespace"
+  ],
+  "Links": [
+    "https://docs.github.com/en/rest/codespaces/codespaces?apiVersion=2022-11-28#get-a-codespace-for-the-authenticated-user",
+    "https://docs.github.com/en/rest/codespaces/codespaces?apiVersion=2022-11-28#list-codespaces-in-a-repository-for-the-authenticated-user",
+    "https://docs.github.com/en/rest/codespaces/codespaces?apiVersion=2022-11-28#list-codespaces-for-the-authenticated-user",
+    "https://docs.github.com/en/rest/codespaces/organizations?apiVersion=2022-11-28#list-codespaces-for-the-organization",
+    "https://docs.github.com/en/rest/codespaces/organizations?apiVersion=2022-11-28#list-codespaces-for-a-user-in-organization"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubCodespace\r\nGets all codespaces for the current authenticated user."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GitHubCodespace -OwnerName octocat\r\nGets all of the codespaces for the user octocat"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-GitHubUser -UserName octocat | Get-GitHubCodespace\r\nGets all of the codespaces for the user octocat"
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "Get-GitHubCodespace -Uri https://github.com/microsoft/PowerShellForGitHub\r\nGets information about the microsoft/PowerShellForGitHub Codespace."
+    },
+    {
+      "Title": "EXAMPLE 5",
+      "Markdown": "",
+      "Code": "$repo | Get-GitHubCodespace\r\nYou can pipe in a previous Codespace to get its refreshed information."
+    },
+    {
+      "Title": "EXAMPLE 6",
+      "Markdown": "",
+      "Code": "Get-GitHubCodespace -OrganizationName PowerShell\r\nGets all of the codespaces in the PowerShell organization."
+    }
+  ]
+}

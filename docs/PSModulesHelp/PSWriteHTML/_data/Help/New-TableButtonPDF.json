@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Allows more control when adding buttons to Table",
+  "Description": "Allows more control when adding buttons to Table. Works only within Table or New-HTMLTable scriptblock.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Options are based on this URL: https://datatables.net/reference/button/pdfHtml5"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\\DashboardEasy05.html -Show {\r\n    Section -Name 'Test' -Collapsable {\r\n        Container {\r\n            Panel {\r\n                Table -DataTable $Process {\r\n                    TableButtonPDF\r\n                    TableButtonCopy\r\n                    TableButtonExcel\r\n                } -Buttons @() -DisableSearch -DisablePaging -HideFooter\r\n            }\r\n            Panel {\r\n                Table -DataTable $Process -Buttons @() -DisableSearch -DisablePaging -HideFooter\r\n            }\r\n            Panel {\r\n                Table -DataTable $Process {\r\n                    TableButtonPDF -PageSize A10 -Orientation landscape\r\n                    TableButtonCopy\r\n                    TableButtonExcel\r\n                } -Buttons @() -DisableSearch -DisablePaging -HideFooter\r\n            }\r\n        }\r\n    }\r\n}"
+    }
+  ]
+}

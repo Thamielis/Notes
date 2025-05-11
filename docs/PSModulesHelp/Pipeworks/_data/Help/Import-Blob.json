@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Imports from blob storage",
+  "Description": "Imports content from azure blob storage",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String",
+    "System.Byte[]"
+  ],
+  "Links": [
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "\"hello world\" | Export-Blob acontainer ablob.txt -StorageAccount myStorageAccount -StorageKey myStorageKey \r\nImport-Blob acontainer ablob.txt"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "Synopsis": "Gets neighbor cache entries.",
+  "Description": "The Get-NetNeighbor cmdlet gets neighbor cache entries. The cmdlet returns information about IP addresses and link-layer addresses for the neighbor cache entries.\r\n\r\n\r\nThe neighbor cache maintains information for each on-link neighbor, including the IP address and the associated link-layer address. In IPv4, the neighbor cache is commonly known as the Address Resolution Protocol (ARP) cache.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetNeighbor"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkId=288385",
+    null,
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Get all neighbor cache entries",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetNeighbor\r\nThis command gets all the neighbor cache entries. The default output for the cmdlet does not include all properties of the NetNeighbor object."
+    },
+    {
+      "Title": "Example 2: Output all properties for neighbor cache entries",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetNeighbor | Format-List –Property *\r\nThis command gets all the neighbor cache entries. The command uses the Format-List cmdlet to display all the properties in the output in the form of a table. For more information, type Get-Help Format-Table."
+    },
+    {
+      "Title": "Example 3: Get neighbor cache entries that have an IPv6 address",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetNeighbor –AddressFamily IPv6\r\nThis command gets information about the neighbor cache for neighbors that have an IPv6 address."
+    },
+    {
+      "Title": "Example 4: Get network adapters that have reachable neighbors",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetNeighbor –State Reachable | Get-NetAdapter\r\nThis command gets a NetNeighbor object that contains neighbor cache entries that are reachable. The command passes the NetNeighbor object to the Get-NetAdapter cmdlet by using the pipeline operator. The Get-NetAdapter cmdlet gets the network adapters that have the interface index number for the network neighbors stored the NetNeighbor object."
+    }
+  ]
+}

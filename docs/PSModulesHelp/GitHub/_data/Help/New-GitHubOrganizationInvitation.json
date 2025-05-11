@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Create an organization invitation",
+  "Description": "Invite people to an organization by using their GitHub user ID or their email address. In order to create invitations in an organization,\nthe authenticated user must be an organization owner.\n\nThis endpoint triggers [notifications](https://docs.github.com/github/managing-subscriptions-and-notifications-on-github/about-notifications).\nCreating content too quickly using this endpoint may result in secondary rate limiting. For more information, see\n\"[Rate limits for the API](https://docs.github.com/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits)\"\nand \"[Best practices for using the REST API](https://docs.github.com/rest/guides/best-practices-for-using-the-rest-api).\"",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Create an organization invitation](https://docs.github.com/rest/orgs/members#list-pending-organization-invitations)"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-GitHubOrganizationInvitation -Organization 'PSModule' -InviteeID 123456789 -Role 'admin'\r\nInvites the user with the ID `12345679` to the organization `PSModule` with the role `admin`."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-GitHubOrganizationInvitation -Organization 'PSModule' -Email 'user@psmodule.io'\r\nInvites the user with the email `user@psmodule.io` to the organization `PSModule`."
+    }
+  ]
+}

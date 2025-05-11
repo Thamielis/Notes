@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Reads the DPAPI backup keys from a ntds.dit file.",
+  "Description": "Reads and decrypts Data Protection API (DPAPI) backup keys from an Active Directory database file. The output can be saved to the file system using the Save-DPAPIBlob cmdlet.\r\n\r\n\r\nDPAPI is used by several components of Windows to securely store passwords, encryption keys and other sensitive data. When DPAPI is used in an Active Directory domain environment, a copy of user's master key is encrypted with a so-called DPAPI Domain Backup Key that is known to all domain controllers. Windows Server 2000 DCs use a symmetric key and newer systems use a public/private key pair. If the user password is reset and the original master key is rendered inaccessible to the user, the user's access to the master key is automatically restored using the backup key.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Cmdlet",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "DSInternals.Common.Data.DPAPIBackupKey"
+  ],
+  "Links": [
+    "https://github.com/MichaelGrafnetter/DSInternals/blob/master/Documentation/PowerShell/Get-ADDBBackupKey.md",
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> $key = Get-BootKey -SystemHiveFilePath '.\\ADBackup\\registry\\SYSTEM'\r\nPS C:\\> Get-ADDBBackupKey -DatabasePath '.\\ADBackup\\Active Directory\\ntds.dit' `\r\n                          -BootKey $key | Format-List\r\n<# Sample Output:\r\n\r\nFilePath          : ntds_legacy_b116cbfa-b881-43e6-ba85-ef3efa64ba22.key\r\nKiwiCommand       : \r\nType              : LegacyKey\r\nDistinguishedName : CN=BCKUPKEY_b116cbfa-b881-43e6-ba85-ef3efa64ba22 \r\n                    Secret,CN=System,DC=contoso,DC=com\r\nKeyId             : b116cbfa-b881-43e6-ba85-ef3efa64ba22\r\nData              : {1, 0, 0, 0...}\r\n\r\nFilePath          : \r\nKiwiCommand       : \r\nType              : PreferredLegacyKeyPointer\r\nDistinguishedName : CN=BCKUPKEY_P Secret,CN=System,DC=contoso,DC=com\r\nKeyId             : b116cbfa-b881-43e6-ba85-ef3efa64ba22\r\nData              : {250, 203, 22, 177...}\r\n\r\nFilePath          : ntds_capi_290914ed-b1a8-482e-a89f-7caa217bf3c3.pvk\r\nKiwiCommand       : REM Add this parameter to at least the first dpapi::masterkey \r\n                    command: /pvk:\"ntds_capi_290914ed-b1a8-482e-a89f-7caa217bf3c3.pvk\"\r\nType              : RSAKey\r\nDistinguishedName : CN=BCKUPKEY_290914ed-b1a8-482e-a89f-7caa217bf3c3 \r\n                    Secret,CN=System,DC=contoso,DC=com\r\nKeyId             : 290914ed-b1a8-482e-a89f-7caa217bf3c3\r\nData              : {2, 0, 0, 0...}\r\n\r\nFilePath          : \r\nKiwiCommand       : \r\nType              : PreferredRSAKeyPointer\r\nDistinguishedName : CN=BCKUPKEY_PREFERRED Secret,CN=System,DC=contoso,DC=com\r\nKeyId             : 290914ed-b1a8-482e-a89f-7caa217bf3c3\r\nData              : {237, 20, 9, 41...}\r\n#>\r\nExtracts the boot key (AKA SysKey or system key) from a backup of the SYSTEM registry hive and decrypts all DPAPI backup keys stored in the an Active Directory database file."
+    },
+    {
+      "Title": "Example 2",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADDBBackupKey -DatabasePath '.\\ADBackup\\Active Directory\\ntds.dit' `\r\n                          -BootKey 0be7a2afe1713642182e9b96f73a75da |\r\n             Save-DPAPIBlob -DirectoryPath '.\\Output'\r\nPS C:\\> Get-ChildItem -Path '.\\Output' | Select-Object -ExpandProperty Name\r\n<# Sample Output:\r\nkiwiscript.txt\r\nntds_legacy_b116cbfa-b881-43e6-ba85-ef3efa64ba22.key\r\nntds_capi_4cee80c0-b6c6-406c-a68b-c0e5818bc436.cer\r\nntds_capi_290914ed-b1a8-482e-a89f-7caa217bf3c3.pfx\r\nntds_capi_290914ed-b1a8-482e-a89f-7caa217bf3c3.pvk\r\n#>\r\nExports DPAPI backup keys to the Output directory."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new pie chart with customizable options.",
+  "Description": "This function creates a new pie chart with the specified name, value, and color. It allows customization of the pie chart appearance.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-ChartPie -Name \"Slice 1\" -Value 30 -Color \"red\"\r\nCreates a new pie chart segment named \"Slice 1\" with a value of 30 and colored in red."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-ChartPie -Name \"Slice 2\" -Value 20 -Color \"blue\"\r\nCreates a new pie chart segment named \"Slice 2\" with a value of 20 and colored in blue."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Converts parameters into a full URL for a Pipeworks Service",
+  "Description": "Converts parameters into a full URL for a Pipeworks web service.  \n\nThis allows you to easily call another a Pipeworks web service with a uniform URL.\n\nThis can work because all Pipeworks services have a very uniform URL format:\n\nServiceUrl/Command/?Command_Parameter1=Value&Command_Parameter2=Value",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "ConvertTo-ServiceUrl -ServiceUrl \"http://powershellpipeworks.com/\" -CommandName \"Write-ScriptHTML\" -Parameter @{\r\n    Text = \"'hello world'\"\r\n}"
+    }
+  ]
+}

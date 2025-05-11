@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Adds HTML content to the email body.",
+  "Description": "This function adds HTML content to the email body by executing the provided ScriptBlock containing the HTML code.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$HTMLContent = {\r\n    Set-Tag -HtmlObject @{\r\n        Tag = 'div'\r\n        Attributes = @{\r\n            'class' = 'container'\r\n        }\r\n        Value = 'Hello, World!'\r\n    }\r\n}\r\nAdd-HTML -HTML $HTMLContent\r\nAdds a <div class=\"container\">Hello, World!</div> to the email body."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$HTMLContent = {\r\n    Set-Tag -HtmlObject @{\r\n        Tag = 'ul'\r\n        Attributes = @{\r\n            'id' = 'list'\r\n        }\r\n        Value = @(\r\n            @{\r\n                Tag = 'li'\r\n                Value = 'Item 1'\r\n            }\r\n            @{\r\n                Tag = 'li'\r\n                Value = 'Item 2'\r\n            }\r\n        )\r\n    }\r\n}\r\nAdd-HTML -HTML $HTMLContent\r\nAdds a list with items 'Item 1' and 'Item 2' to the email body."
+    }
+  ]
+}

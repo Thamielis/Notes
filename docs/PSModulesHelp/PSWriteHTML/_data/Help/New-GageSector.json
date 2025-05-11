@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new gauge sector with specified color, minimum value, and maximum value.",
+  "Description": "This function creates a new gauge sector with the provided color, minimum value, and maximum value. It is useful for visualizing data within a specific range.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Additional notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$sector = New-GageSector -Color 'red' -Min 0 -Max 100\r\nCreates a new gauge sector with a red color, minimum value of 0, and maximum value of 100."
+    }
+  ]
+}

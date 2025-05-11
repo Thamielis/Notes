@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Defines the email server configuration for sending emails.",
+  "Description": "This function sets up the email server configuration including server address, port, authentication credentials, and SSL settings.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "EmailServer -Server \"mail.example.com\" -Port 587 -UserName \"user@example.com\" -Password \"P@ssw0rd\" -SSL\r\nConfigures the email server with the specified server address, port, username, password, and SSL enabled."
+    }
+  ]
+}

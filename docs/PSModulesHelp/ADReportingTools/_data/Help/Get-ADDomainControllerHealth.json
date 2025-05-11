@@ -1,0 +1,52 @@
+{
+  "Synopsis": "Get a summary view of domain controller health.",
+  "Description": "This command is intended to give you a quick summary of the overall health of your Active Directory domain controllers. The concept of \"health\" is based on the following:\r\n\r\n\r\n- How much free space remains on drive C:?\r\n\r\n\r\n- How much free physical memory?\r\n\r\n\r\n- What percentage of the Security event log is in use?\r\n\r\n\r\n- Are any critical services not running?\r\n\r\n\r\n\r\n\r\nThe services checked are ntds,kdc,adws,dfs,dfsr,netlogon,samss, and w32time. Not every organization runs DNS and/or DHCP on their domain controllers so those services have been omitted.\r\n\r\nOutput will be color-coded using ANSI escape sequences.\r\n",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "ADDomainControllerHealth"
+  ],
+  "Links": [
+    "https://bit.ly/38u96PJ",
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADDomainControllerHealth\r\n\r\n\r\n   DC: DOM1.Company.Pri [192.168.3.10]\r\n\r\nUptime            PctFreeC   PctFreeMem    PctSecLog  ServiceAlert\r\n------            --------   ----------    ---------  ------------\r\n12.22:29:47          89.61        25.17         33.8      False\r\n\r\n\r\n   DC: DOM2.Company.Pri [192.168.3.11]\r\n\r\nUptime            PctFreeC   PctFreeMem    PctSecLog  ServiceAlert\r\n------            --------   ----------    ---------  ------------\r\n5.16:38:00           90.63        48.36        14.56      True\r\nGet a health snapshot of your domain controllers. A ServiceAlert of True means that one of the defined critical services is not running.\r\n\r\nOutput might be color-coded. A ServiceAlert value of True will be displayed in Red.  Free space on C and percent free physical memory will be shown in red if the value is 10% or less. A percent free less than 30$ will be displayed in an orange/yellow color. The percent Security log usage threshholds are 15% and 50%."
+    },
+    {
+      "Title": "Example 2",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADDomainControllerHealth | Format-Table -view info\r\n\r\n\r\n   Domain Controller: CN=DOM1,OU=Domain Controllers,DC=Company,DC=Pri\r\n\r\nOperatingSystem                     IsGC    IsRO    Roles\r\n---------------                     ----    ----    -----\r\nWindows Server 2019 Standard        True    False   {SchemaMaster,DomainNam...\r\n\r\n\r\n   Domain Controller: CN=DOM2,OU=Domain Controllers,DC=Company,DC=Pri\r\n\r\nOperatingSystem                     IsGC    IsRO    Roles\r\n---------------                     ----    ----    -----\r\nWindows Server 2019 Standard        True    False   {}\r\nGet domain controller health using a custom table view."
+    },
+    {
+      "Title": "Example 3",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADDomainControllerHealth | Select-Object -Expand Services\r\n\r\n\r\n   Computername: DOM1.Company.Pri\r\n\r\nProcessID Displayname                      Name     State   StartMode Started\r\n--------- -----------                      ----     -----   --------- -------\r\n2544      Active Directory Web Services    ADWS     Running Auto      True\r\n2652      DFS Namespace                    Dfs      Running Auto      True\r\n2624      DFS Replication                  DFSR     Running Auto      True\r\n660       Kerberos Key Distribution Center Kdc      Running Auto      True\r\n660       Netlogon                         Netlogon Running Auto      True\r\n660       Active Directory Domain Services NTDS     Running Auto      True\r\n660       Security Accounts Manager        SamSs    Running Auto      True\r\n1028      Windows Time                     W32Time  Running Auto      True\r\n...\r\nView the service status for each domain controller."
+    }
+  ]
+}

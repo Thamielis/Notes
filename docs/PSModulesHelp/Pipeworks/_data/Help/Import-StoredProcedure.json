@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Imports a Stored Procedure as a PowerShell function",
+  "Description": "Imports SQL Stored Procedure as a PowerShell functions",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "At present, only stored procedures on SQL Server or in SQL Azure are supported."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "Generates functions for all stored procedures in SQLAzure who have a name like *WmiSpy*",
+      "Code": "Import-StoredProcedure -Name \"*WmiSpy*\" -ConnectionStringOrSetting SQLAzureConnectionString -EmbedConnectionString"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieves information about a deployment environment or list of deployment environments on GitHub.",
+  "Description": "Retrieves information about a deployment environment or list of deployment environments on GitHub.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Branch\nGitHub.Content\nGitHub.DeploymentEnvironment\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Reaction\nGitHub.Release\nGitHub.ReleaseAsset\nGitHub.Repository"
+  ],
+  "Outputs": [
+    "GitHub.DeploymentEnvironment"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubDeploymentEnvironment -OwnerName microsoft -RepositoryName PowerShellForGitHub\r\nGets details of all of the deployment environments for the specified repository."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GitHubDeploymentEnvironment -OwnerName microsoft -RepositoryName PowerShellForGitHub -EnvironmentName Test\r\nGets details of the Test deployment environment for the specified repository."
+    }
+  ]
+}

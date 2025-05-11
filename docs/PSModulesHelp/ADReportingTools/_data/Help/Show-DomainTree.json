@@ -1,0 +1,47 @@
+{
+  "Synopsis": "Display the domain in a tree format.",
+  "Description": "This command will display your domain in a tree view at the console. By default, Show-DomainTree will use color-coded ANSI formatting. The default display uses the organizational unit names. Although, you can use the distinguishedname of each branch. If you use -Containers, containers like Users will be included.\r\n\r\n\r\nNOTE: This command will only run in a console host session. It will not run in the PowerShell ISE or VSCode.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "String"
+  ],
+  "Links": [
+    "https://bit.ly/2PXbvfo",
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Show-DomainTree\r\n\r\nDC=Company,DC=Pri\r\n│\r\n├── Accounting\r\n│   ├── Banking\r\n│   ├── Finance\r\n│       ├── Corp Investment\r\n│   ├── Payroll\r\n├── Dev\r\n│   ├── Ops\r\n├── Domain Controllers\r\n├── Employees\r\n│   ├── Exec\r\n│       ├── VIP\r\n│   ├── Temporary Hires\r\n├── IT\r\n│   ├── Help Desk\r\n│       ├── TechStaff\r\n│           ├── Test\r\n│   ├── SecOps\r\n├── JEA_Operators\r\n├── Marketing\r\n│   ├── Agency\r\n├── Research\r\n├── Sales\r\n│   ├── InsideSales\r\n│   ├── OutsideSales\r\n├── Servers\r\n│   ├── AppDev\r\n│   ├── DMZ\r\n│   ├── Web\r\n│       ├── Staging\r\n└── Suspended\r\nOutput will color-coded using ANSI escape sequences."
+    },
+    {
+      "Title": "Example 2",
+      "Markdown": "",
+      "Code": "PS C:\\> PS C:\\> Show-DomainTree -usedn\r\n\r\nDC=Company,DC=Pri\r\n│\r\n├── OU=Accounting,DC=Company,DC=Pri\r\n│   ├── OU=Banking,OU=Accounting,DC=Company,DC=Pri\r\n│   ├── OU=Finance,OU=Accounting,DC=Company,DC=Pri\r\n│       ├── OU=Corp Investment,OU=Finance,OU=Accounting,DC=Company,DC=Pri\r\n│   ├── OU=Payroll,OU=Accounting,DC=Company,DC=Pri\r\n├── OU=Dev,DC=Company,DC=Pri\r\n│   ├── OU=Ops,OU=Dev,DC=Company,DC=Pri\r\n├── OU=Domain Controllers,DC=Company,DC=Pri\r\n├── OU=Employees,DC=Company,DC=Pri\r\n│   ├── OU=Exec,OU=Employees,DC=Company,DC=Pri\r\n│       ├── OU=VIP,OU=Exec,OU=Employees,DC=Company,DC=Pri\r\n│   ├── OU=Temporary Hires,OU=Employees,DC=Company,DC=Pri\r\n├── OU=IT,DC=Company,DC=Pri\r\n│   ├── OU=Help Desk,OU=IT,DC=Company,DC=Pri\r\n│       ├── OU=TechStaff,OU=Help Desk,OU=IT,DC=Company,DC=Pri\r\n│           ├── OU=Test,OU=TechStaff,OU=Help Desk,OU=IT,DC=Company,DC=Pri\r\n│   ├── OU=SecOps,OU=IT,DC=Company,DC=Pri\r\n...\r\nDisplay the domain tree using distinguishednames."
+    }
+  ]
+}

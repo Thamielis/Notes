@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Create a module scaffolding and add samples & build pipeline.",
+  "Description": "New-SampleModule helps you bootstrap your PowerShell module project by\ncreating a the folder structure of your module, and optionally add the\npipeline files to help with compiling the module, publishing to PSGallery\nand GitHub and testing quality and style such as per the DSC Community\nguildelines.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "See Add-Sample to add elements such as functions (private or public), tests, DSC Resources to your project."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Void"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-SampleModule -DestinationPath . -ModuleType CompleteSample -ModuleAuthor \"Gael Colas\" -ModuleName MyModule -ModuleVersion 0.0.1 -ModuleDescription \"a sample module\" -LicenseType MIT -SourceDirectory Source"
+    }
+  ]
+}

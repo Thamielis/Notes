@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Generate SQL insert statements from Excel spreadsheet.",
+  "Description": "Generate SQL insert statements from Excel spreadsheet.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Generate SQL insert statements from Movies.xlsx file, leaving blank cells as empty strings:\r\n\r\n----------------------------------------------------------\r\n| File: Movies.xlsx            -           Sheet: Sheet1 |\r\n----------------------------------------------------------\r\n|           A            B            C                  |\r\n|1     Movie Name      Year         Rating               |\r\n|2     The Bodyguard   1992           9                  |\r\n|3     The Matrix      1999           8                  |\r\n|4     Skyfall         2012           9                  |\r\n|5     The Avengers    2012                              |\r\n----------------------------------------------------------\r\n\r\nPS C:\\>  ConvertFrom-ExcelToSQLInsert -TableName \"Movies\" -Path 'C:\\Movies.xlsx'\r\nINSERT INTO Movies ('Movie Name', 'Year', 'Rating') Values('The Bodyguard', '1992', '9');\r\nINSERT INTO Movies ('Movie Name', 'Year', 'Rating') Values('The Matrix', '1999', '8');\r\nINSERT INTO Movies ('Movie Name', 'Year', 'Rating') Values('Skyfall', '2012', '9');\r\nINSERT INTO Movies ('Movie Name', 'Year', 'Rating') Values('The Avengers', '2012', '');"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Generate SQL insert statements from Movies.xlsx file, specify NULL instead of an empty string.\r\n\r\n----------------------------------------------------------\r\n| File: Movies.xlsx            -           Sheet: Sheet1 |\r\n----------------------------------------------------------\r\n|           A            B            C                  |\r\n|1     Movie Name      Year         Rating               |\r\n|2     The Bodyguard   1992           9                  |\r\n|3     The Matrix      1999           8                  |\r\n|4     Skyfall         2012           9                  |\r\n|5     The Avengers    2012                              |\r\n----------------------------------------------------------\r\n\r\nPS C:\\> ConvertFrom-ExcelToSQLInsert -TableName \"Movies\" -Path \"C:\\Movies.xlsx\" -ConvertEmptyStringsToNull\r\nINSERT INTO Movies ('Movie Name', 'Year', 'Rating') Values('The Bodyguard', '1992', '9');\r\nINSERT INTO Movies ('Movie Name', 'Year', 'Rating') Values('The Matrix', '1999', '8');\r\nINSERT INTO Movies ('Movie Name', 'Year', 'Rating') Values('Skyfall', '2012', '9');\r\nINSERT INTO Movies ('Movie Name', 'Year', 'Rating') Values('The Avengers', '2012', NULL);"
+    }
+  ]
+}

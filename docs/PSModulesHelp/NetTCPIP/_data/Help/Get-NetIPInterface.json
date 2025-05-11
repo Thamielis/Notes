@@ -1,0 +1,68 @@
+{
+  "Synopsis": "Gets an IP interface.",
+  "Description": "The Get-NetIPInterface cmdlet gets an IP interface, including IPv4 and IPv6 addresses, and the associated address configuration for the IP interfaces. Without parameters, this cmdlet gets all of the IP interface properties on the computer, including virtual interfaces and loopback interfaces.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetIPInterface"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkId=288382",
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Get IP interface configuration",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetIPInterface\r\nThis command gets the IP interface configuration on the computer on which you run the cmdlet."
+    },
+    {
+      "Title": "Example 2: Get IP interface information for IPv6 addresses",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetIPInterface –AddressFamily IPv6\r\nThis command gets information about the IP interface configuration for all IP interfaces for which you have configured IPv6 addresses."
+    },
+    {
+      "Title": "Example 3: Get IP interface information and format the output",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetIPInterface | Format-Table\r\nThis command gets information about IP interface configuration, and displays that information in a table."
+    },
+    {
+      "Title": "Example 4: Get IP interface information by interface index",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetIPInterface –InterfaceIndex 12\r\nThis command gets information about the IP interface configuration for a specific interface index."
+    },
+    {
+      "Title": "Example 5: Get and sort IP interface information",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetIPInterface | Sort-Object –Property InterfaceIndex | Format-Table\r\nThis command gets information about IP address configuration, sorts them numerically by the interface index in the cmdlet name, and then displays them in a table format."
+    },
+    {
+      "Title": "Example 6: Get the IP interface by specifying the router lifetime",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetIPInterface | Where-Object -FilterScript { $_.AdvertisedRouterLifetime.TotalSeconds -Eq 1800 }\r\nThis command gets information about IP address configuration for all IP interfaces that have a default AdvertisedRouterLifetime."
+    }
+  ]
+}

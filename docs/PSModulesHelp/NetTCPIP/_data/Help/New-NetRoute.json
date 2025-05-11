@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Creates a route in the IP routing table.",
+  "Description": "The New-NetRoute cmdlet creates an IP route in the IP routing table. Specify the destination prefix, and specify an interface by using the interface alias or the interface index.\r\n\r\n\r\nIP routing is the process of forwarding a packet based on the destination IP address. Routing occurs at TCP/IP hosts and at IP routers. The sending host or router determines where to forward the packet. To determine where to forward a packet, the host or router consults a routing table that is stored in memory. When TCP/IP starts, it creates entries in the routing table. You can add entries either manually or automatically.\r\n\r\n\r\nFor more information about routing, see Chapter 5 - IP Routing (http://technet.microsoft.com/library/bb727001.aspx) in the TechNet library.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetRoute"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkID=288396",
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Add an IP route to the routing table",
+      "Markdown": "",
+      "Code": "PS C:\\>New-NetRoute –DestinationPrefix \"10.0.0.0/24\" –InterfaceIndex 12 –NextHop 192.168.0.1\r\nPS C:\\> Get-NetRoute | Format-List -Property *\r\nThis example adds a routing table entry, and then displays the properties of all the entries in the routing table.\r\n\r\nThe first command creates a route for the destination prefix 10.0.0.0/24 for the interface that has the index of 12. The command specifies 192.168.0.1 as the next hop.\r\n\r\nThe second command uses the Get-NetRoute cmdlet to get all the routes for the computer, and then passes them to the Format-List cmdlet by using the pipeline operator. The Format-List cmdlet can display all the properties of an object. For more information, type Get-Help Format-List."
+    }
+  ]
+}

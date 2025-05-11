@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new table event object.",
+  "Description": "This function creates a new table event object with the specified parameters.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-TableEvent -TableID \"Table1\" -SourceColumnName \"Column1\" -TargetColumnID 1 -SourceColumnID 2\r\nCreates a new table event object for Table1 with SourceColumnName \"Column1\", TargetColumnID 1, and SourceColumnID 2."
+    }
+  ]
+}

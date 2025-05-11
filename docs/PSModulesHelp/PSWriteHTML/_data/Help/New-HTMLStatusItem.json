@@ -1,0 +1,33 @@
+{
+  "Synopsis": "\r\nNew-HTMLStatusItem [-Name <string>] [-Status <string>] [-Icon <Object>] [-Percentage <string>] [-FontColor <string>] [<CommonParameters>]\r\n\r\nNew-HTMLStatusItem [-Name <string>] [-Status <string>] [-FontColor <string>] [-BackgroundColor <string>] [-IconHex <string>] [<CommonParameters>]\r\n\r\nNew-HTMLStatusItem [-Name <string>] [-Status <string>] [-FontColor <string>] [-BackgroundColor <string>] [-IconSolid <string>] [<CommonParameters>]\r\n\r\nNew-HTMLStatusItem [-Name <string>] [-Status <string>] [-FontColor <string>] [-BackgroundColor <string>] [-IconRegular <string>] [<CommonParameters>]\r\n\r\nNew-HTMLStatusItem [-Name <string>] [-Status <string>] [-FontColor <string>] [-BackgroundColor <string>] [-IconBrands <string>] [<CommonParameters>]\r\n",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None\r\n"
+  ],
+  "Outputs": [
+    "System.Object"
+  ],
+  "Links": [],
+  "Examples": []
+}

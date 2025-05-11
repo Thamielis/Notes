@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Watches the result of a command invocation, alerting you when the output\neither matches a specified string, lacks a specified string, or has simply\nchanged.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Watch-Command { Get-Process -Name Notepad | Measure } -UntilChanged\r\nMonitors Notepad processes until you start or stop one."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Watch-Command { Get-Process -Name Notepad | Measure } -Until \"Count    : 1\"\r\nMonitors Notepad processes until there is exactly one open."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Watch-Command {\r\n     Get-Process -Name Notepad | Measure } -While 'Count    : \\d\\s*\\n'\r\nMonitors Notepad processes while there are between 0 and 9 open\r\n(once number after the colon)."
+    }
+  ]
+}

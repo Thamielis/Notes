@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Adds parameters and functionality to existing cmdlets and functions.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-CommandWrapper Get-Process `\r\n      -AddParameter @{\r\n          SortBy = {\r\n              $newPipeline = {\r\n                  __ORIGINAL_COMMAND__ | Sort-Object -Property $SortBy\r\n              }\r\n          }\r\n      }\r\nThis example adds a 'SortBy' parameter to Get-Process. It accomplishes\r\nthis by adding a Sort-Object command to the pipeline."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$parameterAttributes = @'\r\n          [Parameter(Mandatory = $true)]\r\n          [ValidateRange(50,75)]\r\n          [Int]\r\n'@\r\nNew-CommandWrapper Clear-Host `\r\n      -AddParameter @{\r\n          @{\r\n              Name = 'MyMandatoryInt';\r\n              Attributes = $parameterAttributes\r\n          } = {\r\n              Write-Host $MyMandatoryInt\r\n              Read-Host \"Press ENTER\"\r\n         }\r\n      }\r\n\r\nThis example adds a new mandatory 'MyMandatoryInt' parameter to\r\nClear-Host. This parameter is also validated to fall within the range\r\nof 50 to 75. It doesn't alter the pipeline, but does display some\r\ninformation on the screen before processing the original pipeline."
+    }
+  ]
+}

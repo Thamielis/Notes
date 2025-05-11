@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Detects Group Policy missing Authenticated Users permission while not having higher permissions.",
+  "Description": "Detects Group Policy missing Authenticated Users permission while not having higher permissions.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$Issues = Get-GPOZaurrPermissionIssue\r\n$Issues | Format-Table"
+    }
+  ]
+}

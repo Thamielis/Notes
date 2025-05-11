@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Converts a value from one size unit to another.",
+  "Description": "This function converts a value from one size unit (Bytes, KB, MB, GB, TB) to another size unit based on the specified conversion. It provides flexibility to handle different size units and precision of the conversion.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Convert-Size -From 'KB' -To 'MB' -Value 2048\r\n# Converts 2048 Kilobytes to Megabytes."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Convert-Size -From 'GB' -To 'TB' -Value 2.5 -Precision 2 -Display\r\n# Converts 2.5 Gigabytes to Terabytes with a precision of 2 decimal places and displays the result.\r\nOriginal - https://techibee.com/powershell/convert-from-any-to-any-bytes-kb-mb-gb-tb-using-powershell/2376\r\n\r\nChangelog - Modified 30.03.2018 - przemyslaw.klys at evotec.pl\r\n- Added $Display Switch"
+    }
+  ]
+}

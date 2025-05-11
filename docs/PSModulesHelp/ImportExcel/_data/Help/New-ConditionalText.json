@@ -1,0 +1,47 @@
+{
+  "Synopsis": "Creates an object which describes a conditional formatting rule for single valued rules.",
+  "Description": "Some Conditional formatting rules don't apply styles to a cell (IconSets and Databars); some take two parameters (Between); some take none (ThisWeek, ContainsErrors, AboveAverage etc).The others take a single parameter (Top, BottomPercent, GreaterThan, Contains etc).\r\n\r\n\r\nThis command creates an object to describe the last two categories, which can then be passed to Export-Excel.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS\\> $ct = New-ConditionalText -Text  'Ferrari'\r\nPS\\> Export-Excel -ExcelPackage $excel -ConditionalTest $ct -show\r\nThe first line creates a definition object which will highlight the word \"Ferrari\" in any cell. and the second uses Export-Excel with an open package to apply the format and save and open the file."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "PS\\> $ct  = New-ConditionalText -Text \"Ferrari\"\r\nPS\\> $ct2 = New-ConditionalText -Range $worksheet.Names\\[\"FinishPosition\"\\].Address -ConditionalType LessThanOrEqual -Text 3 -ConditionalTextColor Red -BackgroundColor White\r\nPS\\> Export-Excel -ExcelPackage $excel -ConditionalText $ct,$ct2 -show\r\nThis builds on the previous example, and specifies a condition of \\&lt;=3 with a format of red text on a white background; this applies to a named range \"Finish Position\".\r\n\r\nThe range could be written -Range \"C:C\" to specify a named column, or -Range \"C2:C102\" to specify certain cells in the column."
+    }
+  ]
+}

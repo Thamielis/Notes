@@ -1,0 +1,56 @@
+{
+  "Synopsis": "Creates a chart in an existing Excel worksheet.",
+  "Description": "Creates a chart.\r\n\r\n\r\nIt is possible to configure the type of chart, the range of X values (labels) and Y values, the title, the legend, the ranges for both axes, the format and position of the axes.\r\n\r\n\r\nNormally the command does not return anything, but if -passthru is specified the chart is returned so that it can be customized.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "OfficeOpenXml.Drawing.Chart.ExcelChart"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS\\> $Excel = ConvertFrom-Csv    @\"\r\n    Product, City,    Sales\r\n    Apple,   London,    300\r\n    Orange,  London,    400\r\n    Banana,  London,    300\r\n    Orange,  Paris,     600\r\n    Banana,  Paris,     300\r\n    Apple,   New York, 1200\r\n\"@  | Export-Excel  -Path test.xlsx -PassThru\r\n    Add-ExcelChart -Worksheet $Excel.Workbook.Worksheets[1] -ChartType \"Doughnut\" -XRange \"A2:B7\"  -YRange \"C2:C7\" -width 500\r\n    Close-ExcelPackage -Show $Excel\r\nThe first command expands a multi-line string into 6 rows of data which is exported to new Excel file; leaving an ExcelPackage object in $excel The second command adds a chart - the cell ranges are explicitly specified.\r\n\r\nNote that the XRange (labels) is TWO columns wide and the chart will combine the name of the product and the name of the City to create the label.\r\n\r\nThe width of the chart is set explictly, the default legend is used and there is no Chart title."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "PS\\> $Excel = Invoke-Sum (Get-Process) Company Handles, PM, VirtualMemorySize | Export-Excel $path  -AutoSize -ExcelChartDefinition $c -AutoNameRange -PassThru\r\n     Add-ExcelChart -Worksheet $Excel.Workbook.Worksheets[1] -Title \"VM use\" -ChartType PieExploded3D   -XRange \"Name\" -YRange \"VirtualMemorySize\" -NoLegend -ShowCategory\r\n     Close-ExcelPackage $Excel -Show\r\nThe first line exports information and creates named ranges for each column.\r\n\r\nThe Second line uses the ranges to specify a chart - the labels come from the range \"Name\" and the data from the range \"VirtualMemorySize\"\r\n\r\nThe chart is specified as a 3D exploded PIE chart, with a title of \"VM Use\" and instead of a legend the the pie slices are identified with a label."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "PS\\> $Excel = Invoke-Sum (Get-Process) Company Handles, PM, VirtualMemorySize | Export-Excel test.xlsx  -TableName Processes -PassThru\r\n      Add-ExcelChart -Worksheet $Excel.Workbook.Worksheets[1] -Title Stats -ChartType LineMarkersStacked   -XRange \"Processes[Name]\" -YRange \"Processes[PM]\", \"Processes[VirtualMemorySize]\" -SeriesHeader 'PM', 'VMSize'\r\n      Close-ExcelPackage $Excel -Show\r\nThe first line exports information to a table in new file; and captures the excel Package object in $Excel\r\n\r\nThe second line creates a chart on the first page of the work sheet, using the notation \"TableName[ColumnnName]\" to refer to the data, the labels come Name column in the table, and the data series from its PM and VirtualMemorySize columns. The display names for these in the header are set to 'PM' and 'VMSize'."
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "PS\\> $excel = 0..360 | ForEach-Object {[pscustomobject][ordered]@{x = $_; Sinx = \"=Sin(Radians(x)) \"}} | Export-Excel -AutoNameRange -Path Text.xlsx -WorkSheetname SinX -PassThru\r\nAdd-ExcelChart -Worksheet $excel.Workbook.Worksheets[\"Sinx\"] -ChartType line -XRange \"X\" -YRange \"Sinx\"  -Title \"Graph of Sine X\" -TitleBold -TitleSize 14 \\`\r\n               -Column 2 -ColumnOffSetPixels 35 -Width 800 -XAxisTitleText \"Degrees\" -XAxisTitleBold -XAxisTitleSize 12 -XMajorUnit 30 -XMinorUnit 10 -XMinValue 0 -XMaxValue 361  -XAxisNumberformat \"000\" \\`\r\n               -YMinValue -1.25 -YMaxValue 1.25 -YMajorUnit 0.25 -YAxisNumberformat \"0.00\" -YAxisTitleText \"Sine\" -YAxisTitleBold -YAxisTitleSize 12 \\`\r\n               -SeriesHeader \"Sin(x)\" -LegendSize 8 -legendBold  -LegendPosition Bottom\r\nClose-ExcelPackage $Excel -Show\r\nThe first line puts numbers from 0 to 360 into a sheet, as the first column, and a formula to calculate the Sine of that number of number of degrees in the second column. It creates named-ranges for the two columns - \"X\" and \"SinX\" respectively\r\n\r\nThe Add-ExcelChart command adds a chart to that worksheet, specifying a line chart with the X values coming from named-range \"X\" and the Y values coming from named-range \"SinX\". The chart has a title, and is positioned to the right of column 2 and sized 800 pixels wide\r\n\r\nThe X-axis is labelled \"Degrees\", in bold 12 point type and runs from 0 to 361 with labels every 30, and minor tick marks every 10. Degrees are shown padded to 3 digits.\r\n\r\nThe Y-axis is labelled \"Sine\" and to allow some room above and below its scale runs from -1.25 to 1.25, and is marked off in units of 0.25 shown to two decimal places.\r\n\r\nThe key will for the chart will be at the bottom in 8 point bold type and the line will be named \"Sin(x)\"."
+    }
+  ]
+}

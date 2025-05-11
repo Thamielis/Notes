@@ -1,0 +1,39 @@
+{
+  "Synopsis": "List branches",
+  "Description": "Lists all branches from a repository",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[List branches](https://docs.github.com/rest/branches/branches#list-branches)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubRepoBranch -Owner 'octocat' -Repository 'Hello-World'\r\nGets all the branches from the 'Hello-World' repository owned by 'octocat'"
+    }
+  ]
+}

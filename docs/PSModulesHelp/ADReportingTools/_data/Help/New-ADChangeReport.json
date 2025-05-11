@@ -1,0 +1,43 @@
+{
+  "Synopsis": "Create an HTML change report.",
+  "Description": "New-ADChangeReport will create an HTML report showing changes to Active Directory users, computers, and groups since a given date and time. The command uses Get-ADObject to query the WhenChanged property. The objects are organized by class and/or container and written to an HTML file. The command uses a CSS file from the ADReportingTools module, although you can specify your own. To make the HTML file portable, you can opt to embed the CSS content from a file source.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "An earlier version of this command was first described at https://jdhitsolutions.com/blog/powershell/8087/an-active-directory-change-report-from-powershell/\r\n",
+    "Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "System.IO.FileInfo"
+  ],
+  "Links": [
+    "https://bit.ly/3dFGuoh",
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> New-ADChangeReport -Since \"3/1/2021\" -Path C:\\work\\March-2021-Change.html -ReportTitle \"March AD Change Report\" -EmbedCSS\r\nThis example will create a report called March-2021-Change.html with Active Directory changes since March 1, 2021l. The HTML report will use the default CSS file from the ADReportingTools module and embed it into the file."
+    }
+  ]
+}

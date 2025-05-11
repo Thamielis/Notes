@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Compile a module from ps1 files to a single psm1",
+  "Description": "Compiles modules from source according to conventions:\n1. A single ModuleName.psd1 manifest file with metadata\n2. Source subfolders in the same directory as the Module manifest:\n   Enum, Classes, Private, Public contain ps1 files\n3. Optionally, a build.psd1 file containing settings for this function\n\nThe optimization process:\n1. The OutputDirectory is created\n2. All psd1/psm1/ps1xml files (except build.psd1) in the Source will be copied to the output\n3. If specified, $CopyPaths (relative to the Source) will be copied to the output\n4. The ModuleName.psm1 will be generated (overwritten completely) by concatenating all .ps1 files in the $SourceDirectories subdirectories\n5. The ModuleVersion and ExportedFunctions in the ModuleName.psd1 may be updated (depending on parameters)",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Build-Module -Suffix \"Export-ModuleMember -Function *-* -Variable PreferenceVariable\"\r\nThis example shows how to build a simple module from it's manifest, adding an Export-ModuleMember as a Suffix"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Build-Module -Prefix \"using namespace System.Management.Automation\"\r\nThis example shows how to build a simple module from it's manifest, adding a using statement at the top as a prefix"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "$gitVersion = gitversion | ConvertFrom-Json | Select -Expand InformationalVersion\r\nBuild-Module -SemVer $gitVersion\r\nThis example shows how to use a semantic version from gitversion to version your build."
+    }
+  ]
+}

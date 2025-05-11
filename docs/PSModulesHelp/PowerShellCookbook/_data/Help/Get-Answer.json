@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Uses Bing Answers to answer your question",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-Answer \"sqrt(2)\"\r\nsqrt(2) = 1.41421356"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-Answer msft stock\r\nMicrosoft Corp (US:MSFT) NASDAQ\r\n29.66  -0.35 (-1.17%)\r\nAfter Hours: 30.02 +0.36 (1.21%)\r\nOpen: 30.09    Day's Range: 29.59 - 30.20\r\nVolume: 55.60 M    52 Week Range: 17.27 - 31.50\r\nP/E Ratio: 16.30    Market Cap: 260.13 B"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-Answer \"What is the time in Seattle, WA?\"\r\nCurrent time in Seattle, WA\r\n01:12:41 PM\r\n08/18/2012 ? Pacific Daylight Time"
+    }
+  ]
+}

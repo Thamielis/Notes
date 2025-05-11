@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Clears the ConflictAndDeleted folder in DFSR for specified GPOs.",
+  "Description": "This function clears the ConflictAndDeleted folder in DFSR for specified Group Policy Objects (GPOs) within a given forest. It allows excluding specific domains and domain controllers if needed.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Clear-GPOZaurrSysvolDFSR -Forest \"contoso.com\" -IncludeDomains \"child.contoso.com\" -ExcludeDomainControllers \"dc1.contoso.com\" -SkipRODC\r\nClears the ConflictAndDeleted folder in DFSR for GPOs in the \"contoso.com\" forest, including only the \"child.contoso.com\" domain and excluding the \"dc1.contoso.com\" domain controller."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Clear-GPOZaurrSysvolDFSR -Forest \"contoso.com\" -IncludeDomains \"child.contoso.com\" -LimitProcessing 5\r\nClears the ConflictAndDeleted folder in DFSR for GPOs in the \"contoso.com\" forest, including only the \"child.contoso.com\" domain, and processes a maximum of 5 GPOs."
+    }
+  ]
+}

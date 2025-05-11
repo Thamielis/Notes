@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Convert msExchRemoteRecipientType, msExchRecipientDisplayType, msExchRecipientTypeDetails to their respective name",
+  "Description": "Convert msExchRemoteRecipientType, msExchRecipientDisplayType, msExchRecipientTypeDetails to their respective name",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Based on:\n- https://granikos.eu/exchange-recipient-type-values/\n- https://answers.microsoft.com/en-us/msoffice/forum/all/recipient-type-values/7c2620e5-9870-48ba-b5c2-7772c739c651\n- https://www.undocumented-features.com/2020/05/06/every-last-msexchrecipientdisplaytype-and-msexchrecipienttypedetails-value/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$Users = Get-ADUser -Filter * -Properties Mail, ProxyAddresses, msExchRemoteRecipientType, msExchRecipientDisplayType, msExchRecipientTypeDetails, MailNickName\r\n$UsersModified = foreach ($User in $Users) {\r\n    [PSCUstomObject] @{\r\n        Name                       = $User.Name\r\n        Mail                       = $User.Mail\r\n        MailNickName               = $User.MailNickName\r\n        msExchRemoteRecipientType  = Convert-ExchangeRecipient -msExchRemoteRecipientType $User.msExchRemoteRecipientType\r\n        msExchRecipientDisplayType = Convert-ExchangeRecipient -msExchRecipientDisplayType $User.msExchRecipientDisplayType\r\n        msExchRecipientTypeDetails = Convert-ExchangeRecipient -msExchRecipientTypeDetails $User.msExchRecipientTypeDetails\r\n        ProxyAddresses             = Convert-ExchangeEmail -AddSeparator -RemovePrefix -RemoveDuplicates -Separator ',' -Emails $User.ProxyAddresses\r\n    }\r\n}\r\n$UsersModified | Out-HtmlView -Filtering -ScrollX"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Convert-ExchangeRecipient -msExchRemoteRecipientType 17\r\nConvert-ExchangeRecipient -msExchRecipientDisplayType 17\r\nConvert-ExchangeRecipient -msExchRecipientTypeDetails 17"
+    }
+  ]
+}

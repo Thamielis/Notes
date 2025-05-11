@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Lists installed software on the current computer.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-InstalledSoftware *Frame* | Select DisplayName\r\nDisplayName\r\n-----------\r\nMicrosoft .NET Framework 3.5 SP1\r\nMicrosoft .NET Framework 3.5 SP1\r\nHotfix for Microsoft .NET Framework 3.5 SP1 (KB953595)\r\nHotfix for Microsoft .NET Framework 3.5 SP1 (KB958484)\r\nUpdate for Microsoft .NET Framework 3.5 SP1 (KB963707)"
+    }
+  ]
+}

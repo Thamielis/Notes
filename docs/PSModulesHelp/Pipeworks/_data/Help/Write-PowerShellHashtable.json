@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Takes an creates a script to recreate a hashtable",
+  "Description": "Allows you to take a hashtable and create a hashtable you would embed into a script.\n\nHandles nested hashtables and indents nested hashtables automatically.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "[string]",
+    "[ScriptBlock]"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "Corrects the presentation of a PowerShell hashtable",
+      "Code": "@{Foo='Bar';Baz='Bing';Boo=@{Bam='Blang'}} | Write-PowerShellHashtable"
+    }
+  ]
+}

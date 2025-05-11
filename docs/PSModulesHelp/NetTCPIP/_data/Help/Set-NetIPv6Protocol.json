@@ -1,0 +1,48 @@
+{
+  "Synopsis": "Modifies the IPv6 protocol configuration.",
+  "Description": "The Set-NetIPv6Protocol cmdlet modifies the global IPv6 protocol configuration for a computer. If you do not specify any parameters for the cmdlet, the cmdlet sets the default values for the IPv6 protocol configuration.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetIPv6Protocol"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkId=289168",
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Enable the DHCP Media Sense event log",
+      "Markdown": "",
+      "Code": "PS C:\\>Set-NetIPv6Protocol –MediaSenseEventLog Enabled\r\nThis command enables the DHCP Media Sense event log."
+    },
+    {
+      "Title": "Example 2: Increase the number of neighbors",
+      "Markdown": "",
+      "Code": "PS C:\\>Set-NetIPv6Protocol –NeighborCacheLimitEntries 1000\r\nThis command increases the size of the cache of on-link neighbors on the subnet to 1,000. The default value is 256."
+    }
+  ]
+}

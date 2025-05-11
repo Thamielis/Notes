@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Remove repository access to an organization installation.",
+  "Description": "Remove repository access to an organization installation.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$params = @{\r\n    Enterprise          = 'msx'\r\n    Organization        = 'PSModule'\r\n    InstallationID      = 12345678\r\n    Repositories        = 'repo1', 'repo2'\r\n}\r\nRemove-GitHubAppInstallationRepositoryAccess @params\r\nRemove access to the repositories 'repo1' and 'repo2' for the installation\r\nwith the ID '12345678' on the organization 'PSModule' in the enterprise 'msx'."
+    }
+  ]
+}

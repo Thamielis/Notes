@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Retrieves duplicate Group Policy Objects (GPOs) within a specified forest.",
+  "Description": "This function retrieves duplicate Group Policy Objects (GPOs) within a specified forest by comparing GPOs based on partial distinguished name matching.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GPOZaurrDuplicateObject -Forest \"contoso.com\" -IncludeDomains \"child1.contoso.com\", \"child2.contoso.com\" -ExcludeDomains \"child3.contoso.com\" -ExtendedForestInformation $additionalInfo\r\nDescription\r\n-----------\r\nRetrieves duplicate GPOs within the \"contoso.com\" forest, including domains \"child1.contoso.com\" and \"child2.contoso.com\" while excluding \"child3.contoso.com\". Additional forest information is provided for the search."
+    }
+  ]
+}

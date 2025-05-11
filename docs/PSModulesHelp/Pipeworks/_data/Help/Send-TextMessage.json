@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Sends text messages",
+  "Description": "Sends text messages with twilio",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Xml.XmlDocument"
+  ],
+  "Links": [
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "Looks up a phone number location and texts the url of a map to that #",
+      "Code": "Search-WolframAlpha -For \"1-206-607-6555\" -ApiKeySetting WolframAlphaApiKey | \r\n    Select-Object -ExpandProperty Map | \r\n    Send-TextMessage -To \"1-206-555-1212\" -From \"1-206-607-6555\" -Body { $_ }"
+    }
+  ]
+}

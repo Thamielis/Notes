@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Search the PowerShell help documentation for a given keyword or regular\nexpression. For simple keyword searches in PowerShell version two or three,\nsimply use \"Get-Help <keyword>\"",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Search-Help hashtable\r\nSearches help for the term 'hashtable'"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Search-Help \"(datetime|ticks)\"\r\nSearches help for the term datetime or ticks, using the regular expression\r\nsyntax."
+    }
+  ]
+}

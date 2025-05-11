@@ -1,0 +1,45 @@
+{
+  "Synopsis": "Creates and configures an IP address.",
+  "Description": "The New-NetIPAddress cmdlet creates and configures an IP address. To create a specific IP address object, specify either an IPv4 address or an IPv6 address, and an interface index or interface alias. We recommend that you define the prefix length, also known as a subnet mask, and a default gateway.\r\n\r\n\r\nIf you run this cmdlet to add an IP address to an interface on which DHCP is already enabled, then DHCP is automatically disabled. If Duplicate Address Detection (DAD) is enabled on the interface, the new IP address is not usable until DAD successfully finishes, which confirms the uniqueness of the IP address on the link.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetIPAddress"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkId=288394",
+    null,
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Add an IPv4 address",
+      "Markdown": "",
+      "Code": "PS C:\\>New-NetIPAddress –InterfaceIndex 12 –IPAddress 192.168.0.1 -PrefixLength 24 -DefaultGateway 192.168.0.5\r\n\r\n\r\nThe second command removes the IPv4 address. To remove the IPv4 address, use the Remove-NetIPAddress cmdlet.\r\nPS C:\\>Remove-NetIPAddress –IPAddress 192.168.0.1 -DefaultGateway 192.168.0.5\r\nThe first command adds a new IPv4 address to the network interface at index 12. The PrefixLength parameter specifies the subnet mask for the IP address. In this example, the PrefixLength of 24 equals a subnet mask of 255.255.255.0.  When you add an IPv4 address, the address specified for the Default Gateway must be in the same subnet as the IPv4 address that you add."
+    }
+  ]
+}

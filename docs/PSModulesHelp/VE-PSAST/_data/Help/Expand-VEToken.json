@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Some Synopsis",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "Some Input\n\n\n\nhttps://powershell.one/powershell-internals/parsing-and-tokenization/advanced-tokenizer\nhttps://github.com/TobiasPSP/Modules.PSOneTools/blob/master/PSOneTools/1.4/Expand-PSOneToken.ps1"
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "http://google.com"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-Command 1"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-Command 2"
+    }
+  ]
+}

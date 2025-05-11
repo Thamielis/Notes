@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Uploads a new asset for a release on GitHub.",
+  "Description": "Uploads a new asset for a release on GitHub.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "GitHub renames asset filenames that have special characters, non-alphanumeric characters,\nand leading or trailing periods. Get-GitHubReleaseAsset lists the renamed filenames.\n\nIf you upload an asset with the same filename as another uploaded asset, you'll receive\nan error and must delete the old file before you can re-upload the new asset."
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Branch\nGitHub.Content\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Release\nGitHub.ReleaseAsset\nGitHub.Repository"
+  ],
+  "Outputs": [
+    "GitHub.ReleaseAsset"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-GitHubReleaseAsset -OwnerName microsoft -RepositoryName PowerShellForGitHub -Release 123456 -Path 'c:\\foo.zip'\r\nUploads the file located at 'c:\\foo.zip' to the 123456 release in microsoft/PowerShellForGitHub"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$release = New-GitHubRelease -OwnerName microsoft -RepositoryName PowerShellForGitHub -Tag 'stable'\r\n$release | New-GitHubReleaseAsset -Path 'c:\\bar.txt'\r\nCreates a new release tagged as 'stable' and then uploads 'c:\\bar.txt' as an asset for\r\nthat release."
+    }
+  ]
+}

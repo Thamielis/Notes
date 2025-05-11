@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new WMI filter based on a WMI filter query.",
+  "Description": "This function creates a new WMI filter in Active Directory based on a specified WMI filter query.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-GPOZaurrWMI -Name \"TestWMIFilter1\" -Query \"SELECT * FROM Win32_OperatingSystem\" -Force\r\nCreates a new WMI filter named \"TestWMIFilter1\" targeting all Windows operating systems."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-GPOZaurrWMI -Name \"TestWMIFilter2\" -Query \"SELECT * FROM Win32_Processor\" -Forest \"Contoso\" -IncludeDomains \"FinanceDomain\"\r\nCreates a new WMI filter named \"TestWMIFilter2\" targeting all processors in the \"FinanceDomain\" within the \"Contoso\" forest."
+    }
+  ]
+}

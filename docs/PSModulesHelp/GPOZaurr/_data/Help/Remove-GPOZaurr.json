@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Removes Group Policy Objects based on specified criteria.",
+  "Description": "The Remove-GPOZaurr function removes Group Policy Objects (GPOs) based on the specified criteria. It allows for filtering by various parameters such as GPO type, forest, domains, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-GPOZaurr -Type 'Empty' -Forest 'Contoso' -IncludeDomains 'Domain1', 'Domain2' -BackupPath 'C:\\GPOBackups' -BackupDated -RequireDays 7\r\nRemoves all empty GPOs from the 'Contoso' forest for 'Domain1' and 'Domain2', backs them up to 'C:\\GPOBackups' with dated folders, and requires removal after 7 days."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Remove-GPOZaurr -Type 'Disabled' -Forest 'Fabrikam' -ExcludeDomains 'Domain3' -LimitProcessing 10\r\nRemoves all disabled GPOs from the 'Fabrikam' forest excluding 'Domain3' and processes only the first 10 GPOs."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Repairs permission consistency for Group Policy Objects (GPOs) in a specified domain or forest.",
+  "Description": "The Repair-GPOZaurrPermissionConsistency function repairs permission consistency for GPOs in a specified domain or forest. It checks for inconsistencies in GPO permissions and attempts to make them consistent.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Repair-GPOZaurrPermissionConsistency -GPOName \"ExampleGPO\" -Forest \"example.com\"\r\nRepairs permission consistency for the GPO named \"ExampleGPO\" in the \"example.com\" forest."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Repair-GPOZaurrPermissionConsistency -GPOGuid \"12345678-1234-1234-1234-1234567890AB\" -ExcludeDomains @(\"domain1\", \"domain2\") -LimitProcessing 5\r\nRepairs permission consistency for the GPO with the specified GUID, excluding domains \"domain1\" and \"domain2\", and processing a maximum of 5 GPOs."
+    }
+  ]
+}

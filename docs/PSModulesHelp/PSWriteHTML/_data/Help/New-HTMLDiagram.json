@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new HTML diagram with customizable options.",
+  "Description": "This function creates a new HTML diagram with customizable options such as diagram data, height, width, image bundling, background image, background size, auto-resize, loading bar, filtering, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLDiagram -Diagram {\r\n    // Diagram configuration settings here\r\n} -Height 500 -Width 800 -BundleImages -BackGroundImage 'https://example.com/background.jpg' -BackgroundSize 'cover' -DisableLoader -EnableFiltering -MinimumFilteringChars 2 -EnableFilteringButton\r\nCreates a new HTML diagram with custom configuration settings including height, width, bundled images, background image, disabled loading bar, enabled filtering, and a filtering button."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-HTMLDiagram -Diagram {\r\n    // More diagram configuration settings\r\n} -Height 600 -Width 1000\r\nCreates a new HTML diagram with additional configuration settings and default options for height and width."
+    }
+  ]
+}

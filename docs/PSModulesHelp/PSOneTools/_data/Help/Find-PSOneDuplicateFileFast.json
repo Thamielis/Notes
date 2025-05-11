@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Identifies files with duplicate content and uses a partial hash for large files to speed calculation up",
+  "Description": "Returns a hashtable with the hashes that have at least two files (duplicates). Large files with partial hashes are suffixed with a \"P\".\nLarge files with a partial hash can be falsely positive: they may in fact be different even though the partial hash is the same\nYou either need to calculate the full hash for these files to be absolutely sure, or add -TestPartialHash.\nCalculating a full hash for large files may take a very long time though. So you may be better off using other\nstrategies to identify duplicate file content, i.e. look at identical creation times, etc.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://powershell.one"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$Path = [Environment]::GetFolderPath('MyDocuments')\r\nFind-PSOneDuplicateFileFast -Path $Path\r\nFind duplicate files in the user documents folder"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Find-PSOneDuplicateFileFast -Path c:\\windows -Filter *.log\r\nfind log files in the Windows folder with duplicate content"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "Synopsis": "Get AD User information based on category",
+  "Description": "Get-ADUserCategory is based on the concept of getting user information from a pre-defined category. For example, you might want to get the properties DisplayName, Name, Title, Department, and Manager for a Department category. The ADReportingTools module will define a set of pre-defined categories that you can reference through $ADUserReportingConfiguration.\r\n\r\n\r\nThese are the current defaults.\r\n\r\n\r\nDepartment   DisplayName,Name,Title,Department,Manager Basic   DisplayName,Name,SamAccountname,UserPrincipalName,Enabled,WhenCreated,WhenChanged Address   DisplayName,Name,TelephoneNumber,Office,StreetAddress,POBox,City,State,PostalCode Organization   DisplayName,Name,Title,Department,Manager,Company,Office Pwinfo   DisplayName,Name,PasswordExpired,PasswordLastSet,PasswordNeverExpires\r\n\r\n\r\nThe user's distinguishedname will always be included.\r\n\r\n\r\nYou don't have to remember what property names to include or reference.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "ADUserCategory"
+  ],
+  "Links": [
+    "https://bit.ly/3eE8o6t",
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADUserCategory artd -Category basic\r\n\r\n\r\nDistinguishedName : CN=ArtD,OU=IT,DC=Company,DC=Pri\r\nDisplayName       : Art Deco\r\nName              : ArtD\r\nSamAccountname    : ArtD\r\nUserPrincipalName : artd@company.com\r\nEnabled           : True\r\nWhenCreated       : 1/25/2021 1:32:35 PM\r\nWhenChanged       : 3/11/2021 6:32:58 PM"
+    },
+    {
+      "Title": "Example 2",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADUserCategory -filter \"department -eq 'sales'\" -Category Department\r\n\r\n\r\nDistinguishedName : CN=SamS,OU=Sales,DC=Company,DC=Pri\r\nDisplayName       : Sam Smith\r\nName              : SamS\r\nTitle             :\r\nDepartment        : Sales\r\nManager           : CN=SonyaS,OU=Sales,DC=Company,DC=Pri\r\n\r\nDistinguishedName : CN=SonyaS,OU=Sales,DC=Company,DC=Pri\r\nDisplayName       : Sonya Smith\r\nName              : SonyaS\r\nTitle             : Account Executive\r\nDepartment        : Sales\r\nManager           :\r\n\r\nDistinguishedName : CN=SamanthaS,OU=Sales,DC=Company,DC=Pri\r\nDisplayName       : Samantha Smith\r\nName              : SamanthaS\r\nTitle             : Sales Assistant\r\nDepartment        : Sales\r\nManager           : CN=SonyaS,OU=Sales,DC=Company,DC=Pri"
+    },
+    {
+      "Title": "Example 3",
+      "Markdown": "",
+      "Code": "PS C:\\> $ADUserReportingConfiguration += [pscustomobject]@{Name=\"Custom\";Properties=\"DisplayName\",\"Description\"}\r\nPS C:\\> Get-ADUserCategory -filter \"givenname -like 'a*'\" -Category custom\r\n\r\nDistinguishedName                              DisplayName       Description\r\n-----------------                              -----------       -----------\r\nCN=AaronS,OU=Accounting,DC=Company,DC=Pri      Aaron Smith       Accountant\r\nCN=Al Fresco,OU=Dev,DC=Company,DC=Pri          Al Fresco\r\nCN=A.Henaire,OU=Employees,DC=Company,DC=Pri    Alexander Henaire\r\nCN=Alfonso Dente,OU=Sales,DC=Company,DC=Pri    Alfonso Dente\r\nCN=AndreaS,OU=Accounting,DC=Company,DC=Pri     Andrea Smith      Accountant\r\nCN=AndyS,OU=Accounting,DC=Company,DC=Pri       Andy Smith        Accountant\r\nCN=Anthony Stark,OU=Research,DC=Company,DC=Pri Tony Stark\r\nCN=AprilS,OU=IT,DC=Company,DC=Pri              April Showers     PowerShell Guru\r\nCN=A.Fieldhouse,OU=Employees,DC=Company,DC=Pri Aron Fieldhouse   sample user ...\r\nCN=ArtD,OU=IT,DC=Company,DC=Pri                Art Deco          PowerShell E...\r\nCN=Art Frame,OU=Accounting,DC=Company,DC=Pri   Art Frame         Test User\r\nThe first command is adding a new category. The second command uses the category."
+    }
+  ]
+}

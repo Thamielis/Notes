@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Monitors the clipboard, and when new valid PowerShell code is detected, opens the code in an editor",
+  "Description": "Uses a background thread to monitor the clipboard. If new valid PowerShell code is detected, an action is invoked. The action depends on the editor used, and opens the clipboard code in an editor window",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Anything that is copied to the clipboard can trigger the monitor, so make sure you turn off the monitor once you are done."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://powershell.one"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Start-PSOneClipboardListener\r\nStarts the background clipboard monitor"
+    }
+  ]
+}

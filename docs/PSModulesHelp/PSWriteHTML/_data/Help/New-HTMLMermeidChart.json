@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new HTML Mermaid chart.",
+  "Description": "This function creates a new HTML Mermaid chart based on the provided Markdown scriptblock.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLMermeidChart -Markdown { @\"\r\ngraph TD;\r\n    A-->B;\r\n    A-->C;\r\n    B-->D;\r\n    C-->D;\r\n\"@ }\r\nThis example creates a simple flowchart with nodes A, B, C, and D connected by arrows."
+    }
+  ]
+}

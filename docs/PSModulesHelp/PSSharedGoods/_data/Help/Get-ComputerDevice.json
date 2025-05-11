@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieves information about computer devices.",
+  "Description": "This function retrieves information about computer devices using WMI.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-ComputerDevice -ComputerName \"Computer01\" -Protocol \"Wsman\" -All\r\nRetrieves all properties of computer devices from a remote computer using Wsman protocol."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-ComputerDevice -ComputerName \"Computer02\" -Extended\r\nRetrieves extended properties of computer devices from a remote computer."
+    }
+  ]
+}

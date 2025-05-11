@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates HTML content from Markdown text with customizable options.",
+  "Description": "The New-HTMLMarkdown function converts Markdown text to HTML content with various customization options such as strikethrough, emojis, code block styling, table of contents, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLMarkdown -FilePath \"C:\\Markdown\\example.md\" -EnableStrikethrough -EnableEmoji -EnableTOC\r\nConverts the Markdown content from the file \"example.md\" to HTML with strikethrough, emojis, and a table of contents."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$MarkdownContent = @(\"## Title\", \"This is a **bold** text.\")\r\nNew-HTMLMarkdown -Content $MarkdownContent -EnableMoreStyling -EnableTaskLists\r\nConverts the Markdown content in the array with additional styling and task list support."
+    }
+  ]
+}

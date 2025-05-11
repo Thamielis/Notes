@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Adds Tables to Excel workbooks.",
+  "Description": "Unlike named ranges, where the name only needs to be unique within a sheet, Table names must be unique in the workbook.\r\n\r\n\r\nTables carry formatting and by default have a filter.\r\n\r\n\r\nThe filter, header, totals, first and last column highlights can all be configured.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "OfficeOpenXml.Table.ExcelTable"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS\\> Add-ExcelTable -Range $ws.Cells[$dataRange] -TableName $TableName\r\n$WS is a worksheet, and $dataRange is a string describing a range of cells - for example \"A1:Z10\". This range which will become a table, named $TableName"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "PS\\> Add-ExcelTable -Range $ws.cells[$($ws.Dimension.address)] -TableStyle Light1 -TableName Musictable -ShowFilter:$false -ShowTotal -ShowFirstColumn\r\nAgain $ws is a worksheet, range here is the whole of the active part of the worksheet. The table style and name are set, the filter is turned off, and a \"Totals\" row added, and first column is set in bold."
+    }
+  ]
+}

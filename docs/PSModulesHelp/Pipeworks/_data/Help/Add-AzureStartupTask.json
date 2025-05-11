@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Adds a startup task to Azure",
+  "Description": "Adds a startup task to an azure service configuration, and packs some extra information into the XML to allow \nusing ScriptBlock as startup tasks",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Xml.XmlDocument",
+    "System.String"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-AzureServiceDefinition -ServiceName \"MyService\" |\r\n    Add-AzureStartupTask -ScriptBlock { \"Hello World\" } -Elevated -asString"
+    }
+  ]
+}

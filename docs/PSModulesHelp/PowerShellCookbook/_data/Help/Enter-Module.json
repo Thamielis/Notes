@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Lets you examine internal module state and functions by executing user\ninput in the scope of the supplied module.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Import-Module PersistentState\r\nPS > Get-Module PersistentState\r\nModuleType Name                      ExportedCommands\r\n---------- ----                      ----------------\r\nScript     PersistentState           {Set-Memory, Get-Memory}\r\n\r\n\r\nPS > \"Hello World\" | Set-Memory\r\nPS > $m = Get-Module PersistentState\r\nPS > Enter-Module $m\r\nPersistentState: dir variable:\\mem*\r\n\r\nName                           Value\r\n----                           -----\r\nmemory                         {Hello World}\r\n\r\nPersistentState: exit\r\nPS >"
+    }
+  ]
+}

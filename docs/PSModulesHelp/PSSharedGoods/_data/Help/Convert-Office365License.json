@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Converts Office 365 licenses between their names and SKUs.",
+  "Description": "This function allows for the conversion of Office 365 licenses between their names and SKUs. It provides flexibility to handle multiple values for licenses.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "For more information on Office 365 licensing, refer to: https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/licensing-service-plan-reference"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Convert-Office365License -License 'VISIOCLIENT','PROJECTONLINE_PLAN_1','test','tenant:VISIOCLIENT'\r\nConverts the specified licenses to their corresponding SKUs."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Convert-Office365License -License \"Office 365 A3 for faculty\", \"Project Plan 3 (for Department)\", 'test' -ToSku\r\nConverts the specified license names to their corresponding SKUs."
+    }
+  ]
+}

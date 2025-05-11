@@ -1,0 +1,39 @@
+{
+  "Synopsis": "List forks",
+  "Description": "List forks of a named repository.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[List forks](https://docs.github.com/rest/repos/forks#list-forks)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubRepositoryFork -Owner 'octocat' -Repository 'Hello-World'\r\nList forks of the 'Hello-World' repository owned by 'octocat'."
+    }
+  ]
+}

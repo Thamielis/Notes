@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Create an HTML report of AD groups",
+  "Description": "New-ADGroupReport will create an HTML report of specified groups from Active Directory. This function is based on Get-ADGroupReport and converts the output to an HTML file. You can specify a CSS file or use the default from the module.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "System.IO.File"
+  ],
+  "Links": [
+    "https://bit.ly/3uthsPX",
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> New-ADGroupReport -excludeBuiltIn -embedCSS -server dom2 -category security -filepath c:\\work\\secgroup.html\r\nThis example will create a new HTML report of all Security groups, excluding the built-in groups. Disabled user accounts will be highlighted in red since the command is using the module's CSS file, which is also being embedded. User detail will pop-up when the mouse hovers over the user's distinguishedname."
+    }
+  ]
+}

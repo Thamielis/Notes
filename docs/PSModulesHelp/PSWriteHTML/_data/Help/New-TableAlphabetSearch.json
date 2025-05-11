@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a custom object for Table Alphabet Search with specified parameters.",
+  "Description": "This function creates a custom object for Table Alphabet Search with the specified parameters. It allows for customization of the search behavior by enabling case sensitivity and adding numbers to the search.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-TableAlphabetSearch -ColumnID 1 -ColumnName \"Name\" -AddNumbers -CaseSensitive\r\nCreates a Table Alphabet Search object for column ID 1 with the name \"Name\", including numbers in the search and performing a case-sensitive search."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-TableAlphabetSearch -ColumnID 2 -ColumnName \"ID\" -CaseSensitive\r\nCreates a Table Alphabet Search object for column ID 2 with the name \"ID\", performing a case-sensitive search."
+    }
+  ]
+}

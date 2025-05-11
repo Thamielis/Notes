@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Determines whether a given string is a valid Distinguished Name (DN) format.",
+  "Description": "This function checks if the provided string matches the format of a Distinguished Name (DN) in Active Directory. It validates the structure of a DN which typically consists of Common Name (CN), Organizational Unit (OU), and Domain Component (DC) components.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Original source: https://github.com/PsCustomObject/IT-ToolBox/blob/master/Public/Test-IsValidDn.ps1"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Test-IsDistinguishedName -Identity \"CN=John Doe,OU=Users,DC=example,DC=com\"\r\nThis example checks if the given string is a valid Distinguished Name format."
+    }
+  ]
+}

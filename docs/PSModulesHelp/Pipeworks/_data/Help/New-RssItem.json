@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Creates a new RSS Feed Item",
+  "Description": "Creates a new RSS Feed Item.  When use with Out-Feed, can easily publish any information as RSS",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-RssItem -Title 'My Post' -Description 'Things I Learning While Writing Pipeworks' -Author $env:UserName -Link '.' -Category Stuff, OtherStuff"
+    }
+  ]
+}

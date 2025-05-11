@@ -1,0 +1,51 @@
+{
+  "Synopsis": "Gets TCP connections.",
+  "Description": "The Get-NetTCPConnection cmdlet gets current TCP connections. Use this cmdlet to view TCP connection properties such as local or remote IP address, local or remote port, and connection state.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetTCPConnection"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkID=288389"
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Get all connections",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetTCPConnection\r\nThis command gets all current TCP connections."
+    },
+    {
+      "Title": "Example 2: Get established connections",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetTCPConnection –State Established\r\nThis command gets all TCP connections that have an Established state."
+    },
+    {
+      "Title": "Example 3: Get Internet TCP connections",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetTCPConnection –AppliedSetting Internet\r\nThis command gets all TCP connections that use a TCP applied setting of Internet."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new HTML calendar using FullCalendar library.",
+  "Description": "This function creates a new HTML calendar using the FullCalendar library. It allows customization of various calendar settings such as header elements, initial view, default date, event handling, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLCalendar -CalendarSettings {\r\n    # Define calendar settings here\r\n}\r\nCreates a new HTML calendar with default settings."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-HTMLCalendar -CalendarSettings {\r\n    # Define calendar settings here\r\n} -HeaderLeft 'prev', 'next' -HeaderCenter 'title' -HeaderRight 'dayGridMonth', 'timeGridWeek' -DefaultDate (Get-Date) -NavigationLinks $true -NowIndicator $true -EventLimit $true -WeekNumbers $true -Selectable $true -SelectMirror $true -BusinessHours -Editable -InitialView 'dayGridMonth' -UrlTarget 'https://example.com' -EventTimeFormat @{\r\n    hour           = '2-digit'\r\n    minute         = '2-digit'\r\n    omitZeroMinute = $false\r\n    meridiem       = $false\r\n    hour12         = $false\r\n} -SlotLabelFormat @{\r\n    hour           = '2-digit'\r\n    minute         = '2-digit'\r\n    omitZeroMinute = $false\r\n    meridiem       = $false\r\n    hour12         = $false\r\n}\r\nCreates a new HTML calendar with custom settings."
+    }
+  ]
+}

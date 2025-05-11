@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Writes an ASP.NET page that executes PowerShell script",
+  "Description": "Runs a PowerShell script inside of an ASP.net page.  \n\nThe runspace used in the ASP.NET script page will be reused for as long as the session is active.\n\nVariables set while running your script will be available throughout the session.                       \n\nPowerShellV2 must be installed on the server, but no other special binaries are required.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Write-AspDotNetScriptPage -PrependBootstrapper -ScriptBlock {\r\n    $response.Write(\"<pre>\r\n$(Get-Help Get-Command -full | Out-String -width 1024)\r\n</pre>\")            \r\n} | \r\n    Set-Content"
+    }
+  ]
+}

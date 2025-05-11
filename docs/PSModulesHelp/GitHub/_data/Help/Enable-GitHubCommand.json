@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Resumes workflow commands",
+  "Description": "Resumes processing any workflow commands.\n\nTo stop the processing of workflow commands, pass a unique string to the function. To resume processing workflow commands, pass the same string\nthat you used to stop workflow commands to the Enable-GitHubCommand.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[Stopping and starting workflow commands](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/workflow-commands-for-github-actions#stopping-and-starting-workflow-commands)"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Void"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Enable-GitHubCommand \"123\"\r\nResumes processing any workflow commands."
+    }
+  ]
+}

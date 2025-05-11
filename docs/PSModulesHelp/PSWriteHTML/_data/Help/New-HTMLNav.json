@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new HTML navigation menu with customizable options.",
+  "Description": "This function creates a new HTML navigation menu with various customization options such as navigation links, logo, colors, and menu settings.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLNav -NavigationLinks { 'Home', 'About', 'Services' } -Logo 'logo.png' -LogoLink 'https://example.com' -TopBarBackGroundColor 'blue' -TopBarColor 'white' -LeftMenuBackgroundColor 'black' -LeftMenuColor 'white'\r\nCreates a new HTML navigation menu with specified navigation links and custom logo, colors, and menu settings."
+    }
+  ]
+}

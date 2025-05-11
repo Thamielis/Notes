@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Modifies a neighbor cache entry.",
+  "Description": "The Set-NetNeighbor cmdlet modifies a neighbor cache entry. The neighbor cache maintains information for each on-link neighbor, including the IP address and the associated link-layer address. You can modify only neighbor cache entries that are in a permanent state on interfaces that have link-layer addresses. Use this cmdlet to modify the link-layer address and policy store setting of a neighbor cache entry.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetNeighbor"
+  ],
+  "Outputs": [
+    "None"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkId=289169",
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Set the link-layer address for a neighbor cache entry",
+      "Markdown": "",
+      "Code": "PS C:\\>Set-NetNeighbor –InterfaceIndex 12 –IPAddress \"192.168.0.5\" –LinkLayerAddress \"00-00-12-00-00-ff\"\r\nThis command sets the link-layer address for the neighbor cache entry that has the IP address 192.168.0.5 and the interface index value of 12."
+    },
+    {
+      "Title": "Example 2: Set the link-layer address for a neighbor cache entry by using an input object",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetNeighbor –InterfaceIndex 12 –IPAddress \"192.168.0.5\" | Set-NetNeighbor –LinkLayerAddress \"00-00-12-00-00-ff\"\r\nThis command gets the NetNeighbor object that has the IP address 192.168.0.5 and the interface index value of 12. The command passes the object to the Set-NetNeighbor cmdlet by using the pipeline operator. Set-NetNeighbor sets the link-layer address for the neighbor cache entry to 00-00-12-00-00-ff."
+    }
+  ]
+}

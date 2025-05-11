@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new map legend slice.",
+  "Description": "This function creates a new map legend slice with specified parameters.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This function is used to create slices for map legends."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-MapLegendSlice -Label \"Slice 1\" -FillColor \"Blue\" -MinimumValue 0 -MaximumValue 100 -DisplayInLegend $true"
+    }
+  ]
+}

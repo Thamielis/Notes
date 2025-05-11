@@ -1,0 +1,39 @@
+{
+  "Synopsis": "List repository tags",
+  "Description": "List repository tags",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[List repository tags](https://docs.github.com/rest/repos/repos#list-repository-tags)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubRepositoryTag -Owner 'PSModule' -Repository 'GitHub'\r\nGets all tags of the GitHub repository."
+    }
+  ]
+}

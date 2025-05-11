@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Read user input, with choices restricted to the list of options you\nprovide.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$caption = \"Please specify a task\"\r\nPS > $message = \"Specify a task to run\"\r\nPS > $option = \"&Clean Temporary Files\",\"&Defragment Hard Drive\"\r\nPS > $helptext = \"Clean the temporary files from the computer\",\r\n>>              \"Run the defragment task\"\r\n>>\r\nPS > $default = 1\r\nPS > Read-HostWithPrompt $caption $message $option $helptext $default\r\nPlease specify a task\r\nSpecify a task to run\r\n[C] Clean Temporary Files  [D] Defragment Hard Drive  [?] Help\r\n(default is \"D\"):?\r\nC - Clean the temporary files from the computer\r\nD - Run the defragment task\r\n[C] Clean Temporary Files  [D] Defragment Hard Drive  [?] Help\r\n(default is \"D\"):C\r\n0"
+    }
+  ]
+}

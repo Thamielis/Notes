@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Removes permissions from a Group Policy Object (GPO).",
+  "Description": "This function removes specified permissions from a GPO based on the provided criteria.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-GPOPermission -Type 'Administrative' -PermitType 'Deny' -Principal 'S-1-5-21-3623811015-3361044348-30300820-1013' -PrincipalType 'Sid'\r\nRemoves administrative permissions denied for a specific SID from the GPO."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Remove-GPOPermission -Type 'All' -PermitType 'Allow' -Principal 'CN=John Doe,OU=Users,DC=contoso,DC=com' -PrincipalType 'DistinguishedName' -ExcludePrincipal 'S-1-5-21-3623811015-3361044348-30300820-1013' -ExcludePrincipalType 'Sid'\r\nRemoves all permissions allowed for a specific distinguished name while excluding permissions for a specific SID from the GPO."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "Synopsis": "List public SSH keys for a given user or the authenticated user.",
+  "Description": "Lists a given user's or the current user's public SSH keys.\nFor the authenticated users keys, it requires that you are authenticated via Basic Auth or via OAuth with\nat least `read:public_key` [scope](https://docs.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).\nKeys from a given user are accessible by anyone.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[List GPG keys for the authenticated user](https://docs.github.com/rest/users/gpg-keys#list-gpg-keys-for-the-authenticated-user)"
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubUserKey\r\nGets all GPG keys for the authenticated user."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GitHubUserKey -ID '1234567'\r\nGets the public SSH key with the ID '1234567' for the authenticated user."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-GitHubUserKey -Username 'octocat'\r\nGets all GPG keys for the 'octocat' user."
+    }
+  ]
+}

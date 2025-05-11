@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Runs a MapReduce on a set of data",
+  "Description": "Runs a MapReduce on a set of data, sequentially or in background jobs, on one or more machines.\n\n\nMapReduce is an approach to summarizing data.  With MapReduce:\n\n* A Map function takes each value of incoming data and returns one or more objects summarizing that data\n* The summarized data is grouped and passed to one or more functions that reduce that data into a final result",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject"
+  ],
+  "Links": [
+    "http://en.wikipedia.org/wiki/Mapreduce"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-Object PSObject -Property @{\r\n    Text = \"the quick brown fox jumped over the lazy dog\"\r\n} | \r\n    Start-MapReduce -Map {\r\n        param($Text, $data)\r\nforeach ($w in ($text -split ' ')) {\r\n            New-Object PSObject -Property @{\r\n                Word = $w \r\n                Count = 1\r\n            }\r\n        }\r\n    } -Reduce {\r\n        param($Word, $WordCount) \r\n\r\n        New-Object PSObject -Property @{\r\n            Word = $word \r\n            Count = $WordCount | Measure-Object -Property Count -Sum | Select-Object -ExpandProperty Sum\r\n        } \r\n    }"
+    }
+  ]
+}

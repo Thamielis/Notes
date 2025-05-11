@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Gets the global TCP/IP offload settings.",
+  "Description": "The Get-NetOffloadGlobalSetting cmdlet gets the global TCP/IP offload settings. These settings include Receive Side Scaling, Receive Segment Coalescing, task offload, and NetworkDirect.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetOffloadGlobalSetting"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkId=288386",
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Get global TCP/IP offload settings",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetOffloadGlobalSetting\r\nThis command gets the global TCP/IP offload settings on the computer."
+    }
+  ]
+}

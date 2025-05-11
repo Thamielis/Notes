@@ -1,0 +1,54 @@
+{
+  "Synopsis": "Creates a new table percentage bar condition object with specified attributes.",
+  "Description": "This function creates a new table percentage bar condition object with the provided attributes. It defines the minimum and maximum values for the percentage range, along with the colors for the background, text, and bar.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-TablePercentageBarCondition -Minimum 0 -Maximum 10 -BackgroundColor \"#ff0000\" -TextColor \"#ffffff\" -BarColor \"#ff0000\"\r\nCreates a new table percentage bar condition object for the range 0-10 with specified colors."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-TablePercentageBarCondition -Minimum 11 -Maximum 20 -BackgroundColor \"#00ff00\" -BarColor \"#00ff00\"\r\nCreates a new table percentage bar condition object for the range 11-20 with specified colors."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "New-TablePercentageBarCondition -Minimum 21 -Maximum 23 -BackgroundColor \"#0000ff\" -BarColor \"#0000ff\"\r\nCreates a new table percentage bar condition object for the range 21-23 with specified colors."
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "New-TablePercentageBarCondition -Minimum 24 -Maximum 100 -BackgroundColor \"#00FFFF\" -BarColor \"#00FFFF\"\r\nCreates a new table percentage bar condition object for the range 24-100 with specified colors."
+    }
+  ]
+}

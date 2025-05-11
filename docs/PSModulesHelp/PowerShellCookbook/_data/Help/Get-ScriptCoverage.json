@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Uses conditional breakpoints to obtain information about what regions of\na script are executed when run.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-Content c:\\temp\\looper.ps1\r\nparam($userInput)\r\n\r\nfor($count = 0; $count -lt 10; $count++)\r\n{\r\n    \"Count is: $count\"\r\n}\r\n\r\nif($userInput -eq \"One\")\r\n{\r\n    \"Got 'One'\"\r\n}\r\n\r\nif($userInput -eq \"Two\")\r\n{\r\n    \"Got 'Two'\"\r\n}\r\n\r\nPS > $action = { c:\\temp\\looper.ps1 -UserInput 'One' }\r\nPS > $coverage = Get-ScriptCoverage c:\\temp\\looper.ps1 -Action $action\r\nPS > $coverage | Select Content,StartLine,StartColumn | Format-Table -Auto\r\n\r\nContent   StartLine StartColumn\r\n-------   --------- -----------\r\nuserInput         1           7\r\nGot 'Two'        15           5\r\n\r\nThis example exercises a 'looper.ps1' script, and supplies it with some\r\nuser input. The output demonstrates that we didn't exercise the\r\n\"Got 'Two'\" statement."
+    }
+  ]
+}

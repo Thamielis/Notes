@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Replaces values in a specified field of a table.",
+  "Description": "This function replaces values in a specified field of a table with the provided replacements.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-TableReplace -FieldName \"Status\" -Replacements @(\"Active\", \"Inactive\")\r\nDescription:\r\nReplaces values in the \"Status\" field with \"Active\" or \"Inactive\"."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-TableReplace -FieldName \"Priority\" -Replacements @(\"High\", \"Medium\", \"Low\")\r\nDescription:\r\nReplaces values in the \"Priority\" field with \"High\", \"Medium\", or \"Low\"."
+    }
+  ]
+}

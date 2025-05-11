@@ -1,0 +1,71 @@
+{
+  "Synopsis": "Compares two worksheets and shows the differences.",
+  "Description": "This command takes two file names, one or two worksheet names and a name for a \"key\" column.\r\n\r\n\r\nIt reads the worksheet from each file and decides the column names and builds a hashtable of the key-column values and the rows in which they appear.\r\n\r\n\r\nIt then uses PowerShell's Compare-Object command to compare the sheets (explicitly checking all the column names which have not been excluded).\r\n\r\n\r\nFor the difference rows it adds the row number for the key of that row - we have to add the key after doing the comparison, otherwise identical rows at different positions in the file will not be considered a match.\r\n\r\n\r\nWe also add the name of the file and sheet in which the difference occurs.\r\n\r\n\r\nIf -BackgroundColor is specified the difference rows will be changed to that background in the orginal file.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "PS\\> Compare-WorkSheet -Referencefile 'Server56.xlsx' -Differencefile 'Server57.xlsx' -WorkSheetName Products -key IdentifyingNumber -ExcludeProperty Install* | Format-Table\r\nThe two workbooks in this example contain the result of redirecting a subset of properties from Get-WmiObject -Class win32_product to Export-Excel.\r\n\r\nThe command compares the \"Products\" pages in the two workbooks, but we don't want to register a difference if the software was installed on a different date or from a different place, and excluding Install* removes InstallDate and InstallSource.\r\n\r\nThis data doesn't have a \"Name\" column, so we specify the \"IdentifyingNumber\" column as the key.\r\n\r\nThe results will be presented as a table."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "PS\\> Compare-WorkSheet \"Server54.xlsx\" \"Server55.xlsx\" -WorkSheetName Services -GridView\r\nThis time two workbooks contain the result of redirecting the command Get-WmiObject -Class win32_service to Export-Excel.\r\n\r\nHere the -Differencefile and -Referencefile parameter switches are assumed and the default setting for -Key (\"Name\") works for services.\r\n\r\nThis will display the differences between the \"Services\" sheets using a grid view"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "PS\\> Compare-WorkSheet 'Server54.xlsx' 'Server55.xlsx' -WorkSheetName Services -BackgroundColor lightGreen\r\nThis version of the command outputs the differences between the \"services\" pages and highlights any different rows in the spreadsheet files."
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "PS\\> Compare-WorkSheet 'Server54.xlsx' 'Server55.xlsx' -WorkSheetName Services -BackgroundColor lightGreen -FontColor Red -Show\r\nThis example builds on the previous one: this time where two changed rows have the value in the \"Name\" column (the default value for -Key), this version adds highlighting of the changed cells in red; and then opens the Excel file."
+    },
+    {
+      "Title": "EXAMPLE 5",
+      "Markdown": "",
+      "Code": "PS\\> Compare-WorkSheet 'Pester-tests.xlsx' 'Pester-tests.xlsx' -WorkSheetName 'Server1','Server2' -Property \"full Description\",\"Executed\",\"Result\" -Key \"full Description\"\r\nThis time the reference file and the difference file are the same file and two different sheets are used.\r\n\r\nBecause the tests include the machine name and time the test was run, the command specifies that a limited set of columns should be used."
+    },
+    {
+      "Title": "EXAMPLE 6",
+      "Markdown": "",
+      "Code": "PS\\> Compare-WorkSheet 'Server54.xlsx' 'Server55.xlsx' -WorkSheetName general -Startrow 2 -Headername Label,value -Key Label -GridView -ExcludeDifferent\r\nThe \"General\" page in the two workbooks has a title and two unlabelled columns with a row each for CPU, Memory, Domain, Disk and so on.\r\n\r\nSo the command is told to start at row 2 in order to skip the title and given names for the columns: the first is \"label\" and the second \"Value\"; the label acts as the key.\r\n\r\nThis time we are interested in those rows which are the same in both sheets, and the result is displayed using grid view.\r\n\r\nNote that grid view works best when the number of columns is small."
+    },
+    {
+      "Title": "EXAMPLE 7",
+      "Markdown": "",
+      "Code": "PS\\>Compare-WorkSheet 'Server1.xlsx' 'Server2.xlsx' -WorkSheetName general -Startrow 2 -Headername Label,value -Key Label -BackgroundColor White -Show -AllDataBackgroundColor LightGray\r\nThis version of the previous command highlights all the cells in LightGray and then sets the changed rows back to white.\r\n\r\nOnly the unchanged rows are highlighted."
+    }
+  ]
+}

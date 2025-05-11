@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new HTML code block with customizable settings for syntax highlighting.",
+  "Description": "This function creates a new HTML code block with customizable settings for syntax highlighting. It allows you to specify the code language, theme, group, title, line numbers visibility, highlighted lines, and line numbering offset.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLCodeBlock -Code \"function greet() { return 'Hello, World!'; }\" -Style 'javascript' -Theme 'monokai' -Group 'Functions' -Title 'Greeting Function' -Highlight 2,4-6 -ShowLineNumbers $true -LineOffset 1\r\nCreates a new HTML code block displaying a JavaScript function with a custom theme, belonging to the 'Functions' group, titled 'Greeting Function', highlighting lines 2, 4 to 6, showing line numbers, and starting line numbering from 1."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-HTMLCodeBlock -Code \"for ($i = 0; $i -lt 5; $i++) { Write-Host $i }\" -Style 'powershell' -Group 'Loops' -Title 'For Loop Example' -ShowLineNumbers $false\r\nCreates a new HTML code block displaying a PowerShell for loop without line numbers, belonging to the 'Loops' group, titled 'For Loop Example'."
+    }
+  ]
+}

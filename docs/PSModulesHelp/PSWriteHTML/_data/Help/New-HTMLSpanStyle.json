@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates an HTML <span> element with specified styling.",
+  "Description": "The New-HTMLSpanStyle function generates an HTML <span> element with customizable styling options such as color, background color, font size, font weight, font style, alignment, text decoration, text transformation, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLSpanStyle -Content { \"Hello, World!\" } -Color 'red' -FontSize '12px' -FontWeight 'bold' -Alignment 'center'\r\nCreates a <span> element with red text, font size of 12 pixels, bold weight, and centered alignment containing the text \"Hello, World!\"."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-HTMLSpanStyle -Content { \"This is underlined text\" } -Color 'blue' -TextDecoration 'underline'\r\nCreates a <span> element with blue text and underlined decoration containing the text \"This is underlined text\"."
+    }
+  ]
+}

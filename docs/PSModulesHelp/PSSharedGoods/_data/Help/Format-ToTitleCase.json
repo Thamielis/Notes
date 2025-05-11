@@ -1,0 +1,59 @@
+{
+  "Synopsis": "Formats string or number of strings to Title Case",
+  "Description": "Formats string or number of strings to Title Case allowing for prettty display",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Format-ToTitleCase 'me'\r\nOutput:\r\nMe"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "'me i feel good' | Format-ToTitleCase\r\nOutput:\r\nMe I Feel Good\r\nNot Feel"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "'me i feel', 'not feel' | Format-ToTitleCase\r\nOutput:\r\nMe I Feel Good\r\nNot Feel"
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "Format-ToTitleCase -Text 'This is my thing' -RemoveWhiteSpace\r\nOutput:\r\nThisIsMyThing"
+    },
+    {
+      "Title": "EXAMPLE 5",
+      "Markdown": "",
+      "Code": "Format-ToTitleCase -Text \"This is my thing: That - No I don't want all chars\" -RemoveWhiteSpace -RemoveChar ',', '-', \"'\", '\\(', '\\)', ':'"
+    }
+  ]
+}

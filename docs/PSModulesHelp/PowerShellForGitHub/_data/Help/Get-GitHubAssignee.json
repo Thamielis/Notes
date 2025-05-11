@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Lists the available assignees for issues in a repository.",
+  "Description": "Lists the available assignees for issues in a repository.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Branch\nGitHub.Content\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Reaction\nGitHub.Release\nGitHub.ReleaseAsset\nGitHub.Repository\nGitHub.User"
+  ],
+  "Outputs": [
+    "GitHub.User"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubAssigneeList -OwnerName microsoft -RepositoryName PowerShellForGitHub\r\nLists the available assignees for issues from the microsoft\\PowerShellForGitHub project."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$repo = Get-GitHubRepository -OwnerName microsoft -RepositoryName PowerShellForGitHub\r\n$repo | Get-GitHubAssigneeList\r\nLists the available assignees for issues from the microsoft\\PowerShellForGitHub project."
+    }
+  ]
+}

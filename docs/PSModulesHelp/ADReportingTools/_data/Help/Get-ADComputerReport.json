@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Get AD Computer account information",
+  "Description": "Get-ADComputerReport will gather information about computer objects in Active Directory. The default is to find all objects. But you can filter on a category of Server or Desktop. The filtering is done based on the operating system value.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Learn more about PowerShell: http://jdhitsolutions.com/blog/essential-powershell-resources/"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.String"
+  ],
+  "Outputs": [
+    "ADComputerInfo"
+  ],
+  "Links": [
+    "https://bit.ly/3dFHB7E",
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADComputerReport\r\n\r\nName            Description           Location IPAddress       LastLogonDate\r\n----            -----------           -------- ---------       -------------\r\nDOM1       HQ domain controllers       hqdc    192.168.3.10    3/26/2021 3:12...\r\nDOM2       HQ domain controllers       hqdc    192.168.3.11    3/26/2021 3:21...\r\nMail01\r\nSRV1       corp resource server        hqdc    192.168.3.50    3/26/2021 10:4...\r\nSRV2                                  Omaha    192.168.3.51    3/26/2021 10:4...\r\n...\r\nIf you are running in a PowerShell console, domain controllers and member servers will be highlighted with an ANSI sequence."
+    },
+    {
+      "Title": "Example 2",
+      "Markdown": "",
+      "Code": "PS C:\\> Get-ADComputerReport -Name srv1 | select *\r\n\r\n\r\nName              : SRV1\r\nDNSHostname       : SRV1.Company.Pri\r\nDescription       : corp resource server\r\nOperatingSystem   : Windows Server 2016 Standard Evaluation\r\nIsServer          : True\r\nLocation          : hqdc\r\nLastLogonDate     : 3/26/2021 10:45:27 AM\r\nIPAddress         : 192.168.3.50\r\nCreated           : 1/25/2021 1:33:02 PM\r\nModified          : 3/26/2021 9:04:03 PM\r\nDistinguishedName : CN=SRV1,CN=Computers,DC=Company,DC=Pri\r\nGet all report properties."
+    }
+  ]
+}

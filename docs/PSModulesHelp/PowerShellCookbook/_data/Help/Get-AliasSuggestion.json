@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Get an alias suggestion from the full text of the last command. Intended to\nbe added to your prompt function to help learn aliases for commands.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-AliasSuggestion Remove-ItemProperty\r\nSuggestion: An alias for Remove-ItemProperty is rp"
+    }
+  ]
+}

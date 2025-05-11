@@ -1,0 +1,43 @@
+{
+  "Synopsis": "Creates a new web page, with some help",
+  "Description": "Creates a new web page containing the most commonly used web technologies.\n\nUsing New-WebPage, you can generate the scaffolding for \n\n- Linked or nested style sheets\n- Pages built with JQuery, JQueryUI, TableSorter, or Twitter Bootstrap\n- Linked RSS feeds        \n- Global Javascript declarations\n- Global javascript error handlers\n- Simple Redirect pages \n- Embedded Analytics        \n- Native looking applications in Safari\n- Pinned Sites in IE",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [
+    null,
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Hello World</h1>' | New-WebPage -Title \"Hello World\""
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Creates a new, blank changelog in Keep a Changelog 1.0.0 format.",
+  "Description": "This cmdlet creates a new, blank changelog in Keep a Changelog 1.0.0 format.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "This cmdlet does not accept pipeline input."
+  ],
+  "Outputs": [
+    "This cmdlet does not generate output."
+  ],
+  "Links": [
+    "https://github.com/natescherer/ChangelogManagement"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-Changelog\r\nDoes not generate output, but creates a new changelog at .\\CHANGELOG.md"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-Changelog -Path project\\CHANGELOG.md -NoSemVer\r\nDoes not generate output, but creates a new changelog at project\\CHANGELOG.md while excluding SemVer statement from the header"
+    }
+  ]
+}

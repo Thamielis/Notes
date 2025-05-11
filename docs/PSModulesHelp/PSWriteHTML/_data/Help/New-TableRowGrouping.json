@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new table row grouping object with specified attributes.",
+  "Description": "This function creates a new table row grouping object with the provided attributes. It enables the feature for DataTablesRowGrouping in the HTML schema.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-TableRowGrouping -Name \"Group A\" -ColumnID 1 -SortOrder 'Ascending' -Color 'Red' -BackgroundColor 'LightGray'\r\nCreates a new table row grouping object for Group A, grouping by column ID 1 in ascending order with red text and light gray background."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-TableRowGrouping -Name \"Group B\" -ColumnID 2 -SortOrder 'Descending' -Color 'Blue' -BackgroundColor 'White'\r\nCreates a new table row grouping object for Group B, grouping by column ID 2 in descending order with blue text and white background."
+    }
+  ]
+}

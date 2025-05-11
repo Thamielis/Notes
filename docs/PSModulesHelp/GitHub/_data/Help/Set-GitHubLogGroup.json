@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Encapsulates commands with a log group in GitHub Actions",
+  "Description": "DSL approach for GitHub Action commands.\nAllows for colapsing of code in IDE for code that belong together.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "[GitHub - Grouping log lines](https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#grouping-log-lines)"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-GitHubLogGroup -Name 'MyGroup' -ScriptBlock {\r\n    Write-Host 'Hello, World!'\r\n}\r\nCreates a new log group named 'MyGroup' and writes 'Hello, World!' to the output."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "LogGroup 'MyGroup' {\r\n    Write-Host 'Hello, World!'\r\n}\r\nUses the alias 'LogGroup' to create a new log group named 'MyGroup' and writes 'Hello, World!' to the output."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "Synopsis": "Create custom objects from the rows in an Excel worksheet.",
+  "Description": "The Import-Excel cmdlet creates custom objects from the rows in an Excel worksheet. Each row is represented as one object.\r\n\r\n\r\nThis is possible without installing Microsoft Excel by using the .NET library 'EPPLus.dll'.\r\n\r\n\r\nBy default, the property names of the objects are retrieved from the column headers. Because an object cannot have a blank property name, only columns with column headers will be imported.\r\n\r\n\r\nIf the default behavior is not desired and you want to import the complete worksheet 'as is', the parameter '-NoHeader' can be used. In case you want to provide your own property names, you can use the parameter '-HeaderName'.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    ""
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null,
+    "https://github.com/dfinke/ImportExcel"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "----------------------------------------------\r\n| File: Movies.xlsx     -      Sheet: Actors |\r\n----------------------------------------------\r\n|           A           B            C       |\r\n|1     First Name                 Address    |\r\n|2     Chuck         Norris       California |\r\n|3     Jean-Claude   Vandamme     Brussels   |\r\n----------------------------------------------\r\n\r\nPS C:> Import-Excel -Path 'C:\\Movies.xlsx' -WorkSheetname Actors\r\n\r\nFirst Name: Chuck\r\nAddress   : California\r\n\r\nFirst Name: Jean-Claude\r\nAddress   : Brussels\r\nImport data from an Excel worksheet. One object is created for each row. The property names of the objects consist of the column names defined in the first row. In case a column doesn't have a column header (usually in row 1 when '-StartRow' is not used), then the unnamed columns will be skipped and the data in those columns will not be imported.\r\n\r\nNotice that column 'B' is not imported because there's no value in cell 'B1' that can be used as property name for the objects."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "----------------------------------------------\r\n| File: Movies.xlsx     -      Sheet: Actors |\r\n----------------------------------------------\r\n|           A           B            C       |\r\n|1     First Name                 Address    |\r\n|2     Chuck         Norris       California |\r\n|3     Jean-Claude   Vandamme     Brussels   |\r\n----------------------------------------------\r\n\r\nPS\\> Import-Excel -Path 'C:\\Movies.xlsx' -WorkSheetname Actors -NoHeader\r\n\r\nP1: First Name\r\nP2:\r\nP3: Address\r\n\r\nP1: Chuck\r\nP2: Norris\r\nP3: California\r\n\r\nP1: Jean-Claude\r\nP2: Vandamme\r\nP3: Brussels\r\nImports the complete Excel worksheet 'as is' by using the '-NoHeader' switch. One object is created for each row. The property names of the objects will be automatically generated (P1, P2, P3, ..).\r\n\r\nNotice that the column header (row 1) is imported as an object too."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "----------------------------------------------------------\r\n| File: Movies.xlsx            -           Sheet: Movies |\r\n----------------------------------------------------------\r\n|           A            B            C          D       |\r\n|1     The Bodyguard   1992           9                  |\r\n|2     The Matrix      1999           8                  |\r\n|3                                                       |\r\n|4     Skyfall         2012           9                  |\r\n----------------------------------------------------------\r\n\r\nPS\\> Import-Excel -Path 'C:\\Movies.xlsx' -WorkSheetname Movies -HeaderName 'Movie name', 'Year', 'Rating', 'Genre'\r\n\r\nMovie name: The Bodyguard\r\nYear      : 1992\r\nRating    : 9\r\nGenre     :\r\n\r\nMovie name: The Matrix\r\nYear      : 1999\r\nRating    : 8\r\nGenre     :\r\n\r\nMovie name:\r\nYear      :\r\nRating    :\r\nGenre     :\r\n\r\nMovie name: Skyfall\r\nYear      : 2012\r\nRating    : 9\r\nGenre     :\r\nThis imports data from an Excel worksheet, and as before one object is created for each row. The property names for the objects are defined in the parameter '-HeaderName'. The properties are named starting from the most left column (A) to the right. In case no value is present in one of the columns, that property will have an empty value.\r\n\r\nNotice that empty rows are imported and that data for the property 'Genre' is not present in the worksheet. As such, the 'Genre' property will be blank for all objects."
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "----------------------------------------------------------\r\n| File: Movies.xlsx            -           Sheet: Movies |\r\n----------------------------------------------------------\r\n|           A            B            C          D       |\r\n|1     The Bodyguard   1992           9                  |\r\n|2     The Matrix      1999           8                  |\r\n|3                                                       |\r\n|4     Skyfall         2012           9                  |\r\n----------------------------------------------------------\r\n\r\nPS\\> Import-Excel -Path 'C:\\Movies.xlsx' -WorkSheetname Movies -NoHeader -DataOnly\r\n\r\nP1: The Bodyguard\r\nP2: 1992\r\nP3: 9\r\n\r\nP1: The Matrix\r\nP2: 1999\r\nP3: 8\r\n\r\nP1: Skyfall\r\nP2: 2012\r\nP3: 9\r\nImport data from an Excel worksheet, and one object is created for each non-blank row. The property names of the objects (P1, P2, P3, ..) are automatically generated by using the switch '-NoHeader' . The switch '-DataOnly' will speed up the import because empty rows and empty columns are not imported.\r\n\r\nNotice that empty rows and empty columns are not imported."
+    },
+    {
+      "Title": "EXAMPLE 5",
+      "Markdown": "",
+      "Code": "----------------------------------------------------------\r\n| File: Movies.xlsx            -           Sheet: Actors |\r\n----------------------------------------------------------\r\n|           A           B           C            D       |\r\n|1     Chuck                     Norris       California |\r\n|2                                                       |\r\n|3     Jean-Claude               Vandamme     Brussels   |\r\n----------------------------------------------------------\r\n\r\nPS\\> Import-Excel -Path 'C:\\Movies.xlsx' -WorkSheetname Actors -DataOnly -HeaderName 'FirstName', 'SecondName', 'City' -StartRow 2\r\n\r\nFirstName : Jean-Claude\r\nSecondName: Vandamme\r\nCity      : Brussels\r\nImport data from an Excel worksheet. One object is created for each row. The property names are provided with the '-HeaderName' parameter. The import will start from row 2 and empty columns and rows are not imported.\r\n\r\nNotice that only 1 object is imported with only 3 properties. Column B and row 2 are empty and have been disregarded by using the switch '-DataOnly'. The property names have been named with the values provided with the parameter '-HeaderName'. Row number 1 with 'Chuck Norris' has not been imported, because we started the import from row 2 with the parameter '-StartRow 2'."
+    },
+    {
+      "Title": "EXAMPLE 6",
+      "Markdown": "",
+      "Code": "PS\\> ,(Import-Excel -Path .\\SysTables_AdventureWorks2014.xlsx) |\r\n    Write-SqlTableData -ServerInstance localhost\\DEFAULT -Database BlankDB -SchemaName dbo -TableName MyNewTable_fromExcel -Force\r\nImports data from an Excel file and pipes the result to the Write-SqlTableData command to be INSERTed into a table in a SQL Server database.\r\n\r\nThe \",( ... )\" around the Import-Excel command allows all rows to be imported from the Excel file, prior to pipelining to the Write-SqlTableData cmdlet. This helps prevent a RBAR scenario and is important when trying to import thousands of rows.\r\n\r\nThe -Force parameter will be ignored if the table already exists. However, if a table is not found that matches the values provided by -SchemaName and -TableName parameters, it will create a new table in SQL Server database.\r\n\r\nThe Write-SqlTableData cmdlet will inherit the column names & datatypes for the new table from the object being piped in. NOTE: You need to install the SqlServer module from the PowerShell Gallery in oder to get the Write-SqlTableData cmdlet."
+    }
+  ]
+}

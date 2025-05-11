@@ -1,0 +1,48 @@
+{
+  "Synopsis": "Gets IPv4 protocol configurations.",
+  "Description": "The Get-NetIPv4Protocol cmdlet gets the global settings for IPv4 protocol configurations for the computer. If you do not specify any parameters, the cmdlet gets the IPv4 protocol configuration settings for all network connections for the computer. The cmdlet returns IPv4 protocol settings, such as the Internet Control Message Protocol (ICMP) setting, the default hop limit, the neighbor cache limit, and the multicast configuration.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetIPv4Protocol"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkId=288383",
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Get all IPv4 protocol configurations",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetIPv4Protocol\r\nThis command gets the global settings for all the IPv4 protocol configurations for the computer. The default output for the cmdlet does not include all properties of the NetIPv4Protocol object."
+    },
+    {
+      "Title": "Example 2: Output all settings for IPv4 protocol configurations",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetIPv4Protocol | Format-List –Property *\r\nThis command gets the global settings for all IPv4 protocol configurations for the computer. The command uses the Format-List cmdlet to display all the properties in the output in the form of a table. For more information, type Get-Help Format-Table."
+    }
+  ]
+}

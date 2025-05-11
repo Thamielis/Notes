@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Gets the prefix policy.",
+  "Description": "The Get-NetPrefixPolicy cmdlet gets the prefix policy. A computer uses a prefix policy to select source and destination addresses. A prefix policy establishes selection criteria based on the precedence of destination addresses and on labels that are attached to source addresses. For more information, see RFC 3484.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None"
+  ],
+  "Outputs": [
+    "Microsoft.Management.Infrastructure.CimInstance#root\\StandardCimv2\\MSFT_NetPrefixPolicy"
+  ],
+  "Links": [
+    "http://go.microsoft.com/fwlink/?LinkId=288387"
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Get a prefix policy",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetPrefixPolicy\r\nThis command gets the prefix policy on the computer on which you run the command."
+    },
+    {
+      "Title": "Example 2: Get a prefix policy by precedence",
+      "Markdown": "",
+      "Code": "PS C:\\>Get-NetPrefixPolicy –Precedence 1\r\nThis command gets the prefix policy that has a precedence of 1."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "Synopsis": "Rename a GitHub repository",
+  "Description": "Renames a GitHub repository with the new name provided.\n\nThe Git repo for this module can be found here: http://aka.ms/PowerShellForGitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Filter",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "GitHub.Branch\nGitHub.Content\nGitHub.Event\nGitHub.Issue\nGitHub.IssueComment\nGitHub.Label\nGitHub.Milestone\nGitHub.PullRequest\nGitHub.Project\nGitHub.ProjectCard\nGitHub.ProjectColumn\nGitHub.Reaction\nGitHub.Release\nGitHub.ReleaseAsset\nGitHub.Repository"
+  ],
+  "Outputs": [
+    "GitHub.Repository"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-GitHubRepository -Owner octocat -RepositoryName hello-world | Rename-GitHubRepository -NewName hello-again-world\r\nGet the given 'hello-world' repo from the user 'octocat' and then\r\nrename it to be https://github.com/octocat/hello-again-world."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-GitHubRepository -Uri https://github.com/octocat/hello-world | Rename-GitHubRepository -NewName hello-again-world -Confirm:$false\r\nGet the repository at https://github.com/octocat/hello-world and then\r\nrename it https://github.com/octocat/hello-again-world.\r\nWill not prompt for confirmation, as -Confirm:$false was specified."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Rename-GitHubRepository -Uri https://github.com/octocat/hello-world -NewName hello-again-world\r\nRename the repository at https://github.com/octocat/hello-world to\r\nhttps://github.com/octocat/hello-again-world."
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "New-GitHubRepositoryFork -Uri https://github.com/octocat/hello-world | Foreach-Object {$_ | Rename-GitHubRepository -NewName \"$($_.name)_fork\"}\r\nFork the `hello-world` repository from the user 'octocat', and then\r\nrename the newly forked repository by appending '_fork'."
+    },
+    {
+      "Title": "EXAMPLE 5",
+      "Markdown": "",
+      "Code": "Rename-GitHubRepository -Uri https://github.com/octocat/hello-world -NewName hello-again-world -Confirm:$false\r\nRename the repository at https://github.com/octocat/hello-world to\r\nhttps://github.com/octocat/hello-again-world without prompting for confirmation."
+    },
+    {
+      "Title": "EXAMPLE 6",
+      "Markdown": "",
+      "Code": "Rename-GitHubRepository -Uri https://github.com/octocat/hello-world -NewName hello-again-world -Force\r\nRename the repository at https://github.com/octocat/hello-world to\r\nhttps://github.com/octocat/hello-again-world without prompting for confirmation."
+    }
+  ]
+}

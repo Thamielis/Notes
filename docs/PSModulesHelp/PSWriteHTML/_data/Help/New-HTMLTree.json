@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new HTML tree using FancyTree with various customization options.",
+  "Description": "This function creates a new HTML tree using FancyTree with the ability to customize the tree's appearance and behavior. It supports features like checkboxes, radio buttons, selection modes, icons, keyboard navigation, quick search, child counters, and more.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-HTMLTree -Data {\r\n    TreeNode -Node \"Root\" -Children {\r\n        TreeNode -Node \"Child 1\"\r\n        TreeNode -Node \"Child 2\"\r\n    }\r\n} -Checkbox 'checkbox' -SelectMode '3' -EnableChildCounter -WideSelection\r\nCreates a new HTML tree with checkboxes, hierarchical selection mode, child counters, and wide selection enabled."
+    }
+  ]
+}
