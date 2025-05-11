@@ -45,6 +45,8 @@
   > - [ ] :memo: PSModulesHelp hinzufügen
   > - [ ] :memo: KnowledgeBase hinzufügen
 
+---
+
 ## 2. Repos
 
 ### [<span style ="color:cyan">2.1. PSModulesHelp</span>](PSModulesHelp/ModuleDoku.md)
@@ -55,17 +57,16 @@
 #### [<span style="color:yellow">2.2.1. Meine Repos</span>](ReposWiki/Repositories.md)
   <span style="color:cyan">*Meine Programmierungen*</span>
 
-#### 2.2.2. Analyse/Visualize
+##### 2.2.1.1. Analyse/Visualize
 
 - [PSVisualizer](<https://github.com/In-Pro-Org/PSVisualizer>)
   > Erstellen eines Mermaid Diagramms vom Ablauf eines PowerShell Scripts
 
-### 2.3. Kostwein
+#### [2.2.2. Kostwein](/%2F/Kostwein.md)
 
-- [Kostwein](/%2F/Kostwein.md)
+##### 2.2.2.1. ConfigurationManager
 
-#### 2.1.3. ConfigurationManager
-
+---
 
 ## 3. Knowledge
 
