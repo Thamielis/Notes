@@ -179,10 +179,13 @@ New-ADGroupReport -Name 'PaloAlto*' -ReportTitle 'PaloAlto_Internet ADGroups' -E
 ## 5. Wikies
   >
   > - [Notes](https://github.com/thamielis/Notes)
-  > - [PSModulesDoku](https://thamielis.github.io/PSModulesDoku/)
-  > - [PSKnowledge](https://thamielis.github.io/PSKnowledge/ClassExplorer/gasm.html)
   > - [Mein Netlify Blog](<https://blog.in-pro.org>)
-  > - [Thamielis Pages](<https://thamielis.github.io>)
+
+### 5.1. [Thamielis Pages](<https://thamielis.github.io>)
+  > - [PSModulesDoku](https://thamielis.github.io/PSModulesDoku/)
+  > - [Knowledge](<https://thamielis.github.io/Knowledge>)
+  > - [KnowledgeBase](<https://thamielis.github.io/KnowledgeBase>)
+  > - [PSKnowledge](https://thamielis.github.io/PSKnowledge/ClassExplorer/gasm.html)
 
 ## 6. Wichtig
 >
