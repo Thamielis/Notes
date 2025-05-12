@@ -182,8 +182,10 @@ New-ADGroupReport -Name 'PaloAlto*' -ReportTitle 'PaloAlto_Internet ADGroups' -E
   > - [Mein Netlify Blog](<https://blog.in-pro.org>)
 
 ### 5.1. [Thamielis Pages](<https://thamielis.github.io>)
+  > - [Notes](<https://thamielis.github.io/Notes>)
   > - [PSModulesDoku](https://thamielis.github.io/PSModulesDoku/)
   > - [Knowledge](<https://thamielis.github.io/Knowledge>)
+  >> - [PowerShell Classes](<https://thamielis.github.io/Knowledge/pages/powershell/Klassen/powershell-classes-and-concepts>)
   > - [Dokumentation](<https://thamielis.github.io/Dokumentation/>)
   > - [PSKnowledge](https://thamielis.github.io/PSKnowledge/ClassExplorer/gasm.html)
 
