@@ -1,6 +1,8 @@
 ![logo](images/Kostwein_Maschinenbau.png)
 # Kostwein
 
+![logo](/images/PowerShell.png ':size=5%')
+
 ## Veeam
 
 - [PSVeeamDashboard](<https://github.com/KOWThamielis/KOWVeeamDashboard>)
