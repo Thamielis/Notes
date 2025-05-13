@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Notes</title>
@@ -25,11 +26,11 @@
       }
     });
   </script>
-  
+
   <!-- Example: query-based dark theme -->
   <style>
     @media (prefers-color-scheme: dark) {
-  
+
       .shiki,
       .shiki span {
         color: var(--shiki-dark) !important;
@@ -43,9 +44,10 @@
   </style>
 
 </head>
+
 <body>
   <div id="app"></div>
-  
+
   <script>
     window.$docsify = {
       name: 'Notes Hub',
@@ -64,34 +66,35 @@
     }
   </script>
 
-<script type="module">
-  import githubDark from 'https://esm.sh/@shikijs/themes@1/github-dark';
-  import githubLight from 'https://esm.sh/@shikijs/themes@1/github-light';
-  import html from 'https://esm.sh/@shikijs/langs@1/html';
-  import htmlDerivative from 'https://esm.sh/@shikijs/langs@1/html-derivative';
-  import http from 'https://esm.sh/@shikijs/langs@1/http';
-  import json from 'https://esm.sh/@shikijs/langs@1/json';
-  import css from 'https://esm.sh/@shikijs/langs@1/css';
-  import ps from 'https://esm.sh/@shikijs/langs@1/powershell';
-  import md from 'https://esm.sh/@shikijs/langs@1/markdown';
-  import mmd from 'https://esm.sh/@shikijs/langs@1/mermaid';
+  <script type="module">
+    import githubDark from 'https://esm.sh/@shikijs/themes@1/github-dark';
+    import githubLight from 'https://esm.sh/@shikijs/themes@1/github-light';
+    import html from 'https://esm.sh/@shikijs/langs@1/html';
+    import htmlDerivative from 'https://esm.sh/@shikijs/langs@1/html-derivative';
+    import http from 'https://esm.sh/@shikijs/langs@1/http';
+    import json from 'https://esm.sh/@shikijs/langs@1/json';
+    import css from 'https://esm.sh/@shikijs/langs@1/css';
+    import ps from 'https://esm.sh/@shikijs/langs@1/powershell';
+    import md from 'https://esm.sh/@shikijs/langs@1/markdown';
+    import mmd from 'https://esm.sh/@shikijs/langs@1/mermaid';
 
-  window.$docsify = {
-    shiki: {
-      themes: {
-        dark: githubDark,
-        light: githubLight
-      },
-      langs: [html, css, ps, http, json, htmlDerivative, md, mmd],
+    window.$docsify = {
+      shiki: {
+        themes: {
+          theme: githubDark
+          //dark: githubDark,
+          //light: githubLight
+        },
+        langs: [html, css, ps, http, json, htmlDerivative, md, mmd],
+      }
     }
-  }
-</script>
+  </script>
 
   <!-- Required -->
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
   <script type="module" src="//cdn.jsdelivr.net/npm/docsify-shiki@v1"></script>
-  
+
   <!-- Recommended -->
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
@@ -100,9 +103,10 @@
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/components/prism-powershell.min.js"></script>
 
   <script src="//cdn.jsdelivr.net/npm/docsify-dashboard@2.2.1/dist/docsify-dashboard.min.js"></script>
-  
+
   <!-- The docsify-tabs plugin (must be included after the docsify-dashboard plugin) -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1/dist/docsify-tabs.min.js"></script>
 
 </body>
+
 </html>
