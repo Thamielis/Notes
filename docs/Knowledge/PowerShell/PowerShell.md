@@ -1,3 +1,12 @@
+# PowerShell
+
+## [Classes](<Knowledge/PowerShell/Classes/index.md>)
+
+## [Patterns](<Knowledge/PowerShell/Patterns/index.md>)
+
+---
+
+## Old
 * [PowerShell](PowerShell.md)
   * [Basics](powershell-12/basics/README.md)
     * [PowerShell Tutorial einfach & kompakt in 10 Schritten](powershell-12/basics/powershell-tutorial-einfach-and-kompakt-in-10-schritten.md)

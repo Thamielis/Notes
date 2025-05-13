@@ -2,7 +2,8 @@
 <summary>Inhaltsverzeichnis</summary>
 
 - [0. Projekte](#0-projekte)
-  - [0.1. Kostwein](#01-kostwein)
+  - [0.1. Projekte](#01-projekte)
+  - [0.2. Kostwein](#02-kostwein)
 - [1. ToDo](#1-todo)
   - [1.1. RepoOverview](#11-repooverview)
   - [1.2. Notes Repo](#12-notes-repo)
@@ -42,7 +43,8 @@
 
 ## 0. Projekte
 
-### [<span style="color:green">0.1. Kostwein</span>](/%2F/Kostwein.md)
+### [<span style="color:magenta">0.1. Projekte</span>](/Projects/Projects.md)
+### [<span style="color:green">0.2. Kostwein</span>](/%2F/Kostwein.md)
 
 ---
 
