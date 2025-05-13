@@ -12,13 +12,23 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: '',
+      name: 'Notes Hub',
       repo: '',
       loadSidebar: true,
-      subMaxLevel: 2,
+      maxLevel: 0,
+      subMaxLevel: 3,
+      auto2top: true,
+
+      search: {
+        placeholder: 'Type to search',
+        noData: 'No matches found.',
+        // Headline depth, 1 - 6
+        depth: 2,
+      }
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  
 </body>
 </html>
