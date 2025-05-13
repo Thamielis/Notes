@@ -10,6 +10,7 @@
   - [2.1. PSModulesHelp](#21-psmoduleshelp)
   - [2.2. ReposWiki](#22-reposwiki)
     - [2.2.1. Meine Repos](#221-meine-repos)
+  - [2.3. Repos of High Interrest](#23-repos-of-high-interrest)
       - [2.2.1.1. Analyse/Visualize](#2211-analysevisualize)
     - [2.2.2. Kostwein](#222-kostwein)
       - [2.2.2.1. ConfigurationManager](#2221-configurationmanager)
@@ -69,6 +70,8 @@
 
 #### [<span style="color:magenta">2.2.1. Meine Repos</span>](ReposWiki/Repositories.md)
   <span style="color:cyan">*Meine Programmierungen*</span>
+
+### [<span style="color:#0000e8; fontweight:bold">2.3. Repos of High Interrest</span>](<PSModulesGithub.md>)
 
 ##### 2.2.1.1. Analyse/Visualize
 
