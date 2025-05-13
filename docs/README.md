@@ -34,7 +34,8 @@
 - [4. Links](#4-links)
 - [5. Wikies](#5-wikies)
   - [5.1. Thamielis Pages](#51-thamielis-pages)
-- [6. Wichtig](#6-wichtig)
+- [6. Docsify Plugins](#6-docsify-plugins)
+- [7. Wichtig](#7-wichtig)
 
 </details>
 
@@ -209,7 +210,10 @@ New-ADGroupReport -Name 'PaloAlto*' -ReportTitle 'PaloAlto_Internet ADGroups' -E
 
 ---
 
-## 6. Wichtig
+## 6. Docsify Plugins
+  > - [Dashboard](<https://github.com/erectbranch/docsify-dashboard>)
+
+## 7. Wichtig
 >
 >[!warning]
 >***PowerShell***
