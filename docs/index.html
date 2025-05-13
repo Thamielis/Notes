@@ -67,6 +67,10 @@
 <script type="module">
   import githubDark from 'https://esm.sh/@shikijs/themes@1/github-dark';
   import githubLight from 'https://esm.sh/@shikijs/themes@1/github-light';
+  import html from 'https://esm.sh/@shikijs/langs@1/html';
+  import htmlDerivative from 'https://esm.sh/@shikijs/langs@1/html-derivative';
+  import json from 'https://esm.sh/@shikijs/langs@1/json';
+  import css from 'https://esm.sh/@shikijs/langs@1/css';
   import ps from 'https://esm.sh/@shikijs/langs@1/powershell';
 
   window.$docsify = {
@@ -75,7 +79,7 @@
         dark: githubDark,
         light: githubLight
       },
-      langs: [ps],
+      langs: [html, css, ps],
     }
   }
 </script>
