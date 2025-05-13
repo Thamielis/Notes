@@ -31,6 +31,7 @@
   - [3.6 Build your own VR Headset](#36-build-your-own-vr-headset)
 - [4. Links](#4-links)
 - [5. Wikies](#5-wikies)
+  - [5.1. Thamielis Pages](#51-thamielis-pages)
 - [6. Wichtig](#6-wichtig)
 
 </details>
@@ -88,6 +89,9 @@
 
 #### 3.1.1 PowerShell
 
+<details>
+<summary>Module</summary>
+
 - [X] [PSStringTemplate](<https://github.com/SeeminglyScience/PSStringTemplate>)
 - [ ] ChangelogManagement
 - [ ] Configuration
@@ -119,6 +123,8 @@
 - [ ] [Split Collection](<https://github.com/MartinGC94/SplitCollection>)
 
 - [<span style="color:#00ff00">PSGalleryArgumentCompleter</span>](<https://github.com/MartinGC94/UsefulArgumentCompleters>)
+
+</details>
 
 #### 3.1.1.0 Snippets to use with PSStringTemplate
 
