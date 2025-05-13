@@ -69,9 +69,12 @@
   import githubLight from 'https://esm.sh/@shikijs/themes@1/github-light';
   import html from 'https://esm.sh/@shikijs/langs@1/html';
   import htmlDerivative from 'https://esm.sh/@shikijs/langs@1/html-derivative';
+  import http from 'https://esm.sh/@shikijs/langs@1/http';
   import json from 'https://esm.sh/@shikijs/langs@1/json';
   import css from 'https://esm.sh/@shikijs/langs@1/css';
   import ps from 'https://esm.sh/@shikijs/langs@1/powershell';
+  import md from 'https://esm.sh/@shikijs/langs@1/markdown';
+  import mmd from 'https://esm.sh/@shikijs/langs@1/mermaid';
 
   window.$docsify = {
     shiki: {
@@ -79,7 +82,7 @@
         dark: githubDark,
         light: githubLight
       },
-      langs: [html, css, ps],
+      langs: [html, css, ps, http, json, htmlDerivative, md, mmd],
     }
   }
 </script>
