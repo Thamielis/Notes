@@ -62,6 +62,8 @@ Save-MarkdownHelp -Module $ModuleName -OutputPath "$PWD\$ModuleName" -Wiki -Skip
 ## Module
 
 ```powershell
+Install-Module PSTypeExtensionTools
+
 Import-Module PSDiagnostics
 
 Install-Module core
