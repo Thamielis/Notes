@@ -9,8 +9,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-dashboard@2.2.1/dist/dashboard.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-tabs@1/dist/docsify-tabs.min.css">
 
-  // Import mermaid
+  <!-- Import mermaid -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
   <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
   <script>
@@ -42,21 +43,7 @@
       }
     }
   </style>
-  <script type="module">
-    import githubDark from 'https://esm.sh/@shikijs/themes@1/github-dark';
-    import githubLight from 'https://esm.sh/@shikijs/themes@1/github-light';
-
-    window.$docsify = {
-      shiki: {
-        themes: {
-          theme: githubDark
-          //dark: githubDark,
-          //light: githubLight
-        }
-      }
-    }
-  </script>
-
+  
 </head>
 
 <body>
@@ -81,6 +68,8 @@
   </script>
 
   <script type="module">
+    import githubDark from 'https://esm.sh/@shikijs/themes@1/github-dark';
+    import githubLight from 'https://esm.sh/@shikijs/themes@1/github-light';
     import html from 'https://esm.sh/@shikijs/langs@1/html';
     import htmlDerivative from 'https://esm.sh/@shikijs/langs@1/html-derivative';
     import http from 'https://esm.sh/@shikijs/langs@1/http';
@@ -92,6 +81,11 @@
 
     window.$docsify = {
       shiki: {
+        themes: {
+          theme: githubDark
+          //dark: githubDark,
+          //light: githubLight
+        },
         langs: [html, css, ps, http, json, htmlDerivative, md, mmd],
       }
     }
