@@ -55,10 +55,10 @@
 
 ### [<span style ="color:cyan">2.1. PSModulesHelp</span>](PSModulesHelp/ModuleDoku.md)
 
-### [<span style="color:yellow">2.2. ReposWiki</span>](ReposWiki/ReposWiki.md)
+### [<span style="color:red">2.2. ReposWiki</span>](ReposWiki/ReposWiki.md)
   Alle GitHub Repositories
 
-#### [<span style="color:yellow">2.2.1. Meine Repos</span>](ReposWiki/Repositories.md)
+#### [<span style="color:magenta">2.2.1. Meine Repos</span>](ReposWiki/Repositories.md)
   <span style="color:cyan">*Meine Programmierungen*</span>
 
 ##### 2.2.1.1. Analyse/Visualize
