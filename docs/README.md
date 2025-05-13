@@ -189,7 +189,7 @@ New-ADGroupReport -Name 'PaloAlto*' -ReportTitle 'PaloAlto_Internet ADGroups' -E
 
 ## 4. Links
 
-- [<span style="color:magenta">Links</span>](Links/LinksWiki.md): Links zu meinen Themen
+- [<span style="color:magenta">Links</span>](/Links/LinksWiki.md): Links zu meinen Themen
 - [<span style="color:cyan">PSModulesHelp</span>](PSModulesHelp/ModuleDoku.md): :information_source: Help für PowerShell Module
 
 ---
