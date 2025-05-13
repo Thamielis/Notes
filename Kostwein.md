@@ -1,12 +1,10 @@
-![](<https://raw.githubusercontent.com/Thamielis/Notes/refs/heads/main/images/KostweinLogo.ico?token=GHSAT0AAAAAAC5C4AUNV6ZFLZNDZWL36R7A2AAVKLA>)
+
 # Kostwein
 <span style=“width:50px“>
   
   ![](<https://raw.githubusercontent.com/Thamielis/Notes/refs/heads/main/images/PowerShell.png>)
 
 </span>
-
-![](https://raw.githubusercontent.com/Thamielis/Notes/refs/heads/main/images/PowerShell.png?token=GHSAT0AAAAAAC5C4AUNXXWQAMEOST3NGVDY2AAVYHA)
 
 ## Veeam
 
@@ -33,3 +31,11 @@
 - [DriverPackages](https://github.com/In-Pro-Org/DriverPackages)
 	> :memo: MECM for DELL Bios and Driver Package Management
 
+## Projekte
+### PowerShell
+#### Sync-Sage2AD
+
+### Veeam
+Projektverantwortlicher
+
+### MECM
