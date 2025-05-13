@@ -42,6 +42,20 @@
       }
     }
   </style>
+  <script type="module">
+    import githubDark from 'https://esm.sh/@shikijs/themes@1/github-dark';
+    import githubLight from 'https://esm.sh/@shikijs/themes@1/github-light';
+
+    window.$docsify = {
+      shiki: {
+        themes: {
+          theme: githubDark
+          //dark: githubDark,
+          //light: githubLight
+        }
+      }
+    }
+  </script>
 
 </head>
 
@@ -67,8 +81,6 @@
   </script>
 
   <script type="module">
-    import githubDark from 'https://esm.sh/@shikijs/themes@1/github-dark';
-    import githubLight from 'https://esm.sh/@shikijs/themes@1/github-light';
     import html from 'https://esm.sh/@shikijs/langs@1/html';
     import htmlDerivative from 'https://esm.sh/@shikijs/langs@1/html-derivative';
     import http from 'https://esm.sh/@shikijs/langs@1/http';
@@ -80,11 +92,6 @@
 
     window.$docsify = {
       shiki: {
-        themes: {
-          theme: githubDark
-          //dark: githubDark,
-          //light: githubLight
-        },
         langs: [html, css, ps, http, json, htmlDerivative, md, mmd],
       }
     }
