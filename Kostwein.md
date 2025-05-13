@@ -1,6 +1,6 @@
 
 # Kostwein
-<span style=“width:50px“>
+<span style="width:50px">
   
   ![](<https://raw.githubusercontent.com/Thamielis/Notes/refs/heads/main/images/PowerShell.png>)
 
@@ -31,11 +31,19 @@
 - [DriverPackages](https://github.com/In-Pro-Org/DriverPackages)
 	> :memo: MECM for DELL Bios and Driver Package Management
 
+---
+
 ## Projekte
+
 ### PowerShell
+
 #### Sync-Sage2AD
 
 ### Veeam
-Projektverantwortlicher
+  Projektverantwortlicher
 
 ### MECM
+
+### CI-Sign
+  Signaturen erstellen, verwalten und ändern
+
