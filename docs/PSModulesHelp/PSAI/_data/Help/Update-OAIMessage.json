@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Updates an OAI message by sending a POST request to the specified thread and message IDs.",
+  "Description": "The Update-OAIMessage function updates an OAI message by sending a POST request to the specified thread and message IDs. It allows you to update the metadata of a message.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://platform.openai.com/docs/api-reference/messages/modifyMessage"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Update-OAIMessage -ThreadId 1234 -MessageId 5678 -Metadata @{ \"key\" = \"value\" }\r\nUpdates the message with ID 5678 in the thread with ID 1234, setting the metadata to {\"key\": \"value\"}."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Invokes an interactive command-line interface (CLI) for a given PSAIAgent.",
+  "Description": "The Invoke-InteractiveCLI function initiates an interactive CLI session for a specified PSAIAgent object. \nIt allows the user to send a message, specify a user, and optionally include an emoji and an exit condition.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "The function checks if the provided Agent is a valid PSAIAgent object before invoking the interactive CLI.\nIf the Agent is not valid, an error is written and the function returns without further execution."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$agent = Get-PSAIAgent\r\nPS C:\\> Invoke-InteractiveCLI -Agent $agent -Message \"Hello, World!\" -User \"Admin\"\r\nThis example invokes the interactive CLI for the specified PSAIAgent with the message \"Hello, World!\" and user \"Admin\"."
+    }
+  ]
+}

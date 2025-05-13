@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Generates an image using the OpenAI API.",
+  "Description": "The Get-OAIImageGeneration function generates an image using the OpenAI API by sending a POST request to the '/images/generations' endpoint. It allows you to specify various parameters such as the prompt, model, number of generations, quality, response format, size, style, and user.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://platform.openai.com/docs/api-reference/images/create"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-OAIImageGeneration -Prompt \"Generate a beautiful landscape image\"\r\nGenerates an image using the default parameters and the specified prompt."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-OAIImageGeneration -Prompt \"Generate a cute cat image\" -Model \"cat-v1\" -N 5 -Quality \"high\" -ResponseFormat \"json\"\r\nGenerates 5 high-quality cat images in JSON format using the specified prompt and model."
+    }
+  ]
+}

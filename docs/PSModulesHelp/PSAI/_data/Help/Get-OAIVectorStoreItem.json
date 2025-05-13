@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Retrieves an item from the OpenAI Vector Store.",
+  "Description": "The Get-OAIVectorStoreItem function retrieves an item from the OpenAI Vector Store based on the specified VectorStoreId.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None. You cannot pipe objects to this function."
+  ],
+  "Outputs": [
+    "System.Object"
+  ],
+  "Links": [
+    "https://platform.openai.com/docs/api-reference/vector-stores/retrieve"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-OAIVectorStoreItem -VectorStoreId vs_SvMW6In5Y5D5Sl44Aae05eho\r\nRetrieves the vector store item with the specified ID."
+    }
+  ]
+}

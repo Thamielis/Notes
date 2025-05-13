@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new StockTickerTool instance.",
+  "Description": "The New-StockTickerTool function initializes a new instance of the StockTickerTool. \nIt checks for the presence of the 'financialmodelingprep' environment variable, which should contain your API key. \nIf the environment variable is not set, the function throws an error.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Ensure that the 'financialmodelingprep' environment variable is set to your API key before calling this function. \nYou can obtain an API key from: https://intelligence.financialmodelingprep.com/developer/docs"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-StockTickerTool\r\nInitializes the StockTickerTool and registers the necessary tools."
+    }
+  ]
+}

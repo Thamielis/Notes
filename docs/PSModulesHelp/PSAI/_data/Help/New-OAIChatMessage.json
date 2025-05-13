@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new chat message object.",
+  "Description": "The New-OAIChatMessage function creates a new chat message object with the specified content and role.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSCustomObject\nA custom object representing the chat message with the 'role' and 'content' properties."
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-OAIChatMessage -Content \"Hello, how can I assist you?\" -Role 'assistant'\r\nCreates a new chat message object with the content \"Hello, how can I assist you?\" and the role 'assistant'."
+    }
+  ]
+}

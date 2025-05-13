@@ -1,0 +1,54 @@
+{
+  "Synopsis": "Concatenate a directory full of files into a single prompt for use with LLMs",
+  "Description": "Takes one or more paths to files or directories and outputs every file, recursively, each one preceded with its filename like this:\n\npath/to/file.ps1\n----\nContents of file.ps1 goes here\n\n---\npath/to/file2.ps1\n---\n...",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Invoke-FilesToPrompt -Path \"C:\\MyFiles\"\r\nThis example invokes the Invoke-FilesToPrompt function to process files in the \"C:\\MyFiles\" directory."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Invoke-FilesToPrompt -Path \"C:\\MyFiles\\*.md\"\r\nThis example invokes the Invoke-FilesToPrompt function to process all Markdown files in the \"C:\\MyFiles\" directory."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Invoke-FilesToPrompt -Path \"C:\\MyFiles\\*.md\", \"C:\\MyOtherFiles\\*.md\"\r\nThis example invokes the Invoke-FilesToPrompt function to process all Markdown files in the \"C:\\MyFiles\" directory."
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "",
+      "Code": "(Invoke-FilesToPrompt (dir . -r *.md))\r\nThis example recursively processes all Markdown files in the current directory."
+    }
+  ]
+}

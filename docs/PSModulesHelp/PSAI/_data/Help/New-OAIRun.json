@@ -1,0 +1,33 @@
+{
+  "Synopsis": "\r\nNew-OAIRun [[-ThreadId] <Object>] [[-AssistantId] <Object>] [[-Model] <Object>] [[-Instructions] <Object>] [[-AdditionalInstructions] <Object>] [[-AdditionalMessages] <Object>] [[-Tools] <Object>] [[-Metadata] <Object>] [[-Temperature] <Object>] [[-TopP] <Object>] [[-MaxPromptTokens] <Object>] [[-MaxCompletionTokens] <Object>] [[-TruncationStrategy] <Object>] [[-ToolChoice] <Object>] [[-ResponseFormat] <Object>] [-Stream] [<CommonParameters>]\r\n",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.Object\r\n"
+  ],
+  "Outputs": [
+    "System.Object"
+  ],
+  "Links": [],
+  "Examples": []
+}

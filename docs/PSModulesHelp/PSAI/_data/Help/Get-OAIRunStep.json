@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Retrieves the run steps for a specific thread and run ID.",
+  "Description": "The Get-OAIRunStep function retrieves the run steps for a specific thread and run ID. It allows you to specify optional parameters such as the number of steps to retrieve, the order in which the steps should be sorted, and filters based on timestamps.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://platform.openai.com/docs/api-reference/runs/listRunSteps"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-OAIRunStep -threadId 123 -runId 456\r\nRetrieves the run steps for thread ID 123 and run ID 456."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-OAIRunStep -threadId 123 -runId 456 -limit 50 -order 'asc' -after '2022-01-01T00:00:00Z'\r\nRetrieves the first 50 run steps in ascending order that occurred after January 1, 2022."
+    }
+  ]
+}

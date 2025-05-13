@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Converts a PowerShell function to an OpenAI function specification.",
+  "Description": "The ConvertTo-OpenAIFunctionSpec function takes a PowerShell function as input and returns an OpenAI function specification. The function specification includes the function name, description, and parameter information.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$functionCode = Get-Content -Path \"C:\\MyFunction.ps1\" -Raw\r\nPS C:\\> ConvertTo-OpenAIFunctionSpec -targetCode $functionCode -Compress\r\nThis example reads the contents of a PowerShell function file, converts the function to an OpenAI function specification, and returns the specification as compressed JSON."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Invokes an AI chat assistant to answer user questions.",
+  "Description": "The Invoke-OAIChat function is used to interact with an AI chat assistant. It takes user input as a parameter and returns the assistant's response.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This function requires the New-OAIAssistant, New-OAIThreadQuery, Wait-OAIOnRun, and Get-OAIMessage functions to be available in the current session."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.String"
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Invoke-OAIChat -UserInput \"What is the weather today?\"\r\nInvokes the AI chat assistant with the specified user input and returns the assistant's response."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "'show even numbers' | ai -Instructions 'use powershell, just code, no explanation'"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "git status | ai 'write a detailed commit message'"
+    }
+  ]
+}

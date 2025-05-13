@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Updates an OAI thread with the specified thread ID, tool resources, and metadata.",
+  "Description": "The Update-OAIThread function is used to update an OAI (OpenAI) thread with the specified thread ID, tool resources, and metadata. It sends a POST request to the specified URL with the provided data.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://platform.openai.com/docs/api-reference/threads/modifyThread"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Update-OAIThread -threadId \"12345\" -toolResources \"resource1, resource2\" -metadata \"key1=value1, key2=value2\"\r\nThis example updates the OAI thread with the ID \"12345\" by associating it with the tool resources \"resource1\" and \"resource2\", and the metadata \"key1=value1\" and \"key2=value2\"."
+    }
+  ]
+}

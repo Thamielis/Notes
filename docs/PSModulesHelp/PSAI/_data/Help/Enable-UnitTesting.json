@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Enables unit testing.",
+  "Description": "The Enable-UnitTesting function sets the $EnableUnitTesting variable to $true, enabling unit testing.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Enable-UnitTesting\r\nThis example enables unit testing by setting the $EnableUnitTesting variable to $true."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Retrieves the properties of a specified tool.",
+  "Description": "The Get-ToolProperty function retrieves the properties of a specified tool from a given parameter.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-ToolProperty -Parameter \"FilePath\"\r\nReturns a string type property for the FilePath parameter."
+    }
+  ]
+}

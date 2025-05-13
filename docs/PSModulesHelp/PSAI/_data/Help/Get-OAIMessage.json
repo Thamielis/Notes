@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Retrieves messages for a specific thread ID.",
+  "Description": "The Get-OAIMessage function retrieves messages for a specific thread ID. It allows you to specify various parameters such as the number of messages to retrieve, the order in which they should be sorted, and filters based on timestamps and run IDs.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://beta.openai.com/docs/api-reference/messages/list"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-OAIMessage -ThreadId 12345 -Limit 10 -Order 'asc' -After '2022-01-01' -RunId 'abc123'\r\nRetrieves the 10 oldest messages for the thread with ID 12345, sorted in ascending order, after the specified timestamp, and for the specified run ID."
+    }
+  ]
+}

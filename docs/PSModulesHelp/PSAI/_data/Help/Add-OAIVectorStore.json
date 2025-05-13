@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Uploads one or more files and creates a vector store.",
+  "Description": "The Add-OAIVectorStore function is a simple workflow using Invoke-OAIUploadFile and New-OAIVectorStore to upload files to OpenAI and create a vector store.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Add-OAIVectorStore -Path \"C:\\Files\"\r\nThis example uploads all the files located in the \"C:\\Files\" directory to OAI and creates a vector store."
+    }
+  ]
+}

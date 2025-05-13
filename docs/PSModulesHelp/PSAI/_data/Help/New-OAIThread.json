@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Creates a new thread in the OpenAI API.",
+  "Description": "The New-OAIThread function sends a POST request to the OpenAI API to create a new thread. It takes in the following parameters:\n- messages: An array of messages to be included in the thread.\n- tool_resources: (Optional) Additional tool resources to be used in the thread.\n- metadata: (Optional) Additional metadata to be associated with the thread.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This function requires the Invoke-OAIBeta function to be available in the current session."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://platform.openai.com/docs/api-reference/threads/createThread"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$messages = @(\r\n    @{\r\n        role = 'user'\r\n        content = 'You are a helpful AI assistant.'\r\n    },\r\n    @{\r\n        role = 'user'\r\n        content = 'How can I create a new thread?'\r\n    }\r\n)\r\nNew-OAIThread -messages $messages"
+    }
+  ]
+}

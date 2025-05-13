@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Exports an OpenAI Assistant to a JSON file.",
+  "Description": "The Export-OAIAssistant function exports an OpenAI Assistant to a JSON file. It retrieves the assistant using the specified AssistantId and saves its properties to a JSON file at the specified Path.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Export-OAIAssistant -AssistantId \"assistant-12345\" -Path \"C:\\Exports\\assistant-12345.json\"\r\nExports the OpenAI Assistant with ID \"assistant-12345\" to a JSON file located at \"C:\\Exports\\assistant-12345.json\"."
+    }
+  ]
+}

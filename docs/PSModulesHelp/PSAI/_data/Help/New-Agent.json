@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new agent with specified tools, instructions, and other properties.",
+  "Description": "The New-Agent function initializes a new agent object with the provided tools, instructions, language model, name, and description. It also sets up various methods for the agent, such as printing responses and interacting via CLI.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "The function adds several methods to the agent object, including PrintResponse, InteractiveCLI, GetMessages, and PrettyPrintMessages."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-Agent -Instructions \"Follow the guidelines\" -Tools $tools -Name \"HelperAgent\" -Description \"An agent to assist with tasks\" -ShowToolCalls"
+    }
+  ]
+}

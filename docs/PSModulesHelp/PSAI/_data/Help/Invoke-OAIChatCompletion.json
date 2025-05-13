@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Invokes the OpenAI Chat Completions API.",
+  "Description": "This function sends a request to the OpenAI Chat Completions API to generate a chat-based completion.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$messages = @(\r\n    @{\r\n        'role' = 'user'\r\n        'content' = 'Hello, how are you?'\r\n    },\r\n    @{\r\n        'role' = 'assistant'\r\n        'content' = 'I am doing well, thank you!'\r\n    }\r\n)\r\nInvoke-OAIChatCompletion -Messages $messages -Model 'gpt-4o' -MaxTokens 50\r\n\r\nThis example generates a chat-based completion using the 'gpt-4o' model with a maximum of 50 tokens."
+    }
+  ]
+}

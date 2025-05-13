@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Update Windows 10 multi-app kiosk using Run Script in MEMCM.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/*!
+  Theme: GitHub Dark
+  Description: Dark theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-dark
+  Current colors taken from GitHub's CSS
+*/
+
+.hljs {
+  color: #c9d1d9;
+  background: #0d1117;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: #ff7b72;
+}
+
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: #d2a8ff;
+}
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: #79c0ff;
+}
+
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: #a5d6ff;
+}
+
+.hljs-built_in,
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: #ffa657;
+}
+
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: #8b949e;
+}
+
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: #7ee787;
+}
+
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: #c9d1d9;
+}
+
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: #1f6feb;
+  font-weight: bold;
+}
+
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: #f2cc60;
+}
+
+.hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: #c9d1d9;
+  font-style: italic;
+}
+
+.hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: #c9d1d9;
+  font-weight: bold;
+}
+
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: #aff5b4;
+  background-color: #033a16;
+}
+
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: #ffdcd7;
+  background-color: #67060c;
+}
+
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+}
+
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+<link rel="stylesheet" href="file://term08/c%24/ProgramData/UniversalAutomation/Repository/KnowledgeBase/styles/github-markdown.css" type="text/css"><link rel="stylesheet" href="file://term08/c%24/ProgramData/UniversalAutomation/Repository/KnowledgeBase/styles/markdown.css" type="text/css">
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body class="vscode-body vscode-dark">
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+  <div class="github-markdown-body github-markdown-auto">
+    <div class="github-markdown-content">
+      <h1 id="update-windows-10-multi-app-kiosk-using-run-script-in-microsoft-endpoint-configuration-manager-memcm">Update Windows 10 multi-app kiosk using Run Script in Microsoft Endpoint Configuration Manager (MEMCM)</h1>
+<p>Contents</p>
+<!-- vscode-markdown-toc -->
+<ul>
+<li><a href="#update-windows-10-multi-app-kiosk-using-run-script-in-microsoft-endpoint-configuration-manager-memcm">Update Windows 10 multi-app kiosk using Run Script in Microsoft Endpoint Configuration Manager (MEMCM)</a>
+<ul>
+<li><a href="#1-how-to-update-the-kiosk-machine">1. How to update the kiosk machine</a></li>
+<li><a href="#2-script-to-update-the-kiosk">2. Script to update the kiosk</a></li>
+<li><a href="#3-run-script-in-memcm">3. Run Script in MEMCM</a></li>
+<li><a href="#4-group-policy-to-configure-windows-settings-options">4. Group Policy to configure Windows settings options</a></li>
+<li><a href="#5-summary">5. Summary</a></li>
+<li><a href="#6-subscribe-to-4sysops-newsletter">6. Subscribe to 4sysops newsletter</a></li>
+</ul>
+</li>
+</ul>
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<h2 id="vscode-markdown-toc"><!-- /vscode-markdown-toc --></h2>
+<p>A little background. In the last post, we deployed a Windows multi-app kiosk using an assigned access and PowerShell script during OS deployment. But now, when we have the kiosk machine in production, we get a service desk ticket that the kiosk users must be able to add printers to the kiosk machine.</p>
+<p>Let's look at how we can achieve this using Run Scripts in MEMCM.</p>
+<h2 id="1-a-namehowtoupdatethekioskmachineahow-to-update-the-kiosk-machine">1. <a name='Howtoupdatethekioskmachine'></a>How to update the kiosk machine</h2>
+<p>In the last post, when we deployed the kiosk computer, we wrote two registry values during OSD. One had the version of the kiosk configuration and one had the username used for AutoLogon. The version can be inventoried using MEMCM. Then we can create reports, collections, and all the MEMCM goodness based on the kiosk version.</p>
+<p><img src="https://4sysops.com/wp-content/uploads/2020/10/Registry-value-1-600x176.png" alt="Registry value" title="Registry value"></p>
+<p>The kiosk machine was configured as shown below to allow Excel, Edge, and Google Chrome to run.</p>
+<p><img src="https://4sysops.com/wp-content/uploads/2020/10/Multi-app-kiosk-example-1-600x452.png" alt="Multi app kiosk example" title="Multi app kiosk example"></p>
+<p>Now, when we reconfigure the kiosk configuration, we can use the versioning that we wrote to the registry and update that registry value using the script to keep track of the configuration version. We need to do three things so that the service desk can allow users to add printers to the kiosk:</p>
+<ol>
+<li>Allow the Settings app to run.</li>
+<li>Add the settings app to the Start Menu.</li>
+<li>Configure a Group Policy to only show printers.</li>
+</ol>
+<h2 id="2-a-namescripttoupdatethekioskascript-to-update-the-kiosk">2. <a name='Scripttoupdatethekiosk'></a>Script to update the kiosk</h2>
+<p>The script we use to update the kiosk is a subset of what we used to deploy the kiosk computer. It reads the username we used when we deployed it and then reconfigures the kiosk using the updated XML payload in this script. The XML payload has two added lines compared to the one used for the initial deployment.</p>
+<p>In the allowed apps section:</p>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">App</span> <span class="hljs-attr">AppUserModelId</span>=<span class="hljs-string">"windows.immersivecontrolpanel\_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel"</span> /&gt;</span>
+</div></code></pre>
+<p>And in the Start Menu section:</p>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">start:Tile</span> <span class="hljs-attr">Size</span>=<span class="hljs-string">"2x2"</span> <span class="hljs-attr">Column</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">Row</span>=<span class="hljs-string">"6"</span> <span class="hljs-attr">AppUserModelID</span>=<span class="hljs-string">"windows.immersivecontrolpanel\_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel"</span> /&gt;</span>
+</div></code></pre>
+<p>The script:</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># Name: MultiKiosk</span>
+<span class="hljs-comment"># Authors: Jörgen Nilsson</span>
+
+<span class="hljs-comment"># Set values</span>
+<span class="hljs-variable">$Version</span>=<span class="hljs-string">"1.1"</span>
+<span class="hljs-variable">$RegKeyName</span> = <span class="hljs-string">"CCMEXECOSD"</span>
+<span class="hljs-variable">$Domain</span>=<span class="hljs-string">"4sysops"</span>
+<span class="hljs-variable">$FullRegKeyName</span> = <span class="hljs-string">"HKLM:\SOFTWARE\"</span> + <span class="hljs-variable">$regkeyname</span> 
+
+<span class="hljs-variable">$username</span>=<span class="hljs-built_in">Get-ItemPropertyValue</span> <span class="hljs-literal">-Path</span> <span class="hljs-variable">$FullRegKeyName</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">"UserName"</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Update-KioskMode</span></span> {
+
+    <span class="hljs-variable">$DomainUser</span> = <span class="hljs-string">"<span class="hljs-variable">$</span>(<span class="hljs-variable">$Domain</span>)\<span class="hljs-variable">$</span>(<span class="hljs-variable">$UserName</span>)"</span>.TrimStart(<span class="hljs-string">'\'</span>)
+
+    <span class="hljs-variable">$nameSpaceName</span>=<span class="hljs-string">"root\cimv2\mdm\dmmap"</span>
+    <span class="hljs-variable">$className</span>=<span class="hljs-string">"MDM_AssignedAccess"</span>
+    <span class="hljs-variable">$obj</span> = <span class="hljs-built_in">Get-CimInstance</span> <span class="hljs-literal">-Namespace</span> <span class="hljs-variable">$namespaceName</span> <span class="hljs-literal">-ClassName</span> <span class="hljs-variable">$className</span>
+    <span class="hljs-built_in">Add-Type</span> <span class="hljs-literal">-AssemblyName</span> System.Web
+    <span class="hljs-variable">$obj</span>.Configuration = [<span class="hljs-type">System.Web.HttpUtility</span>]::HtmlEncode(<span class="hljs-string">@"
+    &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+    &lt;AssignedAccessConfiguration 
+      xmlns="http://schemas.microsoft.com/AssignedAccess/2017/config"
+      xmlns:v2="http://schemas.microsoft.com/AssignedAccess/201810/config"
+      xmlns:v3="http://schemas.microsoft.com/AssignedAccess/2020/config"
+    &gt;
+      &lt;Profiles&gt;
+        &lt;Profile Id="{9A2A490F-10F6-4764-974A-43B19E722C23}"&gt;
+          &lt;AllAppsList&gt;
+            &lt;AllowedApps&gt;
+              &lt;App AppUserModelId="Windows.PrintDialog_cw5n1h2txyewy" /&gt;
+              &lt;App AppUserModelId="windows.immersivecontrolpanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel" /&gt;
+              &lt;App DesktopAppPath="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" /&gt;
+              &lt;App DesktopAppPath="C:\Program Files\Microsoft Office\root\Office16\Excel.exe" /&gt;
+              &lt;App DesktopAppPath="C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" /&gt;
+            &lt;/AllowedApps&gt;
+          &lt;/AllAppsList&gt;
+          &lt;v2:FileExplorerNamespaceRestrictions&gt;
+            &lt;v2:AllowedNamespace Name="Downloads"/&gt;
+            &lt;v3:AllowRemovableDrives/&gt;
+          &lt;/v2:FileExplorerNamespaceRestrictions&gt;
+          &lt;StartLayout&gt;
+            &lt;![CDATA[&lt;LayoutModificationTemplate xmlns:defaultlayout="http://schemas.microsoft.com/Start/2014/FullDefaultLayout" xmlns:start="http://schemas.microsoft.com/Start/2014/StartLayout" Version="1" xmlns="http://schemas.microsoft.com/Start/2014/LayoutModification"&gt;
+                          &lt;LayoutOptions StartTileGroupCellWidth="6" /&gt;
+                          &lt;DefaultLayoutOverride&gt;
+                            &lt;StartLayoutCollection&gt;
+                              &lt;defaultlayout:StartLayout GroupCellWidth="6"&gt;
+                                &lt;start:Group Name="Product"&gt;
+                                  &lt;start:DesktopApplicationTile Size="2x2" Column="0" Row="0" DesktopApplicationLinkPath="%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Google Chrome.lnk" /&gt;
+                                  &lt;start:DesktopApplicationTile Size="2x2" Column="2" Row="0" DesktopApplicationLinkPath="%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Microsoft Edge.lnk" /&gt;
+                                  &lt;start:DesktopApplicationTile Size="2x2" Column="4" Row="0" DesktopApplicationLinkPath="%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Excel.lnk" /&gt;
+                                  &lt;start:Tile Size="2x2" Column="0" Row="6" AppUserModelID="windows.immersivecontrolpanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel" /&gt;
+                                &lt;/start:Group&gt;
+                              &lt;/defaultlayout:StartLayout&gt;
+                            &lt;/StartLayoutCollection&gt;
+                          &lt;/DefaultLayoutOverride&gt;
+                        &lt;/LayoutModificationTemplate&gt;
+                    ]]&gt;
+          &lt;/StartLayout&gt;
+          &lt;Taskbar ShowTaskbar="true"/&gt;
+        &lt;/Profile&gt;
+      &lt;/Profiles&gt;
+      &lt;Configs&gt;
+        &lt;Config&gt;
+          &lt;Account&gt;<span class="hljs-variable">$DomainUser</span>&lt;/Account&gt;
+          &lt;DefaultProfile Id="{9A2A490F-10F6-4764-974A-43B19E722C23}"/&gt;
+        &lt;/Config&gt;
+      &lt;/Configs&gt;
+    &lt;/AssignedAccessConfiguration&gt;
+"@</span>)
+    <span class="hljs-built_in">Set-CimInstance</span> <span class="hljs-literal">-CimInstance</span> <span class="hljs-variable">$obj</span>
+}
+
+<span class="hljs-built_in">Update-KioskMode</span> 
+
+</div></code></pre>
+<h2 id="3-a-namerunscriptinmemcmarun-script-in-memcm">3. <a name='RunScriptinMEMCM'></a>Run Script in MEMCM</h2>
+<p>To reconfigure the kiosk, the script needs to be run in the system context. That is exactly what Run Script in MEMCM does. We could, of course, create a package/program in MEMCM and run the script, but Run Script is faster and cooler. To create the Run Script in MEMCM, save the script above and make any necessary changes to it.</p>
+<p>Then, in the Configuration Manager console, we select <strong>Create script</strong> under <strong>Software Library &gt; Scripts</strong> and import the script we saved earlier.</p>
+<p><img src="https://4sysops.com/wp-content/uploads/2020/10/Create-script-in-MEMCM.png" alt="Create script in MEMCM" title="Create script in MEMCM"></p>
+<p>When the script is created, we need to find a coworker who can approve the script for us so we can run it. You could, of course, change the site settings so you can approve it yourself, but that is only recommended in a test environment.</p>
+<p><img src="https://4sysops.com/wp-content/uploads/2020/10/Script-waiting-for-approval.png" alt="Script waiting for approval" title="Script waiting for approval"></p>
+<p>When the script is approved, we can run the script against the computer or collection of kiosk computers that need to be reconfigured. In the Admin console, select the kiosk computer you want to reconfigure and select the script to run.</p>
+<p><img src="https://4sysops.com/wp-content/uploads/2020/10/Run-script.png" alt="Run script" title="Run script"></p>
+<p>When the script has finished, the Kiosk computer is reconfigured.</p>
+<p><img src="https://4sysops.com/wp-content/uploads/2020/10/Run-script-status.png" alt="Run script status" title="Run script status"></p>
+<p>We could have added a reboot to the script so that the change takes effect. We need to configure one more thing before we restart and test the new configuration.</p>
+<h2 id="4-a-namegrouppolicytoconfigurewindowssettingsoptionsagroup-policy-to-configure-windows-settings-options">4. <a name='GroupPolicytoconfigureWindowssettingsoptions'></a>Group Policy to configure Windows settings options</h2>
+<p>When we deployed the kiosk computer, we moved the computer account in Active Directory to a dedicated OU used for kiosk computers. To only show the Printers page in Windows Settings, we create a Group Policy and link it to that OU with the &quot;Settings Page Visibility&quot; setting configured to &quot;ShowOnly:Printers,&quot; as shown below.</p>
+<p><img src="https://4sysops.com/wp-content/uploads/2020/10/Settings-page-visibility.png" alt="Settings page visibility" title="Settings page visibility"></p>
+<h2 id="5-a-namesummaryasummary">5. <a name='Summary'></a>Summary</h2>
+<p>The result is a reconfigured kiosk computer with a Start Menu layout as shown below.</p>
+<p><img src="https://4sysops.com/wp-content/uploads/2020/10/Updated-kiosk.png" alt="Updated kiosk" title="Updated kiosk"></p>
+<p>When we launch Windows Settings to add our printer, only the Devices options are available for us to add our printer.</p>
+<h2 id="6-a-namesubscribeto4sysopsnewsletterasubscribe-to-4sysops-newsletter">6. <a name='Subscribeto4sysopsnewsletter'></a>Subscribe to 4sysops newsletter</h2>
+<p><img src="https://4sysops.com/wp-content/uploads/2020/10/Windows-settings.png" alt="Windows settings" title="Windows settings"></p>
+<p>When deploying a Multi App kiosk machine, it is important to have a plan for reconfiguring it. It's preferable to do so without reinstalling it simply because it is faster. In this example, we used Run Scripts, which is one of the coolest features introduced in Configuration Manager. This is one example of how it can speed up tasks and make things easier and faster than they were before.</p>
+
+    </div>
+  </div>
+</body>
+</html>

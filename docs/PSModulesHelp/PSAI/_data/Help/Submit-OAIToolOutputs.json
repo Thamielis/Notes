@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Submits tool outputs for a specific thread and run.",
+  "Description": "The Submit-OAIToolOutputs function is used to submit tool outputs for a specific thread and run in an application. It sends a POST request to the specified URL with the provided tool outputs.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://platform.openai.com/docs/api-reference/runs/submitToolOutputs"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Submit-OAIToolOutputs -threadId 123 -runId 456 -toolOutputs $outputs"
+    }
+  ]
+}

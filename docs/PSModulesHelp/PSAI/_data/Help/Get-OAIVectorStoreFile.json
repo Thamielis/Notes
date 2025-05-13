@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Retrieves files from a vector store.",
+  "Description": "The Get-OAIVectorStoreFile function retrieves files from a vector store based on the specified parameters. It sends a GET request to the vector store API endpoint and returns the files that match the specified criteria.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://platform.openai.com/docs/api-reference/vector-stores-files/listFiles"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-OAIVectorStoreFile -VectorStoreId \"12345\" -Limit 50 -Order \"asc\" -After \"2022-01-01\" -Filter \"name eq 'example.txt'\"\r\nRetrieves the first 50 files from the vector store with ID \"12345\", sorted in ascending order, that were created after January 1, 2022, and have the name \"example.txt\"."
+    }
+  ]
+}

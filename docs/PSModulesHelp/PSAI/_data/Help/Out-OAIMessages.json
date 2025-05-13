@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Outputs messages with roles and content.",
+  "Description": "The Out-OAIMessages function is used to output messages with roles and content. It accepts an array of messages and an optional switch parameter to exclude the header.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$messages = @(\r\n    [PSCustomObject]@{\r\n        role = \"Info\"\r\n        content = [PSCustomObject]@{\r\n            text = [PSCustomObject]@{\r\n                value = \"This is an informational message.\"\r\n            }\r\n        }\r\n    },\r\n    [PSCustomObject]@{\r\n        role = \"Warning\"\r\n        content = [PSCustomObject]@{\r\n            text = [PSCustomObject]@{\r\n                value = \"This is a warning message.\"\r\n            }\r\n        }\r\n    }\r\n)\r\nOut-OAIMessages -Messages $messages\r\n\r\nThis example demonstrates how to use the Out-OAIMessages function to output messages."
+    }
+  ]
+}

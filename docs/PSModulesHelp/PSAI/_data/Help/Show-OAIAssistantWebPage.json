@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Opens the OpenAI Playground web page for the specified assistant ID or the default page.",
+  "Description": "The Show-OAIAssistantWebPage function opens the OpenAI Playground web page for the specified assistant ID or the default page if no ID is provided. The web page allows you to interact with the OpenAI assistant.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Show-OAIAssistantWebPage -assistantId \"assistant-12345\"\r\nOpens the OpenAI Playground web page for the assistant with ID \"assistant-12345\"."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Show-OAIAssistantWebPage\r\nOpens the default OpenAI Playground web page."
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "Synopsis": "Tests the LLM model.",
+  "Description": "This function tests the LLM model by checking if the specified model is valid based on the provider.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Used in the ValidateScript attribute of the -Model parameter in multiple functions."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": []
+}

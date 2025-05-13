@@ -1,0 +1,39 @@
+{
+  "Synopsis": "This function tests if a given JSON string is valid by attempting to convert it using ConvertFrom-Json cmdlet.",
+  "Description": "The Test-JsonReplacement function takes a JSON string as input and attempts to convert it using the ConvertFrom-Json cmdlet. If the conversion is successful, it returns $true; otherwise, it returns $false.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.String"
+  ],
+  "Outputs": [
+    "System.Boolean"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Test-JsonReplacement -JSON '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'\r\nThis example tests the validity of the given JSON string."
+    }
+  ]
+}

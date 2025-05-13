@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Displays text inside a boxed frame with optional title.",
+  "Description": "This function displays the provided text inside a boxed frame with an optional title. \nThe box and title are displayed in the specified box color, while the text is displayed in the specified text color.\n\nIt handles text wrapping to ensure the box is drawn correctly around the wrapped text.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Out-BoxedText -Text \"Paris\" -Title \"Agent\" -BoxColor DarkBlue -TextColor White"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Out-BoxedText -Text \"Follow up, Enter to copy & quit, Ctrl+C to quit.\" -Title \"Next Steps\" -BoxColor Cyan -TextColor Yellow"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Out-BoxedText -Text \"Copied to clipboard.\" -Title \"Information\" -BoxColor Green -TextColor Black"
+    }
+  ]
+}

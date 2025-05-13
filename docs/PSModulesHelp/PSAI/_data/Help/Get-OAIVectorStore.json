@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Retrieves vector stores from the specified base URL.",
+  "Description": "The Get-OAIVectorStore function retrieves vector stores from the specified base URL. It supports various parameters such as limit, order, after, before, and raw output.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "The function returns an array of vector stores or the raw response object, depending on the value of the Raw parameter."
+  ],
+  "Links": [
+    "https://platform.openai.com/docs/api-reference/vector-stores/list"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-OAIVectorStore -limit 10 -order desc\r\nRetrieves the 10 most recent vector stores in descending order."
+    }
+  ]
+}

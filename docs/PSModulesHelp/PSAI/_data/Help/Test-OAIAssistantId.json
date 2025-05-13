@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Tests whether an OpenAI Assistant ID exists.",
+  "Description": "The Test-OAIAssistantId function checks whether an OpenAI Assistant ID exists by querying the Get-OAIAssistantItem cmdlet.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None. You cannot pipe objects to this function."
+  ],
+  "Outputs": [
+    "System.Boolean\nReturns $true if the Assistant ID exists, otherwise returns $false."
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Test-OAIAssistantId -AssistantId \"12345678\"\r\nChecks whether the Assistant ID \"12345678\" exists."
+    }
+  ]
+}

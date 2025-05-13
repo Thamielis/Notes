@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Updates an OpenAI Assistant.",
+  "Description": "This function updates an OpenAI Assistant with the specified parameters.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://platform.openai.com/docs/api-reference/assistants/modifyAssistant"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Update-OAIAssistant -Id \"assistant123\" -Model \"gpt-3.5-turbo\" -Name \"My Assistant\" -Description \"This is my assistant\" -Instructions \"Use this assistant to perform various tasks\" -Tools \"PowerShell\", \"Visual Studio Code\" -FileIds \"file1\", \"file2\" -Metadata @{ \"key1\" = \"value1\"; \"key2\" = \"value2\" }"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Converts a markdown table to a PowerShell object.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "ConvertFrom-GPTMarkdownTable -Markdown @'\r\n| Name | Value |\r\n| ---- | ----- |\r\n| foo  | bar   |\r\n| baz  | qux   |\r\n'@"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "ai 'markdown table syntax' | ConvertFrom-GPTMarkdownTable"
+    }
+  ]
+}

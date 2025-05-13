@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Returns the definition of one or more PowerShell functions.",
+  "Description": "The Get-FunctionDefinition function takes an array of CommandInfo objects representing PowerShell functions and returns their definitions as strings.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-FunctionDefinition (Get-Command Get-FunctionDefinition)"
+    }
+  ]
+}

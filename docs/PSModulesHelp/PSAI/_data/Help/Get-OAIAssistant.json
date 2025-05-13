@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Retrieves OpenAI assistants based on specified criteria.",
+  "Description": "The Get-OAIAssistant function retrieves OpenAI assistants based on the specified criteria such as name, limit, order, after, before, and raw output.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "The function returns a collection of OpenAI assistants based on the specified criteria."
+  ],
+  "Links": [
+    "https://platform.openai.com/docs/api-reference/assistants/listAssistants"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-OAIAssistant -Name \"MyAssistant\" -Limit 10 -Order 'asc'\r\nRetrieves the first 10 OpenAI assistants with the name \"MyAssistant\" in ascending order."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-OAIAssistant -Limit 5 -After \"cursor123\"\r\nRetrieves the next 5 OpenAI assistants created after the cursor \"cursor123\"."
+    }
+  ]
+}

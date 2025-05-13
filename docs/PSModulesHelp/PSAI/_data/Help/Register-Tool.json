@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Registers a tool by name.",
+  "Description": "The Register-Tool function is used to register a tool by name. It retrieves the command specification for the specified function and registers it as a tool.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Register-Tool -FunctionName \"MyFunction\" -Strict\r\nRegisters the function named \"MyFunction\" as a tool and enforces strict mode."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Register-Tool -FunctionName Get-ChildIten, Get-Content\r\nRegisters the cmdlets Get-ChildItem and Get-Content as tools. rOutput is an array of tool specifications."
+    }
+  ]
+}

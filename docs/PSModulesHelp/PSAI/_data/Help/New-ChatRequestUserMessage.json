@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new user message for a chat request.",
+  "Description": "The New-ChatRequestUserMessage function creates a new user message for a chat request. It takes a user request as input and returns a hashtable containing the role and content of the message.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None."
+  ],
+  "Outputs": [
+    "System.Collections.Hashtable"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$userRequest = \"Hello, I need assistance with my account.\"\r\nNew-ChatRequestUserMessage -userRequest $userRequest\r\n# Returns:\r\n# @{\r\n#     'role'    = 'user'\r\n#     'content' = 'Hello, I need assistance with my account.'\r\n# }"
+    }
+  ]
+}

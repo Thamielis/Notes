@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Waits for a run to complete in an Azure Machine Learning service workspace.",
+  "Description": "The Wait-OAIOnRun function waits for a run to complete in an Azure Machine Learning service workspace. It continuously checks the status of the run and sleeps for a short duration until the run is no longer in the 'queued' or 'in_progress' state.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$run = Get-OAIRunItem -ThreadId $thread.id -RunId $run.id\r\nWait-OAIOnRun -Run $run -Thread $thread"
+    }
+  ]
+}

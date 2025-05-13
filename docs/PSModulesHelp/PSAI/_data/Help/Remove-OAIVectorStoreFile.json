@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Removes a file from a vector store.",
+  "Description": "The Remove-OAIVectorStoreFile function removes a file from a vector store specified by the VectorStoreId and FileId parameters.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://platform.openai.com/docs/api-reference/vector-stores-files/deleteFile"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-OAIVectorStoreFile -VectorStoreId \"12345\" -FileId \"67890\"\r\nRemoves the file with ID \"67890\" from the vector store with ID \"12345\"."
+    }
+  ]
+}

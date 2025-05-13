@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Retrieves information about a file from the OpenAI API.",
+  "Description": "The Get-OAIFileItem function retrieves information about a file from the OpenAI API by providing the file ID.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://beta.openai.com/docs/api-reference/files/retrieve"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-OAIFileItem -FileId \"abc123\"\r\nRetrieves information about the file with the ID \"abc123\" from the OpenAI API."
+    }
+  ]
+}

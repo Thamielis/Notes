@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Copies an OpenAI Assistant to create a new Assistant with optional name change.",
+  "Description": "The Copy-OAIAssistant function copies an OpenAI Assistant identified by AssistantId and creates a new Assistant with optional name change.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Copy-OAIAssistant -AssistantId \"assistant-12345\" -NewName \"MyCopiedAssistant\"\r\nCopies the OpenAI Assistant with ID \"assistant-12345\" and creates a new Assistant with the name \"MyCopiedAssistant\"."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Copy-OAIAssistant -AssistantId \"assistant-67890\"\r\nCopies the OpenAI Assistant with ID \"assistant-67890\" and creates a new Assistant with the same name as the original Assistant."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Converts an object to JSON format.",
+  "Description": "The `dumpJson` function converts an object to JSON format using the `ConvertTo-Json` cmdlet.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.Object"
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$obj = @{\r\n    Name = \"John Doe\"\r\n    Age = 30\r\n    Email = \"johndoe@example.com\"\r\n}\r\ndumpJson $obj\r\nThis example converts a hashtable object to JSON format."
+    }
+  ]
+}

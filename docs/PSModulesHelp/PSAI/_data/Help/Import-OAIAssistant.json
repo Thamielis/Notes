@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Imports an OAI Assistant from a JSON file.",
+  "Description": "The Import-OAIAssistant function imports an OAI Assistant from a JSON file and creates a new OAI Assistant object.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Import-OAIAssistant -Path \"C:\\OAIAssistant.json\"\r\nThis example imports an OAI Assistant from the \"C:\\OAIAssistant.json\" file."
+    }
+  ]
+}

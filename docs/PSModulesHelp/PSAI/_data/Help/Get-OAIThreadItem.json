@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Retrieves an item from an OpenAPI thread.",
+  "Description": "The Get-OAIThreadItem function retrieves an item from an OpenAPI thread based on the specified thread ID.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://platform.openai.com/docs/api-reference/threads/getThread"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-OAIThreadItem -ThreadId 12345\r\nRetrieves the item from the OpenAPI thread with the ID 12345."
+    }
+  ]
+}

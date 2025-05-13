@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Creates a new OpenAI chat configuration object.",
+  "Description": "The New-OpenAIChat function initializes a new OpenAI chat configuration object with a specified model. \nIt generates a verbose message containing the timestamp and the configuration details.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-OpenAIChat -model 'gpt-4o-mini'\r\nThis example creates a new OpenAI chat configuration object using the 'gpt-3.5-turbo' model."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-OpenAIChat\r\nThis example creates a new OpenAI chat configuration object using the default 'gpt-4o-mini' model."
+    }
+  ]
+}

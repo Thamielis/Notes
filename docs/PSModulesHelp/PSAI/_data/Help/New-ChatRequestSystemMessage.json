@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new system message for a chat request.",
+  "Description": "The New-ChatRequestSystemMessage function creates a new system message for a chat request. It takes the user request as input and returns a hashtable containing the role and content of the system message.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Collections.Hashtable\nA hashtable containing the role and content of the system message."
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$userRequest = \"Please wait while we connect you to an agent.\"\r\nNew-ChatRequestSystemMessage -userRequest $userRequest\r\nThis example creates a new system message with the specified user request."
+    }
+  ]
+}

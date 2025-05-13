@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Converts a Unix timestamp to a DateTime object.",
+  "Description": "The ConvertFrom-UnixTimestamp function takes a Unix timestamp as input and converts it to a DateTime object. \nA Unix timestamp represents the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.DateTime\nThe function returns a DateTime object representing the converted Unix timestamp."
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "ConvertFrom-UnixTimestamp -UnixTimestamp 1625097600\r\nThis example converts the Unix timestamp 1625097600 to a DateTime object."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Converts a PowerShell function definition to an OpenAI function specification.",
+  "Description": "This function takes a PowerShell function definition and converts it to an OpenAI function specification.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "ConvertFrom-FunctionDefinition -FunctionInfo (Get-Command Get-ChildItem)\r\nThis example converts the Get-ChildItem function to an OpenAI function specification."
+    }
+  ]
+}

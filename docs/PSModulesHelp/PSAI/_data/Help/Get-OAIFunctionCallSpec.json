@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Generates a specification for a given PowerShell cmdlet.",
+  "Description": "The Get-OAIFunctionCallSpec function generates a specification for a specified PowerShell cmdlet. \nIt retrieves the cmdlet's parameters and their details, and optionally returns the specification in hash or JSON format.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-OAIFunctionCallSpec -CmdletName Get-Process -ReturnJson\r\nThis command generates a JSON specification for the Get-Process cmdlet."
+    }
+  ]
+}

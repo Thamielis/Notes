@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Prompts the user for input using OpenAI ChatGPT and returns the generated response.",
+  "Description": "The Invoke-AIPrompt function prompts the user for input using OpenAI ChatGPT and returns the generated response. It sends a series of messages to the ChatGPT model, including system messages and user messages, to guide the conversation.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This function requires the Invoke-OAIChatCompletion function to be available in the current session."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String\nReturns the generated response from the ChatGPT model."
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$data = @\"\r\nRegion,State,Units,Price\r\nWest,Texas,927,923.71\r\nNorth,Tennessee,466,770.67\r\nEast,Florida,520,458.68w\r\nEast,Maine,828,661.24\r\nWest,Virginia,465,53.58\r\nNorth,Missouri,436,235.67\r\nSouth,Kansas,214,992.47\r\nNorth,North Dakota,789,640.72\r\nSouth,Delaware,712,508.55\r\n\"@\r\nInvoke-AIPrompt -Prompt \"top 3\" -Data $data\r\n\r\nThis example prompts the user with the question \"What is the capital of France?\" and includes the question in the conversation data. The function then returns the generated response from the ChatGPT model."
+    }
+  ]
+}

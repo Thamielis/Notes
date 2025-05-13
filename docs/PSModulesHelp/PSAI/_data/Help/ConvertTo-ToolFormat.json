@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Converts an array of functions into a tool format.",
+  "Description": "The ConvertTo-ToolFormat function takes an array of functions and converts them into a tool format. Each function in the array is transformed into a hashtable with a 'type' key set to 'function' and a 'function' key set to the original function.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$functions = @(\r\n    @{\r\n        Name = 'Get-User'\r\n        Description = 'Retrieves user information'\r\n        Parameters = @(\r\n            @{\r\n                Name = 'Username'\r\n                Type = 'String'\r\n                Description = 'The username of the user'\r\n            }\r\n        )\r\n    }\r\n)\r\nConvertTo-ToolFormat -functions $functions"
+    }
+  ]
+}

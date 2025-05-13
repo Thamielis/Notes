@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a new thread query.",
+  "Description": "The New-OAIThreadQuery function creates a new thread query by invoking the New-OAIThread cmdlet and submitting a message using the Submit-OAIMessage cmdlet.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Object[]\nThe output consists of an array containing the created thread, the run status, and the message."
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-OAIThreadQuery -UserInput \"Hello\" -Assistant $assistant\r\nThis example creates a new thread query with the user input \"Hello\" and the specified assistant."
+    }
+  ]
+}

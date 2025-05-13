@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Retrieves an item from the OpenAI Assistant.",
+  "Description": "The Get-OAIAssistantItem function retrieves an item from the OpenAI Assistant based on the specified AssistantId.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None."
+  ],
+  "Outputs": [
+    "System.Object."
+  ],
+  "Links": [
+    "https://platform.openai.com/docs/api-reference/assistants/getAssistant"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-OAIAssistantItem -AssistantId \"12345678\"\r\nThis example retrieves an item from the OpenAI Assistant with the ID \"12345678\"."
+    }
+  ]
+}

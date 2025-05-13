@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Converts an AI assistant object to Json.",
+  "Description": "The ConvertFrom-OAIAssistant function takes an AI assistant object as input and converts it to Json. It removes certain properties from the object. This allows you to save and resotre the assisant correctly",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$assistant = New-OAIAssistant \r\nConvertFrom-OAIAssistant -Assistant $assistant"
+    }
+  ]
+}

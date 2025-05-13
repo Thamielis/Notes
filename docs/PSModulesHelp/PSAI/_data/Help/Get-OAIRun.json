@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Retrieves the runs associated with a specific thread ID.",
+  "Description": "The Get-OAIRun function retrieves the runs associated with a specific thread ID from a specified base URL. It allows you to specify various parameters such as the number of runs to retrieve, the order in which they should be sorted, and the time range for the runs.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://platform.openai.com/docs/api-reference/runs/listRuns"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-OAIRun -threadId 12345 -limit 10 -order 'asc' -after '2022-01-01T00:00:00Z'\r\nRetrieves the 10 oldest runs associated with thread ID 12345, sorted in ascending order, and after the specified timestamp."
+    }
+  ]
+}

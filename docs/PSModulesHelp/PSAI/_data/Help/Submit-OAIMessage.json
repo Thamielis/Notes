@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Submits an OpenAI message and run.",
+  "Description": "The Submit-OAIMessage function is used to submit an OpenAI message and run. It creates a new message using the New-OAIMessage cmdlet and a new run using the New-OAIRun cmdlet. The function takes three parameters: $Assistant, $Thread, and $UserInput.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None."
+  ],
+  "Outputs": [
+    "System.Object[]\nThe function returns an array containing the run and message objects."
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Submit-OAIMessage -Assistant $assistant -Thread $thread -UserInput \"Hello, how can I help you?\"\r\nThis example submits a user message to the OpenAI assistant and creates a new run."
+    }
+  ]
+}

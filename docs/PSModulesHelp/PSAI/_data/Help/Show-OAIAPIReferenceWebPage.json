@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Opens the OpenAI API reference web page.",
+  "Description": "The Show-OAIAPIReferenceWebPage function opens the OpenAI API reference web page in the default web browser.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Show-OAIAPIReferenceWebPage\r\nOpens the OpenAI API reference web page."
+    }
+  ]
+}

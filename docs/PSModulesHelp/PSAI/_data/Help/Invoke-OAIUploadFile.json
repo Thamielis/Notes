@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Uploads a file to a specified URL using the OpenAI API.",
+  "Description": "The Invoke-OAIUploadFile function uploads a file to a specified URL using the OpenAI API. It supports uploading files for fine-tuning or for use with assistants.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Invoke-OAIUploadFile -Path 'C:\\Files\\my_file.txt' -Purpose 'fine-tune'\r\nUploads the file 'my_file.txt' for fine-tuning using the OpenAI API."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-ChildItem 'C:\\Files' | Invoke-OAIUploadFile -Purpose 'assistants'\r\nUploads all files in the 'C:\\Files' directory for use with assistants using the OpenAI API."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Retrieves a response from a PSAIAgent based on a given prompt.",
+  "Description": "The Get-AgentResponse function takes a prompt string and an agent object, validates the agent, and retrieves a response from the agent. The agent must be of type 'PSAIAgent'.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "The agent object must be of type 'PSAIAgent'. If the agent is not valid, an error will be thrown."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-AgentResponse -Prompt \"Hello, how are you?\" -Agent $myAgent"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "$myAgent | Get-AgentResponse -Prompt \"What is the weather today?\""
+    }
+  ]
+}

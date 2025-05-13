@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Creates a new message for a specified thread in the OpenAI API.",
+  "Description": "The New-OAIMessage function creates a new message for a specified thread in the OpenAI API. It allows you to specify the thread ID, role, content, attachments, and metadata for the message.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://platform.openai.com/docs/api-reference/messages/createMessage"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-OAIMessage -ThreadId \"12345\" -Role \"user\" -Content \"Hello, how can I help you?\"\r\nThis example creates a new user message with the content \"Hello, how can I help you?\" for the thread with ID \"12345\"."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "Synopsis": "Creates a new file in the specified vector store.",
+  "Description": "The New-OAIVectorStoreFile function creates a new file in the specified vector store. It takes the VectorStoreId and FileIds as mandatory parameters. The function sends a POST request to the specified vector store's files endpoint to create the file.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://platform.openai.com/docs/api-reference/vector-stores-files/createFile"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-OAIVectorStoreFile -VectorStoreId \"12345\" -FileIds \"file1\", \"file2\"\r\nThis example creates two files with IDs \"file1\" and \"file2\" in the vector store with ID \"12345\"."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "dir *.md | Invoke-OAIUploadFile | New-OAIVectorStoreFile -VectorStoreId \"12345\"\r\nThis example uploads all Markdown files in the current directory to OpenAI and creates files in the vector store with ID \"12345\" for each uploaded file."
+    }
+  ]
+}

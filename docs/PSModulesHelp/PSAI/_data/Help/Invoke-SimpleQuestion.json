@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Invokes a simple question to an AI assistant.",
+  "Description": "The Invoke-SimpleQuestion function is used to ask a simple question to an AI assistant. It requires the AssistantId parameter to specify the ID of the assistant to interact with. The function sends the question to the assistant, waits for the response, and returns the assistant's answer.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$assistant = New-OAIAssistant\r\nInvoke-SimpleQuestion -Question \"What is the meaning of life?\" -AssistantId $assistant.Id\r\nRemove-OAIAssistant -Id $assistant.Id"
+    }
+  ]
+}

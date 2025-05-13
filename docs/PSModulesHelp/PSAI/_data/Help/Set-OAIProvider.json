@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Sets the provider for OpenAI.",
+  "Description": "The Set-OAIProvider function is used to set the provider for OpenAI. By default, the provider is set to 'OpenAI'.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-OAIProvider -Provider 'AzureOpenAI'\r\nThis example sets the provider for OpenAI to 'AzureOpenAI'."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Set-OAIProvider -Provider 'OpenAI'\r\nThis example sets the provider for OpenAI to 'OpenAI'."
+    }
+  ]
+}

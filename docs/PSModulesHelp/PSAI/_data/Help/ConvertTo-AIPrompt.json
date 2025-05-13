@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Converts a GitHub repository into a single XML file optimized for AI tools.",
+  "Description": "This function downloads files from a GitHub repository and packages them into a single XML file\nthat can be easily used with AI tools like ChatGPT, Claude, Gemini, etc.\n\nThe repository content is organized into a structured format with each file's content \nencapsulated in separate document sections with paths and other metadata.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Requires connectivity to api.github.com.\nConsider using a token to avoid GitHub API rate limits.\nYou can set $env:GITHUB_TOKEN environment variable for authentication instead of passing the token parameter.\n\nDefault excluded binary and non-text formats:\n- Images: *.jpg, *.jpeg, *.png, *.gif, *.bmp, *.ico, *.svg, *.webp\n- Documents: *.pdf, *.docx, *.xlsx, *.pptx, *.odt, *.ods, *.odp\n- Archives: *.zip, *.tar, *.gz, *.7z, *.rar\n- Executables: *.exe, *.dll, *.so, *.dylib, *.bin\n- Media: *.mp3, *.mp4, *.wav, *.avi, *.mov, *.flac, *.mkv\n- Others: *.dat, *.db, *.sqlite, *.pyc, *.class, *.jar, *.iso, *.pdb"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "ConvertTo-AIPrompt -RepoSlug \"dfinke/ImportExcel\" -OutputPath \"D:\\ImportExcel.xml\" -Exclude \"*.xlsx\",\"*.jpg\"\r\nExports the entire dfinke/ImportExcel repository, excluding xlsx and jpg files and all default binary formats."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "ConvertTo-AIPrompt -RepoSlug \"dfinke/ImportExcel/Examples\" -Include \"*.ps1\",\"*.md\" | Set-Content -Path \"ExcelExamples.xml\"\r\nExports only PowerShell and Markdown files from the Examples folder of the ImportExcel repository."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "ConvertTo-AIPrompt -RepoSlug \"owner/repo\" -IncludeBinary\r\nExports all files from the repository, including binary files that would normally be excluded."
+    }
+  ]
+}

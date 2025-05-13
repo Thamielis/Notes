@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Creates a new OpenAI thread and runs it.",
+  "Description": "The New-OAIThreadAndRun function creates a new thread and runs it using the OpenAI API. It allows you to specify various parameters such as the assistant ID, thread, model, instructions, tools, tool resources, metadata, temperature, top-p, stress, max prompt tokens, max completion tokens, truncation strategy, tool choices, and response format.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This function requires the Invoke-OAIBeta function to be available in the current session."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://platform.openai.com/docs/api-reference/runs/createThreadAndRun"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-OAIThreadAndRun -AssistantId 'assistant-123' -Thread 'Hello' -Model 'gpt-3.5-turbo' -Instructions 'Translate the following English text to French: \"Hello, how are you?\"' -Tools 'translation' -ToolResources @{ translation = @{ source_language = 'en' ; target_language = 'fr' } } -Temperature 0.8 -TopP 0.9 -Stress 0.5 -MaxPromptTokens 100 -MaxCompletionTokens 50 -TruncationStrategy 'longest_first' -ToolChoices @{ translation = 'translation' } -ResponseFormat 'json'"
+    }
+  ]
+}

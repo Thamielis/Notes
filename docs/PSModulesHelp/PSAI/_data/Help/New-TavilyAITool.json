@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Initializes and registers the Tavily AI Tool.",
+  "Description": "The New-TavilyAITool function initializes the Tavily AI Tool and registers the Invoke-WebSearch tool.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "This function writes a verbose message when it is loaded."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-TavilyAITool\r\nThis command initializes and registers the Tavily AI Tool."
+    }
+  ]
+}

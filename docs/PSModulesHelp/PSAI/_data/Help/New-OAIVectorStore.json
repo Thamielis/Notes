@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Creates a new vector store in OpenAI.",
+  "Description": "The New-OAIVectorStore function creates a new vector store in OpenAI using the OpenAI API. It allows you to specify the name, file IDs, expiration time, and metadata for the vector store.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    "https://platform.openai.com/docs/api-reference/vector-stores/create"
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-OAIVectorStore -Name \"MyVectorStore\" -FileIds \"file1\", \"file2\" -ExpiresAfter (Get-Date).AddDays(7) -Metadata @{ \"key1\" = \"value1\"; \"key2\" = \"value2\" }\r\nThis example creates a new vector store named \"MyVectorStore\" with two file IDs, an expiration time of 7 days from the current date, and additional metadata."
+    }
+  ]
+}
