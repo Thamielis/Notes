@@ -2,6 +2,6 @@
 
 * [Home](/)
 * [Knowledge](/Knowledge)
-* [Links](/docs/Links/LinksWiki.md)
+* [Links](/Links/LinksWiki.md)
 * [PSModulesHelp](/PSModulesHelp/ModuleDoku.md)
-* [Repositories](/docs/ReposWiki/ReposWiki.md)
+* [Repositories](/ReposWiki/ReposWiki.md)
