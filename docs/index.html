@@ -41,10 +41,23 @@
       }
     }
   </style>
-  
+
 </head>
 <body>
   <div id="app"></div>
+  <script type="module">
+    import githubDark from 'https://esm.sh/@shikijs/themes@1/github-dark';
+    import githubLight from 'https://esm.sh/@shikijs/themes@1/github-light';
+
+    window.$docsify = {
+      shiki: {
+        themes: {
+          dark: githubDark,
+          light: githubLight
+        }
+      }
+    }
+  </script>
   <script>
     window.$docsify = {
       name: 'Notes Hub',
