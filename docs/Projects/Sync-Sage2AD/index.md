@@ -149,3 +149,19 @@
   - [Update-MailAddressPolicy.ps1](<.\Projects\Sync-Sage2AD\ExportedFunctions\Sync-Sage2AD_cleaned\Update-MailAddressPolicy.ps1>)
   - [Wait-Runspace.ps1](<.\Projects\Sync-Sage2AD\ExportedFunctions\Sync-Sage2AD_cleaned\Wait-Runspace.ps1>)
 
+### To Implement
+Add functions for managing employee data synchronization between Sage and Active Directory
+
+- Implemented Set-ChangesStatus function to create change records.
+- Developed Set-Company function to update company information for employees.
+- Created Set-Runspace function to manage runspace configurations and imports.
+- Added Show-Employees function to display employee data with various filters.
+- Introduced Start-RunspaceTask function to initiate tasks in a runspace.
+- Implemented Start-SageDataProcess function to process Sage user data and find corresponding AD accounts.
+- Developed Sync-ADGroupMembership function to synchronize group memberships in AD.
+- Created Sync-ADUsers function to sync employee data from Sage to AD.
+- Added Sync-Sage function to orchestrate the overall synchronization process.
+- Implemented Sync-SageADGroups function to check and create Sage AD groups.
+- Developed Update-Employee function to update employee information based on Sage data.
+- Created Update-MailAddressPolicy function to update email address policies in Exchange.
+- Added Wait-Runspace function to manage the completion of runspace tasks.
