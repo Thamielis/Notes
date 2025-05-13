@@ -1,4 +1,6 @@
+# PS ScriptDoku GPT
 
+```powershell
 <#
 .SYNOPSIS
 This script generates a commented version of a PowerShell script and a manual page for the script.
@@ -104,3 +106,4 @@ $rContent | Out-File -FilePath $cOutfile -Force
 
 $rContent = $mResponse.choices.message.content
 $rContent | Out-File -FilePath $mOutfile -Force
+```
