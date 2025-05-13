@@ -15,6 +15,9 @@
 
 ## ActiveDirectory
 
+  - [ ] [13.05.2025] Automatische Mail überprüfen
+  - [ ] [13.05.2025] PC User im AD deaktivieren.
+
 - [Sync-Sage2AD](<https://github.com/KOWThamielis/Sync-Sage2AD>)
   > Synchronisation der Sage Daten zu ActiveDirectory
   >> :bangbang: [PSActionPacks](<https://github.com/Thamielis/PSActionPacks>)
