@@ -7,6 +7,23 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+
+  // Import mermaid
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
+  <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'default',
+      themeVariables: {
+        primaryColor: '#ffcc00',
+        edgeLabelBackground: '#ffffff',
+       tertiaryColor: '#ffffff',
+        noteBkgColor: '#ffffff',
+        noteTextColor: '#000000'
+      }
+    });
+  </script>
 </head>
 <body>
   <div id="app"></div>
@@ -27,7 +44,7 @@
       }
     }
   </script>
-  
+
   <!-- Required -->
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
   
