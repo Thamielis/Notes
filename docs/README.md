@@ -221,6 +221,9 @@ New-ADGroupReport -Name 'PaloAlto*' -ReportTitle 'PaloAlto_Internet ADGroups' -E
 ---
 
 ## 6. Docsify Plugins
+  > - [Docsify](https://docsify.js.org/)
+  > - [Docsify Plugins](<https://docsify.js.org/plugins/>)
+  > - [Docsify Plugins List](https://cdn.jsdelivr.net/npm/docsify@4/)
   > - [Dashboard](<https://github.com/erectbranch/docsify-dashboard>)
 
 ## 7. Wichtig
