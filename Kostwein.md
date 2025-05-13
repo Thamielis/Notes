@@ -47,3 +47,13 @@
 ### CI-Sign
   Signaturen erstellen, verwalten und ändern
 
+#### Standard Mitarbeiter Signaturen
+  > Derzeit werden die Signaturen über die OU des entsprechenden Mitarbeiters, zugeteilt.
+  > Dadurch, dass es eine geteilte OU Struktur gibt, bekommen Mitarbeiter, welche nicht in der Alten
+  > Struktur angelegt sind, keine zugeteilt.
+
+  [X] AD Gruppen für jeden Standort erstellen
+  [ ] In CI-Sign die Zuteilung über diese Gruppen hinzufügen
+  [ ] Sync-Sage2AD für die Zuteilung erweitern
+  [ ] In ARM die Zuteilung einbinden
+
