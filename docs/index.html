@@ -48,13 +48,15 @@
   <script type="module">
     import githubDark from 'https://esm.sh/@shikijs/themes@1/github-dark';
     import githubLight from 'https://esm.sh/@shikijs/themes@1/github-light';
+    import ps from 'https://esm.sh/@shikijs/langs@1/powershell';
 
     window.$docsify = {
       shiki: {
         themes: {
           dark: githubDark,
           light: githubLight
-        }
+        },
+        langs: [ps],
       }
     }
   </script>
