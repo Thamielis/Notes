@@ -52,8 +52,10 @@
   > Dadurch, dass es eine geteilte OU Struktur gibt, bekommen Mitarbeiter, welche nicht in der Alten
   > Struktur angelegt sind, keine zugeteilt.
 
-  [X] AD Gruppen für jeden Standort erstellen
-  [ ] In CI-Sign die Zuteilung über diese Gruppen hinzufügen
-  [ ] Sync-Sage2AD für die Zuteilung erweitern
-  [ ] In ARM die Zuteilung einbinden
+  - [X] AD Gruppen für jeden Standort erstellen
+  - [ ] In CI-Sign die Zuteilung über diese Gruppen hinzufügen
+  - [ ] Sync-Sage2AD für die Zuteilung erweitern
+  - [ ] In ARM die Zuteilung einbinden
+
+
 
