@@ -1,8 +1,8 @@
 <details>
 <summary>Inhaltsverzeichnis</summary>
 
-- [Projekte](#projekte)
-  - [Kostwein](#kostwein)
+- [0. Projekte](#0-projekte)
+  - [0.1. Kostwein](#01-kostwein)
 - [1. ToDo](#1-todo)
   - [1.1. RepoOverview](#11-repooverview)
   - [1.2. Notes Repo](#12-notes-repo)
@@ -38,9 +38,11 @@
 
 </details>
 
-## Projekte
+## 0. Projekte
 
-### [<span style="color:green">Kostwein</span>](/%2F/Kostwein.md)
+### [<span style="color:green">0.1. Kostwein</span>](/%2F/Kostwein.md)
+
+---
 
 ## 1. ToDo
 
@@ -183,10 +185,14 @@ New-ADGroupReport -Name 'PaloAlto*' -ReportTitle 'PaloAlto_Internet ADGroups' -E
 - [Relativty](<https://github.com/relativty/Relativty>)
 - [HadesVR](<https://github.com/HadesVR/HadesVR>)
 
+---
+
 ## 4. Links
 
 - [<span style="color:magenta">Links</span>](Links/LinksWiki.md): Links zu meinen Themen
 - [<span style="color:cyan">PSModulesHelp</span>](PSModulesHelp/ModuleDoku.md): :information_source: Help für PowerShell Module
+
+---
 
 ## 5. Wikies
   >
@@ -200,6 +206,8 @@ New-ADGroupReport -Name 'PaloAlto*' -ReportTitle 'PaloAlto_Internet ADGroups' -E
   >> - [PowerShell Classes](<https://thamielis.github.io/Knowledge/pages/powershell/Klassen/powershell-classes-and-concepts>)
   > - [Dokumentation](<https://thamielis.github.io/Dokumentation/>)
   > - [PSKnowledge](https://thamielis.github.io/PSKnowledge/ClassExplorer/gasm.html)
+
+---
 
 ## 6. Wichtig
 >
