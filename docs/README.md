@@ -83,7 +83,14 @@
 
 ## 3. Knowledge
 
-- [<span style="color:yellow">Knowledge</span>](Knowledge/Knowledge.md)
+!> FileTreeGenerator vsCode
+```powershell
+[regex] $Start = '\' # Replace to '/'
+[regex] $First = '^(#.*- )' # Replace to ' - '
+[regex] $Second = '.md\]' # Replace to '\]'
+```
+
+- [<span style="color:#ff8000">Knowledge</span>](Knowledge/Knowledge.md)
   - [<span style="color:red">ML</span>](Knowledge/ML/ML.md)
     - [<span style="color:green">Build KnowledgeBase</span>](<Knowledge/ML/How I Turned My Companys Docs into a Searchable Database with OpenAI.md>)
   - [<span style="color:#4da6ff">PowerShell</span>](Knowledge/PowerShell/PowerShell.md)
