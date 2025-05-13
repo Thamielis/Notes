@@ -1,3 +1,4 @@
+
 <#
 .SYNOPSIS
 This script generates a commented version of a PowerShell script and a manual page for the script.
