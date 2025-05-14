@@ -17,6 +17,7 @@
       - [2.2.2.1. ConfigurationManager](#2221-configurationmanager)
   - [2.10. Other](#210-other)
     - [2.10.1. Awesome-Documentation Public](#2101-awesome-documentation-public)
+  - [2.10.2. docs-page-demo Public](#2102-docs-page-demo-public)
 - [3. Knowledge](#3-knowledge)
   - [3.1 Dokuments](#31-dokuments)
     - [3.1.1 PowerShell](#311-powershell)
@@ -91,6 +92,9 @@
 
 #### [2.10.1. Awesome-Documentation](https://github.com/officialrajdeepsingh/awesome-documentation) Public
   > 📝 A curated list of documentation based libraries that help build small and large-scale documentation website.
+
+### [2.10.2. docs-page-demo](https://github.com/officialrajdeepsingh/docs-page-demo) Public
+  > 📝 Docs page is an open-source documentation platform that enables you to create instant, fast, beautiful, and responsive documentation websites with minimal configuration.
 
 
 ---
