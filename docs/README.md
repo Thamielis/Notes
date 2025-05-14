@@ -128,6 +128,8 @@
 
 #### 3.1.1 PowerShell
 
+!> [Why I don't like PowerShell the search for maintainable code](https://wouterdekort.com/2019/04/07/why-i-dont-like-powershell-the-search-for-maintainable-code/)
+
 <details>
 <summary>Module</summary>
 
