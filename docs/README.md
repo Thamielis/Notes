@@ -99,7 +99,8 @@
 
 ### [2.10.3. Magic UI](https://github.com/magicuidesign/magicui)
   !> UI Library for Design Engineers. Animated components and effects you can copy and paste into your apps. Free. Open Source.
-  
+  <img alt="Magic UI - UI Library for Design Engineers" src="https://cdn.magicui.design/bento-grid.gif" width="100%">
+
 
 ---
 
