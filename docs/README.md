@@ -36,7 +36,8 @@
 - [4. Links](#4-links)
 - [5. Wikies](#5-wikies)
   - [5.1. Thamielis Pages](#51-thamielis-pages)
-- [6. Docsify Plugins](#6-docsify-plugins)
+- [6. Docsify](#6-docsify)
+  - [6.1. Plugins](#61-plugins)
 - [7. Wichtig](#7-wichtig)
 
 </details>
@@ -222,11 +223,14 @@ New-ADGroupReport -Name 'PaloAlto*' -ReportTitle 'PaloAlto_Internet ADGroups' -E
 
 ---
 
-## 6. Docsify Plugins
+## 6. Docsify
   > - [Docsify](https://docsify.js.org/)
+  
+### 6.1. Plugins
   > - [Docsify Plugins](<https://docsify.js.org/plugins/>)
   > - [Docsify Plugins List](https://cdn.jsdelivr.net/npm/docsify@4/)
   > - [Dashboard](<https://github.com/erectbranch/docsify-dashboard>)
+  > - [Docsify-Themeable](https://jhildenbiddle.github.io/docsify-themeable/)
 
 ## 7. Wichtig
 >
