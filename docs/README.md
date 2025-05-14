@@ -15,6 +15,8 @@
       - [2.2.1.1. Analyse/Visualize](#2211-analysevisualize)
     - [2.2.2. Kostwein](#222-kostwein)
       - [2.2.2.1. ConfigurationManager](#2221-configurationmanager)
+  - [2.10. Other](#210-other)
+    - [2.10.1. Awesome-Documentation Public](#2101-awesome-documentation-public)
 - [3. Knowledge](#3-knowledge)
   - [3.1 Dokuments](#31-dokuments)
     - [3.1.1 PowerShell](#311-powershell)
@@ -84,6 +86,12 @@
 #### [2.2.2. Kostwein](/%2F/Kostwein.md)
 
 ##### 2.2.2.1. ConfigurationManager
+
+### 2.10. Other
+
+#### [2.10.1. Awesome-Documentation](https://github.com/officialrajdeepsingh/awesome-documentation) Public
+  > 📝 A curated list of documentation based libraries that help build small and large-scale documentation website.
+
 
 ---
 
@@ -231,6 +239,8 @@ New-ADGroupReport -Name 'PaloAlto*' -ReportTitle 'PaloAlto_Internet ADGroups' -E
   > - [Docsify Plugins List](https://cdn.jsdelivr.net/npm/docsify@4/)
   > - [Dashboard](<https://github.com/erectbranch/docsify-dashboard>)
   > - [Docsify-Themeable](https://jhildenbiddle.github.io/docsify-themeable/)
+
+---
 
 ## 7. Wichtig
 >
