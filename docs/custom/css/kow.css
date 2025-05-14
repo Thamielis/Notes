@@ -1,0 +1,155 @@
+
+.table {
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.table thead {
+    vertical-align: bottom;
+}
+
+.table tbody {
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+.table>:not(caption)>*>* {
+    padding: 0.1rem 0.2rem;
+    -webkit-transition: background-color .2s ease-in;
+    transition: background-color .2s ease-in;
+    background-image: none;
+    background-color: var(--bs-table-accent-bg);
+}
+
+.row100.head th {
+    position: relative;
+    /*
+    padding-top: 12px;
+    padding-bottom: 10px;
+    */
+    
+    text-align: center;
+    padding: 10px;
+    
+    height: min-content;
+    /*
+    writing-mode: vertical-rl;
+    transform: scale(-1);
+    */
+}
+
+.table100.ver5 .row100:hover td {
+    color: #fe3e64;
+    
+}
+/*
+.table100.ver5 .hov-column-ver5 {color: #fe3e64;}
+*/
+.table100.ver5 .hov-column-ver5::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /*pointer-events: none;*/
+    border-left: 1px solid #f2f2f2;
+    border-right: 1px solid #f2f2f2;
+}
+
+.table100.ver5 .hov-column-head-ver5 {
+    background-color: #1a3f48 !important;
+    color: #fe3e64;
+}
+
+.table100.ver5 .row100 td:hover {
+    color: #fe3e64;
+}
+/*
+.table100.ver5 .row100 td:hover:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    border: 1px solid #fe3e64;
+}
+*/
+
+.column100.tsidKOW01367 {
+    background-color: #535353;
+}
+
+.column100.tsidKOW00754 {
+    background-color: #35344b;
+}
+
+.column100.tsidKOW010FE {
+    background-color: #33464d;
+}
+
+.column100.tsidKOW0116E {
+    background-color: #324e40;
+}
+
+.column100.tsidKOW00FA3 {
+    background-color: #314f38;
+}
+
+.column100.tsidKOW01004 {
+    background-color: #345030;
+}
+
+.column100.tsidKOW00F39 {
+    background-color: #4f512f;
+}
+
+.column100.tsidKOW010FF {
+    background-color: #52432e;
+}
+
+.horizontal-number {
+    position: relative;
+    color: #80ffff;
+    font-size: 14px;
+    
+    width: auto;
+    /*
+    height: 30px;
+    
+    line-height: 30px;
+    min-width: 35px;
+    height: 35px;
+    */
+    text-align: center;
+    /*
+    background-color: #ccc;
+    border-radius: 50%;
+    */
+    left: 0;
+    bottom: 0;
+    white-space: nowrap;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    /*
+    margin: 0 auto;
+    */
+}
+
+.vertical-text {
+    /*
+    position: absolute;
+    */  
+    bottom: 100%;
+    height: auto;
+    writing-mode: vertical-rl;
+    transform: scale(-1);
+    text-align: center;
+    white-space: pre-wrap;
+    margin: 0 auto;
+}
