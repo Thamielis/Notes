@@ -18,6 +18,7 @@
   - [2.10. Other](#210-other)
     - [2.10.1. Awesome-Documentation Public](#2101-awesome-documentation-public)
   - [2.10.2. docs-page-demo Public](#2102-docs-page-demo-public)
+  - [2.10.3. Magic UI](#2103-magic-ui)
 - [3. Knowledge](#3-knowledge)
   - [3.1 Dokuments](#31-dokuments)
     - [3.1.1 PowerShell](#311-powershell)
@@ -96,6 +97,9 @@
 ### [2.10.2. docs-page-demo](https://github.com/officialrajdeepsingh/docs-page-demo) Public
   > 📝 Docs page is an open-source documentation platform that enables you to create instant, fast, beautiful, and responsive documentation websites with minimal configuration.
 
+### [2.10.3. Magic UI](https://github.com/magicuidesign/magicui)
+  !> UI Library for Design Engineers. Animated components and effects you can copy and paste into your apps. Free. Open Source.
+  
 
 ---
 
