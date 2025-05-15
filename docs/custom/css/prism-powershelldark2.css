@@ -1,0 +1,72 @@
+/* Default Dark Modern Theme für PrismJS – angelehnt an VSCode Dark+ */
+/* Grundlayout: dunkler Hintergrund, Standard-Text in hellem Grau */
+/* Grundstyles */
+pre[class*="language-"],
+code[class*="language-"] {
+  background: #1e1e1e;   /* dunkler Hintergrund */
+  color: #d4d4d4;        /* Default-Text */
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
+}
+  
+  /* Kommentare - grünlich (aus VSCode Theme) */
+  .token.comment {
+    color: #6A9955;  /* Kommentar in Grün, z.B. für # und <# #> Kommentare */
+  }
+  
+  /* Strings - orange/braun */
+  .token.string {
+    color: #CE9178;  /* Strings in Orangebraun (inkl. Here-Strings) */
+  }
+  
+  /* Zahlen - hellgrün */
+  .token.number {
+    color: #B5CEA8;  /* Zahl-Literale in blassgrün */
+  }
+  
+  /* Keywords - blau (allgemein) */
+  .token.splat,
+  .token.keyword {
+    color: #569CD6;  /* Schlüsselwörter in Blau (e.g. param, function, etc.) */
+  }
+  /* Kontrollfluss-Keywords - lila (überschreibt .keyword) */
+  .token.keyword.control {
+    color: #C586C0;  /* z.B. if, foreach, try, catch, etc. in hellem Lila */
+  }
+  
+  /* Funktionen/Cmdlets - gelb */
+  .token.function {
+    color: #DCDCAA;  /* Funktions- und Cmdletnamen in Gelb */
+  }
+
+  /* Punktuation */
+.token.punctuation {
+    color:rgb(255, 251, 0);
+  }
+  
+  /* Variablen - hellblau */
+  .token.variable {
+    color: #9CDCFE;  /* $Variable in Hellblau */
+  }
+  
+  /* Booleans/Sprachkonstanten - blau (gleich wie Keywords) */
+  .token.boolean {
+    color: #569CD6;  /* $true, $false, $null in Blau */
+  }
+  
+  /* Klassen/Typen/Attribute - türkis */
+  .token.class-name {
+    color: #4EC9B0;  /* Typnamen, z.B. [int], [Parameter] in Türkis */
+  }
+
+  /* Namespaces, Casts, Attribute-Dekoratoren */
+.token.namespace {
+    color: #9cdcfe;
+  }
+  
+  /* Operatoren und Sonstiges (Punctuation) behalten die Standardtextfarbe (#CCCCCC) */
+  /* (Keine explizite Farbsetzung nötig, sie erben von pre[class*="language-"] ) */
+  
