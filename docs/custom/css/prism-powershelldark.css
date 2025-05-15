@@ -1,0 +1,88 @@
+/* ---------------------------------------------------
+   PrismJS Theme “SageSync” (angelehnt an dein Dark-Theme)
+   --------------------------------------------------- */
+
+/* Grundstyles */
+pre[class*="language-"],
+code[class*="language-"] {
+  background: #1e1e1e;   /* dunkler Hintergrund */
+  color: #d4d4d4;        /* Default-Text */
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
+}
+
+/* Kommentare */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #6a9955;
+}
+
+/* Strings & Here-Strings */
+.token.string {
+  color: #ce9178;
+}
+
+/* Zahlen und Booleans */
+.token.number,
+.token.boolean {
+  color: #b5cea8;
+}
+
+/* Schlüsselwörter */
+.token.keyword {
+  color: #c586c0;
+  font-weight: bold;
+}
+
+/* Funktionen und Cmdlets */
+.token.function {
+  color: #dcdcaa;
+}
+
+/* Variablen und Splatting (@args) */
+.token.variable,
+.token.splat {
+  color: #9cdcfe;
+}
+
+/* Namespaces, Casts, Attribute-Dekoratoren */
+.token.namespace {
+  color: #9cdcfe;
+}
+
+/* Memberzugriff (.Property, ::Static) */
+.token.member {
+  color: #4ec9b0;
+}
+
+/* Operatoren */
+.token.operator {
+  color: #d4d4d4;
+}
+
+/* Punktuation */
+.token.punctuation {
+  color: #d4d4d4;
+}
+
+/* Parameter-Keywords innerhalb von Param-Blöcken */
+.token.parameter {
+  color: #9cdcfe;
+  font-style: italic;
+}
+
+/* Attribute in eckigen Klammern */
+.token.attribute {
+  color: #569cd6;
+}
+
+/* Ausgewählte Hintergrundfarbe z.B. für Hervorhebungen */
+.token.selection,
+.token.highlighted {
+  background: rgba(255, 255, 255, 0.1);
+}
