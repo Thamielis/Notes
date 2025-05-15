@@ -2,10 +2,7 @@
 
     var powershell = Prism.languages.powershell = {
 
-        'splat': {
-            // pattern: /\@(\w+\b)/,
-            pattern: /\@/
-        },
+        
 
         // Kommentare: line-comments (# ...) und block-comments (<# ... #>)
         'comment': [
@@ -105,6 +102,11 @@
                 pattern: /(?:\.\.|\+=|-=|\*=|\/=|%=|=|<|>|!)/  // .. (Range), +=, -=, *=, /=, %=, =, <, >, !
             }
         ],
+        
+        'splat': {
+            // pattern: /\@(\w+\b)/,
+            pattern: /\@/
+        },
 
         // Interpolation/Pipeline: Das `|` Pipeline-Zeichen, Doppelpunkte in Labels oder Drive-Scopes als Punctuation
         'punctuation': /[{}[\];(),.:]/
