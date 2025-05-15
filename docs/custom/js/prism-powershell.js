@@ -85,4 +85,16 @@
         'herestring': powershell.herestring
     });
 
+    // Splatting (z.B. @Args) als eigenes Token definieren, das als Variable gefärbt wird
+    Prism.languages.powershell['splatted-variable'] = {
+        pattern: /@\w+\b/,
+        alias: 'variable'
+    };
+
+    // Label-Tokens (Beginn einer Zeile, Doppelpunkt gefolgt von Bezeichner) markieren
+    Prism.languages.powershell['label'] = {
+        pattern: /(?<=^\s*):[A-Za-z_]\w*\b/m,
+        alias: 'symbol'  // als symbol getaggt (kann wie default Text gestylt werden)
+    };
+
 }(Prism));
