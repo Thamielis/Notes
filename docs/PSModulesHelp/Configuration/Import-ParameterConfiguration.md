@@ -2,6 +2,7 @@ Import-ParameterConfiguration
 -----------------------------
 
 ### Synopsis
+
 Loads a metadata file based on the calling command name and combines the values there with the parameter values of the calling function.
 
 ---
@@ -11,6 +12,7 @@ Loads a metadata file based on the calling command name and combines the values 
 This function gives command authors and users an easy way to let the default parameter values of the command be set by a configuration file in the folder you call it from.
 
 Normally, you have three places to get parameter values from. In priority order, they are:
+
 - Parameters passed by the caller always win
 - The PowerShell $PSDefaultParameterValues hashtable appears to the function as if the user passed it
 - Default parameter values (defined in the function)
@@ -22,6 +24,7 @@ If you call this command at the top of a function, it overrides (only) the defau
 ---
 
 ### Examples
+>
 > EXAMPLE 1
 
 Given that you've written a script like:
@@ -55,26 +58,24 @@ function New-User {
         Permissions = $Permissions
     }
 }
-
 ```
 
 You could create a User.psd1 in a folder with just:
 
-```
-
+```powershell
 @{ Domain = "HuddledMasses.org" }
-
-
 ```
 
 Now the following command would resolve the `User.psd1`
 And the user would get an appropriate email address automatically:
 
+```shell
 PS> New-User Joel Bennett
 
 FirstName   : Joel
 LastName    : Bennett
 EMail       : Joel.Bennett@HuddledMasses.org
+```
 
 > EXAMPLE 2
 
@@ -119,12 +120,14 @@ EMail       : Joel.Bennett@HuddledMasses.org
 Department  : Security
 Permissions : { Access = Administrator }
 ```
+
 > EXAMPLE 3
 
 Following up on our earlier example, let's look at a way to use that -FileName parameter.
 If you wanted to use a different configuration files than your Noun, you can pass the file name in.
 You could even use one of your parameters to generate the file name. If we modify the function like ...
 
+```powershell
 function New-User {
     [CmdletBinding()]
     param(
@@ -142,6 +145,7 @@ function New-User {
     if (-not $EMail)    { $EMail = "$UserName@$Domain" }
 
     # Lots of work to create the user's AD account and email etc.
+
     [PSCustomObject]@{
         PSTypeName = "MagicUser"
         FirstName = $FirstName
@@ -151,6 +155,7 @@ function New-User {
         Permissions = $Permissions
     }
 }
+```
 
 Now you could create a `SecurityUser.psd1`
 
@@ -168,7 +173,9 @@ PS> New-User Joel Bennett -Department Security
 ---
 
 ### Parameters
+
 #### **WorkingDirectory**
+
 The folder the configuration should be read from. Defaults to the current working directory
 
 |Type      |Required|Position|PipelineInput|
@@ -176,6 +183,7 @@ The folder the configuration should be read from. Defaults to the current workin
 |`[String]`|false   |1       |false        |
 
 #### **FileName**
+
 The name of the configuration file.
 The default value is your command's Noun, with the ".psd1" extention.
 So if you call this from a command named Build-Module, the noun is "Module" and the config $FileName is "Module.psd1"
@@ -185,6 +193,7 @@ So if you call this from a command named Build-Module, the noun is "Module" and 
 |`[String]`|false   |2       |false        |
 
 #### **Recurse**
+
 If set, considers configuration files in the parent, and it's parent recursively
 
 |Type      |Required|Position|PipelineInput|
@@ -192,6 +201,7 @@ If set, considers configuration files in the parent, and it's parent recursively
 |`[Switch]`|false   |named   |false        |
 
 #### **AllowedVariables**
+
 Allows extending the valid variables which are allowed to be referenced in configuration
 BEWARE: This exposes the value of these variables in the calling context to the configuration file
 You are reponsible to only allow variables which you know are safe to share
@@ -203,6 +213,7 @@ You are reponsible to only allow variables which you know are safe to share
 ---
 
 ### Syntax
+
 ```PowerShell
 Import-ParameterConfiguration [[-WorkingDirectory] <String>] [[-FileName] <String>] [-Recurse] [[-AllowedVariables] <String[]>] [<CommonParameters>]
 ```
