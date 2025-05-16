@@ -41,6 +41,14 @@
 
 ## Projekte
 
+### Active Directory
+
+#### <span style="color:ff0000#">16.05.2025</span>
+
+- [ ] Alle User Accounts überprüfen auf LastLogon und ausmisten
+- [ ] PC... User löschen/umstellen auf personifiziert
+- [ ] Messmaschine (Coord) User mit komplexem Passwort versehen
+
 ### PowerShell
 
 #### Sync-Sage2AD

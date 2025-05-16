@@ -25,7 +25,9 @@
         'string': [
             {
                 pattern: /(\@("|')).*\X*(\@(" | '))/,
-                alias: 'herestring'
+                alias: 'herestring',
+                lookbehind: true,
+                greedy: true
             },
             {
                 pattern: /@"(?:(?!@")[\s\S])*"@/,  // double-quoted Here-String @" ..."@ (multi-line)
