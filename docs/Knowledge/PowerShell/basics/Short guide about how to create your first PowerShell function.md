@@ -1,0 +1,25 @@
+For those who are starting their journey with PowerShell I prepared today short article describing how to create first simple function. To makes things a little bit complicated I added if/else conditions to give better functionality to our script. Function name is called Get-Sessions and it will check for Active Directory users sessions and status on some particular server.
+
+I used if/else conditions to make sure that person who use this function will be forced to use it correctly. In case of wrong usage warning message will show up:
+
+“USAGE: Get-Sessions \[-Server\]”
+
+For checking sessions on server remotely I used “qwinsta“ command with $server parameter. For each session names I also checked if account is an AD user( get-aduser -Identity $query.SESSIONNAME ). In my case user name was under sessioname property ( $query.SESSIONNAME ) – you can test it and check it in your own environment, it might be also stored under username property ( $query.USERNAME ).
+
+Of course you can use easier method to get all of those information but for purpose of this article I used qwinsta:
+
+<table><tbody><tr><td><p>1</p><p>2</p><p>3</p></td><td><div><p><code>Get-RDUserSession</code> <code>| select username,sessionstate,createtime,DisconnectTime | sort sessionstate&nbsp; | ft</code> <code>-autosize</code></p></div></td></tr></tbody></table>
+
+Script:
+
+<table><tbody><tr><td><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p><p>20</p><p>21</p><p>22</p><p>23</p><p>24</p><p>25</p><p>26</p><p>27</p><p>28</p><p>29</p></td><td><div><p><code>Function</code> <code>Get-Sessions</code><code>{</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>param</code><code>(</code><code>$Server</code> <code>= ”blank”)</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>If</code> <code>(</code><code>$Server</code> <code>-eq</code> <code>“blank”)</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>{</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>Write-Warning</code> <code>“USAGE: </code><code>Get-Sessions</code> <code>[-Server]”</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>Else</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>{</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>Write-Host</code> <code>"`nSessions on $Server :`n"</code> <code>-ForegroundColor</code> <code>Yellow</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>$queries</code> <code>= (qwinsta /server:</code><code>$Server</code> <code>| </code><code>foreach</code> <code>{ ((</code><code>$_</code><code>.trim() </code><code>-replace</code> <code>"\s+"</code><code>,</code><code>","</code><code>))} | </code><code>ConvertFrom-Csv</code><code>)</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>ForEach</code><code>(</code><code>$query</code> <code>in</code> <code>$queries</code><code>)</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>{</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>$RDPUser</code> <code>= </code><code>$query</code><code>.USERNAME</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>$Session</code> <code>= </code><code>$query</code><code>.SESSIONNAME</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>$id</code> <code>= </code><code>$query</code><code>.id</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>If</code> <code>(</code><code>Get-ADUser</code> <code>-Identity</code> <code>$query</code><code>.SESSIONNAME )</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>{</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>Write-Host</code> <code>$id</code> <code>- User : </code><code>$Session</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>}</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>}</code></p><p><code>}</code></p></div></td></tr></tbody></table>
+
+**Usage:**
+
+Get-Sessions DC01
+
+**Query Session / Qwinsta**
+
+Display information about user sessions.
+
+[https://ss64.com/nt/query-session.html](https://ss64.com/nt/query-session.html)

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PowerShell Cmdlet finden - 9 Möglichkeiten der Suche.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/*!
+  Theme: GitHub Dark
+  Description: Dark theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-dark
+  Current colors taken from GitHub's CSS
+*/
+
+.hljs {
+  color: #c9d1d9;
+  background: #0d1117;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: #ff7b72;
+}
+
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: #d2a8ff;
+}
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: #79c0ff;
+}
+
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: #a5d6ff;
+}
+
+.hljs-built_in,
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: #ffa657;
+}
+
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: #8b949e;
+}
+
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: #7ee787;
+}
+
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: #c9d1d9;
+}
+
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: #1f6feb;
+  font-weight: bold;
+}
+
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: #f2cc60;
+}
+
+.hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: #c9d1d9;
+  font-style: italic;
+}
+
+.hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: #c9d1d9;
+  font-weight: bold;
+}
+
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: #aff5b4;
+  background-color: #033a16;
+}
+
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: #ffdcd7;
+  background-color: #67060c;
+}
+
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+}
+
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+<link rel="stylesheet" href="file://term08/c%24/ProgramData/UniversalAutomation/Repository/KnowledgeBase/styles/github-markdown.css" type="text/css"><link rel="stylesheet" href="file://term08/c%24/ProgramData/UniversalAutomation/Repository/KnowledgeBase/styles/markdown.css" type="text/css">
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body class="vscode-body vscode-dark">
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+  <div class="github-markdown-body github-markdown-auto">
+    <div class="github-markdown-content">
+      <h1 id="powershell-cmdlet-finden---9-m%C3%B6glichkeiten-der-suche">PowerShell Cmdlet finden - 9 Möglichkeiten der Suche</h1>
+<!-- vscode-markdown-toc -->
+<ul>
+<li>
+<ol>
+<li><a href="#berblick">Überblick</a></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li><a href="#CmdletberNamenfinden">Cmdlet über Namen finden</a></li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li><a href="#CmdletberTtigkeitfinden">Cmdlet über Tätigkeit finden</a></li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li><a href="#CmdletberTtigkeitsbereichfinden">Cmdlet über Tätigkeitsbereich finden</a></li>
+</ol>
+</li>
+<li>
+<ol start="5">
+<li><a href="#CmdletberTtigkeitundTtigkeitsbereichfinden">Cmdlet über Tätigkeit und Tätigkeitsbereich finden</a></li>
+</ol>
+</li>
+<li>
+<ol start="6">
+<li><a href="#CmdletberParameter-NameoderParameter-Typfinden">Cmdlet über Parameter-Name oder Parameter-Typ finden</a></li>
+</ol>
+</li>
+<li>
+<ol start="7">
+<li><a href="#CmdletsberModul-Namesuchen">Cmdlets über Modul-Name suchen</a></li>
+</ol>
+</li>
+<li>
+<ol start="8">
+<li><a href="#CmdletberPowerShellGalleryfinden">Cmdlet über PowerShell Gallery finden</a></li>
+</ol>
+</li>
+<li>
+<ol start="9">
+<li><a href="#CmdletberShow-Commandfinden">Cmdlet über <code>Show-Command</code> finden</a></li>
+</ol>
+</li>
+<li>
+<ol start="10">
+<li><a href="#CmdletberGoogle-Suchefinden">Cmdlet über Google-Suche finden</a></li>
+</ol>
+</li>
+<li>
+<ol start="11">
+<li><a href="#WeitererMehrwertzumSuchenundFinden">Weiterer Mehrwert zum Suchen und Finden</a></li>
+</ol>
+</li>
+</ul>
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+<h2 id="1-a-nameberblicka%C3%BCberblick">1. <a name='berblick'></a>Überblick</h2>
+<p>In PowerShell gibt es kleine Befehls-Schnippsel (Commandlet oder Cmdlet) die unsere tägliche Arbeit erleichtern. Nehme ich einmal die Cmdlets der Azure-Module hinzu, können wir aus einem Portfolio von mehr als 9.000 Cmdlets schöpfen. Spätestens bei dieser Menge wird klar, dass ein lineares Abgrasen, um ein Command zu finden keinen Sinn macht. <strong>PowerShell bietet jedoch genügend Möglichkeiten</strong> ein benötigtes Commandlet einfach zu suchen und zu finden. Wie diese Möglichkeiten ausschauen behandeln dieses Tutorial.</p>
+<p>Erfahrene DOS-Scripter verfallen schnell in die alte Denke und verschließen sich so vor der Eleganz der Shell. Was ich am folgenden Beispiel demonstrieren möchte.</p>
+<p><strong>Ist der Zielhost erreichbar?</strong> Am Unterschied zwischen <code>ping.exe</code> (DOS-Welt) und <code>Test-NetConnection</code> (PowerShell-Welt) <strong>den Mehrwert von Objekten schätzen lernen</strong>.</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># LÖSUNG - DOS-Welt via ping.exe</span>
+<span class="hljs-variable">$result</span> = ping.exe <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span> | <span class="hljs-built_in">Select-String</span> <span class="hljs-literal">-Pattern</span> <span class="hljs-string">'Verloren = 0'</span> | <span class="hljs-built_in">Measure-Object</span> | <span class="hljs-built_in">Select-Object</span> <span class="hljs-literal">-ExpandProperty</span> Count
+<span class="hljs-comment"># VS. LÖSUNG - PowerShell-Welt via Test-NetConnection</span>
+<span class="hljs-variable">$result</span> = tnc <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span> | Select - ExpandProperty <span class="hljs-string">'PingSucceeded'</span>
+
+<span class="hljs-keyword">if</span> (<span class="hljs-variable">$result</span>) {
+    <span class="hljs-string">"Zielhost erreichbar, führe weitere Schritt aus..."</span> |  <span class="hljs-built_in">Write-Warning</span>
+}
+</div></code></pre>
+<p>Die <code>ping.exe</code> ist schnell aufgerufen. Wer aber mit diesem Ergebnis weiterarbeiten möchte oder mit seinem Echo-Paket an der Firewall zerschellt wird feststellen das die DOS-Box und deren Befehle schon lange keine Alleskönner mehr sind. In der Shell lassen sich die eben aufgezeigten Probleme ganz leicht lösen.</p>
+<pre class="hljs"><code><div><span class="hljs-built_in">Test-NetConnection</span> <span class="hljs-literal">-ComputerName</span> <span class="hljs-number">192.161</span>.<span class="hljs-number">80.136</span> <span class="hljs-literal">-CommonTCPPort</span> SMB | <span class="hljs-built_in">Select-Object</span> <span class="hljs-literal">-ExpandProperty</span> TcpTestSucceeded
+</div></code></pre>
+<p>Erstens erhalten wir von <code>Test-NetConnection</code> ein einfach auswertbares Objekt (z.B. <code>.TcpTestSucceeded</code> vom Typ [Boolean]) und zweitens können wir auch andere Protokolle (HTTP, RDP, SMP, WinRM) heranziehen, um die Connectivity zu prüfen.</p>
+<p>Natürlich ist der Befehl etwas länger, aber immer noch kein Grund mit <code>ping.exe</code> zu arbeiten. Es geht auch so:</p>
+<p>Da <code>tnc</code> ein Alias für <code>Test-NetConnection</code> und der Parametername <code>-ComputerName</code> optional ist. Also nur Vorteile gegenüber der Altlast <code>ping.exe</code>, wenn da nicht der unauffindbare Name Test-NetConnection wäre. Erst recht, wenn ich ein mir unbekanntes Commandlet suche und finden möchte.</p>
+<blockquote>
+<p>HINWEIS - Wenn Sie sich mit der Objekt Analyse und der Pipeline Verarbeitung vertraut machen möchten, empfehle ich Ihnen meine Artikel: <a href="https://attilakrick.com/powershell/powershell-objekt-analyse/">PowerShell Objekte in 3 Schritten erfolgreich analysieren</a>, <a href="https://attilakrick.com/powershell/funktionsweise-powershell-pipeline/">PowerShell Pipeline Sinn &amp; Nutzen erklärt</a> und <a href="https://attilakrick.com/powershell/powershell-tutorial/">PowerShell Einstieg für Anfänger und Profis</a>.</p>
+</blockquote>
+<p><img src="images/PowerShell-Cmdlet-finden-Code.png" alt=""></p>
+<h2 id="2-a-namecmdletbernamenfindenacmdlet-%C3%BCber-namen-finden">2. <a name='CmdletberNamenfinden'></a>Cmdlet über Namen finden</h2>
+<pre class="hljs"><code><div><span class="hljs-built_in">Get-Command</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">'*-*connection*'</span> <span class="hljs-literal">-CommandType</span> <span class="hljs-string">'Cmdlet'</span>, <span class="hljs-string">'Function'</span>
+</div></code></pre>
+<blockquote>
+<p>TIPP - Ein CmdCommandletlet über die direkte Eingabe und Intellisense vorschlagen lassen z.B. beginnen Sie zu tippen: <code>conn</code> und Intellisense schlägt Cmdlets vor die 'conn' enthalten. <code>CTRL</code>+<code>SPACE</code> öffnet Intellisense, auch in der Shell-Konsole.</p>
+</blockquote>
+<h2 id="3-a-namecmdletberttigkeitfindenacmdlet-%C3%BCber-t%C3%A4tigkeit-finden">3. <a name='CmdletberTtigkeitfinden'></a>Cmdlet über Tätigkeit finden</h2>
+<p>Aber welche Tätigkeiten (Verb, Noun) gibt es eigentlich? Die folgenden:</p>
+<pre class="hljs"><code><div><span class="hljs-built_in">Get-Verb</span> | <span class="hljs-built_in">Sort-Object</span> <span class="hljs-literal">-Property</span> <span class="hljs-string">'Verb'</span> | <span class="hljs-built_in">Format-Wide</span> <span class="hljs-literal">-AutoSize</span>
+</div></code></pre>
+<h2 id="4-a-namecmdletberttigkeitsbereichfindenacmdlet-%C3%BCber-t%C3%A4tigkeitsbereich-finden">4. <a name='CmdletberTtigkeitsbereichfinden'></a>Cmdlet über Tätigkeitsbereich finden</h2>
+<pre class="hljs"><code><div><span class="hljs-built_in">Get-Command</span> <span class="hljs-literal">-Noun</span> <span class="hljs-string">'Computer'</span>
+<span class="hljs-built_in">Get-Command</span> <span class="hljs-literal">-Noun</span> <span class="hljs-string">'Process'</span>
+<span class="hljs-built_in">Get-Command</span> <span class="hljs-literal">-Noun</span> <span class="hljs-string">'Service'</span>
+<span class="hljs-built_in">Get-Command</span> <span class="hljs-literal">-Noun</span> <span class="hljs-string">'NetConnection'</span>
+</div></code></pre>
+<h2 id="5-a-namecmdletberttigkeitundttigkeitsbereichfindenacmdlet-%C3%BCber-t%C3%A4tigkeit-und-t%C3%A4tigkeitsbereich-finden">5. <a name='CmdletberTtigkeitundTtigkeitsbereichfinden'></a>Cmdlet über Tätigkeit und Tätigkeitsbereich finden</h2>
+<pre class="hljs"><code><div><span class="hljs-built_in">Get-Command</span> <span class="hljs-literal">-Verb</span> <span class="hljs-string">'Get'</span> <span class="hljs-literal">-Noun</span> <span class="hljs-string">'*connection'</span>
+</div></code></pre>
+<h2 id="6-a-namecmdletberparameter-nameoderparameter-typfindenacmdlet-%C3%BCber-parameter-name-oder-parameter-typ-finden">6. <a name='CmdletberParameter-NameoderParameter-Typfinden'></a>Cmdlet über Parameter-Name oder Parameter-Typ finden</h2>
+<blockquote>
+<p>ACHTUNG - Die Suche nach Commands über den Parameter-Typ funktioniert nur für die aktuell importierten Module.</p>
+</blockquote>
+<pre class="hljs"><code><div><span class="hljs-built_in">Get-Command</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">'*'</span> <span class="hljs-literal">-ParameterName</span> <span class="hljs-string">'ComputerName'</span>
+
+<span class="hljs-comment"># ! Betrifft nur importierte Module</span>
+<span class="hljs-built_in">Get-Command</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">'*'</span> <span class="hljs-literal">-ParameterType</span> [<span class="hljs-type">SecureString</span>]
+</div></code></pre>
+<h2 id="7-a-namecmdletsbermodul-namesuchenacmdlets-%C3%BCber-modul-name-suchen">7. <a name='CmdletsberModul-Namesuchen'></a>Cmdlets über Modul-Name suchen</h2>
+<pre class="hljs"><code><div><span class="hljs-comment"># z. Bsp. Welche Commandlets sind im Modul NetTCPIP enthalten</span>
+<span class="hljs-built_in">Get-Command</span> <span class="hljs-literal">-Name</span> * <span class="hljs-literal">-Module</span> <span class="hljs-string">'NetTCPIP'</span>
+
+<span class="hljs-comment"># ? Welche Module sind überhaupt installiert</span>
+<span class="hljs-built_in">Get-Module</span> <span class="hljs-literal">-ListAvailable</span> | <span class="hljs-built_in">Out-GridView</span>
+</div></code></pre>
+<blockquote>
+<p>TIPP - Mein persönlicher Favorit. Zuerst suche ich den Modul-Namen, um mir anschließend die darin enthalten Command anzeigen zu lassen. So verschaffe ich mir ein Überblick über Module und den Commands.</p>
+</blockquote>
+<h2 id="8-a-namecmdletberpowershellgalleryfindenacmdlet-%C3%BCber-powershell-gallery-finden">8. <a name='CmdletberPowerShellGalleryfinden'></a>Cmdlet über PowerShell Gallery finden</h2>
+<p>Sie finden z.B. in einem Kollegen-Skript das Commandlet <code>Invoke-SqlCmd</code> das auf Ihrem PC nicht gefunden wird. Also welches Modul müsste aus der <a href="https://www.powershellgallery.com/">PowerShell Gallery</a> installiert werden, um dieses Commandlet ausführen zu können.</p>
+<p><img src="images/PowerShell-Gallery-Beispiel-1.jpg" alt=""></p>
+<pre class="hljs"><code><div><span class="hljs-built_in">Find-Command</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">'Invoke-SqlCmd'</span>
+</div></code></pre>
+<h2 id="9-a-namecmdletbershow-commandfindenacmdlet-%C3%BCber-show-command-finden">9. <a name='CmdletberShow-Commandfinden'></a>Cmdlet über <code>Show-Command</code> finden</h2>
+<h2 id="10-a-namecmdletbergoogle-suchefindenacmdlet-%C3%BCber-google-suche-finden">10. <a name='CmdletberGoogle-Suchefinden'></a>Cmdlet über Google-Suche finden</h2>
+<pre class="hljs"><code><div><span class="hljs-built_in">Start-Process</span> <span class="hljs-literal">-FilePath</span> <span class="hljs-string">'https://www.google.de/search?q=powershell+ping'</span>
+</div></code></pre>
+<h2 id="11-a-nameweiterermehrwertzumsuchenundfindenaweiterer-mehrwert-zum-suchen-und-finden">11. <a name='WeitererMehrwertzumSuchenundFinden'></a>Weiterer Mehrwert zum Suchen und Finden</h2>
+<p>Da <code>Get-Command</code> oft temporär verwendet wird, ist die Benutzung des Alias <code>gcm</code> effizienter und erlaubt.</p>
+<p><strong>Suche einschränken auf importierte Module</strong> - Sie können Ihre Suche auf die geladenen Module (<code>Get-Module</code>) einschränken.</p>
+<pre class="hljs"><code><div><span class="hljs-built_in">Get-Command</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">'*'</span> <span class="hljs-literal">-ListImported</span>
+</div></code></pre>
+<p><strong>Mehrdeutige Cmdlets auflisten</strong> - Commandlet-Namen müssen nicht eindeutig sein. Das führt aber beim Benutzen zu Problem. Über folgenden Code lokalisieren Dubletten.</p>
+<pre class="hljs"><code><div><span class="hljs-variable">$ambivalentCmdlets</span> = <span class="hljs-built_in">Get-Command</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">'*'</span> <span class="hljs-literal">-All</span> | <span class="hljs-built_in">Group-Object</span> <span class="hljs-literal">-Property</span> <span class="hljs-string">'Name'</span> | <span class="hljs-built_in">Where-Object</span> <span class="hljs-literal">-Property</span> <span class="hljs-string">'Count'</span> <span class="hljs-operator">-GE</span> <span class="hljs-literal">-Value</span> <span class="hljs-number">2</span>
+<span class="hljs-variable">$ambivalentCmdlets</span>[<span class="hljs-number">0</span>].Group
+</div></code></pre>
+<p>Benötigen Sie jedoch die Dubletten, erst recht im gleichen Script. So könne Sie diese über den Modul Namen ansprechen.</p>
+<pre class="hljs"><code><div>SqlServer\<span class="hljs-built_in">Invoke-SqlCmd</span>
+Microsoft.PowerShell.Management\<span class="hljs-built_in">Test-Connection</span>
+</div></code></pre>
+
+    </div>
+  </div>
+</body>
+</html>

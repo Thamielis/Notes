@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PowerShell Objekt Analyse - Einfach in 3 Schritten gezeigt.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/*!
+  Theme: GitHub Dark
+  Description: Dark theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-dark
+  Current colors taken from GitHub's CSS
+*/
+
+.hljs {
+  color: #c9d1d9;
+  background: #0d1117;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: #ff7b72;
+}
+
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: #d2a8ff;
+}
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: #79c0ff;
+}
+
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: #a5d6ff;
+}
+
+.hljs-built_in,
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: #ffa657;
+}
+
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: #8b949e;
+}
+
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: #7ee787;
+}
+
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: #c9d1d9;
+}
+
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: #1f6feb;
+  font-weight: bold;
+}
+
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: #f2cc60;
+}
+
+.hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: #c9d1d9;
+  font-style: italic;
+}
+
+.hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: #c9d1d9;
+  font-weight: bold;
+}
+
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: #aff5b4;
+  background-color: #033a16;
+}
+
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: #ffdcd7;
+  background-color: #67060c;
+}
+
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+}
+
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+<link rel="stylesheet" href="file://term08/c%24/ProgramData/UniversalAutomation/Repository/KnowledgeBase/styles/github-markdown.css" type="text/css"><link rel="stylesheet" href="file://term08/c%24/ProgramData/UniversalAutomation/Repository/KnowledgeBase/styles/markdown.css" type="text/css">
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body class="vscode-body vscode-dark">
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+  <div class="github-markdown-body github-markdown-auto">
+    <div class="github-markdown-content">
+      <h1 id="powershell-objekt-analyse---einfach-in-3-schritten-gezeigt">PowerShell Objekt Analyse - Einfach in 3 Schritten gezeigt</h1>
+<!-- vscode-markdown-toc -->
+<ul>
+<li>
+<ol>
+<li><a href="#berblick">Überblick</a></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li><a href="#Get-MemberHintergrundwissen">Get-Member Hintergrundwissen</a></li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li><a href="#TypenundderenstatischenMember">Typen und deren statischen Member</a></li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li><a href="#PowerShellObjektAnalysefrFortgeschrittene">PowerShell Objekt Analyse für Fortgeschrittene</a></li>
+</ol>
+<ul>
+<li>4.1. <a href="#DerEnum-Typ">Der <code>[Enum]</code>-Typ</a></li>
+<li>4.2. <a href="#DerClass-Typ">Der <code>[Class]</code>-Typ</a></li>
+</ul>
+</li>
+</ul>
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+<h2 id="1-a-nameberblicka%C3%BCberblick">1. <a name='berblick'></a>Überblick</h2>
+<p>In der PowerShell-Arbeit dreht sich alles um Cmdlets, Pipelining und Objekte. Bei der <a href="https://attilakrick.com/powershell/cmdlet-finden/">Menge an Cmdlets</a> entstehen unendlich viel Pipeline-Kombinationen. Welches Cmdlet kann mit welchem Cmdlet kombiniert werden? Kurz gesagt, <strong>jedes Cmdlet arbeitet mit jedem zusammen, wenn Sie wissen wie</strong>! Um das heraus zu finden führen Sie eine <strong>PowerShell Objekt Analyse</strong> durch!</p>
+<p>Ein Cmdlet hat eine Erwartungshaltung an das Objekt in der Pipeline oder an das übergebene Objekt-Argument. Die Cmdlet-Hilfe hält dafür Schlüsselwörter wie <code>ByValue</code>, <code>ByPropertyName</code> und Typenangaben der Parameter bereit. <strong>Eine Interaktion findet statt</strong>, wenn diese Erwartungshaltung erfüllt wird.</p>
+<p>Daher findet im Vorfeld eine einfache <strong>3 Schritte PowerShell Objekt Analyse</strong> statt, um die Object-Rückgabe z.B. für das nächste Cmdlet aufzubereiten.</p>
+<blockquote>
+<p>TIPP - Zwei weitere spannende Artikel die gut zu diesem pasen sind: &quot;<a href="https://attilakrick.com/powershell/powershell-tutorial/">PowerShell Einstieg für Anfänger und Profis</a>&quot; und &quot;<a href="https://attilakrick.com/powershell/funktionsweise-powershell-pipeline/">PowerShell Pipeline Sinn &amp; Nutzen erklärt</a>&quot;.</p>
+</blockquote>
+<p>Die PowerShell arbeite objektorientiert. Das heißt der Cmdlet-Output ist nicht textbasiert, sondern wir erhalten Objekte. Jedes dieser Objekte dient einem besonderen Zweck und grenzt sich von anderen ab. Eines der PowerShell Objekt Analyse-Ziele ist es, herauszufinden <strong>von welchem Typ ein Objekt ist</strong> (z.B. Process- vs. Service-Objekt).</p>
+<p>Über den Objekt-Typ bekommen wir Aufschluss darüber, welche Informationen (Property) das Objekt besitzt. Oder welche Aktionen (Method) mit dem Objekt möglich sind und welche Ereignisse (Event) das Objekt auslöst könnte.</p>
+<p>Beim Sammeln und Auswerten von Daten über die PowerShell müssen wir die <strong>Objekt-Eigenschaften korrekt interpretieren</strong>. Diese wiederum stellen Informationen wie Zahlen-, Datums-, Boolesche-Werte oder selbst Objekte dar. Diese Eigenschafts-Werte müssen für Ihr Zielvorhaben aufbereitet werden. Zu diesem Zweck müssen wir den aktuellen Wert kennen.</p>
+<blockquote>
+<p>TIPP - Sollte ein Objekt nicht die Daten oder Methoden enthalten die benötigt werden, können Sie <a href="https://attilakrick.com/powershell/powershell-objekt-erweiterung/">PowerShell Objekte erweitern</a>.</p>
+</blockquote>
+<p><strong>Zusammenfassend</strong> führen wir eine PowerShell Objekt Analyse durch, um folgende Punkte zu ermitteln:</p>
+<ul>
+<li>A) Von welchem Typ ist ein Objekt (Typename)?</li>
+<li>B) Welche Member besitzt ein Objekt (Properties, Methods &amp; Events)?</li>
+<li>C) Welche Werte enthalten die Objekt-Eigenschaften (Properties Value(s))?</li>
+</ul>
+<blockquote>
+<p>Meinen Teilnehmern predige ich, lieber ein paar Minuten in die PowerShell Objekt Analyse zu investieren als Stunden in Raten, Probieren und Googlen.</p>
+</blockquote>
+<p>Welche Werkzeuge zur PowerShell Objekt Analyse stehen zur Verfügung?</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Get-Member</code></td>
+<td>ermittelt den <code>TypeName</code> und listet die <code>Member</code> auf. (s. <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-member?view=powershell-7">Get-Help 'Get-Member' -ShowWindow</a>)</td>
+</tr>
+<tr>
+<td><code>Select-Object</code></td>
+<td>Multifunktions-Cmdlet für Objekte-/Property-Mengen-Einschränkungen zur besseren Übersicht.(s. <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-object?view=powershell-7">Get-Help 'Select-Object' -ShowWindow</a>)</td>
+</tr>
+<tr>
+<td><code>.PSTypeNames</code></td>
+<td>Ermitteln der Vererbungs-Hierarchie.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/PowerShell-Objekt-Analyse-Get-Member.png" alt=""></p>
+<blockquote>
+<p>TIPP - Da <code>Get-Member</code> und <code>Select-Object</code> temporär oft benutzt wird, steigern Sie Ihre Effizienz, wenn Sie deren Aliase <code>gm</code> und <code>select</code> verwenden.</p>
+</blockquote>
+<p>Wie Sie die PowerShell Objekt Analyse-Werkzeuge einsetzen, die Ergebnisse anzeigen und interpretieren sollen die folgenden Beispiele demonstrieren.</p>
+<p><img src="images/PowerShell-Objekt-Analyse-Select-Object.png" alt=""></p>
+<p><strong>Beispiel 1:</strong> Ist der Remote-Server Xyz erreichbar?</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># PowerShell Objekt Analyse</span>
+
+<span class="hljs-comment"># zu A) siehe TypeName =&gt; TestNetConnectionResult</span>
+<span class="hljs-built_in">Test-NetConnection</span> <span class="hljs-literal">-ComputerName</span> <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span> | <span class="hljs-built_in">Get-Member</span>
+
+<span class="hljs-comment"># zu B) siehe Spalten Name, MemberType und Definition</span>
+<span class="hljs-built_in">Test-NetConnection</span> <span class="hljs-literal">-ComputerName</span> <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span> | <span class="hljs-built_in">Get-Member</span>
+
+<span class="hljs-comment"># zu C) siehe Werte aller Properties =&gt; PingSucceeded</span>
+<span class="hljs-built_in">Test-NetConnection</span> <span class="hljs-literal">-ComputerName</span> <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span> | <span class="hljs-built_in">Select-Object</span> <span class="hljs-literal">-Property</span> *
+
+<span class="hljs-comment"># LÖSUNG</span>
+
+<span class="hljs-comment"># Wenn die Property 'PingSucceeded' den Wert 'true' enthält ist der Zielhost erreichbar:</span>
+<span class="hljs-variable">$result</span> = <span class="hljs-built_in">Test-NetConnection</span> <span class="hljs-literal">-ComputerName</span> <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>
+<span class="hljs-keyword">if</span>(<span class="hljs-variable">$result</span>.PingSucceeded <span class="hljs-operator">-eq</span> <span class="hljs-variable">$true</span>) { <span class="hljs-string">"Zielhost ist erreichbar!"</span> }
+</div></code></pre>
+<p><strong>Beispiel 2:</strong> Welche Prozesse sind von der Firma Microsoft entwickelt wurden?</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># PowerShell Objekt Analyse</span>
+
+<span class="hljs-comment"># zu A + B) Welche Objects liefert 'Get-Process' zurück?</span>
+            und welche Properties brauchbare Werte enthalten könnte:
+<span class="hljs-built_in">Get-Process</span> | <span class="hljs-built_in">Get-Member</span>
+<span class="hljs-comment"># Denkbar währen folgende Properties: ProcessName, Company,</span>
+<span class="hljs-comment">#                                     Description, Product</span>
+
+<span class="hljs-comment"># zu C) Welche tatsächlichen Werte sind für die Lösung brauchbar sind:</span>
+<span class="hljs-built_in">Get-Process</span> | <span class="hljs-built_in">Select-Object</span> <span class="hljs-literal">-Property</span> ProcessName, Company, Description, Product
+
+<span class="hljs-comment"># LÖSUNG:</span>
+
+<span class="hljs-comment"># Betroffene Property 'Company' mit dem Filterwert 'Microsoft Corporation' anwenden:</span>
+<span class="hljs-built_in">Get-Process</span> | <span class="hljs-built_in">Where-Object</span> <span class="hljs-literal">-Property</span> Company <span class="hljs-operator">-IEQ</span> <span class="hljs-literal">-Value</span> <span class="hljs-string">'Microsoft Corporation'</span>
+</div></code></pre>
+<p><strong>Beispiel 3:</strong> Alle .LOG-Dateien in dem Verzeichnis C:\Windows auflisten?</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># PowerShell Object Analyse</span>
+<span class="hljs-comment"># zu A) und B)</span>
+<span class="hljs-built_in">Get-ChildItem</span> <span class="hljs-literal">-Path</span> C:\Windows <span class="hljs-operator">-File</span> | <span class="hljs-built_in">Get-Member</span>
+<span class="hljs-comment"># zu C)</span>
+<span class="hljs-built_in">Get-ChildItem</span> <span class="hljs-literal">-Path</span> C:\Windows <span class="hljs-operator">-File</span> | <span class="hljs-built_in">Select-Object</span> <span class="hljs-literal">-Property</span> Name, Extension, FullName
+
+<span class="hljs-comment"># LÖSUNG</span>
+<span class="hljs-built_in">Get-ChildItem</span> <span class="hljs-literal">-Path</span> C:\Windows <span class="hljs-operator">-File</span> | <span class="hljs-built_in">Where-Object</span> <span class="hljs-literal">-Property</span> Extension <span class="hljs-operator">-IEQ</span> <span class="hljs-literal">-Value</span> <span class="hljs-string">".LOG"</span>
+</div></code></pre>
+<p><strong>Beispiel 4:</strong> Eine Übersicht aller Dateien die älter sind als 1 Jahr?</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># PowerShell Object Analyse</span>
+<span class="hljs-comment"># zu A) und B)</span>
+<span class="hljs-built_in">Get-ChildItem</span> <span class="hljs-literal">-Path</span> c:\ <span class="hljs-literal">-Recurse</span> <span class="hljs-operator">-File</span> <span class="hljs-literal">-Force</span> <span class="hljs-literal">-ErrorAction</span> Ignore | <span class="hljs-built_in">Select-Object</span> <span class="hljs-literal">-First</span> <span class="hljs-number">1</span> | <span class="hljs-built_in">Get-Member</span> <span class="hljs-comment"># ! Analyse</span>
+<span class="hljs-comment"># zu C)</span>
+<span class="hljs-built_in">Get-ChildItem</span> <span class="hljs-literal">-Path</span> c:\ <span class="hljs-literal">-Recurse</span> <span class="hljs-operator">-File</span> <span class="hljs-literal">-Force</span> <span class="hljs-literal">-ErrorAction</span> Ignore | <span class="hljs-built_in">Select-Object</span> <span class="hljs-literal">-First</span> <span class="hljs-number">1</span> <span class="hljs-literal">-Property</span> Name, CreationTime, LastWriteTime, LastAccessTime
+
+<span class="hljs-comment"># zu A) und B)</span>
+<span class="hljs-built_in">Get-Date</span> | <span class="hljs-built_in">Get-Member</span>
+<span class="hljs-comment"># zu C)</span>
+(<span class="hljs-built_in">Get-Date</span>).AddYears(<span class="hljs-literal">-1</span>)
+
+<span class="hljs-comment"># LÖSUNG</span>
+<span class="hljs-built_in">Get-ChildItem</span> <span class="hljs-literal">-Path</span> c:\ <span class="hljs-literal">-Recurse</span> <span class="hljs-operator">-File</span> <span class="hljs-literal">-Force</span> <span class="hljs-literal">-ErrorAction</span> Ignore | <span class="hljs-built_in">Where-Object</span> <span class="hljs-literal">-Property</span> LastWriteTime <span class="hljs-operator">-LE</span> <span class="hljs-literal">-Value</span> (<span class="hljs-built_in">Get-Date</span>).AddYears(<span class="hljs-literal">-1</span>)
+</div></code></pre>
+<h2 id="2-a-nameget-memberhintergrundwissenaget-member-hintergrundwissen">2. <a name='Get-MemberHintergrundwissen'></a>Get-Member Hintergrundwissen</h2>
+<p><code>Get-Member</code> stellt ein wesentliches Werzeug in der PowerShell Analyse dar. Daher lohnt es sich dieses Cmdlet etwas genau anzuschauen.</p>
+<p><code>Get-Member</code> <strong>analysiert alle Objekte in der Pipeline</strong> und generiert zum Schluss ein gruppiertes Ergebnis. Wenn Sie mit <code>Get-ChildItem</code> die Festplatte rekursiv durchsuchen, erhalten Sie erst nach ein paar Minuten zwei Ergebnisse. Eines für <code>[System.Io.FileInfo]</code> und das zweite für <code>[System.Io.DirectoryInfo]</code>. Bei vielen identischen Objekten in der Pipeline analysieren Sie besser Stichproben. Begrenzen Sie die Menge z.B. per <code>… | Select-Object -First 20</code>.</p>
+<pre class="hljs"><code><div><span class="hljs-built_in">Get-ChildItem</span> <span class="hljs-literal">-Path</span> c:\ <span class="hljs-literal">-Recurse</span> <span class="hljs-literal">-Force</span> <span class="hljs-literal">-ErrorAction</span> Ignore | <span class="hljs-built_in">Select-Object</span> <span class="hljs-literal">-First</span> <span class="hljs-number">20</span> | <span class="hljs-built_in">Get-Member</span>
+</div></code></pre>
+<p><strong>TypeName:</strong> Das <code>Get-Member</code>-Ergebnis informiert im Kopfbereich in der Zeile TypeName über den vollqualifizierten Typennamen (FQTN). Dieser FQTN besteht Namespace1.Namespace2.NamespaceN.TypeName. Zum Beispiel <code>[System.Io.FileInfo]</code> setzt sich zusammen aus dem Namespace System, Namespace Io und dem TypeName FileInfo. Suchen Sie nach diesem FQTN im Internet und folgen dem ersten Treffer zur Microsoft Online-Dokumentation.</p>
+<p><strong>Member:</strong> Das Schlüsselwort Member ist ein Überbegriff für die verschiedenen Objekt-Interaktions-Schnittstellen wie Properties, Methods, Events. <code>Get-Member</code> informiert auch über die Members des Objects. Die folgende List zeigt eine Übersicht der Member und relevante Schlüsselwörter:</p>
+<table>
+<thead>
+<tr>
+<th>Member-Art</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AliasProperty</code></td>
+<td>Alias für eine andere Property</td>
+</tr>
+<tr>
+<td><code>NoteProperty</code></td>
+<td>Eine nachträglich per PowerShell hinzugefügte Eigenschaft</td>
+</tr>
+<tr>
+<td><code>Property</code></td>
+<td>Original Eigenschaft</td>
+</tr>
+<tr>
+<td><code>PropertySet</code></td>
+<td>Eine nachträglich per PowerShell hinzugefügte Gruppe von Eigenschaften</td>
+</tr>
+<tr>
+<td><code>ScriptProperty</code></td>
+<td>Eine nachträglich per PowerShell hinzugefügte berechnende Eigenschaft</td>
+</tr>
+<tr>
+<td><code>get</code></td>
+<td>Read Property</td>
+</tr>
+<tr>
+<td><code>set</code></td>
+<td>Write Property</td>
+</tr>
+<tr>
+<td><code>get</code> &amp; <code>set</code></td>
+<td>Read/Write Property</td>
+</tr>
+<tr>
+<td><code>Event</code></td>
+<td>Original Ereignis</td>
+</tr>
+<tr>
+<td><code>Method</code></td>
+<td>Original Methode</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td>Methode ohne Rückgabe, sonst Type des Rückgabe-Objects</td>
+</tr>
+<tr>
+<td>z.B. bool WaitForExit(int milliseconds)</td>
+<td>Methode; Int-Übergabe-Objekt; Bool-RückgabeObjects</td>
+</tr>
+</tbody>
+</table>
+<p><code>Get-Member</code> unterscheidet zwischen der Analyse von Pipeline-Objekten und NICHT-Pipeline-Objekten.</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># ! Analysiert die Objects in der Pipeline</span>
+<span class="hljs-number">1</span>..<span class="hljs-number">99</span> | <span class="hljs-built_in">Get-Member</span> <span class="hljs-comment"># =&gt; System.Int32</span>
+
+<span class="hljs-comment"># vs.</span>
+
+<span class="hljs-comment"># ! Analysiert DAS Object (1..99)</span>
+<span class="hljs-built_in">Get-Member</span> <span class="hljs-literal">-InputObject</span> (<span class="hljs-number">1</span>..<span class="hljs-number">99</span>) <span class="hljs-comment"># =&gt; System.Array</span>
+</div></code></pre>
+<h2 id="3-a-nametypenundderenstatischenmemberatypen-und-deren-statischen-member">3. <a name='TypenundderenstatischenMember'></a>Typen und deren statischen Member</h2>
+<p><strong>Klassen definiert Baupläne nach denen Objekte gebaut werden.</strong> Wir können O. von einer Klasse erzeugen. Diese O. stellen mit ihren Eigenschafts-Werten und individuellen Methoden Unikate dar und grenzen sich so von einem anderen Objekt vom gleichen Typ ab.</p>
+<p>Methoden und Eigenschaften, die nicht im Zusammenhang mit dem Objekt-Unikat stehen und objekt-übergreifend gleiche und wiederkehrende Routinen besitzen werden in die Klasse statisch implementiert. Diese <strong>statischen Member</strong> werden über den Klassennamen per <code>::</code> aufgerufen.</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># Welche statische Member besitzt der Process-Typ ?</span>
+<span class="hljs-built_in">Get-Process</span> | <span class="hljs-built_in">Get-Member</span> <span class="hljs-literal">-Static</span>
+<span class="hljs-comment"># Beispiel-Aufruf:</span>
+[<span class="hljs-type">System.Diagnostics.Process</span>]::Start(<span class="hljs-string">'notepad'</span>)
+
+<span class="hljs-comment"># Welche statische Member besitzt der DateTime-Typ ?</span>
+<span class="hljs-built_in">Get-Date</span> | <span class="hljs-built_in">Get-Member</span> <span class="hljs-literal">-Static</span>
+<span class="hljs-comment"># Beispiel-Aufruf:</span>
+[<span class="hljs-built_in">datetime</span>]::Today
+</div></code></pre>
+<h2 id="4-a-namepowershellobjektanalysefrfortgeschritteneapowershell-objekt-analyse-f%C3%BCr-fortgeschrittene">4. <a name='PowerShellObjektAnalysefrFortgeschrittene'></a>PowerShell Objekt Analyse für Fortgeschrittene</h2>
+<h3 id="41-a-namederenum-typader-enum-typ">4.1. <a name='DerEnum-Typ'></a>Der <code>[Enum]</code>-Typ</h3>
+<p><strong><a href="https://attilakrick.com/powershell/neuerungen-powershell-7/">PowerShell 7</a></strong> - Es gibt eine Autovervollständigung (<code>CTRL + SPACE</code>) für das Zuweisen von Aufzählungs-Werten (Enum) zu Variablen:</p>
+<pre class="hljs"><code><div><span class="hljs-variable">$ErrorActionPreference</span> = <span class="hljs-string">'Stop'</span>
+<span class="hljs-comment"># ?                      ^ An dieser Stelle in der Console CTRL+SPACE drücken.</span>
+</div></code></pre>
+<p>Enumerationen <code>[Enum]</code> bilden eine Untermenge von Typen. Enums bilden eine Gruppe (Enum-Typennamen) von vordefinierte, Int32-Werte, die über Schlüsselwörter angesprochen werden (z.B. <code>[Color]::Red</code>).</p>
+<p>Enums können als Cmdlet-Parameter-Typ angegeben werden. Ob ein Parameter diese Enumeration akzeptiert, ist auf den ersten Blick nicht ersichtlich da die Hilfe nur den Typennamen anzeigt. Ein <code>[ServiceController]</code>-Objekt besitzt die Property <code>StartType</code> die von der Enumeration <code>[System.ServiceProcess.ServiceStartMode]</code> ist. Das Zuweisen von Enum-Werten ist analog zu statischen Membern <code>::</code>.</p>
+<p>Handelt es sich bei einem Type X um eine Enumeration?</p>
+<pre class="hljs"><code><div><span class="hljs-variable">$ErrorActionPreference</span> | <span class="hljs-built_in">Get-Member</span>
+[<span class="hljs-type">System.Management.Automation.ActionPreference</span>].IsEnum
+[<span class="hljs-type">System.Management.Automation.ActionPreference</span>].GetEnumNames()
+<span class="hljs-comment"># ! Wenn die Antwort JA lautet erfolgte eine Zuweisung wie folgt:</span>
+<span class="hljs-variable">$ErrorActionPreference</span> = [<span class="hljs-type">System.Management.Automation.ActionPreference</span>]::Stop
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-built_in">Get-Service</span> | <span class="hljs-built_in">Get-Member</span> <span class="hljs-literal">-Name</span> StartType
+[<span class="hljs-type">System.ServiceProcess.ServiceStartMode</span>].IsEnum
+[<span class="hljs-type">System.ServiceProcess.ServiceStartMode</span>].GetEnumNames()
+<span class="hljs-comment"># ! Wenn die Antwort JA lautet erfolgte ein Vergleich wie folgt:</span>
+</div></code></pre>
+<p><strong>Beispiel 5:</strong> - Alle Dienste anzeigen deren Starttyp auf Manuell steht</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># Analyse</span>
+<span class="hljs-built_in">Get-Service</span> | <span class="hljs-built_in">Get-Member</span>
+<span class="hljs-built_in">Get-Service</span> | <span class="hljs-built_in">Select-Object</span> <span class="hljs-literal">-Property</span> <span class="hljs-string">'Name'</span>, <span class="hljs-string">'StartType'</span>
+
+<span class="hljs-comment"># ! Anwenden:</span>
+
+<span class="hljs-comment"># Problematisch da eine automatische Konvertierung nach ServiceStartMode statt findet...:</span>
+<span class="hljs-built_in">Get-Service</span> | <span class="hljs-built_in">Where-Object</span> <span class="hljs-literal">-Property</span> <span class="hljs-string">'StartType'</span> <span class="hljs-operator">-IEQ</span> <span class="hljs-literal">-Value</span> <span class="hljs-string">'Manual'</span>
+<span class="hljs-comment"># TIPP - ... besser so:</span>
+<span class="hljs-built_in">Get-Service</span> | <span class="hljs-built_in">Where-Object</span> <span class="hljs-literal">-Property</span> <span class="hljs-string">'StartType'</span> <span class="hljs-operator">-EQ</span> <span class="hljs-literal">-Value</span> ([<span class="hljs-type">System.ServiceProcess.ServiceStartMode</span>]::Manual)
+</div></code></pre>
+<p>Welche Enumerationen gibt es und wie kann ich diese finden?</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># Hilfreiches Cmdlet für die PowerShell Objekt Analyse</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Get-Enum</span></span> {
+    <span class="hljs-keyword">param</span> ([<span class="hljs-built_in">string</span>]<span class="hljs-variable">$Value</span>, [<span class="hljs-built_in">String</span>]<span class="hljs-variable">$Name</span>, [<span class="hljs-type">switch</span>]<span class="hljs-variable">$All</span>)
+    <span class="hljs-variable">$defaultManifestModules</span> = <span class="hljs-string">'CommonLanguageRuntimeLibrary'</span>,
+                              <span class="hljs-string">'Microsoft.CSharp.dll'</span>,
+                              <span class="hljs-string">'Microsoft.Management.Infrastructure.dll'</span>,
+                              <span class="hljs-string">'Microsoft.PowerShell.Commands.Management.dll'</span>,
+                              <span class="hljs-string">'Microsoft.PowerShell.commands.Utility.dll'</span>,
+                              <span class="hljs-string">'System.dll'</span>,
+                              <span class="hljs-string">'System.Configuration.dll'</span>,
+                              <span class="hljs-string">'System.Configuration.Install.dll'</span>,
+                              <span class="hljs-string">'System.Core.dll'</span>,
+                              <span class="hljs-string">'System.Data.dll'</span>,
+                              <span class="hljs-string">'System.DirectoryServices.dll'</span>,
+                              <span class="hljs-string">'System.Management.Automation.dll'</span>,
+                              <span class="hljs-string">'System.Management.dll'</span>,
+                              <span class="hljs-string">'System.ServiceProcess.dll'</span>,
+                              <span class="hljs-string">'System.Transactions.dll'</span>,
+                              <span class="hljs-string">'System.Xml.dll'</span>
+
+    [<span class="hljs-type">System.AppDomain</span>]::CurrentDomain.GetAssemblies() | <span class="hljs-built_in">Where-Object</span> <span class="hljs-literal">-FilterScript</span> {<span class="hljs-variable">$All</span> <span class="hljs-operator">-or</span> (<span class="hljs-variable">$defaultManifestModules</span> <span class="hljs-operator">-contains</span> <span class="hljs-variable">$_</span>.ManifestModule)} | <span class="hljs-built_in">ForEach-Object</span> <span class="hljs-literal">-Process</span> { <span class="hljs-keyword">try</span> { <span class="hljs-variable">$_</span>.GetExportedTypes() } <span class="hljs-keyword">catch</span> { <span class="hljs-string">'Keine ExportedTypes vorhanden'</span> | <span class="hljs-built_in">Write-Verbose</span> } } | <span class="hljs-built_in">Where-Object</span> <span class="hljs-literal">-FilterScript</span> { <span class="hljs-variable">$_</span>.IsEnum <span class="hljs-operator">-and</span> <span class="hljs-variable">$_</span>.Name <span class="hljs-operator">-imatch</span> <span class="hljs-variable">$Name</span> } | <span class="hljs-built_in">ForEach-Object</span> <span class="hljs-literal">-Process</span> {
+            <span class="hljs-keyword">return</span> [<span class="hljs-type">PSCustomObject</span>]<span class="hljs-selector-tag">@</span>{
+                Name   = <span class="hljs-variable">$_</span>.FullName
+                Source = <span class="hljs-variable">$_</span>.Module.ScopeName
+                Values = [<span class="hljs-type">System.Enum</span>]::GetNames(<span class="hljs-variable">$_</span>)
+            }
+        } | <span class="hljs-built_in">Where-Object</span> <span class="hljs-literal">-Property</span> Values <span class="hljs-operator">-imatch</span> <span class="hljs-literal">-Value</span> <span class="hljs-variable">$Value</span>
+ }
+
+<span class="hljs-built_in">Get-Enum</span> <span class="hljs-literal">-Value</span> <span class="hljs-string">'SilentlyContinue'</span>
+<span class="hljs-built_in">Get-Enum</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">'ServiceStartMode'</span>
+<span class="hljs-built_in">Get-Enum</span> <span class="hljs-literal">-All</span> | <span class="hljs-built_in">Measure-Object</span>
+</div></code></pre>
+<h3 id="42-a-namederclass-typader-class-typ">4.2. <a name='DerClass-Typ'></a>Der <code>[Class]</code>-Typ</h3>
+<p><strong>Vererbung (Inherit):</strong> Klassen können eine andere Klasse beerben und so dessen Funktion zu eigen machen.</p>
+<ol>
+<li>Eine Klasse kann von EINER anderen Basisklasse ABGELEITET sein und ERBT so dessen Member/Funktionen.</li>
+<li>Jede Klasse ist früher oder später von der Klasse 'Object' (alias PSObject) abgeleitet worden.</li>
+<li>Eine abgeleitete Klasse A ist daher mit der Basisklasse B kompatibel, daher kann auch ein Objekt von Typ A an einen Parameter vom Typ B übergeben werden.</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-comment"># ? Welche Typ A von welchem Typ B abgeleitet wurde erfahren Sie so:</span>
+<span class="hljs-string">"Köln!"</span>.PSTypeNames
+(<span class="hljs-built_in">Get-Service</span>)[<span class="hljs-number">0</span>].PSTypeNames
+(<span class="hljs-built_in">Get-Process</span>)[<span class="hljs-number">0</span>].PSTypeNames
+(<span class="hljs-built_in">Get-Process</span>).PSTypeNames
+</div></code></pre>
+<p><strong>Statische Member (Static):</strong> Objekte werden von einer bestimmten Klasse instansziert und so materialisiert. Erst dann können wir mit diesen Objekten in der PowerShell hantieren. Es gibt jedoch statische Member die direkt an der Klasse aufrufen werden können ohne, dass ich zuerst eine OBjekt erzeugen muss.</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># ? Welche statische Member besitzt eine Klasse:</span>
+<span class="hljs-built_in">Get-Process</span> | <span class="hljs-built_in">Get-Member</span> <span class="hljs-literal">-Static</span>
+[<span class="hljs-type">System.Diagnostics.Process</span>]::Start(<span class="hljs-string">'notepad'</span>)
+
+<span class="hljs-built_in">Get-Date</span> | <span class="hljs-built_in">Get-Member</span> <span class="hljs-literal">-Static</span>
+[<span class="hljs-built_in">datetime</span>]::Today
+</div></code></pre>
+<p><strong>Überladung (Overload):</strong> Eine Methode kann mehrfacht überladen sein. Unter dem gleichen Methoden-Namen wird unterschiedliches Methoden-Verhalten implementiert. Wichtig ist jedoch das die Parameter-Signatur eindeutig ist.</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># ? Überladungs-Definitionen einer Methode anzeigen</span>
+<span class="hljs-variable">$Text</span> = <span class="hljs-string">"PowerShell"</span>
+<span class="hljs-variable">$Text</span> | <span class="hljs-built_in">Get-Member</span> <span class="hljs-literal">-Name</span> LastIndexOf
+<span class="hljs-variable">$Text</span>.LastIndexOf.OverloadDefinitions
+</div></code></pre>
+<p>Der folgende Code erweitert in der aktuellen Session den Basistyp <code>[Object]</code> um eine weitere Methode <code>.ShowObject()</code>. Diese Methode steht anschließend an allen Obj zur Verfügung. Wenn Sie <code>.ShowObject()</code> ausführen erhalten Sie sämtliche Eigenschafts-Werte eines Objektes in einem Windows-Fenster.</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># Hilfreiche Erweiterung für die PowerShell Objekt Analyse</span>
+<span class="hljs-variable">$code</span> = {
+    <span class="hljs-built_in">Add-Type</span> <span class="hljs-literal">-AssemblyName</span> <span class="hljs-string">"System.Windows.Forms"</span>
+
+    <span class="hljs-variable">$propertyGrid</span>                            = <span class="hljs-built_in">New-Object</span> <span class="hljs-literal">-TypeName</span> <span class="hljs-string">"System.Windows.Forms.PropertyGrid"</span>
+    <span class="hljs-variable">$propertyGrid</span>.Dock                       = [<span class="hljs-type">System.Windows.Forms.DockStyle</span>]::Fill
+    <span class="hljs-variable">$propertyGrid</span>.PropertySort               = [<span class="hljs-type">System.Windows.Forms.PropertySort</span>]::Alphabetical
+    <span class="hljs-variable">$propertyGrid</span>.CanShowVisualStyleGlyphs   = <span class="hljs-variable">$true</span>
+    <span class="hljs-variable">$propertyGrid</span>.CommandsVisibleIfAvailable = <span class="hljs-variable">$true</span>
+    <span class="hljs-variable">$propertyGrid</span>.HelpVisible                = <span class="hljs-variable">$true</span>
+    <span class="hljs-variable">$propertyGrid</span>.ToolbarVisible             = <span class="hljs-variable">$true</span>
+    <span class="hljs-variable">$propertyGrid</span>.SelectedObject             = <span class="hljs-keyword">$this</span>
+
+    <span class="hljs-variable">$window</span>         = <span class="hljs-built_in">New-Object</span> <span class="hljs-literal">-TypeName</span> <span class="hljs-string">"System.Windows.Forms.Form"</span>
+    <span class="hljs-variable">$window</span>.Text    = <span class="hljs-keyword">$this</span>.ToString()
+    <span class="hljs-variable">$window</span>.Size    = <span class="hljs-built_in">New-Object</span> <span class="hljs-literal">-TypeName</span> <span class="hljs-string">"System.Drawing.Size"</span> <span class="hljs-literal">-ArgumentList</span> <span class="hljs-selector-tag">@</span>(<span class="hljs-number">600</span>, <span class="hljs-number">800</span>)
+    <span class="hljs-variable">$window</span>.TopMost = <span class="hljs-variable">$true</span>
+    <span class="hljs-variable">$window</span>.Controls.Add(<span class="hljs-variable">$propertyGrid</span>)
+    <span class="hljs-variable">$window</span>.ShowDialog() | <span class="hljs-built_in">Out-Null</span>
+}
+<span class="hljs-built_in">Update-TypeData</span> <span class="hljs-literal">-MemberType</span> <span class="hljs-string">"ScriptMethod"</span> <span class="hljs-literal">-MemberName</span> <span class="hljs-string">"ShowObject"</span> <span class="hljs-literal">-Value</span> <span class="hljs-variable">$code</span> <span class="hljs-literal">-TypeName</span> <span class="hljs-string">"System.Object"</span> <span class="hljs-literal">-Force</span>
+</div></code></pre>
+<p>Die neue Methode <code>.ShowObject()</code> benutzen:</p>
+<pre class="hljs"><code><div><span class="hljs-variable">$p1</span> = <span class="hljs-built_in">Get-Process</span> | <span class="hljs-built_in">Select-Object</span> <span class="hljs-literal">-First</span> <span class="hljs-number">1</span>
+<span class="hljs-variable">$p1</span>.ShowObject()
+</div></code></pre>
+
+    </div>
+  </div>
+</body>
+</html>

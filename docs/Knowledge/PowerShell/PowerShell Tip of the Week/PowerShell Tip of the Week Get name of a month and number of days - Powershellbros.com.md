@@ -1,0 +1,27 @@
+![get-date](PowerShell%20Tip%20of%20the%20Week%20Get%20name%20of%20a%20month%20and%20number%20of%20days%20-%20Powershellbros.com/get-date.png)
+
+Recently I was working on a new report for entire environment. I had to calculate servers total uptime and downtime in previous month. I prepared script for that and one of the tasks was to check what was previous month name and number of days.
+
+**Name of a month**
+
+Concept of uptime report was that script will gather start/stop/crash information from eventlog and calculate time between of those events. It will run every 1st day of a month and check events from previous month on all online servers. Final results will be send to email. Part of the code was about getting information like name of the month, number of days etc. Based on that data script will set time start and end time for querying events.
+
+This simple script is mainly based on [Get-Date](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-date?view=powershell-6) command. Below you can find how to get last month name and number of days:
+
+<table><tbody><tr><td><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p></td><td><div><p><code>$CurrentDate</code> <code>= </code><code>Get-Date</code></p><p><code>$LastMonth</code> <code>= ((</code><code>$CurrentDate</code><code>).AddMonths(-1)).ToUniversalTime().Month</code></p><p><code>$LastMonthYear</code> <code>= ((</code><code>$CurrentDate</code><code>).AddMonths(-1)).ToUniversalTime().Year</code></p><p><code>$LastMonthName</code> <code>= </code><code>$LastMonth</code> <code>| %{(</code><code>Get-Culture</code><code>).DateTimeFormat.GetMonthName(</code><code>$_</code><code>)}</code></p><p><code>$LastMonthDays</code> <code>= </code><code>[DateTime]</code><code>::DaysInMonth(</code><code>$LastMonthYear</code><code>, </code><code>$LastMonth</code><code>)</code></p></div></td></tr></tbody></table>
+
+[![name of a month](PowerShell%20Tip%20of%20the%20Week%20Get%20name%20of%20a%20month%20and%20number%20of%20days%20-%20Powershellbros.com/last-mont-name.png)](https://i1.wp.com/www.powershellbros.com/wp-content/uploads/2019/02/last-mont-name.png?ssl=1)
+
+Now, we can use this code and calculate start and end of the month. This can be useful for example in getting event logs in specific time frame:
+
+<table><tbody><tr><td><p>1</p><p>2</p></td><td><div><p><code>$StartOfPrevMonth</code> <code>= </code><code>Get-Date</code> <code>-Month</code> <code>$LastMonth</code> <code>-Year</code> <code>$LastMonthYear</code> <code>-Day</code> <code>1</code> <code>-Hour</code> <code>0</code> <code>-Minute</code> <code>0</code> <code>-Second</code> <code>0</code> <code>-Millisecond</code> <code>0</code></p><p><code>$EndOfPrevMonth</code> <code>= (</code><code>$StartOfPrevMonth</code><code>).AddMonths(1).AddTicks(-1)</code></p></div></td></tr></tbody></table>
+
+[![name of a month](PowerShell%20Tip%20of%20the%20Week%20Get%20name%20of%20a%20month%20and%20number%20of%20days%20-%20Powershellbros.com/start-and-end.png)](https://i2.wp.com/www.powershellbros.com/wp-content/uploads/2019/02/start-and-end.png?ssl=1)
+
+Both variables can be used as [Get-WinEvent](https://www.powershellbros.com/powershell-query-multiple-event-ids-remotely/) paramters, **starttime** and **endtime**:
+
+<table><tbody><tr><td><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p><p>11</p></td><td><div><p><code>$CurrentDate</code> <code>= </code><code>Get-Date</code></p><p><code>$LastMonth</code> <code>= ((</code><code>$CurrentDate</code><code>).AddMonths(-1)).ToUniversalTime().Month</code></p><p><code>$LastMonthYear</code> <code>= ((</code><code>$CurrentDate</code><code>).AddMonths(-1)).ToUniversalTime().Year</code></p><p><code>$LastMonthName</code> <code>= </code><code>$LastMonth</code> <code>| %{(</code><code>Get-Culture</code><code>).DateTimeFormat.GetMonthName(</code><code>$_</code><code>)}</code></p><p><code>$LastMonthDays</code> <code>= </code><code>[DateTime]</code><code>::DaysInMonth(</code><code>$LastMonthYear</code><code>, </code><code>$LastMonth</code><code>)</code></p><p><code>$StartOfPrevMonth</code> <code>= </code><code>Get-Date</code> <code>-Month</code> <code>$LastMonth</code> <code>-Year</code> <code>$LastMonthYear</code> <code>-Day</code> <code>1</code> <code>-Hour</code> <code>0</code> <code>-Minute</code> <code>0</code> <code>-Second</code> <code>0</code> <code>-Millisecond</code> <code>0</code></p><p><code>$EndOfPrevMonth</code> <code>= (</code><code>$StartOfPrevMonth</code><code>).AddMonths(1).AddTicks(-1)</code></p><p><code>"Scan time frame: $StartOfPrevMonth - $EndOfPrevMonth"</code></p><p><code>Get-WinEvent</code> <code>-FilterHashTable</code> <code>@{LogName=</code><code>'System'</code><code>; ID=</code><code>"6005"</code><code>,</code><code>"6006"</code><code>,</code><code>"6008"</code><code>; StartTime=</code><code>$StartOfPrevMonth</code><code>;EndTime=</code><code>$EndOfPrevMonth</code><code>}</code></p></div></td></tr></tbody></table>
+
+[![name of a month](PowerShell%20Tip%20of%20the%20Week%20Get%20name%20of%20a%20month%20and%20number%20of%20days%20-%20Powershellbros.com/get-winevent.png)](https://i1.wp.com/www.powershellbros.com/wp-content/uploads/2019/02/get-winevent.png?ssl=1)
+
+I hope this was informative for you 🙂
