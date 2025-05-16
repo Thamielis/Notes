@@ -11,10 +11,10 @@
   - [2.1. PSModulesHelp](#21-psmoduleshelp)
   - [2.2. ReposWiki](#22-reposwiki)
     - [2.2.1. Meine Repos](#221-meine-repos)
-  - [2.3. Repos of High Interrest](#23-repos-of-high-interrest)
-      - [2.2.1.1. Analyse/Visualize](#2211-analysevisualize)
+    - [2.2.1.1. Analyse/Visualize](#2211-analysevisualize)
     - [2.2.2. Kostwein](#222-kostwein)
       - [2.2.2.1. ConfigurationManager](#2221-configurationmanager)
+  - [2.3. Repos of High Interrest](#23-repos-of-high-interrest)
   - [2.10. Other](#210-other)
     - [2.10.1. Awesome-Documentation](#2101-awesome-documentation)
   - [2.10.2. docs-page-demo](#2102-docs-page-demo)
@@ -73,14 +73,14 @@
 ### [<span style ="color:cyan">2.1. PSModulesHelp</span>](PSModulesHelp/ModuleDoku.md)
 
 ### [<span style="color:red">2.2. ReposWiki</span>](ReposWiki/ReposWiki.md)
+
   Alle GitHub Repositories
 
 #### [<span style="color:magenta">2.2.1. Meine Repos</span>](ReposWiki/Repositories.md)
+
   <span style="color:cyan">*Meine Programmierungen*</span>
 
-### [<span style="color:#0000e8; fontweight:bold">2.3. Repos of High Interrest</span>](<PSModulesGithub.md>)
-
-##### 2.2.1.1. Analyse/Visualize
+#### 2.2.1.1. Analyse/Visualize
 
 - [PSVisualizer](<https://github.com/In-Pro-Org/PSVisualizer>)
   > Erstellen eines Mermaid Diagramms vom Ablauf eines PowerShell Scripts
@@ -88,6 +88,8 @@
 #### [2.2.2. Kostwein](/%2F/Kostwein.md)
 
 ##### 2.2.2.1. ConfigurationManager
+
+### [<span style="color:#0000e8; fontweight:bold">2.3. Repos of High Interrest</span>](<PSModulesGithub.md>)
 
 ### 2.10. Other
 
@@ -129,6 +131,7 @@
 #### 3.1.1 PowerShell
 
 !> [Why I don't like PowerShell the search for maintainable code](https://wouterdekort.com/2019/04/07/why-i-dont-like-powershell-the-search-for-maintainable-code/)
+!> [Display Object](https://www.red-gate.com/simple-talk/blogs/display-object-a-powershell-utility-cmdlet/)
 
 <details>
 <summary>Module</summary>
