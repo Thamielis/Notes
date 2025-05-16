@@ -25,6 +25,8 @@ If you call this command at the top of a function, it overrides (only) the defau
 > EXAMPLE 1
 
 Given that you've written a script like:
+
+```powershell
 function New-User {
     [CmdletBinding()]
     param(
@@ -54,9 +56,16 @@ function New-User {
     }
 }
 
+```
+
 You could create a User.psd1 in a folder with just:
 
+```
+
 @{ Domain = "HuddledMasses.org" }
+
+
+```
 
 Now the following command would resolve the `User.psd1`
 And the user would get an appropriate email address automatically:
@@ -66,6 +75,7 @@ PS> New-User Joel Bennett
 FirstName   : Joel
 LastName    : Bennett
 EMail       : Joel.Bennett@HuddledMasses.org
+
 > EXAMPLE 2
 
 ```PowerShell
