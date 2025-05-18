@@ -4,9 +4,7 @@
 - [0. Projekte](#0-projekte)
   - [0.1. Projekte](#01-projekte)
   - [0.2. Kostwein](#02-kostwein)
-- [1. ToDo](#1-todo)
-  - [1.1. RepoOverview](#11-repooverview)
-  - [1.2. Notes Repo](#12-notes-repo)
+  - [0.3. PowerShell](#03-powershell)
 - [2. Repos](#2-repos)
   - [2.1. PSModulesHelp](#21-psmoduleshelp)
   - [2.2. ReposWiki](#22-reposwiki)
@@ -42,30 +40,18 @@
   - [5.1. Thamielis Pages](#51-thamielis-pages)
 - [6. Docsify](#6-docsify)
   - [6.1. Plugins](#61-plugins)
-- [7. Wichtig](#7-wichtig)
+- [7. ToDo](#7-todo)
+  - [7.1. RepoOverview](#71-repooverview)
+  - [7.2. Notes Repo](#72-notes-repo)
+- [8. Wichtig](#8-wichtig)
 
 </details>
 
 ## 0. Projekte
 
-### [<span style="color:magenta">0.1. Projekte</span>](/Projects/Projects.md)
+### [<span style="color:magenta">0.1. Projekte</span>](Projects/Projects.md)
 ### [<span style="color:green">0.2. Kostwein</span>](/%2F/Kostwein.md)
-### [<span style="color:cyan">0.3. PowerShell</span>](/Links/PowerShell.md)
-
----
-
-## 1. ToDo
-
-### 1.1. RepoOverview
-  >
-  > - [ ] :bangbang: Anzahl der Files per Repo hinzufügen
-  > - [ ] :bangbang: Branches und Unterschiede hinzufügen
-  > - [ ] :bangbang: [MarkMap.js](<https://markmap.js.org>) Integrieren
-  >
-### 1.2. Notes Repo
-  >
-  > - [ ] :memo: PSModulesHelp hinzufügen
-  > - [ ] :memo: KnowledgeBase hinzufügen
+### [<span style="color:cyan">0.3. PowerShell</span>](Links/PowerShell.md)
 
 ---
 
@@ -258,7 +244,22 @@ New-ADGroupReport -Name 'PaloAlto*' -ReportTitle 'PaloAlto_Internet ADGroups' -E
 
 ---
 
-## 7. Wichtig
+## 7. ToDo
+
+### 7.1. RepoOverview
+  >
+  > - [ ] :bangbang: Anzahl der Files per Repo hinzufügen
+  > - [ ] :bangbang: Branches und Unterschiede hinzufügen
+  > - [ ] :bangbang: [MarkMap.js](<https://markmap.js.org>) Integrieren
+  >
+### 7.2. Notes Repo
+  >
+  > - [ ] :memo: PSModulesHelp hinzufügen
+  > - [ ] :memo: KnowledgeBase hinzufügen
+
+---
+
+## 8. Wichtig
 >
 >[!warning]
 >***PowerShell***
