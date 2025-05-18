@@ -50,6 +50,7 @@
 
 ### [<span style="color:magenta">0.1. Projekte</span>](/Projects/Projects.md)
 ### [<span style="color:green">0.2. Kostwein</span>](/%2F/Kostwein.md)
+### [<span style="color:cyan">0.3. PowerShell</span>](/Links/PowerShell.md)
 
 ---
 
