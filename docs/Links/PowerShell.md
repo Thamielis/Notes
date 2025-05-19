@@ -5,6 +5,11 @@
 
 ## Scripting/Development
 
+### Templates
+
+#### [Press](https://github.com/JustinGrote/Press)
+> A continuous developement environment for Powershell Modules either via local development or leveraging GitHub and Github Actions
+
 ### Standard Modules für Development
 
 #### [Configuration](https://github.com/PoshCode/Configuration)
