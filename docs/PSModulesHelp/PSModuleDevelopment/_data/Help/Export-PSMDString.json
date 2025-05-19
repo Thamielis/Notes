@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Parses a module that uses the PSFramework localization feature for strings and their value.",
+  "Description": "Parses a module that uses the PSFramework localization feature for strings and their value.\nThis command can be used to generate and update the language files used by the module.\nIt is also used in automatic tests, ensuring no abandoned string has been left behind and no key is unused.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Export-PSMDString -ModuleRoot 'C:\\Code\\Github\\MyModuleProject\\MyModule'\r\nGenerates the strings data for the MyModule module."
+    }
+  ]
+}

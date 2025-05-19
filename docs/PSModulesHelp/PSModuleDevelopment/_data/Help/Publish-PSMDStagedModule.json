@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Publish a module to your staging repository.",
+  "Description": "Publish a module to your staging repository.\nAlways publishes the latest version available when specifying a name.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Publish-PSMDStagedModule -Name 'PSFramework'\r\nPublishes the latest version of PSFramework found on the local machine."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Publish-PSMDStagedModule -Name 'Microsoft.Graph' -Repository PSGallery\r\nPublishes the entire kit of 'Microsoft.Graph' modules from the PSGallery to the staging repository."
+    }
+  ]
+}

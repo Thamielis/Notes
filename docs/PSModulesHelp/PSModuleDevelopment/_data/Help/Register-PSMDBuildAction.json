@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Register a new action usable in build projects.",
+  "Description": "Register a new action usable in build projects.\nActions are the actual implementation logic that turns the configuration in a build project file into ... well, actions.\nAnyway, these are basically named scriptblocks with some metadata.\nThis command is used to provide all the builtin actions and can be used to freely define your own actions.\n\nWhenever you use a \"script\" action in your build projects, consider ... would it make a good configurable option valuable for other builds?\nIf so, that might just mark the birth of the next action!",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Register-PSMDBuildAction -Name 'script' -Action $actionCode -Description 'Execute a custom scriptfile as part of your workflow' -Parameters $parameters\r\nCreates / registers the action \"script\"."
+    }
+  ]
+}

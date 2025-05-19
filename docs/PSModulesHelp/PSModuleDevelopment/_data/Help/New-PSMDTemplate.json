@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a template from a reference file / folder.",
+  "Description": "This function creates a template based on an existing folder or file.\nIt automatically detects parameters that should be filled in one creation time.\n\n# Template reference: #\n#---------------------#\nProject templates can be preconfigured by a special reference file in the folder root.\nThis file must be named \"PSMDTemplate.ps1\" and will not be part of the template.\nIt must emit a single hashtable with various pieces of information.\n\nThis hashtable can have any number of the following values, in any desired combination:\n- Scripts: A Hashtable, of scriptblocks. These are scripts used for replacement parameters, the key is the name used on insertions.\n- TemplateName: Name of the template\n- Version: The version number for the template (See AutoIncrementVersion property)\n- AutoIncrementVersion: Whether the version number should be incremented\n- Tags: Tags to add to a template - makes searching and finding templates easier\n- Author: Name of the author of the template\n- Description: Description of the template\n- Exclusions: List of relative file/folder names to not process / skip.\nEach of those entries can also be overridden by specifying the corresponding parameter of this function.\n\n# Parameterizing templates: #\n#---------------------------#\nThe script will pick up any parameter found in the files and folders (including the file/folder name itself).\nThere are three ways to do this:\n- Named text replacement: The user will need to specify what to insert into this when creating a new project from this template.\n- Scriptblock replacement: The included scriptblock will be executed on initialization, in order to provide a text to insert. Duplicate scriptblocks will be merged.\n- Named scriptblock replacement: The template reference file can define scriptblocks, their value will be inserted here.\nThe same name can be reused any number of times across the entire project, it will always receive the same input.\n\nNaming Rules:\n- Parameter names cannot include the characters '!', '{', or '}'\n- Parameter names cannot include the parameter identifier. This is by default 'þ'.\nThis identifier can be changed by updating the 'psmoduledevelopment.template.identifier' configuration setting.\n- Names are not case sensitive.\n\nExamples:\n° Named for replacement:\n\"Test þnameþ\" --> \"Test <inserted text of parameter>\"\n\n° Scriptblock replacement:\n\"Test þ{ $env:COMPUTERNAME }þ\" --> \"Test <Name of invoking computer>\"\n- Important: No space between identifier and curly braces!\n- Scriptblock can have multiple lines.\n\n° Named Scriptblock replacement:\n\"Test þ!ClosestDomainController!þ\" --> \"Test <Result of script ClosestDomainController>\"\n- Named Scriptblocks are created by using a template reference file (see section above)",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-PSMDTemplate -FilePath .\\þnameþ.Test.ps1 -TemplateName functiontest\r\nCreates a new template named 'functiontest', based on the content of '.\\þnameþ.Test.ps1'"
+    }
+  ]
+}

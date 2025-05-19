@@ -1,0 +1,33 @@
+{
+  "Synopsis": "\r\nRegister-Certificate -CertificatePFX <string> -Path <string> [-TimeStampServer <string>] [-IncludeChain <string>] [-Include <string[]>] [-HashAlgorithm <string>] [-WhatIf] [-Confirm] [<CommonParameters>]\r\n\r\nRegister-Certificate -LocalStore <string> -Path <string> [-Thumbprint <string>] [-TimeStampServer <string>] [-IncludeChain <string>] [-Include <string[]>] [-HashAlgorithm <string>] [-WhatIf] [-Confirm] [<CommonParameters>]\r\n",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None\r\n"
+  ],
+  "Outputs": [
+    "System.Object"
+  ],
+  "Links": [],
+  "Examples": []
+}

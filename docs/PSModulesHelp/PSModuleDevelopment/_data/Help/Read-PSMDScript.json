@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Parse the content of a script",
+  "Description": "Uses the powershell parser to parse the content of a script or scriptfile.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Read-PSMDScript -ScriptCode $ScriptCode\r\nParses the code in $ScriptCode"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-ChildItem | Read-PSMDScript\r\nParses all script files in the current directory"
+    }
+  ]
+}

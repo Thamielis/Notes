@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Parses a file and exports all top-level functions from it into a dedicated file, just for the function.",
+  "Description": "Parses a file and exports all top-level functions from it into a dedicated file, just for the function.\nThe original file remains unharmed by this.\n\nNote: Any comments outside the function definition will not be copied.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Split-PSMDScriptFile -File \".\\module.ps1\" -Path .\\files\r\nExports all functions in module.ps1 and puts them in individual files in the folder .\\files."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Define the repository to use for deploying modules along with scripts.",
+  "Description": "Define the repository to use for deploying modules along with scripts.\nBy default, modules are deployed using the PSGallery, which may be problematic:\n- Offline computers do not have access to it\n- Low performance compared to a local mirror",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-PSMDStagingRepository -Path 'C:\\PowerShell\\StagingRepo'\r\nRegisters the local path 'C:\\PowerShell\\StagingRepo' as a repository and will use it for deploying modules along with scripts."
+    }
+  ]
+}

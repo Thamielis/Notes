@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Builds a PowerShell module formatted like the ones located at github.com/thisjustin816.",
+  "Description": "Builds a PowerShell module formatted like the ones located at github.com/thisjustin816.\n- Moves all public functions to a single .psm1 file and all private functions to a private folder.\n- Removes any init blocks outside of the function.\n- Formats the private function dot sources for the expected folder structure.\n- Creates a module manifest.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "N/A"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$BuildPSModule = @{\r\n    Name        = 'MyModule'\r\n    Version     = '1.0.0'\r\n    Description = 'A PowerShell module.'\r\n    Tags        = ('PSEdition_Desktop', 'PSEdition_Core')\r\n}\r\nBuild-PSModule @BuildPSModule"
+    }
+  ]
+}

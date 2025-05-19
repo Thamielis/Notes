@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Creates a new Release for the given GitHub repository.",
+  "Description": "Uses the GitHub API to create a new Release for a given repository.\nAllows you to specify all of the Release properties, such as the Tag, Name, Assets, and if it's a Draft or Prerelease or not.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Name:   New-GitHubRelease\nAuthor: Daniel Schroeder (originally based on the script at https://github.com/majkinetor/au/blob/master/scripts/Github-CreateRelease.ps1)\nGitHub Release API Documentation: https://developer.github.com/v3/repos/releases/#create-a-release\nVersion: 1.0.2"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "A hash table with the following properties is returned:\n\nSucceeded = $true if the Release was created successfully and all assets were uploaded to it, $false if some part of the process failed.\nReleaseCreationSucceeded = $true if the Release was created successfully (does not include asset uploads), $false if the Release was not created.\nAllAssetUploadsSucceeded = $true if all assets were uploaded to the Release successfully, $false if one of them failed, $null if there were no assets to upload.\nReleaseUrl = The URL of the new Release that was created.\nErrorMessage = A message describing what went wrong in the case that Succeeded is $false."
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "Import the module dynamically from the PowerShell Gallery. Use CurrentUser scope to avoid having to run as admin.",
+      "Code": "Import-Module -Name New-GitHubRelease -Scope CurrentUser\r\n# Specify the parameters required to create the release. Do it as a hash table for easier readability.\r\n$newGitHubReleaseParameters =\r\n@{\r\n    GitHubUsername = 'deadlydog'\r\n    GitHubRepositoryName = 'New-GitHubRelease'\r\n    GitHubAccessToken = 'SomeLongHexidecimalString'\r\n    ReleaseName = \"New-GitHubRelease v1.0.0\"\r\n    TagName = \"v1.0.0\"\r\n    ReleaseNotes = \"This release contains the following changes: ...\"\r\n    AssetFilePaths = @('C:\\MyProject\\Installer.exe','C:\\MyProject\\Documentation.md')\r\n    IsPreRelease = $false\r\n    IsDraft = $true\t# Set to true when testing so we don't publish a real release (visible to everyone) by accident.\r\n}\r\n\r\n# Try to create the Release on GitHub and save the results.\r\n$result = New-GitHubRelease @newGitHubReleaseParameters\r\n\r\n# Provide some feedback to the user based on the results.\r\nif ($result.Succeeded -eq $true)\r\n{\r\n    Write-Output \"Release published successfully! View it at $($result.ReleaseUrl)\"\r\n}\r\nelseif ($result.ReleaseCreationSucceeded -eq $false)\r\n{\r\n    Write-Error \"The release was not created. Error message is: $($result.ErrorMessage)\"\r\n}\r\nelseif ($result.AllAssetUploadsSucceeded -eq $false)\r\n{\r\n    Write-Error \"The release was created, but not all of the assets were uploaded to it. View it at $($result.ReleaseUrl). Error message is: $($result.ErrorMessage)\"\r\n}\r\n\r\nAttempt to create a new Release on GitHub, and provide feedback to the user indicating if it succeeded or not."
+    }
+  ]
+}

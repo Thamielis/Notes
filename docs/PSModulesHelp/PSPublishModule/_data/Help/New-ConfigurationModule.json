@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Provides a way to configure Required Modules or External Modules that will be used in the project.",
+  "Description": "Provides a way to configure Required Modules or External Modules that will be used in the project.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "Add standard module dependencies (directly, but can be used with loop as well)",
+      "Code": "New-ConfigurationModule -Type RequiredModule -Name 'platyPS' -Guid 'Auto' -Version 'Latest'\r\nNew-ConfigurationModule -Type RequiredModule -Name 'powershellget' -Guid 'Auto' -Version 'Latest'\r\nNew-ConfigurationModule -Type RequiredModule -Name 'PSScriptAnalyzer' -Guid 'Auto' -Version 'Latest'"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "Add external module dependencies, using loop for simplicity",
+      "Code": "foreach ($Module in @('Microsoft.PowerShell.Utility', 'Microsoft.PowerShell.Archive', 'Microsoft.PowerShell.Management', 'Microsoft.PowerShell.Security')) {\r\n    New-ConfigurationModule -Type ExternalModule -Name $Module\r\n}"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "Add approved modules, that can be used as a dependency, but only when specific function from those modules is used\r\nAnd on that time only that function and dependant functions will be copied over\r\nKeep in mind it has it's limits when \"copying\" functions such as it should not depend on DLLs or other external files",
+      "Code": "New-ConfigurationModule -Type ApprovedModule -Name 'PSSharedGoods', 'PSWriteColor', 'Connectimo', 'PSUnifi', 'PSWebToolbox', 'PSMyPassword'"
+    }
+  ]
+}

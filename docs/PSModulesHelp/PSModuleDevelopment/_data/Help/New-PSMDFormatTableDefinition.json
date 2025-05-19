@@ -1,0 +1,45 @@
+{
+  "Synopsis": "Generates a format XML for the input type.",
+  "Description": "Generates a format XML for the input type.\nCurrently, only tables are supported.\n\nNote:\nLoading format files has a measureable impact on module import PER FILE.\nFor the sake of performance, you should only generate a single file for an entire module.\n\nYou can generate all items in a single call (which will probably be messy on many types at a time)\nOr you can use the -Fragment parameter to create individual fragments, and combine them by passing\nthose items again to this command (the final time without the -Fragment parameter).",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "PSModuleDevelopment.Format.Document",
+    "PSModuleDevelopment.Format.TableDefinition"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-ChildItem | New-PSMDFormatTableDefinition\r\nGenerates a format xml for the objects in the current path (files and folders in most cases)"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-ChildItem | New-PSMDFormatTableDefinition -IncludeProperty LastWriteTime, FullName\r\nCreates a format xml that only includes the columns LastWriteTime, FullName"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Generates a Markdown file with a short description of each public command in a module.",
+  "Description": "Finds all the public commands in a specified module and produces a simple Markdown file detailing the description or synopsis (user choice) for each.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-ModuleOverview -ModuleName TLS -Path .\\readme.md\r\nThis will generate an overview of the TLS module and output it to readme.md in the current directory."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-ModuleOverview -ModuleName DISM -Path .\\readme.md -Append\r\nThis will generate an overview of the DISM module and output it to an existing readme.md in the current directory."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "New-ModuleOverview -ModuleName PSScheduledJob -Path .\\readme.md -HelpContent Description\r\nThis will generate an overview of the PSScheduledJob module using the description from each help comment and output it to readme.md in the current directory."
+    }
+  ]
+}

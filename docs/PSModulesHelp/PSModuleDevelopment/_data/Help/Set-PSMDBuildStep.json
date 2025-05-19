@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Create or update a step from a build project.",
+  "Description": "Create or update a step from a build project.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-PSMDBuildStep -Name 'Create Session' -Action new-pssession -Parameters @{ VMName = 'labdc1'; CredentialPath = \"%ProjectRoot%\\creds\\labdc1.cred\";  }\r\nDefines a new step named 'Create Session' using the 'new-pssession'-action."
+    }
+  ]
+}

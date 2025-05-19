@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Create a new build project file.",
+  "Description": "Create a new build project file.\nBuild projects are used to configure a repeatable, managed set of steps that make up a workflow.\nIt is designed with software build processes in mind, but can be used for pretty much anything that works in separate steps.\n\nSee the help on Invoke-PSMDBuildProject for more details.\n\nNOTE: This is not the tool or component to create new PowerShell _code_ projects / repositories!\nTo create a new PowerShell module project, instead run:\n\n\tInvoke-PSMDTemplate PSFProject",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-PSMDBuildProject -Name 'VMDeployment' -Path 'C:\\Code\\VMDeployment'\r\nCreate a new build project named 'VMDeployment' in the folder 'C:\\Code\\VMDeployment'"
+    }
+  ]
+}

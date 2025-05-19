@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Retrieve an artifact during a build project's execution.",
+  "Description": "Retrieve an artifact during a build project's execution.\nThese artifacts are usually created during such an execution and discarded once completed.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-PSMDBuildArtifact\r\nList all available artifacts."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-PSMDBuildArtifact -Name ReleasePath\r\nReturns the artifact named \"ReleasePath\""
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Get-PSMDBuildArtifact -Tag pssession\r\nReturns all artifacts with the tag \"pssession\""
+    }
+  ]
+}

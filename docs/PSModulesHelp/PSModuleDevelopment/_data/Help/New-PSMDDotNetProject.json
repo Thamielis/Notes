@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Wrapper function around 'dotnet new'",
+  "Description": "This function is a wrapper around the dotnet.exe application with the parameter 'new'.\nIt can be used to create projects from templates, as well as to administrate templates.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "dotnetnew -l\r\nLists all installed templates."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "dotnetnew mvc foo F:\\temp\\projects\\foo -au Windows --no-restore\r\nCreates a new MVC project named \"foo\" in folder \"F:\\Temp\\projects\\foo\"\r\n- It will set authentication to windows\r\n- It will skip the automatic restore of the project on create"
+    }
+  ]
+}

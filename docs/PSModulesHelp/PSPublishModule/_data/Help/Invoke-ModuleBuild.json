@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Command to create new module or update existing one.\nIt will create new module structure and everything around it, or update existing one.",
+  "Description": "Command to create new module or update existing one.\nIt will create new module structure and everything around it, or update existing one.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "An example"
+    }
+  ]
+}

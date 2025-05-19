@@ -1,0 +1,54 @@
+{
+  "Synopsis": "Tells the module to create artefact of specified type",
+  "Description": "Tells the module to create artefact of specified type\nThere can be multiple artefacts created (even of same type)\nAt least one packed artefact is required for publishing to GitHub",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-ConfigurationArtefact -Type Unpacked -Enable -Path \"$PSScriptRoot\\Artefacts\\Unpacked\" -RequiredModulesPath \"$PSScriptRoot\\Artefacts\\Unpacked\\Modules\""
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "standard artefact, packed with tag name without any additional modules or required modules",
+      "Code": "New-ConfigurationArtefact -Type Packed -Enable -Path \"$PSScriptRoot\\Artefacts\\Packed\" -IncludeTagName"
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "Create artefact in form of a script. This is useful for very simple modules that should be just single PS1 file",
+      "Code": "New-ConfigurationArtefact -Type Script -Enable -Path \"$PSScriptRoot\\Artefacts\\Script\" -IncludeTagName"
+    },
+    {
+      "Title": "EXAMPLE 4",
+      "Markdown": "Create artefact in form of a script. This is useful for very simple modules that should be just single PS1 file\r\nBut additionally pack it into zip fileĄŚż$%#",
+      "Code": "New-ConfigurationArtefact -Type ScriptPacked -Enable -Path \"$PSScriptRoot\\Artefacts\\ScriptPacked\" -ArtefactName \"Script-<ModuleName>-$((Get-Date).ToString('yyyy-MM-dd')).zip\""
+    }
+  ]
+}

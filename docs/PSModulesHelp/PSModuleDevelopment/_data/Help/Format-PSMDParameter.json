@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Formats the parameter block on commands.",
+  "Description": "Formats the parameter block on commands.\nThis function will convert legacy functions that have their parameters straight behind their command name.\nIt also fixes missing CmdletBinding attributes.\n\nNested commands will also be affected.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-ChildItem .\\functions\\*\\*.ps1 | Set-PSMDCmdletBinding\r\nUpdates all commands in the module to have a cmdletbinding attribute."
+    }
+  ]
+}

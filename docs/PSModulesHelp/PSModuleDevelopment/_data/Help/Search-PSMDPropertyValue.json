@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Recursively search an object for property values.",
+  "Description": "Recursively search an object for property values.\nThis can be useful to determine just where an object stores a given piece of information in scenarios, where objects either have way too many properties or a deeply nested data structure.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-Mailbox Max.Mustermann | Search-PSMDPropertyValue -Object 'max.mustermann@contoso.com' -Match\r\nSearches all properties on the mailbox of Max Mustermann for his email address."
+    }
+  ]
+}

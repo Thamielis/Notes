@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Publishes a PowerShell module to a repository.",
+  "Description": "Publishes a PowerShell module to a repository. Defaults to PSGallery.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "N/A"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Publish-PSModule -Name 'MyModule' -OutputDirectory \"$PWD/out\" -Repository 'PSGallery'"
+    }
+  ]
+}

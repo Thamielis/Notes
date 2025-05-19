@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Adds cmdletbinding attributes in bulk",
+  "Description": "Searches the specified file(s) for functions that ...\n- Do not have a cmdlet binding attribute\n- Do have a param block\nand inserts a cmdletbinding attribute for them.\n\nWill not change files where functions already have this attribute. Will also update internal functions.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-ChildItem .\\functions\\*\\*.ps1 | Set-PSMDCmdletBinding\r\nUpdates all commands in the module to have a cmdletbinding attribute."
+    }
+  ]
+}

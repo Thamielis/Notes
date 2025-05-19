@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Retrieves module debugging configurations",
+  "Description": "Retrieves a list of all matching module debugging configurations.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-PSMDModuleDebug -Filter *net*\r\nReturns the module debugging configuration for all modules with a name that contains \"net\""
+    }
+  ]
+}

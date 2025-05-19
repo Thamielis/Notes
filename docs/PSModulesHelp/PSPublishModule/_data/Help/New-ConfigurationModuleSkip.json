@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Provides a way to ignore certain commands or modules during build process and continue module building on errors.",
+  "Description": "Provides a way to ignore certain commands or modules during build process and continue module building on errors.\nDuring build if a build module can't find require module or command it will fail the build process to prevent incomplete module from being created.\nThis option allows to skip certain modules or commands and continue building the module.\nThis is useful for commands we know are not available on all systems, or we get them different way.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-ConfigurationModuleSkip -IgnoreFunctionName 'Invoke-Formatter', 'Find-Module' -IgnoreModuleName 'platyPS'"
+    }
+  ]
+}

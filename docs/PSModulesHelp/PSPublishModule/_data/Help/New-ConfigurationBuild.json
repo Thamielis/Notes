@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Allows to configure build process for the module",
+  "Description": "Allows to configure build process for the module",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "$newConfigurationBuildSplat = @{\r\n    Enable                            = $true\r\n    SignModule                        = $true\r\n    MergeModuleOnBuild                = $true\r\n    MergeFunctionsFromApprovedModules = $true\r\n    CertificateThumbprint             = '483292C9E317AA1'\r\n    NETResolveBinaryConflicts            = $true\r\n    NETResolveBinaryConflictsName        = 'Transferetto'\r\n    NETProjectName                    = 'Transferetto'\r\n    NETConfiguration                  = 'Release'\r\n    NETFramework                      = 'netstandard2.0'\r\n    DotSourceLibraries                = $true\r\n    DotSourceClasses                  = $true\r\n    DeleteTargetModuleBeforeBuild     = $true\r\n}\r\nNew-ConfigurationBuild @newConfigurationBuildSplat"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Sets the encoding for the input file.",
+  "Description": "This command reads the input file using the default encoding interpreter.\nIt then writes the contents as the specified enconded string back to itself.\n\nThere is no inherent encoding conversion enacted, so special characters may break.\nThis is a tool designed to reformat code files, where special characters shouldn't be used anyway.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-ChildItem -Recurse | Set-PSMDEncoding\r\nConverts all files in the current folder and subfolders to UTF8"
+    }
+  ]
+}

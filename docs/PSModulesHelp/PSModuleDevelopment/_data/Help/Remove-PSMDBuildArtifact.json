@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Removes an artifact from the build pipeline.",
+  "Description": "Removes an artifact from the build pipeline.\nOnly interacts with the PSModuleDevelopment build system.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-PSMDBuildArtifact -Name 'session'\r\nRemoves the artifact 'session' from the build pipeline."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-PSMDBuildArtifact -Tag pssession | Remove-PSMDBuildArtifact\r\nRemoves all artifacts with the 'pssession' tag from the build pipeline."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Sets the path of the module currently being developed.",
+  "Description": "Sets the path of the module currently being developed.\nThis is used by several utility commands in order to not require any path input.\n\nThis is a wrapper around the psframework configuration system, the same action can be taken by running this command:\nSet-PSFConfig -Module PSModuleDevelopment -Name \"Module.Path\" -Value $Path",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-PSMDModulePath -Path \"C:\\github\\dbatools\"\r\nSets the current module path to \"C:\\github\\dbatools\""
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Set-PSMDModulePath -Path \"C:\\github\\dbatools\" -Register\r\nSets the current module path to \"C:\\github\\dbatools\"\r\nThen stores the setting in registry, causing it to be persisted acros multiple sessions."
+    }
+  ]
+}

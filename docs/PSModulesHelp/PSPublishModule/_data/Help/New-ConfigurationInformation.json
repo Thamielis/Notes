@@ -1,0 +1,33 @@
+{
+  "Synopsis": "\r\nNew-ConfigurationInformation [[-FunctionsToExportFolder] <string>] [[-AliasesToExportFolder] <string>] [[-ExcludeFromPackage] <string[]>] [[-IncludeRoot] <string[]>] [[-IncludePS1] <string[]>] [[-IncludeAll] <string[]>] [[-IncludeCustomCode] <scriptblock>] [[-IncludeToArray] <IDictionary>] [[-LibrariesCore] <string>] [[-LibrariesDefault] <string>] [[-LibrariesStandard] <string>] [<CommonParameters>]\r\n",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None\r\n"
+  ],
+  "Outputs": [
+    "System.Object"
+  ],
+  "Links": [],
+  "Examples": []
+}
