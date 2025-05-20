@@ -2,6 +2,14 @@
 
 ## Scripting/Development
 
+### Knowledge
+
+#### [Skriptentwicklung mit GitHub verwalten](Links/Github%20Workflow.md)
+
+#### [<span style="color:orange;">Declarative DevOps Microframeworks</span>](<Knowledge/PowerShell/01_Development/index.md>)
+
+#### [<span style="color:orange;">Patterns</span>](<Knowledge/PowerShell/Patterns/index.md>)
+
 ### Standard Modules für Development
 
 #### [Configuration](https://github.com/PoshCode/Configuration)
