@@ -3,6 +3,8 @@
 ## [Repo Owners](<Links/PSGHRepoOwners>)
 > Interessante und fortgeschrittene PowerShell DevOps
 
+## [Interessante Module](<Links/PSModules.md>)
+
 ## Scripting/Development
 
 ### Knowledge
