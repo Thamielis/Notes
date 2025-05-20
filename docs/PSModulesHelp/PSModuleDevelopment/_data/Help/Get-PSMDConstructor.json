@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Returns information on the available constructors of a type.",
+  "Description": "Returns information on the available constructors of a type.\nAccepts any object as pipeline input:\n- if it's a type, it will retrieve its constructors.\n- If it's not a type, it will retrieve the constructor from the type of object passed\n\nWill not duplicate constructors if multiple objects of the same type are passed.\nIn order to retrieve the constructor of an array, wrap it into another array.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-ChildItem | Get-PSMDConstructor\r\nScans all objects in the given path, than tries to retrieve the constructor for each kind of object returned\r\n(generally, this will return the constructors for file and folder objects)"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-PSMDConstructor $result\r\nReturns the constructors of objects stored in $result"
+    }
+  ]
+}

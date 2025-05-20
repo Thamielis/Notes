@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Invokes PSScriptAnalyzer on a directory using a more strict set of rules than default.",
+  "Description": "Invokes PSScriptAnalyzer on a directory using a more strict set of rules than default.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "N/A"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Invoke-PSModuleAnalyzer -SourceDirectory $PWD/src -Fix"
+    }
+  ]
+}

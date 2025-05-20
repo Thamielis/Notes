@@ -19,8 +19,8 @@
 
 ## 1. PowerShell
 
-- [KnowledgeBase](PowerShell%20Links.md)
-- [PSModules](PSModules.md)
+- [KnowledgeBase](Links/PowerShell%20Links.md)
+- [PSModules](Links/PSModules.md)
 - [PSCore-Addon](https://github.com/Thamielis/PSCore-Addon)
     > :memo: Adds missing features available in C# but not natively available in PowerShell
 
@@ -57,7 +57,7 @@
 
 ## 3. Veeam
 
-- [Veeam](<Veeam Links.md>)
+- [Veeam](<Links/Veeam Links.md>)
   
 - [Best Practices](<Knowledge/Veeam/Best Practices/index>)
 - [vSphere User Guide](https://helpcenter.veeam.com/docs/backup/vsphere/overview.html?ver=120)
@@ -94,7 +94,7 @@
 
 ## 4. NetApp
 
-- [NetApp](NetApp.md)
+- [NetApp](Links/NetApp.md)
 
 ## 5. RemoteDesktopManager
 

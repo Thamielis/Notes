@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Searches assemblies for types.",
+  "Description": "This function searches the currently imported assemblies for a specific type.\nIt is not inherently limited to public types however, and can search interna just as well.\n\nCan be used to scan for dependencies, to figure out what libraries one needs for a given type and what dependencies exist.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Find-PSMDType -Name \"*String*\"\r\nFinds all types whose name includes the word \"String\"\r\n(This will be quite a few)"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Find-PSMDType -InheritsFrom System.Management.Automation.Runspaces.Runspace\r\nFinds all types that inherit from the Runspace class"
+    }
+  ]
+}

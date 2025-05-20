@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Creates a project/file from a template.",
+  "Description": "This function takes a template and turns it into a finished file&folder structure.\nIt does so by creating the files and folders stored within, replacing all parameters specified with values provided by the user.\n\nMissing parameters will be prompted for.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "PSModuleDevelopment.Template.TemplateResult"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Invoke-PSMDTemplate -TemplateName \"module\"\r\nCreates a project based on the module template in the current folder, asking for all details."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Invoke-PSMDTemplate -TemplateName \"module\" -Name \"MyModule\"\r\nCreates a project based on the module template with the name \"MyModule\""
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Invoke-PSMDTemplate MiniModule -Parameters @{ Author = 'Fred' }\r\nCreates a new project based on the template MiniModule and predefines the value for the \"Author\" placeholder."
+    }
+  ]
+}

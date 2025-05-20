@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Builds a Sapien PowerShell Studio Module Project from a regular module.",
+  "Description": "Builds a Sapien PowerShell Studio Module Project, either a clean one, or imports from a regular module.\nWill ignore all hidden files and folders, will also ignore all files and folders in the root folder that start with a dot (\".\").\n\nImporting from an existing module requires the module to have a valid manifest.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Author:      Friedrich Weinmann\nEditors:     -\nCreated on:  01.03.2017\nLast Change: 01.03.2017\nVersion:     1.0\n\nRelease 1.0 (01.03.2017, Friedrich Weinmann)\n- Initial Release"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-PssModuleProject -Name 'Foo'\r\nCreates a new module project named \"Foo\" in your default project folder."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-PssModuleProject -Name dbatools -SourcePath \"C:\\Github\\dbatools\"\r\nImports the dbatools github repo's local copy into a new PSS module project in your default project folder."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "New-PssModuleProject -name 'Northwind' -SourcePath \"C:\\Github\\Northwind\" -Path \"C:\\Projects\" -Force\r\nWill create a new module project, importing from \"C:\\Github\\Northwind\" and storing it in \"C:\\Projects\". It will overwrite any existing folder named \"Northwind\" in the destination folder."
+    }
+  ]
+}

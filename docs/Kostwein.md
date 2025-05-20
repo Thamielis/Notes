@@ -8,7 +8,7 @@
 
 #### <span style="color:#ff0000">13.05.2025</span>
 
-- [ ] Automatische Mail überprüfen
+- ✅ Automatische Mail überprüfen
 - [ ] PC User im AD deaktivieren.
 - ✅ AD Gruppen für jeden Standort erstellen
 - [ ] In CI-Sign die Zuteilung über diese Gruppen hinzufügen

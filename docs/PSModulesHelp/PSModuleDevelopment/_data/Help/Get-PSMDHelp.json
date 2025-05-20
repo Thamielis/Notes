@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Displays localized information about Windows PowerShell commands and concepts.",
+  "Description": "The Get-PSMDHelp function is a wrapper around get-help that allows localizing help queries.\nThis is especially useful when developing modules with help in multiple languages.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-PSMDHelp Get-Help \"en-us\" -Detailed\r\nGets the detailed help text of Get-Help in English"
+    }
+  ]
+}

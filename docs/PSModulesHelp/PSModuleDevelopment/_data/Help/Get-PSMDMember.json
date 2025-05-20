@@ -1,0 +1,81 @@
+{
+  "Synopsis": "Gets the properties and methods of objects.",
+  "Description": "The `Get-Member` cmdlet gets the members, the properties and methods, of objects.\r\n\r\n\r\nTo specify the object, use the InputObject parameter or pipe an object to `Get-Member`. To get information about static members, the members of the class, not of the instance, use the Static parameter. To get only certain types of members, such as NoteProperties , use the MemberType parameter.\r\n\r\n\r\n`Get-Member` returns a list of members that's sorted alphabetically. Methods are listed first, followed by the properties.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "PowerShell includes the following aliases for `Get-Member`:\r\n",
+    "- All platforms:   - `gm`\r\n",
+    "You can get information about a collection object either using the InputObject parameter or by piping the object, preceded by a comma, to `Get-Member`.\r\n",
+    "You can use the `$This` automatic variable in script blocks that define the values of new properties and methods. The `$This` variable refers to the instance of the object to which the properties and methods are being added. For more information about the `$This` variable, see about_Automatic_Variables (../Microsoft.PowerShell.Core/About/about_Automatic_Variables.md).\r\n",
+    "If you pass an object representing a type , like a type literal such as `[int]`, `Get-Member` return information about the `[System.RuntimeType]` type. However, when you use the Static parameter, `Get-Member` returns the static members of the specific type represented by the `System.RuntimeType` instance."
+  ],
+  "CommandType": "Cmdlet",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.Management.Automation.PSObject"
+  ],
+  "Outputs": [
+    "Microsoft.PowerShell.Commands.MemberDefinition"
+  ],
+  "Links": [
+    "https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/get-member?view=powershell-7.3&WT.mc_id=ps-gethelp",
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "Example 1: Get the members of process objects",
+      "Markdown": "",
+      "Code": "Get-Service | Get-Member\r\n\r\nTypeName: System.Service.ServiceController#StartupType\r\n\r\nName                      MemberType    Definition\r\n----                      ----------    ----------\r\nName                      AliasProperty Name = ServiceName\r\nRequiredServices          AliasProperty RequiredServices = ServicesDependedOn\r\nDisposed                  Event         System.EventHandler Disposed(System.Object, System.EventArgs)\r\nClose                     Method        void Close()\r\nContinue                  Method        void Continue()\r\nDispose                   Method        void Dispose(), void IDisposable.Dispose()\r\nEquals                    Method        bool Equals(System.Object obj)\r\nExecuteCommand            Method        void ExecuteCommand(int command)\r\nGetHashCode               Method        int GetHashCode()\r\nGetLifetimeService        Method        System.Object GetLifetimeService()\r\nGetType                   Method        type GetType()\r\nInitializeLifetimeService Method        System.Object InitializeLifetimeService()\r\nPause                     Method        void Pause()\r\nRefresh                   Method        void Refresh()\r\nStart                     Method        void Start(), void Start(string[] args)\r\nStop                      Method        void Stop()\r\nWaitForStatus             Method        void WaitForStatus(System.ServiceProcess.ServiceControllerSt...\r\nBinaryPathName            Property      System.String {get;set;}\r\nCanPauseAndContinue       Property      bool CanPauseAndContinue {get;}\r\nCanShutdown               Property      bool CanShutdown {get;}\r\nCanStop                   Property      bool CanStop {get;}\r\nContainer                 Property      System.ComponentModel.IContainer Container {get;}\r\nDelayedAutoStart          Property      System.Boolean {get;set;}\r\nDependentServices         Property      System.ServiceProcess.ServiceController[] DependentServices {get;}\r\nDescription               Property      System.String {get;set;}\r\nDisplayName               Property      string DisplayName {get;set;}\r\nMachineName               Property      string MachineName {get;set;}\r\nServiceHandle             Property      System.Runtime.InteropServices.SafeHandle ServiceHandle {get;}\r\nServiceName               Property      string ServiceName {get;set;}\r\nServicesDependedOn        Property      System.ServiceProcess.ServiceController[] ServicesDependedOn {get;}\r\nServiceType               Property      System.ServiceProcess.ServiceType ServiceType {get;}\r\nSite                      Property      System.ComponentModel.ISite Site {get;set;}\r\nStartType                 Property      System.ServiceProcess.ServiceStartMode StartType {get;}\r\nStartupType               Property      Microsoft.PowerShell.Commands.ServiceStartupType {get;set;}\r\nStatus                    Property      System.ServiceProcess.ServiceControllerStatus Status {get;}\r\nUserName                  Property      System.String {get;set;}\r\nToString                  ScriptMethod  System.Object ToString();"
+    },
+    {
+      "Title": "Example 2: Get members of service objects",
+      "Markdown": "",
+      "Code": "Get-Service | Get-Member -Force\r\n(Get-Service Schedule).PSBase\r\nThe `Get-Member` command uses the Force parameter to add the intrinsic members and compiler-generated members of the objects to the display. You can use these properties and methods in the same way that you would use an adapted method of the object. The second command shows how to display the value of the PSBase property of the Schedule service. For more information on intrinsic members, see about_Intrinsic_Members (../Microsoft.PowerShell.Core/About/about_Intrinsic_Members.md)"
+    },
+    {
+      "Title": "Example 3: Get extended members of service objects",
+      "Markdown": "",
+      "Code": "Get-Service | Get-Member -View Extended\r\n\r\nTypeName: System.Service.ServiceController#StartupType\r\n\r\nName             MemberType    Definition\r\n----             ----------    ----------\r\nName             AliasProperty Name = ServiceName\r\nRequiredServices AliasProperty RequiredServices = ServicesDependedOn\r\nToString         ScriptMethod  System.Object ToString();\r\nThe `Get-Member` command uses the View parameter to get only the extended members of the service objects. In this case, the extended member is the Name property, which is an alias property of the ServiceName property."
+    },
+    {
+      "Title": "Example 4: Get script properties of event log objects",
+      "Markdown": "",
+      "Code": "Get-WinEvent -LogName System -MaxEvents 1 | Get-Member -MemberType NoteProperty\r\n\r\nTypeName: System.Diagnostics.Eventing.Reader.EventLogRecord\r\n\r\nName    MemberType   Definition\r\n----    ----------   ----------\r\nMessage NoteProperty string Message=The machine-default permission settings do not grant Local ...\r\nThe MemberType parameter gets only objects with a value of `NoteProperty` for their MemberType property.\r\n\r\nThe command returns the Message property of the EventLogRecord object."
+    },
+    {
+      "Title": "Example 5: Get objects with a specified property",
+      "Markdown": "",
+      "Code": "$list = \"Get-Process\", \"Get-Service\", \"Get-Culture\", \"Get-PSDrive\", \"Get-ExecutionPolicy\"\r\nforeach ($cmdlet in $list) {& $cmdlet | Get-Member -Name MachineName}\r\n\r\nTypeName: System.Diagnostics.Process\r\n\r\nName        MemberType Definition\r\n----        ---------- ----------\r\nMachineName Property   string MachineName {get;}\r\n\r\n   TypeName: System.Service.ServiceController#StartupType\r\n\r\nName        MemberType Definition\r\n----        ---------- ----------\r\nMachineName Property   string MachineName {get;set;}\r\nThe results show that only process objects and service objects have a MachineName property."
+    },
+    {
+      "Title": "Example 6: Get members for an array",
+      "Markdown": "",
+      "Code": "$array = @(1,'hello')\r\n$array | Get-Member\r\n\r\nTypeName: System.Int32\r\n\r\nName        MemberType Definition\r\n----        ---------- ----------\r\nCompareTo   Method     int CompareTo(System.Object value), int CompareTo(int value), int ICompar...\r\nEquals      Method     bool Equals(System.Object obj), bool Equals(int obj), bool IEquatable[int...\r\nGetHashCode Method     int GetHashCode()\r\nGetType     Method     type GetType()\r\nGetTypeCode Method     System.TypeCode GetTypeCode(), System.TypeCode IConvertible.GetTypeCode()\r\nToBoolean   Method     bool IConvertible.ToBoolean(System.IFormatProvider provider)\r\nToByte      Method     byte IConvertible.ToByte(System.IFormatProvider provider)\r\n...\r\n\r\n   TypeName: System.String\r\n\r\nName                 MemberType            Definition\r\n----                 ----------            ----------\r\nClone                Method                System.Object Clone(), System.Object ICloneable.Clone()\r\nCompareTo            Method                int CompareTo(System.Object value), int CompareTo(str...\r\nContains             Method                bool Contains(string value), bool Contains(string val...\r\nCopyTo               Method                void CopyTo(int sourceIndex, char[] destination, int ...\r\nEndsWith             Method                bool EndsWith(string value), bool EndsWith(string val...\r\nEnumerateRunes       Method                System.Text.StringRuneEnumerator EnumerateRunes()\r\nEquals               Method                bool Equals(System.Object obj), bool Equals(string va...\r\nGetEnumerator        Method                System.CharEnumerator GetEnumerator(), System.Collect...\r\nGetHashCode          Method                int GetHashCode(), int GetHashCode(System.StringCompa...\r\n...\r\n\r\nGet-Member -InputObject $array\r\n\r\nTypeName: System.Object[]\r\n\r\nName           MemberType            Definition\r\n----           ----------            ----------\r\nAdd            Method                int IList.Add(System.Object value)\r\nAddress        Method                System.Object&, System.Private.CoreLib, Version=4.0.0.0, Cu...\r\nClear          Method                void IList.Clear()\r\nClone          Method                System.Object Clone(), System.Object ICloneable.Clone()\r\nCompareTo      Method                int IStructuralComparable.CompareTo(System.Object other, Sy...\r\n...\r\nThe `$array` variable contains an Int32 object and a string object, as seen when the array is piped to `Get-Member`. When `$array` is passed using the InputObject parameter `Get-Member` returns the members of the Object[] type."
+    },
+    {
+      "Title": "Example 7: Determine which object properties you can set",
+      "Markdown": "",
+      "Code": "$File = Get-Item c:\\test\\textFile.txt\r\n$File.PSObject.Properties | Where-Object isSettable | Select-Object -Property Name\r\n\r\nName\r\n----\r\nPSPath\r\nPSParentPath\r\nPSChildName\r\nPSDrive\r\nPSProvider\r\nPSIsContainer\r\nIsReadOnly\r\nCreationTime\r\nCreationTimeUtc\r\nLastAccessTime\r\nLastAccessTimeUtc\r\nLastWriteTime\r\nLastWriteTimeUtc\r\nAttributes"
+    },
+    {
+      "Title": "Example 8: List the properties of an object in the order they were created",
+      "Markdown": "",
+      "Code": "$Asset = New-Object -TypeName PSObject\r\n$d = [ordered]@{Name=\"Server30\";System=\"Server Core\";PSVersion=\"4.0\"}\r\n$Asset | Add-Member -NotePropertyMembers $d -TypeName Asset\r\n$Asset.PSObject.Properties | Select-Object Name, Value\r\n\r\nName      Value\r\n----      -----\r\nName      Server30\r\nSystem    Server Core\r\nPSVersion 4.0"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Resolves and consolidates the overall parameters of a given step.",
+  "Description": "Resolves and consolidates the overall parameters of a given step.\nThis ensures that individual actions do not have to implement manual resolution and complex conditionals.\nSources of parameters:\n- Explicitly defined parameter in the step\n- Value from Artifacts\n- Value from Configuration (only if not otherwise sourced)\n- Value from implicit artifact resolution: Any value that is formatted like this:\n  \"%!NameOfArtifact!%\" will be replaced with the value of the artifact of the same name.\n  This supports wildcard resolution, so \"%!Session.*!%\" will resolve to all artifacts with a name starting with \"Session.\"\n\nConfiguration-driven parameters follow this name scheme:\n\"PSModuleDevelopment.BuildParam.<project>.<step>.<parameterName>\"\n\nFor example:\n\"PSModuleDevelopment.BuildParam.Admf.connect.credential\"",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Collections.Hashtable"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Resolve-PSMDBuildStepParameter -Parameters $actualParameters -ProjectName VMDeployment -StepName 'Create Session'\r\nAdds parameters provided through configuration."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Sets the content of a CBH parameter help.",
+  "Description": "Sets the content of a CBH parameter help.\nThis command will enumerate all files in the specified folder and subfolders.\nThen scan all files with extension .ps1 and .psm1.\nIn each of these files it will check out function definitions, see whether the name matches, then update the help for the specified parameter if present.\n\nIn order for this to work, a few rules must be respected:\n- It will not work with help XML, only with CBH xml\n- It will not work if the help block is above the function. It must be placed within.\n- It will not ADD a CBH, if none is present yet. If there is no help for the specified parameter, it will simply do nothing, but report the fact.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-PSMDParameterHelp -Path \"C:\\PowerShell\\Projects\\MyModule\" -CommandName \"*\" -ParameterName \"Foo\" -HelpText @\"\r\nThis is some foo text\r\nFor a truly foo-some result\r\n\"@\r\nScans all files in the specified path.\r\n- Considers every function found\r\n- Will only process the parameter 'Foo'\r\n- And replace the current text with the one specified"
+    }
+  ]
+}

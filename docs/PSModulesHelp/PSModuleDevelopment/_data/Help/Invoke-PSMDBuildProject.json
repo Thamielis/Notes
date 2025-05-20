@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Execute a build project.",
+  "Description": "Execute a build project.\nA build project is a configured chain of actions that have been configured in json.\nThey will be processed in their specified order and allow manageable, configurable steps without having to reinvent the same action again and again.\n\n+ Individual action types become available using Register-PSMDBuildAction.\n+ Create new build projects using New-PSMDBuildProject\n+ Set up steps taken during a build using Set-PSMDBuildStep\n+ Select the default build project using Select-PSMDBuildProject",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Invoke-PSMDBuildProject -Path .\\VMDeployment.build.Json\r\nExecute the build file \"VMDeployment.build.json\" from the current folder"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "build\r\nExecute the default build project."
+    }
+  ]
+}

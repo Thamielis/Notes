@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Returns the full name of the input object's type, as well as the name of the types it inherits from, recursively until System.Object.",
+  "Description": "Returns the full name of the input object's type, as well as the name of the types it inherits from, recursively until System.Object.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Expand-PSMDTypeName -InputObject \"test\"\r\nReturns the typenames for the string test (\"System.String\" and \"System.Object\")"
+    }
+  ]
+}

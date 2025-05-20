@@ -1,0 +1,49 @@
+{
+  "Synopsis": "Configures how modules are handled during import of this module.",
+  "Description": "This module allows specifying other modules to import during import of this module.\nUsing the Set-PSMDModuleDebug function it is possible to configure, which module is automatically imported, without having to edit the profile each time.\nThis import occurs at the end of importing this module, thus setting this module in the profile as automatically imported is recommended.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-PSMDModuleDebug -Name 'cPSNetwork' -AutoImport\r\nConfigures the module cPSNetwork to automatically import after importing PSModuleDevelopment"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Set-PSMDModuleDebug -Name 'cPSNetwork' -AutoImport -DebugMode\r\nConfigures the module cPSNetwork to automatically import after importing PSModuleDevelopment using debug mode."
+    },
+    {
+      "Title": "EXAMPLE 3",
+      "Markdown": "",
+      "Code": "Set-PSMDModuleDebug -Name 'cPSNetwork' -AutoImport -DebugMode -PreImportAction { Write-Host \"Was done before importing\" } -PostImportAction { Write-Host \"Was done after importing\" }\r\nConfigures the module cPSNetwork to automatically import after importing PSModuleDevelopment using debug mode.\r\n- Running a scriptblock before import\r\n- Running another scriptblock after import\r\n\r\nNote: Using Write-Host is generally - but not always - bad practice\r\nNote: Verbose output during module import is generally discouraged (doesn't apply to tests of course)"
+    }
+  ]
+}

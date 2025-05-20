@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Packages a script with all dependencies and \"publishes\" it as a zip package.",
+  "Description": "Packages a script with all dependencies and \"publishes\" it as a zip package.\nBy default, it will be published to the user's desktop.\nAll modules it uses will be parsed from the script:\n- Commands that cannot be resolved will trigger a warning.\n- Modules that are installed in the Windows folder (such as the ActiveDirectory module or other modules associated with server roles) will be ignored.\n- PSSnapins will be ignored\n- All other modules determined by the commands used will be provided from a repository, packaged in a subfolder and included in the zip file.\n\nIf needed, the scriptfile will be modified to add the new modules folder to its list of known folders.\n(The source file itself will never be modified)\n\nUse Set-PSMDStagingRepository to create / use a local path for staging modules to provide that way.\nThis gives you better control over the versions used and better performance.\nAlso the ability to use this with non-public modules.\nUse Publish-PSMDStagedModule to transfer modules from path or another repository into your registered staging repository.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Publish-PSMDScriptFile -Path 'C:\\scripts\\logrotate.ps1'\r\nCreates a delivery package for the logrotate.ps1 scriptfile and places it on the desktop"
+    }
+  ]
+}

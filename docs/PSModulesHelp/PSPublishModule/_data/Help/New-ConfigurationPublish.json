@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Provide a way to configure publishing to PowerShell Gallery or GitHub",
+  "Description": "Provide a way to configure publishing to PowerShell Gallery or GitHub\nYou can configure publishing to both at the same time\nYou can publish to multiple PowerShellGalleries at the same time as well\nYou can have multiple GitHub configurations at the same time as well",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-ConfigurationPublish -Type PowerShellGallery -FilePath 'C:\\Support\\Important\\PowerShellGalleryAPI.txt' -Enabled:$true"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-ConfigurationPublish -Type GitHub -FilePath 'C:\\Support\\Important\\GitHubAPI.txt' -UserName 'EvotecIT' -Enabled:$true -ID 'ToGitHub'"
+    }
+  ]
+}

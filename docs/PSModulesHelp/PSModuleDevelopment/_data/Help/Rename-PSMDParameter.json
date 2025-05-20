@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Renames a parameter of a function.",
+  "Description": "This command is designed to rename the parameter of a function within an entire module.\nBy default it will add an alias for the previous command name.\n\nIn order for this to work you need to consider to have the command / module imported.\nHint: Import the psm1 file for best results.\n\nIt will then search all files in the specified path (hint: Specify module root for best results), and update all psm1/ps1 files.\nAt the same time it will force all commands to call the parameter by its new standard, even if they previously used an alias for the parameter.\n\nWhile this command was designed to work with a module, it is not restricted to that:\nYou can load a standalone function and specify a path with loose script files for the same effect.\n\nNote:\nYou can also use this to update your scripts, after a foreign module introduced a breaking change by renaming a parameter.\nIn this case, import the foreign module to see the function, but point it at the base path of your scripts to update.\nThe loaded function is only used for alias/parameter alias resolution",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Rename-PSMDParameter -Path 'C:\\Scripts\\Modules\\MyModule' -Command 'Get-Test' -Name 'Foo' -NewName 'Bar'\r\nRenames the parameter 'Foo' of the command 'Get-Test' to 'Bar' for all scripts stored in 'C:\\Scripts\\Modules\\MyModule'"
+    }
+  ]
+}

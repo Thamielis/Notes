@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Test a PowerShell script for cmdlets",
+  "Description": "This command will analyze a PowerShell script file and display a list of detected commands such as PowerShell cmdlets and functions. Commands will be compared to what is installed locally. It is recommended you run this on a Windows 8.1 client with the latest version of RSAT installed. Unknown commands could also be internally defined functions. If in doubt view the contents of the script file in the PowerShell ISE or a script editor.\nYou can test any .ps1, .psm1 or .txt file.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Original script provided by Jeff Hicks at (https://www.petri.com/powershell-problem-solver-find-script-commands) and https://twitter.com/donnie_taylor/status/1160920407031058432"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "test-scriptfile C:\\scripts\\Remove-MyVM2.ps1\r\nCommandType Name                                   ModuleName\r\n----------- ----                                   ----------\r\n    Cmdlet Disable-VMEventing                      Hyper-V\r\n    Cmdlet ForEach-Object                          Microsoft.PowerShell.Core\r\n    Cmdlet Get-VHD                                 Hyper-V\r\n    Cmdlet Get-VMSnapshot                          Hyper-V\r\n    Cmdlet Invoke-Command                          Microsoft.PowerShell.Core\r\n    Cmdlet New-PSSession                           Microsoft.PowerShell.Core\r\n    Cmdlet Out-Null                                Microsoft.PowerShell.Core\r\n    Cmdlet Out-String                              Microsoft.PowerShell.Utility\r\n    Cmdlet Remove-Item                             Microsoft.PowerShell.Management\r\n    Cmdlet Remove-PSSession                        Microsoft.PowerShell.Core\r\n    Cmdlet Remove-VM                               Hyper-V\r\n    Cmdlet Remove-VMSnapshot                       Hyper-V\r\n    Cmdlet Write-Debug                             Microsoft.PowerShell.Utility\r\n    Cmdlet Write-Verbose                           Microsoft.PowerShell.Utility\r\n    Cmdlet Write-Warning                           Microsoft.PowerShell.Utility"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Test-ScriptFile -Path 'C:\\Users\\przemyslaw.klys\\Documents\\WindowsPowerShell\\Modules\\PSWinReportingV2\\PSWinReportingV2.psm1' | Sort-Object -Property Source, Name | ft -AutoSize"
+    }
+  ]
+}

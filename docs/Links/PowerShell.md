@@ -1,6 +1,24 @@
 # PowerShell
 
+## [Repo Owners](<Links/PSGHRepoOwners>)
+> Interessante und fortgeschrittene PowerShell DevOps
+
+## [Interessante Module](<Links/PSModules.md>)
+
 ## Scripting/Development
+
+### Knowledge
+
+#### [Skriptentwicklung mit GitHub verwalten](Links/Github%20Workflow.md)
+
+#### [<span style="color:orange;">Declarative DevOps Microframeworks</span>](<Knowledge/PowerShell/01_Development/index.md>)
+
+#### [<span style="color:orange;">Patterns</span>](<Knowledge/PowerShell/Patterns/index.md>)
+
+### Templates
+
+#### [Press](https://github.com/JustinGrote/Press)
+> A continuous developement environment for Powershell Modules either via local development or leveraging GitHub and Github Actions
 
 ### Standard Modules für Development
 
@@ -43,6 +61,12 @@
 
 ##### [PoshEmail](https://github.com/natescherer/PoshEmail)
 > A PowerShell module for sending responsive HTML email.
+
+##### [Build-Docs](https://github.com/cdhunt/Build-Docs)
+> Helper for building markdown docs from PowerShell Command Help
+
+##### [PowerShellProject](https://github.com/wbrandenburger/PowerShellProject/tree/master)
+> Empty powershell project structure for command line tools, with a lot of general functionality.
 
 ---
 

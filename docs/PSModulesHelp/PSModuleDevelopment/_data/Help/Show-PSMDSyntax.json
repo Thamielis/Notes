@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Validate or show parameter set details with colored output",
+  "Description": "Analyze a function and it's parameters\n\nThe cmdlet / function is capable of validating a string input with function name and parameters",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Author: Mötz Jensen (@Splaxi)\nTwitter: https://twitter.com/splaxi\nOriginal github project: https://github.com/d365collaborative/d365fo.tools"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Show-PSMDSyntax -CommandText \"New-Item -Path 'c:\\temp\\newfile.txt'\"\r\nThis will validate all the parameters that have been passed to the Import-D365Bacpac cmdlet.\r\nAll supplied parameters that matches a parameter will be marked with an asterisk."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Show-PSMDSyntax -CommandText \"New-Item\" -Mode \"ShowParameters\"\r\nThis will display all the parameter sets and their individual parameters."
+    }
+  ]
+}

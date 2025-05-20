@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Command helping define custom placeholders replacing content within a script or module during the build process.",
+  "Description": "Command helping define custom placeholders replacing content within a script or module during the build process.\nIt modifies only the content of the script or module (PSM1) and does not modify the sources.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "General notes"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-ConfigurationPlaceHolder -Find '{CustomName}' -Replace 'SpecialCase'"
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "New-ConfigurationPlaceHolder -CustomReplacement @(\r\n    @{ Find = '{CustomName}'; Replace = 'SpecialCase' }\r\n    @{ Find = '{CustomVersion}'; Replace = '1.0.0' }\r\n)"
+    }
+  ]
+}

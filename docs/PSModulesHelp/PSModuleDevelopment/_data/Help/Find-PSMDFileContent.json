@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Used to quickly search in module files.",
+  "Description": "This function can be used to quickly search files in your module's path.\nBy using Set-PSMDModulePath (or Set-PSFConfig 'PSModuleDevelopment.Module.Path' '<path>') you can set the default path to search in.\nUsing\n  Register-PSFConfig -FullName 'PSModuleDevelopment.Module.Path'\nallows you to persist this setting across sessions.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Find-PSMDFileContent -Pattern 'Get-Test'\r\nSearches all module files for the string 'Get-Test'."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a nuget package from a PowerShell module.",
+  "Description": "This function will take a module and wrap it into a nuget package.\nThis is accomplished by creating a temporary local filesystem repository and using the PowerShellGet module to do the actual writing.\n\nNote:\n- Requires PowerShellGet module\n- Dependencies must be built first to the same folder",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Author: Mark Wilkinson\nEditor: Friedrich Weinmann"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-PSMDModuleNugetPackage -PackagePath 'c:\\temp\\package' -ModulePath .\\DBOps\r\nPackages the module stored in .\\DBOps and stores the nuget file in 'c:\\temp\\package'"
+    }
+  ]
+}

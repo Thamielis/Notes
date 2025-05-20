@@ -1,0 +1,33 @@
+{
+  "Synopsis": "\r\nNew-ConfigurationFormat [-ApplyTo] <string[]> [[-Sort] <string>] [[-UseConsistentIndentationKind] <string>] [[-UseConsistentIndentationPipelineIndentation] <string>] [[-UseConsistentIndentationIndentationSize] <int>] [[-PSD1Style] <string>] [-EnableFormatting] [-RemoveComments] [-RemoveEmptyLines] [-RemoveAllEmptyLines] [-RemoveCommentsInParamBlock] [-RemoveCommentsBeforeParamBlock] [-PlaceOpenBraceEnable] [-PlaceOpenBraceOnSameLine] [-PlaceOpenBraceNewLineAfter] [-PlaceOpenBraceIgnoreOneLineBlock] [-PlaceCloseBraceEnable] [-PlaceCloseBraceNewLineAfter] [-PlaceCloseBraceIgnoreOneLineBlock] [-PlaceCloseBraceNoEmptyLineBefore] [-UseConsistentIndentationEnable] [-UseConsistentWhitespaceEnable] [-UseConsistentWhitespaceCheckInnerBrace] [-UseConsistentWhitespaceCheckOpenBrace] [-UseConsistentWhitespaceCheckOpenParen] [-UseConsistentWhitespaceCheckOperator] [-UseConsistentWhitespaceCheckPipe] [-UseConsistentWhitespaceCheckSeparator] [-AlignAssignmentStatementEnable] [-AlignAssignmentStatementCheckHashtable] [-UseCorrectCasingEnable] [<CommonParameters>]\r\n",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None\r\n"
+  ],
+  "Outputs": [
+    "System.Object"
+  ],
+  "Links": [],
+  "Examples": []
+}

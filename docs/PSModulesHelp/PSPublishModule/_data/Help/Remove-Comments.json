@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Remove comments from PowerShell file",
+  "Description": "Remove comments from PowerShell file and optionally remove empty lines\nBy default comments in param block are not removed\nBy default comments before param block are not removed",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Most of the work done by Chris Dent, with improvements by Przemyslaw Klys"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Remove-Comments -SourceFilePath 'C:\\Support\\GitHub\\PSPublishModule\\Examples\\TestScript.ps1' -DestinationFilePath 'C:\\Support\\GitHub\\PSPublishModule\\Examples\\TestScript1.ps1' -RemoveAllEmptyLines -RemoveCommentsInParamBlock -RemoveCommentsBeforeParamBlock"
+    }
+  ]
+}
