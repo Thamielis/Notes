@@ -1,36 +1,34 @@
 Hello All, My name is Vishal Goyel, and this is my first post on this blog. I worked as a Microsoft support engineer specializing in SCCM Task Sequence and OSD for several years.
 
 In this post, you will learn a step-by-step description of the S**CCM OSD Task Sequence Troubleshooting Step-by-Step Ultimate Guide with SMSTS.log**
-
 The OSD is ConfigMgr’s (SCCM) most widely used feature**.** When troubleshooting OSD-related issues, only one file, **SMSTS.log,** can help.
-
 However, the SMSTS.log file contains a lot of **redundant** information. Learning to read SMSTS.log is very important for **troubleshooting** OSD-related problems.
 
-| Index |
-| --- |
-| [Following are the Main Outputs that you will get out of this Ultimate Guide][1] |
-| [Basic SCCM OSD Task Sequence Structure][2] |
-| [WinPE & PXE Boot Stage – SCCM OSD Task Sequence][3] |
-| [Download Variable Files][4] |
-| [NIC Card is Initialized – SCCM MP Communication][5] |
-| [Time Zone Update][6] |
-| [Connects with SCCM MP][7] |
-| [Retrieving Policy Assignment from SCCM MP][8] |
-| [List of Available SCCM OSD Task Sequence][9] |
-| [Policy Download & Resolving Dependencies][10] |
-| [Download SCCM OSD Task Sequence Content][11] |
-| [Launch TSManager.EXE][12] |
-| [OSD Diskpart][13] |
-| [Apply the Operating System Image][14] |
-| [Download OS WIM File][15] |
-| [Wipes Primary Partition][16] |
-| [Additional Windows Configurations][17] |
-| [Apply Network Settings][18] |
-| [Unattend.XML Injection][19] |
-| [Windows and SCCM Client Setup][20] |
-| [Reboot to Come Out of WinPE][21] |
-| [Conclusion SCCM OSD Task Sequence][22] |
-| [Bonus Tip][23] |
+- [**Following are the Main Outputs that you will get out of this Ultimate Guide**](#following-are-the-main-outputs-that-you-will-get-out-of-this-ultimate-guide)
+- [**Basic SCCM OSD Task Sequence Structure**](#basic-sccm-osd-task-sequence-structure)
+- [**WinPE \& PXE Boot Stage – SCCM OSD Task Sequence**](#winpe--pxe-boot-stage--sccm-osd-task-sequence)
+- [**Download Variable Files**](#download-variable-files)
+- [**NIC Card is Initialized** – **SCCM MP Communication**](#nic-card-is-initialized--sccm-mp-communication)
+- [**Time Zone Update**](#time-zone-update)
+- [**Connects with SCCM MP**](#connects-with-sccm-mp)
+- [**Retrieving Policy Assignment from SCCM MP**](#retrieving-policy-assignment-from-sccm-mp)
+- [**List of Available SCCM OSD Task Sequence**](#list-of-available-sccm-osd-task-sequence)
+- [**Policy Download \& Resolving Dependencies**](#policy-download--resolving-dependencies)
+- [**Download SCCM OSD Task Sequence Content**](#download-sccm-osd-task-sequence-content)
+- [**Launch TSManager.EXE**](#launch-tsmanagerexe)
+- [**OSD Diskpart**](#osd-diskpart)
+- [**Apply the Operating System Image**](#apply-the-operating-system-image)
+- [**Download OS WIM File**](#download-os-wim-file)
+- [**Wipes Primary Partition**](#wipes-primary-partition)
+- [**Additional Windows Configurations**](#additional-windows-configurations)
+- [**Apply Network Settings**](#apply-network-settings)
+- [**Unattend.XML Injection**](#unattendxml-injection)
+- [**Windows and SCCM Client Setup**](#windows-and-sccm-client-setup)
+- [**Reboot to Come Out of WinPE**](#reboot-to-come-out-of-winpe)
+- [**Conclusion SCCM OSD Task Sequence**](#conclusion-sccm-osd-task-sequence)
+- [**Bonus Tip**](#bonus-tip)
+- [**Resources**](#resources)
+- [**Author**](#author)
 
 SCCM OSD Task Sequence Troubleshooting Step-by-Step Ultimate Guide with SMSTS.log – Table.1
 
