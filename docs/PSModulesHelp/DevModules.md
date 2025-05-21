@@ -3,18 +3,18 @@
 ## ChangeLogManagement
 
 <details>
-<summary>ChangelogManagement is a PowerShell module for reading and manipulating changelog files in [Keep a Changelog 1.0.0](https://keepachangelog.com/en/1.0.0/) format.
-
+<summary>
+ChangelogManagement is a PowerShell module for reading and manipulating changelog files in [Keep a Changelog 1.0.0](https://keepachangelog.com/en/1.0.0/) format.
+</summary>
 The primary feature is automatic updating of changelogs at release time in a CI/CD workflow via Update-Changelog.
 
 Other features include:
-
-- Creating new changelog files via New-Changelog
-- Adding data to changelog files via Add-ChangelogData
-- Getting changelog contents (parsed into a PowerShell object) via Get-ChangelogData
-- Converting changelogs into other formats via ConvertFrom-Changelog
-</summary>
-
+>
+> - Creating new changelog files via New-Changelog
+> - Adding data to changelog files via Add-ChangelogData
+> - Getting changelog contents (parsed into a PowerShell object) via Get-ChangelogData
+> - Converting changelogs into other formats via ConvertFrom-Changelog
+> 
 - [Add-ChangelogData](<PSModulesHelp/ChangeLogManagement/Add-ChangelogData.md>)
 - [ConvertFrom-Changelog](<PSModulesHelp/ChangeLogManagement/ConvertFrom-Changelog.md>)
 - [Get-ChangelogData](<PSModulesHelp/ChangeLogManagement/Get-ChangelogData.md>)
