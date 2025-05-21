@@ -26,8 +26,8 @@ $dirs = $files | Select-Object -ExpandProperty Directory | Select-Object -Unique
 
 foreach ($dir in $dirs) {
     $DocsifyPath = Split-Path -Path $ScriptPath -Parent
-    $DocsifyRelativePath = [System.IO.Path]::GetRelativePath($DocsifyPath, $dir.FullName)
-    $RelativePath = [System.IO.Path]::GetRelativePath($ScriptPath, $dir.FullName)
+    $DocsifyRelativePath = [System.IO.Path]::GetRelativePath($DocsifyPath, $dir.FullName) -replace('\\', '/')
+    #$RelativePath = [System.IO.Path]::GetRelativePath($ScriptPath, $dir.FullName)
 
     $toc += "`n## $($dir.Name)`n"
     $markdown += "`n"
