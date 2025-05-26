@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Return a markdown formatted value for the given property.",
+  "Description": "Return the value for the given property optionally formatted as a Header.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "If no Header switch is provided, the default is no formatting."
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-HelpModuleData build-docs | New-HelpDoc | Add-ModuleProperty -Property Name -H1\r\nName                           Value\r\n----                           -----\r\nText                           # build-docs…\r\nPSTypeName                     HelpModuleReadme\r\nHelpModuleData                 @{Name=build-docs; Commands=System.Object[]; Author=System.Object[]; Description=System.Object[]; …"
+    }
+  ]
+}

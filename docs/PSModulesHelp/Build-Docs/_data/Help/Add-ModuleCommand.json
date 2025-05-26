@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Generate a Markdown list of the commands in the module and their summary.",
+  "Description": "Generate a Markdown list of the commands in the module and optionally format as links.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-HelpModuleData build-docs | New-HelpDoc | Add-ModuleCommand -AsLinks | select -exp Text\r\n- [Add-HelpDocText](Add-HelpDocText.md) _Return a markdown formatted text._\r\n- [Add-ModuleCommand](Add-ModuleCommand.md) _Generate a Markdown list of the commands in the module._\r\n- [Add-ModuleProperty](Add-ModuleProperty.md) _Return a markdown formatted value for the given property._\r\n…\r\nGenerate a list of commands with links to the commands' help documents."
+    }
+  ]
+}

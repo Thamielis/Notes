@@ -1,0 +1,33 @@
+{
+  "Synopsis": "Reduces a pipeline with the given reducer function",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Reduce is an unapproved Verb, but none of the approved verbs accurately describe what we're doing,\nso we are conforming to Verb-Noun convention like other *-Object cmdlets instead"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "The accumulated value"
+  ],
+  "Links": [],
+  "Examples": []
+}

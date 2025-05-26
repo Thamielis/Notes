@@ -1,0 +1,42 @@
+{
+  "Synopsis": "Returns an empty HelpModuleReadme object.",
+  "Description": "Returns an empty HelpModuleReadme object that is the object representation of your documentation.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "HelpModuleReadme"
+  ],
+  "Links": [
+    null,
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-HelpModuleData build-docs | New-HelpDoc\r\nName                           Value\r\n----                           -----\r\nText\r\nPSTypeName                     HelpModuleReadme\r\nHelpModuleData                 @{Name=build-docs; Commands=System.Object[]; Author=System.Object[]; Description=System.Object[];"
+    }
+  ]
+}
