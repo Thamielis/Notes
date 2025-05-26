@@ -1,0 +1,41 @@
+{
+  "Synopsis": "A short one-line action-based description, e.g. 'Tests if a function is valid'",
+  "Description": "A longer description of the function, its purpose, common use cases, etc.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    "Information or caveats about the function e.g. 'This function is not supported in Linux'"
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Test-MyTestFunction -Verbose\r\nExplanation of the function or its result. You can include multiple examples with additional .EXAMPLE lines"
+    }
+  ]
+}

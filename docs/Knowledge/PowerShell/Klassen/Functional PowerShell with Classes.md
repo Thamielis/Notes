@@ -5,7 +5,7 @@ source: https://freedium.cfd/https://medium.com/@cjkuech/functional-powershell-w
 author: 
 ---
 
-# Functional PowerShell with Classes | by Christopher Kuech | in FAUN — Developer Community 🐾 - Freedium
+# Functional PowerShell with Classes
 
 ---
 Object-Oriented Programming and [Functional Programming](https://medium.com/@cjkuech/functional-programming-in-powershell-876edde1aadb) paradigms may seem at odds with each other, but they are really just two language paradigms supported by PowerShell. Virtually all programming languages, functional or otherwise, have a means of extensibly binding names to values; Classes, like `struct`s or `record`s, are simply one approach to doing so. As long as we restrict our usage of Classes primarily to binding names and values and avoid heavy object-oriented programming concepts like inheritance, polymorphism, or mutability, we can leverage Classes without complicating our code. Further, by adding immutable type conversion methods, we can elevate our functional code with Classes.

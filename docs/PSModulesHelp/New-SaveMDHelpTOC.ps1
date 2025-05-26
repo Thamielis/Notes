@@ -1,3 +1,19 @@
+<#
+    File         : New-SaveMDHelpTOC.ps1                                       #
+    Project      : PSModulesHelp                                               #
+    Created Date : Tue May 13 2025                                             #
+    Author       : Mario Mellunig                                              #
+    -------------------------------                                            #
+    Last Modified: Wed May 21 2025                                             #
+    Modified By  : Mario Mellunig                                              #
+    -------------------------------                                            #
+    Copyright (c) 2025 Kostwein Maschinenbau GmbH                              #
+    -------------------------------                                            #
+    HISTORY:                                                                   #
+    Date      	By	Comments                                                   #
+    ----------	---	---------------------------------------------------------  #
+#>
+
 [string]$ScriptPath = [System.IO.Path]::GetDirectoryName($MyInvocation.MyCommand.Definition)
 
 $dir = $ScriptPath
@@ -9,8 +25,9 @@ $markdown += "# Modul Dokumentationen`n`n"
 $dirs = $files | Select-Object -ExpandProperty Directory | Select-Object -Unique
 
 foreach ($dir in $dirs) {
-
-    $RelativePath = [System.IO.Path]::GetRelativePath($ScriptPath, $dir.FullName)
+    $DocsifyPath = Split-Path -Path $ScriptPath -Parent
+    $DocsifyRelativePath = [System.IO.Path]::GetRelativePath($DocsifyPath, $dir.FullName) -replace('\\', '/')
+    #$RelativePath = [System.IO.Path]::GetRelativePath($ScriptPath, $dir.FullName)
 
     $toc += "`n## $($dir.Name)`n"
     $markdown += "`n"
@@ -45,7 +62,9 @@ foreach ($dir in $dirs) {
         $toc += "- [$($file.BaseName)]($($file.Directory.Name)/$($file.Name))`n"
         #$markdown += New-MDLink -Text $file.BaseName -Link $($RelativePath/$file.Name)
         
-        $markdown += "- [$($file.BaseName)](<$($RelativePath)/$($file.Name)>)`n"
+        #$markdown += "- [$($file.BaseName)](<$($RelativePath)/$($file.Name)>)`n"
+        $markdown += "- [$($file.BaseName)](<$($DocsifyRelativePath)/$($file.Name)>)`n"
+        
     }
     
     $markdown += "</details>`n"

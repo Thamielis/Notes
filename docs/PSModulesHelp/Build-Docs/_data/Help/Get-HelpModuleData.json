@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Returns an object representation of the help available for the given module.",
+  "Description": "Returns an object representation of the help available for the given module. This includes the help for each command in the module.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-HelpModuleData build-docs\r\nName            : build-docs\r\nCommands        : {@{Name=Add-HelpDocText; Synopsis=\r\n                Add-HelpDocText [-Text] <string> [-HelpDoc] <psobject> [<CommonParameters>]\r\n                Add-HelpDocText [-Text] <string> [-HelpDoc] <psobject> [-H3] [<CommonParameters>]\r\n                Add-HelpDocText [-Text] <string> [-HelpDoc] <psobject> [-H2] [<CommonParameters>]\r\n                …\r\nReturns an object representation of the help available for the given module."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "Synopsis": "Output the Markdown formatted HelpDoc.",
+  "Description": "Output the Markdown formatted HelpDoc and optionally write to the provide file path.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [
+    null
+  ],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-HelpModuleData build-docs | New-HelpDoc | Add-ModuleProperty -Property Name -H1 | Out-HelpDoc\r\n# build-docs\r\nGet the help data for the build-docs module, add an H1 header of the module name, then output the Markdown."
+    }
+  ]
+}
