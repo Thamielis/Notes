@@ -22,29 +22,26 @@ I’ll cover firstly the `Using Module` statement, and then we will have a look 
 
 For the benefit of making this the most clear as possible, Let’s assume we have a module file called `plop.psm1` that contains the following code:
 
-```
-<span>
-</span><span>Enum</span><span> </span><span>ComputerType</span><span> </span><span>{</span><span>
-    </span><span>Server</span><span>
-    </span><span>Client</span><span>
-</span><span>}</span><span>
+```powershell
+Enum ComputerType {
+    Server
+    Client
+}
 
-</span><span>Class</span><span> </span><span>Computer</span><span> </span><span>{</span><span>
-    </span><span>[</span><span>String</span><span>]</span><span>$Name</span><span>
-    </span><span>[</span><span>ComputerType</span><span>]</span><span>$Type</span><span>
-</span><span>}</span><span>
+Class Computer {
+    [String]$Name
+    [ComputerType]$Type
+}
 
-</span><span>Function</span><span> </span><span>Get-InternalStuff</span><span> </span><span>{</span><span>
-    </span><span>#Does internal stuff </span><span>
-</span><span>}</span><span>
+Function Get-InternalStuff {
+    # Does internal stuff
+}
 
-</span><span>Function</span><span> </span><span>Get-ComputerData</span><span> </span><span>{</span><span>
-    </span><span>#Does stuff&lt;</span><span>
-</span><span>}</span><span>
+Function Get-ComputerData {
+    # Does stuff<
+}
 
-</span><span>Export-ModuleMember</span><span> </span><span>-Function</span><span> </span><span>Get-ComputerData</span><span> 
-
-</span>
+Export-ModuleMember -Function Get-ComputerData
 ```
 
 It contains an Enum, a Class, and two functions, but **only** `Get-ComputerData` is exported.
@@ -59,9 +56,8 @@ We can use the `using module` statement to load our module into our session like
 
 or if the module is not located in a folder located in the `$env:PsModulePath`, we can load it using the file fullname
 
-```
-<span>Using</span><span> </span><span>module</span><span> </span><span>c:/plop.psm1</span><span>
-</span>
+```powershell
+Using module c:/plop.psm1
 ```
 
 > The using statement **must** be located at the very top of your script. It also **must** be the very first statement of your script (Except of comments). This make **loading the module ‘conditionally’ impossible.**
@@ -72,30 +68,30 @@ _Trying to load a module using `using module` in a script after a `Get-Service` 
 
 Now that the module has been loaded using the `using module` statement, let’s have a look at what commands have actually been loaded into our session by calling the `Get-Command -Module` cmdlet.
 
+```powershell
+Get-Command -Module plop
 ```
-<span>Get-command</span><span> </span><span>-Module</span><span> </span><span>plop</span><span>
 
-</span><span>CommandType</span><span>     </span><span>Name</span><span>                                               </span><span>Version</span><span>    </span><span>Source</span><span>
-</span><span>-----------</span><span>     </span><span>----</span><span>                                               </span><span>-------</span><span>    </span><span>------</span><span>
-</span><span>Function</span><span>        </span><span>Get-ComputerData</span><span>                                     </span><span>0.0</span><span>        </span><span>plop</span><span>
-
-</span>
+```text
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Function        Get-ComputerData                                   0.0        plop
 ```
 
 we see that only `Get-ComputerData` is available. If we try to use `Get-InternalStuff` It throws an error.
 
 ```
-<span>get-internalStuff</span><span>
+get-internalStuff
+```
 
-</span><span>get-internalStuff</span><span> </span><span>:</span><span> </span><span>The</span><span> </span><span>term</span><span> </span><span>'get-internalStuff'</span><span> </span><span>is</span><span> </span><span>not</span><span> </span><span>recognized</span><span> </span><span>as</span><span> </span><span>the</span><span> </span><span>name</span><span> </span><span>of</span><span> </span><span>a</span><span> </span><span>cmdlet</span><span>,</span><span> </span><span>function</span><span>,</span><span> </span><span>script</span><span> </span><span>file</span><span>,</span><span> </span><span>or</span><span> </span><span>operable</span><span> </span><span>program.</span><span> </span><span>Check</span><span> </span><span>the</span><span> </span><span>spelling</span><span> </span><span>of</span><span> </span><span>the</span><span> </span><span>name</span><span>,</span><span> </span><span>or</span><span> </span><span>if</span><span> 
-</span><span>a</span><span> </span><span>path</span><span> </span><span>was</span><span> </span><span>included</span><span>,</span><span> </span><span>verify</span><span> </span><span>that</span><span> </span><span>the</span><span> </span><span>path</span><span> </span><span>is</span><span> </span><span>correct</span><span> </span><span>and</span><span> </span><span>try</span><span> </span><span>again.</span><span>
-</span><span>At</span><span> </span><span>line:1</span><span> </span><span>char:1</span><span>
-</span><span>+</span><span> </span><span>get-internalStuff</span><span>
-</span><span>+</span><span> </span><span>~~~~~~~~~~~~~~~~~</span><span>
-    </span><span>+</span><span> </span><span>CategoryInfo</span><span>          </span><span>:</span><span> </span><span>ObjectNotFound:</span><span> </span><span>(</span><span>get-internalStuff:String</span><span>)</span><span> </span><span>[],</span><span> </span><span>CommandNotFoundException</span><span>
-    </span><span>+</span><span> </span><span>FullyQualifiedErrorId</span><span> </span><span>:</span><span> </span><span>CommandNotFoundException</span><span>
-
-</span>
+```text
+get-internalStuff : The term 'get-internalStuff' is not recognized as the name of a cmdlet, function, script file, or operable program. 
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ get-internalStuff
++ ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (get-internalStuff:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
 ```
 
 > This error is a normal behaviour since the only command we exported from the module was `Get-ComputerData`.

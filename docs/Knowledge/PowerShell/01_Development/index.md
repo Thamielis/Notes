@@ -2,9 +2,16 @@
 
 - [Development](#development)
   - [1. Declarative DevOps Microframeworks](#1-declarative-devops-microframeworks)
-    - [1.1. Functional Programming](#11-functional-programming)
+    - [1.1. Functional Programming in PowerShell](#11-functional-programming-in-powershell)
     - [1.2. Declarative DevOps](#12-declarative-devops)
-[](#-writing-main)
+    - [1.3. DevoOps Microframewrks](#13-devoops-microframewrks)
+    - [1.4. Private PowerShell Modules](#14-private-powershell-modules)
+    - [1.5. Writing Maintainable PowerShell](#15-writing-maintainable-powershell)
+    - [1.6. Declarative Config Management](#16-declarative-config-management)
+    - [1.7. Declarative Idempotency](#17-declarative-idempotency)
+    - [1.8. Automating Work-Item Management](#18-automating-work-item-management)
+  - [2. Vorlagen](#2-vorlagen)
+    - [2.1. Module und Skripts](#21-module-und-skripts)
 
 ## [1. Declarative DevOps Microframeworks](Knowledge/PowerShell/01_Development/Declarative%20DevOps%20Microframeworks.md)
 > Declarative DevOps Microframeworks is the most robust, portable, and scalable pattern for managing your DevOps systems. This series will help you understand the concepts behind Declarative DevOps Microframeworks, then walk you through implementing some common use cases in the most DevOps-friendly language: PowerShell.
@@ -33,3 +40,6 @@
 ### [1.8. Automating Work-Item Management](Knowledge/PowerShell/01_Development/08_Automating%20Work-Item%20Management.md)
 > Automating work-item management is a crucial aspect of DevOps that helps streamline the process of tracking and managing work items. This section will cover best practices for automating work-item management using PowerShell, including integration with tools like Azure DevOps and Jira, and how to create custom scripts for managing work items effectively.
 
+## 2. Vorlagen
+
+### [2.1. Module und Skripts](Knowledge/PowerShell/01_Development/Top_20_PowerShellModulUndScriptVorlagen.md)
