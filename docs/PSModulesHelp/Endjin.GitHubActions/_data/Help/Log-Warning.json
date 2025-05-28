@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates a warning message and prints the message to the log. \nYou can optionally provide a filename, line number, and column number where the warning occurred.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Log-Warning -Message \"Missing semicolon\" -FileName \"foo.js\" -Line 10 -Column 5"
+    }
+  ]
+}

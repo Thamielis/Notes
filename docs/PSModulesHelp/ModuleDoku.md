@@ -36,6 +36,25 @@
 - [Split-DistinguishedName](<PSModulesHelp/ADReportingTools/Split-DistinguishedName.md>)
 </details>
 
+## ArchitectureDecisionRecords
+
+<details>
+<summary>Tools to manage Architecture Decision Records
+</summary>
+
+- [Add-AdrLink](<PSModulesHelp/ArchitectureDecisionRecords/Add-AdrLink.md>)
+- [CHANGELOG](<PSModulesHelp/ArchitectureDecisionRecords/CHANGELOG.md>)
+- [ConvertFrom-AdrText](<PSModulesHelp/ArchitectureDecisionRecords/ConvertFrom-AdrText.md>)
+- [ConvertTo-AdrText](<PSModulesHelp/ArchitectureDecisionRecords/ConvertTo-AdrText.md>)
+- [Get-Adr](<PSModulesHelp/ArchitectureDecisionRecords/Get-Adr.md>)
+- [init](<PSModulesHelp/ArchitectureDecisionRecords/init.md>)
+- [Initialize-Adr](<PSModulesHelp/ArchitectureDecisionRecords/Initialize-Adr.md>)
+- [New-Adr](<PSModulesHelp/ArchitectureDecisionRecords/New-Adr.md>)
+- [README](<PSModulesHelp/ArchitectureDecisionRecords/README.md>)
+- [Reset-AdrToc](<PSModulesHelp/ArchitectureDecisionRecords/Reset-AdrToc.md>)
+- [template](<PSModulesHelp/ArchitectureDecisionRecords/template.md>)
+</details>
+
 ## AsBuiltReport.NetApp.ONTAP
 
 <details>
@@ -73,6 +92,22 @@
 - [Invoke-Tokenize](<PSModulesHelp/AstHelper/Invoke-Tokenize.md>)
 - [LICENSE](<PSModulesHelp/AstHelper/LICENSE.md>)
 - [README](<PSModulesHelp/AstHelper/README.md>)
+</details>
+
+## Build-Docs
+
+<details>
+<summary>Helper for building markdown docs from PowerShell Command Help.
+</summary>
+
+- [Add-HelpDocText](<PSModulesHelp/Build-Docs/Add-HelpDocText.md>)
+- [Add-ModuleCommand](<PSModulesHelp/Build-Docs/Add-ModuleCommand.md>)
+- [Add-ModuleProperty](<PSModulesHelp/Build-Docs/Add-ModuleProperty.md>)
+- [Get-HelpCommandData](<PSModulesHelp/Build-Docs/Get-HelpCommandData.md>)
+- [Get-HelpModuleData](<PSModulesHelp/Build-Docs/Get-HelpModuleData.md>)
+- [New-HelpDoc](<PSModulesHelp/Build-Docs/New-HelpDoc.md>)
+- [Out-HelpDoc](<PSModulesHelp/Build-Docs/Out-HelpDoc.md>)
+- [README](<PSModulesHelp/Build-Docs/README.md>)
 </details>
 
 ## ChangeLogManagement
@@ -735,6 +770,86 @@ DISCLAIMER: Features exposed through this module are not supported by Microsoft 
 - [Invoke-EditorServicesProcess](<PSModulesHelp/EditorServicesProcess/Invoke-EditorServicesProcess.md>)
 </details>
 
+## Endjin.CodeOps
+
+<details>
+<summary>A collection of useful functions for managing GitHub repositories and their codebase
+</summary>
+
+- [Add-VsProjectPackageReference](<PSModulesHelp/Endjin.CodeOps/Add-VsProjectPackageReference.md>)
+- [Assert-GitHubLabel](<PSModulesHelp/Endjin.CodeOps/Assert-GitHubLabel.md>)
+- [Assert-GitHubTeam](<PSModulesHelp/Endjin.CodeOps/Assert-GitHubTeam.md>)
+- [Assert-GitHubTeamMembers](<PSModulesHelp/Endjin.CodeOps/Assert-GitHubTeamMembers.md>)
+- [Assert-GitHubTeamRepoAccess](<PSModulesHelp/Endjin.CodeOps/Assert-GitHubTeamRepoAccess.md>)
+- [Close-GitHubPrWithComment](<PSModulesHelp/Endjin.CodeOps/Close-GitHubPrWithComment.md>)
+- [Connect-GitHubOrg](<PSModulesHelp/Endjin.CodeOps/Connect-GitHubOrg.md>)
+- [Get-AllRepoConfiguration](<PSModulesHelp/Endjin.CodeOps/Get-AllRepoConfiguration.md>)
+- [Get-GitHubPrByBranchName](<PSModulesHelp/Endjin.CodeOps/Get-GitHubPrByBranchName.md>)
+- [Get-GitHubRepoDefaultBranch](<PSModulesHelp/Endjin.CodeOps/Get-GitHubRepoDefaultBranch.md>)
+- [Get-RepoConfiguration](<PSModulesHelp/Endjin.CodeOps/Get-RepoConfiguration.md>)
+- [Invoke-GitHubRestMethod](<PSModulesHelp/Endjin.CodeOps/Invoke-GitHubRestMethod.md>)
+- [Invoke-GitHubRestRequest](<PSModulesHelp/Endjin.CodeOps/Invoke-GitHubRestRequest.md>)
+- [Invoke-WithUsingObject](<PSModulesHelp/Endjin.CodeOps/Invoke-WithUsingObject.md>)
+- [New-GitHubAppInstallationAccessToken](<PSModulesHelp/Endjin.CodeOps/New-GitHubAppInstallationAccessToken.md>)
+- [New-GitHubJWT](<PSModulesHelp/Endjin.CodeOps/New-GitHubJWT.md>)
+- [New-RsaSha256Signature](<PSModulesHelp/Endjin.CodeOps/New-RsaSha256Signature.md>)
+- [New-TemporaryDirectory](<PSModulesHelp/Endjin.CodeOps/New-TemporaryDirectory.md>)
+- [Publish-CodeOpsResultsToBlobStorage](<PSModulesHelp/Endjin.CodeOps/Publish-CodeOpsResultsToBlobStorage.md>)
+- [Remove-VsProjectPackageReference](<PSModulesHelp/Endjin.CodeOps/Remove-VsProjectPackageReference.md>)
+- [Test-GitHubPrByBranchName](<PSModulesHelp/Endjin.CodeOps/Test-GitHubPrByBranchName.md>)
+- [Update-Repo](<PSModulesHelp/Endjin.CodeOps/Update-Repo.md>)
+- [Use-Assembly](<PSModulesHelp/Endjin.CodeOps/Use-Assembly.md>)
+</details>
+
+## Endjin.GitHubActions
+
+<details>
+<summary>Functions for use with GitHub Actions
+</summary>
+
+- [Add-Mask](<PSModulesHelp/Endjin.GitHubActions/Add-Mask.md>)
+- [Add-Path](<PSModulesHelp/Endjin.GitHubActions/Add-Path.md>)
+- [Export-Variable](<PSModulesHelp/Endjin.GitHubActions/Export-Variable.md>)
+- [Get-Input](<PSModulesHelp/Endjin.GitHubActions/Get-Input.md>)
+- [Log-Debug](<PSModulesHelp/Endjin.GitHubActions/Log-Debug.md>)
+- [Log-Error](<PSModulesHelp/Endjin.GitHubActions/Log-Error.md>)
+- [Log-Warning](<PSModulesHelp/Endjin.GitHubActions/Log-Warning.md>)
+- [Set-Output](<PSModulesHelp/Endjin.GitHubActions/Set-Output.md>)
+</details>
+
+## Endjin.PRAutoflow
+
+<details>
+<summary>PR Autoflow
+</summary>
+
+- [AnyInterestingPRs](<PSModulesHelp/Endjin.PRAutoflow/AnyInterestingPRs.md>)
+- [GetSemVerIncrement](<PSModulesHelp/Endjin.PRAutoflow/GetSemVerIncrement.md>)
+- [IsPackageInteresting](<PSModulesHelp/Endjin.PRAutoflow/IsPackageInteresting.md>)
+- [ParsePrTitle](<PSModulesHelp/Endjin.PRAutoflow/ParsePrTitle.md>)
+</details>
+
+## Endjin.RecommendedPractices.Build
+
+<details>
+<summary>Provides automated build features using on the InvokeBuild module
+</summary>
+
+- [Get-DotNetTool](<PSModulesHelp/Endjin.RecommendedPractices.Build/Get-DotNetTool.md>)
+- [Get-PythonPackagePreReleaseLabelFromSemVer](<PSModulesHelp/Endjin.RecommendedPractices.Build/Get-PythonPackagePreReleaseLabelFromSemVer.md>)
+- [Install-DotNetTool](<PSModulesHelp/Endjin.RecommendedPractices.Build/Install-DotNetTool.md>)
+- [New-BicepModuleBuildScript](<PSModulesHelp/Endjin.RecommendedPractices.Build/New-BicepModuleBuildScript.md>)
+- [New-ContainerBuildScript](<PSModulesHelp/Endjin.RecommendedPractices.Build/New-ContainerBuildScript.md>)
+- [New-DotNetBuildGitHubWorkflow](<PSModulesHelp/Endjin.RecommendedPractices.Build/New-DotNetBuildGitHubWorkflow.md>)
+- [New-DotNetBuildScript](<PSModulesHelp/Endjin.RecommendedPractices.Build/New-DotNetBuildScript.md>)
+- [New-GitVersionConfig](<PSModulesHelp/Endjin.RecommendedPractices.Build/New-GitVersionConfig.md>)
+- [New-PowerBiBuildScript](<PSModulesHelp/Endjin.RecommendedPractices.Build/New-PowerBiBuildScript.md>)
+- [Set-BuildServerVariable](<PSModulesHelp/Endjin.RecommendedPractices.Build/Set-BuildServerVariable.md>)
+- [Test-AzCliConnection](<PSModulesHelp/Endjin.RecommendedPractices.Build/Test-AzCliConnection.md>)
+- [Watch-PbixFile](<PSModulesHelp/Endjin.RecommendedPractices.Build/Watch-PbixFile.md>)
+- [Write-SBOMComponents](<PSModulesHelp/Endjin.RecommendedPractices.Build/Write-SBOMComponents.md>)
+</details>
+
 ## FormatPx
 
 <details>
@@ -751,6 +866,21 @@ DISCLAIMER: Features exposed through this module are not supported by Microsoft 
 - [Out-Host](<PSModulesHelp/FormatPx/Out-Host.md>)
 - [Out-Printer](<PSModulesHelp/FormatPx/Out-Printer.md>)
 - [Out-String](<PSModulesHelp/FormatPx/Out-String.md>)
+</details>
+
+## functional
+
+<details>
+<summary>Functional Programming utilities for PowerShell
+</summary>
+
+- [Merge-Object](<PSModulesHelp/functional/Merge-Object.md>)
+- [Merge-ScriptBlock](<PSModulesHelp/functional/Merge-ScriptBlock.md>)
+- [README](<PSModulesHelp/functional/README.md>)
+- [Reduce-Object](<PSModulesHelp/functional/Reduce-Object.md>)
+- [Test-All](<PSModulesHelp/functional/Test-All.md>)
+- [Test-Any](<PSModulesHelp/functional/Test-Any.md>)
+- [Test-Equality](<PSModulesHelp/functional/Test-Equality.md>)
 </details>
 
 ## GitHub
@@ -986,6 +1116,17 @@ DISCLAIMER: Features exposed through this module are not supported by Microsoft 
 - [Set-GPOZaurrOwner](<PSModulesHelp/GPOZaurr/Set-GPOZaurrOwner.md>)
 - [Set-GPOZaurrStatus](<PSModulesHelp/GPOZaurr/Set-GPOZaurrStatus.md>)
 - [Skip-GroupPolicy](<PSModulesHelp/GPOZaurr/Skip-GroupPolicy.md>)
+</details>
+
+## gyPSum
+
+<details>
+<summary>
+</summary>
+
+- [examples](<PSModulesHelp/gyPSum/examples.md>)
+- [New-gyPSumModule](<PSModulesHelp/gyPSum/New-gyPSumModule.md>)
+- [Readme](<PSModulesHelp/gyPSum/Readme.md>)
 </details>
 
 ## HtmlToMarkdown
@@ -6919,6 +7060,7 @@ Check the GitHub repository https://github.com/tahir-hassan/PSRunspacedDelegate 
 <summary>
 </summary>
 
+- [DevModules](<PSModulesHelp/DevModules.md>)
 - [ModuleDoku](<PSModulesHelp/ModuleDoku.md>)
 </details>
 

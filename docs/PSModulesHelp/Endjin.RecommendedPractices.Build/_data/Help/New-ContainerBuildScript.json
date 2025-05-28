@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Generates a build script.",
+  "Description": "Generates a build script, from a template, that uses InvokeBuild and functionality available in this module.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-ContainerBuildScript -DockerfilePath ./Dockerfile -ImageName myimg  -ContainerRegistryType acr -Path ./build.ps1\r\nGenerates a build script in the current directory configured for building & publishing Bicep modules."
+    }
+  ]
+}

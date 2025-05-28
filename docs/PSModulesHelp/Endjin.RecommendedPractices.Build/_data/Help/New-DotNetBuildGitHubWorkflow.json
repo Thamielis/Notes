@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Generates a GitHub Actions workflow that runs a .NET CI build.",
+  "Description": "Generates a GitHub Actions workflow that consumes the resuable workflow:\nhttps://github.com/endjin/Endjin.RecommendedPractices.GitHubActions/blob/main/.github/workflows/scripted-build-pipeline.yml\nto run the standard .NET build process available in this module.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "New-DotNetBuildGitHubWorkflow -Path .github/workflows/build.yml\r\nGenerates a build script in the current directory configured to build the specified solution."
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "Synopsis": "\r\nInvoke-GitHubRestMethod [-Uri] <uri> [[-Verb] <string>] [[-Body] <hashtable>] [[-Token] <string>] [[-Headers] <hashtable>] [[-HttpErrorStatusCodesToIgnore] <int[]>] [[-MaxRetries] <int>] [[-RetryBackOffBaseFactor] <float>] [[-InitialBackOffSeconds] <int>] [-AllPages] [<CommonParameters>]\r\n",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None\r\n"
+  ],
+  "Outputs": [
+    "System.Object"
+  ],
+  "Links": [],
+  "Examples": []
+}

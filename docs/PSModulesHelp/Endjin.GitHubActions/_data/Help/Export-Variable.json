@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Creates or updates an environment variable for any actions running next in a job. \nThe action that creates or updates the environment variable does not have access to the new value, but all subsequent actions in a job will have access. \nEnvironment variables are case-sensitive and you can include punctuation.",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Export-Variable -Name foo Value bar"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+# Randbedingungen {#section-architecture-constraints}

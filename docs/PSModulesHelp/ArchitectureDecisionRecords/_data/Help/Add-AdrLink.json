@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Adds an link between two ADRs.",
+  "Description": "Adds a link between two ADRs, optionally with a reverse link.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Add-AdrLink -FromNumber 1 -ToNumber 2 -FromLink \"Linked\" -ToLink \"Linked\""
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Add-AdrLink -FromNumber 1 -ToNumber 2 -FromLink \"Superseded by\" -ToLink \"Supersedes\""
+    }
+  ]
+}

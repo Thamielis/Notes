@@ -1,0 +1,39 @@
+{
+  "Synopsis": "A helper for running the Power BI Tools extract command in 'watch' mode.",
+  "Description": "Looks up the Power BI Desktop process ID information before running the required 'pbi-tools.exe' command.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Watch-PbixFile -PbixFilePath myReport.pbix -ExtractPath src/myReport\r\nWhen run in the root of a git repository, generates the required pr-autoflow artefacts under the '.github' folder."
+    }
+  ]
+}

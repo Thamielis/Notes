@@ -1,0 +1,33 @@
+{
+  "Synopsis": "\r\nPublish-CodeOpsResultsToBlobStorage -StorageAccountName <string> -ContainerName <string> -BlobPath <string> -SasToken <string> -JsonFilePath <string> -Timestamp <string> [-WhatIf] [<CommonParameters>]\r\n\r\nPublish-CodeOpsResultsToBlobStorage -StorageAccountName <string> -ContainerName <string> -BlobPath <string> -JsonFilePath <string> -Timestamp <string> [-UseConnectedAccount] [-GeneratedSasTokenLifetimeMinutes <int>] [-WhatIf] [<CommonParameters>]\r\n",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "None\r\n"
+  ],
+  "Outputs": [
+    "System.Object"
+  ],
+  "Links": [],
+  "Examples": []
+}

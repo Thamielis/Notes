@@ -1,0 +1,33 @@
+{
+  "Synopsis": "Converts an ADR object into ADR markdown.",
+  "Description": "Converts an ADR object into ADR markdown via a template. The template will be\nsourced from one of the following locations:\n\n- Template parameter on this function\n- ADR_TEMPLATE environment variable\n- $(Get-AdrDir)/templates/template.md\n- A template included in this module",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.String"
+  ],
+  "Links": [],
+  "Examples": []
+}

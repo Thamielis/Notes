@@ -1,0 +1,39 @@
+{
+  "Synopsis": "Abstracts sending formatted log messages to build servers to set build variables.",
+  "Description": "Identifies the current build server using well-known environmnent variables and outputs correctly formatted\nlog messages that will set variables within the build server context. Currently supports Azure Pipelines and\nGitHub Actions.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    null
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Set-BuildServerVariable -Name \"MyVar\" -Value \"foo\"\r\nSets a build variable called 'MyVar' with the value of \"foo\"."
+    }
+  ]
+}

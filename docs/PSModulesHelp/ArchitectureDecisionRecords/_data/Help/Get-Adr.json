@@ -1,0 +1,33 @@
+{
+  "Synopsis": "Gets all ADRs or a single ADR from the ADR dir.",
+  "Description": "Gets all ADRs from the ADR dir, parsed as objects. If a number is specified, only that\nADR will be returned.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "System.Management.Automation.PSObject[]"
+  ],
+  "Links": [],
+  "Examples": []
+}

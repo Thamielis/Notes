@@ -1,0 +1,33 @@
+{
+  "Synopsis": "\r\nAssert-GitHubTeamMembers -Org <string> -TeamName <string> -Members <string[]> [-RemoveExtraMembers] [<CommonParameters>]\r\n\r\nAssert-GitHubTeamMembers -Team <Object> -Members <string[]> [-RemoveExtraMembers] [<CommonParameters>]\r\n",
+  "Description": "",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    "System.Object\r\n"
+  ],
+  "Outputs": [
+    "System.Object"
+  ],
+  "Links": [],
+  "Examples": []
+}

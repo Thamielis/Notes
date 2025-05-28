@@ -1,0 +1,44 @@
+{
+  "Synopsis": "Simple wrapper to check whether a given .NET tool is already installed.",
+  "Description": "Simple wrapper to check whether a given .NET tool is already installed.",
+  "Parameters": [
+    {
+      "Name": null,
+      "Type": null,
+      "Description": "",
+      "Required": false,
+      "Position": 0,
+      "Aliases": null,
+      "DefaultValue": null,
+      "Globbing": false,
+      "PipelineInput": null,
+      "variableLength": false
+    }
+  ],
+  "Notes": [
+    null
+  ],
+  "CommandType": "Function",
+  "Component": [
+    null
+  ],
+  "Inputs": [
+    null
+  ],
+  "Outputs": [
+    "An object containing the details of the installed tool, or null if the tool isn't installed.\n@{\n    name = \"gitversion.tool\"\n    version = \"5.6.6\"\n    commands = \"dotnet-gitversion\"\n}"
+  ],
+  "Links": [],
+  "Examples": [
+    {
+      "Title": "EXAMPLE 1",
+      "Markdown": "",
+      "Code": "Get-DotNetTool -Global -Name gitversion.tool\r\nname            version commands\r\n----            ------- --------\r\ngitversion.tool 5.8.0   dotnet-gitversion\r\nChecks whether any version of the 'gitversion.tool' .NET tool is installed globally, returning an object with the installed tool's details."
+    },
+    {
+      "Title": "EXAMPLE 2",
+      "Markdown": "",
+      "Code": "Get-DotNetTool -ToolPath ./tools -Name gitversion.tool -Version 5.6.6\r\nChecks whether version 5.6.6 of the 'gitversion.tool' .NET tool is installed to a store at the specified directory, returning null if it isn't."
+    }
+  ]
+}
