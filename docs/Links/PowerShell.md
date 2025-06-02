@@ -5,6 +5,8 @@
 
 ## [Interessante Module](<Links/PSModules.md>)
 
+## [Meine OneLiner](<Links/PSMyOnliners.md>)
+
 ## Scripting/Development
 
 ### Knowledge
