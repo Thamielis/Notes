@@ -34,15 +34,17 @@ I am going to start building a sample class called “Rock”. Think of an item 
 
 I do not know much about rocks, so I first started contemplating the properties of rocks. Rocks can be different colors, shapes, and sizes. Beyond that, I used my google-fu to find out more about the [properties of rocks](https://www.reference.com/science/five-properties-rocks-b95d53ee9301702c). I included color, luster, shape, texture, and pattern from the linked reference. I also added size and location as more information I would like to have on an instance of a rock. I am going to use strings for the type of each of these properties except for the location property. I am defining the location property as an integer, distance from the person holding the rock, perhaps.
 
-class Rock {  
-\[string\]$Color  
-\[string\]$Luster  
-\[string\]$Shape  
-\[string\]$Texture  
-\[string\]$Pattern  
-\[string\]$Size  
-\[int\]$Location  
+```powershell
+class Rock {
+  [string]$Color  
+  [string]$Luster  
+  [string]$Shape  
+  [string]$Texture  
+  [string]$Pattern  
+  [string]$Size  
+  [int]$Location  
 }
+```
 
 ## **Class Properties — Similar to Function Parameters**
 
@@ -56,7 +58,9 @@ Programming books like to use big words to talk about how to create a class. The
 
 It is time to instantiate a Rock object. To do so, I need to introduce the second big word, **constructor**. A constructor is a “[special type of subroutine that is called to create an object](https://en.wikipedia.org/wiki/Constructor_(object-oriented_programming)).” The constructor is named the same as the class. You use the new() operator to create (or instantiate!) a new rock object. Programmatically, it looks like this:
 
-$rock = \[rock\]::New()
+```powershell
+$rock = [rock]::New()
+```
 
 I am creating a new object of the \[rock\] class and storing it in the variable $Rock. From there, I can display the contents of $Rock or pipe $Rock to get-member to check out its type, properties, and methods.  ![Classes1](https://petri.com/wp-content/uploads/petri-imported-images/Classes1.png)
 
@@ -72,6 +76,7 @@ I am going to expand on the “Rock” class by defining allowed values for a fe
 
 To recap, the Rock class definition contained 7 properties: Color, Luster, Shape, Texture, Pattern, Size, and Location. The first 6 properties were String properties and Location was an integer or a distance between some arbitrary point and the rock itself.
 
+```powershell
 class Rock {  
 \[string\]$Color  
 \[string\]$Luster  
@@ -81,27 +86,33 @@ class Rock {
 \[string\]$Size  
 \[int\]$Location  
 }
+```
 
 In addition, I also used the New() constructor to create an instance of the rock and once I had an instance of the rock defined ($Rock), I could assign properties to it.
 
+```powershell
 $Rock = \[rock\]::New()  
 $Rock.Color = Silver  
 $Rock.Size = HUGE
+```
 
 ## **Limiting Allowed Values using an Enum**
 
 Using string types for the rock properties will allow for an endless combination of possible property values. For example, I could define an instance of a rock’s size to be “HUGE” (as in the example above) or I could define it to be “VeryVeryLarge”. Conversely, I could define it as “teeny-tiny” or crumb-sized”. In this case, I want to limit the possible values for size to be only sizes that I have defined, like the shirt sizes of small, medium, and large. In order to accomplish this, I can use an enumerated type (also known as an enum) or [a set of named values](https://en.wikipedia.org/wiki/Enumerated_type) to define those possible values. Notice that the phrase is “enumerated type”. I am defining a custom type named “Size”.
 
+```powershell
 enum Size {  
 Small  
 Medium  
 Large  
 }
+```
 
 ## **Code Placement for Enums**
 
 When writing the code, place the enum definition outside the class definition or in its own file. I placed this Size enum in a file named C:PowerShellSizeEnum.ps1. That way, I can dot-source the enum. Why would I want to do this? If I place the enum in its own file, I can dot-source it for any class or function. That is right, enums are not just for PowerShell classes. I can use it to define custom types for functions as well, as shown in the function below.
 
+```powershell
 function CasinoWinnings {  
 param (  
 \[int\]$Amt  
@@ -120,6 +131,7 @@ $Result = \[size\]::Large
 }  
 Write-Output $Result  
 }
+```
 
 ## **PowerShell Death Match: Enums vs. ValidateSet**
 
@@ -129,6 +141,7 @@ ValidateSet is an incredibly useful parameter validation attribute used in advan
 
 Consider the following function: it contains a parameter named Size and uses ValidateSet. However, notice that the parameter type is still \[string\]. In this simple example, I am taking the Size parameter and returning the 1<sup>st</sup> character as output.
 
+```powershell
 function CasinoTaxes {  
 param (  
 \[parameter(Mandatory=$True)\]  
@@ -138,11 +151,13 @@ param (
 
 Write-Output $Size\[0\]  
 }
+```
 
  ![ClassesPt2 1](https://petri.com/wp-content/uploads/petri-imported-images/ClassesPt2_1.png)
 
 This same function would not work using the Size enum:
 
+```powershell
 function CasinoTaxes {  
 param (  
 \[parameter(Mandatory=$True)\]  
@@ -151,6 +166,7 @@ param (
 
 Write-Output $CurrentTaxSize\[0\]  
 }
+```
 
  ![ClassesPt2 2](https://petri.com/wp-content/uploads/petri-imported-images/ClassesPt2_2.png)
 
@@ -180,11 +196,14 @@ Next, I am going to define some methods for the class. A method is an action tha
 
 A class method is just as easy to define as a PowerShell function. However, there is one big difference. I need figure out if the method is going to return a value and specify the returned value’s type on the method definition. If a method is not going to return a value, the return value type is \[void\]. Starting out with the “ShowRockLocation” method, the method definition looks like this:
 
+```powershell
 \[void\]ShowRockLocation () {  
 }
+```
 
 From there I am simply using PowerShell to add the code that will graphically show me a location:
 
+```powershell
 \[void\]ShowRockLocation () {  
 $Filler = ‘ ‘  
 for ($i=0;$i -lt $This.Location;$i++) {  
@@ -192,6 +211,7 @@ $filler += ‘ ‘
 }  
 write-host “$($Filler)\*”  
 }
+```
 
 Notice that in the “for” loop, I am using the variable $This. When I call the ShowRockLocation method, I will be calling it for the instance of rock that I created earlier ($Rock). $This is a special variable that means, “This instance of the Rock class”. To show the location, I am going to add white space (Filler) for each unit of the location property of the rock, then graphically show the rock with an asterisk.
 
@@ -205,11 +225,13 @@ To invoke the ShowRockLocation method, I take my instance of Rock ($Rock) and ca
 
 Next, I would like to create the ThrowRock method. ThrowRock is going to take an argument, such as the distance in which to throw the rock, using an integer type. The variable $arg represents the distance.
 
+```powershell
 \[void\]ThrowRock (\[int\]$arg) {
 
 $This.Location += $arg
 
 }
+```
 
 After defining the method, I invoke ThrowRock using the same call as ShowRockLocation, but I provide the argument for the distance. Next, I call ShowRockLocation to see that the location has changed, and indeed, the asterisk has moved, presumably 28 spaces.
 
@@ -219,6 +241,7 @@ After defining the method, I invoke ThrowRock using the same call as ShowRockLoc
 
 Lastly, I am going to create the SmashRock method. Looking back at the class definition, I used an enum definition for the Size property, specifically so I could limit the values of Size to the sizes I want for this method. If the SmashRock method is called upon an instance of a rock that is Large, the method will change it to Medium. If I call SmashRock on a Medium rock, it will change to Small. If I call SmashRock on a Small rock, I will simply write a message to the screen saying the rock is already small.
 
+```powershell
 \[void\]SmashRock () {  
 if ($This.Size -eq “Large”) {  
 $This.Size = “Medium”  
@@ -236,6 +259,7 @@ $Rock.Color = “Red”
 $Rock.Location = 28  
 $Rock.Size = “Large”  
 $Rock.Luster = “Waxy”
+```
 
  ![ClassesPt3 4](https://petri.com/wp-content/uploads/petri-imported-images/ClassesPt3_4.png)
 
@@ -265,13 +289,17 @@ This creates an instance of a Rock. I am using the default constructor because I
 
 I can create an overload for the constructor. The overload allows me to set default values for properties right in the new method itself. This spares me one or more lines of code in assigning properties later. If I want to continue using the constructor with no parameters also, I need to explicitly define it in the class.
 
+```powershell
 Rock(){}
+```
 
 In the next example, I am creating an overload for a constructor of the Rock class that has one parameter, Size.
 
+```powershell
 Rock(\[size\]$Size){  
 $this.Size = $size  
 }
+```
 
 What exactly does this mean? It means that if I instantiate a class of Rock with one parameter, that one parameter must be the Size parameter than it must be of type Size. A successful instantiation looks like this:
 
@@ -284,10 +312,12 @@ What happens if I try to give it a different parameter, maybe a color instead? W
 
 Conversely, what happens if I wanted to assign both Size and Color? With the current constructors I have defined, I would also receive an error trying to create this instance. Notice that it is an error about the overload itself. In this case, it is looking for an overload that accepts two arguments. However, I have not created one that accepts two arguments yet.  ![classesPt4 5](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201280%20272'%3E%3C/svg%3E) Here is the constructor for a Rock class that accepts two arguments:
 
+```powershell
 Rock(\[size\]$Size,\[string\]$Color){  
 $This.Size = $Size  
 $This.Color = $Color  
 }
+```
 
 Now, I can create instances of Rocks with zero, one, or two parameters:
 
@@ -302,6 +332,7 @@ Classes in PowerShell, just like in other object-oriented programming languages,
 
 A rock is a specific type of construction material, so it inherits the properties from the ConstructionMaterials class. It can also have its own properties. Likewise, I could create other subclasses from ConstructionMaterials, like Brick and Wood. In the following example, I have taken the Rock class and created a ConstructionMaterials class, minimizing the properties.
 
+```powershell
 enum Size {
 
 Small
@@ -359,6 +390,7 @@ class ConstructionMaterial {
          }
 
    }
+```
 
 Then, I will create a Rock class that is a subclass of ConstructionMaterial using the syntax:
 
@@ -372,11 +404,13 @@ Lastly, I will verify that the Rock class is a subclass of ConstructionMaterial.
 
 Perhaps, I want the Rock subclass to also have the Luster, Texture, and Pattern properties that I defined in the original rock class. In order to accomplish that, we need to load the enum for the values for Luster into memory by either dot-sourcing it or adding it directly to the class file. Next, we create a new Rock class that contains the additional properties.
 
+```powershell
 class Rock : ConstructionMaterial{  
 \[string\]$Texture  
 \[string\]$Pattern  
 \[Luster\]$Luster  
 }
+```
 
 If I create an instance of a Rock, it contains the properties of the base class (Color, Shape, Size, and Location). In addition, it also contains the Rock-specific properties (Texture, Luster, and Pattern.)
 
@@ -392,6 +426,7 @@ Now, it’s your turn. Look for ways you can incorporate classes into your every
 
 As a quick recap, the ConstructionMaterial class has 4 properties: Color, Shape, Size, and Location. Size’s data type is an enum that can only be of the values Small, Medium, or Large. For this example, I am not defining any specific constructors. My example object of type ConstructionMaterial is named $ClassObj.
 
+```powershell
 enum Size {
 
 Small
@@ -413,6 +448,7 @@ class ConstructionMaterial {
 \[int\]$Location
 
 }
+```
 
  ![classesPt5 1](https://petri.com/wp-content/uploads/petri-imported-images/classesPt5_1.png)
 
@@ -420,6 +456,7 @@ class ConstructionMaterial {
 
 To compare an instance of a class object with a custom object, I am going to start off by building the custom object new-object and a type of psobject, defining the desired properties in a hash table.
 
+```powershell
 $props \= @{
 
 Color \= “Red”
@@ -433,6 +470,7 @@ Location \= 4
 }
 
 $Obj \= New-Object \-TypeName psobject \-Property $Props
+```
 
  ![classesPt5 2](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201280%20407'%3E%3C/svg%3E)
 
