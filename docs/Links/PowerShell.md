@@ -5,7 +5,11 @@
 
 ## [Interessante Module](<Links/PSModules.md>)
 
-## [Meine OneLiner](<Links/PSMyOnliners.md>)
+## Helper
+
+### [Meine OneLiner](<Links/PSMyOneliners.md>)
+
+### [Helper Functions](<Links/PSHelperFunctions.md>)
 
 ## Scripting/Development
 
