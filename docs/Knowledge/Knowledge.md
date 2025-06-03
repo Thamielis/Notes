@@ -103,6 +103,9 @@
 - [powershell-classes-and-concepts](<./Knowledge/PowerShell/Classes/powershell-classes-and-concepts.md>)
 - [powershell-command-inventory-part-deux](<./Knowledge/PowerShell/Classes/powershell-command-inventory-part-deux.md>)
 
+- [Klassen](<./Knowledge/PowerShell/Klassen/Klassen_TOC.md>)
+  - [Testing PowerShell Classes](<./Knowledge/PowerShell/Klassen/Testing PowerShell Classes.md>)
+
 ### gMSA
 
 - [How to create a Group Managed Service Accounts (gMSA)](<./Knowledge/PowerShell/gMSA/How to create a Group Managed Service Accounts (gMSA).md>)
