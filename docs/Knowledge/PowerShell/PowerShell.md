@@ -1,5 +1,9 @@
 # PowerShell
 
+## [01. Development](<Knowledge/PowerShell/01_Development/index.md>)
+
+### [Documenting](<Knowledge/PowerShell/01_Development/Documenting/index.md>)
+
 ## [Classes](<Knowledge/PowerShell/Classes/index.md>)
 
 ## [Patterns](<Knowledge/PowerShell/Patterns/index.md>)

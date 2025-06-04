@@ -12,6 +12,9 @@
     - [1.8. Automating Work-Item Management](#18-automating-work-item-management)
   - [2. Vorlagen](#2-vorlagen)
     - [2.1. Module und Skripts](#21-module-und-skripts)
+  - [3. Tools](#3-tools)
+    - [Display-Object](#display-object)
+  - [4. Documenting](#4-documenting)
 
 ## [1. Declarative DevOps Microframeworks](Knowledge/PowerShell/01_Development/Declarative%20DevOps%20Microframeworks.md)
 > Declarative DevOps Microframeworks is the most robust, portable, and scalable pattern for managing your DevOps systems. This series will help you understand the concepts behind Declarative DevOps Microframeworks, then walk you through implementing some common use cases in the most DevOps-friendly language: PowerShell.
@@ -43,3 +46,10 @@
 ## 2. Vorlagen
 
 ### [2.1. Module und Skripts](Knowledge/PowerShell/01_Development/Top_20_PowerShellModulUndScriptVorlagen.md)
+
+## 3. Tools
+
+### [Display-Object](<Knowledge/PowerShell/01_Development/Display-Object a PowerShell utility Cmdlet.md>)
+
+## [4. Documenting](<Knowledge/PowerShell/01_Development/Documenting/index.md>)
+
