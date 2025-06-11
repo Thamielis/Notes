@@ -2,7 +2,7 @@
   - [1. Enabling Jumbo Frames in VMware vSphere 8](#1-enabling-jumbo-frames-in-vmware-vsphere-8)
     - [**Steps to enable jumbo frames on a vSphere Standard Switch (vSS):**](#steps-to-enable-jumbo-frames-on-a-vsphere-standard-switch-vss)
     - [**Steps to enable jumbo frames on a vSphere Distributed Switch (VDS):**](#steps-to-enable-jumbo-frames-on-a-vsphere-distributed-switch-vds)
-    - [**Verifying MTU on ESXi:** After configuration, verify the host settings via CLI or UI:](#verifying-mtu-on-esxi-after-configuration-verify-the-host-settings-via-cli-or-ui)
+    - [**Verifying MTU on ESXi:**](#verifying-mtu-on-esxi)
   - [2. Configuring Windows Server VM Network Adapters for Jumbo Frames](#2-configuring-windows-server-vm-network-adapters-for-jumbo-frames)
     - [**Steps to enable jumbo frames on a Windows VM NIC:**](#steps-to-enable-jumbo-frames-on-a-windows-vm-nic)
       - [1. **Check NIC support:**](#1-check-nic-support)
@@ -55,8 +55,9 @@ In vSphere 8, you need to configure jumbo frames at the virtual switch level and
 4. Ensure any **VMkernel adapters** on the VDS that require jumbo frames (for example, an iSCSI VMkernel on a distributed port group) are also edited to MTU 9000 as in the standard switch steps above. In vCenter, go to each host > VMkernel Adapters, edit the adapter, and set MTU 9000.
 5. If using a distributed Port Group for VM traffic, you generally do **not** need to set anything on the VM's port group specifically; it inherits the VDS MTU. (VM network port groups typically inherit the switch's MTU, and VMs will send larger frames if their OS is configured for it.)
 
-### **Verifying MTU on ESXi:** After configuration, verify the host settings via CLI or UI:
+### **Verifying MTU on ESXi:** 
 
+After configuration, verify the host settings via CLI or UI:
 * SSH into the ESXi host and run `esxcfg-nics -l` to list physical NICs. The output will show the **MTU** for each uplink (should show 9000 for 10GbE NICs if jumbo is active). For example:
 
 ```shell
