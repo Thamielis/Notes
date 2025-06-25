@@ -1,3 +1,5 @@
+# Notes
+
 <details>
 <summary>Inhaltsverzeichnis</summary>
 
@@ -51,8 +53,11 @@
 ## 0. Projekte
 
 ### [<span style="color:magenta">0.1. Projekte</span>](Projects/Projects.md)
+
 ### [<span style="color:green">0.2. Kostwein</span>](Kostwein.md)
+
 ### [<span style="color:cyan">0.3. PowerShell</span>](Links/PowerShell.md)
+
 ### [<span style="color:cyan">0.4. JumboFrames - End-To-End</span>](Jumbo%20Frames%20-%20End-To-End.md)
 
 ---
@@ -67,7 +72,7 @@
 
 #### [<span style="color:magenta">2.2.1. Meine Repos</span>](ReposWiki/Repositories.md)
 
-  <span style="color:cyan">*Meine Programmierungen*</span>
+  <span style="color:cyan">Meine Programmierungen</span>
 
 #### 2.2.1.1. Analyse/Visualize
 
@@ -83,21 +88,24 @@
 ### 2.10. Other
 
 #### [2.10.1. Awesome-Documentation](https://github.com/officialrajdeepsingh/awesome-documentation)
+  >
   > 📝 A curated list of documentation based libraries that help build small and large-scale documentation website.
 
 ### [2.10.2. docs-page-demo](https://github.com/officialrajdeepsingh/docs-page-demo)
+  >
   > 📝 Docs page is an open-source documentation platform that enables you to create instant, fast, beautiful, and responsive documentation websites with minimal configuration.
 
 ### [2.10.3. Magic UI](https://github.com/magicuidesign/magicui)
+
 !> UI Library for Design Engineers. Animated components and effects you can copy and paste into your apps. Free. Open Source.
 <img alt="Magic UI - UI Library for Design Engineers" src="https://cdn.magicui.design/bento-grid.gif" width="100%">
-
 
 ---
 
 ## 3. Knowledge
 
 !> FileTreeGenerator vsCode
+
 ```powershell
 [regex] $Start = '\' # Replace to '/'
 [regex] $First = '^(#.*- )' # Replace to ' - '
@@ -111,7 +119,7 @@
     - [<span style="color:#7d7dff">Fast FileContent Search</span>](https://www.leeholmes.com/scour-fast-personal-local-content-searches/)
     - [<span style="color:#ff8040">PSWriteHTML</span>](Knowledge/PowerShell/PSWriteHTML)
       - [<span style="color:cyan">Nested Tabs</span>](<Knowledge/PowerShell/PSWriteHTML/Nested Tabs, Diagram Updates, Diagram Events, Calendar Object and more in PSWriteHTML.md>)
-    
+
   - [<span style="color:cyan">Mermaid</span>](Knowledge/Mermaid/Mermaid.md)
     - [<span style="color:cyan">Examples</span>](Knowledge/Mermaid/MermaidOnGitHubExamples.md)
 
@@ -203,6 +211,7 @@ New-ADGroupReport -Name 'PaloAlto*' -ReportTitle 'PaloAlto_Internet ADGroups' -E
     - [<span style="color:yellow">PowerShell</span>](<https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#powershell>)
 
 ### 3.5 Regex
+
 - [Reference](https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference)
 
 ### 3.6 Build your own VR Headset
@@ -225,20 +234,25 @@ New-ADGroupReport -Name 'PaloAlto*' -ReportTitle 'PaloAlto_Internet ADGroups' -E
   > - [Mein Netlify Blog](<https://blog.in-pro.org>)
 
 ### 5.1. [Thamielis Pages](<https://thamielis.github.io>)
+  >
   > - [Notes](<https://thamielis.github.io/Notes>)
   > - [PSModulesDoku](https://thamielis.github.io/PSModulesDoku/)
   > - [Knowledge](<https://thamielis.github.io/Knowledge>)
+  >>
   >> - [PowerShell Classes](<https://thamielis.github.io/Knowledge/pages/powershell/Klassen/powershell-classes-and-concepts>)
+  >>
   > - [Dokumentation](<https://thamielis.github.io/Dokumentation/>)
   > - [PSKnowledge](https://thamielis.github.io/PSKnowledge/ClassExplorer/gasm.html)
 
 ---
 
 ## 6. Docsify
+  >
   > - [Docsify](https://docsify.js.org/)
   > - [How to Write Good Documentation with Docsify](https://www.freecodecamp.org/news/how-to-write-good-documentation-with-docsify/)
   
 ### 6.1. Plugins
+  >
   > - [Docsify Plugins](<https://docsify.js.org/plugins/>)
   > - [Docsify Plugins List](https://cdn.jsdelivr.net/npm/docsify@4/)
   > - [Dashboard](<https://github.com/erectbranch/docsify-dashboard>)
