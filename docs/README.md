@@ -51,7 +51,7 @@
 ## 0. Projekte
 
 ### [<span style="color:magenta">0.1. Projekte</span>](Projects/Projects.md)
-### [<span style="color:green">0.2. Kostwein</span>](/%2F/Kostwein.md)
+### [<span style="color:green">0.2. Kostwein</span>](Kostwein.md)
 ### [<span style="color:cyan">0.3. PowerShell</span>](Links/PowerShell.md)
 ### [<span style="color:cyan">0.4. JumboFrames - End-To-End</span>](Jumbo%20Frames%20-%20End-To-End.md)
 
@@ -74,7 +74,7 @@
 - [PSVisualizer](<https://github.com/In-Pro-Org/PSVisualizer>)
   > Erstellen eines Mermaid Diagramms vom Ablauf eines PowerShell Scripts
 
-#### [2.2.2. Kostwein](/%2F/Kostwein.md)
+#### [2.2.2. Kostwein](Kostwein.md)
 
 ##### 2.2.2.1. ConfigurationManager
 
@@ -187,7 +187,7 @@ New-ADGroupReport -Name 'PaloAlto*' -ReportTitle 'PaloAlto_Internet ADGroups' -E
 
 ### 3.2 Algorithmen
 
-- [<span style="color:rgb(241, 82, 220)">Algorithmen</span>](/%2F/Algorithmen.md)
+- [<span style="color:rgb(241, 82, 220)">Algorithmen</span>](Algorithmen.md)
   - [<span style="color:rgb(241, 82, 220)">Awesome Algorithms</span>](<https://github.com/tayllan/awesome-algorithms>)
   - [<span style="color:rgb(241, 82, 220)">The Ultimate Topic List(with Tutorials, Problems, and Templates)</span>](<https://blog.shahjalalshohag.com/topic-list/>)
 

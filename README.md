@@ -18,4 +18,4 @@ The anchor text must be lowercase
 Add the anchor to the end of the target path. For example:
 [about_Splatting](about_Splatting.md#splatting-with-arrays)
 [custom key bindings](https://code.visualstudio.com/docs/getstarted/keybindings#_custom-keybindings-for-refactorings)
-For more information, see .
+For more information, see [Documentation](docs/README.md)
