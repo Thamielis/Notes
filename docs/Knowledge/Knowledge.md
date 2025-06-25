@@ -129,7 +129,7 @@
 - [Use the Abstract Syntax Tree (AST) to inspect PowerShell command syntax in scripts](<./Knowledge/PowerShell/ScriptParsing/Use the Abstract Syntax Tree (AST) to inspect PowerShell command syntax in scripts.md>)
 - [Use the Abstract Syntax Tree (AST) to list parameters and variables in PowerShell functions](<./Knowledge/PowerShell/ScriptParsing/Use the Abstract Syntax Tree (AST) to list parameters and variables in PowerShell functions.md>)
 - [digitalguide-server-konfiguration-powershell-befehle](<./Knowledge/PowerShell/digitalguide-server-konfiguration-powershell-befehle.md>)
-- [Index](<./Knowledge/PowerShell/Index.md>)
+- [Index](<./Knowledge/PowerShell/index.md>)
 - [PowerShell](<./Knowledge/PowerShell/PowerShell.md>)
 - [PowerShell_TOC2](<./Knowledge/PowerShell/PowerShell_TOC2.md>)
 
@@ -159,7 +159,7 @@
 - [CMPivot.ps1](<./Knowledge/SystemCenter/CMPivot.ps1>)
 - [Dealing with reboot pending clients in Configuration Manager](<./Knowledge/SystemCenter/Dealing with reboot pending clients in Configuration Manager.md>)
 - [Get-Datasets.ps1](<./Knowledge/SystemCenter/Get-Datasets.ps1>)
-- [Index](<./Knowledge/SystemCenter/Index.md>)
+- [Index](<./Knowledge/SystemCenter/index.md>)
 - [MBAMRecoveryServiceInstaller.ps1](<./Knowledge/SystemCenter/MBAMRecoveryServiceInstaller.ps1>)
 - [MBAMWebSiteInstaller.ps1](<./Knowledge/SystemCenter/MBAMWebSiteInstaller.ps1>)
 - [SystemCenter_TOC](<./Knowledge/SystemCenter/SystemCenter_TOC.md>)

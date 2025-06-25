@@ -52,25 +52,25 @@
 
 ## 0. Projekte
 
-### [<span style="color:magenta">0.1. Projekte</span>](Projects/Projects.md)
+### [<span style="color:magenta">0.1. Projekte</span>](<Projects/Projects.md>)
 
-### [<span style="color:green">0.2. Kostwein</span>](Kostwein.md)
+### [<span style="color:green">0.2. Kostwein</span>](<Kostwein.md>)
 
-### [<span style="color:cyan">0.3. PowerShell</span>](Links/PowerShell.md)
+### [<span style="color:cyan">0.3. PowerShell</span>](<Links/PowerShell.md>)
 
-### [<span style="color:cyan">0.4. JumboFrames - End-To-End</span>](Jumbo%20Frames%20-%20End-To-End.md)
+### [<span style="color:cyan">0.4. JumboFrames - End-To-End</span>](<Jumbo%20Frames%20-%20End-To-End.md>)
 
 ---
 
 ## 2. Repos
 
-### [<span style ="color:cyan">2.1. PSModulesHelp</span>](PSModulesHelp/ModuleDoku.md)
+### [<span style ="color:cyan">2.1. PSModulesHelp</span>](<PSModulesHelp/ModuleDoku.md>)
 
-### [<span style="color:red">2.2. ReposWiki</span>](ReposWiki/ReposWiki.md)
+### [<span style="color:red">2.2. ReposWiki</span>](<ReposWiki/ReposWiki.md>)
 
   Alle GitHub Repositories
 
-#### [<span style="color:magenta">2.2.1. Meine Repos</span>](ReposWiki/Repositories.md)
+#### [<span style="color:magenta">2.2.1. Meine Repos</span>](<ReposWiki/Repositories.md>)
 
   <span style="color:cyan">Meine Programmierungen</span>
 
@@ -79,7 +79,7 @@
 - [PSVisualizer](<https://github.com/In-Pro-Org/PSVisualizer>)
   > Erstellen eines Mermaid Diagramms vom Ablauf eines PowerShell Scripts
 
-#### [2.2.2. Kostwein](Kostwein.md)
+#### [2.2.2. Kostwein](<Kostwein.md>)
 
 ##### 2.2.2.1. ConfigurationManager
 
@@ -112,16 +112,16 @@
 [regex] $Second = '.md\]' # Replace to '\]'
 ```
 
-- [<span style="color:#ff8000">Knowledge</span>](Knowledge/Knowledge.md)
-  - [<span style="color:red">ML</span>](Knowledge/ML/ML.md)
+- [<span style="color:#ff8000">Knowledge</span>](<Knowledge/Knowledge.md>)
+  - [<span style="color:red">ML</span>](<Knowledge/ML/ML.md>)
     - [<span style="color:green">Build KnowledgeBase</span>](<Knowledge/ML/How I Turned My Companys Docs into a Searchable Database with OpenAI.md>)
-  - [<span style="color:#4da6ff">PowerShell</span>](Knowledge/PowerShell/PowerShell.md)
+  - [<span style="color:#4da6ff">PowerShell</span>](<Knowledge/PowerShell/index.md>)
     - [<span style="color:#7d7dff">Fast FileContent Search</span>](https://www.leeholmes.com/scour-fast-personal-local-content-searches/)
     - [<span style="color:#ff8040">PSWriteHTML</span>](Knowledge/PowerShell/PSWriteHTML)
       - [<span style="color:cyan">Nested Tabs</span>](<Knowledge/PowerShell/PSWriteHTML/Nested Tabs, Diagram Updates, Diagram Events, Calendar Object and more in PSWriteHTML.md>)
 
-  - [<span style="color:cyan">Mermaid</span>](Knowledge/Mermaid/Mermaid.md)
-    - [<span style="color:cyan">Examples</span>](Knowledge/Mermaid/MermaidOnGitHubExamples.md)
+  - [<span style="color:cyan">Mermaid</span>](<Knowledge/Mermaid/Mermaid.md>)
+    - [<span style="color:cyan">Examples</span>](<Knowledge/Mermaid/MermaidOnGitHubExamples.md>)
 
 ### 3.1 Dokuments
 
@@ -171,9 +171,9 @@
 
 - [ ] [Snippets](<https://github.com/MartinGC94/Snippets>)
 
-##### 3.1.1.1 [<span style="color:#ff8040">Explore .NET Assemblies</span>](Explore_dotNETAssemblies.md)
+##### 3.1.1.1 [<span style="color:#ff8040">Explore .NET Assemblies</span>](<Explore_dotNETAssemblies.md>)
 
-##### 3.1.1.2 [PowerShell References](PowerShell-References.md)
+##### 3.1.1.2 [PowerShell References](<PowerShell-References.md>)
 
 ##### 3.1.1.3 [Active Directory Reports](<https://github.com/jdhitsolutions/ADReportingTools>)
 
@@ -195,7 +195,7 @@ New-ADGroupReport -Name 'PaloAlto*' -ReportTitle 'PaloAlto_Internet ADGroups' -E
 
 ### 3.2 Algorithmen
 
-- [<span style="color:rgb(241, 82, 220)">Algorithmen</span>](Algorithmen.md)
+- [<span style="color:rgb(241, 82, 220)">Algorithmen</span>](<Algorithmen.md>)
   - [<span style="color:rgb(241, 82, 220)">Awesome Algorithms</span>](<https://github.com/tayllan/awesome-algorithms>)
   - [<span style="color:rgb(241, 82, 220)">The Ultimate Topic List(with Tutorials, Problems, and Templates)</span>](<https://blog.shahjalalshohag.com/topic-list/>)
 
@@ -223,8 +223,8 @@ New-ADGroupReport -Name 'PaloAlto*' -ReportTitle 'PaloAlto_Internet ADGroups' -E
 
 ## 4. Links
 
-- [<span style="color:magenta">Links</span>](/Links/LinksWiki.md): Links zu meinen Themen
-- [<span style="color:cyan">PSModulesHelp</span>](PSModulesHelp/ModuleDoku.md): :information_source: Help für PowerShell Module
+- [<span style="color:magenta">Links</span>](<Links/LinksWiki.md>): Links zu meinen Themen
+- [<span style="color:cyan">PSModulesHelp</span>](<PSModulesHelp/ModuleDoku.md>): :information_source: Help für PowerShell Module
 
 ---
 
@@ -290,6 +290,6 @@ New-ADGroupReport -Name 'PaloAlto*' -ReportTitle 'PaloAlto_Internet ADGroups' -E
 >>[:bulb: Mein Repo to Wiki Script](https://github.com/thamielis/PSRepoOverview)
 >
 >**Veeam**
->>[Veeam](Links/Veeam.md)
+>>[Veeam](<Links/Veeam.md>)
 >>[:bangbang: Backup Infra erstellen](<https://jorgedelacruz.uk/2020/03/09/veeam-how-to-design-and-implement-a-backup-system-based-on-sla-policies-part-i-design-architecture-and-tagging-in-vsphere>)
 >
