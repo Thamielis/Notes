@@ -1,7 +1,7 @@
 <!-- docs/_navbar.md -->
 
 * Projekte
-  * [Sync-Sage2AD](Projects/Sync-Sage2AD/index.md)
+  * [Sync-Sage2AD](<Projects/Sync-Sage2AD/index.md>)
 
 
 * KnowledgeBase
