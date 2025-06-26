@@ -55,7 +55,7 @@ Describe "Validate links in all index.md files" {
 
                 $notLinked = foreach ($md in $allMdFiles) {
                     $relative = [System.IO.Path]::GetRelativePath($RootPath, $md.FullName) -replace '\\', '/'
-                    if ($allLinks -notcontains $relative) { $relative }
+                    if ($allLinks -inotcontains $relative) { $relative }
                 }
 
                 $coverage = if ($allMdFiles.Count -gt 0) {
