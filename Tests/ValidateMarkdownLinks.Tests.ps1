@@ -46,7 +46,7 @@ Describe "Validate links in all index.md files" {
                 $allLinks = foreach ($idx in $mdFiles) {
                     $idxContent = Get-Content -Path $idx.FullName -Raw
                     Get-MarkdownLinks -Content $idxContent | Where-Object { $_ -imatch '.md' } |
-                        ForEach-Object { $_.Replace('<', '').Replace('>', '') }
+                        ForEach-Object { $_.Trim('<>') }
                 }
 
                 $allLinks = $allLinks | Select-Object -Unique
