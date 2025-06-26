@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "Powershell v5 Classes & Concepts"
 date:   2016-08-18 21:46:00
 comments: true
@@ -29,8 +29,8 @@ thumbnail: /images/posts/powershell-classes-and-concepts/powershell-highlander.p
   
   * TOC
   {:toc}
+- {{renderer :tocgen2}}
 - -----
-
 ## Introduction
 
 Developers new to PowerShell, often find themselves looking for better design patterns to keep code clean and manageable.
@@ -117,21 +117,23 @@ A method should have an `access modifier`, `name`, `arguments`, and `return type
 
 ```powershell
 # Instance Method
-[String] getAlias() {
-    return $this.Alias
+[String] getAlias()
+{
+  return $this.Alias
 }
 
 # Static Method
-static [String] getClan() {
-    return [CyberNinja]::Clan
+static [String] getClan()
+{
+  return [CyberNinja]::Clan
 }
 
 # Static Method
-static [String] Whisper ([String] $Name) {
-    return "Hello {0}!" -f $Name
+static [String] Whisper ([String] $Name)
+{
+  return "Hello {0}!" -f $Name
 }
 ```
-
 #### $this
 
 The `$this` variable describes the **current instance** of the object. It is thought of like `$_` for classes.
@@ -141,7 +143,6 @@ The `$this` variable describes the **current instance** of the object. It is tho
 
 > *Note:* A static method cannot use **$this**.
 {: .pull .red }
-
 #### Constructor
 
 A `Constructor` is a type of method that is called only when an object is created.
@@ -155,15 +156,16 @@ To force any required arguments, we need a constructor.
 Constructors are similar to the `Begin` block in `Functions`.
 
 ```powershell
-class CyberNinja {
+class CyberNinja
+{
   # Constructor
-  CyberNinja ([String] $Alias, [int32] $HitPoints) {
+  CyberNinja ([String] $Alias, [int32] $HitPoints)
+  {
       $this.Alias = $Alias
       $this.HitPoints = $HitPoints
   }
 }
 ```
-
 #### ToString
 
 `ToString` is one of the convenient object methods seen in traditional OOP.
@@ -173,16 +175,19 @@ If an object is passed to a function which accepts a string argument, **ToString
 * The default object behavior can be forced by casting the object to `[System.Object]`.
 
 ```powershell
-class myColor {
+class myColor
+{
   [String] $Color
   [String] $Hex
 
-  myColor([String] $Color, [String] $Hex) {
+  myColor([String] $Color, [String] $Hex)
+  {
       $this.Color = $Color
       $this.Hex = $Hex
   }
 
-  [String] ToString() {
+  [String] ToString()
+  {
       return $this.Color + ":" + $this.Hex
   }
 }
@@ -197,14 +202,14 @@ Red:#FF0000
 PS C:\> Write-Host ([System.Object]$red).ToString()
 myColor
 ```
-
 #### Example 1: Class Structure
 
 The following code is a simple example of a basic class.
 Next, we look at how to use a class and continue with some more advanced concepts.
 
 ```powershell
-class CyberNinja {
+class CyberNinja
+{
   # Properties
   [String] $Alias
   [int32] $HitPoints
@@ -216,32 +221,36 @@ class CyberNinja {
   hidden [String] $RealName
 
   # Parameterless Constructor
-  CyberNinja () {
+  CyberNinja ()
+  {
   }
 
   # Constructor
-  CyberNinja ([String] $Alias, [int32] $HitPoints) {
+  CyberNinja ([String] $Alias, [int32] $HitPoints)
+  {
       $this.Alias = $Alias
       $this.HitPoints = $HitPoints
   }
 
   # Method
-  [String] getAlias() {
+  [String] getAlias()
+  {
      return $this.Alias
   }
 
   # Static Method
-  static [String] getClan() {
+  static [String] getClan()
+  {
       return [CyberNinja]::Clan
   }
 
   # ToString Method
-  [String] ToString() {
+  [String] ToString()
+  {
       return $this.Alias + ":" + $this.HitPoints
   }
 }
 ```
-
 ### Creating instances of a class
 
 To use a class, we must instantiate an object unless using static properties or methods.
@@ -271,7 +280,6 @@ When considering code design, it is common to declare the object type explicitly
 ```console
 PS C:\> [CyberNinja] $Ken = [CyberNinja]::new("Ken", 28)
 ```
-
 ### Static vs. Instance
 
 The keyword `static` is a **non-access modifier** for properties and methods within a class.
@@ -280,7 +288,6 @@ The keyword `static` is a **non-access modifier** for properties and methods wit
 * For **methods**, the method cannot use instanced variables such as `$this.Name`
 
 Looking back at *Example 1*, if we create ten *CyberNinja* objects and change the **$Clan** property of any one of them, the change will be reflected in every single *Object*.
-
 #### Static
 
 * Uses the `::` operator to access the property or method.
@@ -301,7 +308,6 @@ $Ken::Clan
 $Ken::Clan = "DevOps Library"
 [CyberNinja]::Clan = "DevOps Library"
 ```
-
 #### Instance
 
 * Uses the `.` operator to access the property or method.
@@ -319,7 +325,6 @@ $Ken.HitPoints
 # Set Instance Prop Value
 $Ken.Alias = "Mekuto"
 ```
-
 ### Accessors/Mutators aka Getter/Setter
 
 Properties in a PowerShell class can be `static`, `public`, and `hidden`.
@@ -411,7 +416,6 @@ RealName      Property     string RealName {get;set;}
 # Hidden
 [Math] | Get-Member -Force
 ```
-
 ### Overloaded Methods
 
 `Method Overloading` is a way to define multiple methods with the same name.
@@ -421,19 +425,23 @@ In the following code example, `SayHello()` and `add()` can be called different 
 ```powershell
 class OverloadExample
 {
-  static [String] SayHello () {
+  static [String] SayHello ()
+  {
       return "Hello There!"
   }
 
-  static [String] SayHello ([String] $Name) {
+  static [String] SayHello ([String] $Name)
+  {
       return "Hello {0}!" -f $Name
   }
 
-  static [int] add([int] $a, [int] $b) {
+  static [int] add([int] $a, [int] $b)
+  {
       return $a + $b
   }
 
-  static [double] add([double] $a, [double] $b) {
+  static [double] add([double] $a, [double] $b)
+  {
       return $a + $b
   }
 }
@@ -460,13 +468,16 @@ We could also refactor the above example to simplify `SayHello()`.
 In this next snippet, the parameterless `SayHello()` method is funneled through the single argument method.
 
 ```powershell
-class OverloadRefactor {
+class OverloadRefactor
+{
   # Calls Overloaded Method
-  static [String] SayHello () {
+  static [String] SayHello ()
+  {
       return [OverloadRefactor]::SayHello("There")
   }
 
-  static [String] SayHello ([String] $Name) {
+  static [String] SayHello ([String] $Name)
+  {
       return "Hello {0}!" -f $Name
   }
 }
@@ -479,7 +490,6 @@ Hello There!
 PS C:\> [OverloadRefactor]::SayHello("Mike")
 Hello Mike!
 ```
-
 ### Inheritance
 
 `Inheritance` allows for programmers to create classes from existing classes by **extending** them.
@@ -490,16 +500,19 @@ When a class is **extended**, all of the members from the base or parent class a
 
 ```powershell
 # Foo is the parent class
-class Foo {
+class Foo
+{
   [string] $Message = "Hello!"
 
-  [string] GetMessage() {
+  [string] GetMessage()
+  {
       return ("Message: {0}" -f $this.Message)
   }
 }
 
 # Bar extends Foo and inherits its members
-class Bar : Foo {
+class Bar : Foo
+{
 
 }
 ```
@@ -524,22 +537,27 @@ Message: Hello!
 A child class can call the constructor of its parent by using the `: base()` command on its constructor.
 
 ```powershell
-class ZeroWing {
+class ZeroWing
+{
   [String] $User
   [String] $Message
 
-  ZeroWing([String] $User, [String] $Message) {
+  ZeroWing([String] $User, [String] $Message)
+  {
       $this.User = $User
       $this.Message = $Message
   }
 
-  [String] TurnOn() {
+  [String] TurnOn()
+  {
       return ("{0} : {1}" -f $this.User, $this.Message)
   }
 }
 
-class MainScreen : ZeroWing {
-  MainScreen([String] $User, [String] $Message) : base($User, $Message) {
+class MainScreen : ZeroWing
+{
+  MainScreen([String] $User, [String] $Message) : base($User, $Message)
+  {
 
   }
 }
@@ -556,7 +574,6 @@ CATS
 PS C:\> $mainScreen.TurnOn()
 CATS : All your base are belong to us.
 ```
-
 ### Enumerations
 
 An `Enum` is a special *Type* which defines a set of named constants.
@@ -564,7 +581,8 @@ In PowerShell, we can use an **Enum** as an argument type for a method in a *Cla
 The Enum type lets a method **restrict** the argument values it can accept.
 
 ```powershell
-Enum Turtles {
+Enum Turtles
+{
   Donatello
   Leonardo
   Michelangelo
@@ -573,7 +591,8 @@ Enum Turtles {
 ```
 
 ```powershell
-Enum Turtles {
+Enum Turtles
+{
   Donatello = 1
   Leonardo = 2
   Michelangelo = 3
@@ -588,7 +607,6 @@ PS C:\> [System.Enum]::GetValues([Turtles])
 To get int values from an enum
 PS C:\> [System.Enum]::GetValues([Turtles]) | foreach { [int] $_ }
 ```
-
 ## Design Patterns
 ### Polymorphism
 
@@ -598,45 +616,56 @@ In more advanced cases we rely on *interfaces*. However, interfaces are not incl
 Using classes to demonstrate polymorphism is straightforward as seen in the next example.
 
 ```powershell
-class Foo {
+class Foo
+{
   [string] $SomePram
 
-  Foo([string]$somePram) {
+  Foo([string]$somePram)
+  {
       $this.SomePram = $somePram
   }
 
-  [string] GetMessage() {
+  [string] GetMessage()
+  {
       return $null
   }
 
-  [void] WriteMessage() {
+  [void] WriteMessage()
+  {
       Write-Host($this.GetMessage())
   }
 }
 
-class Bar : Foo {
-  Bar([string]$somePram): base($somePram) {
+class Bar : Foo
+{
+  Bar([string]$somePram): base($somePram)
+  {
 
   }
 
-  [string] GetMessage() {
+  [string] GetMessage()
+  {
       return ("{0} Success" -f $this.SomePram)
   }
 }
 
-class Bar2 : Foo {
-  Bar2([string]$somePram): base($somePram) {
+class Bar2 : Foo
+{
+  Bar2([string]$somePram): base($somePram)
+  {
 
   }
 
-  [string] GetMessage() {
+  [string] GetMessage()
+  {
       return ("{0} Success" -f $this.SomePram)
   }
 }
 
 [Foo[]] $foos = @([Bar]::new("Bar"), [Bar2]::new("Bar2"))
 
-foreach($foo in $foos) {
+foreach($foo in $foos)
+{
   $foo.WriteMessage()
 }
 ```
@@ -649,7 +678,6 @@ Bar2 Success
 While this may work in some cases, we may decide that the logic for `WriteMessage()` should not be in the base class.
 If we had interfaces, this feat would be simple enough.
 Since we do not, this brings us to the next pattern: *Abstract Classes*.
-
 ### Abstract Classes
 
 An `Abstract Class` is similar to a combination of an **Interface** and a **Class**.
@@ -664,33 +692,40 @@ Since PowerShell **does not** have the `abstract` keyword, we need to simulate t
 * `SayHello()` in the *Foo* class **must be overridden** by a child class. Otherwise, we should throw an error.
 
 ```powershell
-class Foo {
-  Foo () {
+class Foo
+{
+  Foo ()
+  {
       $type = $this.GetType()
 
-      if ($type -eq [Foo]) {
+      if ($type -eq [Foo])
+      {
           throw("Class $type must be inherited")
       }
   }
 
-  [string] SayHello() {
+  [string] SayHello()
+  {
       throw("Must Override Method")
   }
 }
 
-class Bar : Foo {
-  Bar () {
+class Bar : Foo
+{
+  Bar ()
+  {
 
   }
 
-  [string] SayHello() {
+  [string] SayHello()
+  {
       return "Hello"
   }
 }
 
 ```
 
-```powershell
+```console
 # Can not instantiate [Foo]
 # $Foo = [Foo]::new()
 
@@ -704,11 +739,11 @@ $Bar.SayHello()
 # Can use polymorphism
 [Foo[]] $MyFoo = @([Bar]::new())
 
-foreach($obj in $MyFoo) {
+foreach($obj in $MyFoo)
+{
   $obj.SayHello()
 }
 ```
-
 ### Singleton
 
 The `Singleton` design pattern used to restrict the instantiation of a *Class* to **one object only**.
@@ -720,14 +755,17 @@ Typically, we want to use a singleton when:
 * There is a need to control concurrent access to a shared resource.
 
 ```powershell
-class Singleton {
+class Singleton
+{
   # Instanced Property
   [int] $SomeParm
 
   static [Singleton] $instance
 
-  static [Singleton] GetInstance() {
-      if ([Singleton]::instance -eq $null) {
+  static [Singleton] GetInstance()
+  {
+      if ([Singleton]::instance -eq $null)
+      {
           [Singleton]::instance = [Singleton]::new()
       }
 
@@ -736,7 +774,7 @@ class Singleton {
 }
 ```
 
-```powershell
+```console
 PS C:\> $single = [Singleton]::GetInstance()
 
 PS C:\> $single.SomeParm = "Highlander"
@@ -752,7 +790,6 @@ Highlander
 
 > There can be only one!
 {: .pull .red }
-
 ### Factory Pattern
 
 The `Factory Pattern` considered a **creational pattern**, is by far one of the most valuable models.
@@ -769,15 +806,18 @@ This pattern also allows for the creation of objects without exposing the underl
  # Constructor restricts this class being instantiated directly.
  # Methods are defined and force children to override.
  #>
-class Drink {
+class Drink
+{
   [String] $Name
 
   [Int32] $Caffeine
 
-  Drink ([String] $Name, [Int32] $Caffeine) {
+  Drink ([String] $Name, [Int32] $Caffeine)
+  {
       $type = $this.GetType()
 
-      if ($type -eq [Drink]) {
+      if ($type -eq [Drink])
+      {
           throw("Class $type must be inherited")
       }
 
@@ -785,7 +825,8 @@ class Drink {
       $this.Caffeine = $Caffeine
   }
 
-  [string] Open() {
+  [string] Open()
+  {
       throw("Must Override Method")
   }
 
@@ -796,12 +837,15 @@ class Drink {
  # Constructor uses base constructor.
  # Methods overrides are declared.
  #>
-class EneryDrink : Drink {
-  EneryDrink ([String] $Name, [Int32] $Caffeine) : base ($Name, $Caffeine) {
+class EneryDrink : Drink
+{
+  EneryDrink ([String] $Name, [Int32] $Caffeine) : base ($Name, $Caffeine)
+  {
   }
 
   # @Override
-  [string] Open() {
+  [string] Open()
+  {
       return "Popped the tab on a can of: {0}" -f $this.Name
   }
 }
@@ -811,12 +855,15 @@ class EneryDrink : Drink {
  # Constructor uses base constructor.
  # Methods overrides are declared.
  #>
-class Soda : Drink {
-  Soda ([String] $Name, [Int32] $Caffeine) : base ($Name, $Caffeine) {
+class Soda : Drink
+{
+  Soda ([String] $Name, [Int32] $Caffeine) : base ($Name, $Caffeine)
+  {
   }
 
   # @Override
-  [string] Open() {
+  [string] Open()
+  {
       return "Twisted the top of a bottle of: {0}" -f $this.Name
   }
 }
@@ -826,28 +873,31 @@ class Soda : Drink {
  # Instance Methods generate new Drinks.
  # Static Properties/Methods demonstrate Storage/Fetch Concepts.
  #>
-class DrinkFactory {
-  # Store and Fetch
+class DrinkFactory
+{
+  #Store and Fetch
   static [Drink[]] $Drinks
 
-  static [Object] getByType([Object] $O) {
+  static [Object] getByType([Object] $O)
+  {
       return [DrinkFactory]::Drinks.Where({$_ -is $O})
   }
 
-  static [Object] getByName([String] $Name) {
+  static [Object] getByName([String] $Name)
+  {
       return [DrinkFactory]::Drinks.Where({$_.Name -eq $Name})
   }
 
-  # Create an instance
-  [Drink] makeDrink([String] $Name, [String] $Caffeine, [String] $Type) {
+  #Create an instance
+  [Drink] makeDrink([String] $Name, [String] $Caffeine, [String] $Type)
+  {
       return (New-Object -TypeName "$Type" -ArgumentList $Name, $Caffeine)
   }
 }
 ```
-
 #### Standard Factory Object Generation
 
-```powershell
+```console
 PS C:\> [DrinkFactory] $DrinkFactory = [DrinkFactory]::new()
 
 PS C:\> [Drink] $Beverage1 = $DrinkFactory.makeDrink("RedBull", 100, "EneryDrink")
@@ -865,10 +915,9 @@ Popped the tab on a can of: Monster
 PS C:\> $Beverage3.Open()
 Twisted the top of a bottle of: Coke
 ```
-
 #### Using Static Methods to Set/Fetch Objects
 
-```powershell
+```console
 PS C:\> [DrinkFactory]::Drinks = @(
           [EneryDrink]::new("RedBull", 28),
           [EneryDrink]::new("Monster", 20),
@@ -890,7 +939,6 @@ Name Caffeine
 Coke       24
 
 ```
-
 ### Method Chaining
 
 `Method chaining` is a popular design pattern in languages such as *JavaScript* and *PHP*. 
@@ -908,67 +956,78 @@ This pattern is also known as the **named parameter idiom**. To create this patt
 {: .pull .blue }
 
 ```powershell
-Enum Crust {
+Enum Crust
+{
   Thin
   HandTossed
   DeepDish
 }
 
-Enum Sauce {
+Enum Sauce
+{
   Marinara
   GarlicParmesan
   Buffalo
 }
 
-Enum Toppings {
+Enum Toppings
+{
   Pepperoni
   Sausage
   Chicken
 }
 
-class Pizza {
+class Pizza
+{
   [Crust] $crust
   [Sauce] $sauce
   [Toppings] $toppings
 
   # Default, Parameterless Constructor
-  Pizza() {
+  Pizza()
+  {
 
   }
 
   # Named Constructor
-  static [Pizza] newOrder() {
+  static [Pizza] newOrder()
+  {
       return [Pizza]::New()
   }
 
 
-  [Pizza] chooseCrust([Crust] $crust) {
+  [Pizza] chooseCrust([Crust] $crust)
+  {
       $this.crust = $crust
       return $this
   }
 
-  [Pizza] addSauce([Sauce] $sauce) {
+  [Pizza] addSauce([Sauce] $sauce)
+  {
       $this.sauce = $sauce
       return $this
   }
 
-  [Pizza] addToppings([Toppings] $toppings) {
+  [Pizza] addToppings([Toppings] $toppings)
+  {
       $this.toppings = $toppings
       return $this
   }
 
-  [Void] placeOrder() {
+  [Void] placeOrder()
+  {
       Write-Host ("Pizza ordered. Details {0}" -f $this.toString())
   }
 
-  [String] toString() {
+  [String] toString()
+  {
       return "Crust: {0} Sauce: {1} Toppings: {2}" -f $this.crust, $this.sauce, $this.toppings
   }
 
 }
 ```
 
-```powershell
+```console
 # separate steps
 $myPizza = [Pizza]::new()
 $myPizza.chooseCrust("DeepDish").addSauce("GarlicParmesan").addToppings("Sausage") | Out-Null
@@ -997,7 +1056,6 @@ cls
  | %{$_.addToppings("Chicken")} `
  | %{$_.placeOrder()}
 ```
-
 ### Base Splat Pattern
 
 While this may not be a traditional class design pattern, I created this pattern to simply **using object properties** with other PowerShell commands.
@@ -1005,21 +1063,23 @@ While this may not be a traditional class design pattern, I created this pattern
 Calling a function with many positional arguments OR many named Parameters can become difficult to manage.
 
 To solve this issue, we use a technique known as **Splatting**.
-
 #### Using object properties to Splat a function
 
 ```powershell
-class Concept {
+class Concept
+{
   [String] $Name
   [Int32] $Answer
 
-  Concept ([String] $Name, [Int32] $Answer) {
+  Concept ([String] $Name, [Int32] $Answer)
+  {
       $this.Name = $Name
       $this.Answer = $Answer
   }
 }
 
-function Get-Meaning ($Name, $Answer) {
+function Get-Meaning ($Name, $Answer)
+{
   "The meaning of {0} is {1}." -f $Name, $Answer
 }
 
@@ -1032,17 +1092,19 @@ $parms = @{
 
 Get-Meaning @parms
 ```
-
 #### Using Base Helper to Generate Splat HashTable
 
 ```powershell
-class Helper {
+class Helper
+{
   [HashTable] Splat([String[]] $Properties)
   {
       $splat = @{}
 
-      foreach($prop in $Properties) {
-          if($this.GetType().GetProperty($prop)) {
+      foreach($prop in $Properties)
+      {
+          if($this.GetType().GetProperty($prop))
+          {
               $splat.Add($prop, $this.$prop)
           }
       }
@@ -1051,25 +1113,28 @@ class Helper {
   }
 }
 
-class Concept : Helper {
+class Concept : Helper
+{
   [String] $Name
   [Int32] $Answer
   [Boolean] $HasTowel
 
-  Concept ([String] $Name, [Int32] $Answer) {
+  Concept ([String] $Name, [Int32] $Answer)
+  {
       $this.Name = $Name
       $this.Answer = $Answer
   }
 }
 
-function Get-Meaning ($Name, $Answer) {
+function Get-Meaning ($Name, $Answer)
+{
   "The meaning of {0} is {1}." -f $Name, $Answer
 }
 ```
 
 Using the `Helper` class, anytime we need to *Splat* selected properties from an object, the base class handles the heavy lifting.
 
-```powershell
+```console
 PS C:\> [Concept] $concept = [Concept]::new("Life", 42)
 
 PS C:\> $splat = $concept.Splat(("Name", "Answer"))
@@ -1077,7 +1142,6 @@ PS C:\> $splat = $concept.Splat(("Name", "Answer"))
 PS C:\> Get-Meaning @splat
 The meaning of Life is 42.
 ```
-
 ### Loading Class Files
 
 Currently, there are some **restrictions** for loading class files.
@@ -1092,25 +1156,26 @@ If we use the following common example of **dot source** loading `.ps1` files, w
 $Public  = @( Get-ChildItem -Path $PSScriptRoot\Public\*.ps1 -ErrorAction SilentlyContinue )
 
 # Dot source the files
-foreach($import in $Public) {
-  try {
+foreach($import in $Public)
+{
+  try
+  {
       . $import.fullname
   }
-  catch {
+  catch
+  {
       Write-Error -Message "Failed to import function $($import.fullname): $_"
   }
 }
 
 Export-ModuleMember -Function $Public.Basename
 ```
-
 #### Possible Workarounds
 
 * Class/child class naming conventions which force alphabetic ordering precedence.
 * Recursive try/catch until all of the classes load.
 * Manually define the order and files in the module manifest.
 * Use a lower level directory structure for child classes.
-
 ## Conclusion
 
 The PowerShell language is steadily evolving, which in turn adapts developer methodologies.

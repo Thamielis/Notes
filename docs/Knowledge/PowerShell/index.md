@@ -1,13 +1,19 @@
-# PowerShell
+---
+layout: toc
+title: "PowerShell"
+toc: no_toc_section
+---
 
 [Back](<Knowledge/index.md>)
 
-- [Windows Triaging with PowerShell](<Knowledge/PowerShell/index.md>)
-  - [Part 1 - Parsing Event Logs](<Knowledge/PowerShell/Windows Troubleshooting/Windows Triaging with Powershell — Part 1 Parsing Event Logs.md>)
-  - [Part 2 - Artifacts Collection](<Knowledge/PowerShell/Windows Troubleshooting/Windows Triaging with Powershell — Part 2 Artifacts Collection.md>)
+## [01. Development](<Knowledge/PowerShell/01_Development/index.md>)
 
-- [Troubleshooting Packs](<Knowledge/PowerShell/index.md>)
-  - [Diagnosing common Problems](<Knowledge/PowerShell/Windows Troubleshooting/Diagnosing common Windows problems with PowerShell troubleshooting packs.md>)
+### [Documenting](<Knowledge/PowerShell/01_Development/Documenting/index.md>)
 
-- [Debugging](<Knowledge/PowerShell/index.md>)
-  - [Tracing Through Complex Scripts](<Knowledge/PowerShell/Basics/Tracing Your Way Through a Complex PowerShell Script.md>)
+## [Classes](<Knowledge/PowerShell/Classes/index.md>)
+
+## [Patterns](<Knowledge/PowerShell/Patterns/index.md>)
+
+## [Windows Troubleshooting](<Knowledge/PowerShell/Windows Troubleshooting/index.md>)
+
+## [Basics](<Knowledge/PowerShell/basics/index.md>)
