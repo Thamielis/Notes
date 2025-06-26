@@ -102,7 +102,7 @@
 
 ---
 
-## 3. Knowledge
+## [3. Knowledge](<Knowledge/index.md>)
 
 !> FileTreeGenerator vsCode
 
