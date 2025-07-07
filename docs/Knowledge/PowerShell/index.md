@@ -17,3 +17,5 @@ toc: no_toc_section
 ## [Windows Troubleshooting](<Knowledge/PowerShell/Windows Troubleshooting/index.md>)
 
 ## [Basics](<Knowledge/PowerShell/basics/index.md>)
+
+## [Pester](<Knowledge/PowerShell/Pester/index.md>)
