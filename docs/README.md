@@ -10,6 +10,7 @@
     - [0.3. PowerShell](#03-powershell)
     - [0.4. JumboFrames - End-To-End](#04-jumboframes---end-to-end)
   - [1. Awesome Repos](#1-awesome-repos)
+    - [GitHub Actions](#github-actions)
   - [2. Repos](#2-repos)
     - [2.1. PSModulesHelp](#21-psmoduleshelp)
     - [2.2. ReposWiki](#22-reposwiki)
@@ -85,6 +86,21 @@
 > - [AI]
 >   - [A curated list of resources dedicated to Natural Language Generation (NLG)](https://github.com/accelerated-text/awesome-nlg#readme)
 >   - [A curated list of the Question Answering (QA)](https://github.com/seriousran/awesome-qa#readme)
+
+### GitHub Actions
+
+- [OpenCommit — improve commits with AI 🧙](https://github.com/marketplace/actions/opencommit-improve-commits-with-ai)
+- [Cache](https://github.com/marketplace/actions/cache)
+- [ChatGPT CodeReviewer](https://github.com/marketplace/actions/chatgpt-codereviewer)
+- [Create Pull Request](https://github.com/marketplace/actions/create-pull-request)
+- [AI-based PR Reviewer & Summarizer with Chat Capabilities](https://github.com/marketplace/actions/ai-based-pr-reviewer-summarizer-with-chat-capabilities)
+- [release-please-action](https://github.com/marketplace/actions/release-please-action)
+- [Code Review GPT](https://github.com/marketplace/actions/code-review-gpt)
+- [Automatic Pull Request](https://github.com/marketplace/actions/automatic-pull-request)
+- [semantic-pull-request](https://github.com/marketplace/actions/semantic-pull-request)
+- [Repo Visualizer](https://github.com/marketplace/actions/repo-visualizer)
+- [Python Semantic Release](https://github.com/marketplace/actions/python-semantic-release)
+- [Test Reporter](https://github.com/marketplace/actions/test-reporter)
 
 ---
 
