@@ -9,6 +9,7 @@
     - [0.2. Kostwein](#02-kostwein)
     - [0.3. PowerShell](#03-powershell)
     - [0.4. JumboFrames - End-To-End](#04-jumboframes---end-to-end)
+  - [1. Awesome Repos](#1-awesome-repos)
   - [2. Repos](#2-repos)
     - [2.1. PSModulesHelp](#21-psmoduleshelp)
     - [2.2. ReposWiki](#22-reposwiki)
@@ -60,6 +61,30 @@
 ### [<span style="color:cyan">0.3. PowerShell</span>](<Links/PowerShell.md>)
 
 ### [<span style="color:cyan">0.4. JumboFrames - End-To-End</span>](<Jumbo%20Frames%20-%20End-To-End.md>)
+
+---
+
+## 1. Awesome Repos
+>
+> - [Awesome](https://github.com/sindresorhus/awesome)
+>
+> - [GitHub](<https://github.com/phillipadsmith/awesome-github#readme>)
+>   - [CheatSheet & Flow](<https://github.com/arslanbilal/git-cheat-sheet#readme>)
+>   - [Tips](https://github.com/git-tips/tips#git-tips)
+>   - [A curated list of awesome actions to use on GitHub](https://github.com/sdras/awesome-actions#readme)
+>   - [undefined](https://github.com/stevemao/awesome-git-addons#readme)
+>
+> - [PowerShell](<https://github.com/janikvonrotz/awesome-powershell#awesome-powershell>)
+>
+> - [Programming]
+>   - [Resources for learning and using recursion schemes.](https://github.com/passy/awesome-recursion-schemes#readme)
+>   - [A curated list of functional programming resources](https://github.com/lucasviola/awesome-functional-programming#readme)
+>   - [A curated list about design systems focused on developers.](https://github.com/klaufel/awesome-design-systems#readme)
+>   - [Nitric Cloud-Native Framework  Get Infrastructure from Code](https://nitric.io/?utm_campaign=github_repo&utm_medium=referral&utm_content=sindresorhus&utm_source=github)
+>
+> - [AI]
+>   - [A curated list of resources dedicated to Natural Language Generation (NLG)](https://github.com/accelerated-text/awesome-nlg#readme)
+>   - [A curated list of the Question Answering (QA)](https://github.com/seriousran/awesome-qa#readme)
 
 ---
 
