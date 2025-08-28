@@ -81,3 +81,87 @@ $ModuleParameters = @{
 $OutputPath = "C:\Users\admmellunigm\GitHub\$($ModuleParameters.ModuleName)"
 
 New-ModuleProject -ModuleParameters $ModuleParameters -DestinationPath $OutPutPath
+
+#######################################################################################
+
+# PSConfiguration
+$ModuleParameters = @{
+    ModuleName     = 'PSConfiguration'
+    Description    = 'PowerShell tool for Configurations Management'
+    Version        = '0.0.1'
+    FN             = 'Mario Mellunig'
+    CICD           = 'GITHUB'
+    GitHubAOptions = 'pwshcore'
+    RepoType       = 'GITHUB'
+    ReadtheDocs    = 'READTHEDOCS'
+    RTDTheme       = 'MATERIALTHEME'
+    License        = 'MIT'
+    Changelog      = 'CHANGELOG'
+    COC            = 'NONE'
+    Contribute     = 'NONE'
+    Security       = 'NONE'
+    CodingStyle    = 'NONE'
+    Help           = 'Yes'
+    Pester         = '5'
+    #S3Bucket       = 'PSGallery'
+    NoLogo         = $true
+}
+$OutputPath = "C:\Users\admmellunigm\GitHub\$($ModuleParameters.ModuleName)"
+
+New-ModuleProject -ModuleParameters $ModuleParameters -DestinationPath $OutPutPath
+
+#######################################################################################
+
+# PSConfiguration
+$ModuleParameters = @{
+    ModuleName     = 'PSConfigManager'
+    Description    = 'PowerShell tool for Configurations Management'
+    Version        = '0.0.1'
+    FN             = 'Mario Mellunig'
+    CICD           = 'GITHUB'
+    GitHubAOptions = 'pwshcore'
+    RepoType       = 'GITHUB'
+    ReadtheDocs    = 'READTHEDOCS'
+    RTDTheme       = 'MATERIALTHEME'
+    License        = 'MIT'
+    Changelog      = 'CHANGELOG'
+    COC            = 'NONE'
+    Contribute     = 'NONE'
+    Security       = 'NONE'
+    CodingStyle    = 'NONE'
+    Help           = 'Yes'
+    Pester         = '5'
+    #S3Bucket       = 'PSGallery'
+    NoLogo         = $true
+}
+$OutputPath = "C:\Users\admmellunigm\GitHub\$($ModuleParameters.ModuleName)"
+
+New-ModuleProject -ModuleParameters $ModuleParameters -DestinationPath $OutPutPath
+
+#######################################################################################
+
+# Device2UserMapping
+$ModuleParameters = @{
+    ModuleName     = 'Device2UserMapping'
+    Description    = 'PowerShell tool for mapping Main Users to Devices'
+    Version        = '0.0.1'
+    FN             = 'Mario Mellunig'
+    CICD           = 'GITHUB'
+    GitHubAOptions = 'pwshcore'
+    RepoType       = 'GITHUB'
+    ReadtheDocs    = 'READTHEDOCS'
+    RTDTheme       = 'MATERIALTHEME'
+    License        = 'MIT'
+    Changelog      = 'CHANGELOG'
+    COC            = 'NONE'
+    Contribute     = 'NONE'
+    Security       = 'NONE'
+    CodingStyle    = 'NONE'
+    Help           = 'Yes'
+    Pester         = '5'
+    #S3Bucket       = 'PSGallery'
+    NoLogo         = $true
+}
+$OutputPath = "C:\Users\admmellunigm\GitHub\$($ModuleParameters.ModuleName)"
+
+New-ModuleProject -ModuleParameters $ModuleParameters -DestinationPath $OutPutPath
