@@ -112,7 +112,7 @@ New-ModuleProject -ModuleParameters $ModuleParameters -DestinationPath $OutPutPa
 
 #######################################################################################
 
-# PSConfiguration
+# PSConfigManager
 $ModuleParameters = @{
     ModuleName     = 'PSConfigManager'
     Description    = 'PowerShell tool for Configurations Management'
@@ -144,6 +144,62 @@ New-ModuleProject -ModuleParameters $ModuleParameters -DestinationPath $OutPutPa
 $ModuleParameters = @{
     ModuleName     = 'Device2UserMapping'
     Description    = 'PowerShell tool for mapping Main Users to Devices'
+    Version        = '0.0.1'
+    FN             = 'Mario Mellunig'
+    CICD           = 'GITHUB'
+    GitHubAOptions = 'pwshcore'
+    RepoType       = 'GITHUB'
+    ReadtheDocs    = 'READTHEDOCS'
+    RTDTheme       = 'MATERIALTHEME'
+    License        = 'MIT'
+    Changelog      = 'CHANGELOG'
+    COC            = 'NONE'
+    Contribute     = 'NONE'
+    Security       = 'NONE'
+    CodingStyle    = 'NONE'
+    Help           = 'Yes'
+    Pester         = '5'
+    #S3Bucket       = 'PSGallery'
+    NoLogo         = $true
+}
+$OutputPath = "C:\Users\admmellunigm\GitHub\$($ModuleParameters.ModuleName)"
+
+New-ModuleProject -ModuleParameters $ModuleParameters -DestinationPath $OutPutPath
+
+#######################################################################################
+
+# PSHelpTree
+$ModuleParameters = @{
+    ModuleName     = 'PSHelpTree'
+    Description    = 'PowerShell tool for viewing Module´s Help'
+    Version        = '0.0.1'
+    FN             = 'Mario Mellunig'
+    CICD           = 'GITHUB'
+    GitHubAOptions = 'pwshcore'
+    RepoType       = 'GITHUB'
+    ReadtheDocs    = 'READTHEDOCS'
+    RTDTheme       = 'MATERIALTHEME'
+    License        = 'MIT'
+    Changelog      = 'CHANGELOG'
+    COC            = 'NONE'
+    Contribute     = 'NONE'
+    Security       = 'NONE'
+    CodingStyle    = 'NONE'
+    Help           = 'Yes'
+    Pester         = '5'
+    #S3Bucket       = 'PSGallery'
+    NoLogo         = $true
+}
+$OutputPath = "C:\Users\admmellunigm\GitHub\$($ModuleParameters.ModuleName)"
+
+New-ModuleProject -ModuleParameters $ModuleParameters -DestinationPath $OutPutPath
+
+#######################################################################################
+
+# PSScriptAnalyzer
+$ModuleParameters = @{
+    ModuleName     = 'PSScriptAnalyzer'
+    Description    = 'PowerShell tool for Analyzing Scripts/Modules/Functions'
     Version        = '0.0.1'
     FN             = 'Mario Mellunig'
     CICD           = 'GITHUB'
