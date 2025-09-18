@@ -1,8 +1,5 @@
-https://powershell.one/powershell-internals/parsing-and-tokenization/advanced-tokenizer
-
-> The advanced PowerShell Parser turns PowerShell code into detailed tokens. Use them to auto-document, analyze or just find your scripts. You can also perfect...
-
 # Advanced Tokenizing PowerShell Scripts - powershell.one
+
 The advanced **PowerShell Parser** turns **PowerShell** code into detailed tokens. Use them to auto-document, analyze or just find your scripts. You can also perfectly colorize your code.
 
 When **PowerShell** surfaced in version 1, it came with a basic [**PSParser**](https://powershell.one/powershell-internals/parsing-and-tokenization/simple-tokenizer) that can turn **PowerShell Code** into tokens. It soon turned out that **PSParser** has a few blind spots and cannot deal with *nested tokens*.

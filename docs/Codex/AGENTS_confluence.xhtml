@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ac="http://atlassian.com/content" xmlns:ri="http://atlassian.com/resource/identifier">
+<body>
+<h1>AGENTS – Leitfaden für LLMs (PSRunSteps)</h1>
+<p/>
+<h2>Zweck</h2>
+<p>Diese Datei richtet sich an LLM-gestützte Coding-Agents (z. B. OpenAI Codex) und Entwickler:innen. Sie beschreibt **verbindliche Regeln und Workflows** für das Repository **PSRunSteps**, das auf dem **Catesta**-Template basiert.</p>
+<p/>
+<hr/>
+<p/>
+<h2>Goldene Regeln (TL;DR)</h2>
+<p>1. **Nutze IMMER den Build:** Tests, Linting, Doku usw. werden **ausschließlich** über Catesta/Invoke-Build ausgeführt – **nicht** direkt über `Invoke-Pester` o. ä.</p>
+<p>   **Befehl (verpflichtend):**</p>
+<p>   ```powershell</p>
+<p>   Invoke-Build ./src/PSRunStepsbuild.ps1 -Task Test</p>
+<p>   ```</p>
+<p>2. **Eine Funktion = eine Datei:** Jede Funktion liegt als eigene `*.ps1`-Datei unter `./src/PSRunSteps/` (Public/Private), **Dateiname = Funktionsname**.</p>
+<p>3. **Vollständige Hilfe pro Funktion:** Jede Funktionsdatei startet mit **kommentarbasiertem Help-Block** (Synopsis, Description, Parameters, Examples, Outputs/Notes).</p>
+<p>4. **Pester 5-Tests Pflicht:** Für jede neue/angepasste Funktion existiert ein Test unter `./src/Tests/Unit/&lt;Public|Private|Classes&gt;/` – auf Basis von `./src/Tests/Unit/Unit_Template.ps1` – **ohne Fehler**.</p>
+<p>5. **Dokumentation &amp; Changelog:** **README**, **CHANGELOG.md** und eine **Architektur-Übersicht** werden erstellt/aktualisiert.</p>
+<p>6. **Jira &amp; Confluence:** Arbeit erfolgt **issue-basiert**. Commits/PRs referenzieren **Jira-Key(s)**. Wenn kein Zugriff möglich ist, werden **Offline-Dateien** im Repo gepflegt (siehe unten).</p>
+<p>7. **Git-Flow &amp; PRs:** PRs **immer gegen `develop`**, Titel enthält **Jira-Key** und folgt **Conventional Commits**.</p>
+<p>8. **Archiv ignorieren:** Den Ordner `./Archiv/` **nicht beachten** (nur wenn explizit gefordert).</p>
+<p/>
+<hr/>
+<p/>
+<h2>Struktur (High-Level)</h2>
+<ul><li>`./src/PSRunSteps/`</li></ul>
+<ul><li>`Public/` – Öffentliche Cmdlets (exportiert), **eine Funktion pro Datei**.</li></ul>
+<ul><li>`Private/` – Interne Helfer, **eine Funktion pro Datei**.</li></ul>
+<ul><li>`PSRunSteps.psd1` – Modulmanifest (Exports pflegen, falls nicht via Wildcard).</li></ul>
+<ul><li>(Optional) `PSRunSteps.psm1` – Moduleinstieg (durch Build prozessiert).</li></ul>
+<ul><li>`./src/Tests/Unit/`</li></ul>
+<ul><li>`Public/`, `Private/`, `Classes/` – Pester 5 Unit-Tests.</li></ul>
+<ul><li>`Unit_Template.ps1` – **Vorlage** für neue Tests.</li></ul>
+<ul><li>`./docs/` – Generierte/kuratiere Doku (Cmdlets, Architektur).</li></ul>
+<ul><li>`./src/PSRunStepsbuild.ps1` – **Build-Skript** (Invoke-Build Tasks).</li></ul>
+<ul><li>`./Archiv/` – **Nicht beachten**, außer explizit angefordert (z. B. Offline-Backlog).</li></ul>
+<ul><li>(Weitere Verzeichnisse: Artifacts/Archive/Tools je nach Catesta-Konfiguration).</li></ul>
+<p/>
+<hr/>
+<p/>
+<h2>Entwicklungs-Workflow (Schritt für Schritt)</h2>
+<p>1. **Issue sicherstellen:** Für jede Änderung existiert ein **Jira-Issue**. Falls kein Zugriff: Offline-Erfassung im Repo (siehe *Jira/Confluence Offline*).</p>
+<p>2. **Branch von `develop`:** z. B. `feature/PROJ-123-beschreibung` oder `fix/PROJ-456-xy`.</p>
+<p>3. **Implementieren:**</p>
+<ul><li>Neue öffentliche Funktion → Datei unter `src/PSRunSteps/Public/&lt;FuncName&gt;.ps1`.</li></ul>
+<ul><li>Neue private Funktion → Datei unter `src/PSRunSteps/Private/&lt;FuncName&gt;.ps1`.</li></ul>
+<ul><li>**Help-Block** vollständig ausfüllen (Synopsis/Description/Parameters/Examples/Outputs).</li></ul>
+<ul><li>(Bei Public-Funktion ggf. `FunctionsToExport` im `.psd1` ergänzen.)</li></ul>
+<p>4. **Tests schreiben:**</p>
+<ul><li>Vorlage `src/Tests/Unit/Unit_Template.ps1` kopieren.</li></ul>
+<ul><li>Ablegen unter `src/Tests/Unit/&lt;Public|Private|Classes&gt;/&lt;FuncName&gt;.Tests.ps1`.</li></ul>
+<ul><li>Realistische **Contexts/It**-Blöcke, **Mocking** für Abhängigkeiten, deterministische Assertions.</li></ul>
+<p>5. **Build/Tests ausführen (lokal):**</p>
+<p>   ```powershell</p>
+<p>   # Vollständiger Validierungs- und Testlauf</p>
+<p>   Invoke-Build ./src/PSRunStepsbuild.ps1 -Task Test</p>
+<p>   ```</p>
+<p>   (Keine Direktaufrufe von `Invoke-Pester` oder anderen Tools.)</p>
+<p>6. **Doku aktualisieren:**</p>
+<ul><li>README ergänzen (falls Nutzer-sichtbar).</li></ul>
+<ul><li>Architektur-Übersicht (z. B. Diagramm/Markdown) aktualisieren.</li></ul>
+<ul><li>Cmdlet-Hilfe wird aus Help-Blocks generiert (je nach Build-Task).</li></ul>
+<p>7. **CHANGELOG pflegen:** Unter **[Unreleased]** passenden Eintrag (Added/Changed/Fixed/Removed) ergänzen, optional mit Issue-Key.</p>
+<p>8. **Commit &amp; PR:**</p>
+<ul><li>**Conventional Commit**-Format, z. B.: `feat(scope): beschreibung (PROJ-123)`</li></ul>
+<ul><li>PR **gegen `develop`**, Titel enthält **Jira-Key**, Beschreibung mit kurzer Zusammenfassung und Verweis auf Issue.</li></ul>
+<p>9. **CI beachten:** Auf grüne Checks achten; Feedback/Reviews einarbeiten.</p>
+<p>10. **Merge:** Nach Freigabe per PR in `develop` mergen. Releases erfolgen gemäß Git-Flow/Automation.</p>
+<p/>
+<hr/>
+<p/>
+<h2>Coding-Standards</h2>
+<ul><li>**Naming:** Verb-Noun (PowerShell-konform), PascalCase, aussagekräftig.</li></ul>
+<ul><li>**Parameter:** Typen &amp; Validierung (Mandatory, Validate*, HelpMessage). `[CmdletBinding()]` nutzen; bei ändernden Aktionen **SupportsShouldProcess** und `-WhatIf`/`-Confirm` respektieren.</li></ul>
+<ul><li>**Fehlerbehandlung:** `try/catch`, aussagekräftige Fehler; keine „leisen“ Fehlschläge.</li></ul>
+<ul><li>**Ausgabe:** Objekt-/Wert‑Rückgaben über Pipeline; kein unnötiger Host-Output.</li></ul>
+<ul><li>**Linter/Analyzer:** Hinweise von **PSScriptAnalyzer** beheben (durch Build-Task abgedeckt).</li></ul>
+<ul><li>**Formatierung:** Konsistent (Einrückung, Klammern, Zeilenlänge).</li></ul>
+<p/>
+<hr/>
+<p/>
+<h2>Tests (Pester 5)</h2>
+<ul><li>**Ort &amp; Namen:** `src/Tests/Unit/&lt;Public|Private|Classes&gt;/&lt;FuncName&gt;.Tests.ps1`.</li></ul>
+<ul><li>**Vorlage nutzen:** `src/Tests/Unit/Unit_Template.ps1` als Startpunkt.</li></ul>
+<ul><li>**Struktur:** `Describe` → `Context` → `It`; **Mocks** für externe Abhängigkeiten.</li></ul>
+<ul><li>**Abdeckung:** Alle relevanten Pfade testen (Erfolg/Fehler/Edge-Cases).</li></ul>
+<ul><li>**Ausführung:** **immer** über Build (s. oben).</li></ul>
+<p/>
+<hr/>
+<p/>
+<h2>Build &amp; CI</h2>
+<ul><li>**Single Source of Truth:** Catesta/Invoke-Build orchestriert **Analyse, Tests, Doku, Package**.</li></ul>
+<ul><li>**Beispiele für Tasks** (falls im Build vorhanden):</li></ul>
+<p>  ```powershell</p>
+<p>  # Tests &amp; Analyse</p>
+<p>  Invoke-Build ./src/PSRunStepsbuild.ps1 -Task Test</p>
+<p/>
+<p>  # (Optional) Hilfe/Doku generieren</p>
+<p>  Invoke-Build ./src/PSRunStepsbuild.ps1 -Task CreateHelpStart</p>
+<p/>
+<p>  # (Optional) Paket bauen/Archiv</p>
+<p>  Invoke-Build ./src/PSRunStepsbuild.ps1 -Task Build</p>
+<p>  ```</p>
+<ul><li>**Niemals** Analyzer/Tests/Doku manuell und isoliert starten, wenn ein Build-Task existiert.</li></ul>
+<p/>
+<hr/>
+<p/>
+<h2>Dokumentation</h2>
+<ul><li>**Help-Blocks** in jeder Funktionsdatei sind die Quelle für Cmdlet-Doku.</li></ul>
+<ul><li>**README.md** aktuell halten (Synopsis, Installation, Quick Start, Beispiele).</li></ul>
+<ul><li>**Architektur-Übersicht** (Markdown/Diagramme) pflegen; bei relevanten Änderungen aktualisieren.</li></ul>
+<ul><li>**CHANGELOG.md** nach *Keep a Changelog*-Konventionen pflegen (Unreleased → Version durch Release-Prozess).</li></ul>
+<p/>
+<hr/>
+<p/>
+<h2>Jira &amp; Confluence</h2>
+<ul><li>**Issue-basiert arbeiten:** Jeder Change referenziert einen **Jira-Key** in **Commits** und **PR-Titel**.</li></ul>
+<ul><li>**Git-Flow &amp; PRs:** Branch von `develop`; PR **gegen `develop`**; Titel: Conventional Commit + Issue-Key.</li></ul>
+<ul><li>**Ohne Zugriff (Offline-Workflow):**</li></ul>
+<ul><li>Erzeuge/aktualisiere **Issues** in Offline-Dateien im Repo (z. B. `./Archiv/PSRunSteps_issues.json` oder `.csv`).</li></ul>
+<ul><li>Felder: `project_key`, `issue_type`, `summary`, `description` – eindeutig &amp; valide halten.</li></ul>
+<ul><li>Verknüpfung: Issue-Key in Commit/PR, damit späteres Syncen einfach ist.</li></ul>
+<p/>
+<hr/>
+<p/>
+<h2>Nicht beachten: `./Archiv/`</h2>
+<ul><li>`./Archiv/` ist **ausgenommen** vom aktiven Entwicklungsfluss (Tests/Build).</li></ul>
+<ul><li>**Nichts ändern** – außer explizit beauftragt (z. B. Offline-Backlog).</li></ul>
+<p/>
+<hr/>
+<p/>
+<h2>PR‑Checkliste</h2>
+<ul><li>[ ] Issue vorhanden (oder Offline erfasst) und in Branch/PR referenziert.</li></ul>
+<ul><li>[ ] Neue/angepasste Funktionen mit vollständigem Help-Block.</li></ul>
+<ul><li>[ ] Passende Pester‑Tests erstellt/aktualisiert, **grün** über Build.</li></ul>
+<ul><li>[ ] README/Docs/Architektur bei Bedarf aktualisiert.</li></ul>
+<ul><li>[ ] CHANGELOG unter **[Unreleased]** ergänzt.</li></ul>
+<ul><li>[ ] Konventionen: **Conventional Commit**, **PR gegen `develop`**, **PR‑Titel mit Jira‑Key**.</li></ul>
+<ul><li>[ ] **Kein** direkter `Invoke-Pester`/ad‑hoc‑Build – nur **Invoke‑Build**.</li></ul>
+<p/>
+<hr/>
+<p/>
+<h2>Kontaktpunkte für Agents</h2>
+<ul><li>Unklare Tasks → Issue/PR‑Beschreibung prüfen.</li></ul>
+<ul><li>Änderungen mit externen Systemen (AD/Graph/Jira/Confluence) **mocken** in Unit‑Tests.</li></ul>
+<ul><li>Sicherheitsrelevant/abwärtskompatibel? → Reviewer‑Hinweis in PR.</li></ul>
+<p/>
+<hr/>
+<p/>
+<p>*Standards und Tasks können je nach Catesta‑Konfiguration erweitert sein. Falls ein benötigter Task im Build vorhanden ist, nutze ihn statt Einzelaufrufen.*</p>
+</body>
+</html>
