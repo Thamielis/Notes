@@ -1,3 +1,4 @@
+
 function Get-GitLog {
     [CmdLetBinding(DefaultParameterSetName = 'Default')]
     param (

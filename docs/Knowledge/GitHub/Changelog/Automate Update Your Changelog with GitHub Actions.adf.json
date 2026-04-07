@@ -1,0 +1,555 @@
+{
+  "version": 1,
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": { "level": 1 },
+      "content": [
+        {
+          "type": "text",
+          "text": "Automate Update Your Changelog with GitHub Actions"
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "attrs": { "panelType": "info" },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Keep your changelog accurate and hands-free using "
+            },
+            {
+              "type": "text",
+              "text": "git-chglog",
+              "marks": [{ "type": "code" }]
+            },
+            {
+              "type": "text",
+              "text": " + GitHub Actions. This guide sets up semantic versioning, a configurable changelog template, and an automated workflow that opens a PR when changes are detected."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": { "level": 2 },
+      "content": [{ "type": "text", "text": "Introduction" }]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Maintaining an up-to-date changelog is essential for documenting project changes, but it can be time-consuming. Adopting "
+        },
+        {
+          "type": "text",
+          "text": "semantic versioning",
+          "marks": [{ "type": "strong" }]
+        },
+        {
+          "type": "text",
+          "text": " and automated changelog generation helps keep your release history organized and consistent. Semantic versioning follows "
+        },
+        {
+          "type": "text",
+          "text": "major.minor.patch",
+          "marks": [{ "type": "code" }]
+        },
+        { "type": "text", "text": " (e.g., " },
+        { "type": "text", "text": "v1.2.3", "marks": [{ "type": "code" }] },
+        {
+          "type": "text",
+          "text": ", signaling the type of changes in each version:"
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Major",
+                  "marks": [{ "type": "strong" }]
+                },
+                {
+                  "type": "text",
+                  "text": " versions introduce breaking changes."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Minor",
+                  "marks": [{ "type": "strong" }]
+                },
+                {
+                  "type": "text",
+                  "text": " versions add backward-compatible features."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Patch",
+                  "marks": [{ "type": "strong" }]
+                },
+                {
+                  "type": "text",
+                  "text": " versions address backward-compatible bug fixes."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": { "level": 2 },
+      "content": [
+        {
+          "type": "text",
+          "text": "Step 1: Set Up git-chglog in Your Development Environment"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "git-chglog is a CLI that uses your Git history to generate customizable changelogs. Install it, initialize config, and tailor it to your project."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": { "level": 3 },
+      "content": [{ "type": "text", "text": "1. Install git-chglog" }]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Follow the installation guide: " },
+        {
+          "type": "text",
+          "text": "git-chglog Installation",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://github.com/git-chglog/git-chglog?tab=readme-ov-file#installation"
+              }
+            }
+          ]
+        },
+        { "type": "text", "text": "." }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": { "level": 3 },
+      "content": [{ "type": "text", "text": "2. Initialize the Configuration" }]
+    },
+    {
+      "type": "codeBlock",
+      "attrs": { "language": "shell" },
+      "content": [{ "type": "text", "text": "git-chglog init" }]
+    },
+    {
+      "type": "paragraph",
+      "content": [{ "type": "text", "text": "This creates two files:" }]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": ".chglog/config.yml",
+                  "marks": [{ "type": "code" }]
+                },
+                {
+                  "type": "text",
+                  "text": ": Main configuration to customize commit types, patterns, and sections."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "CHANGELOG.tpl.md",
+                  "marks": [{ "type": "code" }]
+                },
+                {
+                  "type": "text",
+                  "text": ": Template file to format changelog output."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": { "level": 3 },
+      "content": [{ "type": "text", "text": "3. Customize the Configuration" }]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Example config aligning commit groups with semantic versioning:"
+        }
+      ]
+    },
+    {
+      "type": "codeBlock",
+      "attrs": { "language": "yaml" },
+      "content": [
+        {
+          "type": "text",
+          "text": "style: github\ntemplate: CHANGELOG.tpl.md\ninfo:\n  title: \"CHANGELOG\"\n  repository_url: https://github.com/cleaniquecoders/laravel-action\noptions:\n  commits:\n  commit_groups:\n  header:\n    pattern: \"^(\\\\w*)\\\\:\\s(.*)$\"\n    pattern_maps:\n      - Type\n      - Subject\n  notes:\n    keywords:\n      - BREAKING CHANGE"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [{ "type": "text", "text": "Generate your first changelog:" }]
+    },
+    {
+      "type": "codeBlock",
+      "attrs": { "language": "shell" },
+      "content": [{ "type": "text", "text": "git-chglog -o CHANGELOG.md" }]
+    },
+    {
+      "type": "heading",
+      "attrs": { "level": 2 },
+      "content": [
+        {
+          "type": "text",
+          "text": "Step 2: Design a Custom Template for the Changelog (optional)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Customize the default template to match your style. Example:"
+        }
+      ]
+    },
+    {
+      "type": "codeBlock",
+      "attrs": { "language": "markdown" },
+      "content": [
+        {
+          "type": "text",
+          "text": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n\n{{ range .Versions }}\n## [{{ .Tag.Name }}] - {{ datetime \"2006-01-02\" .Tag.Date }}\n{{ range .CommitGroups -}}\n### {{ .Title }}\n{{ range .Commits -}}\n- {{ if .Scope }}**{{ .Scope }}:** {{ end }}{{ .Subject }}\n{{ end }}\n{{ end -}}\n{{ end -}}"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "This template structures each version by date and groups changes by commit type (e.g., Features, Bug Fixes)."
+        }
+      ]
+    },
+    {
+      "type": "rule"
+    },
+    {
+      "type": "heading",
+      "attrs": { "level": 2 },
+      "content": [
+        {
+          "type": "text",
+          "text": "Step 3: Automate Changelog Updates with GitHub Actions"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Automate regeneration on each release and create a PR when changes are detected."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": { "level": 3 },
+      "content": [{ "type": "text", "text": "GitHub Actions Workflow" }]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Add to " },
+        {
+          "type": "text",
+          "text": ".github/workflows/update_changelog.yml",
+          "marks": [{ "type": "code" }]
+        },
+        { "type": "text", "text": ":", "marks": [{ "type": "strong" }] }
+      ]
+    },
+    {
+      "type": "codeBlock",
+      "attrs": { "language": "yaml" },
+      "content": [
+        {
+          "type": "text",
+          "text": "name: \"Update Changelog\"\n\non:\n  release:\n    types: [published]\n  workflow_dispatch:\n\npermissions:\n  contents: write\n  pull-requests: write\n\njobs:\n  update-changelog:\n    runs-on: ubuntu-latest\n    steps:\n      - name: Checkout code\n        uses: actions/checkout@v4\n        with:\n          fetch-depth: 0\n          ref: main\n\n      - name: Setup git-chglog\n        run: |\n          CHGLOG_VERSION=\"0.9.1\"\n          curl -o git-chglog -L \"https://github.com/git-chglog/git-chglog/releases/download/${CHGLOG_VERSION}/git-chglog_linux_amd64\"\n          chmod +x git-chglog\n\n      - name: Generate CHANGELOG.md\n        id: generate\n        run: |\n          rm -f CHANGELOG.md\n          ./git-chglog -o CHANGELOG.md\n          if git diff --quiet CHANGELOG.md; then\n            echo \"changes=false\" >> $GITHUB_OUTPUT\n          else\n            echo \"changes=true\" >> $GITHUB_OUTPUT\n          fi\n        env:\n          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}\n\n      - name: Cleanup\n        run: rm git-chglog\n        if: always()\n\n      - name: Create Pull Request\n        if: steps.generate.outputs.changes == 'true'\n        uses: peter-evans/create-pull-request@v4\n        with:\n          token: ${{ secrets.GITHUB_TOKEN }}\n          commit-message: \"chore: update CHANGELOG.md\"\n          title: \"Update Changelog\"\n          body: |\n            This PR updates the CHANGELOG.md to include all releases.\n            - Generated using git-chglog\n            - Triggered by: ${{ github.event_name }}\n            - Auto-merge enabled\n          branch: update-changelog-${{ github.run_id }}\n          base: main\n          delete-branch: true\n          labels: documentation, automated-pr\n\n      - name: Enable Auto-merge\n        if: steps.generate.outputs.changes == 'true'\n        run: |\n          gh pr merge --auto --merge \"${{ steps.create-pr.outputs.pull-request-number }}\"\n        env:\n          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": { "level": 3 },
+      "content": [{ "type": "text", "text": "Explanation of Workflow" }]
+    },
+    {
+      "type": "orderedList",
+      "attrs": { "order": 1 },
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Checkout Code: Fetches the main branch and history."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Setup git-chglog: Downloads the tool."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Generate Changelog: Recreates CHANGELOG.md and sets an output flag when changes are detected."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Cleanup: Removes the binary after use."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Create Pull Request: Opens a PR with the updated changelog if changes exist."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Enable Auto-merge: Uses GitHub CLI to merge the PR automatically."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Sample output: " },
+        {
+          "type": "text",
+          "text": "Laravel Action CHANGELOG.md",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://github.com/cleaniquecoders/laravel-action/blob/main/CHANGELOG.md"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": { "level": 2 },
+      "content": [
+        {
+          "type": "text",
+          "text": "Benefits of Automating Changelog Generation"
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Consistent Documentation: Every release is accurately documented."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Time Savings: Automation reduces manual work and context-switching."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Transparency: Keeps contributors and users informed about changes."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": { "level": 2 },
+      "content": [{ "type": "text", "text": "Conclusion" }]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Automating your changelog with git-chglog and GitHub Actions maintains a structured, up-to-date record of changes. Combined with semantic versioning, your project's history stays accurate and accessible."
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "attrs": { "panelType": "tip" },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Tip: Use conventional commit messages (e.g., feat:, fix:, chore:) to improve grouping in generated changelogs."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
