@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Knowledge/GitHub/Git Befehle.md",
+                "file": "docs/Knowledge/GitHub/Git-Commands.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Git Befehle"
+              "title": "Git-Commands"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/Knowledge/GitHub/Git Befehle.md",
+                "file": "docs/Knowledge/GitHub/Git-Commands.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Rückverweise auf Git Befehle"
+              "title": "Rückverweise auf Git-Commands"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/Knowledge/GitHub/Git Befehle.md",
+                "file": "docs/Knowledge/GitHub/Git-Commands.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von Git Befehle öffnen"
+              "title": "Ausgehende Links von Git-Commands öffnen"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/Knowledge/GitHub/Git Befehle.md",
+                "file": "docs/Knowledge/GitHub/Git-Commands.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Gliederung von Git Befehle"
+              "title": "Gliederung von Git-Commands"
             }
           }
         ]
@@ -184,5 +184,11 @@
     }
   },
   "active": "47e530c136d1ce51",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "docs/Knowledge/GitHub/Git User Manual.md",
+    "docs/Knowledge/GitHub/Git Befehle.md",
+    "docs/Knowledge/GitHub/Branching/Git-branching-model.pdf",
+    "docs/Knowledge/GitHub/GitHub Git Spickzettel.md",
+    "docs/Knowledge/GitHub/Git-Commands.md"
+  ]
 }
