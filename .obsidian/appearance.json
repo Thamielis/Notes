@@ -1,1 +1,5 @@
-{}
+{
+  "theme": "obsidian",
+  "accentColor": "#f59e0b",
+  "interfaceFontFamily": "CaskaydiaCove Nerd Font"
+}
